@@ -1,0 +1,50 @@
+Adobe|www.adobe.com/downloads||Reader;Flash Player
+Alan's Dungeon Master Tools|||iz D & D Room Generator;iz D & D Weather Generator;iz D & D Treasure Generator;iz Dungeon Mapper;iz Dice Bag;iz Inn Keeper;iz Monster DB Manager;iz Name Generator;iz Quick NPC;iz Spellbook;iz Guild Builder;Character Designer;Quick Dungeon
+The Apache Software Foundation|www.apache.org||HTTP Server;OpenOffice
+Apple|www.apple.com/downloads||iTunes;QuickTime;Safari
+Avanquest software|www.avanquest.com/USA||System Commander
+avast! Anitvirus|www.avast.com/free-antivirus-download|using
+Cerulean Studios TrillianAstra|www.trillian.im|
+Comodo|www.comodo.com||Internet Security (free)
+Desktop Architect|
+DivX|www.divx.com/en/win|usingDivX7 (free)
+Ever Changing Book of Names|ebon.pyorre.net|using
+eyeClaxon|eyeclaxton.com/index.html||Find Junk Files
+FileZilla|filezilla-project.org|using
+Gene6|www.gene6.com||G6 Utilities
+The Ice Mage's Home|||Treasure Hoard Generator
+ICQ.com|www.icq.com;download.icq.com/download/icq|
+Inc Alarm|
+interActual|www.interactual.com||interActual Player
+Ipswitch|www.ipswitch.com||WS_FTP Pro
+JGSoft|www.just-great-software.com||EditPad Pro
+MapMage|www.mapmage.com||Artifact Mage;Book Mage;Dice Mage;Inn Mage;Name Mage
+mIRC|www.mirc.com
+Microsoft PowerToys for Windows XP|www.microsoft.com/windowsxp/Downloads/powertoys/Xppowertoys.mspx||Power Calculator;Tweak UI
+Microsoft Silverlight|silverlight.net|using
+Mozilla|www.mozilla.org||Firefox;Lady Aleena's Add-ons
+Mythosa|www.mythosa.net||TableSmith
+Notepad++|notepad-plus.sourceforge.net/uk/site.htm|using
+Oracle|www.oracle.com||Java
+Photodex|www.photodex.com||CompuPic
+Piriform|www.piriform.com||CCleaner;Defraggler
+PopCap Games|www.popcap.com||Alchemy;Atomica;Bejeweled;Bookworm;Big Money;Dynomite;Mummy Maze;Noah's Ark;Rocket Mania;Seven Seas
+PopUp Smasher|www.popupstop.com||
+PuTTY|www.chiark.greenend.org.uk/~sgtatham/putty|
+Pyrogon|www.pyrogon.com||NingPo MahJong
+RarLab|www.rarlab.com;www.rarlab.com/download.htm|
+real|www.real.com||realPlayer
+Spinner Plus|
+Spyware Terminiator|www.spywareterminator.com|
+Strawberry Perl|strawberryperl.com|
+Vandyke Software|www.vandyke.com||CRT
+Wedge Software|||WinHacker
+WinZip|www.winzip.com;www.winzip.com/downwz.htm|
+Xenu's Link Sleuth|home.snafu.de/tilman/xenulink.html|
+xuMouse||using
+Yahoo!|m.www.yahoo.com||Yahoo! Messanger
+grepWin|tools.tortoisesvn.net/grepWin.html|
+HexChat|hexchat.github.io|
+XChat|xchat.org|using
+Debian|www.debian.org;cdimage.debian.org/debian-cd/7.2.0/multi-arch/iso-cd/debian-7.2.0-amd64-i386-netinst.iso|using
+KDE|www.kde.org|using

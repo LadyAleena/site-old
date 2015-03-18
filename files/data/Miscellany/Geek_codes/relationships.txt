@@ -1,0 +1,2 @@
+r## Add a number to indicate how long the relationship has been.
+    r15 would mean a 15 year relationship.

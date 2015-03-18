@@ -1,0 +1,3 @@
+table.royal_chess tr td { text-align:center; width:4em; height:4em; border-width:2px; border-style:solid; }
+table.royal_chess tr td.even { background-color:#eed; }
+table.royal_chess tr td.odd  { background-color:#ddc; }

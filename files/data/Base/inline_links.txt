@@ -1,0 +1,28 @@
+Xecu.net|http://www.xecu.net
+PerlMonks|http://www.perlmonks.org
+World Wide Web Consortium|http://www.w3.org
+PageResource|http://www.pageresource.com/
+WXCity Forum|http://www.webxpertz.net/forums/index.php
+HTML An Interactive Tutorial for Beginners|http://davesite.com/webstation/html
+HTML Code Tutorial|http://www.htmlcodetutorial.com
+PageTutor|http://www.pagetutor.com
+Web Design Group|http://www.htmlhelp.org
+Wikipedia|http://en.wikipedia.org
+Allmovie|http://www.allmovie.com
+IMDb|http://www.imdb.com
+TV.com|http://www.tv.com
+Flixster|http://www.flixster.com
+#perl|irc://freenode/perl
+#perlcafe|irc://freenode/perlcafe
+#HTML|irc://freenode/html
+Robert Anderson|mailto:ogre1971@hotmail.com
+Gabriel Elias|mailto:jybraeel@hotmail.com
+Randy Furuyama|mailto:ElderMount@aol.com
+Alan Gray|mailto:Grieverlionheart@hotmail.com
+Charlie Przybylek|mailto:cprzybyl@vt.edu
+Geek Code|http://www.geekcode.com/
+magic items of the specialist|magic_items_of_the_specialist.pl
+Allahweh's Domain|http://allahweh.wordpress.com
+Heroes' and Villains' Lorebook|http://community.fortunecity.ws/rivendell/shadows/472/herovillain.html
+Everchanging Book of Names|http://ebon.pyorre.net
+The Paper Filter|http://thepaperfilter.wordpress.com

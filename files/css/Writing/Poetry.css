@@ -1,0 +1,9 @@
+div.center { text-align: center; }
+p { text-indent: 0; }
+p.indent0  { margin-left:  0em; }
+p.indent2  { margin-left:  2em; }
+p.indent4  { margin-left:  4em; }
+p.indent6  { margin-left:  6em; }
+p.indent8  { margin-left:  8em; }
+p.indent12 { margin-left: 12em; }
+p.indent16 { margin-left: 16em; }

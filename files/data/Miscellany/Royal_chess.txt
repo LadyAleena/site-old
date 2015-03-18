@@ -1,0 +1,7 @@
+prince|The prince can move up to 3 squares in any direction.
+princess|The princess can move up to 6 squares in any direction.
+cardinal|The cardinal can move as a bishop or a knight.
+marshal|The marshal can move as a rook or a knight.
+priest|The priest can move up to 6 squares in any diagonal.
+novice|The novice can move up to 3 squares in any diagonal.
+squire|The squire can move up to 3 squares horizontally or vertically.

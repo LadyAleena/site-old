@@ -1,0 +1,29 @@
+Alien: Resurrection|//Firefly/Firefly;//Angel/Buffy the Vampire Slayer
+Angel|//Alien: Resurrection/Alien
+Battlestar Galactica (2003)|//Firefly/Firefly
+Bewitched (1964)|//Passions
+Buffy the Vampire Slayer (1997)|//The X-Files (1993)/The X-Files
+Deadline|//Law & Order/Law & Order;//Law & Order: Special Victims Unit/Law & Order;//Law & Order: Criminal Intent/Law & Order;//Law & Order: Trial by Jury/Law & Order;//Conviction/Law & Order
+Doctor Who (1963)|Marooned//Red Dwarf;//Chelmsford 123
+ER|//The X-Files (1993)/The X-Files
+Firefly|//Alien: Resurrection/Alien;//Battlestar Galactica (2003)/Battlestar Galactica (2003)
+Get Smart, Again!|//The Man from U.N.C.L.E. (1964)/U.N.C.L.E.
+The Hitchhiker's Guide to the Galaxy (1981)|The Christmas Invasion/02/Doctor Who (2005)/Doctor Who
+Homicide: Life on the Street|Unusual Suspects/05/The X-Files (1993)/The X-Files;//Oz
+In Plain Sight|Contract/07/Law & Order: Criminal Intent/Law & Order
+Knight Rider (2008 film)|//Las Vegas
+L.A. Law|Potts Don't Fail Me Now/01/Cop Rocks;//Civil Wars
+Las Vegas|Episode 1.1489//Passions;Episode 1.1490//Passions;Method to His Madness/02/Medium;Collision/01/Heroes;//Knight Rider (2008 film)/Knight Rider;
+Law & Order|//Deadline;Mob Street/04/New York Undercover;Smack Is Back/03/New York Undercover
+Law & Order: Special Victims Unit|//Deadline;They Say It's Your Birthday//The Beat;Exit Strategy//Arrested Development;Took//The Wire
+Law & Order: Criminal Intent|//Deadline
+Law & Order: Trial by Jury|//Deadline
+Conviction|//Deadline
+M*A*S*H (1972)|//St. Elsewehere
+The Man from U.N.C.L.E. (1964)|//Get Smart, Again!/Get Smart (1965)
+JAG|//NCIS/NCIS
+NCIS: Los Angeles|True Colors/01/Scorpion/
+The X-Files (1993)|Struck by Lightning//Strange Luck;//ER;Eric Gets Suspended//That '70s Show;Stock Car Races//Malcolm in the Middle;Arms and the Girl//Jake 2.0;North Mammon//Criminal Minds;Bolshoi Booze//Prison Break;Fearless Leader/03/Burn Notice;//CSI: Crime Scene Investigation;//Buffy the Vampire Slayer
+The Green Hornet (1966)|A Piece of the Action/02/Batman (1966 tv)/Batman (1966);Batman's Satisfaction/02/Batman (1966 tv)/Batman (1966)
+First Monday|//JAG/
+JAG|//First Monday/

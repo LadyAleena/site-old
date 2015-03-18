@@ -1,0 +1,58 @@
+Abyss|abyss.monad.net|204.97.16.51
+Aloha BBS|alohabbs.org.mx
+Apocalypse||208.215.35.204
+Astro|astro.sci.muni.cz||astro.sci.muni.cz
+Atlantis|bbs.resus.univ-mrs.fr|139.124.29.1
+Atrium|atriumbbs.org|209.32.135.201
+Auggie|bbs.theschwartz.net|208.138.46.68
+Baud Town|baudtown.com|64.81.236.179|www.baudtown.com
+Bear's BBS|grizz.avalon.net|204.71.107.60
+Bobcat Hotel|voyager.cns.ohiou.edu|132.235.197.85
+Brinta (defunct)
+Cactus|cactus.cedarville.edu|163.11.13.102
+Cetys|cetysbbs.mxl.cetys.mx|158.122.1.9|www.mxl.cetys.mx/cetysbbs
+CyBer HoUSE|cyberhouse.org
+Data's Lab|lab.jys.cx||datas-lab.nl
+Digitech|bbs.digitech.org|156.46.8.140
+Discordia|discordia.susqu.edu|216.87.206.21
+Dog Pound|bbs.compucomis.net
+Eagle's Realm|eaglebbs.giant.net|205.217.151.156
+Fimee BBS|clubfimee.ugto.mx
+Flexania|flexania.yawc.net
+Floyd|floyd.inf.upol.cz
+Flux|bbs.upsu.plym.ac.uk
+GalaxyQuest|bbs.xs4all.nl|194.109.228.9
+Gestalt|gestalt.leepfrog.com|204.71.109.112
+Global Village|global.uibk.ac.at|138.232.92.39
+Goth|bbs.voygr.com 1234|207.191.216.45
+Heinous|bbs.heinous.net|205.217.143.66
+Hell|depths.hell.org|199.236.181.198
+Hideaway|hideaway.voygr.com 12345|207.191.216.45
+Hitchhickers|falcor.karlin.mff.cuni.cz
+The Hive|wynn.molgen.gla.ac.uk|130.209.132.97
+Howlin|howlin.dhs.org
+ISCA|bbs.isca.uiowa.edu|128.255.85.69
+Iteso BBS||148.201.10.6
+Jungle|jungle.olivet.edu|12.21.76.2
+Karanet|karanet.uni-klu.ac.at|143.205.176.191|www.karanet.at
+LIANE|bbs.vslib.cz
+LUCS|compsoc.cs.latrobe.edu.au|131.172.40.22
+Marebears|omnibits.com 4123|216.200.30.130 4123
+Matrix|matrix.whacky.net|194.109.204.120
+Monochrome|mono.org||www.mono.org
+Monolith|cal044202.student.utwente.nl|130.89.230.12
+NERC|bbs.nerc.com|205.247.120.7
+Neverending|bbs.neverending.com|206.104.206.59
+Nipha|nipha.com|204.71.107.52
+Olymp|anglistik.uibk.ac.at|138.232.112.32
+Quartz|quartz.org
+Rinx|rinx.com|198.70.60.183
+Sanctuary|bbs.k2nesoft.com
+Shadow|shadowbbs.com|206.185.12.100
+Snow|bbs.vsb.cz
+Soncrest|bbs.soncrest.org|204.253.132.49
+Spinnaker|spinnaker.macarthur.uws.edu.au|137.154.86.29
+Telery|telery.com
+TigerNet|tigernet.hsc.edu|192.135.84.6
+Uncensored|uncnsrd.mt-kisco.ny.us|64.32.153.108
+Yellow Cab|bbs.semel.fi|195.165.67.42

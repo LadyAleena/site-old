@@ -1,0 +1,22 @@
+tr td { text-align: center;  border-style: dotted; }
+
+table.proficiency { width: auto; }
+table.proficiency td:first-child { text-align: left; }
+
+table.rolls th { text-align: center; }
+
+table.knight { width:200px; margin-left:1em; border-width: 2px 1px; border-collapse:collapse; float:right; }
+
+li.monster_attribute strong { font-size: smaller; font-variant: small-caps; }
+.monster_item { font-family: monospace; }
+.multi { float: left; width: calc((100% - 6px) / 3.33); list-style-type: none; }
+.spell_stats { float: left; margin-right: 1em; width: 25%; }
+
+.rul1 { color:#c3c; }
+.rul2 { color:#3cc; }
+.rul3 { color:#33c; }
+.ruls { color:#3c3; }
+
+@media print{
+  table { width: 100%; }
+}

@@ -1,0 +1,3 @@
+table { float:right; }
+ul.charges { list-style-type: none; }
+strong.charges { display: inline-block; width: 7.5em; text-align: right; }

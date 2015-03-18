@@ -1,0 +1,24 @@
+ul.movie_list li { padding: .1em; }
+ul.season_list  li, ul.actor_list li { list-style: none; }
+ul.program_list li { list-style: none; font-style: oblique; }
+ol.episode_list, ul.actor_list { font-size: smaller; }
+
+.title { font-style: oblique; font-weight: bold; }
+.links { font-size: smaller; }
+.series, .program { font-style: oblique; }
+
+/*Movie miscellany*/
+.dead  { background:#ccc; }
+/*Doctor Who*/
+.The_Doctor { font-weight:bold; color:#009 }
+.torch { color:#900; }
+.sjs   { color:#909; }
+.companion  { font-weight:bold; }
+.reset { background:#fff; font-weight:normal; color:#000; }
+
+@media print{
+  ul.program_list,
+  ul.season_list,
+  .like,
+  .links { display: none; }
+}

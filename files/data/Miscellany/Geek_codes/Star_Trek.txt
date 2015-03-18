@@ -1,0 +1,7 @@
+t   - The entire Star Trek franchise
+t:o - Star Trek (the original series)
+t:a - Star Trek (the animated series)
+t:n - Star Trek: The Next Generation
+t:d - Star Trek: Deep Space Nine
+t:v - Star Trek: Voyager
+t:e - Enterprise

@@ -1,0 +1,139 @@
+body { background-color:#ccb; font-family:arial, sans-serif; font-size: 100%; }
+
+body > header { position:absolute; top: 0; bottom: 6.5%; left: 0; right: 0; width:100%; height:6.5%; vertical-align: middle; background-color: #027; }
+body > header div p { margin: 2px; padding: 0 0 2px 3px; clear: none; background-color:transparent; text-indent: 0; font-size: 250%; float: none; }
+body > header a { color:#eed; }
+body > header p  { float: right; }
+body > header p img { width: 6.5%; }
+
+nav#main, article { position:absolute; top:6.5%; bottom:0; height:93.5%; padding: 0px; }
+nav#main { right:81%; left:0; width:19%; overflow:auto; color:#000; font-size:smaller; }
+nav#main > section { background-color: #eed; }
+nav#main h2 { font-size: 115%; font-weight: bold; }
+
+article { right:0; left:19%; width:81%; overflow-y:auto; color:#000; }
+
+nav.contents, section, article > header, article > footer { overflow: auto; margin: 5px; padding: 3px; border-radius: 3px; background-color: #fff; }
+nav.contents > h2 { background-color: #027; color: #eed; font-size: 100%; font-weight: bold; }
+nav.contents > ul { font-size: 90%; }
+
+p, dl, table, form, pre, blockquote { margin:2px 5px; padding: 3px; }
+
+h1,h2,h3,h4,h5,h6,div.h7,div.h8 { margin: 2px; padding-left:3px; padding-bottom:2px; border-radius: 2px; font-weight:normal; clear:both; }
+h1,h2 { background-color:#027; color:#eed; }
+h3,h4,h5,h6,div.h7,div.h8 { background-color: #def; color: #027; }
+h1 { font-size: 250%; }
+h2 { font-size: 170%; }
+h3 { font-size: 160%; }
+h3.wlinks { clear:left; }
+h4 { font-size: 150%; }
+h4.wlinks { clear:left; }
+h5 { font-size: 140%; }
+h6 { font-size: 130%; }
+div.h7 p { font-size: 120%; text-indent: 0; margin: 0; padding: 0; }
+div.h8 p { font-size: 110%; text-indent: 0; margin: 0; padding: 0; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color:#eed }
+
+a { color:#027; text-decoration:none }
+a:hover { text-decoration:underline; }
+a img { width:45%;}
+a.img { display:block; text-align:center; }
+
+p { text-indent: 1em; }
+p.no_indent { text-indent:0; }
+p.author { text-indent: 0; font-size: larger; }
+p.address { font-weight:bold; clear:both; }
+
+strong { font-size:smaller; font-weight:bold; }
+strong.caps { font-size:smaller; font-variant:small-caps; }
+sup { font-size:x-small; }
+span.bigger { font-size:large; }
+q { quotes: '“' '”' '‘' '’' '“' '”' '‘' '’'; }
+blockquote p::before { content: "“"; font-size: 125%; }
+blockquote p::after  { content: "”"; font-size: 125%; }
+blockquote p { display: inline-block; text-indent: 0; margin: 0; padding: 0; }
+
+/* The use of the em is safe since the font size should be the same for the list. */
+ul { margin: 0em 0em 0em 1.25em; padding: 0px 0px 0px 3px; }
+ul ul { margin-left: 1em; }
+ol { margin: 0em 0em 0em 1.75em; padding: 0px 0px 0px 3px; }
+li.inactive { font-weight:normal; }
+li.active { font-weight:bold; }
+/* keep order of next 2 rules*/
+li.open ol, li.open ul, li.closed dl { display: block; }
+li.closed ol, li.closed ul, li.closed dl { display:none; }
+li.closed, li.open { list-style-type:none; }
+li.closed::before { position: absolute; margin: -4px 0 0 -16px; content: "\21D2"; }
+li.open::before   { position: absolute; margin: -4px 0 0 -16px; content: "\21D3"; }
+li p { margin: 0px; text-indent: 0; }
+
+dt {font-weight:bold;}
+
+.last { border-bottom:none; }
+table { border-collapse:collapse; border:1px solid #027; }
+caption { border-color: #027; border-width: 1px 1px 0 1px; border-style: solid; white-space: nowrap; background-color: #eed; color: #027; font: normal large arial; }
+colgroup { border:1px solid #027; }
+tbody { border-bottom:1px solid #027; }
+td,th { border-width:1px; border-color:#027; border-bottom-style:dotted; }
+th { background-color:#eed; color:#027; }
+th.row_header { font-size: smaller; font-weight:bold; text-align:left; }
+td { font-size:smaller; white-space:nowrap; }
+td.number { text-align:right; }
+
+/*color*/
+table.color { color:#000; border-collapse:collapse; width:100%; }
+table.color td { border:1px solid #999; color:#000; text-align:center; font:400 10pt "courier new"; }
+table.color td.dark { color:#fff; }
+table.color td.prime { border:2px solid #333; }
+
+fieldset, legend, select, input, textarea { border:1px solid #027; border-radius: 3px; }
+legend, select, input, textarea { margin-bottom: 3px; background-color:#ffe; color: #027; }
+fieldset { background-color: #fff; color: #eed; }
+input.search { margin-top: .5em; }
+input.block { display: block; }
+fieldset.hidden { display: none; }
+textarea { width:100%; height: 100px; }
+label { display: block; float: left; padding-right: 2px; width: 15%; font-weight: 700; text-align: right; }
+label.specfic { display: inline; float: none; padding-right: 0; width: auto; text-align: left; font-weight: normal; }
+
+.two,.three,.four,.five,.six,.seven,.eight,.nine,.ten { clear:both; }
+.two   { -moz-column-count:2; -webkit-column-count:2; column-count:2; }
+.three { -moz-column-count:3; -webkit-column-count:3; column-count:3; }
+.four  { -moz-column-count:4; -webkit-column-count:4; column-count:4; }
+.five  { -moz-column-count:5; -webkit-column-count:5; column-count:5; }
+.six   { -moz-column-count:6; -webkit-column-count:6; column-count:6; }
+.seven { -moz-column-count:7; -webkit-column-count:7; column-count:7; }
+.eight { -moz-column-count:8; -webkit-column-count:8; column-count:8; }
+.nine  { -moz-column-count:9; -webkit-column-count:9; column-count:9; }
+.ten   { -moz-column-count:10; -webkit-column-count:10; column-count:10; }
+
+.using { font-weight: bold; }
+.planned { font-style: italic; }
+
+.dg { color: #c0c }
+.hardcover, .bd, .cd { color: #00c; }
+.trade, .dvd, .cassette { color: #0c0; }
+.massmarket, .vhs, .lp { color: #c00; }
+.ff { color: #0cc; font-style: normal; }
+
+.hide { display: none; }
+.hidden { display: none; }
+
+.right { float: right; }
+
+@media print{
+  header,
+  nav,
+  section.contents,
+  p.address,
+  .links,
+  form { display: none; }
+  h3,h4,h5,h6,div.h7,div.h8 { color: #000; }
+  article { overflow: visible; top: 0; left: 0; width: 100%; height: 100%; }
+  span.hidden { display: inline }
+  div.hidden  { display: block  }
+  a { color: #000; }
+  td,th { border-color: #000; }
+  li.closed ol,li.closed ul,li.closed dl { display: list-item; }
+}

@@ -1,0 +1,7 @@
+Red|Fire|2' long, 1" at the mouth, and 4' base|Fire, and fire based spells and effects
+Orange|Heat|2' long, 1" at the mouth, and 4' base|Heat, and heat based spells and effects
+Yellow|Acid|1" wide, 6' stream from the mouth|Acid, and acid based spells and effects
+Green|Gas|4' long, 1' wide, and 3' high|Gas, and gas based spells and effects.
+Blue|Lightning|1" wide, 6' long|Lightning, and electrical spells and effects.
+Indigo|Ice|2' long, 1" at the mouth, and 4' base|Ice, and cold based spells and effects.
+Violet|Poison|1" wide, and 6' long|Poison, and poison based spells and effects.

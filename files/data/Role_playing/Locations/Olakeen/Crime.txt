@@ -1,0 +1,7 @@
+Murder|The sentence for premeditated murder is death; manslaughter is lethal combat in the Arena; but self-defense is a variable term service to the city. In the case where a duel leads to a death and as long as the duel was appropriately witnessed, the victor will not be charged for the death.
+Rape|The sentence for rape is lethal combat in the Arena.
+Abuse|The sentence for the abuse of a sentient being is lethal combat in the Arena. The sentence for the abuse of a non-sentient being is indentured service to the Agricultural Guild.
+Robbery|The sentence for robbery is one week per gold piece value stolen of indentured servitude to the victim, with a minimum of one day's worth of service. If the robbery involved a death, it will be considered manslaughter. The Thieves' Guild might also impose its own penalties for getting caught.
+Conspiracy|Service to the city except when murder is involed, see Murder.
+Brawling|The sentence for brawling is non-lethal combat in the Arena, though there is no property loss.
+All other crimes|Loss of property within the city, amount depending on the crime 

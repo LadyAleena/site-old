@@ -1,0 +1,56 @@
+Rajnilia Al-Afyali bint Jazar|Rajnilia_Al-Afyali_bint_Jazar|Al-Afyali bint Jazar|Rajnilia|CG|askara/warrior;sha'ira/wizard|46500|half-elf||female|17/21/Girdle of Frost Giant Strength|15|16|18|10|13|Ajami common,Midani (Zakhara),ogre,sahuagin
+Awnday Ar'iemay|Awnday_Ar&#39;iemay|Ar'iemay|Awnday|NG|thief/rogue;mage/wizard|250000|high elf||female|16/20/Girdle of Stone Giant Strength|18|15|19|16|17|Alzhedo (Calimshan),Midani (Zakhara),Untheric (Old Empires),dwarf,ogre,troll,Thieve's Cant
+Amelda Bacoulan|Amelda_Bacoulan|Bacoulan|Amelda|NG|psionisist|8800|human||female|16|17|18|15|16|14|elf,goblin,illithid
+Sarria Bagada|Sarria_Bagada|Bagada|Sarria|lg|priestess of torm/specialty priest/priest|4555|half-elf||female|11|11|16|15|16|14|dwarf
+Verago Brystar|Verago_Brystar|Brystar|Verago|NG|priestess of mystra/specialty priest/priest;mage/wizard|94150|sylvan elf||female|14/22/Girdle of Fire Giant Strength|17|15|18|18|14|dwarf,gnome,goblin,halfling,orc,troll
+Presolia Copturan|Presolia_Copturan|Copturan|Presolia|CG|arcanist/wizard|40000|human||female|14/20/Girdle of Stone Giant Strength|17|18|18|11|15|arcane,elf,dwarf,giff,gnome,rastipede
+Rojeana Decant|Rojeana_Decant|Decant|Rojeana|CN|wild mage/wizard|233183|human||female|15|16/18/Gauntlets of Dexterity|14|18|15|14|dragon,elf,giant,goblin,minotaur,siren
+Ryceva Derman|Ryceva_Derman|Derman|Ryceva|CG|mage/wizard|23428|human||female|13|14|15|18|18|12|arcane,dwarf,elf,goblin,ogre,troll
+Myleara Disstar|Myleara_Disstar|Disstar|Myleara|NG|fighter/warrior;mage/wizard|41027|sylvan elf||female|19|17|14|18|13|14|gnome,goblin,halfling,hobgoblin,ogre,orc
+Oalirya Disstar|Oalirya_Disstar|Disstar|Oalirya|LG|fighter/warrior;priestess of tyr/specialty priest/priest|46161|sylvan elf||female|19|16|11|14|18|12|gnome,goblin,orc
+Visilma Do'ranicy|Visilma_Do&#39;ranicy|Do'ranicy|Visilma|CG|thief/rogue;mage/wizard|5400|high elf||female|14|18|12|16|13|12|invisible stalker,kobold,ogre,Thieve's Cant
+Lourijul Edyara|Lourijul_Edyara|Edyara|Lourijul|NG|psionisist|28132|half-elf|goddess|female|16|16|18|17|18|15|ogre
+Faerinna Escar|Faerinna_Escar|Escar|Faerinna|CN|thief/rogue;mage/wizard|5000|sylvan elf||female|17|19|16|18|17|15|gnome,goblin,hobgoblin,kobold,ogre,Thieve's Cant
+Matea Fi'nashari|Matea_Fi&#39;nashari|Fi'nashari|Matea|CG|fighter/warrior;thief/rogue;mage/wizard|2500|high elf||female|17|19|14|18|13|14|dwarf,kobold,ogre,sign language,Thieve's Cant,troll
+Tymara Fi'ranicy|Tymara_Fi&#39;ranicy|Fi'ranicy|Tymara|CG|fighter/warrior;thief/rogue;psionisist;mage/wizard;priestess of tymora/specialty priest/priest|5792|high elf||female|21|22|25|25|25|20|bugbear,dragon,chromatic dragon,gem dragon,metalic dragon,dryad,dwarven,genie,giant,kobold,nymph,ogre,upper planar,lower planar,Thieve's Cant,will 'o wisp
+Janily Flassur|Janily_Flassur|Flassur|Janily|CG|hydromagist/wizard|1200|human||female|16|17|17|18|13|14|sea elf,kuo-toa,murman,nymph,sahuagin,triton
+Olacadas Flyglee|Olacadas_Flyglee|Flyglee|Olacadas|CG|mage/wizard|45755|faerie dragon||female|8|17|12|19|16|14|birds,elf,minotaur,pixie,sprite,squirrel,wood giant
+Nemidia Ge'mardian|Nemidia_Ge&#39;mardian|Ge'mardian|Nemidia|NG|ranger/warrior;cleric/priest|3150|high elf||female|17|13|16|11|17|13|dryad
+Tandria Goldmoon|Tandria_Goldmoon|Goldmoon|Tandria|CG|priestess of tempus/specialty priest/priest;invoker/wizard|39910|sylvan elf||female|21|18|20|19|17|14|dragon,dwarf,drow elf,giant,minotaur,troll,wemic
+Rechrapee Hardimod|Rechrapee_Hardimod|Hardimod|Rechrapee|LN|witch doctor/priest|0|ogre mage|kobold|female|15|9|11|17|15|14|elf,goblin,hobgoblin,kobold,orc
+Xyrena Hewlett-Packard-Bell|Xyrena_Hewlett-Packard-Bell|Hewlett-Packard-Bell|Xyrena|CG|fighter/warrior;thief/rogue|83713|human||female|17/25/Girdle of Titan Giant Strength|18|17|16|16|18|dwarven,elven,goblin,orc
+Ulari Ilan|Ulari_Ilan|Ilan|Ulari|cg|mage/wizard|175858|grey elf||female|15|17|14|18|18|15|dragon,giant,ogre
+Balnari Ka'natrian|Balnari_Ka&#39;natrian|Ka'natrian|Balnari|NG|fighter/warrior;mage/wizard|7250|high elf||female|18(97)|16|11|18|8|12|dragon,dwarven,giant,minotaur,ogre,troll
+Niona Kilson|Niona_Kilson|Kilson|Niona|NG|priestess of tymora/specialty priest/priest|1820|human||female|11|15|8|9|17|11|kobold
+Myra Kyllia|Myra_Kyllia|Kyllia|Myra|LE|fighter/warrior;thief/rogue;mage/wizard|94937|high elf|eminent vampire|female|20|19|18|19|13|19|bugbear,evil dragon,kobold,ogre,Thieve's Cant,troll,underdark
+Risa Kyllia|Risa_Kyllia|Kyllia|Risa|CG|thief/rogue|2500|human||female|15|17|17|16|12|14|sign language,Thieve's Cant
+Sorack Linsandin'viniar|Sorack_Linsandin&#39;viniar|Linsandin'viniar|Sorack|NG|fighter/warrior;mage/wizard|0|half-elf||male|18(00)|16|17|18|15|15|arcane,dwarf,sahuagin
+Zamia Lo'rena|Zamia_Lo&#39;rena|Lo'rena|Zamia|ng|mage/wizard|12375|high elf||female|15|17|17|18|14|15|arcane,dragon,avariel elf,grey elf,nymph,satyr
+Desolenna Marder'bastiar|Desolenna_Marder&#39;bastiar|Marder'bastiar|Desolenna|NG|mage/wizard|0|half-elf||female|17|16|15|18|15|15|dwarf
+Driastan Marder'bastiar|Driastan_Marder&#39;bastiar|Marder'bastiar|Driastan|NG|priest of oghma/specialty priest/priest|0|half-elf||male|17|15|15|14|18|15|
+Nwadira Mazan|Nwadira_Mazan|Mazan|Nwadira|CN|wild mage/wizard|80725|chaos elemental-kin||female|12|17|16|18|16|15|eledrin,elf,genie,imp,slaad,tanar'ri
+Lestra Newmoon|Lestra_Newmoon|Newmoon|Lestra|LN|priestess of kelemvor/specialty priest/priest;necromancer/wizard|52372|sylvan elf||female|16/19/Girdle of Hill Giant Strength|16|15|18|17|16|dragon,dwarf,giant,gnome,goblin,ogre
+Carri Notha|Carri_Notha|Notha|Carri|LN|fighter/warrior;thief/rogue;mage/wizard|13265|half-elf||female|16|16|13|16|12|13|bugbear,Thieve's Cant
+Alexana Olara|Alexana_Olara|Olara|Alexana|NG|fighter/warrior;thief/rogue;psionisist;mage/wizard|6089625|high elf||female|20/22/Girdle of Fire Giant Strength|20|20|21|20|20|dragon,dwarven,genie,giant,kobold,Thieve's Cant,minotaur,ogre,troll
+Eileen Olara|Eileen_Olara|Olara|Eileen|tn|fighter/warrior;thief/rogue;psionisist;priestess of waukeen/specialty priest/priest|6089625|high elf||female|20/22/Girdle of Fire Giant Strength|20|20|21|20|20|dragon,dwarven,genie,giant,kobold,Thieve's Cant,minotaur,ogre,troll
+Ducismetapopolis OreGrinder|Ducismetapopolis_OreGrinder|OreGrinder|Ducismetapopolis|NG|geomagist/wizard|155283|gnome||male|17|12|15|17|14|9|earth elemental,drow elf,deep gnome,kuo-toan,underworld
+Lamaria Peacyle|Lamaria_Peacyle|Peacyle|Lamaria|NG|cleric of silvanus/priest|62507|human||female|16|16|16|17|18|17|dwarf,elf,goblin,halfling,orc
+Yenedra Peacyle|Yenedra_Peacyle|Peacyle|Yenedra|CG|thief/rogue|20000|high elf||female|15|19|17|16|16|18|dwarf,kobold,ogre,Thieve's Cant
+Bryzarlyn Qi'lanari|Bryzarlyn_Qi&#39;lanari|Qi'lanari|Bryzarlyn|NG|fighter/warrior;thief/rogue;mage/wizard|419969|high elf||female|21|21/22/Gauntlets of Dexterity|19|21|19|19|dragon,dwarf,giant,nymph,ogre,Thieve's Cant,troglodyte,troll,Underdark
+Tanyani Qi'mardian|Tanyani_Qi&#39;mardian|Qi'mardian|Tanyani|CG|thief/rogue;mage/wizard|232181|high elf||female|18(00)|20|16|20|15|14|dragon,dwarf,giant,nymph,ogre,Thieve's Cant,troll,will o' wisp
+Ejenna Quara|Ejenna_Quara|Quara|Ejenna|TN|necromancer/wizard|2875|human||female|15|18|15|18|16|15|dragon,dwarf,elf,gnome,orc
+Patrina Meysa Rast|Patrina_Meysa_Rast|Rast|Patrina Meysa|cg(n)|mage/wizard|13238|human||female|16|17|17|18/19|15|16|arcane,dragon,elven,genie,gnome,ogre magi
+Artis Sadir|Artis_Sadir|Sadir|Artis|CG|bard/rogue;mage/wizard|37228|half-elf||male|11|17|12|16|11|18|
+Hylene Serill|Hylene_Serill|Serill|Hylene|NG|priestess of mystra/specialty priest/priest|1302000|human||female|16/18(00)/Gauntlets of Ogre Power|15|6|10|15|14|elf
+Calsanna Sorlastryl|Calsanna_Sorlastryl|Sorlastryl|Calsanna|CG|thief/rogue;mage/wizard|24898|high elf|werebear|female|18(00)|16|18|16|9|8|dragon,dwarf,nymph,Theive's Cant
+Ducolin StoneGrip|Ducolin_StoneGrip|StoneGrip|Ducolin|LN|priest of helm/specialty priest/priest|201500|mountain dwarf||male|14|6|9|9|16|7|Underdark
+Drianna StrongOak-Guard|Drianna_StrongOak-Guard|StrongOak-Guard|Drianna|NG|mage/wizard|11737872|half-elf|demi-power|female|14/23/Girdle of Cloud Giant Strength|18|16|19|16|18|evil dragon,good dragon,neutral dragon,dwarf,giant,lower planes,upper planes
+Amori Tamdenar|Amori_Tamdenar|Tamdenar|Amori|NG|thief/rogue;mage/wizard|7024|high elf||female|11|18|16|18|15|11|bugbear,centaur,dwarf,minotaur,ogre,Thieve's Cant
+Wijora Urlubint|Wijora_Urlubint|Urlubint|Wijora|LG|chaos warden|6700|chaos warden||female|19|19|18|19|17|17|dragon,dwarf,elf,giant,gnome,gobliniod,halfling
+Aegyn Valchae|Aegyn_Valchae|Valchae|Aegyn|NG|thief/rogue;mage/wizard|555382|high elf||female|15/22/Girdle of Fire Giant Strength|19|17|18|17|15|aasimon,dragon,dwarf,ogre,Thieve's Cant,troll
+Handira Warnir|Handira_Warnir|Warnir|Handira|LN|fighter/warrior;priestess of helm/specialty priest/priest|11442|half-elf||female|17|13|13|13|17|13|giant,ogre
+Elora Windblown|Elora_Windblown|Windblown|Elora|CG|aeromagist/wizard|134734|sylph||female|8|18|11|17|13|17|avariel elf,birds,faerie dragon,pixie,sprite
+Inary Xeru|Inary_Xeru|Xeru|Inary|TN|priestess of thoth/specialty priest/priest;aeromagist/wizard|97518|human||female|15|16|16|18|18|15|Mulhorandi,Thorass,Untheric,sylph,avarial elf,aarakocra
+Eshandra Yanraya|Eshandra_Yanraya|Yanraya|Eshandra|CG|priestess of sharess/specialty priest/priest;enchantress/wizard|48672|grey elf||female|16|18|16|18|18|19|lamia,lammasu,Mulhorandi,tabaxi,wemic,weretiger
+Aztema Zavgar|Aztema_Zavgar|Zavgar|Aztema|CG|mage/wizard|18501|human||female|15|16|17|17|15|15|dragon,elf,goblin,gypsy,halfling
+Kymaria Zendelic'tronyara|Kymaria_Zendelic&#39;tronyara|Zendelic'tronyara|Kymaria|NG|fighter/warrior;thief/rogue,mage/wizard|0|half-elf||female|18(93)|18|17|18|14|15|arcane,dwarf,Thieve's Cant

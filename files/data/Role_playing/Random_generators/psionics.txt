@@ -1,0 +1,153 @@
+aura sight|9|9
+clairaudience|6|4
+chairvoyance|7|4
+object reading|16|0
+precognition|24|0
+sensitivity to psychic impressions|12|2
+all-round vision|6|4
+combat mind|5|4
+danger sense|4|3
+feel light|7|5
+feel sound|5|3
+hear light|6|3
+know direction|1|0
+know location|10|0
+poison sense|1|0
+radial navigation|4|7
+see sound|6|3
+spirit sense|10|0
+create object|16|3
+detonate|18|0
+disintegrate|40|0
+molecular rearrangement|20|10
+project force|10|0
+telekinesis|3|1
+animate object|8|3
+animate shadow|7|3
+ballistic attack|5|0
+control body|8|8
+control flames|6|3
+control light|12|4
+control sound|5|2
+control wind|16|10
+create sound|8|3
+inertial barrier|7|5
+levitation|12|2
+molecular agitation|7|6
+molecular manipulation|6|5
+soften|4|3
+animal affinity|15|4
+complete healing|30|0
+death field|40|0
+energy containment|10|0
+life draining|11|5
+metamorphosis|21|1
+shadow-form|12|3
+absorb disease|12|0
+adrenalin control|8|4
+aging|15|0
+biofeedback|6|3
+body control|7|5
+body equilibrium|2|2
+body weaponry|9|4
+catfall|4|0
+cause decay|4|0
+cell adjustment|5|20
+chameleon power|6|3
+chemical simulation|9|6
+displacement|6|3
+double pain|7|0
+ectoplasmic form|9|9
+enhanced strength|2|1
+expansion|6|1
+flesh armor|8|4
+graft weapon|10|1
+heightened senses|5|1
+immovability|9|6
+lend health|4|0
+mind over body|0|10
+reduction|1|1
+share strength|6|2
+suspend animation|12|0
+banishment|30|10
+probability travel|20|8
+summon planar creature|90|0
+teleport|10|0
+teleport other|20|0
+astral projection|6|2
+dimensional door|4|2
+dimension walk|8|4
+dream travel|1|0
+teleport trigger|0|2
+time shift|16|0
+time/space anchor|5|1
+domination|32|2
+ejection|32|0
+fate link|18|5
+mass domination|18|2
+mindlink|18|8
+mindwipe|18|8
+probe|18|9
+psychic crush|7|0
+superior invisibility|18|5
+switch personality|48|0
+tower of iron will|6|0
+attaraction|18|8
+aversion|18|8
+awe|18|4
+conceal thoughts|5|3
+contact|18|1
+daydream|18|3
+ego whip|4|0
+empathy|18|1
+esp|18|6
+false sensory input|18|4
+id insinuation|5|0
+identity penetration|18|6
+incarnation awareness|18|13
+inflict pain|18|2
+intellect fortress|4|0
+invisible foes|18|5
+invisibility|18|2
+life detection|3|3
+mental barrier|3|0
+mind bar|6|4
+mind blank|0|0
+mind thrust|2|0
+phobia amplification|18|4
+post-hypnotic suggestion|18|1
+psionic blast|10|0
+psychic impersonation|10|3
+psychic messenger|4|3
+repugnance|18|8
+send thoughts|18|2
+sight link|18|5
+sound link|18|4
+synaptic static|15|10
+taste link|18|4
+telempathic projection|18|4
+thought shield|1|0
+truthear|4|2
+appraise|14|0
+aura alteration|10|0
+empower|300|0
+psychic clone|50|5
+psychic surgery|18|10
+split personality|40|6
+ultrablast|75|0
+cannibalize|0|0
+convergence|8|0
+enhancement|30|8
+gird|0|2
+intensify|5|1
+magnify|25|0
+martial trance|7|0
+prolong|5|2
+psionic inflation|20|3
+psionic sense|4|1
+psychic drain|10|0
+receptacle|0|0
+retrospection|120|0
+splice|5|1
+stasis field|20|20
+wrench|15|8

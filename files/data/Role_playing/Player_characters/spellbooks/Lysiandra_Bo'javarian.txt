@@ -1,0 +1,4 @@
+1|Burning Hands;Cantip;Chromatic Orb;Comprehend Languages;Detect Magic;Frost Fingers;Hold Portal;Identify;Magic Missile;Read Magic;Scatterspray;Wizard Mark
+2|Agannazar's Scorcher;Blindness;Blur;Displace Self;Knock;Protection from Cantrips;Wizard Lock
+3|Acid Lash;Dispel Magic;Fireball;Lance of Disruption
+4|Ice Storm;Remove Curse

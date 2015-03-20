@@ -1,0 +1,1 @@
+1|Cantrip;Detect Magic;Feather Float;Fog Cloud;Frost Fingers;Identify;Magic Missile;Read Magic

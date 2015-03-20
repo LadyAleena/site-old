@@ -1,0 +1,208 @@
+adze|1|1d4+1|1d4||4|S|S/P|4|d6|Axes, Hammers, & Picks||0.3
+ankus|1|1d4|1d4||4|M|P/B|6|d8|Clubs, Flails, & Maces, Polearms|Clubs, Staves|3
+arquebus, hand match|1/3|1d10|1d10|10-30-42|10|M|P|15|d8|Firearms|Hand Matches|175
+arquebus, matchlock|1/2|1d10|1d10|10-20-60|10|M|P|10|d8|Firearms|Matchlocks|50
+arquebus, wheellock|1/2|1d10|1d10|10-20-60|8|M|P|8|d8|Firearms|Snap and Wheel Lock|80
+awl pike|1|1d6|1d12||12|L|P|13|d8|Javelins & Spears, Polearms|Spears, Spear-like polearms|5
+axe, battle|1|1d8|1d8||7|M|S|7|d10|Axes, Hammers, & Picks|Axes|5
+axe, hand or throwing|1|1d6|1d4|2-4-6|5|M|S|4|d8|Axes, Hammers, & Picks|Axes|1
+axe, stone|1|1d6|1d4||6|M|B/S|6|d8|Axes, Hammers, & Picks|Axes|0.5
+axe, two-handed|1|1d10|2d8||10|L|S|9|d12|Axes, Hammers, & Picks|Axes|15
+axe-pistol|1/2|1d6|1d4|3-6-9|6|M|S/P|4|d8|Firearms|Combined weapons|45
+bagh nakh|1|1d2|1d2||1|S|S|2|d4|Unique weapons||0.4
+bardiche|1|2d4|2d6||12|L|S|9|d12|Polearms|Poleaxes|7
+bec de corbin|1|1d8|1d6||10|L|P/B|9|d10|Polearms|Beaked polearms|8
+belaying Pin|1|1d3|1d3||2|S|B|4|d6||Weapons of opportunity|0.02
+belt pistol, snaplock|1/2|1d8|1d8|3-6-9|3|S|P|7|d8|Firearms|Snap and Wheel Lock|15
+belt pistol, wheellock|1/2|1d8|1d8|3-6-9|3|S|P|7|d8|Firearms|Snap and Wheel Lock|25
+belt pistol, flintlock|1/2|1d8|1d8|4-8-12|3|S|P|7|d8|Firearms|Flintlocks|15
+bill|1|2d4|1d10||15|L|P/S|10|d10|Polearms|Billed polearms|7
+bill-guisarme|1|2d4|1d10||15|L|P/S|10|d10|Polearms|Billed polearms|7
+blowgun|2/1|||2-4-6|2|L||5|||Aided missile weapons|1
+blowgun w/barbed dart|2/1|1d3|1d2|2-4-6|*|S|P||d4||Aided missile weapons
+blowgun w/needle|2/1|1|1|2-4-6|*|S|P||||Aided missile weapons
+blunderbuss pistol|1/3|1d6|1d6|2-4-8|6|S|P|9|d10|Firearms|Flintlocks|35
+blunderbuss|1/3|1d8|1d8|3-6-12|10|M|P|10|d12|Firearms|Flintlocks|20
+bo stick|1|1d6|1d4||4|L|B|3|d8||Martial arts weapons|0.05
+bolas|1|1d3|1d2||2|M|B|8|d6||Chain and Rope weapons|0.5
+boomerang|1|1d4|1d4|4-8-12|2|S|B|4|d8|Unique weapons||0.5
+bottle|1|1d3|1d2|2-3-4|2|S|B|4|d6||Weapons of opportunity
+bow, long|2/1||||3|L||7||Bows|Bows|75
+bow, long w/flight arrows|1|1d6|1d6|14-28-42|*|S|P||d6|Bows|Bows
+bow, long w/pile arrows|1|1d6|1d6|10-20-34|*|S|P||d6|Bows|Bows
+bow, long w/sheaf arrows|1|1d8|1d8|10-20-34|*|S|P||d6|Bows|Bows
+bow, long w/stone arrows|1|1d4|1d4|14-28-42|*|S|P||d6|Bows|Bows
+bow, long, composite|2/1||||3|L||7|d6|Bows|Bows|100
+bow, long, composite w/flight arrows|1|1d6|1d6|12-24-42|*|S|P||d6|Bows|Bows
+bow, long, composite w/pile arrows|1|1d6|1d6|8-16-34|*|S|P||d6|Bows|Bows
+bow, long, composite w/sheaf arrows|1|1d8|1d8|8-16-34|*|S|P||d6|Bows|Bows
+bow, long, composite w/stone arrows|1|1d4|1d4|12-24-42|*|S|P||d6|Bows|Bows
+bow, short|2/1||||2|M||7||Bows|Bows|30
+bow, short w/flight arrows|1|1d6|1d6|10-20-30|*|S|P||d6|Bows|Bows
+bow, short w/stone arrows|1|1d4|1d4|10-20-30|*|S|P||d6|Bows|Bows
+bow, short, composite|2/1||||2|M||6||Bows|Bows|75
+bow, short, composite w/flight arrows|1|1d6|1d6|10-20-36|*|S|P||d6|Bows|Bows
+bow, short, composite w/stone arrows|1|1d4|1d4|10-20-36|*|S|P||d6|Bows|Bows
+brandistock|1|1d6|1d6||5|M|P|7|d8|Javelins & Spears, Polearms|Staves|15
+caliver|1/2|1d8|1d8|8-16-48|11|M|P|9|d8|Firearms|Matchlocks|40
+caltrop|1|1|1d2||2/10|S|P|N/A||Unique weapons||0.16
+carbine|1/2|1d10|1d10|10-20-55|8|M|P|8|d8|Firearms|Flintlocks|65
+cestus|1|1d4|1d3||2|S|S|2|d6|Unique weapons||1
+chain|1|1d4+1|1d4||3|L|B|5|d6||Chain and Rope weapons|0.5
+chakram|2/1|1d4|1d3|4-8-12|1|S|S|4|d4|Unique weapons||0.8
+chijikiri|1|1d6|1d8||6|M|B/P|7|d6||Chain and Rope weapons|6
+cho-ku-no|2/1|||10-20-30|12|M||6||Bows|Crossbows|50
+club|1|1d6|1d3|2-4-6|3|M|B|4|d8|Clubs, Flails, & Maces|Clubs|0.01
+club, great|1|2d4|1d6+1||15|L|B|9|d12|Clubs, Flails, & Maces|Clubs|2
+club, war|1|1d6+1|1d4+1|2-4-6|6|M|B/S|7|d10|Clubs, Flails, & Maces|Clubs|2
+crossbow, heavy|1/2||||14|M||10||Bows|Crossbows|50
+crossbow, light|1||||7|M||7||Bows|Crossbows|35
+crossbow, hand|1||||3|S||5||Bows|Crossbows|150
+crossbow, heavy w/heavy quarrel|1|1d8+1|1d10+1|16-32-48|*|S|P||d6|Bows|Crossbows
+crossbow, light w/light quarrel|1|1d6+1|1d8+1|12-24-36|*|S|P||d6|Bows|Crossbows
+crossbow, hand w/hand quarrel|1|1d3|1d2|4-8-12|*|S|P||d4|Bows|Crossbows
+dagger|1:2/1|1d4|1d3|2-4-6|1|S|P|2|d6|Swords|Short swords|2
+dagger, bone|1:2/1|1d2|1d2|2-3-4|1|S|P|2|d6|Swords|Short swords|0.1
+dagger, jambiya|1|1d4|1d4||1|S|P/S|3|d6|Swords|Short swords|4
+dagger, katar|1|1d3+1|1d3||1|S|P|2|d6|Swords|Short swords|3
+dagger, main-gauche|1|1d4|1d3||2|S|P/S|2|d6|Swords|Short swords, Fencing swords|3
+dagger, parrying|1|1d3|1d2||1|S|P|2|d6|Swords|Short swords, Fencing swords|5
+dagger, stiletto|1:2/1|1d3|1d2|2-4-6|0.5|S|P|2|d4|Swords|Short swords|8
+dagger, stone|1:2/1|1d3|1d2|2-3-4|1|S|P|2|d6|Swords|Short swords|0.2
+dagger-pistol|1/2|1d4|1d3|3-6-9|3|S|P|2|d6|Firearms|Combined weapons|40
+dart|3/1|1d3|1d2|2-4-8|1/2|S|P|2|d4|Javelins & Spears|Javelins|0.5
+fauchard|1|1d6|1d8||7|L|S|8|d8|Polearms|Glaives|5
+flail, footman's|1|1d6+1|2d4||15|L|B|7|d12|Clubs, Flails, & Maces|Flails|15
+flail, horseman's|1|1d4+1|1d4+1||5|M|B|6|d10|Clubs, Flails, & Maces|Flails|8
+flail, grain|1|1d4|1d4||3|M|B|6|d8|Clubs, Flails, & Maces|Flails|0.5
+fork|1|1d6|1d6+1||6|L|P|7|d6||Farm weapons|0.8
+gaff/hook, attached|1|1d4|1d3||2|S|P|2|d4||Chain and Rope weapons|2
+gaff/hook, held|1|1d4|1d3||2|S|P|2|d4||Chain and Rope weapons|0.05
+glaive|1|1d6|1d10||8|L|S|8|d10|Polearms|Glaives|6
+glaive-guisarme|1|2d4|2d6||10|L|P/S|9|d10|Polearms|Billed polearms|10
+grapple|1/2|1d4|1d4|2-4-6|3|S|P/B|7|d6|||5
+guisarme|1|2d4|1d8||8|L|S|8|d10|Polearms|Billed polarms|5
+gunpowder|1||||*||||||
+gunsen|1|1d3|1d2||1|S|B/P|2|d4|Unique weapons||4
+halberd|1|1d10|2d6||15|L|P/S|9|d12|Polearms|Poleaxes|10
+hammer|1|1d4|1d3|2-4-6||S|B/P|4|d6|Axes, Hammers, & Picks|Hammers|0.5
+hammer, maul|1|2d4|1d10||10|L|B/S|8|d12|Axes, Hammers, & Picks|Hammers|4
+hammer, sledge|1|1d6+1|1d4+1||10|M|B/S|8|d12|Axes, Hammers, & Picks|Hammers|2
+warhammer|1|1d4+1|1d4|2-4-6|6|M|B|4|d8|Axes, Hammers, & Picks|Hammers|2
+hammer-pistol|1/2|1d4+1|1d4|3-6-9|5|M|B/P|4|d10|Firearms|Combined weapons|50
+handgunne|1/4|1d8+2|2d6+2|8-24-34|20|L|P|18|d10|Firearms|Hand Matches|120
+harpoon, bone|1|1d6|1d10|2-3-4|5|L|P|7|d8|Javelins & Spears||1
+harpoon|1|1d4+1|1d6+1|10-20-30|6|L|P|7|d8|Javelins & Spears||20
+harpoon, two-handed|1|2d4|2d6|10-20-30|6|L|P|7|d8|Javelins & Spears||20
+hatchet|1|1d4|1d4|2-4-6|3|S|S|3|d6|Axes, Hammers, & Picks||2
+holy symbol, big|1|1d6|1d3||4|S|B|5|d8||Weapons of opportunity|25
+horse pistol (flintlock)|1/2|1d10|1d10|5-10-15|4|S|P|8|d8|Firearms|Flintlocks|40
+horse pistol (snaplock)|1/2|1d10|1d10|4-8-12|4|S|P|8|d8|Firearms|Snap and Wheel Lock|20
+horse pistol (wheellock)|1/2|1d10|1d10|4-8-12|4|S|P|8|d8|Firearms|Snap and Wheel Lock|35
+javelin|1|1d4|1d4|20-40-60|2|L|P|4|d6|Javelins & Spears|Javelins|0.5
+javelin, stone|1|1d4|1d4|20-40-60|2|M|P|4|d6|Javelins & Spears|Javelins|0.05
+javelin, two-handed|1|1d6|1d6|20-40-60|2|L|P|4|d6|Javelins & Spears|Javelins|0.5
+javelin, two-handed, stone|1|1d4+1|1d6|20-40-60|2|M|P|4|d6|Javelins & Spears|Javelins|0.05
+jitte|1|1d4|1d2||2|S|B|2|d6||Martial arts weapons|0.5
+kama|1|1d6|1d4||2|S|P/S|4|d6||Farm weapons|2
+kau sin ke|1|1d8|1d6||4|M|B|6|d8||Chain and Rope weapons|3
+kawanaga|1|1d3|1d2||1|S|B/P|7|d6||Chain and Rope weapons|1
+knife|1:2/1|1d3|1d2|2-4-6|0.5|S|P/S|2|d4|Swords|Short swords|0.5
+knife, bone|1:2/1|1d2|1d2|2-3-4|0.5|S|P/S|2|d4|Swords|Short swords|0.03
+knife, machete|1|1d8|1d8||5|M|S|6|d4|Swords|Short swords|8
+knife, parang|1|1d8|1d8||5|M|S|6|d4|Swords|Short swords|8
+knife, stone|1:2/1|1d2|1d2|2-3-4|0.5|S|P/S|2|d6|Swords|Short swords|0.05
+knife, throwing|1|2d4|1d6+1|2-4-6|4|M|P/S|8|d8|Swords|Short swords|5
+kusari-gama|1|1d6|1d4||3|M|P/S/B|6|d6|||4
+lajatang|1|1d10|1d10||6|L|S|6|d8|Polearms||7
+lance, heavy|1|1d8+1|3d6||15|L|P|10|d12|Javelins & Spears|Lances|15
+lance, jousting|1|1d3-1|1d2-1||20|S|B|10|d12|Javelins & Spears|Lances|20
+lance, light|1|1d6|1d8|2-3-4|5|L|P|6|d8|Javelins & Spears|Lances|6
+lance, medium|1|1d6+1|2d6||10|L|P|7|d10|Javelins & Spears|Lances|10
+lantern|1|1d3|1d2|2-3-4|2–3|S|Bd|6|d6||Weapons of opportunity
+lasso|1||||3|L||10|||Chain and Rope weapons|0.5
+lucern hammer|1|2d4|1d6||15|L|P/B|9|d10|Polearms|Beaked polearms|7
+mace, footman's|1|1d6+1|1d6||10|M|B|7|d10|Clubs, Flails, & Maces|Maces|8
+mace, horseman's|1|1d6|1d4|2-3-4|6|M|B|6|d8|Clubs, Flails, & Maces|Maces|5
+mace-axe|1|2d4|1d6+1||9|L|B/S|8|d10|Axes, Hammers, & Picks, Clubs, Flails, & Maces|Axes, Maces, Combined weapons|12
+mancatcher|1||||8|L||7|d6|Polearms||30
+military fork|1|1d8|2d4||7|L|P|7|d8|Polearms||5
+morningstar|1|2d4|1d6+1||12|M|B/P|7|d10|Clubs, Flails, & Maces|Clubs|10
+musket, flintlock|1/2|1d12|1d12|15-30-80|12|M|P|9|d8|Firearms|Flintlocks|90
+musket, matchlock w/rest|1/2|1d12|1d12|12-24-72|20|L|P|12|d8|Firearms|Matchlocks|45
+musket, snaplock|1/2|1d12|1d12|14-26-78|14|M|P|9|d8|Firearms|Snap and Wheel Lock|60
+nagimaki|1|1d6|1d8||6|M|S|6|d6|Polearms|Glaives|6
+naginata|1|1d8|1d10||10|L|S|7|d8|Polearms|Glaives|8
+net|1/2|||2-3-4|10|M||10|||Chain and Rope weapons|5
+nunchaku|1/2|1d6|1d6||3|M|B|3|d8||Martial arts weapons|0.5
+oil flask|1/2|||2-3-4|1|S||15|||Weapons of opportunity
+partisan|1|1d6|1d6+1||8|L|P|9|d8|Polearms|Spear-like polearms|10
+pellet bow|1||||5|M||7|d4|Bows|Crossbows|25
+pellet bow w/pellets|1|1d4|1d4|8-16-24|*|S|B|||Bows|Crossbows
+pick|1|1d6|1d6+1||8|L|P|8|d8|Axes, Hammers, & Picks|Picks|4
+pick, footman's|1|1d6+1|2d4||6|M|P|7|d8|Axes, Hammers, & Picks|Picks|8
+pick, horseman's|1|1d4+1|1d4||4|M|P|5|d6|Axes, Hammers, & Picks|Picks|7
+pike|1|1d6|1d12||12|L|P|13|d8|Polearms||5
+pilum|1|1d6|1d6|3-6-9|3|M|P|5|d6|Javelins & Spears|Javelins|1
+pry bar|1|1d6|1d3||5|M|B|5|d8||Weapons of opportunity|2
+quarterstaff|1|1d6|1d6||4|L|B|4|d10|Polearms|Staves|0.1
+ranseur|1|2d4|2d4||7|L|P|8|d8|Polearms|Spear-like polearms|6
+rock|2/1|1d3|1d2|2-4-6|1|S|B|2|d6||Weapons of opportunity
+sai|1|1d4|1d2||2|S|B|2|d6||Martial arts weapons|1
+sang kauw|1|1d8|1d6||10|L|P/S|7|d6||Martial arts weapons|5
+sap|1|1d2|1d2||0.5|S|B|2|d4|Unique weapons||0.5
+scourge|1|1d4|1d2||2|S||5|d4||Chain and Rope weapons|2
+scythe|1|1d6+1|1d8||8|L|P/S|8|d8||Farm weapons|3
+shuriken|2/1|1d4|1d4|3-6-9|*|S|P|2|d4|Javelins & Spears||0.3
+sickle|1|1d4+1|1d4||3|S|S|4|d4||Farm weapons|0.6
+sling w/bullets|1|1d4+1|1d6+1|10-20-40|*|S|B||d4||Aided missile weapons
+sling w/stones|1|1d4|1d4|8-16-24|*|S|B||d4||Aided missile weapons
+sling|1||||1|S||6|||Aided missile weapons|0.05
+slow match|1||||*||||||
+smokepowder|1||||*||||||
+spade|1|1d4|1d4||5|M|S/B|7|d8||Farm weapons|1
+spear|1|1d6|1d8|2-4-6|5|M|P|6|d6|Javelins & Spears|Spears|0.8
+spear, stone|1|1d4|1d6|2-3-4|5|M|P|6|d6|Javelins & Spears|Spears|0.05
+spear, two-handed|1|1d6+1|2d6|2-4-6|5|M|P|6|d8|Javelins & Spears|Spears|0.8
+spear, two-handed, stone|1|1d6|2d4|2-3-4|5|M|P|6|d8|Javelins & Spears|Spears|0.05
+spear, long|1|1d8|1d8+1|2-4-6|8|L|P|8|d8|Javelins & Spears|Spears|5
+spear, long, two-handed|1|2d6|3d6|2-4-6|8|L|P|8|d8|Javelins & Spears|Spears|5
+spear, long|1|2d6|3d6|2-4-6|8|L|P|8|d8|Javelins & Spears|Spears|5
+spetum|1|1d6+1|2d6||7|L|P|8|d8|Polearms|Spear-like polearms|5
+staff sling|1||||2|M||11|||Aided missile weapons|0.2
+staff sling w/stinkpot|1|1d3|1d3|6-12-18|2|S|B||d6||Aided missile weapons
+staff sling w/stones|1|1d4+1|1d6+1|6-12-18|2|S|B||d6||Aided missile weapons
+sword, bastard|1|1d8|1d12||10|M|S|6|d8|Swords|Large swords|25
+sword, bastard, two-handed|1|2d4|2d8||10|M|S|6|d10|Swords|Large swords|25
+sword, broad|1|2d4|1d6+1||4|M|S|5|d8|Swords|Medium swords, Ancient swords, Roman swords|10
+sword, claymore|1|2d4|2d8||8|M|S|7|d10|Swords|Large swords|25
+sword, cutlass|1|1d6+1|1d8+1||4|M|S|5|d8|Swords|Medium swords, Oriental swords|12
+sword, drusus|1|1d6+1|1d8+1||3|M|P|3|d6|Swords|Short swords, Roman swords|50
+sword, estoc|1|1d6|1d8||5|M|S|5|d6|Swords|Medium swords|14
+sword, falchion|1|1d6+1|2d4||8|M|S|5|d8|Swords|Medium swords|17
+sword, gladius|1|1d6|1d8||3|S|P|3|d6|Swords|Short swords, Roman swords|10
+sword, katana|1|1d10|1d12||6|M|S/P|4|d6|Swords|Oriental swords|100
+sword, katana, two-handed|1|2d6|2d6||6|M|S/P|4|d8|Swords|Oriental swords|100
+sword, khopesh|1|2d4|1d6||7|M|S|9|d8|Swords|Ancient swords|15
+sword, long|1|1d8|1d12||4|M|S|5|d8|Swords|Medium swords|15
+sword, ninja-to|1|1d8|1d6||5|M|S/P|3|d6|Swords|Oriental swords|20
+sword, no-dachi|1|1d10|1d20||10|L|S/P|8|d10|Swords|Large swords, Oriental swords|45
+sword, rapier|1|1d6|1d8||4|M|P|4|d6|Swords|Fencing swords|15
+sword, sabre|1|1d6+1|1d8+1||5|M|S|5|d8|Swords|Medium swords, Fencing swords|17
+sword, sapara|1|1d6+1|1d4||4|S|S|5|d6|Swords|Short swords, Ancient swords|10
+sword, scimitar, great|1|2d6|4d4||16|L|S|9|d10|Swords|Large swords, Middle Eastern swords|60
+sword, scimitar|1|1d8|1d8||4|M|S|5|d8|Swords|Middle Eastern swords|15
+sword, short|1|1d6|1d8||3|S|P|3|d6|Swords|Short swords, Ancient swords, Middle Eastern swords|10
+sword, spatha|1|1d8|1d12||4|M|S|5|d8|Swords|Roman swords|25
+sword, tulwar|1|1d6+1|2d4||8|M|S|5|d8|Swords|Short swords, Middle Eastern swords|17
+sword, two-handed|1|1d10|3d6||15|L|S|10|d8|Swords|Large swords|50
+sword, wakizashi|1|1d6|1d4||3|M|S/P|3|d12|Swords|Oriental swords|50
+sword-axe|1|1d8+1|1d12+1||12|L|S|10|d10|Axes, Hammers, & Picks, Swords|Axes, Combined weapons, Ancient swords|20
+sword-pistol|1/2|2d4|1d6+1|3-6-9|6|M|S/P|5|d8|Firearms|Combined weapons|75
+tetsubo|1/2|1d8|1d8|1/2|8|L|B|7|d12|Polearms||4
+three-piece rod|1|1d6|1d4||5|L|B|7|d8||Martial arts weapons|2
+trident|1|1d6+1|2d4|2-3-4|5|L|P|7|d6|Javelins & Spears||15
+trident, two-handed|1|1d8+1|3d4|2-3-4|5|L|P|7|d8|Javelins & Spears||15
+vial|1|||2-3-4|*|S||2|||Weapons of opportunity|0.8
+voulge|1|2d4|2d4||12|L|S|10|d12|Polearms|Poleaxes|8
+whip|1|1d2|1||2|M||8|||Chain and Rope weapons|0.1

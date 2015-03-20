@@ -1,0 +1,5 @@
+1|Adhesion;Burning Hands;Cantrip;Charm Person;Chill Touch;Comprehend Languages;Conjure Spell Component;Detect Magic;Detect Secret Passages and Portals;Detect Undead;Expeditious Retreat;Feather Fall;Fist of Stone;Gaze Reflection;Grease;Hold Portal;Identify;Jump;Lasting Breath;Magic Missile;Message;Phantasmal Force;Push;Ray of Fatigue;Read Magic;Shocking Grasp;Sleep;Spider Climb;Tenser\'s Floating Disc;Unseen Servant;Wizard Mark
+2|Alter Self;Battering Ram;Bladeleap;Bladethirst;Blastbones;Blur;Cat's Grace;Detect Evil;Displace Self;ESP;Flaming Sphere;Forget;Knock;Know Alignment;Misdirection;Protection from Cantrips;Spark Shower;Spectral Hand;Strength;Web;Wizard Lock
+3|Detect Illusion;Dispel Magic;Feign Death;Fireball;Fly;Hold Person;Hold Undead;Lightning Bolt;Melf's Minute Meteors;Minor Malison;Non-Detection;Phantom Steed;Protection from Amorphs;Slow;Vampiric Touch;Water Breathing
+4|Charm Monster;Delayed Magic Missile;Destroy Undead;Fireshield;Fumble;Greater Malison;Improved Invisibility;Phantasmal Killer;Remove Curse;Stoneskin;Ultravision
+5|Cone of Cold;Improved Blink;Magic Jar;Prying Eyes;Read Object;Teleport;Wall of Force

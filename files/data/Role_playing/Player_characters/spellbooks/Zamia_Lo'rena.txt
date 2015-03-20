@@ -1,0 +1,6 @@
+1|Animate Dead Animals;Burning Hands;Cantrip;Charm Person;Chill Touch;Chromatic Orb;Color;Color Spray;Comprehend Languages;Detect Magic;Empathic Seizure;Fire Burst;Frost Fingers;Grease;Hold Portal;Identify;Jump;Magic Missile;Nystul's Flash;Phantasmal Force;Ray of Fatigue;Read Magic;Scatterspray;Shield;Shocking Grasp;Sleep;Spook;Wall of Fog;Wizard Mark
+2|Agnnazar's Scorcher;Blindness;Blur;Cat's Grace;Deafness;Displace Self;Empathis Control;Flame Ray;Flaming Sphere;Forget;Glitterdust;Hypnotic Pattern;Invisibility;Knock;Lightning Strike;Mass Jump;Melf's Acid Arrow;Protection from Cantrips;Ray of Enfeeblement;Rope Trick;Scare;Spark Shower;Stinking Cloud;Summon Swarm;Wall of Gloom;Web;Wizard Lock
+3|Acid Lash;Dire Charm;Dispel Magic;Fireball;Flame Arrow;Lance of Disruption;Lightning Bolt;Monster Summoning I;Mummy Touch;Ray of Paralysis;Vampiric Touch;Wall of Water;Wind Wall
+4|Charm Monster;Fear;Fire Shield-Cold;Mordenkainen's Force Missiles;Polymorph Other;Rainbow Pattern;Remove Curse;Stoneskin;Wall of Fire;Wall of Ice
+5|Airy Water
+6|Chain Lightning;Contingency;Eyebite

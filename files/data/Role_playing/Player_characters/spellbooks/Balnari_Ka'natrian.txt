@@ -1,0 +1,2 @@
+1|Burring Hands;Cantrip;Chill Touch;Comprehend Languages;Detect Magic;Detect Undead;Feather Fall;Frost Fingers;Hold Portal;Identify;Jump;Read Magic;Shocking Grasp;Spook;Wall of Fog;Wizard Mark
+2|Blindness;Blur;Continual Light;Flaming Sphere;Knock;Lightning Strike;Protection from Cantrips;Rope Trick;Scare;Web;Wizard Lock

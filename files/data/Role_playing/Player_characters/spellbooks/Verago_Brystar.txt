@@ -1,0 +1,4 @@
+1|Burning Hands;Charm Person;Chill Touch;Detect Magic;Enlarge;Grease;Identify;Magic Missile;Read Magic;Shield;Shocking Grasp;Sleep
+2|ESP;Flaming Sphere;Invisibility;Knock;Melf's Acid Arrow;Stinking Cloud;Summon Swarm;Web
+3|Dispel Magic;Fireball;Haste;Hold Person;Lightning Bolt;Vampiric Touch
+4|Charm Monster;Enervation;Remove Curse;Stoneskin

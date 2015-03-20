@@ -1,0 +1,5 @@
+Camping Gear|7 gp, 2 sp|16.5 lbs.|1 flint & steel, 1 small tent, 2 winter blankets, 1 large sack
+Climbing Gear|13 gp, 8 sp|50.5 lbs.|2 crampons, 5 grappling hooks, 20 pitons, 1 hemp rope (50'), 1 large sack
+Cooking Gear|2 gp, 5 sp|7 lbs.|2 flints & steel, 1 bucket, 2 iron pots (The flints and steel and pots fit in the lidded bucket.)
+Riding Equipment|25 gp, 6 sp|87 lbs.|2 bits & bridles, 2 sets of horseshoes & shoeing, 1 riding saddle, 2 pairs of small saddle bags, 1 pair of large saddle bags, 2 saddle blankets
+Writing Kit|120 gp|2.65 lbs.|1 carrying case, 50 sheets of paper, 2 vials of ink, 2 quills, 2 candles, .25 lbs sealing wax

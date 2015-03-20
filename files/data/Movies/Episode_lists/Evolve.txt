@@ -1,0 +1,12 @@
+.
+Eyes
+Guts
+Jaws
+Sex
+Skin
+Flight
+Communications
+Size
+Venom
+Shape
+Speed

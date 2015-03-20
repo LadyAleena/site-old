@@ -1,0 +1,4 @@
+1|Audible Glamour;Burning Hands;Cantrip;Charm Person;Chill Touch;Color Spray;Conjure Spell Component;Detect Magic;Feather Fall;Grease;Hold Portal;Identify;Jump;Magic Missile;Phantasmal Force;Read Magic;Shocking Grasp;Sleep;Spider Climb;Tenser's Floating Disc
+2|Cat's Grace;Detect Evil/Good;Invisibility;Stinking Cloud
+4|Find Beacon;Teleport Beacon
+5|Secure Teleport

@@ -1,0 +1,4 @@
+1|Alarm;Armor;Change Self;Charm Person;Color Spray;Dancing Lights;Enlarge;Find Familiar;Grease;Protection from Evil;Shield;Slow;Wizard Mark
+2|Blindness;Continual Light;Deafness;Fog Cloud;Mirror Image;Rope Trick;Scare;Stinking Cloud;Tasha's Uncontrollable, Hideous Laughter
+3|Blink;Clairaudience;Dispel Silence;Explosive Runes;Fireball;Fly;Gust of Wind;Haste;Item;Levitate;Protection from Normal Missiles;Suggestion;Water Breathing
+4|Evard's Black Tentacles;Improved Invisibility

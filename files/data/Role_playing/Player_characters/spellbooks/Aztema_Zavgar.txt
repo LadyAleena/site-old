@@ -1,0 +1,8 @@
+1|Burning Hands;Cantrip;Charm Person;Chill Touch;Color Spray;Comprehend Languages;Detect Magic;Detect Portal;Detect Secret Passages & Portals;Disarm;Enlarge/Reduce;Feather Fall;Frost Fingers;Grease;Hold Person;Hold Portal;Identify;Jump;Lasting Breath;Light;Magic Missile;Read Magic;Shocking Grasp;Sleep;Unseen Servant;Wizard Mark
+2|Darkness, 15' Radius;Displace Self;ESP;Flaming Sphere;Insatiable Thirst;Knock;Lightning Strike;Protection from Cantrips;Protection from Poison;Pyrotechnics;Ray of Enfeeblement;Ride the Wind;Rope Trick;Scare;Stinking Cloud;Wall of Gloom;Wizard Lock
+3|Dispel Magic;Fireball;Haste;Hold Person;Infravision;Lance of Disruption;Solvent of Corrosion;Tongues/Babble;Vampiric Touch;Water Breathing/Air Breathing;Wraithform
+4|Confusion;Dimension Door;Evard's Black Tentacles;Ice Storm;Wall of Ice;Wizard Eye
+5|Airy Water;Cone of Cold;Teleport
+6|Enchant an Item
+7|Charm Plants
+8|Prismatic Wall

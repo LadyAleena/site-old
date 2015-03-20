@@ -1,0 +1,6 @@
+1|Armor;Burning Hands;Cantrip;Change Self;Charm Person;Chill Touch;Color Spray;Detect Magic;Dictation;Enlarge;Feather Fall;Find Familiar;Friends;Grease;Identify;Magic Missile;Phantasmal Force;Read Magic;Shield;Shocking Grasp;Sleep;Spider Climb;Spook;Unseen Servant;Wall of Fog
+2|Bind;Blur;Darkness;Deafness;Detect Invisibility;Displace Self;Flaming Sphere;Fool's Gold;Glitterdust;Hypnotic Pattern;Insatiable Thirst;Invisibility;Irritation;Knock;Levitate;Melf's Acid Arrow;Misdirection;Protection from Paralysis;Protection from Poison;Ray of Enfeeblement;Scare;Spectral Hand;Stinking Cloud;Strength;Summon Swarm;Tasha's Uncontrollable Laughter;Web
+3|Blink;Delude;Explosive Runes;Fly;Haste;Infravision;Item;Lightning Bolt;Non-Detection;Phantasmal Steed;Slow;Tongues;Suggestion;Vampiric Touch;Wraithform
+4|Find Beacon;Teleport Beacon
+5|Evard's Black Tentacles;Secure Teleport;Teleport
+9|Prismatic Sphere

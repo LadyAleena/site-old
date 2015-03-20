@@ -1,0 +1,9 @@
+1|Alarm;Burning Hands;Cantrip;Charm Person;Conjure Spell Components;Dancing Lights;Darkness;Detect Magic;Detect Undead;Grease;Hold Portal;Identify;Jump;Lasting Breath;Light;Magic Missile;Mount;Protection from Good/Evil;Read Languages;Read Magic;Shield;Shocking Grasp;Sleep;Spider Climb;Tenser's Floating Disk;Unseen Servant;Ventriloquism
+2|Bind;Blur;Continual Darkness;Continual Light;Detect Evil;Detect Good;Detect Invisible;ESP;Fog Cloud;Forget;Improved Phantasmal Force;Invisibility;Knock;Levitate;Locate Object;Melf's Acid Arrow;Mindmask;Mirror Image;Ray of Enfeeblement;Rope Trick;Shatter;Spectral Hand;Stinking Cloud;Summon Swarm;Web;Wizard Lock
+3|Clairaudience;Clairvoyance;Dispel Magic;Explosive Runes;Fireball;Flame Arrow;Fly;Haste;Hold Person;Hold Undead;Infravision;Invisibility, 10' Radius;Item;Lightning Bolt;Melf's Minute Meteors;Monster Summoning I;Protection from Evil/Good, 10' Radius;Protection from Normal Missiles;Secret Page;Slow;Spirit Armor;Vampiric Touch;Water Breathing;Wind Wall
+4|Charm Monster;Confusion;Dimension Door;Enchanted Weapon;Extension I;Fire Shield;Fire Trap;Hallucinatory Terrain;Ice Storm;Improved Invisibility;Mass Morph;Monster Summoning II;Plant Growth;Polymorph Other;Polymorph Self;Remove Curse;Stone Skin;Wall of Fire;Wall of Ice;Wizard Eye
+5|Animate Dead;Avoidance;Cloudkill;Cone of Cold;Contact Other Plane;Dismissal;Extension II;Fabricate;Feeeblemind;Hold Monster;Magic Jar;Monster Summoning III;Passwall;Teleport;Wall of Force;Wall of Iron;Wall of Stone
+6|Anti-Magic Shell;Disintegrate;Enchant An Item;Extension III;Eye Bite;Flesh to Stone;Globe of Invulnerability;Monster Summoning IV;Project Image;Stone to Flesh;True Seeing
+7|Delayed Blast Fireball;Monster Summoning V
+8|Monster Summoning VI;Permanency;Polymorph Any Object;Prismatic Wall
+9|Meteor Swarm;Monster Summoning VII;Mordenkainen's Disjunction

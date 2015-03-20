@@ -1,0 +1,2 @@
+broad|0|Axes, Hammers, & Picks;Bows;Clubs, Flails, & Maces;Firearms;Javelins & Spears;Polearms;Swords;Unique weapons
+tight|0|Axes;Hammers;Picks;Bows;Crossbows;Clubs;Flails;Maces;Combined weapons;Flintlocks;Hand Matches;Matchlocks;Snap and Wheel Locks;Javelins;Lances;Spears;Beaked polearms;Billed polearms;Glaives;Poleaxes;Spear-like polearms;Staves;Short swords;Medium swords;Large swords;Ancient swords;Middle Eastern swords;Oriental swords;Roman swords;Aided missile weapons;Chain and Rope weapons;Farm weapons;Martial arts weapons;Weapons of opportunity

@@ -1,0 +1,5 @@
+1|Burning Hands;Change Self;Charm Person;Color Spray;Detect Magic;Enlarge/Reduce;Feather Fall;Grease;Hold Portal;Identify;Light;Magic Missile;Phantasmal Force;Protection from Evil;Shield;Sleep;Spider Climb;Wall of Fog
+2|Alter Self;Continual Light;Darkness, 15' Radius;Deep Pockets;Detect Invisibility;Improved Phantasmal Force;Invisibility;Knock;Melf's Acid Arrow;Mirror Image;Summon Swarm;Web
+3|Dispel Magic;Fly;Gust of Wind;Haste;Hold Person;Hold Undead;Infravision;Melf's Minute Meteors;Monster Summoning I;Tongues;Wind Wall
+4|Charm Monster;Stoneskin;Wall of Ice
+5|Stoneshape

@@ -1,0 +1,3 @@
+1|Audible Glamour;Cantrip;Detect Magic;Enlarge;Erase;Fist of Stone;Grease;Hypnotism;Identify;Magic Missile;Mending;Murdock's Feathery Flyer;Read Magic;Shocking Grasp;Sleep;Taunt
+2|Chaos Shield;Knock;Levitate;Magic Mouth;Melf's Acid Arrow;Past Life;Ride the Wind;Rope Trick;Shatter;Spectral Hand;Web;Wizard Lock
+3|Dispel Magic;Hold Person;Maximillian's Stoney Grasp;Melf's Minute Meteors;Watery Double;Wizard Sight

@@ -1,0 +1,5 @@
+1|Alarm;Burning Hands;Cantrip;Chill Touch;Chromatic Orb;Comprehend Languages;Detect Magic;Detect Secret Passages and Portals;Detect Undead;Enlarge;Feather Fall;Identify;Jump;Lasting Breath;Magic Missile;Mount;Read Magic;Spider Climb;Tenser's Floating Disc;Wizard Mark
+2|Cat's Grace;Darkness, 15' Radius;Displace Self;Flaming Sphere;Fog Cloud;Invisibility;Irritation;Knock;Levitate;Protection from Cantrip;Protection from Polymorph;Spectral Hand;Stinking Cloud;Summon Swarm;Unseen Servant;Web;Whispering Wind;Wizard Lock
+3|Dispel Magic;Explosive Runes;Feign Death;Fireball;Hold Undead;Melf's Minute Meteors;Phantom Steed;Vampiric Touch;Wraithform
+4|Contagion;Curse;Evard's Black Tentacles;Ice Storm;Otiluke's Resilent Sphere;Remove Curse;Wizard's Eye
+5|Animal Growth;Animate Dead;Dismissal;Summon Shadow;Teleport;Wall of Force

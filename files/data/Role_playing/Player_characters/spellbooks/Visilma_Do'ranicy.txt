@@ -1,0 +1,2 @@
+1|Cantrip;Chill Touch;Comprehend Languages;Detect Magic;Enlarge;Erase;Fist of Stone;Grease;Hypnotism;Identify;Magic Missile;Mending;Read Magic;Shocking Grasp;Sleep;Taunt
+2|Knock;Levitate;Magic Mouth;Melf's Acid Arrow;Ride the Wind;Rope Trick;Shatter;Spectral Hand;Web;Wizard Lock

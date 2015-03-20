@@ -1,0 +1,5 @@
+1|<b>Fist of Stone</b>;Burning Hands;Change Self;Charm Person;Detect Magic;Detect Undead;Enlarge/Reduce;Grease;Hold Portal;Identify;Light;Magic Missile;Phantasmal Force;Protection from Evil;Read Magic;Shield;Sleep;Spider Climb;Taunt
+2|<b>Maximillian's Earthen Grasp</b>;Alter Self;Continual Light;Darkness; 15' Radius;Deep Pockets;Detect Evil;Flaming Sphere;Improved Phantasmal Force;Invisibility;Knock;Melf's Acid Arrow;Mirror Image;Strength;Summon Swarm;Web
+3|<b>Maximillian's Stony Grasp</b>;Dispel Magic;Haste;Hold Person;Infravision;Melf's Minute Meteors;Monster Summoning I;Slow;Tongues
+4|<b>Stoneskin</b>;Charm Monster;Dig;Evard's Black Tentacles;Fool's Gold;Shout;Turn Pebble to Boulder;Wall of Ice
+5|<b>Stoneshape</b>

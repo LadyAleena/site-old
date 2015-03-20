@@ -1,0 +1,6 @@
+Wikipedia|en.wikipedia.org/wiki/
+Google|www.google.com/search?q=
+allmovie|www.allmovie.com/movie/v
+IMDb|www.imdb.com/title/tt
+TV.com|www.tv.com/show/|/summary.html
+Flixster|www.flixster.com/movie/

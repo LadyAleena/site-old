@@ -1,0 +1,2 @@
+1|Burning Hands;Cantrip;Chill Touch;Comprehend Languages;Detect Magic;Detect Secret Passages & Portals;Gaze Reflection;Hold Portal;Identify;Jump;Magic Missile;Read Magic;Shocking Grasp;Wizard Mark
+2|Cat's Grace;Darkness, 15' Radius;Flaming Sphere;Insatiable Thirst;Knock;Otto's Soothing Vibrations;Protection from Cantrips;Wall of Gloom;Wizard Lock

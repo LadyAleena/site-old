@@ -1,0 +1,9 @@
+1|<b>Chromatic Orb</b>;Alarm;Burning Hands;Cantrip;Chill Touch;Comprehend Languages;Detect Magic;Detect Phase;Detect Undead;Enlarge;Erase;Feather Fall;Fire Burst;Frost Fingers;Grease;Hold Portal;Lasting Breath;Light;Magic Missile;Message;Protection from Evil;Protection from Hunger and Thirst;Ray of Fatigue;Read Magic;Shield;Shocking Grasp;Spider Climb;Spook;Tenser's Floating Disc;Wizard Mark
+2|<b>Lightning Strike</b>;Alter Self;Cat's Grace;Continual Light;Detect Invisible;Displace Self;ESP;Flaming Sphere;Fog Cloud;Ghoul Touch;Ice Knife;Knock;Levitate;Mirror Image;Protection from Cantrips;Ride the Wind;Spectral Hand;Stinking Cloud;Strength;Web;Wizard Lock
+3|Blink;Dispel Magic;Fireball;Fly;Haste;Hold Undead;Lance of Disruption;Non-detection;Otiluke's Acid Cloud;Otiluke's Force Umbrella;Phantom Steed
+4|Remove Curse
+5|Teleport
+6|Enchant an Item
+7|Teleport without Error
+8|Permanency
+9|Astral Spell

@@ -1,0 +1,314 @@
+Acting|1|Cha|0|all|Bd;Hu
+Adaptation|2|Int|0|Warrior;Rogue|HL
+Administration|1|Int|+1|Priest|SM
+Adobe|1|Str|0|all|Ma
+Agriculture|1|Int|0|all|PH
+Alchemy|2|Int|-3|Wizard|SM
+Alertness|1|Wis|+1|all|Bb;Ra;Th;Dw;CT
+All-Around Attack|1|||Warrior|HL
+Alms|1|Cha|0|Priest|SM
+Ambidexterity|1|Dex|0|Warrior;Rogue|Sp;CT
+Ambush|1|Int|0|Warrior;Rogue|CT
+Anatomy|2|Int|0|Wizard|Ne;SM
+Animal Handling|1|Wis|-1|all|PH
+Animal Lore|1|Int|0|Warrior|PH;Pa;Dw;Sp
+Animal Noise|1|Wis|-1|all|Th;Hu
+Animal Rending|1|Dex|+2|Warrior|Bb
+Animal Training|1|Wis|0|all|PH
+Appraising|1|Int|0|Rogue|PH
+Arcanology|1|Int|-3|Wizard|SM
+Armor Optimization|1|Dex|-2|Warrior|DS
+Armorer|2|Int|-2|Warrior|PH
+Armorer-Crude|1|Int|-1|Warrior|Bb
+Art Expression/Dramatist|1|Int|-2|all|AH
+Artillerist|1|Cha|0|all|CT
+Artistic Ability|1|Wis|0|all|PH
+Assimilation|1|Int|0|Rogue|Ni
+Astrology|1|Int|0|Rogue;Priest;Wizard|PH;Th
+Astronomy|2|Int|0|all|Sp;Ma
+Athletics|1|Dex|-1|all|AH
+Awareness|2|Wis|0|Warrior;Rogue|AQ
+Ball Game|1|Spec|0|all|Ma
+Bargain|1|Wis|-2|all|DS
+Bartering|1|Int|-2|Rogue|Bb
+Begging|1|Cha|var|all|Th;Hu;AQ
+Blacksmithing|1|Str|0|all|PH
+Blind-fighting|2|||Warrior;Rogue|PH
+Boat Piloting|1|Int|-2|all|Sp
+Boating|1|Wis|+1|all|Bb;Ra;Th;Dw
+Boatwright|1|Int|-2|all|Dw
+Bookbinding|1|Int|0|Priest;Wizard|SM
+Bowyer/Fletcher|1|Dex|-1|Warrior|PH
+Bowyer/Fletcher-Crude|1|Dex|0|Warrior|Bb;Ma
+Bravery|1|Wis|0|Warrior|HL
+Brewing|1|Int|0|all|PH
+Bureaucracy|2|Int|-2|Rogue;Priest|Pa;SM
+Calligraphy|2|Dex|-2|all|OA
+Camouflage|1|Int/Wis|0|Warrior;Rogue|Ra;CT
+Canoeing|1|Dex|0|all|Ma
+Canoe-making|1|Wis|2|all|Ma
+Captivate*|1|Cha|0|Warrior|HL
+Carpentry|1|Str|0|all|PH
+Cartography|1|Int|-2|Rogue;Priest;Wizard|Ra;Sp;SS
+Caving|2|Wis|var|all|SS
+Ceremony|1|Wis|0|Priest|SM
+Chanting|1|Cha|+2|all|Bd;Hu
+Chaos Shaping|1|Wis|0|all|Pl
+Chariotering|1|Dex|+2|Warrior|PH
+Cheese making|1|Int|0|all|Hu
+Chicanery|1|Dex|-1|Rogue|AH
+City Familiarity|1|Int|0|all|Ni
+Classify Traps|2|Int|0|Rogue|HL
+Clockwork Creation|2|Dex|0|Wizard|Si
+Close-quarter Fighting|2|Dex|0|Warrior;Rogue|Hu
+Clothes making-Crude|1|Int|-1|all|Bb
+Cobbling|1|Dex|0|all|PH
+Concentration|2|Wis|0|Wizard|SM
+Concocting|1|Int|-2|all|SS
+Contact|1|Wis|0|all|Sp
+Cooking|1|Int|0|all|PH
+Craft Instrument|2|Dex|-2|all|Bd;Hu
+Crowd Working|1|Cha|+2|all|Bd;Hu
+Crushing Blow*|1|||Warrior;Rogue;Priest|CT
+Cryptography|1|Int|-1|Rogue;Wizard|Sp
+Crystal Focus|1|Wis|-1|Psionisist|WW
+Dancing|1|Dex|0|all|PH
+Danger Sense|2|Wis|+1|all|Bb;Hu
+Death Blow|2|||Warrior|HL
+Debate|1|Int|0|all|AQ
+Deep Diving|2|Con|-3|all|Sp
+Detect Deception*|1|Wis|0|Priest|HL
+Detect Signing|1|Int|1|Rogue|Ni
+Diagnostics|1|Wis|-1|Priest|Pa
+Dialects|1|Int|0|all|LA
+Diplomacy|1|Cha|-1|Priest|SM
+Direction Sense|1|Wis|+1|all|PH
+Direction Sense, Planar|1|Wis|+1|all|Pl
+Direction Sense, Underground|1|Wis|+2|all|Dw
+Dirty Fighting|1|Int|0|Warrior;Rogue|CT
+Disguise|1|Cha|-1|Rogue|PH
+Display Weapon Prowess|1|Dex|0|Warrior|AQ
+Distance Sense|1|Wis|0|all|Ra
+Divine Strength*|1|Wis|0|Priest|HL
+Divine Voice*|1|Cha|0|Priest|HL
+Divine Will|1|Wis|0|Priest|HL
+Dowsing|1|Wis|-3|Wizard|SM
+Dream Interpretation|2|Wis|-1|Priest|SM
+Drinking|1|Con|0|all|Hu
+Dwarf Runes|1|Int|2|all|Dw
+Eating|1|Con|0|all|Hu
+Eminence|1|Cha|0|Priest|HL
+Enamor|1|Cha|-2|Rogue|Ni
+Endurance|2|Con|0|Warrior;Rogue|PH;Th;Dw
+Engineering|2|Int|-3|all|PH;Sp
+Escape|2|Dex|0|Rogue|Ni
+Etiquette|1|Cha|0|all|PH
+Evasion|1|||Rogue|HL
+Falcontry|1|Wis|-1|all|Ra
+Fall/Jump|1|Dex|0|Rogue|HL
+Fast-talking|1|Cha|var|all|Th;Hu;Sp
+Featherfoot|1|||Rogue|HL
+Feign/Detect Sleep|1|Int|0|Rogue|Ni
+Fighting Styles|1|||special|PH;CT
+Fine Balance|1|Dex|0|Warrior;Rogue|CT
+Fire-building|1|Wis|-1|all|PH
+Fishing|1|Wis|-1|all|PH
+Floating Agriculture|2|Str|0|all|Ma
+Flower Arranging|1|Wis|0|all|OA
+Foraging|1|Int|-2|all|Bb;SM;Ra
+Forgery|1|Cha|-1|Rogue|PH
+Fortune Telling|2|Cha|+2|all|Th;Hu;Sp
+Frighten/Challenge*|1|Cha|0|Warrior|HL
+Fungi Recognition|1|Int|3|all|Dw
+Gaming|1|Cha|0|all|PH;Sp
+Gem Cutting|2|Dex|-2|Rogue;Wizard;Psionisist|PH;Ps
+Genie Lore|1|Int|0|Priest;Wizard|AQ
+Geography|1 or 2|Int|-1|all|SM
+Geography, Ancient|1 or 2|Int|-2|Priest|SM
+Giant Kite Flying|1|Dex|-3|Rogue|Ni
+Glass blowing|1|Dex|0|Wizard|SM
+Gold Casting|1|Int|-1|all|Ma
+Grooming|2|Dex|0|Rogue|AQ
+Haggling|2|Wis|0|all|AQ
+Hardiness*|2|Con|0|Warrior|HL
+Harness Subconscious|2|Wis|-1|Psionisist|Ps
+Healing|2|Wis|-2|Priest|PH
+Heat Protection|1|Int|-2|all|DS
+Heraldry|1|Int|0|all|PH
+Heraldry, Space|1|Int|0|all|Sp
+Herbalism|2|Int|-2|Rogue;Priest;Wizard|PH;Th
+Hiding|2|Int|-1|all|Bb;Hu
+History, Ancient|1|Int|-1|Rogue;Priest;Wizard|PH;Bd;Th;Sp
+History, Future|1|Int|0|Wizard|Ch
+History, Local|1|Cha|0|Rogue;Priest|PH
+History, Local, Dwarf|1|Cha |2|all|Dw
+Hold Breath|1|Con|0|Rogue|Ni
+Horde Summoning|2|Cha|-2|Warrior|Bb
+Hunting|1|Wis|-1|Warrior;Rogue|PH;Th
+Hypnosis|1|Cha|-2|Wizard;Psionisist|Ps;SM
+Iaijutsu|1|||Warrior|OA
+Improvised Attack|2|||Rogue|HL
+Information Gathering|1|Int|var|Rogue|Th
+Inner Focus|1|Wis|0|Warrior;Rogue|HL
+Instant Stand*|1|Dex||Warrior;Rogue;Priest|CT
+Intimidation|1|Str/Cha|0|Warrior;Rogue|Th;Dw;Hu
+Investigation|1|Int|-2|Priest|SM
+Invincibility*|2|Wis|0|Priest|HL
+Iron Will|2|Wis|-2|Warrior;Rogue;Priest|CT
+Jousting|1|Dex|2|Warrior|Pa
+Juggling|1|Dex|-1|Rogue|PH
+Jumping|1|Str|0|Rogue|PH
+Landscape Gardening|1|Wis|-1|all|OA
+Languages, Ancient|1|Int|0|Priest;Wizard|PH
+Languages, Future|1|Int|0|Wizard|Ch
+Languages, Modern|1|Int|0|all|PH
+Large Weapons|var|||all|Sp
+Law|1|Int|0|Warrior;Priest|Pa;SM
+Leadership|1|Cha|-1|Warrior;Rogue;Priest|Bb;CT
+Leather working|1|Int|0|all|PH
+Light Sleeping|1|Con|-1|Warrior|Bb
+Loan|1|Wis|0|Priest|HL
+Locksmithing|1|Dex|0|Rogue|Th;Dw
+Looting|1|Dex|0|all|Th;Hu;Sp
+Masseur|1|Dex|0|all|OA
+Meditative Focus|1|Wis|+1|Psionisist|Ps
+Medium|2|Wis|0|all|SM
+Mental Armor|1|Wis|-2|all|Sp
+Mental Focus|1|Wis|0|Wizard|HL
+Mental Resistance|1|Wis|-1|Wizard;Psionisist|SM
+Metalworking|1|Dex|0|all|AQ
+Military Science|1|Int|0|all|GR
+Mining|2|Wis|-3|all|PH;Dw
+Missile Deflection*|1|||Warrior;Rogue;Priest|CT
+Mosaic|1|Wis|0|all|Ma
+Mountaineering|1|||Warrior;Rogue|PH
+Musical Instrument|1|Dex|-1|all|PH
+Natural Fighting|2|Str|+1|Warrior|Hu
+Navigation|1|Int|-2|all|PH
+Navigation, Phlogiston|1|Int|-2|Priest;Wizard|Sp
+Navigation, Underground|1|Int|0|all|Dw
+Navigation, Wildspace|1|Int|-2|Priest;Wizard|Sp
+Necrology|1|Wis|0|Priest;Wizard|Ne
+Netherworld Knowledge|1|Wis|-3|Priest;Wizard|Ne
+Night Vision|1|Wis|-2|Rogue|Ni
+Noh|1|Cha|-1|all|OA
+Nondetection|2|Wis|0|Rogue|HL
+Numeracy|1|Int|0|Wizard|Si
+Numerology|2|Int|0|Wizard|Si
+Observation|1|Int|0|all|Ni;Th;Hu;Sp;SM
+Obsidian Working|2|Int|-1|all|Ma
+Omen Interpretation|1|Int|-2|Priest|SM
+Omen Reading|1|Wis|-2|Priest;Wizard|SM
+Oratory|1|Cha|-1|all|Pa;SM;AH
+Orienteering|1|Int|-2|all|Sp
+Painting|1|Wis|0|all|Sp
+Paper making|1|Int|0|Priest;Wizard|SM
+Persuasion|1|Cha|-2|all|Ra;SM
+Pest Control|1|Wis|0|Rogue|Dw
+Philosophy|1|Wis|-1|all|AH
+Planar Sense|1|Wis|-1|all|Pl
+Planetology|2|Int|-1|Priest;Wizard|Sp
+Planology|1|Int|0|Priest;Wizard|Pl
+Poetry|1|Int|-2|all|Pa;Hu
+Politics|1|Int|0|all|GR
+Portal Feel|2|Int| -3 or -5|all|Pl
+Pottery|1|Dex|-2|all|PH
+Power Manipulation|2|Int|-4|Psionisist|WW
+Prestidigitation|1|Dex|-1|Wizard|SM
+Prophecy|1|Wis|-1|Wizard|Ch
+Prophecy|1|Wis|-2|all|SS
+Psionic Detection|1|Wis|-2|all|DS
+Psionic Lore|2|Int|+1|Psionisist|WW
+Psionic Defense|2|Wis|-2|all|WW
+Quick Study|2|Var|-3|Rogue|Ni
+Quickness|2|Dex|0|Warrior;Rogue|CT
+Reading Lips|2|Int|-2|Rogue|PH
+Reading/Writing|1|Int|1|Rogue;Priest;Wizard;Psionisist|PH;Th;Ps
+Rejuvenation|1|Wis|-1|Psionisist|Ps
+Religion|1|Wis|0|Rogue;Priest;Wizard;Psionisist|PH;Ps
+Research|1|Int|0|Wizard|SM
+Rhetoric|1|Cha|0|all|GR
+Riding, Airborne|2|Wis|-2|all|PH
+Riding, Camal Specialization|2|Wis|+4|Warrior;Rogue|AQ
+Riding, Horse Specialization|2|Wis|+4|Warrior;Rogue|AQ
+Riding, Land-Based|1|Wis|+3|all|PH;Dw
+Riding, Sea Based|2|Dex|-2|all|Ra
+Rope Use|1|Dex|0|all|PH
+Rowing|1|Str|-1|all|AH
+Running|1|Con|-6|Warrior|PH
+Sage Knowledge|2|Int|-2|Priest;Wizard|SM
+Scribe|1|Int|+1|Priest;Wizard|SM
+Sculpting|1|Wis|0|all|Sp
+Seamanship|1|Dex|+1|all|PH
+Seamstress/Tailor|1|Dex|-1|all|PH
+Sense Danger|2|Wis|0|Warrior;Rogue|HL
+Set Snares|1|Dex|-1|Warrior;Rogue|PH
+Shadow Flight*|1|||Rogue|HL
+Shadow Travel|1|||Rogue|HL
+Shamanistic Ritual|1|Wis|1|Priest|SM
+Shipwright|1|Dex|+1|all|Sp
+Sign Language|1|Dex|0|all|Bb;Dw;DS
+Signalling|1|Int|+2|all|Bb;Ra;Dw;Sp
+Signalling, Underground|1|Int|+2|all|Dw
+Signature Item|2|Wis|0|Warrior Wizard|HL
+Signature Mount|1|Wis|0|Warrior|HL
+Silk Making|1|Dex|-2|all|OA
+Singing|1|Cha|0|all|PH
+Slow Respiration|1|Wis|0|all|Dw;Sp
+Smelting|1|Int|0|all|Dw
+Smite*|2|||Priest|HL
+Somatic Concealment|1|Dex|-1|Priest;Wizard|DS
+Soothsaying|2|Int|0|Priest|Bb
+Sound Analysis |1|Wis|0|all|Dw
+Sound Imitation|2|Cha|-2|all|OA
+Spacemanship|1|Dex|+1|all|Sp
+Spell Recovery|2|Int|-5|Priest;Wizard|Pl
+Spell Sculpting|1|Int|0|Wizard|HL
+Spellcraft|2|Int|-2|Priest;Wizard|PH
+Spelljamming|1|Int|-2|Priest;Wizard|Sp
+Spelunking|1|Int|-2|Warrior|Ra
+Spirit Lore|2|Cha |-4|Priest;Wizard|Ne
+Spirit Lore|1|Wis|2|Priest|SM
+Spring*|1|Dex||Warrior;Rogue|CT
+Steady Hand|1|Dex|0|all|CT
+Stonemasonry|1|Str|-2|all|PH
+Style Analysis|1|Int|-1|Warrior|Ni
+Survival|2|Int|0|Warrior;Rogue|PH
+Survival, Hills and Mountains|1|||Warrior|Dw
+Survival, Planar |2|Int|-2|all|Pl
+Survival,Underground|1|Int|0|all|Dw
+Swimming|1|Str|0|all|PH
+Tactics|1|Int|-1|Warrior|AH
+Tactics of Magic|1|Int|-1|Wizard|SM
+Tea Ceremony|2|Wis|-2|all|OA
+Thaumaturgy|1|Int|-2|Wizard|SM
+Throwing|2|Dex|-2|Rogue|Sp
+Tightrope Walking|1|Dex|0|Rogue|PH
+Time Sense|1|Wis|-2|Wizard|Ch
+Toxicology|2|Int|0|Rogue|Ni
+Tracking|2|Wis|0|Warrior;Rogue|PH
+Trail Marking|1|Wis|0|Warrior|Ra
+Trail Signs|1|Int|-1|Warrior;Rogue|Ra
+Trailing|1|Dex|var|Rogue|Th
+Trance|2|Con|-3|Priest|SM
+Trouble Sense|1|Wis|0|all|CT
+Tumbling|1|Dex|0|Rogue|PH
+Undead Knowledge|1|Wis|0|Priest;Wizard|Si
+Undead Lore|1|Int|-1|Priest|SM
+Underclass|1|Wis|0|Rogue|Ni
+Vehicle Handling|1|Dex|0|all|CT
+Venom Handling|1|Wis|-2|Priest;Wizard|Ne
+Ventriloquism|1|Int|-2|Rogue|PH
+Veterinary Healing|1|Wis|-3|Priest|Ra
+Voice Mimicry|2|Cha|var|all|Ni;Hu
+Water Find|1|Int|0|all|DS
+Water Walking|1|Dex|-1|Rogue|Ni
+Weapon Improvisation|1|Wis|-1|Warrior|Bb;DS
+Weaponsmithing|3|Int|-3|Warrior|PH
+Weaponsmithing-Crude|1|Wis|-3|Warrior|Bb;Ra
+Weather Sense|1|Wis|-1|all|PH
+Weaving|1|Int|-1|all|PH
+Whistling/Humming|1|Dex|+2|all|Bd;Hu
+Wild Fighting|2|Con|0|all|Bb;Hu
+Winemaking|1|Int|0|all|Hu
+Zero-gravity Combat|1|Int|-2|all|Sp

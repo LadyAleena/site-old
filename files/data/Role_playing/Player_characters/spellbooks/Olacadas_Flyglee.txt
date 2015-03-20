@@ -1,0 +1,6 @@
+1|Affect Normal Fires;Charm Person;Color Spray;Detect Undead;Empathic Seizure;Enlarge/Reduce;Friends;Grease;Identify;Magic Missile;Sleep;Spook
+2|Blindness;Blur;Detect Invisibility;Hypnotic Pattern;Improved Phantasmal Force;Invisibility;Melf's Acid Arrow;Mirrir Image;Pyrotechnics;Scare;Summon Swarm;Wizard Lock
+3|Dispel Magic;Fly;Haste;Hold Person;Lance of Disruption;Lightning Bolt;Protection from Normal Missiles;Suggestion;Vampiric Touch;Wraithform
+4|Confusion;Fear;Stoneskin
+5|Domination
+Note|All of her spells are modified to use verbal components only.

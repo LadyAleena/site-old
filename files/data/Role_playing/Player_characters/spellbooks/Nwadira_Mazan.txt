@@ -1,0 +1,9 @@
+1|<b>Nahal's Reckless Dweomer</b>;Affect Normal Fires;Alarm;Animate Dead Animals;Cantrip;Charm Person;Chill Touch;Chromatic Orb;Color Spray;Comprehend Languages;Detect Magic;Detect Phase;Erase;Grease;Hold Portal;Hypnotism;Identify;Mount;Read Magic;Shocking Grasp;Spook;Taunt;Wall of Fog;Wizard Mark
+2|<b>Hornung's Baneful Deflector</b>;Cat's Grace;Deeppockets;Detect Invisibility;Displace Self;Ghoul Touch;Glitterdust;Hypnotic Pattern;Instiable Thirst;Knock;Mirror Image;Protection from Cantrips;Protection from Paralysis;Ride the Wind;Scare;Spectral Hand;Stinking Cloud;Summon Swarm;Web;Wizard Lock
+3|<b>Alternate Reality</b>;Blink;Dispel Magic;Fireball;Haste;Hold Person;Hold Undead;Lightning Bolt;Melf's Acid Arrows;Monster Summoning I;Mummy Touch;Pain Touch;Phantom Steed;Protection from Normal Missiles;Suggestion;Vampiric Touch;Watery Double;Wizard Sight;Wraithform
+4|<b>There/Not There</b>;Charm Person;Dimension Door;Envervation;Evard's Black Tentacles;Fear;Fire Shield;Fire Trap;Flame Ray;Fumble;Ice Storm;Improved Strength;Magic Sphere;Minor Spell Turning;Phantasmal Killer;Polymorph Other;Pyschic Protection;Rainbow Pattern;Remove Curse;Shout;Vitriolic Sphere;Wall of Fire
+5|<b>Vortex</b>;Airy Water;Animate Dead;Chaos;Choudkill;Cone of Cold;Conjure Elemental;Domination;Hold Monster;Know Value;Lich Touch;Passwall;Rusting Grasp;Safeguarding;Shadow Door;Summon Shadow;Teleport;Vile Venom;Wall of Force;Wall of Iron
+6|<b>Wildstrike</b>;Antimagic Shell;Arrow of Bone;Chain Lightning;Claws of the Umber Hulk;Conjure Animals;Death Fog;Dimensional Blade;Enchant an Item;Legend Lore;Mass Suggestion;Mislead;Otiluke's Freezing Sphere;Prismatic Eye;Project Image;Trollish Fortitude
+7|<b>Hornung's Surge Selector</b>;Prismatic Spray;Teleport without Error
+8|<b>Wildzone</b>;Gunther's Kaleidoscopic Strike;Permanency;Prismatic Wall
+9|<b>Wildfire</b>;Astral Spell;Prismatic Sphere;Weird

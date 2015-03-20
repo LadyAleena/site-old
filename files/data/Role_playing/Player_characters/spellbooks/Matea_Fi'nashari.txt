@@ -1,0 +1,5 @@
+1|Burning Hands;Cantrip;Chill Touch;Comprehend Languages;Detect Magic;Feather Fall;Hold Portal;Identify;Jump;Magic Missile;Mount;Read Magic;Shield;Shocking Grasp;Sleep;Spider Climb;Wizard Mark
+2|Fool's Gold
+4|Dimension Door;Plant Growth;Polymorph Other
+5|Conjure Elemental;Extension II
+7|Reverse Gravity

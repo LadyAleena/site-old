@@ -1,0 +1,5 @@
+1|Burning Hands;Cantrip;Charm Person;Color Spray;Comprehend Languages;Detect Magic;Feather Fall;Friends;Gaze Reflaction;Hold Portal;Identify;Phantasmal Force;Push;Read Magic;Seduction I;Shocking Grasp;Sleep;Spider Climb;Spook;Taunt;Tenser's Floating Disc;Unseen Servant;Wizard Mark
+2|Alter Self;Darkness;Detect Invisibility;Displace Self;ESP;Forcewave;Forget;Hypnotic Pattern;Knock;Know Alignment;Levitate;Melf's Acid Arrow;Protection from Cantrips;Ray of Enfeeblement;Scare;Seduction II;Summon Swarm
+3|Dispel Magic;Distraction;Fly;Hold Person;Hold Undead;Invisibility, 10' Radius;Monster Summoning I;Protection from Normal Missiles;Seduction III;Slow;Suggestion;Tongues;Wraithform
+4|Charm Monster;Confusion;Dimension Door;Evard's Black Tentacles;Monster Summoning II;Remove Curse;Seduction IV;Stoneskin
+5|Domination;Hold Monster;Passwall;Seduction V;Teleport

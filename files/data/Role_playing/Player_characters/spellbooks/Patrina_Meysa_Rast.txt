@@ -1,0 +1,4 @@
+1|Color Spray;Detect Magic;Frost Fingers;Grease;Identify;Jump;Light;Read Magic;Shocking Grasp;Sleep;Spook
+2|Blindness;Deafness;Flame Ray;Glitterdust;Knock;Protection from Cantrips;Scare;Web
+3|Air Bolt;Dispel Magic;Fireball;Haste;Lightning Bolt;Slow;Suggestion
+4|Acid Bolt;Fear;Remove Curse

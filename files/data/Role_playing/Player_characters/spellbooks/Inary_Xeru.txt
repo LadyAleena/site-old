@@ -1,0 +1,3 @@
+1|Audble Glamour;Barrier;Breath;Burning Hands;Cantrip;Chill Touch;Comprehend Languages;Control Vapor;Detect Magic;Detect Undead;Enlarge;Feather Fall;Frost Fingers;Hold Portal;Identify;Jump;Lasting Breath;Light;Magic Missile;Phantasmal Force;Read Magic;Read Southern Magic;Shocking Grasp;Spider Climb;Wall of Fog;Ward;Wizard Mark
+2|Blindness;Continual Light;Detect Evil;Detect Invisibility;Fog Cloud;Impoved Phantasmal Force;Invisibility;Knock;Know Alignment;Lightning Strike;Mist Magic;Move Object;Protection from Cantrips;Ride the Wind;Run;Tumble;Wizard Lock
+3|Ball Lightning;Dispel Magic;Fireball;Fly;Haste;Lance of Disruption;Leomund's Tiny Hut;Lightning Bolt;Protection from Telekinesis;Target;Tongues;Wind Wall;Wraithform

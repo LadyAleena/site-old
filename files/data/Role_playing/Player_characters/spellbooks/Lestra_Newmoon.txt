@@ -1,0 +1,5 @@
+1|Alarm;Animate Dead Animals;Armor;Aunty's Bath;Burning Hands;Chill Touch;Color Spray;Corpse Link;Corpselight;Dancing Lights;Detect Disease;Detect Undead;Empathic Seizure;Exterminate;Find Familiar;Frost Fingers;Grease;Jump;Light;Locate Remains;Magic Missile;Mount;Protection from Evil;Ray of Fatigue;Shield;Spectral Voice;Spider Climb;Wall of Fog
+2|Cat's Grace;Darkness, 15' Radius;Displace Self;Embalm;ESP;Flaming Sphere;Fog Cloud;Ghoul Touch;Glitterdust;Living Link;Melf's Acid Arrow;Moonrune;Protection vs. Paralyzation;Protection vs. Poison;Skeletal Hand;Spectral Hand;Stinking Cloud;Summon Swarm;Vocalize;Wall of Gloom;Web
+3|Bands of Sirellyn;Bone Dance;False Face;Fireball;Fly;Haste;Iron Mind;Item;Leomund's Tiny Hut;Melf's Minute Meteors;Monster Summoning I;Skull Trap;Solvent of Corrosion;Vampiric Touch;Watery Double
+4|Brainkill;Dimension Door;Enervation;Evard's Black Tentacles;Fire Shield;Minor Globe of Invulnerability;Shout;Stoneskin;Vitriolic Sphere;Wall of Fire
+5|Animate Dead;Boneblight;Bonegrowth;Cloudkill;Cone of Cold;Telekinesis;Vile Venom

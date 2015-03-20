@@ -1,0 +1,3 @@
+1|Alarm;Audible Glamour;Burning Hands;Cantrip;Chill Touch;Comprehend Languages;Confuse Languages;Dancing Lights;Detect Magic;Detect Secret Passages and Portals;Find Familiar;Grease;Hold Portal;Identify;Lasting Breath;Magic Missile;Protection from Evil;Read Magic;Shield ;Spider Climb;Spook;Unseen Servant;Wall of Fog;Wizard Mark
+2|Blur;Cat's Grace;Continual Light;Detect Evil;Detect Good;Displace Self;ESP;Flaming Sphere;Invisibility;Knock;Lock;Melf's Acid Arrow;Mirror Image;Protection from Cantrips;Protection from Paralysis;Rope Trick;Shatter;Spectral Hand;Stinking Cloud;Summon Swarm;Web;Wizard Lock
+3|Dispel Magic;Fireball;Flame Arrow;Fly;Infravision;Lightning Bolt;Protection from Normal Missiles;Vampiric Touch;Watery Double;Wizard Sight;Wraithform

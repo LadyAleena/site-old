@@ -1,0 +1,29 @@
+PH|Player's Handbook
+Bb|Complete Barbarian's Handbook
+Bd|Complete Bard's Handbook
+Ne|Complete Necromancer's Handbook
+Ni|Complete Ninja's Handbook
+Pa|Complete Paladin's Handbok
+Ra|Complete Ranger's Handbook
+Th|Complete Thief's Handbook
+Ps|Complete Psionics Handbook
+Si|Complete Sha'ir's Handbook
+Sm|Complete Shaman's Handbook
+Dw|Complete Dwarf's Handbook
+Hu|Complete Book of Humanoids
+Sp|Complete Spacefarer's Handbook
+Pl|Planewalker's Handbook
+SP|Player's Option: Skills &amp; Powers
+CT|Player's Option: Combat &amp; Tactics
+SM|Player's Option: Spells &amp; Magic
+HL|Dungeon Master Option: High Level Campaigns
+SS|Sages and Specialists
+AH|Age of Heroes
+AQ|Al-Qadim: Arabian Adventures
+Ch|Chronomancy
+DS|Dark Sun: Rules Book
+GR|The Glory of Rome
+Ma|Maztica: A Journey to the True World
+OA|Oriental Adventures
+WW|The Will and the Way
+LA|Lady Aleena

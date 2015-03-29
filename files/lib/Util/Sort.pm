@@ -2,7 +2,7 @@ package Util::Sort;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(article_sort name_sort short_sorts);
+our @EXPORT_OK = qw(article_sort name_sort short_sorts split_sort);
 
 use HTML::Entities qw(decode_entities);
 
@@ -126,3 +126,20 @@ sub short_sorts {
     die "A sort type was not selected.";
   }
 }
+
+sub split_sort {
+  my ($in_a, $in_b, $split, $sort_type) = @_;
+  $split = qr($split);
+  
+  my ($numa1, $numa2) = split(/$split/, $in_a);
+  my ($numb1, $numb2) = split(/$split/, $in_b);
+  
+  if ($sort_type =~ /^num/) {
+    $numa1 <=> $numb1 || $numa2 <=> $numb2
+  }
+  elsif ($sort_type =~ /^(alpha|letter)/) {
+    $numa1 cmp $numb1 || $numa2 cmp $numb2
+  }
+}
+
+1;

@@ -21,10 +21,7 @@ sub primes {
     # numbers where the sum of the digits are evenly divisible by 3 are divisible by 3.
     next if sum(split(//,$number)) % 3 == 0;
     
-    # numbers where the sum of the digits are evenly divisible by 9 are divisible by 9.
-    next if sum(split(//,$number)) % 9 == 0;
-    
-    # There are other tests like the two above, however, they require breaking the number
+    # There are other tests like the one above, however, they require breaking the number
     # and doing other calculations based on the number. I decided to skip those as they 
     # are computation heavy.
 

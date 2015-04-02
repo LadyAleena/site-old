@@ -13,7 +13,11 @@ my %foods = (
   'tuber' => ['potato','sweet potato','yam'],
   'meat'  => [qw(beef lamb chicken pork turkey fish)],
   'appetizer'    => [map( "$_ chips", qw(corn potato) ), 'pretzels', 'crackers'],
-  'lucky charms' => [map_in_map({ 'after'=> 'lucky charm' }, ['heart','star','horseshoe','clover','blue moon','hourglass','rainbow','red balloon',map("swirled $_ moon",qw(pink orange yellow green blue purple)), 'clover hat'])],
+  'lucky charms' => [map_in_map({ 'after'=> 'lucky charm' }, [
+    'heart','star','horseshoe','green clover','blue moon','hourglass','rainbow','red balloon',
+    map("swirled $_ moon", qw(pink orange yellow green blue purple)),
+    map("$_->[0] hat with a $_->[1] clover", (['green', 'dark green'], ['blue', 'pink'], ['purple', 'green'], ['dark green', 'orange'], ['yellow', 'blue'], ['orange', 'green']))
+  ])],
   'mm flavors'   => [map("$_ M&Ms",('milk chocolate','peanut','dark chocolate','dark chocolate peanut','almond','peanut butter','pretzel','triple chocolate','raspberry almond','chocolate almond','mint chocolate'))],
   'beer' => ['pale ale',map( "$_ beer", qw(stout mild wheat lager lambic) )]
 );

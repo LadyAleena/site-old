@@ -12,7 +12,7 @@ my %titles = (
   'noble female' => [qw(empress queen princess archduchess duchess countess viscountess baroness dame mistress lady)],
   'military'     => [qw(marshal general colonel major captain lieutenant sergeant corporal private)],
   'naval'        => [qw(admiral captain commander lieutenant ensign seaman)],
-  'government'   => [qw(president secretary governor commissioner mayor administrator manager)],
+  'government'   => [qw(president secretary governor director commissioner mayor administrator manager)],
 );
 
 sub random_title {

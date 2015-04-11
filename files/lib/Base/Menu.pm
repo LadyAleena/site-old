@@ -83,7 +83,7 @@ sub main_menu {
     my $color = $opt{'color'} == 1 ? link_color($file,1) : undef;
     my $inlist = $active eq 'active' && $opt{'file menu'} ? $opt{'file menu'} : undef;
        $active .= $active eq 'active' && $opt{'file menu'} ? ' open' : '';
-    push @file_lines, [anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color }), { 'class' => $active, 'inlist' => ['u', $inlist] } ];
+    push @file_lines, [anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color }), { 'class' => $active, 'inlist' => $inlist ? ['u', $inlist] : undef } ];
   }
 
   for my $next_directory (@directories) {

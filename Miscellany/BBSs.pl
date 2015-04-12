@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(anchor list);
 use Base::Data qw(get_hash);
 
@@ -26,7 +26,7 @@ for my $BBS (sort { $a->{name} cmp $b->{name} } values %BBSs) {
 
 my $doc_magic = { 'bbss' => sub { list(4,'u',\@items, { class => 'two' }) } };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 This is a list of BBSs which I used to frequent or just know about. I am not sure any still exist. My accounts on those I frequented have probably lapsed.

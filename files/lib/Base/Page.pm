@@ -28,8 +28,8 @@ my $root_user = get_root('user');
 my $root_mail = get_root('mail');
 
 my %link = (
-  mail => anchor($root_user, { href => "mailto:$root_mail" }),
-  name => anchor($root_name, { href => $root_link }),
+  'mail' => anchor($root_user, { 'href' => "mailto:$root_mail" }),
+  'name' => anchor($root_name, { 'href' => $root_link }),
 );
 
 my $relative_path = $full_path;
@@ -60,19 +60,19 @@ sub get_styles {
 }
 
 sub get_contacts {
-  my @contact_array = get_array( 'file' => ['Base','other_sites.txt'], 'headings' => ['site','link'] );
+  my @contacts = get_array( 'file' => ['Base','other_sites.txt'], 'headings' => ['site','link'] );
 
-  my @link_array = ( anchor('Email', { 'href' => 'mailto:fantasy@xecu.net' }) );
-  for my $link (sort { lc $a->{'site'} cmp lc $b->{'site'} } @contact_array) {
+  my @links = ( anchor('Email', { 'href' => 'mailto:fantasy@xecu.net' }) );
+  for my $link (sort { lc $a->{'site'} cmp lc $b->{'site'} } @contacts) {
     my $text = $link->{'site'};
     my $address = $link->{'link'};
     my $title = "Lady Aleena on $text";
     my $image = img({ 'src' => "http://www.google.com/s2/favicons?domain=$address", 'alt' => $title });
     
-    push @link_array, anchor($image, { 'href' => "http://$address", 'target' => '_blank', 'title' => $title });
+    push @links, anchor($image, { 'href' => "http://$address", 'target' => 'ex_tab', 'title' => $title });
   }
 
-  return @link_array;
+  return @links;
 }
 
 sub page {
@@ -81,7 +81,7 @@ sub page {
   if ($opt{'heading'}) {
     $relative_path =~ s/\/.+$/\/$opt{'heading'}/;
   }
-  my $title = textify(join(' - ',($root_name,map(ucfirst,grep(!/index/,split(/\//,$relative_path))))));
+  my $title = textify(join(' - ', ($root_name, map(ucfirst, grep(!/index/, split(/\//, $relative_path))))));
   my $page_heading = $opt{'heading'} ? textify($opt{'heading'}) : textify($heading);
   my $article_id = idify($page_heading);
   
@@ -99,7 +99,7 @@ sub page {
     'body' => [ sub {
       nav(2, sub {
         section(3, sub {
-          list(4,'u',
+          list(4, 'u',
             main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 0, 'full' => 0, 'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef ),
             { 'id' => 'site_menu', 'onclick' => 'list_onclick(event)' }
           );
@@ -312,23 +312,6 @@ sub story {
     }
     $inc++;
   }
-}
-
-sub link_list {
-  my ($tab, $hash, $opt) = @_;
-  my @items;
-  for my $key (sort {lc $a->{'site'} cmp lc $b->{'site'}} values %{$hash}) {
-    my $link = $key->{'link'};
-    my $site = $key->{'site'};
-    push @items, anchor($site, { 'href' => "http://$link", 'target' => '_blank' });
-  }
-  if ($opt->{'heading'}) {
-    my $heading = $opt->{'heading'};
-    my $heading_id = idify($heading);
-    heading($tab,2,$heading, { 'id' => $heading_id });
-  }
-  paragraph($tab + 1,'Links will open in a new tab.', { 'class' => 'no_indent' });
-  list($tab + 1,'u',\@items);
 }
 
 1;

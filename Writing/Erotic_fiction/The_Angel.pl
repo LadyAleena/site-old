@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 The wind chimes tinkling together signal that she is near. The wind blows softly through the windows and the balcony door. A whirlwind is created out of the leaves that have settled on the balcony floor. Then she appears.

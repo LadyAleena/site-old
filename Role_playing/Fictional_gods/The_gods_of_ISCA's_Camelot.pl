@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 At one time on a BBS known as ISCA, there was a room called Camelot. It was a continuing story. The story centered around the characters created by the users. Some of these characters venerated the gods that were created for that world. Here they are for your amusement.

@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(pre);
 
 my $doc_magic = { 'tree' => sub { pre(3, sub { print q(
@@ -24,7 +24,7 @@ my $doc_magic = { 'tree' => sub { pre(3, sub { print q(
                         Luna*<span style="background:#ff9;">Zane</span>
 ) }) }};
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 Created by Piers Anthony and compiled by me.

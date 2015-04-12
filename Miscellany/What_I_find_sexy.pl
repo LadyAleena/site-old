@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 People are so much sexier to me when they wear buttoned shirts, because I think of unbuttoning them one by one, slowly. Zippered shirts are a little less sexy than buttoned shirts, t-shirts less sexy than that unless scissors are involved. Being initially bare chested is not as sexy.

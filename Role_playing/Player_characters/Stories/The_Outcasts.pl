@@ -5,9 +5,9 @@ use warnings;
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 A group of young elven women became tired of being cooped up in their staid elven village. They were rebellious and feeling adventurous. Together, they planned an excursion to the city of Tantras. They did not know what they were going to do once they were there, but they thought it would be better than what they were doing right now.

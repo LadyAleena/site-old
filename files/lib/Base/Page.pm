@@ -1,8 +1,8 @@
-package Base::HTML;
+package Base::Page;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(html story);
+our @EXPORT_OK = qw(page story);
 
 use CGI::Carp qw(fatalsToBrowser);
 use Cwd qw(cwd realpath);
@@ -76,7 +76,7 @@ sub get_contacts {
   paragraph(2, join(' ',@link_array), { 'class' => 'no_indent' });
 }
 
-sub html {
+sub page {
   my (%opt) = @_;
   my $heading = textify(basename($0)) !~ /index/ ? textify(basename($0)) : 'My '.lc((split(/\//,cwd))[-1]);
   if ($opt{'heading'}) {

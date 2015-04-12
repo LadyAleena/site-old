@@ -6,7 +6,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib 'files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 use Base::Root qw(get_root);
 
@@ -14,7 +14,7 @@ my $root_link = get_root('link');
 my $root_name = get_root('name');
 $line_magic->{'bare'} = qq(A<$root_link|href="$root_link">);
 
-html( 'heading' => $root_name, 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) } );
+page( 'heading' => $root_name, 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) } );
 
 __DATA__
 Welcome to my place online.

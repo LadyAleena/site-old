@@ -5,10 +5,10 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
-html( code => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 Hypertext markup language (HTML) and cascading style sheets (CSS) are two of the more common elements of writing a web page. With HTML you define what is a paragraph, a list, a table, and more. You can change a font or the color of the background among other things with CSS.

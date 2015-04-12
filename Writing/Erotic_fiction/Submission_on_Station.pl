@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 The message arrived on your personal console while you are working as an engineer in the Hydroponics Division of Vega Station 3. The message is from your "friend" who works on Vega Station 8. You discreetly read the message, since you can't tell your co-workers what you do with your downtime.

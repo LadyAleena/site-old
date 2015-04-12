@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 The school of magic in Olakeen is a vast organization lead by Archsorceress Alexana Olara while the school in Willowdale is very small, but growing, with only one master, one journeyman, and three to four apprentices in residence lead by the high priest of Drianna StrongOak-Guard. Baroness Aegyn Valchae teaches a few apprentices in her keep in Valachan (formerly in Ravenloft). Awnday Ar'iemay floats between the schools when she is not adventuring. Lady of Mystery Hylene Serill is the religious advisor to the schools.

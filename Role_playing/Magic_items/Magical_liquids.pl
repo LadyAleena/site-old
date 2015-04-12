@@ -5,10 +5,10 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
-html( 'heading' => 'Magical liquids and oils', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'heading' => 'Magical liquids and oils', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 B<^Robert Anderson^> contributed nearly all of the magical liquids listed on this page. Those not created by him have their credit listed by the item.

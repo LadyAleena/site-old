@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Lady Aleena stood on her dias in the main courtyard of her castle late in the night. Behind her stood five people in their formal attire which is much lighter than their normal armor, and in one case, cleaner. The Preceptor of the Order of the Sapphire Cross, the commander of her knights, stood grasping the handle of his ceremonial sword. The Preceptor of the Order of the Golden Shield, the commander of her archers, whispered orders to one of her sub-officers. The Preceptor of the Order of the Moon, the commander of her spies, always kept the hood of his cloak up to cover his face. The Preceptor of the Order of the Sun, the commander of her sentinels, scanned the crowd looking for spies never letting her guard down. The Mistress of Mines stood with her everpresent tallies in hand.

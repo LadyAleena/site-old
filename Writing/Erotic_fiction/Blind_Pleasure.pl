@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 She wakes up from sleep.  She feels refreshed and renewed, but only for a minor ache in her head.  She goes to stretch and notices that she is already stretched out.  She tries to roll over, and at that moment she realizes her hands and her feet are tied to a bed.  The cords are silky smooth.  They will not leave marks on her.  She knows she is trapped and panics.

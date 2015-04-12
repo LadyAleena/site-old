@@ -9,3 +9,5 @@ The files behind my website (http://fantasy.xecu.net).
 /files/data     All of the data which is used in more than one place on my site.
 /files/lib      The modules I have written for my site.
 /files/lib/Fun/ These modules are not used on my site and were written for fun.
+
+For subroutines I have one personal rule I try to follow, subroutines names which starts with get_ should only return values. If you happen upon one which prints, find a way to let me know please.

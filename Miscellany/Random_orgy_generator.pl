@@ -5,7 +5,7 @@ use warnings;
 use Lingua::EN::Inflect qw(A NUMWORDS);
 
 use lib "../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(paragraph);
 use RolePlaying::Random::Misc qw(sexual_orientation relationship);
 use RolePlaying::Random::Body::Modification qw(random_body_modification);
@@ -37,7 +37,7 @@ push @participants, participant for (1..$participants);
 
 my $doc_magic = { 'participants' => sub { paragraph(5,$_, { class => 'sex' }) for @participants } };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 If you are writing an orgy scene and need inspiration on who is there, here you go!

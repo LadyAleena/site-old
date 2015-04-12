@@ -5,22 +5,17 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(list);
 use Base::LineMagic qw($line_magic);
 use People qw(get_people);
 
-my $people = {
-  'musicians' => [get_people('Musicians.txt')],
-  'comedians' => [get_people('Comedians.txt')],
-};
-
 my $doc_magic = {
-  'musicians' => sub { list(3, 'u', $people->{'musicians'}, { 'class' => 'three' }) },
-  'comedians' => sub { list(3, 'u', $people->{'comedians'}, { 'class' => 'three' }) },
+  'musicians' => sub { list(3, 'u', [get_people('Musicians.txt')], { 'class' => 'three' }) },
+  'comedians' => sub { list(3, 'u', [get_people('Comedians.txt')], { 'class' => 'three' }) },
 };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
 This is my music and comedy collection of SPAN<LPs|^lps^>, SPAN<45s|^ffs^>, SPAN<cassettes|^cassettes^>, and SPAN<CDs|^cds^>. If it is not on a CD, I have not heard it in a long long time. SPAN<&#9785;|class="bigger">

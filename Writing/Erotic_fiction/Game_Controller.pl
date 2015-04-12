@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Listening to Nick and Joe talk about what they'd do to a sexy avatar in their video game got Zoe thinking about how much she wanted to have sex. The guys weren't exactly her type, and they'd been living together for three years without sex entering the picture. For the last seven months, Zoe was in the middle of a dry spell. She couldn't get laid to save her sanity. Listening to them talking about sex in the living room made her take a really good look at Nick and Joe from the entry to the hallway which lead to their rooms. They were so oblivious at this point, they didn't notice her looking at them with a more serious expression than she had ever used on them before now.

@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(list);
 use Base::LineMagic qw($line_magic);
 use People qw(get_people);
@@ -14,7 +14,7 @@ my $doc_magic = {
   'artists' => sub { list(3, 'u', [get_people('Artists.txt')], { 'class' => 'three' }) },
 };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
 This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
@@ -168,4 +168,3 @@ This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade p
 3 Gregory Stock
 * The Book of Questions
 * The Book of Questions: Love & Sex
-</ul>

@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Maya had a horrendous morning that lead to an even worse afternoon and her evening topped all of that. She had recently broken up with her very annoying quasi-boyfriend. He left in a huff which meant he had broken a few things as he left. She was feeling the loneliness creep up on her that night as she laid down in her empty bed. The slight chill of the sheets made her shudder until her body warmed them up. Since the break up she had a hard time getting to sleep which is why she put herself through hell that day. She wanted to be so tired that sleep would immediately fall upon her. It worked this time.

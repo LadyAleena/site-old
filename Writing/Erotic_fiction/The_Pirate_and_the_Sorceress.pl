@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 In a cabin of a ship a man and woman can be seen talking. The man wears flamboyant clothes, the outfit of the classical pirate. The woman is in a floor length skirt and voluminous blouse, and they looked finely woven, and on them both are mystical symbols. They appear to be talking about the pirate trade. They seem to know each other well, very well, since the woman doesn't seem to flinch from some of the things being said to her. She nodded her head a lot and just took the words in. There’s a mischievous gleam in her eyes though, and he doesn't seem to realize it yet.

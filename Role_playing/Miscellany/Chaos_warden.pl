@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA); });
+page( 'code' => sub { story(*DATA); });
 
 __DATA__
 Chaos Wardens are of no race nor class once chosen to be one. They disguise themselves as humans and act as if they are a class, mostly fighters. The whole person is not subsumed, but the host resides in the back of the mind of the agent who has taken control. The person can take limited control when necessary.

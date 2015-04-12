@@ -3,39 +3,34 @@ use strict;
 use warnings FATAL => qw( all );
 
 use CGI::Carp qw(fatalsToBrowser);
-use File::Slurp qw(read_file);
 
 use lib '../files/lib';
-use Base::Page qw(page story);
-use Base::HTML::Element qw(pre);
-use Base::LineMagic qw($line_magic);
-use Base::Data qw(data_directory get_directory);
-use Util::Convert qw(textify);
+use Base::Page qw(page);
+use Base::HTML::Element qw(section list);
+use Base::Data qw(data_file alpha_array);
+use Base::Menu qw(alpha_menu);
+use Util::Convert qw(searchify);
+use Util::Columns;
+use Util::ExternalLinks;
 
-my $directory = data_directory('Miscellany/Geek_codes');
-my @files = get_directory($directory);
+open(my $gems_file, '<', data_file) || die "Can't open ".data_file.". Stopped at $!";
+my @gems = <$gems_file>;
+chomp @gems;
 
-my $doc_magic;
-for my $file (@files) {
-  $doc_magic->{textify($file)} = sub {
-    open(my $geek_file, '<', "$directory/$file") || die "$file not found";
-    pre(5,sub { print read_file($geek_file) });
-  }
+my %alpha_gems = alpha_array(\@gems);
+
+for my $gems (keys %alpha_gems) {
+  my @list = @{$alpha_gems{$gems}};
+  $alpha_gems{$gems} = undef;
+  @{$alpha_gems{$gems}} = map { "$_ ".external_links([['Wikipedia',$_],['Google',searchify($_)]]) } sort @list;
 }
 
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
-
-__DATA__
-Along with the ^Geek Code^ written by Robert Hayden, here are a few additions, use the standard pluses or minuses in each group.
-2 Babylon 5
-& Babylon 5
-2 Buffy the Vampire Slayer
-& Buffy the Vampire Slayer
-2 Star Trek
-& Star Trek
-2 Stargate
-& Stargate
-2 The X-Files
-& The X-Files
-2 Relationships
-& relationships
+page( 'code' => sub {
+  for my $alpha (sort keys %alpha_gems) {
+    my $class = get_columns(3, scalar @{$alpha_gems{$alpha}});
+    section(3, sub {
+      list(5, 'u', $alpha_gems{$alpha}, { 'class' => $class });
+      alpha_menu(4,\%alpha_gems);
+    }, { 'heading' => [2, $alpha, { 'id'=> "section_$alpha" }] });
+  }
+});

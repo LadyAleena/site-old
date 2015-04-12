@@ -8,7 +8,7 @@ use HTML::Entities qw(encode_entities);
 
 use lib '../files/lib';
 use Base::Data qw(alpha_array);
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section heading paragraph list);
 use Base::Menu qw(file_menu alpha_menu);
 use Util::Sort qw(article_sort);
@@ -24,7 +24,7 @@ my $file_menu = file_menu('series', \@selects, $select);
 my %alpha_list = alpha_array(\@selects);
 
 my $head = $select && $series_select->{$select} ? qq(<i>$select</i>) : undef;
-html( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
+page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
   if ($select && $series_select->{$select}) {
     if ($series_select->{$select} eq 'series') {
       print_series(2,1,$select);

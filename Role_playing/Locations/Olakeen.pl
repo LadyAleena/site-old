@@ -5,19 +5,19 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(heading definition_list div);
 use Base::Data qw(get_array);
 
-my $directory = "Role_playing/Locations/Olakeen";
+my $directory = 'Role_playing/Locations/Olakeen';
 my $headings  = ['term','definition'];
 
 my %definition_lists = (
-  'Assembly' => [ get_array( 'file' => [$directory,"Assembly.txt"],     'headings' => $headings) ],
-  'Inns'     => [ get_array( 'file' => [$directory,"Notable_inns.txt"], 'headings' => $headings) ],
-  'Crime'    => [ get_array( 'file' => [$directory,"Crime.txt"],        'headings' => $headings) ],
-  'Arena'    => [ get_array( 'file' => [$directory,"Arena.txt"],        'headings' => $headings) ],
-  'Holidays' => [ get_array( 'file' => [$directory,"Holidays.txt"],     'headings' => [qw(term date description)]) ],
+  'Assembly' => [ get_array( 'file' => [$directory,'Assembly.txt'],     'headings' => $headings) ],
+  'Inns'     => [ get_array( 'file' => [$directory,'Notable_inns.txt'], 'headings' => $headings) ],
+  'Crime'    => [ get_array( 'file' => [$directory,'Crime.txt'],        'headings' => $headings) ],
+  'Arena'    => [ get_array( 'file' => [$directory,'Arena.txt'],        'headings' => $headings) ],
+  'Holidays' => [ get_array( 'file' => [$directory,'Holidays.txt'],     'headings' => [qw(term date description)]) ],
 );
 
 my $doc_magic = {
@@ -30,10 +30,10 @@ my $doc_magic = {
   'Inns'     => sub { definition_list(5, $definition_lists{'Inns'}) },
   'Crime'    => sub { definition_list(5, $definition_lists{'Crime'}) },
   'Arena'    => sub { definition_list(6, $definition_lists{'Arena'}) },
-  'Holidays' => sub { definition_list(5, $definition_lists{'Holidays'}, { headings => [qw(date description)] }) },
+  'Holidays' => sub { definition_list(5, $definition_lists{'Holidays'}, { 'headings' => [qw(date description)] }) },
 };
 
-html( 'heading' => 'Olakeen - The City of Money and Magic', 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'heading' => 'Olakeen - The City of Money and Magic', 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 The city of Olakeen is a vast city of commerce. Built around the Temple of Waukeen and the School of Sorcery, it has spread out for miles in all directions. It is located on Toril. Tantras is to the north, Procampur is to the south, and the Dragon Reach in the Sea of Fallen Stars is to the east.

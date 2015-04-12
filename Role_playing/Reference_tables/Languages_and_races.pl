@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(list);
 
 my %worlds = (
@@ -230,7 +230,7 @@ my $doc_magic = {
   'worlds' => sub { list(3,'u',get_races(%worlds), { 'onclick' => 'list_onclick(event)' }) }
 };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 This is a list of languages and races for AD&amp;D. Constructs and undead are not races. They nor lycanthropes have their own specific languages. Like humans these races can have sub-dialects by a region. A hill dwarf from Krynn might not be able to understand a hill dwarf from Oerth. It is thought all elves descend from the same ancestors, so their languages across the worlds may not have changed much since they separated. Creatures like elementals may have a language which can not be spoken by anyone other than another elemental.

@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 There is a place where all universes meet, a place where powers contest with each other for ownership of places such as cities, countries, worlds, and universes. They also contest for people, races, and gods. These contests can cause cities to prosper, worlds to be destroyed, or genocide. The contests may last a single moment of time or span eons. One could easily destroy a soul just to have it remade by another. A world could be created just to be destroyed. These powers sometimes cause rifts to form from that gray void in which they live into the unsuspecting universes, and they can bridge between universes.

@@ -10,7 +10,7 @@ use HTML::Entities qw(encode_entities);
 use Lingua::EN::Inflect qw(A);
 
 use lib '../../files/lib';
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(nav section paragraph list anchor);
 use Base::Menu qw(file_menu);
 use Util::Convert qw(textify searchify);
@@ -43,7 +43,7 @@ my $select = $cgi->param('monster') ? encode_entities($cgi->param('monster'),'<>
 my $monsters = $select && $multi_monsters{$select} ? $multi_monsters{$select} : [$select];
 my $head = $select && grep(/\Q$select\E/, @selects) ? $select : undef;
 my $file_menu = file_menu('monster', \@selects , $select);
-html( heading => $head, 'file menu' => $file_menu, code => sub {
+page( heading => $head, 'file menu' => $file_menu, code => sub {
   if ($select && grep(/\Q$select\E/, @selects)) {
     print_monster($monsters) if $select ne 'Random monsters';
     section(3, sub { list(5,'u', monster); }) if $select eq 'Random monsters';

@@ -6,9 +6,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Hello and welcome to my lists of movies. My fiancé or I like some of them and might want to add them to A<our collection|href="../Collections/Movies.pl">. Others are those which I just felt like listing here. If I did not list a film, miniseries, or television series which you think I should have, contact me through one of the sources above.

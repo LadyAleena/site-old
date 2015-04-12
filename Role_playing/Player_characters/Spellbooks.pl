@@ -9,7 +9,7 @@ use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
 use Base::Data qw(data_directory get_directory);
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use Util::Sort qw(name_sort);
 use Util::Convert qw(textify filify);
@@ -21,6 +21,6 @@ my @selects = sort { name_sort(lc $a,lc $b) } map { textify($_) } get_directory(
 my $cgi = CGI->new;
 my $select = encode_entities($cgi->param('spellbook'),'<>"');
 my $head = $select && grep(/\Q$select\E/, @selects) ? "$select\'s spellbook" : 'My characters\' spellbooks';
-html( 'heading' => $head, 'file menu' => file_menu('spellbook', \@selects , $select), 'code' => sub {
+page( 'heading' => $head, 'file menu' => file_menu('spellbook', \@selects , $select), 'code' => sub {
   print_spellbook($directory, filify($select).'.txt') if ($select && grep(/\Q$select\E/, @selects));
 });

@@ -7,7 +7,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section table);
 use Base::Data qw(get_hash);
 use HTML::Forms qw(tiny_select);
@@ -31,7 +31,7 @@ for my $weapon (sort { $a->{'Weapon'} cmp $b->{'Weapon'} } values %weapons_list)
 }
 
 my $head = $broad  ? $broad : $tight ? $tight : undef;
-html( 'heading' => $head, 'code' => sub {
+page( 'heading' => $head, 'code' => sub {
   section(3, sub {
     tiny_select(4, { 'location' => 'Weapons.pl', 'file' => ['Role_playing/Reference_tables','Weapons_select.txt'], });
     table(4, { 'class' => 'proficiency', 'rows' => [['header',\@headings],['data',\@rows]] });

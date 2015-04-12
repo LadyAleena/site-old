@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 These are all my hopes and dreams for the television series I<Necessary Roughness> after season 3. With I<Necessary Roughness> cancelled, this is all I have in my head. There will be complete scenes and incomplete thoughts. This may be a bit of a jumbled mess, but I will try to keep it in my mental chronological order. If you like something, please let me know.

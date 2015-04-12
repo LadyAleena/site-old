@@ -5,7 +5,7 @@ use warnings FATAL => qw(all);
 use Data::Dumper;
 
 use lib "../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(pre);
 
 my $doc_magic = {
@@ -18,7 +18,7 @@ my $doc_magic = {
   'inc_f' => sub { pre(4, sub { print Dumper(\%INC) }) },
 };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 2 IDs

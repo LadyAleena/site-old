@@ -6,7 +6,7 @@ use warnings;
 use Lingua::EN::Inflect qw(PL_N);
 
 use lib "../../files/lib";
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section paragraph list table);
 use Base::Data qw(get_hash);
 use Util::Convert qw(idify);
@@ -64,7 +64,7 @@ sub list_loop {
   list($tab, 'u', \@items);
 }
 
-html( code => sub {
+page( 'code' => sub {
   section(3, sub {
     paragraph(3,q(I have taken down all of the individual pages for my player characters for a while. I am revamping this whole section of my site and the current files are a mess. Please bear with me as I working on getting them back online.));
   });

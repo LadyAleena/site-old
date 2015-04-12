@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 As she walked into the house, she noticed that the place was very clean. She nodded with satisfaction that her order had been obeyed. She had traveled far and did not want any disappointment. She looked her lover up and down to check if he had obeyed her in clothing choice as well. He did. He was wearing loose pants and a loose shirt. She nodded with approval and smiled up at him. She did not say a word. She didn't have to say anything at all. She walked briskly to a chair and sat down.

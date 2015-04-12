@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(list anchor);
 
 my @items = <<List_end =~ m/(.+\n)/g;
@@ -32,7 +32,7 @@ for (@items) {
 
 my $doc_magic = { 'funnies' => sub { list(3,'u',\@funnies) } };
 
-html( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 This is a list of jokes that I have found funny over the years. The links are to Google searches for the items in this list with safe searches turned B<off>. I hope you find them as humorous as I did.

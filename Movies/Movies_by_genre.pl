@@ -8,7 +8,7 @@ use HTML::Entities qw(encode_entities);
 use URI::Encode qw(uri_encode);
 
 use lib "../files/lib";
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section paragraph list);
 use Base::Menu qw(file_menu);
 use Util::Sort qw(article_sort);
@@ -47,7 +47,7 @@ my $cgi = CGI->new;
 my $select = encode_entities($cgi->param('genre'),'<>"');
 my $head = $select && $genres{$select} ? ucfirst "$select movies" : undef;
 my $file_menu = file_menu('genre', [sort keys %genres] , $select);
-html( heading => $head, 'file menu' => $file_menu, code => sub {
+page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
   my $heading;
   section(3, sub {
     if ($select && $genres{$select}) {

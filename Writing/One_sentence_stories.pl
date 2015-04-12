@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 After almost three and a half years, she wondered if she would have the courage to expose herself again to a stranger, yet she had to do it to keep her sanity even if she again gets nothing but praise in her e-mail inbox expressing shock she had entered only one last time; so now she reenters her last entry and adds seven more in hopes that she might see her name while her monitor bathes her face with light one dark and lonely night.

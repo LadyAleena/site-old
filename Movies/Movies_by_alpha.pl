@@ -8,7 +8,7 @@ use HTML::Entities qw(encode_entities);
 
 use lib '../files/lib';
 use Base::Data qw(alpha_array);
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section paragraph list form fieldset selection input anchor);
 use Base::Menu qw(alpha_menu);
 use Util::Sort qw(article_sort);
@@ -103,7 +103,7 @@ for my $movies (keys %alpha_movies) {
   @{$alpha_movies{$movies}} = @movies;
 }
 
-html( code => sub {
+page( 'code' => sub {
   form(3, sub {
     fieldset(4, sub {
       input(5, { 'type' => 'text', 'name' => 'title',  'placeholder' => 'title', 'style' => 'width:14em' });

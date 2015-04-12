@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 It was October 29th around eight o'clock at night and a Holloween party appeared to be in progress. Many people were arriving. Vicky was talking to her best friend, Mirrium. The party was being thrown by her step-father, Earl; her mother; and her. The people were friends of her parents and some of her's too. The television was on in the living room showing horror movies, and spooky music was being played in the dining room. All the food was and most of the conversation were in the dining room and kitchen.

@@ -5,7 +5,7 @@ use warnings;
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use RolePlaying::SpellList qw(print_spell_list);
 use RolePlaying::CharacterBuilding::Story qw(print_participants);
 
@@ -14,7 +14,7 @@ my $doc_magic = {
   'characters' => sub { print_participants },
 };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 The Society of Divided Light is dedicated to the gathering of magic and helping new adventurers get a good start on the road to glory.

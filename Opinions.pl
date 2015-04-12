@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib 'files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Some of my views are unsupported by fact and may offend. I am open to others' opinions, though I may not change my mind. If you feel strongly about any of these issues, please send me an email to tell me what you think. You have the power to change my mind, and if you do, they will change here accordingly.

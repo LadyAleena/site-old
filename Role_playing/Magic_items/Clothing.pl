@@ -5,10 +5,10 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
-html( 'heading' => 'Magical clothing', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'heading' => 'Magical clothing', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 2 Cloak of Darkness

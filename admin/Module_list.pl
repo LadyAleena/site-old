@@ -6,7 +6,7 @@ use Lingua::EN::Inflect qw(NUMWORDS);
 use LWP::Simple qw(get);
 
 use lib '../files/lib';
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(anchor section heading list);
 use Base::Data qw(alpha_hash);
 use Base::Menu qw(alpha_menu);
@@ -16,7 +16,7 @@ my $filename = 'files/data/module_list.txt';
 my %files = (
   'fantasy' => "http://fantasy.xecu.net/$filename",
   'user'    => "http://users.xecu.net/fantasy/$filename",
-  'local' => "/home/dawn/Documents/fantasy/$filename",
+  'local' => "/home/me/Documents/fantasy/$filename",
 );
 
 my %modules;
@@ -43,7 +43,7 @@ my %styles = ('one' => 'fcc', 'two' => 'cfc', 'three' => 'ccf');
 
 my %alpha_modules = alpha_hash(\%modules);
 
-html( code => sub {
+page( 'code' => sub {
   for my $alpha (sort keys %alpha_modules) {
     my $section_name = $alpha eq uc $alpha ? "$alpha" : "l$alpha";
     my @items;

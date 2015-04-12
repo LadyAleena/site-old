@@ -5,11 +5,11 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib 'files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
 my $line_magic = { 'blue text' => qq(style="color:#009") };
 
-html( code => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 2 This site

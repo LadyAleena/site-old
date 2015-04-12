@@ -8,7 +8,7 @@ use File::Basename;
 use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use RolePlaying::WordFind qw(print_word_find);
 
@@ -20,6 +20,6 @@ my %finds = (
 my $cgi = CGI->new;
 my $select = encode_entities($cgi->param('word find'),'<>"');
 my $head = $select && $finds{$select} ? $select : undef;
-html( 'heading' => $head, 'file menu' => file_menu('word find', [sort keys %finds], $select), 'code' => sub {
+page( 'heading' => $head, 'file menu' => file_menu('word find', [sort keys %finds], $select), 'code' => sub {
   print_word_find($select,$finds{$select}) if ($select && $finds{$select});
 });

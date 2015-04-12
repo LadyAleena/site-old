@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use File::Slurp qw(read_file);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(pre);
 use Base::LineMagic qw($line_magic);
 use Base::Data qw(data_directory get_directory);
@@ -23,7 +23,7 @@ for my $file (@files) {
   }
 }
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
 Along with the ^Geek Code^ written by Robert Hayden, here are a few additions, use the standard pluses or minuses in each group.

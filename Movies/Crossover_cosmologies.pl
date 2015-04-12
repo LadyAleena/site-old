@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( 'code' => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 I hope you enjoy these crossover cosmologies. I have included official and unoffical crossovers. Some may be in dispute. There are two sites which helped me in putting this together. First is Thomas Holbrook's site A<Crossovers and Spin Offs|href="http://www.poobala.com/crossoverlistb.html">. Second is Keith Gow's and Ash Crowe's site A<The Tommy Westphall Universe|href="https://thetommywestphall.wordpress.com">. Without those two resources, I would not be as far along as I am now. There are a few places where I have disagreed with Holbrook, Gow, and Crowe; but I am still very thankful for their work.

@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Danielle was excited.  She rode to a nearby tavern with high spirits, knowing that the party was going to be a good one.  She smiled remembering those parties, since they always seemed to bring a certain satisfaction to her.

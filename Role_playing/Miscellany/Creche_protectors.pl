@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA); });
+page( 'code' => sub { story(*DATA); });
 
 __DATA__
 Crèche protectors are people who devote their lives to the care of children within their community. They often raise the children from infancy to adulthood. Since they stay within their communities, they are non-player characters usually. Crèche protectors who are not in their crèche are often on missions to retrieve children who have been kidnapped. Once the children are rescued, the crèche protectors will return to their crèche and stay there.

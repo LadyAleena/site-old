@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib/';
 use Base::Data qw(get_hash);
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(section paragraph list anchor);
 use Util::Sort qw(article_sort);
 
@@ -55,7 +55,7 @@ for my $site (sort {article_sort(lc $a->{'name'},lc $b->{'name'})} values %progr
 
 my $doc_magic = { 'programs' => sub { list(3,'u',\@items, { class => 'two' } ) } };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 This is a list of programs that I B<am using> or have used. Some have been made obsolete by others.

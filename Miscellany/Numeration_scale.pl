@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use Math::BigInt;
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(section paragraph table);
 use Util::Number qw(commify);
 
@@ -21,7 +21,7 @@ for (map($_."illion",@scale)) {
 
 my $doc_magic = { 'scale' => sub { table(4, { class => 'numberation_scale', rows => [['header', ['Name','Number']],['data',\@rows]] }) } };
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 I decided to come up with my own numeration scale based on the amount of commas in the number.

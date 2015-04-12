@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(table);
 use RolePlaying::CharacterBuilding::Alignment qw(expand_alignment);
 
@@ -39,7 +39,7 @@ for my $x_axis (@x_axis) {
 
 my $doc_magic = { alignments => sub { table(3, { class => 'expanded_alignment', rows => [['data',\@rows]] }) }};
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 Are there times when you can't choose an alignment for your character with so few choices? That has come to an end. Here are 112 new alignments to choose from. A (+) next to an alignment means your character is true (alignment). A (-) next to an alignment means your character is just not that alignment. An alignment in parentheses means your character has those tendencies.

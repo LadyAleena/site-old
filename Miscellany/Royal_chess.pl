@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(table definition_list);
 use Base::Data qw(get_array);
 
@@ -34,7 +34,7 @@ my $doc_magic = {
   'board'  => sub { table(4, { 'class' => 'royal_chess', 'rows' => [['data',\@rows]] }) },
 };
 
-html( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 This is a game of capture, so there are no checks or checkmate. The standard pieces move the same. If the king is captured, the prince becomes the king. If the prince (king) is captured, the princess becomes king. If the princess (king) is captured, the queen becomes king. The captures do not have to be in that order. If the prince is captured before the king, the princess becomes the prince. If a pawn is on the outer edge on the opponent's side of the board, the pawn can be replaced by the lowest ranking member of the royal family (queen, princess, prince, king). Once the entire royal family is captured, the game is over.

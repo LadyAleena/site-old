@@ -3,7 +3,7 @@ use strict;
 use warnings FATAL => qw( all );
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(table);
 use Base::Data qw(get_directory);
 use Base::Root qw(get_root);
@@ -44,7 +44,7 @@ for my $use (sort { $a cmp $b } keys %uses) {
 
 my $doc_magic = { 'table' => sub { table(3, { rows => [['data',\@rows]] }) }};
 
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 & table

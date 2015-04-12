@@ -5,10 +5,10 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
-html( 'heading' => 'Magical rings', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'heading' => 'Magical rings', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 Rings without a credit were created by me. B<A<Robert Anderson|href="mailto:ogre1971@hotmail.com?subject=Scroll%20on%20Fantasy's%20Realm">> created most of the rest which will be marked with an asterisk (*).

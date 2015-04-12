@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 He walked in the room right after dinner. I decided to clean up later. I wanted to lie down because that day had been exhausting even though I did nothing at all that day. Maybe that was why he was so upset with me. I had done nothing at all. I was not feeling my best.

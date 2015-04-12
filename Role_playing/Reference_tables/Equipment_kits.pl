@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(definition_list);
 use Base::Data qw(get_array);
 
@@ -13,7 +13,7 @@ my @def_headings = ('cost', 'weight', 'items included');
 my @definition_list = get_array( 'headings' => ['term', @def_headings] );
 my $doc_magic = { 'equipment' => sub { definition_list(4, \@definition_list, { 'headings' => \@def_headings }) }};
 
-html( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 Equipment kits are a way to save space on your player character worksheet and to save you time. The prices may vary by dungeon master or game edition.

@@ -5,10 +5,10 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
-html( code => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 This is my film and television tie-in collection.
@@ -187,4 +187,3 @@ by John Williams
 2 Xena: Warrior Princess
 * I<Xena: Warrior Princess|^cd^> (1996 soundtrack) by Joseph DeLuca
 * I<Xena X-Posed|^trade^> by Nadine Crenshaw
-</ul>

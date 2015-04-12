@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 Years ago I was preparing a belated Christmas dinner for my fiance and me. The kitchen was very quiet, and the lonelyness of that silence set into me. I really wanted to have someone to talk to then. I stood there chopping the onions while the stuffing heated in the microwave which hummed quietly behind me. I felt a great wave of sorrow come over me. Usually the silence doesn't bother me, but that day, while making a special occasion dinner which usually involves family, I had no one around. My fiance wasn't due home until late that night, which made it even sadder.

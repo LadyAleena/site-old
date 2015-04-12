@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 "Okay Alexandra, sorry about that" he said, then he tickled her, ran across the bar, and out to the docking bay. He knows he just annoyed her to no end. He quickly boarded his ship, the JumpMaster, and took off after receiving a quick clearance from the control tower.

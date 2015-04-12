@@ -3,7 +3,7 @@ use strict;
 use warnings FATAL => qw( all );
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(table);
 
 sub get_opts {
@@ -72,7 +72,7 @@ my @rows = (
 
 my $doc_magic = { 'colors' => sub { table( 2, { 'class' => 'color', 'style' => 'width:99%', 'rows' => \@rows } ) } };
 #print Dumper(\@rows);
-html( code => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 & colors

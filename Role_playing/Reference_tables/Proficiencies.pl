@@ -7,7 +7,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib "../../files/lib";
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section paragraph table anchor);
 use Base::Data qw(get_hash);
 use HTML::Forms qw(tiny_select);
@@ -60,7 +60,7 @@ for my $proficiency (sort { $a->{'Proficiency'} cmp $b->{'Proficiency'} } values
   push @rows, \@row;
 }
 
-html( code => sub {
+page( 'code' => sub {
   section(3, sub {
     paragraph(4,qq{These proficiencies are from Advanced Dungeons and Dragons, 2nd edition. You can select the proficiencies you wish to view. Please see the source books for the descriptions. If you know of more, please email me.});
     tiny_select(4, { 'location' => 'Proficiencies.pl', 'file' => ['Role_playing/Reference_tables','Proficiences_select.txt'] });

@@ -8,15 +8,14 @@ use CGI::Carp qw(fatalsToBrowser);
 use Cwd qw(cwd realpath);
 use File::Basename;
 use HTML::Entities qw(encode_entities);
-use List::Util qw(first max);
+use List::Util qw(max);
 
 use Base::Root qw(get_root);
 use Base::Data qw(get_array);
-use Base::HTML::Element qw(head style body header nav article section heading paragraph blockquote item list table anchor img div);
+use Base::HTML::Element qw(html head style body header nav article section heading paragraph blockquote item list table anchor img div);
 use Base::Inline qw(inline);
 use Base::Line qw(line);
 use Base::Menu qw(main_menu);
-use Util::Sort qw(article_sort);
 use Util::Convert qw(idify textify filify searchify);
 use Util::Columns;
 use Util::ExternalLinks;
@@ -73,7 +72,7 @@ sub get_contacts {
     push @link_array, anchor($image, { 'href' => "http://$address", 'target' => '_blank', 'title' => $title });
   }
 
-  paragraph(2, join(' ',@link_array), { 'class' => 'no_indent' });
+  return @link_array;
 }
 
 sub page {
@@ -86,37 +85,34 @@ sub page {
   my $page_heading = $opt{'heading'} ? textify($opt{'heading'}) : textify($heading);
   my $article_id = idify($page_heading);
   
-  print "content-type: text/html \n\n";
-  line(0,'<!DOCTYPE html>');
-  line(0,'<html>');
-  head(0, {
-    'title'    => $title,
-    'links'    => [map {{ 'rel' => 'stylesheet', 'type' => 'text/css', 'href' => $_ }} get_styles($root_path.'/files/css')],
-    'scripts'  => [
-      { 'type' => 'text/javascript', 'src' => 'https://code.jquery.com/jquery-1.11.1.min.js' },
-      { 'type' => 'text/javascript', 'src' => "$root_link/files/javascript/list.js" }
-    ],
-    'meta'     => [{'http-equiv' => 'Content-Type', content => 'text/html; charset=windows-1252'}],
-    'noscript' => sub { style(1, 'li.closed ol,li.closed ul,li.closed dl {display:block;}') },
+  html(0, {
+    'head' => {
+      'title'    => $title,
+      'links'    => [map {{ 'rel' => 'stylesheet', 'type' => 'text/css', 'href' => $_ }} get_styles($root_path.'/files/css')],
+      'scripts'  => [
+        { 'type' => 'text/javascript', 'src' => 'https://code.jquery.com/jquery-1.11.1.min.js' },
+        { 'type' => 'text/javascript', 'src' => "$root_link/files/javascript/list.js" }
+      ],
+      'meta'     => [{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=windows-1252'}],
+      'noscript' => sub { style(3, 'li.closed ol,li.closed ul,li.closed dl {display:block;}') },
+    },
+    'body' => [ sub {
+      nav(2, sub {
+        section(3, sub {
+          list(4,'u',
+            main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 0, 'full' => 0, 'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef ),
+            { 'id' => 'site_menu', 'onclick' => 'list_onclick(event)' }
+          );
+        }, { 'heading' => [2, 'Site menu', { 'id' => 'Site_menu' }] });
+      }, { 'id' => 'main' });
+      article(2, sub {
+        &{$opt{'code'}};
+      }, { 'id' => $article_id, 'heading' => [1, $page_heading, { 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
+    }, { 'header' => [ sub {
+      paragraph(3, join(' ',get_contacts()), { 'class' => 'no_indent' });
+      div(3, anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
+    }] }]
   });
-  line(0,'<body>');
-  header(1, sub {
-    get_contacts();
-    div(2, anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
-  });
-  nav(1, sub {
-    section(2, sub {
-      list(3,'u',
-        main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 0, 'full' => 0, 'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef ),
-        { 'id' => 'site_menu', 'onclick' => 'list_onclick(event)' }
-      );
-    }, { 'heading' => [2, 'Site menu', { 'id' => 'Site_menu' }] });
-  }, { 'id' => 'main' });
-  article(1, sub {
-    &{$opt{'code'}};
-  }, { 'id' => $article_id, 'heading' => [1, $page_heading, { 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
-  line(0,'</body>');
-  line(0,'</html>');
 }
 
 # Begin subroutines used in 'story' below.

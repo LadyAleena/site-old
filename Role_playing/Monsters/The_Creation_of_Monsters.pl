@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use Lingua::EN::Inflect qw(PL_N);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Util::Convert qw(searchify);
 
 my $line_magic;
@@ -16,7 +16,7 @@ for (qw(twarg throglin tralg trobold gobpry zarden), 'dark centaur') {
   $line_magic->{$text} = qq(A<$text|href="Monsters/index.pl?monster=$search">);
 }
 
-html( code => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 A high priest of Miskel, the evil godess of Triador, thought it would please his Mistress and gain favor within his order, and a dark conjurer were experimenting with the merging of different species. They did not expect their test subjects to revolt, but the ^twargs^, ^throglins^, ^tralgs^, ^trobolds^, ^gobpries^, and ^zardens^ did. Only the ^dark centaurs^ stayed loyal to their masters. The twargs took the brunt of the attacks from the priest, conjuer, and their apprentices. The tralgs, throglins, and trobolds fought the dark centaurs. The zardens and gobpries either fought the non-magical henchmen or freed the people used in the experiments.

@@ -5,9 +5,9 @@ use warnings;
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../../files/lib";
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 His name was HighBranches, but his tribe eventually called him StarCrazed. He was a forest elf who didn't look at the trees but looked up into the starry night-time sky. He sat in the tree tops and marveled at the stars and their movements through the heavens. Eventually he was driven from his tribe, and he left without so much as a backwards glance. He did not travel far from his tribal lands but far enough away to be ignored by them. He did not resent them for he knew that he was somewhat different. After a while a few of his former tribemates sought him out and after a longer while, they left with him to a new area of the world.

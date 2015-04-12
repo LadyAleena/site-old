@@ -5,7 +5,7 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html);
+use Base::Page qw(page);
 use Base::HTML::Element qw(section heading paragraph list anchor);
 use Util::Columns;
 
@@ -51,7 +51,7 @@ sub irc_list {
   list( $tab, 'u', \@channel_list, { 'class' => get_columns(3, scalar @channel_list) } );
 }
 
-html( code => sub {
+page( 'code' => sub {
   section(3, sub {
     paragraph(4,'These are the IRC channels in which I sometimes chat. My favorites are marked &#9829;.');
   });

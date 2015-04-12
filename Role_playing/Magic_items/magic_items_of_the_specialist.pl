@@ -5,10 +5,10 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
-html( 'heading' => 'Magic items of the specialist', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+page( 'heading' => 'Magic items of the specialist', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
 Saving throws vary by who is wielding the item when using the special abilities of these items. When the wielder is a specilist wizard for which the item was designed, the victims of the abilities save at a -3. When the weilder is a magic user who is not a specialist for which the item was designed, the victims save at a -1. When the wielder is a specialist wizard of the opposition school, the abilities backfire, and the wizard must make a saving throw at -3. The special abilities, other than the bonues to armor class, to hit, or damage, do not work for non-wizards.

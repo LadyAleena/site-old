@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
 use Base::Data qw(data_directory get_directory);
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 use Base::HTML::Element qw(anchor list);
 use Util::Sort qw(name_sort);
 use Util::Convert qw(textify searchify);
@@ -21,7 +21,7 @@ for my $spellbook (@spellbook_list) {
 
 my $doc_magic = { 'spellbooks' => sub { list(4, 'u', \@spellbooks, { 'class' => 'two' }) } };
 
-html('heading' => 'Magical books', 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page('heading' => 'Magical books', 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 2 Spellbooks

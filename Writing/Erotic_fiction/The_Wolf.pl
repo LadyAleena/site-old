@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 That day I went over to his house to meet with him for a wonderful evening of passion. I got there and knocked on the door. When he answered his eyes told me something was different. I got the feeling that he was hungry. I was a bit confused since he had never looked at me that way and was wondering if this was a good idea. I had the feeling of being prey.

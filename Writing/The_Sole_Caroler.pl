@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 It was Christmas Eve, and Betty was ready for it. Her house was completely decorated with lights inside and out. The tree sparkled with the ornaments and tinsel. She had a few bags packed with gifts she was taking to her office to leave for her work friends. She had her Christmas music collection playing from her computer's speakers. She checked the caroling schedule and noticed that she didn't have a lot of time to get the gifts distributed at the office.

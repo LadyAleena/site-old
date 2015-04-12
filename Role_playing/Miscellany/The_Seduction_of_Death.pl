@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::HTML qw(html story);
+use Base::Page qw(page story);
 
-html( code => sub { story(*DATA) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 If a PC goes below 0 Hit Points, a Wisdom check must be made with a penalty of double the amount under 0 Hit Points (if Jonrar is down to -2 Hit Points, he must make a Wisdom check with a -4 penalty). If the PC fails his saving throw, he is being seduced by death.  The PC will start to see the ultimate of his class, alignment, race, etc. A new Wisdom check will be needed each round the he is below 0 Hit Points.

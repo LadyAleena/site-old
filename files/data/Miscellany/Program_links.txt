@@ -35,6 +35,7 @@ Rocket Mania|www.popcap.com/games/rocketmania|
 Seven Seas|www.popcap.com/games/sevenseas|
 NingPo MahJong|pyrogon.bookofhook.com/games/ningpo|
 realPlayer|www.real.com/realplayer|
-Yahoo! Messanger|messenger.yahoo.com|
+Yahoo! Messenger|messenger.yahoo.com|
 Power Calculator|download.microsoft.com/download/whistler/Install/2/WXP/EN-US/PowerCalcPowertoySetup.exe|
 Tweak UI|download.microsoft.com/download/f/c/a/fca6767b-9ed9-45a6-b352-839afb2a2679/TweakUiPowertoySetup.exe|
+VLC media player|www.videolan.org/vlc/index.html|using

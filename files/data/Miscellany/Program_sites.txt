@@ -42,9 +42,11 @@ Wedge Software|||WinHacker
 WinZip|www.winzip.com;www.winzip.com/downwz.htm|
 Xenu's Link Sleuth|home.snafu.de/tilman/xenulink.html|
 xuMouse||using
-Yahoo!|m.www.yahoo.com||Yahoo! Messanger
+Yahoo!|www.yahoo.com||Yahoo! Messenger
 grepWin|tools.tortoisesvn.net/grepWin.html|
 HexChat|hexchat.github.io|
 XChat|xchat.org|using
 Debian|www.debian.org;cdimage.debian.org/debian-cd/7.2.0/multi-arch/iso-cd/debian-7.2.0-amd64-i386-netinst.iso|using
 KDE|www.kde.org|using
+LibreOffice|www.libreoffice.org|using
+VideoLAN|www.videolan.org||VLC media player

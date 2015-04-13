@@ -32,7 +32,7 @@ my %irc = (
 );
 
 my @double_bang = qw(chat windows linux gnome javascript linuxmint scarecrow-and-mrs-king bruce-campbell design hardware programming windows);
-my @favorites = qw(linux cbstream perlcafe scarecrow-and-mrs-king bruce-campbell debian-offtopic);
+my @favorites = qw(cbstream linux programming perlcafe scarecrow-and-mrs-king bruce-campbell debian-offtopic);
 
 sub irc_link {
   my ($server, $channel) = @_;

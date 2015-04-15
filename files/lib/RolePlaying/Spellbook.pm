@@ -7,8 +7,8 @@ our @EXPORT_OK = qw(print_spellbook);
 use CGI::Carp qw(fatalsToBrowser);
 use Lingua::EN::Inflect qw(ORD);
 
-use Base::HTML::Element qw(section paragraph list);
 use Base::Data qw(get_hash);
+use HTML::Elements qw(section paragraph list);
 use Util::Columns;
 
 sub print_spellbook {

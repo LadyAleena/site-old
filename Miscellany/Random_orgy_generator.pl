@@ -6,7 +6,7 @@ use Lingua::EN::Inflect qw(A NUMWORDS);
 
 use lib "../files/lib";
 use Base::Page qw(page story);
-use Base::HTML::Element qw(paragraph);
+use HTML::Elements qw(paragraph);
 use RolePlaying::Random::Misc qw(sexual_orientation relationship);
 use RolePlaying::Random::Body::Modification qw(random_body_modification);
 use RolePlaying::Random::Color qw(random_color);

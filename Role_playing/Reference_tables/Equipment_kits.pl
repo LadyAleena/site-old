@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::Page qw(page story);
-use Base::HTML::Element qw(definition_list);
 use Base::Data qw(get_array);
+use Base::Page qw(page story);
+use HTML::Elements qw(definition_list);
 
 my @def_headings = ('cost', 'weight', 'items included');
 my @definition_list = get_array( 'headings' => ['term', @def_headings] );

@@ -4,7 +4,7 @@ use warnings;
 
 use lib "../files/lib";
 use Base::Page qw(page);
-use Base::HTML::Element qw(form fieldset textarea);
+use HTML::Elements qw(form fieldset textarea);
 
 page( 'code' => sub {
   form(3, sub {

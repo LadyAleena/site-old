@@ -7,9 +7,9 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
-use Base::Page qw(page);
-use Base::HTML::Element qw(section table);
 use Base::Data qw(get_hash);
+use Base::Page qw(page);
+use HTML::Elements qw(section table);
 use HTML::Forms qw(tiny_select);
 
 my $cgi = CGI->new;

@@ -7,8 +7,8 @@ our @EXPORT_OK = qw(print_monster);
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
 
-use Base::HTML::Element qw(section heading paragraph table list);
 use Base::Data qw(get_hash);
+use HTML::Elements qw(section heading paragraph table list);
 use Util::Convert qw(textify);
 
 my @monster_headings = ('Monster','Climate/Terrain','Frequency','Organization','Activity cycle','Diet','Intelligence','Treasure','Alignment','No. Appearing','Armor Class','Movement','Hit Dice','THAC0','No. of Attacks','Damage/Attack','Special Attacks','Special Defenses','Magic Resistance','Size','Morale','XP Value','Appearance','Combat','Habitat/Society','Ecology','Variants','Note');

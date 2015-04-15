@@ -7,8 +7,8 @@ our @EXPORT_OK = qw(print_word_find);
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
 
-use Base::HTML::Element qw(section paragraph list pre);
 use Base::Data qw(data_file);
+use HTML::Elements qw(section paragraph list pre);
 use Util::Convert qw(filify);
 
 my $lone_gender = qw(He She)[rand 2];

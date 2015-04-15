@@ -7,9 +7,9 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib "../../files/lib";
-use Base::Page qw(page);
-use Base::HTML::Element qw(section paragraph table anchor);
 use Base::Data qw(get_hash);
+use Base::Page qw(page);
+use HTML::Elements qw(section paragraph table anchor);
 use HTML::Forms qw(tiny_select);
 use Util::Convert qw(idify);
 

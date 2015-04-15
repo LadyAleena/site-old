@@ -7,7 +7,7 @@ use Math::BigInt;
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::HTML::Element qw(section paragraph table);
+use HTML::Elements qw(table);
 use Util::Number qw(commify);
 
 my @scale = qw(m d tr tetr pent hex hept oct enn dec hendec dodec triskaidec tetrakaidec pentakaidec hexakaidec heptakaidec octokaidec ennaekaidec icosadec icosihen icosid icositr icositetr icosipent icosihex icosihept icosioct icosienn);

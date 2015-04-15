@@ -9,8 +9,8 @@ our @EXPORT_OK = qw(get_spells spell_progression_table_rows);
 use List::Util qw(max);
 
 use Base::Data qw(data_file get_hash);
+use HTML::Elements qw(anchor);
 use Util::Convert qw(filify searchify);
-use Base::HTML::Element qw(anchor);
 use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
 
 my @classes = qw(wizard priest paladin ranger bard theopsyelementalist);

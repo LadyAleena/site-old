@@ -7,7 +7,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Data qw(data_directory get_directory);
 use Base::Page qw(page story);
-use Base::HTML::Element qw(anchor list);
+use HTML::Elements qw(anchor list);
 use Util::Sort qw(name_sort);
 use Util::Convert qw(textify searchify);
 

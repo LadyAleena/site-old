@@ -9,8 +9,8 @@ use URI::Encode qw(uri_encode);
 
 use lib "../files/lib";
 use Base::Page qw(page);
-use Base::HTML::Element qw(section paragraph list);
 use Base::Menu qw(file_menu);
+use HTML::Elements qw(section paragraph list);
 use Util::Sort qw(article_sort);
 use Util::Convert qw(textify);
 use Movies::LookUp qw(movie series_hash genre_hash search_link);

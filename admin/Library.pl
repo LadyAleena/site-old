@@ -5,8 +5,8 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::HTML::Element qw(html head body section anchor paragraph list);
 use Base::Data qw(get_directory alpha_hash);
+use HTML::Elements qw(html head body section anchor paragraph list);
 use Util::Number qw(commify);
 
 my %modules;

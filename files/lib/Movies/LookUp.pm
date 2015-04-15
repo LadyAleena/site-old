@@ -12,7 +12,7 @@ use Encode qw(encode);
 
 use Base::Root qw(get_root);
 use Base::Data qw(data_file get_hash);
-use Base::HTML::Element qw(anchor);
+use HTML::Elements qw(anchor);
 use Util::Convert qw(filify textify idify searchify);
 use Util::GrammaticalJoin;
 use Util::JoinDefined;

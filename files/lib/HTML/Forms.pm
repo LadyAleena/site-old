@@ -6,8 +6,8 @@ our @EXPORT_OK = qw(tiny_select top_select);
 
 use Lingua::EN::Inflect qw(A PL_N);
 
-use Base::HTML::Element qw(form fieldset input selection);
 use Base::Data qw(get_hash);
+use HTML::Elements qw(form fieldset input selection);
 use Util::Convert qw(textify);
 
 sub top_select {
@@ -71,6 +71,15 @@ sub tiny_select {
       input($tab + 2, { 'type' => 'button', 'value' => 'Start over', 'onclick' => "location='$location'" });
     }, { 'legend' => 'Display only&#8230;' });
   }, { 'action' => $location, 'method' => 'get' });
+}
+
+# something I am keeping though not using so not exporting
+sub checkboxes {
+  my ($title) = @_;
+  my $id_title = idify("title $title");
+  my $display_title = textify($title);
+  return { type => 'checkbox', value => '1', name => $title, id => $id_title, place_label => 'after',
+          label => ["<i>$display_title</i>", { for => $id_title, class => 'specfic' }] }
 }
 
 1;

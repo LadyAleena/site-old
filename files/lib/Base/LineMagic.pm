@@ -7,7 +7,6 @@ our @EXPORT_OK = qw($line_magic);
 use Lingua::EN::Inflect qw(NO);
 
 use Base::Data qw(get_hash);
-use HTML::Elements qw(anchor);
 
 our $line_magic;
 

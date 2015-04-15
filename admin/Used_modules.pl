@@ -3,10 +3,10 @@ use strict;
 use warnings FATAL => qw( all );
 
 use lib '../files/lib';
-use Base::Page qw(page story);
-use Base::HTML::Element qw(table);
 use Base::Data qw(get_directory);
+use Base::Page qw(page story);
 use Base::Root qw(get_root);
+use HTML::Elements qw(table);
 
 my $root_path = get_root('path');
 

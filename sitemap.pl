@@ -7,10 +7,10 @@ use List::Util qw(sum min max);
 use URI::Encode qw(uri_encode);
 
 use lib 'files/lib';
-use Base::HTML::Element qw(html head heading body table list anchor pre);
 use Base::Data qw(get_directory);
 use Base::Menu qw(main_menu link_color);
 use Base::Root qw(get_root);
+use HTML::Elements qw(html head heading body table list anchor pre);
 use Util::Number qw(pretty_number);
 
 my $root_path = get_root('path');

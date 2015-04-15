@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::Page qw(page story);
-use Base::HTML::Element qw(heading definition_list div);
 use Base::Data qw(get_array);
+use Base::Page qw(page story);
+use HTML::Elements qw(heading definition_list div);
 
 my $directory = 'Role_playing/Locations/Olakeen';
 my $headings  = ['term','definition'];

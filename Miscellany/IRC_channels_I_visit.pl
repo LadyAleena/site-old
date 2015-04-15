@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page);
-use Base::HTML::Element qw(section heading paragraph list anchor);
+use HTML::Elements qw(section heading paragraph list anchor);
 use Util::Columns;
 
 my %irc = (

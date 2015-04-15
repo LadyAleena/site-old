@@ -6,8 +6,8 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::HTML::Element qw(list);
 use Base::LineMagic qw($line_magic);
+use HTML::Elements qw(list);
 use People qw(get_people);
 
 my $doc_magic = {

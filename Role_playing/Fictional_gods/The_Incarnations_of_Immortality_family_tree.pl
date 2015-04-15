@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
 use Base::Page qw(page story);
-use Base::HTML::Element qw(pre);
+use HTML::Elements qw(pre);
 
 my $doc_magic = { 'tree' => sub { pre(3, sub { print q(
  Cedric---+---<span style="background:#999;">Niobe</span>-------+-------Pacian---+---Blanche

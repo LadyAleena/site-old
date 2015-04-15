@@ -6,7 +6,7 @@ use Data::Dumper;
 
 use lib "../files/lib";
 use Base::Page qw(page story);
-use Base::HTML::Element qw(pre);
+use HTML::Elements qw(pre);
 
 my $doc_magic = {
   'uid'   => sub { pre(4, sub { print "$<\n" }) },

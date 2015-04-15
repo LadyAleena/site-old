@@ -7,7 +7,7 @@ our @EXPORT_OK = qw(all_abilities ability_score_table get_game_effect random_abi
 use List::Util qw(max);
 
 use Base::Data qw(get_hash);
-use Base::HTML::Element qw(heading table);
+use HTML::Elements qw(heading table);
 
 my @abilities = qw(strength dexterity constitution intelligence wisdom charisma);
 

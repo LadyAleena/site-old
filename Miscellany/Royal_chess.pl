@@ -5,9 +5,9 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::Page qw(page story);
-use Base::HTML::Element qw(table definition_list);
 use Base::Data qw(get_array);
+use Base::Page qw(page story);
+use HTML::Elements qw(table definition_list);
 
 # I want to add character entity pieces.
 

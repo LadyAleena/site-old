@@ -6,7 +6,7 @@ our @EXPORT = qw(external_links);
 our @EXPORT_OK = qw(external_link);
 
 use Base::Data qw(get_hash);
-use Base::HTML::Element qw(anchor);
+use HTML::Elements qw(anchor);
 use Util::Convert qw(textify);
 
 my %external_links = get_hash( 'file' => ['Util','external_links.txt'], 'headings' => ['site','base link','after link'] );
@@ -19,7 +19,7 @@ sub external_link {
   my $link = $base_link.$page_link.$after_link;
   my $title = $link_title ? $link_title : undef;
   
-  return anchor(textify($site), { 'href' => "http://$link", 'title' => $title, 'target' => '_blank' });
+  return anchor(textify($site), { 'href' => "http://$link", 'title' => $title, 'target' => 'ex_tab' });
 }
 
 sub external_links {

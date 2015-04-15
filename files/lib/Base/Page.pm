@@ -12,10 +12,10 @@ use List::Util qw(max);
 
 use Base::Root qw(get_root);
 use Base::Data qw(get_array);
-use Base::HTML::Element qw(html head style body header nav article section heading paragraph blockquote item list table anchor img div);
 use Base::Inline qw(inline);
 use Base::Line qw(line);
 use Base::Menu qw(main_menu);
+use HTML::Elements qw(html head style body header nav article section heading paragraph blockquote item list table anchor img div);
 use Util::Convert qw(idify textify filify searchify);
 use Util::Columns;
 use Util::ExternalLinks;

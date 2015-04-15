@@ -6,8 +6,8 @@ our @EXPORT_OK = qw(print_participants);
 
 use File::Basename;
 
-use Base::HTML::Element qw(list anchor);
 use Base::Data qw(get_hash);
+use HTML::Elements qw(list anchor);
 use Util::Convert qw(textify idify);
 use Util::Columns;
 

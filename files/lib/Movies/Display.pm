@@ -9,7 +9,7 @@ use File::Basename;
 use Lingua::EN::Inflect qw(NO NUMWORDS);
 
 use Base::Data qw(data_file);
-use Base::HTML::Element qw(footer section heading paragraph list anchor pre);
+use HTML::Elements qw(footer section heading paragraph list anchor pre);
 use Util::Convert qw(idify textify filify);
 use Util::Columns;
 use Util::JoinDefined;

@@ -6,10 +6,10 @@ use CGI::Carp qw(fatalsToBrowser);
 use File::Slurp qw(read_file);
 
 use lib '../files/lib';
-use Base::Page qw(page story);
-use Base::HTML::Element qw(pre);
-use Base::LineMagic qw($line_magic);
 use Base::Data qw(data_directory get_directory);
+use Base::Page qw(page story);
+use Base::LineMagic qw($line_magic);
+use HTML::Elements qw(pre);
 use Util::Convert qw(textify);
 
 my $directory = data_directory('Miscellany/Geek_codes');

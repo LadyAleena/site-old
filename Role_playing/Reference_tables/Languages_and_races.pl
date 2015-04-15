@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../files/lib";
 use Base::Page qw(page story);
-use Base::HTML::Element qw(list);
+use HTML::Elements qw(list);
 
 my %worlds = (
   'Abeir-Toril' => ['Anchorome', 'Faerûn', 'Kara-Tur', 'Maztica', 'Mulhorand', 'Unther', 'Zakhara'],

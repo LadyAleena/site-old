@@ -7,7 +7,7 @@ use HTML::Entities qw(encode_entities);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::HTML::Element qw(list anchor);
+use HTML::Elements qw(list anchor);
 
 my @items = <<List_end =~ m/(.+\n)/g;
 Creation of Pussy

@@ -6,10 +6,10 @@ use Lingua::EN::Inflect qw(NUMWORDS);
 use LWP::Simple qw(get);
 
 use lib '../files/lib';
-use Base::Page qw(page);
-use Base::HTML::Element qw(anchor section heading list);
 use Base::Data qw(alpha_hash);
+use Base::Page qw(page);
 use Base::Menu qw(alpha_menu);
+use HTML::Elements qw(anchor section heading list);
 
 my $filename = 'files/data/module_list.txt';
 

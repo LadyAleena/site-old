@@ -7,8 +7,8 @@ our @EXPORT_OK = qw(print_spell_list);
 use CGI::Carp qw(fatalsToBrowser);
 use File::Slurp; # read_file
 
-use Base::HTML::Element qw(section rparagraph list);
 use Base::Data qw(data_file get_hash); # data_file used elsewhere
+use HTML::Elements qw(section rparagraph list);
 use Util::Convert qw(textify filify);
 
 my @headings = qw(name school level range duration area_of_effect components casting_time saving_throw description);

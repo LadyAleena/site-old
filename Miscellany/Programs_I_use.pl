@@ -7,7 +7,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../files/lib/';
 use Base::Data qw(get_hash);
 use Base::Page qw(page story);
-use Base::HTML::Element qw(section paragraph list anchor);
+use HTML::Elements qw(section paragraph list anchor);
 use Util::Sort qw(article_sort);
 
 my %program_sites = get_hash( 'file' => ['Miscellany','Program_sites.txt'], 'headings' => [qw(name link using programs+)] );

@@ -6,9 +6,9 @@ use warnings;
 use Lingua::EN::Inflect qw(PL_N);
 
 use lib "../../files/lib";
-use Base::Page qw(page);
-use Base::HTML::Element qw(section paragraph list table);
 use Base::Data qw(get_hash);
+use Base::Page qw(page);
+use HTML::Elements qw(section paragraph list table);
 use Util::Convert qw(idify);
 use Util::Number qw(commify);
 use RolePlaying::CharacterBuilding::Alignment qw(expand_alignment);

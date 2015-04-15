@@ -11,8 +11,8 @@ use Lingua::EN::Inflect qw(A);
 
 use lib '../../files/lib';
 use Base::Page qw(page);
-use Base::HTML::Element qw(nav section paragraph list anchor);
 use Base::Menu qw(file_menu);
+use HTML::Elements qw(nav section paragraph list anchor);
 use Util::Convert qw(textify searchify);
 use RolePlaying::Monster qw(print_monster);
 use RolePlaying::Random::Monster qw(random_monster);

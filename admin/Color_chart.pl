@@ -4,7 +4,7 @@ use warnings FATAL => qw( all );
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::HTML::Element qw(table);
+use HTML::Elements qw(table);
 
 sub get_opts {
   my ($color, $class, $rowspan) = @_;

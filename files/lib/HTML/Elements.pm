@@ -1,4 +1,4 @@
-package Base::HTML::Element;
+package HTML::Elements;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);

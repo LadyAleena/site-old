@@ -7,7 +7,7 @@ our @EXPORT_OK = qw(main_menu alpha_menu file_menu link_color);
 use Cwd qw(cwd realpath);
 
 use Base::Root qw(get_root);
-use Base::HTML::Element qw(anchor paragraph);
+use HTML::Elements qw(anchor paragraph);
 use Util::Sort qw(article_sort name_sort);
 use Util::Convert qw(linkify textify searchify);
 

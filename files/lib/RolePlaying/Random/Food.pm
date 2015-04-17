@@ -13,12 +13,13 @@ my %foods = (
   'tuber' => ['potato','sweet potato','yam'],
   'meat'  => [qw(beef lamb chicken pork turkey fish)],
   'appetizer'    => [map( "$_ chips", qw(corn potato) ), 'pretzels', 'crackers'],
-  'lucky charms' => [map_in_map({ 'after'=> 'lucky charm' }, [
+  'Kool-Aid flavors' => [= map( "$_ Kool-Aid", ( 'Apple', 'Arctic Green Apple', 'Berry Blue', 'Black Cherry', 'Blastin\' Berry Cherry', 'Blue Berry Blast', 'Blue Moon Berry', 'Bunch Berry', 'Candy Apple', 'Cherry', 'Cherry Cracker', 'Chocolate', 'Cola', 'Eerie Orange', 'Frutas,Vermelhas', 'Golden Nectar', 'Grape', 'Grape Blackberry', 'Grape Tang', 'Great Blue-dini', 'Great Blueberry', 'Groselha', 'Guaraná', 'Ice Blue Raspberry Lemonade', 'Incrediberry', 'Jamaica', 'Kickin-Kiwi-Lime', 'Kolita', 'Lemon', 'Lemon Ice', 'Lemon-Lime', 'Lemonade', 'Lemonade Sparkle', 'Lime', 'Man-o-Mangoberry', 'Mandarina-Tangerine', 'Mango', 'Melon Mango', 'Mountainberry Punch', 'Oh-Yeah Orange-Pineapple', 'Orange', 'Orange Enerjooz', 'Peach', 'Piña-Pineapple', 'Pink Lemonade', 'Pink Swimmingo', 'Purplesaurus Rex', 'Rainbow Punch', 'Raspberry', 'Roarin\' Raspberry Cranberry', 'Rock-a-Dile Red', 'Root Beer', 'Scary Black Cherry', 'Scary Blackberry', 'Shaking Starfruit', 'Sharkleberry Fin', 'Slammin\' Strawberry-Kiwi', 'Soarin\' Strawberry-Lemonade', 'Solar Strawberry-Starfruit', 'Strawberry', 'Strawberry Falls Punch', 'Strawberry Splash', 'Strawberry Split', 'Strawberry-Raspberry', 'Summer Punch', 'Sunshine Punch', 'Surfin\' Berry Punch', 'Swirlin\' Strawberry-Starfruit', 'Tamarindo', 'Tangerine', 'Tropical Punch', 'Watermelon', 'Watermelon-Cherry' ))],
+  'Lucky Charms' => [map_in_map({ 'after'=> 'lucky charm' }, [
     'heart','star','horseshoe','green clover','blue moon','hourglass','rainbow','red balloon',
     map("swirled $_ moon", qw(pink orange yellow green blue purple)),
     map("$_->[0] hat with a $_->[1] clover", (['green', 'dark green'], ['blue', 'pink'], ['purple', 'green'], ['dark green', 'orange'], ['yellow', 'blue'], ['orange', 'green']))
   ])],
-  'mm flavors'   => [map("$_ M&Ms",('milk chocolate','peanut','dark chocolate','dark chocolate peanut','almond','peanut butter','pretzel','triple chocolate','raspberry almond','chocolate almond','mint chocolate'))],
+  'MM flavors'   => [map("$_ M&Ms",('milk chocolate','peanut','dark chocolate','dark chocolate peanut','almond','peanut butter','pretzel','triple chocolate','raspberry almond','chocolate almond','mint chocolate'))],
   'beer' => ['pale ale',map( "$_ beer", qw(stout mild wheat lager lambic) )]
 );
 

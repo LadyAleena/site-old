@@ -27,7 +27,7 @@ my %class_specials_info = (
   'warrior' => 'attacks',
   'thief'   => 'backstabs',
   'priest'  => 'turns undead',
-  'wizard'  => 'reads scrolls'
+  'wizard'  => 'creates magic items'
 );
 
 my @class_specials = (map("$class_specials_info{$_} as a $_ of the same level. If already a $_, $class_specials_info{$_} at 1 level higher.",keys %class_specials_info));

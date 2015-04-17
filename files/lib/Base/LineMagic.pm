@@ -6,7 +6,9 @@ our @EXPORT_OK = qw($line_magic);
 
 use Lingua::EN::Inflect qw(NO);
 
-use Base::Data qw(get_hash);
+use Base::Root qw(get_root);
+use Base::Data qw(data_file get_hash);
+use Util::Convert qw(idify);
 
 our $line_magic;
 
@@ -34,6 +36,20 @@ for (qw(massmarket trade hardcover cd cassette lp ff bd dvd vhs dg)) {
 for my $count (0..9) {
   my $charges = ucfirst NO('charge', $count, { words_below => 101 });
   $line_magic->{$charges} = qq(STRONG<$charges|class="charges">);
+}
+
+# to be used on any story involving my player characters
+open(my $pc_fh, '<', data_file('Role_playing/Player_characters','blank_list.txt')) or die $!;
+my @pcs = <$pc_fh>;
+chomp @pcs;
+
+for my $pc (@pcs) {
+  my $root = get_root('link');
+  my $id   = idify($pc);
+  $line_magic->{$pc} = qq(A<$pc|href="$root/Role_playing/Player_characters/#$id">);
+  
+  my ($first, $last) = split(' ', $pc, 2);
+  $line_magic->{$first} = qq(A<$first|href="$root/Role_playing/Player_characters/#$id">);
 }
 
 1;

@@ -14,7 +14,7 @@ sub get_psionics {
   my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
   
   my %psionics = get_hash( 
-    'file' => ['Role_playing/Classes','psionics.txt'],
+    'file' => ['Role_playing/Classes/Psionics','progression.txt'],
     'headings' => ['level','disciplines','sciences','devotions','defense modes'],
   );
 

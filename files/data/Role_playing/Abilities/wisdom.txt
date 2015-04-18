@@ -1,0 +1,25 @@
+1|-6|—|80%|—
+2|-4|—|60%|—
+3|-3|—|50%|—
+4|-2|—|45%|—
+5|-1|—|40%|—
+6|-1|—|35%|—
+7|-1|—|30%|—
+8|0|—|25%|—
+9|0|0|20%|—
+10|0|0|15%|—
+11|0|0|10%|—
+12|0|0|5%|—
+13|0|1 1st|0%|—
+14|0|2 1st|0%|—
+15|+1|2 1st, 1 2nd|0%|—
+16|+2|2 1st, 2 2nd|0%|—
+17|+3|2 1st, 2 2nd, 1 3rd|0%|—
+18|+4|2 1st, 2 2nd, 2 3rd|0%|—
+19|+4|3 1st, 2 2nd, 2 3rd, 1 4th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism
+20|+4|3 1st, 3 2nd, 2 3rd, 2 4th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism, Forget, Hold Person, Ray of Enfeeblement, Scare
+21|+4|3 1st, 3 2nd, 3 3rd, 2 4th, 1 5th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism, Forget, Hold Person, Ray of Enfeeblement, Scare, Fear
+22|+4|3 1st, 3 2nd, 3 3rd, 3 4th, 2 5th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism, Forget, Hold Person, Ray of Enfeeblement, Scare, Fear, Charm Monster, Confusion, Emotion, Fumble, Suggestion
+23|+4|3 1st, 3 2nd, 3 3rd, 3 4th, 2 5th, 1 6th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism, Forget, Hold Person, Ray of Enfeeblement, Scare, Fear, Charm Monster, Confusion, Emotion, Fumble, Suggestion, Chaos, Feeblemind, Hold Monster, Quest
+24|+4|3 1st, 3 2nd, 3 3rd, 3 4th, 3 5th, 2 6th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism, Forget, Hold Person, Ray of Enfeeblement, Scare, Fear, Charm Monster, Confusion, Emotion, Fumble, Suggestion, Chaos, Feeblemind, Hold Monster, Quest, Geas, Mass Suggestion, Rod of Rulership
+25|+4|3 1st, 3 2nd, 3 3rd, 3 4th, 3 5th, 2 6th, 1 7th|0%|Cause Fear, Charm Person, Command, Friends, Hypnotism, Forget, Hold Person, Ray of Enfeeblement, Scare, Fear, Charm Monster, Confusion, Emotion, Fumble, Suggestion, Chaos, Feeblemind, Hold Monster, Quest, Geas, Mass Suggestion, Rod of Rulership, Antipathy/Sympathy, Death Spell, Mass Charm

@@ -14,7 +14,7 @@ use List::MoreUtils qw(uniq);
 
 # When adding PSPS, it is the initial cost + (maintenance * 4) for each talent.
 my %psps = get_hash(
-  'file' => ['Role_playing/Random_generators','psionics.txt'],
+  'file' => ['Role_playing/Classes/Psionics','powers.txt'],
   'headings' => ['power', 'initial cost', 'maintenance cost']
 );
 

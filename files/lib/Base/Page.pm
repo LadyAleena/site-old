@@ -110,7 +110,7 @@ sub page {
       }, { 'id' => $article_id, 'heading' => [1, $page_heading, { 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
     }, { 'header' => [ sub {
       paragraph(3, join(' ',get_contacts()), { 'class' => 'no_indent' });
-      div(3, anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
+      div(3, img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'width:.9em' }).anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
     }] }]
   });
 }

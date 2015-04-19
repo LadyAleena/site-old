@@ -91,7 +91,7 @@ sub page {
       'links'    => [map {{ 'rel' => 'stylesheet', 'type' => 'text/css', 'href' => $_ }} get_styles($root_path.'/files/css')],
       'scripts'  => [
         { 'type' => 'text/javascript', 'src' => 'https://code.jquery.com/jquery-1.11.1.min.js' },
-        { 'type' => 'text/javascript', 'src' => "$root_link/files/javascript/list.js" }
+        { 'type' => 'text/javascript', 'src' => "$root_link/files/lib/myjs.js" }
       ],
       'meta'     => [{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=windows-1252'}],
       'noscript' => sub { style(3, 'li.closed ol,li.closed ul,li.closed dl {display:block;}') },

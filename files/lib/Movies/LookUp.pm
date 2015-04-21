@@ -40,7 +40,6 @@ my %crossover_data = get_hash(
 my @crossover_headings = ('episode','season','movie','series');
 
 # for the movies index page
-my %years;
 my %genres;
 
 # for the select options for my Movies_series page

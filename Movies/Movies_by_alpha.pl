@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
@@ -14,7 +14,7 @@ use HTML::Elements qw(section paragraph list form fieldset selection input ancho
 use Util::Sort qw(article_sort);
 use Util::Convert qw(idify textify);
 use Util::GrammaticalJoin;
-use Movies::LookUp qw(movie_hash options display_movie start_year end_year);
+use Movies::LookUp qw(movie_hash option display_movie start_year end_year);
 
 sub display_option {
   my ($select, $option) = @_;
@@ -28,12 +28,12 @@ sub display_option {
   else {
     $option_display = $option;
   }
-  return [$option_display, { value => $option }];
+  return [$option_display, { 'value' => $option }];
 }
 
 my @selects = (qw(year media format genre), 'based on');
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $year   = $cgi->param('year')     ? encode_entities($cgi->param('year'),     '<>"') : '';
 my $media  = $cgi->param('media')    ? encode_entities($cgi->param('media'),    '<>"') : '';
 my $format = $cgi->param('format')   ? encode_entities($cgi->param('format'),   '<>"') : '';
@@ -42,10 +42,10 @@ my $basis  = $cgi->param('based on') ? encode_entities($cgi->param('based on'), 
 my $title  = $cgi->param('title')    ? encode_entities($cgi->param('title'),    '<>"') : '';
 
 my %options = (
-  'year'     => options('years'),
+  'year'     => option('years'),
   'media'    => [qw(film miniseries tv)],
   'format'   => [qw(vhs dvd bd dg)],
-  'genre'    => options('genres'),
+  'genre'    => option('genres'),
   'based on' => ['novel','short story',qw(play musical radio comics cartoon game toy)],
 );
 

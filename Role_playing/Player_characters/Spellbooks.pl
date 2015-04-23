@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
 use HTML::Entities qw(encode_entities);
@@ -18,7 +18,7 @@ use RolePlaying::Spellbook qw(print_spellbook);
 my $directory = 'Role_playing/Player_characters/spellbooks';
 my @selects = sort { name_sort(lc $a,lc $b) } map { textify($_) } get_directory(data_directory($directory));
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('spellbook'),'<>"');
 my $head = $select && grep(/\Q$select\E/, @selects) ? "$select\'s spellbook" : 'My characters\' spellbooks';
 page( 'heading' => $head, 'file menu' => file_menu('spellbook', \@selects , $select), 'code' => sub {

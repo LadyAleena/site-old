@@ -2,12 +2,11 @@ package Movies::LookUp;
 use strict;
 use warnings;
 use Exporter qw(import);
-our @EXPORT_OK = qw(movie series movie_hash series_hash franchise_hash genre_hash options display_movie
+our @EXPORT_OK = qw(movie series movie_hash series_hash franchise_hash genre_hash option display_movie
    start_year end_year years_running movie_links search_link crossovers);
 
 use Lingua::EN::Inflect qw(A PL_N NUM NUMWORDS inflect);
 use List::Util qw(min max first);
-use URI::Encode qw(uri_encode);
 use Encode qw(encode);
 
 use Base::Root qw(get_root);
@@ -51,8 +50,8 @@ for my $movie (values %movies_data) {
   my $title = $movie->{'title'};
 
   # populating the years option
-  my $start = start_year($movie->{'title'}) ne 'tbd' ? start_year($movie->{'title'}) : $first;
-  my $end   = end_year($movie->{'title'})   ne 'tbd' ? end_year($movie->{'title'})   : $last;
+  my $start = $movie->{'start year'} ne 'tbd' ? start_year($movie->{'title'}) : $first;
+  my $end   = $movie->{'end year'}   ne 'tbd' ? end_year($movie->{'title'})   : $last;
 
   if (!defined($first) || $first > $start) {
     $first = $start;
@@ -260,7 +259,7 @@ sub genre_hash {
 }
 
 # returns an option from the options hash.
-sub options {
+sub option {
   my $option = shift;
   warn "options: $option not available" if !$options{$option};
   return $options{$option};
@@ -330,17 +329,6 @@ sub mini_parts {
   my $parts   = $r_parts > 0 ? NUMWORDS($r_parts)."-part" : undef;
   
   return $parts;
-}
-
-# returns the primary format of which I own the movie for html classes.
-sub own {
-  my ($imovie,$season) = @_;
-  my $movie = movie($imovie,'own');
-
-  my $primary = $season ? $movie->{'seasons'}{$season}{'own'} : $movie->{'format'}{'primary'};
-  my $format = $primary ? $primary : 'none';
-  
-  return $format;
 }
 
 # returns a string of the genres in which a movie falls.
@@ -446,10 +434,10 @@ sub movie_links {
 # returns a string for a single crossover. The input is a hash ref.
 sub get_crossover {
   my ($crossover) = @_;
-  my $episode = $crossover->{episode};
-  my $season  = $crossover->{season};
-  my $program = $crossover->{movie};
-  my $series  = $crossover->{series};
+  my $episode = $crossover->{'episode'};
+  my $season  = $crossover->{'season'};
+  my $program = $crossover->{'movie'};
+  my $series  = $crossover->{'series'};
 
   my $crossover_text = undef;
   if ($episode || $season || $program || $series) {

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
@@ -14,11 +14,11 @@ use HTML::Elements qw(section heading paragraph list);
 use Util::Sort qw(article_sort);
 use Util::Columns qw(get_columns);
 use Movies::Display qw(print_series print_program);
-use Movies::LookUp qw(options);
+use Movies::LookUp qw(option);
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('series'),'<>"');
-my $series_select = options('series');
+my $series_select = option('series');
 my @selects = sort {article_sort(lc $a,lc $b)} keys %$series_select;
 my $file_menu = file_menu('series', \@selects, $select);
 my %alpha_list = alpha_array(\@selects);

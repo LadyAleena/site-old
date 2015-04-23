@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
@@ -12,7 +12,7 @@ use Base::Page qw(page);
 use HTML::Elements qw(section table);
 use HTML::Forms qw(tiny_select);
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $broad = $cgi->param('broad') ? encode_entities($cgi->param('broad'),'<>"') : '';
 my $tight = $cgi->param('tight') ? encode_entities($cgi->param('tight'),'<>"') : '';
 

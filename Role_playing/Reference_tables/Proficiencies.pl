@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
@@ -13,7 +13,7 @@ use HTML::Elements qw(section paragraph table anchor);
 use HTML::Forms qw(tiny_select);
 use Util::Convert qw(idify);
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $alpha   = $cgi->param('alpha') ? encode_entities($cgi->param('alpha'),'<>"') : '';
 my @classes = $cgi->param('class') ? $cgi->param('class') : ''; # can't encode entities or array won't work.
 my $slots   = $cgi->param('slots') ? encode_entities($cgi->param('slots'),'<>"') : '';

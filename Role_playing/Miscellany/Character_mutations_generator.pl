@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 use Lingua::EN::Inflect qw(ORD NUMWORDS);
@@ -12,7 +12,7 @@ use Base::Page qw(page);
 use HTML::Elements qw(section paragraph list form fieldset inputs);
 use RolePlaying::CharacterMutation qw(random_mutations);
 
-my $cgi        = CGI->new();
+my $cgi        = CGI::Minimal->new();
 my $iterations = $cgi->param('iterations') ? encode_entities($cgi->param('iterations'),'<>"') : 1;
 
 my $file = "Character_mutations_generator.pl";

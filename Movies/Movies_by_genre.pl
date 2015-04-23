@@ -2,7 +2,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 use URI::Encode qw(uri_encode);
@@ -43,7 +43,7 @@ sub make_link {
   return $item;
 }
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('genre'),'<>"');
 my $head = $select && $genres{$select} ? ucfirst "$select movies" : undef;
 my $file_menu = file_menu('genre', [sort keys %genres] , $select);

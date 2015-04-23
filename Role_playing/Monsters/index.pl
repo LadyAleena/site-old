@@ -3,7 +3,7 @@
 use strict;
 use warnings FATAL => qw( all );
 
-use CGI;
+use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
 use HTML::Entities qw(encode_entities);
@@ -38,7 +38,7 @@ sub monster {
   return \@monsters;
 }
 
-my $cgi = CGI->new;
+my $cgi = CGI::Minimal->new;
 my $select = $cgi->param('monster') ? encode_entities($cgi->param('monster'),'<>"') : undef;
 my $monsters = $select && $multi_monsters{$select} ? $multi_monsters{$select} : [$select];
 my $head = $select && grep(/\Q$select\E/, @selects) ? $select : undef;

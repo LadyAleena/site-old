@@ -15,7 +15,7 @@ use HTML::Elements qw(anchor);
 use Util::Convert qw(filify textify idify searchify);
 use Util::GrammaticalJoin;
 use Util::JoinDefined;
-use Util::ExternalLinks qw(external_links external_link);
+use Util::ExternalLinks qw(external_link);
 
 my %movies_data = get_hash(
   'file' => ['Movies','movies.txt'],
@@ -51,7 +51,7 @@ for my $movie (values %movies_data) {
 
   # populating the years option
   my $start = $movie->{'start year'} ne 'tbd' ? start_year($movie->{'title'}) : $first;
-  my $end   = $movie->{'end year'}   ne 'tbd' ? end_year($movie->{'title'})   : $last;
+  my $end   = ($movie->{'end year'} && $movie->{'end year'} ne 'tbd') ? end_year($movie->{'title'}) : $last;
 
   if (!defined($first) || $first > $start) {
     $first = $start;
@@ -103,11 +103,11 @@ for my $movie (values %movies_data) {
     $movie->{'genre'}{$genre} = \@themes;
     push @{$genres{$genre}{$_}}, $title for @themes; # populating %genres
   }
-  
+
   # adding to the counts in the movie and its series entries for miniseries
   $movie->{'counts'}{'episodes'} = $parts if $parts;
-  
-  # adding to the counts in the movie and its series entries for award shows
+
+  # adding to the counts in the movie for award shows
   if ($movie->{'genre'}{'award show'}) {
     my $episodes = ($current_year - $movie->{'start year'}) + 1;
     $movie->{'counts'}{'episodes'} += $episodes;
@@ -122,7 +122,7 @@ for my $movie (values %movies_data) {
       push @{$movie->{'crossovers'}}, \%crosses;
     }
   }
-  
+
   next if ($movie->{'media'} ne 'tv' || $movie->{'genre'}{'award show'});
   # adding TV episodes
   my $show_file = data_file('Movies/Episode_lists', encode('UTF-8',filify($title)).".txt");
@@ -147,7 +147,7 @@ for my $movie (values %movies_data) {
       my ($ep_title, $ep_crossover) = split(/\|/, $line);
       my %episode;
       $episode{'title'} = $ep_title;
-      
+
       if ($ep_crossover) {
         my @r_crosses = split(/;/,$ep_crossover);
         for my $cross (@r_crosses) {
@@ -156,12 +156,12 @@ for my $movie (values %movies_data) {
           push @{$episode{'crossovers'}}, \%crosses;
         }
       }
-      
+
       push @{$movie->{'seasons'}{$season}{'episodes'}}, \%episode;
     }
   }
 
-  # adding to the series select list
+  # adding to the series select list, it may be deleted later if it is in a series below.
   $series_select{$title} = 'single';
 }
 
@@ -176,7 +176,7 @@ for my $series (values %series_data) {
 
     push @start_years, start_year($program) if start_year($program) ne 'tbd';
     push @end_years, end_year($program) if end_year($program) ne 'tbd';
-    
+
     my $movie_media = media($program);
     $series->{'counts'}{$movie_media}++;
     my $movie_counts = $movies_data{$program}{'counts'};
@@ -189,7 +189,7 @@ for my $series (values %series_data) {
     # I put all TV series in %series_select. If they are in a larger series, I don't want them listed separately.
     delete $series_select{$program} if $series_select{$program} && $movies_data{$program}{'media'} =~ /tv/;
   }
-  
+
   $series->{'start year'} = min(@start_years);
   $series->{'end year'} = max(@end_years);
 
@@ -222,7 +222,7 @@ sub movie {
   if (!$movies_data{$movie}) {
     warn $caller ? "$caller: $movie not in database" : "$movie not in database";
   }
-  return $movies_data{$movie};
+  return $movies_data{$movie} ? $movies_data{$movie} : undef;
 }
 
 # returns the entire series hash.
@@ -265,7 +265,7 @@ sub option {
   return $options{$option};
 }
 
-# The following group of subroutines all lead to movie_is with the exceptions of end_year, years_running, and own.
+# The following group of subroutines all lead to display_movie with the exceptions of end_year and years_running.
 
 sub start_year {
   my ($imovie) = @_;
@@ -327,7 +327,7 @@ sub mini_parts {
 
   my $r_parts = $movie->{'media'} eq 'miniseries' ? $movie->{'counts'}{'episodes'} : 0;
   my $parts   = $r_parts > 0 ? NUMWORDS($r_parts)."-part" : undef;
-  
+
   return $parts;
 }
 
@@ -335,10 +335,10 @@ sub mini_parts {
 sub genre {
   my ($imovie) = @_;
   my $movie = movie($imovie,'genre');
-  
+
   my @genres = keys %{$movie->{'genre'}};
   my $genre = @genres ? grammatical_join('and',@genres) : undef;
-  
+
   return $genre;
 }
 
@@ -346,13 +346,13 @@ sub genre {
 sub about {
   my ($imovie) = @_;
   my $movie = movie($imovie,'about');
-  
+
   my @abouts;
   for my $genre (values %{$movie->{'genre'}}) {
     push @abouts, grep($_ ne 'main',@$genre);
   }
   my $about = @abouts ? 'about '.grammatical_join('and',@abouts) : undef;
-  
+
   return $about;
 }
 
@@ -381,9 +381,9 @@ sub search_link {
     $search = searchify($movie);
   }
 
-  my $text = '<i>'.$texti.'</i>';
+  my $text = "<i>$texti</i>";
   my $root_link = get_root('link');
-  my $search_text = $search ? anchor($text, { href => "$root_link/Movies/Movies_by_series.pl?series=$search" }) : $text;
+  my $search_text = $search ? anchor($text, { 'href' => "$root_link/Movies/Movies_by_series.pl?series=$search" }) : $text;
 
   return $search_text; 
 }
@@ -392,34 +392,12 @@ sub search_link {
 sub series_text {
   my ($imovie) = @_;
   my $movie = movie($imovie,'series_text');
-  
+
   my @series = $movie->{'series'} ? map(search_link($_), @{$movie->{'series'}}) : ();
   my $lists_text = grammatical_join('and',@series);
   my $series_text = $lists_text ? "part of the $lists_text series" : undef;
-  
+
   return $series_text;
-}
-
-# The preceding group of subroutines all lead to movie_is
-# with the exceptions of end_year, years_running, and own.
-# movie_is and movie_links are used in display_movie along with own.
-
-# returns a string with nearly all the properties of a movie.
-sub movie_is {
-  my ($movie,$show_series) = @_;
-
-  my $start  = start_year($movie);
-  my $parts  = mini_parts($movie);
-  my $media  = media($movie);
-  my $series = $show_series ? series_text($movie) : undef;
-  my $basis  = basis($movie);
-  my $run    = run_time($movie);
-  my $genre  = genre($movie);
-  my $about  = about($movie);
-
-  my $movie_is = A(join_defined(' ',[$start,$parts,$genre,$media,$about,$series,$basis,$run])).'.';
-
-  return $movie_is;
 }
 
 # returns a string listing all external links of a movie with links.
@@ -447,7 +425,7 @@ sub get_crossover {
     my $id = $series && $series_data{$series} ? [grep(defined,($program,$season_text))] : $program && $movies_data{$program} && $season_text ? [$season_text] : undef;
     $crossover_text = search_link($search,$id).qq($episode_text);
   }
-    
+
   return $crossover_text;
 }
 
@@ -459,22 +437,32 @@ sub crossovers {
   return $cross;
 }
 
-# returns a sentence or two for a movie including everything from movie_is, movie_links, crossovers, and own.
+# The preceding group of subroutines all lead to display_movie with the exceptions of end_year and years_running.
+
+# returns a sentence or two for a movie.
 # The first parameter is the movie name (the key in the hash), the second is a hash ref with the named parameters: series, links, and crossovers.
 sub display_movie {
   my ($imovie,$opt) = @_;
 
-  my $display  = textify($imovie);
-  my $id       = idify($imovie);
-  my $movie_is = movie_is($imovie,$opt->{'series'});
-  my $links    = $opt->{'links'} ? ' '.movie_links('movies',$imovie) : '' ;
-  
-  my $movie = movie($imovie);
-  
+  my $movie   = movie($imovie); # used to get a movie's crossovers.
+
+  my $text   = textify($imovie);
+  my $id     = idify($imovie);
+  my $start  = start_year($imovie);
+  my $parts  = mini_parts($imovie);
+  my $media  = media($imovie);
+  my $series = $opt->{'series'} ? series_text($imovie) : undef;
+  my $basis  = basis($imovie);
+  my $run    = run_time($imovie);
+  my $genre  = genre($imovie);
+  my $about  = about($imovie);
+
+  my $movie_is    = A(join_defined(' ',[$start,$parts,$genre,$media,$about,$series,$basis,$run])).'.';
   my $crossover   = $opt->{'crossover'} && $movie->{'crossovers'} ? 'It '.crossovers($movie->{'crossovers'}) : undef;
   my $movie_line  = join_defined(' ',[$movie_is,$crossover]);
+  my $links       = $opt->{'links'} ? ' '.movie_links('movies',$imovie) : '' ;
 
-  return qq(<span id="$id" class="title">$display</span> is $movie_line $links);
+  return qq(<span id="$id" class="title">$text</span> is $movie_line $links);
 }
 
 1;

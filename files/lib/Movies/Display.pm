@@ -90,7 +90,7 @@ sub print_series {
   if ( $heading == 1 ) {
     footer($tab, sub {
       paragraph($tab+1,like($series_text, 1, $local_series->{'just like'}), { 'class' => 'like' });
-      paragraph($tab+1,"The episode lists would have been a pain to put together without $epgd.") if $counts->{'tv'};
+      paragraph($tab+1,"The episode lists would have been a pain to put together without $epgd.") if $counts->{'television series'};
     });
   }
 }

@@ -12,7 +12,7 @@ use HTML::Elements qw(section heading paragraph table list);
 use Util::Convert qw(textify);
 
 my @monster_headings = ('Monster','Climate/Terrain','Frequency','Organization','Activity cycle','Diet','Intelligence','Treasure','Alignment','No. Appearing','Armor Class','Movement','Hit Dice','THAC0','No. of Attacks','Damage/Attack','Special Attacks','Special Defenses','Magic Resistance','Size','Morale','XP Value','Appearance','Combat','Habitat/Society','Ecology','Variants','Note');
-my %monsters = get_hash(
+my $monsters = get_hash(
   'file' => ['Role_playing','Monsters.txt'],
   'headings' => \@monster_headings,
 );
@@ -24,11 +24,11 @@ my %rainbow_dragonette_headings = (
 );
 
 for my $param ('odf','age') {
-  $rainbow_dragonette{$param} = { get_hash(
+  $rainbow_dragonette{$param} = get_hash(
     'file'     => ['Role_playing/Monsters',"Rainbow_dragonette_$param.txt"],
     'headings' => \@{$rainbow_dragonette_headings{$param}},
     'sorted'   => 'yes',
-  )};
+  );
 }
 
 sub dragonette_table {
@@ -55,7 +55,7 @@ sub print_monster {
     for my $monster (@monsters) {
       my @items;
       for my $key (grep($_ !~ join('|',@long_values),@monster_headings)) {
-        push @items, $monsters{$monster}{$key} ? [qq(<strong>$key:</strong> $monsters{$monster}{$key}), { class => 'monster_attribute' }] : '';
+        push @items, $monsters->{$monster}{$key} ? [qq(<strong>$key:</strong> $monsters->{$monster}{$key}), { class => 'monster_attribute' }] : '';
       }
       list(4,'u',\@items, { class => "monster $columns" });
     }
@@ -66,9 +66,9 @@ sub print_monster {
     section(3, sub {
       $heading_level++ if @monsters > 1;
       for my $long_key (@long_values) {
-        next if !$monsters{$monster}{$long_key};
+        next if !$monsters->{$monster}{$long_key};
         heading(5,$heading_level,$long_key);
-        for my $line (split(/\\/,$monsters{$monster}{$long_key})) {
+        for my $line (split(/\\/,$monsters->{$monster}{$long_key})) {
           if ($line =~  s/&//) {
             $sub_hash->{$line}->();
           }

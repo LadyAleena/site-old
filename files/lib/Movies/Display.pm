@@ -13,26 +13,8 @@ use HTML::Elements qw(footer section heading paragraph list anchor pre);
 use Util::Convert qw(idify textify filify);
 use Util::Columns;
 use Util::JoinDefined;
-use Movies::LookUp qw(series movie display_movie years_running movie_links crossovers);
+use Movies::LookUp qw(series movie display_movie display_season display_episode years_running movie_links nav_link);
 use People qw(get_people);
-
-sub get_season_title {
-  my ($season) = @_;
-  my @season_title = split(' ', $season);
-  my $season_text = ucfirst $season_title[0]." ".NUMWORDS($season_title[1]);
-  return $season_text;
-}
-
-sub return_link {
-  my $id = ucfirst idify(@_);
-  my $text = textify(pop @_);
-
-  if ($text =~ m/^season/) {
-    $text = get_season_title($text);
-  }
-
-  return anchor($text, { href => "#$id" });
-}
 
 sub like {
   my ($series, $agree, $just_like) = @_;
@@ -43,7 +25,7 @@ sub like {
   return $string;
 }
 
-my $epgd = anchor('epguides',  { href => 'http://epguides.com' });
+my $epgd = anchor('epguides',  { 'href' => 'http://epguides.com' });
 
 sub print_series {
   my ($tab,$user_heading,$user_title) = @_;
@@ -56,33 +38,33 @@ sub print_series {
   my $counts     = $local_series->{'counts'};
   my $programs   = $local_series->{'programs'};
   
-  my $total_films    = $counts->{'film'}              ? NO('film',$counts->{'film'})         : undef;
-  my $total_minis    = $counts->{'miniseries'}        ? "$counts->{'miniseries'} miniseries" : undef;
-  my $total_series   = $counts->{'television series'} ? "$counts->{'television series'} television series"  : undef;
-  my $total_seasons  = $counts->{'seasons'}           ? NO('season',$counts->{'seasons'})    : undef;
-  my $total_episodes = $counts->{'episodes'}          ? NO('episode',$counts->{'episodes'})  : undef;
+  my $total_films    = $counts->{'film'}       ? NO('film',$counts->{'film'})         : undef;
+  my $total_minis    = $counts->{'miniseries'} ? "$counts->{'miniseries'} miniseries" : undef;
+  my $total_series   = $counts->{'tv'}         ? "$counts->{'tv'} television series"  : undef;
+  my $total_seasons  = $counts->{'seasons'}    ? NO('season',$counts->{'seasons'})    : undef;
+  my $total_episodes = $counts->{'episodes'}   ? NO('episode',$counts->{'episodes'})  : undef;
   
   my $series_id   = idify($series);
   my $series_text = textify($series);
   my $counts_text = join_defined(', ',[$total_films, $total_minis, $total_series, $total_seasons, $total_episodes]);
-  my $movie_links = movie_links('series',$series);
+  my $movie_links = movie_links($local_series);
   my $actor_file  = 'Actors_in_'.filify($series).'.txt';
   my $people      = get_people($actor_file) ? [get_people($actor_file)] : undef;
   
   $tab++;
   section($tab, sub {
-    paragraph($tab, $movie_links, { style => 'float: right'}) if $movie_links;
+    paragraph($tab, $movie_links, { 'style' => 'float: right'}) if $movie_links;
     paragraph($tab, "$start_year - $end_year ($counts_text)");
-    if ($counts->{'television series'} > 0 || ($counts->{'film'} + $counts->{'miniseries'}) > 6) {
-      my @links = map(return_link($_), @$programs);
-      unshift @links, anchor('Actors', { href => "#actors_in_$series_id" }) if $people;
-      list($tab, 'u', \@links, { class => 'program_list two' });
+    if ($counts->{'tv'} > 0 || ($counts->{'film'} + $counts->{'miniseries'}) > 6) {
+      my @links = map(nav_link($_), @$programs);
+      unshift @links, anchor('Actors', { 'href' => "#actors_in_$series_id" }) if $people;
+      list($tab, 'u', \@links, { 'class' => 'program_list two' });
     }
   });
   section($tab, sub {
     my $columns = get_columns(3,scalar @$people);
-    heading($tab,$heading + 1,'Actors', { id => "actors_in_$series_id" });
-    list($tab+1, 'u', $people, { class => "actor_list $columns" });
+    heading($tab,$heading + 1,'Actors', { 'id' => "actors_in_$series_id" });
+    list($tab+1, 'u', $people, { 'class' => "actor_list $columns" });
   }) if $people;
   for my $program (@$programs) {
     print_program($tab,$heading + 1,$program,$series);
@@ -113,28 +95,28 @@ sub print_program {
     $counts_text = ' ('.join_defined(', ',[$total_seasons, $total_episodes]).')';
   }
 
-  my $movie_is    = display_movie($program, { 'series' => 0, 'crossover' => 1 });
-  my $movie_links = movie_links('movies',$program);
+  my $movie_is    = display_movie($movie, { 'series' => 0, 'crossover' => 1 });
+  my $movie_links = movie_links($movie);
   my $actor_file  = 'Actors_in_'.filify($program).'.txt';
   my $people      = get_people($actor_file) ? [get_people($actor_file)] : undef;
   
   section($tab, sub {
-    heading($tab,2,$display, { id => $id, class => 'program' }) if $heading != 1;
+    heading($tab,2,$display, { 'id' => $id, 'class' => 'program' }) if $heading != 1;
     $tab++;
-    paragraph($tab,$movie_links, { style => 'float: right' }) if $movie_links;
-    paragraph($tab,years_running($program).$counts_text) if $movie->{'media'} eq 'tv';
+    paragraph($tab,$movie_links, { 'style' => 'float: right' }) if $movie_links;
+    paragraph($tab,years_running($movie).$counts_text) if $movie->{'media'} eq 'tv';
     paragraph($tab,$movie_is);
 
     if ($seasons) {
       if (scalar keys %{$seasons} > 1) {
-        my @links = map(return_link($series ? $program : undef, $_), sort keys %{$seasons});
-        unshift @links, anchor('Actors', { href => "#actors_in_$id" }) if ($people && !$series);
-        list($tab, 'u', \@links, { class => 'season_list five' });
+        my @links = map(nav_link($series ? $program : undef, $_), sort keys %{$seasons});
+        unshift @links, anchor('Actors', { 'href' => "#actors_in_$id" }) if ($people && !$series);
+        list($tab, 'u', \@links, { 'class' => 'season_list five' });
       }
       if ($people && !$series) {
         my $columns = get_columns(3,scalar @$people);
-        heading($tab,$heading + 1,'Actors', { id => "actors_in_$id" });
-        list($tab+1, 'u', $people, { class => "actor_list $columns" });
+        heading($tab,$heading + 1,'Actors', { 'id' => "actors_in_$id" });
+        list($tab + 1, 'u', $people, { 'class' => "actor_list $columns" });
       }
       my $next_heading = scalar keys %{$seasons} > 1 ? $heading + 1 : undef;
       for my $season (sort keys %{$seasons}) {
@@ -143,8 +125,8 @@ sub print_program {
     }
     if ( $heading == 1 ) {
       footer($tab, sub {
-        paragraph($tab+1, like($display), { 'class' => 'like' });
-        paragraph($tab+1, "The episode lists would have been a pain to put together without $epgd.")
+        paragraph($tab + 1, like($display), { 'class' => 'like' });
+        paragraph($tab + 1, "The episode lists would have been a pain to put together without $epgd.")
       });
     }
   });
@@ -157,54 +139,19 @@ sub print_season {
 
   if ($heading) {
     my $season_id = $series ? idify($program,$season) : idify($season);
-    my $season_text = get_season_title($season);
+    my $season_text = display_season($season);
     my $episodes_in_season_text = NO("episode",$local_season->{'counts'}{'episodes'});
 
-    heading($tab,$heading,$season_text, { id => $season_id, class => 'season' });
+    heading($tab,$heading,$season_text, { 'id' => $season_id, 'class' => 'season' });
     paragraph($tab+1,"($episodes_in_season_text)");
   }
   
   my @episodes;
   for my $episode (@{$local_season->{'episodes'}}) {
-    push @episodes, get_episode($episode->{'title'}, $episode->{'crossovers'});
+    push @episodes, display_episode($episode);
   }
   
-  list($tab + 1, 'o', \@episodes, { class => 'episode_list two' });
-}
-
-sub unquote_parts {
-  my ($string) = @_;
-  if ($string =~ m/, Part \w+$/) {
-    $string =~ s/(.+?),\s(Part \w+)/"$1", $2/;
-    return $string;
-  }
-  else {
-    return qq("$string");
-  }
-}
-
-sub get_episode {
-  my ($episode,$crossover) = @_;
-
-  my $episode_name = textify($episode);
-  my $crossover_text = $crossover ? crossovers($crossover) : '';
-
-  my $episode_text;
-  if ($episode =~ m/^((|Unaired )Pilot|Un(nam|titl)ed)(|, Part \d+)$/ || $episode =~ m/^(Episode|Part) \d+/) {
-    $episode_text = $episode_name;
-  }
-  elsif ($episode_name =~ m/, Part \w+$/) {
-    $episode_text = unquote_parts($episode_name);
-  }
-  elsif ($episode_name =~ m/\saka\s/) {
-    my @episode_names = map(unquote_parts($_),split(/ aka /,$episode_name));
-    $episode_text = join(" <small>a.k.a.</small> ",@episode_names);
-  }
-  else {
-    $episode_text = qq("$episode_name");
-  }
-
-  return "$episode_text $crossover_text";
+  list($tab + 1, 'o', \@episodes, { 'class' => 'episode_list two' });
 }
 
 1;

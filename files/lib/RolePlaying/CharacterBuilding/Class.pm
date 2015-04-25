@@ -36,7 +36,7 @@ sub convert_class {
   return $class;
 }
 
-my %xpchart = get_hash(
+my $xpchart = get_hash(
   'file' => ['Role_playing/Classes','Levels.txt'],
   'headings' => [qw(level fighter warrior rogue priest druid),'specialty priest','wizard','psionisist','chaos warden','theopsyelementalist']
 );
@@ -51,7 +51,7 @@ sub get_level {
   if ($level == 100) {
     return 100;
   }
-  elsif ($xp >= $xpchart{$level}{$class} && $xp < $xpchart{$next_level}{$class}) {
+  elsif ($xp >= $xpchart->{$level}{$class} && $xp < $xpchart->{$next_level}{$class}) {
     return $level;
   }
   else {

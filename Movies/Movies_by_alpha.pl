@@ -14,24 +14,7 @@ use HTML::Elements qw(section paragraph list form fieldset selection input ancho
 use Util::Sort qw(article_sort);
 use Util::Convert qw(idify textify);
 use Util::GrammaticalJoin;
-use Movies::LookUp qw(movie_hash option display_movie start_year end_year);
-
-sub display_option {
-  my ($select, $option) = @_;
-  my $option_display;
-  if ($select eq 'media') {
-    $option_display = $option eq 'tv' ? uc($option) : ucfirst($option);
-  }
-  elsif ($select eq 'format') {
-    $option_display = uc($option);
-  }
-  else {
-    $option_display = $option;
-  }
-  return [$option_display, { 'value' => $option }];
-}
-
-my @selects = (qw(year media format genre), 'based on');
+use Movies::LookUp qw(movie option display_movie display_option start_year end_year);
 
 my $cgi = CGI::Minimal->new;
 my $year   = $cgi->param('year')     ? encode_entities($cgi->param('year'),     '<>"') : '';
@@ -41,15 +24,11 @@ my $genre  = $cgi->param('genre')    ? encode_entities($cgi->param('genre'),    
 my $basis  = $cgi->param('based on') ? encode_entities($cgi->param('based on'), '<>"') : '';
 my $title  = $cgi->param('title')    ? encode_entities($cgi->param('title'),    '<>"') : '';
 
-my %options = (
-  'year'     => option('years'),
-  'media'    => [qw(film miniseries tv)],
-  'format'   => [qw(vhs dvd bd dg)],
-  'genre'    => option('genres'),
-  'based on' => ['novel','short story',qw(play musical radio comics cartoon game toy)],
-);
+my @selects = (qw(year media format genre), 'based on');
+my %select_options;
+$select_options{$_} = option($_) for @selects;
 
-my %movies_data = movie_hash;
+my $movies_data = movie('data');
 my $search;
 my @movies;
 if ( $year || $media || $genre || $format || $basis || $title ) {
@@ -64,7 +43,7 @@ if ( $year || $media || $genre || $format || $basis || $title ) {
   my $selection = @selections ? grammatical_join('and',map("<b>$_</b>",@selections)) : '';
   my $selection_text = $selection;
   
-  for my $movie (values %movies_data) {
+  for my $movie (values %$movies_data) {
     my $item = $movie->{'title'};
   
     if ($year) {
@@ -93,13 +72,13 @@ if ( $year || $media || $genre || $format || $basis || $title ) {
   $search = @movies > 0 ? "You searched for $selection_text in my collection." : "No matches found for $selection_text.";
 }
 else {
-  @movies = keys %movies_data;
+  @movies = keys %$movies_data;
 }
 
 my %alpha_movies = alpha_array(\@movies);
 
 for my $movies (keys %alpha_movies) {
-  my @movies = map(display_movie($_, { 'series' => 1, 'links' => 1 }), sort { article_sort(lc $a,lc $b) } @{$alpha_movies{$movies}});
+  my @movies = map(display_movie($movies_data->{$_}, { 'series' => 1, 'links' => 1 }), sort { article_sort(lc $a,lc $b) } @{$alpha_movies{$movies}});
   @{$alpha_movies{$movies}} = @movies;
 }
 
@@ -108,7 +87,7 @@ page( 'code' => sub {
     fieldset(4, sub {
       input(5, { 'type' => 'text', 'name' => 'title',  'placeholder' => 'title', 'style' => 'width:14em' });
       for my $select (@selects) {
-        my @options = ([ucfirst($select), { 'value' => '' }], map(display_option($select, $_), @{$options{$select}}));
+        my @options = ([ucfirst($select), { 'value' => '' }], map(display_option($select, $_), @{$select_options{$select}}));
         selection(5, \@options, { 'name' => $select, 'style' => 'width:6.5em' });
       }
       input(5, { 'type' => 'submit', 'value' => 'List movies' });

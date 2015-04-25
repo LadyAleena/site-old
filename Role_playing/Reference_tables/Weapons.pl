@@ -18,13 +18,13 @@ my $tight = $cgi->param('tight') ? encode_entities($cgi->param('tight'),'<>"') :
 
 my @headings = ('Weapon','#AT','Dmg(S/M)','Dmg(L)','Range','Weight','Size','Type','Speed','KO');
 
-my %weapons_list = get_hash( 
+my $weapons_list = get_hash( 
   'file' => ['Role_playing/Reference_tables','Weapons.txt'],
   'headings' => [@headings,'broad group','tight group','value']
 );
 
 my @rows;
-for my $weapon (sort { $a->{'Weapon'} cmp $b->{'Weapon'} } values %weapons_list) {
+for my $weapon (sort { $a->{'Weapon'} cmp $b->{'Weapon'} } values %$weapons_list) {
   next if $broad && (!$weapon->{'broad group'} || $weapon->{'broad group'} ne $broad);
   next if $tight && (!$weapon->{'tight group'} || $weapon->{'tight group'} ne $tight);
   push @rows, [map($weapon->{$_} ? $weapon->{$_} : '',@headings)];

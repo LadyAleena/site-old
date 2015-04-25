@@ -21,24 +21,24 @@ my $ability = $cgi->param('rel_ability') ? encode_entities($cgi->param('rel_abil
 
 my @headings = ('Proficiency', 'Slots', 'RA', 'CM', 'Class(es)', 'Source(s)');
 
-my %proficiencies = get_hash(
+my $proficiencies = get_hash(
   'file' => ['Role_playing/Reference_tables','Proficiencies.txt'],
   'headings' => \@headings
 );
 
-my %books = get_hash( 
+my $books = get_hash( 
   'file' => ['Role_playing/Reference_tables','References.txt'],
 );
 
 sub markupbooks { 
   my ($abbr) = @_;
-  my $title = $books{$abbr};
+  my $title = $books->{$abbr};
   return qq{<abbr title="$title">$abbr</abbr>};
 }
 
 my @rows;
 my $class = join('|',@classes);
-for my $proficiency (sort { $a->{'Proficiency'} cmp $b->{'Proficiency'} } values %proficiencies) {
+for my $proficiency (sort { $a->{'Proficiency'} cmp $b->{'Proficiency'} } values %$proficiencies) {
   next if $alpha   && $proficiency->{'Proficiency'} !~ /^$alpha/;
   next if $class   && $proficiency->{'Class(es)'}   !~ /(?:$class|all)/;
   next if $ability && ($proficiency->{'RA'} && $proficiency->{'RA'} ne $ability);

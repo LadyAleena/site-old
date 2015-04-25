@@ -9,13 +9,13 @@ use Base::Data qw(get_hash);
 use HTML::Elements qw(anchor);
 use Util::Convert qw(textify);
 
-my %external_links = get_hash( 'file' => ['Util','external_links.txt'], 'headings' => ['site','base link','after link'] );
+my $external_links = get_hash( 'file' => ['Util','external_links.txt'], 'headings' => ['site','base link','after link'] );
 
 sub external_link {
   my ($site, $page_link, $link_title) = @_;
   
-  my $base_link  = $external_links{$site}{'base link'};
-  my $after_link = $external_links{$site}{'after link'} ? $external_links{$site}{'after link'} : '';
+  my $base_link  = $external_links->{$site}{'base link'};
+  my $after_link = $external_links->{$site}{'after link'} ? $external_links->{$site}{'after link'} : '';
   my $link = $base_link.$page_link.$after_link;
   my $title = $link_title ? $link_title : undef;
   

@@ -36,10 +36,10 @@ sub tiny_select {
   my ($tab,$opt) = @_;
   my $location = $opt->{'location'};
 
-  my %selections = get_hash( 'file' => $opt->{'file'}, 'headings' => [qw(value multiple_choice options+)] );
+  my $selections = get_hash( 'file' => $opt->{'file'}, 'headings' => [qw(value multiple_choice options+)] );
 
   my @selections;
-  for my $selection (sort { $a->{'value'} cmp $b->{'value'} } values %selections) {
+  for my $selection (sort { $a->{'value'} cmp $b->{'value'} } values %$selections) {
     my $select_name = $selection->{'value'};
 
     my @options = $select_name =~ /^alpha/i ? ("A".."Z") : @{$selection->{'options'}};

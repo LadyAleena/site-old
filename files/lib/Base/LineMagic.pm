@@ -13,10 +13,10 @@ use Util::Convert qw(idify);
 our $line_magic;
 
 # used in 9 places
-my %inline_links = get_hash( 'file' => ['Base','inline_links.txt'] );
+my $inline_links = get_hash( 'file' => ['Base','inline_links.txt'] );
 
-for my $link (keys %inline_links) {
-  my $anchor = $inline_links{$link};
+for my $link (keys %$inline_links) {
+  my $anchor = $inline_links->{$link};
   $line_magic->{$link} = qq(A<$link|href="$anchor">);
 }
 

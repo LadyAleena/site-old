@@ -9,10 +9,10 @@ use Base::Data qw(get_hash);
 use Base::Page qw(page story);
 use HTML::Elements qw(anchor list);
 
-my %BBSs = get_hash( 'file' => ['Miscellany', 'BBSs.txt'], 'headings' => [qw(name domain ip site)] );
+my $BBSs = get_hash( 'file' => ['Miscellany', 'BBSs.txt'], 'headings' => [qw(name domain ip site)] );
 
 my @items;
-for my $BBS (sort { $a->{name} cmp $b->{name} } values %BBSs) {
+for my $BBS (sort { $a->{name} cmp $b->{name} } values %$BBSs) {
   my $name = $BBS->{name};
   my $link = $BBS->{site};
   my $BBS_head = $link ? anchor($name, { href => "http://$link" }) : $name;

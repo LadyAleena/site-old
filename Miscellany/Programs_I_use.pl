@@ -10,8 +10,8 @@ use Base::Page qw(page story);
 use HTML::Elements qw(list anchor);
 use Util::Sort qw(article_sort);
 
-my %program_sites = get_hash( 'file' => ['Miscellany','Program_sites.txt'], 'headings' => [qw(name link using programs+)] );
-my %program_links = get_hash( 'file' => ['Miscellany','Program_links.txt'], 'headings' => [qw(name link using)] );
+my $program_sites = get_hash( 'file' => ['Miscellany','Program_sites.txt'], 'headings' => [qw(name link using programs+)] );
+my $program_links = get_hash( 'file' => ['Miscellany','Program_links.txt'], 'headings' => [qw(name link using)] );
 
 # I haven't added Mircosoft just yet, because it is an exception to the structure below. I am not sure what I will do with it.
 
@@ -25,7 +25,7 @@ sub program_link {
 }
 
 my @items;
-for my $site (sort {article_sort(lc $a->{'name'},lc $b->{'name'})} values %program_sites) {
+for my $site (sort {article_sort(lc $a->{'name'},lc $b->{'name'})} values %$program_sites) {
   my $site_name = $site->{'name'};
   my ($site_link,$download_link) = split(/;/,$site->{'link'});
   my $site_link_text = program_link($site->{'using'},$site_link,$site_name);
@@ -39,7 +39,7 @@ for my $site (sort {article_sort(lc $a->{'name'},lc $b->{'name'})} values %progr
     my @initems;
     my @programs = @{$site->{'programs'}};
     for my $program (sort {article_sort(lc $a,lc $b)} @programs) {
-      my $info = $program_links{$program};
+      my $info = $program_links->{$program};
       my $link = program_link($info->{'using'}, $info->{'link'}, $program);
       push @initems, $link;
     }

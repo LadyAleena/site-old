@@ -10,7 +10,7 @@ use lib '../files/lib';
 use Base::Data qw(alpha_array);
 use Base::Page qw(page);
 use Base::Menu qw(file_menu alpha_menu);
-use HTML::Elements qw(section heading paragraph list);
+use HTML::Elements qw(section list);
 use Util::Sort qw(article_sort);
 use Util::Columns qw(get_columns);
 use Movies::Display qw(print_series print_program);
@@ -34,12 +34,11 @@ page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
     }
   }
   else {
-    section(3, sub {
-      for my $alpha (sort keys %alpha_list) {
-        heading(5, 3, $alpha, { 'id' => $alpha });
-        list(6, 'u', file_menu('series', $alpha_list{$alpha}), { 'class' => get_columns(3, scalar @{$alpha_list{$alpha}}), 'style' => 'font-size:smaller' });
-        alpha_menu( 6, \%alpha_list);
-      }
-    }, { 'heading' => [2, 'Pick a series'] });
+    for my $alpha (sort keys %alpha_list) {
+      section(3, sub {
+          list(6, 'u', file_menu('series', $alpha_list{$alpha}), { 'class' => get_columns(3, scalar @{$alpha_list{$alpha}}), 'style' => 'font-size:smaller' });
+          alpha_menu( 6, \%alpha_list);
+      }, { 'heading' => [2, $alpha, { 'id' => $alpha }] });
+    }
   }
 });

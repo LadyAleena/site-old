@@ -13,12 +13,12 @@ sub get_psionics {
   my ($class, $opt) = @_;
   my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
   
-  my %psionics = get_hash( 
+  my $psionics = get_hash( 
     'file' => ['Role_playing/Classes/Psionics','progression.txt'],
     'headings' => ['level','disciplines','sciences','devotions','defense modes'],
   );
 
-  return $psionics{$level} ? $psionics{$level} : undef;
+  return $psionics->{$level} ? $psionics->{$level} : undef;
 }
 
 sub psionics_table_rows {

@@ -11,7 +11,7 @@ use HTML::Elements qw(table definition_list);
 
 # I want to add character entity pieces.
 
-my @definition_list = get_array( 'headings' => ['term','definition'] );
+my $definition_list = get_array( 'headings' => ['term','definition'] );
 
 my %chess_rows;
 $chess_rows{$_} = [qw(rook knight marshal bishop cardinal queen king cardinal bishop marshal knight rook)] for (1,12);
@@ -30,7 +30,7 @@ for my $chess_row (1..12) {
 }
 
 my $doc_magic = {
-  'pieces' => sub { definition_list(5, \@definition_list) },
+  'pieces' => sub { definition_list(5, $definition_list) },
   'board'  => sub { table(4, { 'class' => 'royal_chess', 'rows' => [['data',\@rows]] }) },
 };
 

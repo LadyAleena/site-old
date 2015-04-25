@@ -14,9 +14,9 @@ use Util::Columns;
 sub print_spellbook {
   my ($directory, $file) = @_;
   
-  my %spells = get_hash( 'file' => [$directory, $file], 'headings' => ['+'] );
+  my $spells = get_hash( 'file' => [$directory, $file], 'headings' => ['+'] );
 
-  for my $level (sort keys %spells) {
+  for my $level (sort keys %$spells) {
     next if $level eq 'Note';
     my @spells = @{$spells{$level}};
     my $columns = get_columns(3,scalar @spells);
@@ -25,7 +25,7 @@ sub print_spellbook {
       list(5, 'u', [@spells], { class => $columns });
     }, { 'heading' => [2, ORD($level).' level'] });
   }
-  if ($spells{'Note'}) {
+  if ($spells->{'Note'}) {
     section(3, sub {
       paragraph(5, $spells{'Note'}[0]);
     }, { 'heading' => [2, 'Note about this spellbook'] });

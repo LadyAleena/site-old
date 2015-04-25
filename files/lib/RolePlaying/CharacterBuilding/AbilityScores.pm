@@ -22,10 +22,10 @@ my %game_effects = (
 
 my %abilities;
 for my $ability (@abilities) {
-  $abilities{$ability} = { get_hash( 
+  $abilities{$ability} = get_hash( 
     'file' => ['Role_playing/Abilities',"$ability.txt"],
     'headings' => ['score',@{$game_effects{$ability}}]
-  )};
+  );
 }
 
 # Anno gave the this to me. Thank you Anno!

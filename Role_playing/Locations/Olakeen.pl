@@ -13,9 +13,9 @@ my $directory = 'Role_playing/Locations/Olakeen';
 my $headings  = ['term','definition'];
 
 my %definition_lists = (
-  'Holidays' => [ get_array( 'file' => [$directory,'Holidays.txt'], 'headings' => [qw(term date description)]) ],
+  'Holidays' => get_array( 'file' => [$directory,'Holidays.txt'], 'headings' => [qw(term date description)]),
 );
-$definition_lists{$_} = [ get_array( 'file' => [$directory,"$_.txt"], 'headings' => $headings) ] for qw(Assembly Inns Crime Arena);
+$definition_lists{$_} = get_array( 'file' => [$directory,"$_.txt"], 'headings' => $headings) for qw(Assembly Inns Crime Arena);
 
 my $doc_magic = {
   'Assembly' => sub {

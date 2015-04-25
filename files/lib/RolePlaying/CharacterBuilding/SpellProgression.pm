@@ -32,19 +32,19 @@ sub get_spells {
     my $file = data_file('Role_playing/Classes/Spell_progression',"$class.txt");
 
     if (-f $file) {
-      my %spell_progression_table = get_hash(
+      my $spell_progression_table = get_hash(
         'file' => $file,
         'headings' => ['level',1..9],
       );
 
-      my $max_available_level = max(keys %spell_progression_table);
+      my $max_available_level = max(keys %$spell_progression_table);
       
       if ($level > $max_available_level) {
         $level = $max_available_level;
-        $spell_progression_table{$level}{'note'} = "I only have spell progression up to level $level.";
+        $spell_progression_table->{$level}{'note'} = "I only have spell progression up to level $level.";
       }
       
-      $spell_progression = $spell_progression_table{$level};
+      $spell_progression = $spell_progression_table->{$level};
     }
   }
  

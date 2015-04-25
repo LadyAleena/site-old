@@ -60,10 +60,10 @@ sub get_styles {
 }
 
 sub get_contacts {
-  my @contacts = get_array( 'file' => ['Base','other_sites.txt'], 'headings' => ['site','link'] );
+  my $contacts = get_array( 'file' => ['Base','other_sites.txt'], 'headings' => ['site','link'] );
 
   my @links = ( anchor('Email', { 'href' => 'mailto:fantasy@xecu.net' }) );
-  for my $link (sort { lc $a->{'site'} cmp lc $b->{'site'} } @contacts) {
+  for my $link (sort { lc $a->{'site'} cmp lc $b->{'site'} } @$contacts) {
     my $text = $link->{'site'};
     my $address = $link->{'link'};
     my $title = "Lady Aleena on $text";
@@ -304,7 +304,7 @@ sub story {
     }
     
     my $toc_start = $opt->{'toc at'} ? $opt->{'toc at'} : 3;
-    if ($inc == 0 && $cols >= $toc_start) {
+    if ($inc == 0 && $cols >= $toc_start && !$opt->{'no toc'}) {
       nav($tab, sub {
         my $class = get_columns(4, $cols);
         list($tab + 2, 'u', \@toc, { 'class' => $class });

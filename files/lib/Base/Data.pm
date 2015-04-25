@@ -2,7 +2,7 @@ package Base::Data;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(data_directory data_file get_directory get_hash get_array alpha_array alpha_hash make_hash_from_arrays);
+our @EXPORT_OK = qw(data_directory data_file get_directory get_hash get_array alpha_array alpha_hash get_data make_hash_from_arrays);
 
 use File::Basename;
 use File::Spec;
@@ -76,6 +76,7 @@ sub get_hash {
 
     my $n = 0;
     for my $r_heading (@headings) {
+      goto INC if !$values[$n];
       my $split = $r_heading =~ /\+$/ ? 1 : 0;
       (my $heading = $r_heading) =~ s/\+$//;
       my $value = defined($values[$n]) ? $split == 1 ? [map { $_ =~ s/^ //; $_ } split(/;/,$values[$n])] : $values[$n] : undef;
@@ -85,7 +86,7 @@ sub get_hash {
       else {
         $hash{$key} = $value;
       }
-      ++$n;
+      INC: ++$n;
     }
   }
 
@@ -147,6 +148,26 @@ sub alpha_hash {
     $alpha_hash{$alpha}{$org_value} = $org_list->{$org_value};
   }
   return %alpha_hash;
+}
+
+sub get_data {
+  my ($list, $in, $caller) = @_;
+  if ($in !~ /^(?:data|list)$/ && !$$list{$in}) {
+    warn $caller ? "$caller: $in not in database" : "$in not in database";
+  }
+
+  my $out;
+  if ($in eq 'data') {
+    $out = $list;
+  }
+  elsif ($in eq 'list') {
+    $out = [keys %{$list}];
+  }
+  else {
+    $out = $$list{$in};
+  }
+  
+  return $out;
 }
 
 sub make_hash_from_arrays {

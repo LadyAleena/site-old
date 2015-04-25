@@ -90,7 +90,7 @@ sub get_hash {
     }
   }
 
-  return %hash;
+  return \%hash;
 }
 
 sub get_array {
@@ -111,7 +111,7 @@ sub get_array {
     push @array, \%hash;
   }
 
-  return @array;
+  return \@array;
 }
 
 sub first_alpha {

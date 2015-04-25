@@ -28,7 +28,7 @@ sub display_weapon {
   return lc $full_weapon;
 }
 
-my %weapons = get_hash(
+my $weapons = get_hash(
   file => ['Role_playing/Reference_tables','Weapons.txt'],
   headings => ['Weapon','#AT','Dmg(S/M)','Dmg(L)','Range','Weight','Size','Type','Speed','KO','broad group','tight group'],
 );
@@ -44,7 +44,7 @@ my %weapon_groups = (
                    ],
   'material'    => [map("$_ weapons", qw(bone metal stone wooden))],
   'damage type' => [map("$_ weapons", qw(bludgeoning piercing slashing missile))],
-  'weapons'     => [map(display_weapon($_),keys %weapons)],
+  'weapons'     => [map(display_weapon($_),keys %$weapons)],
 );
 
 sub random_weapons {

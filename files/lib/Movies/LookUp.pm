@@ -18,41 +18,41 @@ use Util::GrammaticalJoin;
 use Util::JoinDefined;
 use Util::ExternalLinks qw(external_links);
 
-my %movies = get_hash(
+my $movies = get_hash(
   'file' => ['Movies','movies.txt'],
   'headings' => ['title','start year','end year',qw(media format+ Wikipedia allmovie IMDb TV.com Flixster genre+),'based on','company'],
 );
 
-my %series = get_hash(
+my $series = get_hash(
   'file' => ['Movies','series.txt'],
   'headings' => [qw(title Wikipedia allmovie programs+), 'just like'],
 );
 
-my %franchises = get_hash(
+my $franchises = get_hash(
   'file' => ['Movies','franchises.txt'],
   'headings' => [qw(title Wikipedia allmovie programs+)],
 );
 
-my %crossovers = get_hash(
+my $crossovers = get_hash(
   'file' => ['Movies','crossovers.txt'],
   'headings' => ['title','crossovers+'],
 );
 my @crossover_headings = ('episode','season','movie','series');
 
 # for the movies index page
-my %genres;
+my $genres;
 
 # for the select options for my Movies_series page
-my %series_select;
+my $series_select;
 
 my $current_year = (localtime())[5] + 1900;
 my ($first,$last);
-for my $movie (values %movies) {
+for my $movie (values %$movies) {
   my $title = $movie->{'title'};
 
   # populating the years option
-  my $start = ($movie->{'start year'} && $movie->{'start year'} ne 'tbd') ? $movie->{'start year'} : $current_year + 1;
-  my $end   = ($movie->{'end year'}   && $movie->{'end year'}   ne 'tbd') ? $movie->{'end year'}   : $start;
+  my $start = start_year($movie);
+  my $end   = end_year($movie);
 
   if (!defined($first) || $first > $start) {
     $first = $start;
@@ -102,7 +102,7 @@ for my $movie (values %movies) {
     my ($genre,$theme) = split(/:/,$r_genre);
     my @themes = $theme ? split(/,/,$theme) : ('main');
     $movie->{'genre'}{$genre} = \@themes;
-    push @{$genres{$genre}{$_}}, $title for @themes; # populating %genres
+    push @{$genres->{$genre}{$_}}, $title for @themes; # populating $genres
   }
 
   # adding to the counts in the movie and its series entries for miniseries
@@ -115,8 +115,8 @@ for my $movie (values %movies) {
   }
 
   # adding crossovers from %crossovers
-  if ($crossovers{$title}) {
-    my @r_crossovers = @{$crossovers{$title}{'crossovers'}};
+  if ($crossovers->{$title}) {
+    my @r_crossovers = @{$crossovers->{$title}{'crossovers'}};
     for my $r_crossover (@r_crossovers) {
       my %crosses;
       @crosses{@crossover_headings} = split(/\//,$r_crossover);
@@ -163,17 +163,17 @@ for my $movie (values %movies) {
   }
 
   # adding to the series select list, it may be deleted later if it is in a series below.
-  $series_select{$title} = 'single';
+  $series_select->{$title} = 'single';
 }
 
-for my $series (values %series) {
+for my $series (values %$series) {
   my $title = $series->{'title'};
 
   my @start_years;
   my @end_years;
 
   for my $program (@{$series->{'programs'}}) {
-    push @{$movies{$program}{'series'}}, $title;
+    push @{$movies->{$program}{'series'}}, $title;
 
     my $movie = movie($program);
     push @start_years, start_year($movie);
@@ -188,8 +188,8 @@ for my $series (values %series) {
       }
     }
 
-    # I put all TV series in %series_select. If they are in a larger series, I don't want them listed separately.
-    delete $series_select{$program} if $series_select{$program} && $movies{$program}{'media'} =~ /tv/;
+    # I put all TV series in $series_select. If they are in a larger series, I don't want them listed separately.
+    delete $series_select->{$program} if $series_select->{$program} && $movies->{$program}{'media'} =~ /tv/;
   }
 
   $series->{'start year'} = min(@start_years);
@@ -204,46 +204,46 @@ for my $series (values %series) {
   }
   $series->{'external links'} = @links ? external_links(\@links) : undef;
 
-  $series_select{$title} = 'series';
+  $series_select->{$title} = 'series';
 }
 
-my %options = (
+my $options = {
   'year'   => [$first..$last],
   'media'  => [qw(film miniseries tv)],
   'format' => [qw(vhs dvd bd dg)],
-  'genre'  => [sort keys %genres],
+  'genre'  => [sort keys %$genres],
   'based on' => ['novel','short story',qw(play musical radio comics cartoon game toy)],
-  'series' => \%series_select,
-);
+  'series' => $series_select,
+};
 
 # returns a single movie, the movies 'list', or all movies 'data'
 sub movie {
   my ($in, $caller) = @_;
-  get_data(\%movies, $in, $caller);
+  get_data($movies, $in, $caller);
 }
 
 # returns a series movie, the series 'list', or all series 'data'
 sub series {
   my ($in, $caller) = @_;
-  get_data(\%series, $in, $caller);
+  get_data($series, $in, $caller);
 }
 
 # returns a single franchise, the franchises 'list', or all franchises 'data'
 sub franchise {
   my ($in, $caller) = @_;
-  get_data(\%franchises, $in, $caller);
+  get_data($franchises, $in, $caller);
 }
 
 # returns a single genre, the genres 'list', or all genres 'data'
 sub genre {
   my ($in, $caller) = @_;
-  get_data(\%genres, $in, $caller);
+  get_data($genres, $in, $caller);
 }
 
 # returns a single option, the options 'list', or all options 'data'
 sub option {
   my ($in, $caller) = @_;
-  get_data(\%options, $in, $caller);
+  get_data($options, $in, $caller);
 }
 
 # The following group of subroutines all lead to display_movie with the exceptions of end_year and years_running.
@@ -299,7 +299,7 @@ sub media {
 sub mini_parts { 
   my ($movie) = @_;
 
-  my $r_parts = $movie->{'media'} eq 'miniseries' ? $movie->{'counts'}{'episodes'} : undef;
+  my $r_parts = $movie->{'counts'}{'episodes'} ? $movie->{'counts'}{'episodes'} : undef;
   my $parts   = $r_parts ? NUMWORDS($r_parts)."-part" : undef;
 
   return $parts;
@@ -310,7 +310,7 @@ sub genre_s {
   my ($movie) = @_;
 
   my @genres = keys %{$movie->{'genre'}};
-  my $genre = @genres ? grammatical_join('and',@genres) : undef;
+  my $genre = @genres ? grammatical_join('and', @genres) : undef;
 
   return $genre;
 }
@@ -323,7 +323,7 @@ sub about {
   for my $genre (values %{$movie->{'genre'}}) {
     push @abouts, grep($_ ne 'main',@$genre);
   }
-  my $about = @abouts ? 'about '.grammatical_join('and',@abouts) : undef;
+  my $about = @abouts ? 'with '.grammatical_join('and', @abouts) : undef;
 
   return $about;
 }
@@ -331,8 +331,8 @@ sub about {
 #* returns what the movie is based on and by who.
 sub basis {
   my ($movie) = @_;
-  my $raw_base = join_defined(' by ', [$movie->{'based on'},$movie->{'company'}]);
-  my $basis = $movie->{'based on'} ? qq(based on the $raw_base) : undef;
+  my $raw_base = join_defined(' by ', [$movie->{'based on'}, $movie->{'company'}]);
+  my $basis = $movie->{'based on'} ? "based on the $raw_base" : undef;
   return $basis;
 }
 
@@ -343,11 +343,11 @@ sub search_link {
 
   my $search = undef;
   my $texti  = textify($movie);
-  if (($series{$movie} && $id) || ($movies{$movie} && $id)) {
+  if (($series->{$movie} && $id) || ($movies->{$movie} && $id)) {
     $search = searchify($movie,$id);
-    $texti  = $movies{$id->[0]} ? textify($id->[0]) : textify($movie); 
+    $texti  = $movies->{$id->[0]} ? textify($id->[0]) : textify($movie); 
   }
-  elsif($series{$movie} || $movies{$movie}) {
+  elsif($series->{$movie} || $movies->{$movie}) {
     $search = searchify($movie);
   }
 
@@ -382,14 +382,14 @@ sub get_crossover {
   my $episode = $crossover->{'episode'};
   my $season  = $crossover->{'season'};
   my $program = $crossover->{'movie'};
-  my $series  = $crossover->{'series'};
+  my $cseries = $crossover->{'series'};
 
   my $crossover_text = undef;
-  if ($episode || $season || $program || $series) {
+  if ($episode || $season || $program || $cseries) {
     my $season_text = $season ? "season $season" : undef;
     my $episode_text = $episode ? textify(qq( "$episode")) : '';
-    my $search = $series ? $series : $program ? $program : undef;
-    my $id = $series && $series{$series} ? [grep(defined,($program,$season_text))] : $program && $movies{$program} && $season_text ? [$season_text] : undef;
+    my $search = $cseries ? $cseries : $program ? $program : undef;
+    my $id = $cseries && $series->{$cseries} ? [grep(defined,($program,$season_text))] : $program && $movies->{$program} && $season_text ? [$season_text] : undef;
     $crossover_text = search_link($search,$id).qq($episode_text);
   }
 
@@ -409,7 +409,8 @@ sub crossovers {
 # The preceding group of subroutines all lead to display_movie with the exceptions of end_year and years_running.
 
 #* returns a sentence or two for a movie.
-# The first parameter is the individual movie hash ref, the second is a hash ref with the named parameters: series, links, and crossovers.
+# The first parameter is the individual movie hash ref,
+# the second is a hash ref with the named parameters: series, links, and crossovers.
 sub display_movie {
   my ($movie,$opt) = @_;
 
@@ -417,16 +418,16 @@ sub display_movie {
   my $text   = textify($title);
   my $id     = idify($title);
 
-  my $start  = $movie->{'start year'} ? $movie->{'start year'} : undef;
-  my $parts  = mini_parts($movie);
+  my $start  = $movie->{'start year'} && $movie->{'start year'} ne 'tbd' ? $movie->{'start year'} : undef;
+  my $parts  = $movie->{'media'} eq 'miniseries' ? mini_parts($movie) : undef;
   my $media  = media($movie);
-  my $series = $opt->{'series'} ? series_text($movie) : undef;
+  my $mseries = $opt->{'series'} ? series_text($movie) : undef;
   my $basis  = basis($movie);
   my $run    = run_time($movie);
   my $genre  = genre_s($movie);
   my $about  = about($movie);
 
-  my $movie_is    = A(join_defined(' ',[$start,$parts,$genre,$media,$about,$series,$basis,$run])).'.';
+  my $movie_is    = A(join_defined(' ',[$start,$parts,$genre,$media,$about,$mseries,$basis,$run])).'.';
   my $crossover   = $opt->{'crossover'} && $movie->{'crossovers'} ? 'It '.crossovers($movie) : undef;
   my $links       = $opt->{'links'} ? ' '.movie_links($movie) : '' ;
   my $movie_line  = join_defined(' ',[$movie_is,$crossover,$links]);
@@ -439,13 +440,13 @@ sub display_simple_movie {
   my ($imovie) = @_;
   my $movie = movie($imovie, 'display_simple_movie');
   my $title = textify($imovie);
-  my $start = $movie->{'start year'};
+  my $start = $movie->{'start year'} ? $movie->{'start year'} : undef;
   
   my $item;
   if ($movie->{'series'}) {
     my $group;
     if (@{$movie->{'series'}} > 1) {
-      ($group) = sort { scalar @{$series{$b}{'programs'}} <=> scalar @{$series{$a}{'programs'}} } @{$movie->{'series'}};
+      ($group) = sort { scalar @{$series->{$b}{'programs'}} <=> scalar @{$series->{$a}{'programs'}} } @{$movie->{'series'}};
     }
     else {
       $group = $movie->{'series'}[0];
@@ -458,7 +459,7 @@ sub display_simple_movie {
   else {
     $item = "<i>$title</i>";
   }
-  $item .= " ($start)";
+  $item .= $start ? " ($start)" : undef;
   
   return $item;
 }

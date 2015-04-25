@@ -13,7 +13,7 @@ use Lingua::EN::Inflect qw(PL_N);
 use List::MoreUtils qw(uniq);
 
 # When adding PSPS, it is the initial cost + (maintenance * 4) for each talent.
-my %psps = get_hash(
+my $psps = get_hash(
   'file' => ['Role_playing/Classes/Psionics','powers.txt'],
   'headings' => ['power', 'initial cost', 'maintenance cost']
 );
@@ -232,8 +232,8 @@ sub random_wild_psionic_talent {
   my $lead = PL_N('wild psionic talent',scalar @r_talents);
   my $psp_total;
   for my $talent (@r_talents) {
-    $psp_total += $psps{$talent}{'initial cost'} ? $psps{$talent}{'initial cost'} : 0;
-    $psp_total += $psps{$talent}{'maintenance cost'} ? $psps{$talent}{'maintenance cost'} * 4 : 0;
+    $psp_total += $psps->{$talent}{'initial cost'} ? $psps->{$talent}{'initial cost'} : 0;
+    $psp_total += $psps->{$talent}{'maintenance cost'} ? $psps->{$talent}{'maintenance cost'} * 4 : 0;
   }
   
   my @talents = uniq(@r_talents);

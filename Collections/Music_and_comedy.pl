@@ -11,8 +11,8 @@ use HTML::Elements qw(list);
 use People qw(get_people);
 
 my $doc_magic = {
-  'musicians' => sub { list(3, 'u', [get_people('Musicians.txt')], { 'class' => 'three' }) },
-  'comedians' => sub { list(3, 'u', [get_people('Comedians.txt')], { 'class' => 'three' }) },
+  'musicians' => sub { list(3, 'u', get_people('Musicians.txt'), { 'class' => 'three' }) },
+  'comedians' => sub { list(3, 'u', get_people('Comedians.txt'), { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });

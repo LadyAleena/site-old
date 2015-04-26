@@ -22,7 +22,7 @@ my %alpha_gems = alpha_array(\@gems);
 for my $gems (keys %alpha_gems) {
   my @list = @{$alpha_gems{$gems}};
   $alpha_gems{$gems} = undef;
-  @{$alpha_gems{$gems}} = map { "$_ ".external_links([['Wikipedia',$_],['Google',searchify($_)]]) } sort @list;
+  @{$alpha_gems{$gems}} = map { "$_ ".external_links([['Wikipedia', $_, $_],['Google', searchify($_), $_]]) } sort @list;
 }
 
 page( 'code' => sub {

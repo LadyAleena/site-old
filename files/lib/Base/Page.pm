@@ -215,7 +215,7 @@ sub heading_w_links {
   my ($heading, $wikipedia) = split(/\|/,$text);
   my $article = $wikipedia ? $wikipedia : $heading;
   
-  paragraph($tab + 1, external_links([['Wikipedia',filify($article)],['Google',searchify($heading)]]), { 'style' => 'float: right' } );
+  paragraph($tab + 1, external_links([['Wikipedia', filify($article), $article],['Google', searchify($heading), $article]]), { 'style' => 'float: right' } );
   heading($tab, $level, textify($heading), { 'id' => idify($heading), 'class' => 'wlinks' });
 }
 

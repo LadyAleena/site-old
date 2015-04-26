@@ -32,7 +32,7 @@ sub get_people {
     push @people, "$name $link";
   }
   
-  return @people ? @people : undef;
+  return @people ? \@people : undef;
 }
 
 1;

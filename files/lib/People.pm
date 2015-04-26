@@ -28,7 +28,7 @@ sub get_people {
     my $name = $line->[0];
        $name =~ s/^_//;
     my $article_name = $line->[1] ? $line->[1] : filify($name);
-    my $link = external_links([['Wikipedia',$article_name],['Google',searchify($name)]]);
+    my $link = external_links([['Wikipedia', $article_name, $name],['Google', searchify($name), $name]]);
     push @people, "$name $link";
   }
   

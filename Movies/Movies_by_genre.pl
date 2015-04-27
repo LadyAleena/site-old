@@ -11,7 +11,7 @@ use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section list);
 use Util::Sort qw(article_sort);
-use Movies::LookUp qw(display_simple_movie genre);
+use Movie::LookUp qw(display_simple_movie genre);
 
 my $genres = genre('data');
 

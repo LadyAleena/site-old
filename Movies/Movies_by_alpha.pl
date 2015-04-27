@@ -14,7 +14,7 @@ use HTML::Elements qw(section paragraph list form fieldset selection input ancho
 use Util::Sort qw(article_sort);
 use Util::Convert qw(idify textify);
 use Util::GrammaticalJoin;
-use Movies::LookUp qw(movie option display_movie display_option start_year end_year);
+use Movie::LookUp qw(movie option display_movie display_option start_year end_year);
 
 my $cgi = CGI::Minimal->new;
 my $year   = $cgi->param('year')     ? encode_entities($cgi->param('year'),     '<>"') : '';

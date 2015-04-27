@@ -13,8 +13,8 @@ use Base::Menu qw(file_menu alpha_menu);
 use HTML::Elements qw(section list);
 use Util::Sort qw(article_sort);
 use Util::Columns qw(get_columns);
-use Movies::Display qw(print_series print_program);
-use Movies::LookUp qw(option);
+use Movie::Display qw(print_series print_program);
+use Movie::LookUp qw(option);
 
 my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('series'),'<>"');

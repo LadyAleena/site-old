@@ -244,6 +244,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<The Avengers|^bd^> (2012)
 * I<Iron Man 3|^bd^> (2013)
 * I<Captain America: The Winter Soldier|^bd^> (2014)
+* I<The Guardians of the Galaxy|^bd^> (2014)
 3 Back to the Future
 * I<Back to the Future|^dvd^> (1985)
 * I<Back to the Future Part II|^dvd^> (1989)

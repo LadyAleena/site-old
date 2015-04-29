@@ -27,6 +27,7 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 * I<The Breakfast Club|^cassette^> (1985)
 * I<Fith Element|^cd^> (1997)
 * I<Footloose|^cd^> (1984)
+* I<The Guardians of the Galaxy - Awesome Mix Vol. 1|^cd^> (2014)
 * I<Heavy Metal|^lp^> (1995)
 * I<Labyrinth|^cd^> (1986) by David Bowie and Trevor Jones
 * I<The Lost Boys|^cd^> (1987) <!-- cassette -->

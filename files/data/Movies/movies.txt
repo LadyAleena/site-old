@@ -467,12 +467,12 @@ Diner|1982||film||Diner_(film)|13809|0083833||diner|comedy||
 Diners, Drive-Ins and Dives|2006|tbd|tv||Diners,_Drive-Ins_and_Dives||1020913|71720||non-fiction:food||
 Dinotopia (2002 miniseries)|2002||miniseries:2|dvd|Dinotopia_(miniseries)|263844|0233044||dinotopia|monster:dinosaurs|novels|James Gurney
 Dinotopia (2002 tv)|2002|2003|tv|||278164|0310443|8335||monster:dinosaurs|novels|James Gurney
-Dirty Dancing|1987||film|dvd|Dirty_Dancing|13874|0092890||dirty-dancing|drama||
-The Dirty Dozen|1967||film||The_Dirty_Dozen|13877|0061578||the-dirty-dozen|spy fiction||
-The Dirty Dozen: Next Mission|1985||film|||62045|0089026||dirty-dozen-the-next-mission|spy fiction||
-The Dirty Dozen: The Deadly Mission|1987||film|||13879|0092891||dirty-dozen-the-deadly-mission|spy fiction||
-The Dirty Dozen: The Fatal Mission|1988||film|||13880|0095022||the-dirty-dozen-the-fatal-mission|spy fiction||
-Dirty Dozen: The Series|1988||tv|||125073|0094451|1822||spy fiction||
+Dirty Dancing|1987||film|dvd|Dirty_Dancing|13874|0092890||dirty-dancing|drama
+The Dirty Dozen|1967||film||The_Dirty_Dozen|13877|0061578||the-dirty-dozen|spy fiction
+The Dirty Dozen: Next Mission|1985||film|||62045|0089026||dirty-dozen-the-next-mission|spy fiction
+The Dirty Dozen: The Deadly Mission|1987||film|||13879|0092891||dirty-dozen-the-deadly-mission|spy fiction
+The Dirty Dozen: The Fatal Mission|1988||film|||13880|0095022||the-dirty-dozen-the-fatal-mission|spy fiction
+Dirty Dozen: The Series|1988||tv|||125073|0094451|1822||spy fiction
 Disaster!|2006||film||||0424958||disaster|speculative fiction||
 Disciples of the Crow|1983||film||||0352297||disciples-of-the-crow|horror||
 The Distinguished Gentleman|1992||film||The_Distinguished_Gentleman|14030|0104114||the-distinguished-gentleman|comedy||
@@ -756,7 +756,7 @@ Gridiron Gang|2006||film||Gridiron_Gang|325504|0421206||gridiron-gang|docudrama;
 Grosse Pointe Blank|1997||film||Grosse_Pointe_Blank|154792|0119229||grosse-pointe-blank|comedy||
 Ground Control|1998||film||Ground_Control_(film)|176061|0137799||ground-control-jet|disaster||
 Groundhog Day|1993||film||Groundhog_Day_(film)|20982|0107048||groundhog-day|speculative fiction||
-Guardians of the Galaxy|2014||film||Guardians_of_the_Galaxy_(film)|568178|2015381||guardians-of-the-galaxy|superhero fiction|comics|Marvel Comics
+Guardians of the Galaxy|2014||film|bd|Guardians_of_the_Galaxy_(film)|568178|2015381||guardians-of-the-galaxy|superhero fiction|comics|Marvel Comics
 Gulliver's Travels|1996||miniseries:2||Gulliver%27s_Travels_(miniseries)|162826|0115195|3939|gullivers-travels|fantasy|novel|Jonathan Swift
 Guns of the Magnificent Seven|1969||film||Guns_of_the_Magnificent_Seven|21180|0064395||guns-of-the-magnificent-seven|western||
 H.G. Wells' War of the Worlds|2005||film||H._G._Wells'_War_of_the_Worlds_(2005_film)|33092|0449040||hg-wells-war-of-the-worlds|science fiction:aliens|novel|H.G. Wells
@@ -888,7 +888,7 @@ Ice Princess|2005||film||Ice_Princess|306595|0396652||ice-princess|sports;comedy
 Ice Road Truckers|2007|tbd|tv||Ice_Road_Truckers|409177|1068912|73782||non-fiction:trucking||
 If Lucy Fell|1996||film|dvd|If_Lucy_Fell|135864|0116606||if-lucy-fell|romantic comedy||
 The Imaginarium of Doctor Parnassus|2009||film||The_Imaginarium_of_Doctor_Parnassus|420337|1054606||the-imaginarium-of-doctor-parnassus|fantasy||
-The Immortal (1969)|1696|1971|tv||The_Immortal_(TV_series)|126433|0065303|10200||monster:immortals||
+The Immortal (1969)|1969|1971|tv||The_Immortal_(TV_series)|126433|0065303|10200||monster:immortals||
 The Immortal (2000)|2000|2001|tv||The_Immortal_(2000_TV_series)|380042|0248644|2856||monster:immortals,demons||
 In Plain Sight|2008|2012|tv||In_Plain_Sight||0935095|67607||police procedural||
 In the Army Now|1994||film||In_the_Army_Now_(film)|133726|0110123||in-the-army-now|military;comedy||

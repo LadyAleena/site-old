@@ -2,10 +2,8 @@ package Movie;
 use strict;
 use warnings;
 use Exporter qw(import);
-our @EXPORT_OK = qw(movie series franchise genre option
-  display_movie display_simple_movie display_episode display_option
-  print_series print_program 
-  start_year end_year years_running counts links nav_link);
+our @EXPORT_OK = qw(movie series franchise genre option start_year end_year
+  display_movie display_simple_movie display_option print_series print_program);
 
 use Lingua::EN::Inflect qw(A PL_N NUM NO NUMWORDS inflect);
 use List::Util qw(min max first);

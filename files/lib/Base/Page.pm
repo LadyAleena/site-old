@@ -84,7 +84,8 @@ sub page {
   my $title = textify(join(' - ', ($root_name, map(ucfirst, grep(!/index/, split(/\//, $relative_path))))));
   my $page_heading = $opt{'heading'} ? textify($opt{'heading'}) : textify($heading);
   my $article_id = idify($page_heading);
-  
+  my $menu = main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 0, 'full' => 0, 'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef );
+
   html(0, {
     'head' => {
       'title'    => $title,
@@ -96,22 +97,28 @@ sub page {
       'meta'     => [{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=windows-1252'}],
       'noscript' => sub { style(3, 'li.closed ol,li.closed ul,li.closed dl {display:block;}') },
     },
-    'body' => [ sub {
-      nav(2, sub {
-        section(3, sub {
-          list(4, 'u',
-            main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 0, 'full' => 0, 'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef ),
-            { 'id' => 'site_menu', 'onclick' => 'list_onclick(event)' }
-          );
-        }, { 'heading' => [2, 'Site menu', { 'id' => 'Site_menu' }] });
-      }, { 'id' => 'main' });
-      article(2, sub {
-        &{$opt{'code'}};
-      }, { 'id' => $article_id, 'heading' => [1, $page_heading, { 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
-    }, { 'header' => [ sub {
-      paragraph(3, join(' ',get_contacts()), { 'class' => 'no_indent' });
-      div(3, img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'width:.9em' }).anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
-    }] }]
+    'body' => [
+      sub {
+        nav(2, sub {
+          section(3, sub {
+            list(4, 'u', $menu, { 'id' => 'site_menu', 'onclick' => 'list_onclick(event)' }
+            );
+          }, { 'heading' => [2, 'Site menu', { 'id' => 'Site_menu' }] });
+        }, { 'id' => 'main' });
+        article(2, sub {
+          &{$opt{'code'}};
+        }, { 'id' => $article_id, 'heading' => [1, $page_heading, { 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
+      },
+      {
+        'header' => [
+          sub {
+            paragraph(3, join(' ',get_contacts()), { 'class' => 'no_indent' });
+            div(3, img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'width:.9em' }).anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
+          }
+        ],
+        'class' => $opt{'class'} ? $opt{'class'} : undef
+      }
+    ]
   });
 }
 

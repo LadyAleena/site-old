@@ -7,7 +7,7 @@ our @EXPORT_OK = qw(main_menu alpha_menu file_menu link_color);
 use Cwd qw(cwd realpath);
 
 use Base::Data qw(get_directory);
-use HTML::Elements qw(anchor paragraph);
+use HTML::Elements qw(anchor);
 use Util::Sort qw(article_sort name_sort);
 use Util::Convert qw(linkify textify searchify);
 
@@ -71,7 +71,7 @@ sub main_menu {
       my $file_list;
 
       if (-e "$long_content/index.pl") {
-        $link .= "$link/index.pl";
+        $link .= "/index.pl";
         my $color = $opt{'color'} == 1 ? link_color($link,1) : undef;
         $text = anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color });
         $file_list = $0 =~ /index/ && $active =~ / active$/ && $opt{'file menu'} ? $opt{'file menu'} : undef;
@@ -101,18 +101,18 @@ sub file_menu {
 
 # alpha_menu prints a line of links based on keys of a hash.
 sub alpha_menu {
-  my ($tab, $hash, $list_addition) = @_;
+  my ($hash, $list_addition) = @_;
 
   my @line;
   for my $letter (sort { article_sort($a,$b) } keys %{$hash}) {
-    my $section_name = $letter eq uc($letter) ? "$letter" : "l$letter";
+    my $section_name = $letter eq uc($letter) ? $letter : "l$letter";
     push @line, anchor($letter, { 'href' => "#section_$section_name" });
   }
 
   push @line, $list_addition if $list_addition;
   my $line = join(' - ',@line);
 
-  paragraph($tab,$line, { 'style' => 'text-align:center; font-size:smaller;' });
+  return $line;
 }
 
 1;

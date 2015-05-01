@@ -7,14 +7,14 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib '../files/lib';
-use Base::Data qw(alpha_array);
 use Base::Page qw(page);
 use Base::Menu qw(alpha_menu);
+use Base::Data qw(alpha_array);
 use HTML::Elements qw(section paragraph list form fieldset selection input anchor);
 use Util::Sort qw(article_sort);
 use Util::Convert qw(idify textify);
 use Util::GrammaticalJoin;
-use Movie::LookUp qw(movie option display_movie display_option start_year end_year);
+use Movie qw(movie option display_movie display_option start_year end_year);
 
 my $cgi = CGI::Minimal->new;
 my $year   = $cgi->param('year')     ? encode_entities($cgi->param('year'),     '<>"') : '';
@@ -76,11 +76,11 @@ else {
 }
 
 my %alpha_movies = alpha_array(\@movies);
-
 for my $movies (keys %alpha_movies) {
   my @movies = map(display_movie($movies_data->{$_}, { 'series' => 1, 'links' => 1 }), sort { article_sort(lc $a,lc $b) } @{$alpha_movies{$movies}});
   @{$alpha_movies{$movies}} = @movies;
 }
+my $alpha_menu = alpha_menu(\%alpha_movies, anchor('Search the list', { href => '#Search' }));
 
 page( 'code' => sub {
   form(3, sub {
@@ -100,8 +100,8 @@ page( 'code' => sub {
   });
   for my $alpha (sort keys %alpha_movies) {
     section(3, sub {
-      list(5, 'u', \@{$alpha_movies{$alpha}}, { 'class' => 'movie_list' });
-      alpha_menu(5, \%alpha_movies, anchor('Search the list', { href => '#Search' }));
+      list(5, 'u', $alpha_movies{$alpha}, { 'class' => 'movie_list' });
+      paragraph(5, $alpha_menu, { 'class' => 'alpha_menu' });
     }, { 'heading' => [2, $alpha, { id=> "section_$alpha" }] });
   };
 });

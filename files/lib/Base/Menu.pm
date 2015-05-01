@@ -50,8 +50,8 @@ sub main_menu {
   $0 =~ s/\\/\//g;
 
   opendir(my $base_directory, $directory) || die "Can't open $directory $!";
-  my $grep_match = $opt{'full'} =~ /^[yt1]/ ? qr(^\w) : qr(^\p{uppercase});
-  my @contents = grep {/$grep_match/} readdir($base_directory);
+  my @contents = File::Spec->no_upwards(readdir($base_directory)); 
+     @contents = grep {/^\p{uppercase}/} @contents if (!$opt{'full'} || $opt{'full'} !~ /^[yt1]/);
   chomp(@contents);
   closedir($base_directory);
 
@@ -79,7 +79,7 @@ sub main_menu {
     my $long_content = "$directory/$file";
     my $active = realpath($0) eq $long_content ? 'active' : 'inactive';
     my $link = linkify($long_content);
-    my $text = textify($file);
+    my $text = $file !~ /^\./ ? textify($file) : $file;
     my $color = $opt{'color'} == 1 ? link_color($file,1) : undef;
     my $inlist = $active eq 'active' && $opt{'file menu'} ? $opt{'file menu'} : undef;
        $active .= $active eq 'active' && $opt{'file menu'} ? ' open' : '';
@@ -112,7 +112,7 @@ sub main_menu {
 sub file_menu {
   my($param, $list, $select) = @_;
   my @params = map {[
-    anchor(ucfirst textify($_, { 'parens' => 'yes' }), { 'href' => '?'.searchify($param).'='.searchify($_) }),
+    anchor(ucfirst textify($_, { 'parens' => 'yes' }), { 'href' => '?'.searchify($param).'='.searchify($_), 'title' => textify($_) }),
     { 'class' => $select && $select eq $_ ? 'active' : 'inactive' } ]
   } @$list;
   return \@params;

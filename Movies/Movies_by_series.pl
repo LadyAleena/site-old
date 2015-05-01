@@ -24,7 +24,7 @@ my $file_menu = file_menu('series', \@selects, $select);
 my %alpha_list = alpha_array(\@selects);
 
 my $head = $select && $series_select->{$select} ? qq(<i>$select</i>) : undef;
-page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
+page( 'heading' => $head, 'file menu' => $file_menu, 'class' => $body_class, 'code' => sub {
   if ($select && $series_select->{$select}) {
     if ($series_select->{$select} eq 'series') {
       print_series(2,1,$select);

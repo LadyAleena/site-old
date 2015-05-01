@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(main_menu alpha_menu file_menu link_color);
 
 use Cwd qw(cwd realpath);
 
-use Base::Root qw(get_root);
+use Base::Data qw(get_directory);
 use HTML::Elements qw(anchor paragraph);
 use Util::Sort qw(article_sort name_sort);
 use Util::Convert qw(linkify textify searchify);
@@ -42,69 +42,50 @@ sub link_color {
 
 sub main_menu {
   my %opt = @_;
-  my $root_path = get_root('path');
-  my $root_link = get_root('link');
   my $directory = $opt{'directory'};
   my $curr_cwd = cwd;
 
-  $0 =~ s/\\/\//g;
+  my @contents = get_directory($directory); 
+  @contents = grep {/^\p{uppercase}/} @contents if (!$opt{'full'} || $opt{'full'} !~ /^[yt1]/); # Thank you [tye]!
 
-  opendir(my $base_directory, $directory) || die "Can't open $directory $!";
-  my @contents = File::Spec->no_upwards(readdir($base_directory)); 
-     @contents = grep {/^\p{uppercase}/} @contents if (!$opt{'full'} || $opt{'full'} !~ /^[yt1]/);
-  chomp(@contents);
-  closedir($base_directory);
-
-  if ($directory =~ /(Other_poets|Player_characters|Spellbooks)$/) {
-    @contents = sort {name_sort($a,$b)} @contents;
-  }
-  else {
-    @contents = sort {article_sort($a,$b)} @contents;
-  }
+  # Thank you [davido]!
+  my $sub = $directory =~ /(Other_poets|Player_characters|Spellbooks)$/ ? \&name_sort : \&article_sort;
+  @contents = sort { $sub->($a,$b) } @contents;
 
   my (@files, @directories);
   for my $content (@contents) {
     my $long_content = "$directory/$content";
-    if ($opt{full} == 0) {
-      push @files, $content if -T $long_content;
-    }
-    else {
-      push @files, $content if -f $long_content;
-    }
-    push @directories, $content if -d $long_content;
-  }
-
-  my @file_lines;
-  for my $file (@files) {
-    my $long_content = "$directory/$file";
-    my $active = realpath($0) eq $long_content ? 'active' : 'inactive';
     my $link = linkify($long_content);
-    my $text = $file !~ /^\./ ? textify($file) : $file;
-    my $color = $opt{'color'} == 1 ? link_color($file,1) : undef;
-    my $inlist = $active eq 'active' && $opt{'file menu'} ? $opt{'file menu'} : undef;
-       $active .= $active eq 'active' && $opt{'file menu'} ? ' open' : '';
-    push @file_lines, [anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color }), { 'class' => $active, 'inlist' => $inlist ? ['u', $inlist] : undef } ];
-  }
+    my $text = $content !~ /^\./ ? textify($content) : $content;
 
-  for my $next_directory (@directories) {
-    my $long_content = "$directory/$next_directory";
-    my $active = $curr_cwd =~ /$long_content/ ? 'open active' : 'closed inactive';
-    my $link = linkify($long_content);
-    my $text = textify($next_directory);
-    my $file_list;
-    if (-e "$long_content/index.pl") {
-      my $index = "$link/index.pl";
-      my $color = $opt{'color'} == 1 ? link_color($index,1) : undef;
-      $text = anchor($text, { 'href' => $index, 'title' => $text, 'style' => $color });
-      $file_list = $0 =~ /index/ && $active =~ / active$/ && $opt{'file menu'} ? $opt{'file menu'} : undef;
+    if (-f $long_content) {
+      my $active = realpath($0) eq $long_content ? 'active' : 'inactive';
+      my $color = $opt{'color'} == 1 ? link_color($content,1) : undef;
+      my $inlist = $active eq 'active' && $opt{'file menu'} ? ['u', $opt{'file menu'}] : undef;
+         $active .= $active eq 'active' && $opt{'file menu'} ? ' open' : '';
+      push @files, [anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color }), { 'class' => $active, 'inlist' => $inlist } ];
     }
     
-    my $next_list = main_menu( 'directory' => $long_content, 'color' => $opt{'color'}, 'full' => $opt{'full'}, 'file menu' => $opt{'file menu'} );
-    unshift @$next_list, @$file_list if $file_list;
-    my $inlist = $next_list ? ['u', $next_list] : undef;
-    $active =~ s/^(?:open|closed) // if !$inlist;
-    push @file_lines, [$text, { 'class' => $active, 'inlist' => $inlist}];
+    if (-d $long_content) {
+      my $active = $curr_cwd =~ /$long_content/ ? 'open active' : 'closed inactive';
+      my $file_list;
+
+      if (-e "$long_content/index.pl") {
+        $link .= "$link/index.pl";
+        my $color = $opt{'color'} == 1 ? link_color($link,1) : undef;
+        $text = anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color });
+        $file_list = $0 =~ /index/ && $active =~ / active$/ && $opt{'file menu'} ? $opt{'file menu'} : undef;
+      }
+
+      my $next_list = main_menu( 'directory' => $long_content, 'color' => $opt{'color'}, 'full' => $opt{'full'}, 'file menu' => $opt{'file menu'} );
+      unshift @$next_list, @$file_list if $file_list;
+      my $inlist = $next_list ? ['u', $next_list] : undef;
+      $active =~ s/^(?:open|closed) // if !$inlist;
+      push @directories, [$text, { 'class' => $active, 'inlist' => $inlist}];
+    }
   }
+  my @file_lines = (@files, @directories);
+
   return @file_lines > 0 ? \@file_lines : undef;
 }
 

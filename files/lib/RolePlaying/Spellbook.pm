@@ -18,7 +18,7 @@ sub print_spellbook {
 
   for my $level (sort keys %$spells) {
     next if $level eq 'Note';
-    my @spells = @{$spells{$level}};
+    my @spells = @{$spells->{$level}};
     my $columns = get_columns(3,scalar @spells);
 
     section(3, sub {
@@ -27,7 +27,7 @@ sub print_spellbook {
   }
   if ($spells->{'Note'}) {
     section(3, sub {
-      paragraph(5, $spells{'Note'}[0]);
+      paragraph(5, $spells->{'Note'}[0]);
     }, { 'heading' => [2, 'Note about this spellbook'] });
   }
 }

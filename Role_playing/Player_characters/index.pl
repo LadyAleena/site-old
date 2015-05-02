@@ -13,7 +13,7 @@ use Util::Convert qw(idify);
 use Util::Number qw(commify);
 use RolePlaying::CharacterBuilding::Alignment qw(expand_alignment);
 
-my %player_characters = get_hash(
+my $player_characters = get_hash(
   'file' => ['Role_playing','Player_characters.txt'],
   'headings' => ['full name', 'id', 'last name', 'first name', qw(alignment class+ experience race special_race gender strength dexterity constitution intelligence wisdom charisma languages)],
 );
@@ -68,7 +68,7 @@ page( 'code' => sub {
   section(3, sub {
     paragraph(3,q(I have taken down all of the individual pages for my player characters for a while. I am revamping this whole section of my site and the current files are a mess. Please bear with me as I working on getting them back online.));
   });
-  for my $character (sort {$a->{'last name'} cmp $b->{'last name'} || $a->{'first name'} cmp $b->{'first name'}} values %player_characters) {
+  for my $character (sort {$a->{'last name'} cmp $b->{'last name'} || $a->{'first name'} cmp $b->{'first name'}} values %$player_characters) {
     my $name = $character->{'full name'};
     
     my %general_information;

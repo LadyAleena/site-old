@@ -39,7 +39,7 @@ page( 'heading' => $body_head, 'file menu' => $file_menu, 'class' => $body_class
       my $class = get_columns(3, scalar @{$alpha_movies{$alpha}});
       section(3, sub {
         list(5, 'u', file_menu('series', $alpha_movies{$alpha}), { 'class' => $class, 'style' => 'font-size:smaller' });
-        paragraph(5, $aplha_menu, { 'class' => 'alpha_menu' });
+        paragraph(5, $alpha_menu, { 'class' => 'alpha_menu' });
       }, { 'heading' => [2, $alpha, { 'id' => "section_$alpha" }] });
     }
   }

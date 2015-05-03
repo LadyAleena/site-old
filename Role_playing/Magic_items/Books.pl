@@ -11,7 +11,7 @@ use HTML::Elements qw(anchor list);
 use Util::Sort qw(name_sort);
 use Util::Convert qw(textify searchify);
 
-my @spellbook_list = sort { name_sort(textify($a),textify($b)) } get_directory(data_directory('Role_playing/Spellbooks'));
+my @spellbook_list = sort { name_sort(textify($a),textify($b)) } get_directory(data_directory('Role_playing/Player_characters/spellbooks'));
 my @spellbooks;
 for my $spellbook (@spellbook_list) {
   my $text = textify($spellbook);

@@ -49,7 +49,7 @@ sub data_file {
     $data = "$root_data/$relative_path.txt";
   }
   
-  if (!defined $data) {
+  unless (-f $data) {
     die "No file associated with $relative_path.";
   }
   

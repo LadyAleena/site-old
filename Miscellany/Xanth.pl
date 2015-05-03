@@ -16,7 +16,8 @@ my @files = get_directory(data_directory($directory));
 
 my $doc_magic;
 for my $file (@files) {
-  $doc_magic->{textify($file)} = sub { pre(5,sub { print read_file(data_file($directory,$file)) })}
+  my $read = read_file(data_file($directory, $file));
+  $doc_magic->{textify($file)} = sub { pre(5, sub { print $read })}
 }
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });

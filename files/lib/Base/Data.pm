@@ -42,15 +42,26 @@ sub data_file {
      $relative_path =~ s/working(?:\/|\\)//;
 
   my $data;
+  my $data;
   if ($directory && $filename) {
     $data = "$root_data/$directory/$filename";
+  }
+  elsif (!$directory && $filename) {
+    $data = "$root_data/$relative_path/$filename";
+  }
+  elsif ($directory && !$filename) {
+    $data = "$root_data/$directory.txt";
   }
   else {
     $data = "$root_data/$relative_path.txt";
   }
   
   unless (-f $data) {
-    die "No file associated with $relative_path.";
+    use Data::Dumper;
+    local $\ = "\n";
+    print Dumper($directory);
+    print Dumper($filename);
+    die "No file associated with $data, stopped";
   }
   
   return $data;

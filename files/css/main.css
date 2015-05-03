@@ -60,6 +60,7 @@ blockquote p { display: inline-block; text-indent: 0; margin: 0; padding: 0; }
 ul { margin: 0em 0em 0em 1.25em; padding: 0px 0px 0px 3px; }
 ul ul { margin-left: 1em; }
 ol { margin: 0em 0em 0em 1.75em; padding: 0px 0px 0px 3px; }
+li { padding: .05em }
 li.inactive { font-weight:normal; }
 li.active { font-weight:bold; }
 /* keep order of next 2 rules*/

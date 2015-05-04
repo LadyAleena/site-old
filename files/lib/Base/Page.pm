@@ -2,7 +2,7 @@ package Base::Page;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(page story);
+our @EXPORT_OK = qw(page story passage);
 
 use CGI::Carp qw(fatalsToBrowser);
 use Cwd qw(cwd realpath);
@@ -124,6 +124,39 @@ sub page {
 
 # Begin subroutines used in 'story' below.
 
+# divvy's up the source
+sub dissect_source {
+  my ($source) = @_;
+
+  my $inc = 0;
+  my $cols = 0;
+  my @sections;
+  my @toc;
+
+  while (my $line = <$source>) {
+    chomp($line);
+    next if !$line;
+    
+    if ($line =~ /^2 /) {
+      my ($number,$text) = split(/ /,$line,2);
+      $text =~ s/ \+$//;
+      push @toc, [anchor(textify($text), { 'href' => '#'.idify($text) })];
+      $inc++  if $line =~ /^2 /;
+    }
+    if ($line =~ /^3 /) {
+      my ($number,$text) = split(/ /,$line,2);
+      $text =~ s/ \+$//;
+      $toc[$inc][1]->{inlist}[0] = 'u';
+      push @{$toc[$inc][1]->{inlist}[1]}, anchor(textify($text), { 'href' => '#'.idify($text) });
+    }
+    $cols++ if $line =~ /^(?:2|3) /;
+    
+    push @{$sections[$inc]}, $line;
+  }
+
+  return { 'cols' => $cols, 'toc' => \@toc, 'sections' => \@sections };
+}
+
 sub convert_string {
   my ($string, $line_magic) = @_;
   $string =~ s/\^(.+?)\^/exists $line_magic->{$1} ? $line_magic->{$1} : $1/ge;
@@ -228,93 +261,71 @@ sub heading_w_links {
 
 # End subroutines used in 'story' below.
 
+sub passage {
+  my ($tab, $section, $opt) = @_;
+  my $match = '\*#|';
+
+  for (my $lineno = 0; $lineno < @$section; $lineno++) {
+    my $line = $section->[$lineno];
+    if ($line =~ /^[$match]/) {
+      $match = substr($line, 0, 1);
+
+      my $start = $lineno;
+      my $end   = $lineno;
+      $end++ while ($end < $#$section and $section->[$end+1] =~ /^[$match]/);
+
+      my @list_lines = @{$section}[$start..$end];
+
+      if ($match eq '|') {
+        my @list = map { $_ =~ s/^\|(.+)/$1/; $_; } @list_lines;
+        my $opts = table_opts(\@list, $opt);
+        table($tab + 1, $opts);
+      }
+      else {
+        my $class = $list_lines[0] =~ s/^[\*#]\| (.+)$/$1/ ? shift @list_lines : undef;
+        my @list = get_list(\@list_lines, $opt);
+        $list[0][2]->{'class'} = $class ? $class : undef;
+        list($tab + 1, @{$list[0]});
+      }
+
+      $lineno = $end;
+      $match = '\*#|';
+    }
+    else {
+      heading_w_links($tab, $1, $2), next if $line =~ /^([1-6])\s+(.+) \+$/;
+      heading($tab, $1, textify($2), { 'id' => idify($2) }), next if $line =~ /^([1-6])\s+(.+)/;
+      div($tab, $2, { 'class' => "h$1" }), next if $line =~ /^([7-8])\s+(.+)/;
+
+      $opt->{'doc magic'}->{$1}->(), next if $line =~ /^&\s+(.+)/;
+      line($tab + 1, $line),     next if $line =~ /^<.+>/;
+      line($tab + 1, "<$line>"), next if $line =~ /^[bh]r$/;
+      blockquote($tab + 1, inline(convert_string($1, $opt->{'line magic'}))),  next if $line =~ /^bq\s(.+)/;
+      # paragraphs
+      paragraph($tab + 1, inline(convert_string($1, $opt->{'line magic'})),    { 'class' => 'stanza', 'break' => '\|' }), next if $line =~ /^stanza (.+)$/;
+      paragraph($tab + 1, inline(convert_string($2, $opt->{'line magic'})),    { 'class' => "indent$1"}),   next if $line =~ /^\>(\d+) (.+)$/;
+      paragraph($tab + 1, inline(convert_string($line, $opt->{'line magic'})), { 'class' => 'author' }), next if $line =~ /^(?:by|with|from|as) /;
+      paragraph($tab + 1, inline(convert_string($line, $opt->{'line magic'})));
+    }
+  }
+}
+
 sub story {
   my ($source, $opt) = @_;
   
-  my $inc = 0;
-  my $cols = 0;
-  my @sections;
-  my @toc;
-  while (my $line = <$source>) {
-    chomp($line);
-    next if !$line;
-    
-    if ($line =~ /^2 /) {
-      my ($number,$text) = split(/ /,$line,2);
-      $text =~ s/ \+$//;
-      push @toc, [anchor(textify($text), { 'href' => '#'.idify($text) })];
-    }
-    if ($line =~ /^3 /) {
-      my ($number,$text) = split(/ /,$line,2);
-      $text =~ s/ \+$//;
-      $toc[$inc-1][1]->{inlist}[0] = 'u';
-      push @{$toc[$inc-1][1]->{inlist}[1]}, anchor(textify($text), { 'href' => '#'.idify($text) });
-      #$toc[$inc-1][1]->{inlist}[2]{'style'} = 'font-size: smaller;';
-    }
-    $inc++  if $line =~ /^2 /;
-    $cols++ if $line =~ /^(?:2|3) /;
-    
-    push @{$sections[$inc]}, $line;
-  }
+  my $d_source = dissect_source($source);
+  my $cols     = $d_source->{'cols'};
+  my $toc      = $d_source->{'toc'};
+  my $sections = $d_source->{'sections'};
 
   my $tab = 2;
-  my $match = '\*#|';
-  $inc = 0;
-  for my $section (@sections) {
-    if ($section) {
-      section($tab, sub {
-        $tab++;
-        for (my $lineno = 0; $lineno < @$section; $lineno++) {
-          my $line = $section->[$lineno];
-          if ($line =~ /^[$match]/) {
-            $match = substr($line, 0, 1);
-
-            my $start = $lineno;
-            my $end   = $lineno;
-            $end++ while ($end < $#$section and $section->[$end+1] =~ /^[$match]/);
-
-            my @list_lines = @{$section}[$start..$end];
-
-            if ($match eq '|') {
-              my @list = map { $_ =~ s/^\|(.+)/$1/; $_; } @list_lines;
-              my $opts = table_opts(\@list, $opt);
-              table($tab + 1, $opts);
-            }
-            else {
-              my $class = $list_lines[0] =~ s/^[\*#]\| (.+)$/$1/ ? shift @list_lines : undef;
-              my @list = get_list(\@list_lines, $opt);
-              $list[0][2]->{'class'} = $class ? $class : undef;
-              list($tab + 1, @{$list[0]});
-            }
-
-            $lineno = $end;
-            $match = '\*#|';
-          }
-          else {
-            heading_w_links($tab, $1, $2), next if $line =~ /^([1-6])\s+(.+) \+$/;
-            heading($tab, $1, textify($2), { 'id' => idify($2) }), next if $line =~ /^([1-6])\s+(.+)/;
-            div($tab, $2, { 'class' => "h$1" }), next if $line =~ /^([7-8])\s+(.+)/;
-
-            $opt->{'doc magic'}->{$1}->(), next if $line =~ /^&\s+(.+)/;
-            line($tab + 1, $line),     next if $line =~ /^<.+>/;
-            line($tab + 1, "<$line>"), next if $line =~ /^[bh]r$/;
-            blockquote($tab + 1, inline(convert_string($1, $opt->{'line magic'}))),  next if $line =~ /^bq\s(.+)/;
-            # paragraphs
-            paragraph($tab + 1, inline(convert_string($1, $opt->{'line magic'})),    { 'class' => 'stanza', 'break' => '\|' }), next if $line =~ /^stanza (.+)$/;
-            paragraph($tab + 1, inline(convert_string($2, $opt->{'line magic'})),    { 'class' => "indent$1"}),   next if $line =~ /^\>(\d+) (.+)$/;
-            paragraph($tab + 1, inline(convert_string($line, $opt->{'line magic'})), { 'class' => 'author' }), next if $line =~ /^(?:by|with|from|as) /;
-            paragraph($tab + 1, inline(convert_string($line, $opt->{'line magic'})));
-          }
-        }
-        $tab--;
-      });
-    }
+  my $inc = 0;
+  for my $section (@$sections) {
+    section($tab, sub { passage($tab + 1, $section, $opt) }) if $section;
     
-    my $toc_start = $opt->{'toc at'} ? $opt->{'toc at'} : 3;
-    if ($inc == 0 && $cols >= $toc_start && !$opt->{'no toc'}) {
+    if ($inc == 0) {
       nav($tab, sub {
         my $class = get_columns(4, $cols);
-        list($tab + 2, 'u', \@toc, { 'class' => $class });
+        list($tab + 2, 'u', $toc, { 'class' => $class });
       }, { 'heading' => [2, 'Table of contents'], 'class' => 'contents'} );
     }
     $inc++;

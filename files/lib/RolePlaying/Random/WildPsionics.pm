@@ -236,7 +236,8 @@ sub random_wild_psionic_talent {
     $psp_total += $psps->{$talent}{'maintenance cost'} ? $psps->{$talent}{'maintenance cost'} * 4 : 0;
   }
   
-  my @talents = uniq(@r_talents);
-  return "$lead: (PSPs: $psp_total) ".join(', ',sort uniq(@talents));
+  my @talents = @r_talents ? uniq(@r_talents) : undef;
+  return @talents ? "$lead: (PSPs: $psp_total) ".join(', ',sort @talents) : undef;
 }
+
 1;

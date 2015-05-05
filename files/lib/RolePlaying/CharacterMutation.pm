@@ -164,7 +164,7 @@ sub random_mutations {
         }
       }
     }
-    if ($effect eq 'game effect modifier') {
+    elsif ($effect eq 'game effect modifier') {
       my %game_effects;
       $game_effects{random_game_effect()}++ for (1..$value);
       for my $game_effect (keys %game_effects) {
@@ -188,7 +188,8 @@ sub random_mutations {
       push @mutations, "can not advance past $max_level level";
     }
     elsif ($effect eq 'wild psionic talent') {
-      push @mutations, random_wild_psionic_talent($value);
+      my $psionics = random_wild_psionic_talent($value);
+      push @mutations, $psionics if $psionics;
     }
     else {
       push @mutations, $value > 1 ? "$effect <em>($value)</em>" : $effect;

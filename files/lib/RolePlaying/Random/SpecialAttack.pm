@@ -15,7 +15,7 @@ my %special_attacks = (
   'part' => [qw(acid cold electricity fire)],
   'range part' => [qw(gas sonic)],
   'touch part' => ['poison','energy drain'],
-  'touch special' => [qw(befouls purifies), tinyrand('creates','destroys').' '.tinyrand('','un').'holy water'],
+  'touch special' => [qw(befouls purifies), glob q({creates,destroys}\ {,un}holy\ water)],
   'vocal' => [qw(deafen fear terror flight)],
 );
 $special_attacks{$_} = [@{$special_attacks{'part'}}, @{$special_attacks{"$_ part"}}] for ('range','touch');

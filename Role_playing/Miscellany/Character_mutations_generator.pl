@@ -24,17 +24,20 @@ page( 'code' => sub {
   form(3, sub {
     fieldset(4, sub {
       inputs(5, [
-        { type => 'text', name => 'iterations', placeholder => '# of characters?' },
+        { type => 'text',   name => 'iterations', placeholder => '# of characters or names?' },
         { type => 'submit', value => 'Mutate!' },
         { type => 'button', value => 'Start over', onclick => "location='$file'" }
       ]);
+      paragraph(5, 'Please separate names by a comma (,) or a semicolon (;).', { style => 'font-size: smaller' })
     }, { legend => "How many chracters do you wish to mutate?" });
   }, { action => $file, method => 'get'});
 
-  my $iteration = 1;
-#  $iterations = $iterations =~ /\d+/ ? $iterations : scalar split(/(,|;)/,$iterations) - 1;
-  for (1..$iterations) {
-    my $heading = $iterations == 1 ? 'A character mutated' : ucfirst ORD(NUMWORDS($iteration)).' character mutated';
+  my @m_iterations = $iterations =~ /^\d+$/ ? (1..$iterations) : split(/(?:,|;)/,$iterations);
+
+  for my $iteration (@m_iterations) {
+    my $heading = $iteration !~ /^\d+$/ ? "$iteration mutated"  : @m_iterations == 1 ? 'A character mutated' :
+                  ucfirst NUMWORDS(ORD($iteration)).' character mutated';
+
     section(3, sub {
       my $mutations = random_mutations;
       if (scalar @{$mutations} > 0) {

@@ -322,7 +322,7 @@ sub story {
   for my $section (@$sections) {
     section($tab, sub { passage($tab + 1, $section, $opt) }) if $section;
     
-    if ($inc == 0) {
+    if ($inc == 0 && scalar @$sections > 1) {
       nav($tab, sub {
         my $class = get_columns(4, $cols);
         list($tab + 2, 'u', $toc, { 'class' => $class });

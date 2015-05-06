@@ -12,7 +12,7 @@ use RolePlaying::CharacterBuilding::AbilityScores qw(random_ability);
 my @base_events = (
   random_ability.' check',
   'non-weapon proficiency check',
-  'saving throw'.tinyrand('',' vs. '.random_saving_throw(tinyrand('keys','all'))),
+  'saving throw'.tinyrand('',' vs. '.random_saving_throw(tinyrand('by keys','all'))),
   'backstab',
   'undead turning',
   'spell memorization'
@@ -21,7 +21,7 @@ my @base_events = (
 my @game_rolls = (
   random_ability.' checks',
   'on non-weapon proficiency checks',
-  'to saving throws'.tinyrand('',' vs. '.random_saving_throw(tinyrand('keys','all'))),
+  'to saving throws'.tinyrand('',' vs. '.random_saving_throw(tinyrand('by keys','all'))),
   'Armor Class',
   'THAC0 modifier',
   'to Surprise'

@@ -6,15 +6,24 @@ our @EXPORT_OK = qw(print_monster);
 
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
+use File::Slurp; # read_file
 
-use Base::Data qw(get_hash);
+use Base::Page qw(passage);
+use Base::Data qw(get_directory data_directory get_hash data_file);
 use HTML::Elements qw(section heading paragraph table list);
-use Util::Convert qw(textify);
+use Util::Convert qw(filify textify);
 
-my @monster_headings = ('Monster','Climate/Terrain','Frequency','Organization','Activity cycle','Diet','Intelligence','Treasure','Alignment','No. Appearing','Armor Class','Movement','Hit Dice','THAC0','No. of Attacks','Damage/Attack','Special Attacks','Special Defenses','Magic Resistance','Size','Morale','XP Value','Appearance','Combat','Habitat/Society','Ecology','Variants','Note');
+my @long_values = ('Appearance','Combat','Habitat/Society','Ecology','Variants','Note');
+my @monster_headings = ('Monster','Climate/Terrain','Frequency','Organization','Activity cycle','Diet','Intelligence','Treasure','Alignment','No. Appearing','Armor Class','Movement','Hit Dice','THAC0','No. of Attacks','Damage/Attack','Special Attacks','Special Defenses','Magic Resistance','Size','Morale','XP Value');
 my $monsters = get_hash(
   'file' => ['Role_playing','Monsters.txt'],
   'headings' => \@monster_headings,
+);
+
+my %multi_monsters = (
+  'Throglin' => ['Throglin','Freshwater throglin','Saltwater throglin'],
+  'Tralg'    => ['Arctic tralg','Desert tralg','Two-headed tralg'],
+  'Twarg'    => ['Hill twarg','Mountain twarg','Jungle twarg'],
 );
 
 my %rainbow_dragonette;
@@ -41,43 +50,55 @@ sub dragonette_table {
   table(4, { class => 'rainbow_dragonette', rows => [['header',$rainbow_dragonette_headings{$var}],['data',\@rows]] });
 }
 
-my $sub_hash = {
+my $doc_magic = {
   'odf_table' => sub { dragonette_table('odf') },
   'age_table' => sub { dragonette_table('age') },
 };
 
 sub print_monster {
-  my ($user_monsters) = @_;
-  my @monsters = $user_monsters ? @$user_monsters : textify((basename($0)));
-  my @long_values = ('Appearance','Combat','Habitat/Society','Ecology','Variants','Note');
-  section(3, sub {
-    my $columns = @monsters > 1 ? 'multi' : 'two';
-    for my $monster (@monsters) {
-      my @items;
-      for my $key (grep($_ !~ join('|',@long_values),@monster_headings)) {
-        push @items, $monsters->{$monster}{$key} ? [qq(<strong>$key:</strong> $monsters->{$monster}{$key}), { class => 'monster_attribute' }] : '';
-      }
-      list(4,'u',\@items, { class => "monster $columns" });
-    }
-  });
+  my ($in_monster) = @_;
+  my $in_monsters = $multi_monsters{$in_monster} ? $multi_monsters{$in_monster} : [$in_monster];
+  my @monsters = @$in_monsters;
+  my $columns = @monsters > 1 ? 'multi' : 'two';
+  my @lists;
+  my @passages;
   for my $monster (@monsters) {
     my $heading_level = 2;
-    my $heading = @monsters > 1 ? $monster : undef;
+    my $heading = @monsters > 1 ? [ $heading_level, $monster ] : undef;
+    $heading_level++ if @monsters > 1;
+    
+    my @items;
+    for my $key (@monster_headings) {
+      push @items, $monsters->{$monster}{$key} ? [qq(<strong>$key:</strong> $monsters->{$monster}{$key}), { class => 'monster_attribute' }] : '';
+    }
+    push @lists, [\@items, $columns];
+    
+    my $file = filify($monster).'.txt';
+    my @file_lines = read_file(data_file('Role_playing/Monsters',$file));
+    chomp(@file_lines);
+
+    my %long_fields;
+    @long_fields{@long_values} = @file_lines;
+
+    my @lines;
+    for my $value (@long_values) {
+      next if !$long_fields{$value};
+      my @in_lines = split(/\\/, $long_fields{$value});
+      unshift @in_lines, "$heading_level $value";
+      push @lines, @in_lines;
+    }
+    push @passages, [$heading, \@lines];
+  }
+
+  section(3, sub {
+    for my $list (@lists) {
+      list(4, 'u', $list->[0], { class => "monster $list->[1]" });
+    }
+  });
+  for my $passage (@passages) {
     section(3, sub {
-      $heading_level++ if @monsters > 1;
-      for my $long_key (@long_values) {
-        next if !$monsters->{$monster}{$long_key};
-        heading(5,$heading_level,$long_key);
-        for my $line (split(/\\/,$monsters->{$monster}{$long_key})) {
-          if ($line =~  s/&//) {
-            $sub_hash->{$line}->();
-          }
-          else {
-            paragraph(6,$line);
-          }
-        }
-      }
-    }, { 'heading' => $heading ? [ $heading_level, $heading ] : undef });
+      passage(4, $passage->[1], { 'doc magic' => $doc_magic });
+    }, { heading => $passage->[0] });
   }
 }
 

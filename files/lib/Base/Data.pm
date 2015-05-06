@@ -36,12 +36,11 @@ sub data_file {
 
   my $root_path = get_root('path');
   my $root_data = get_root('data');
-  
+
   my $relative_path = File::Spec->abs2rel($file_name,$root_path);
      $relative_path =~ s/\.\w+$//;
      $relative_path =~ s/working(?:\/|\\)//;
 
-  my $data;
   my $data;
   if ($directory && $filename) {
     $data = "$root_data/$directory/$filename";
@@ -163,19 +162,22 @@ sub alpha_hash {
 
 sub get_data {
   my ($list, $in, $caller) = @_;
-  if ($in !~ /^(?:data|list)$/ && !$$list{$in}) {
-    warn $caller ? "$caller: $in not in database" : "$in not in database";
-  }
 
-  my $out;
-  if ($in eq 'data') {
+  my $out = undef;
+  if ($in =~ /^(?:help|options)$/) {
+    $out = "Your options are:
+      'data' to get the hash
+      'keys' to get a list of keys
+      or a specific key name to get its data";
+  }
+  elsif ($in eq 'data') {
     $out = $list;
   }
-  elsif ($in eq 'list') {
-    $out = [keys %{$list}];
+  elsif ($in eq 'keys') {
+    $out = [keys %$list];
   }
-  else {
-    $out = $$list{$in};
+  elsif ($list->{$in}) {
+    $out = $list->{$in};
   }
   
   return $out;

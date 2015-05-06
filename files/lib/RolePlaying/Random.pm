@@ -12,14 +12,22 @@ sub random {
   my $random_thing;
   if ($user_input && $user_input =~ /(?:help|options)/) {
     my $keys = join(', ', sort keys %{$list});
-    $random_thing = "Your options are: $keys, keys, list, or all.";
+    $random_thing = "Your options are:
+      $keys
+      'by keys' to get a random key
+      'data' to get the whole hash
+      'keys' to get a list of the keys
+      'all' to get a random item from any key on the list";
   }
-  elsif ($user_input && $user_input eq 'list') {
+  elsif ($user_input && $user_input eq 'data') {
     $random_thing = $list;
+  }
+  elsif ($user_input && $user_input eq 'keys') {
+    $random_thing = [keys %$list];
   }
   else {
     my @random_list;
-    if ($user_input && $user_input eq 'keys') {
+    if ($user_input && $user_input eq 'by keys') {
       @random_list = keys %{$list};
     }
     elsif (!$user_input || $user_input eq 'all' ) {

@@ -56,6 +56,8 @@ SPAN<There is no official church for Aleena. She has no priests and grants no sp
 I only use this handle on Yahoo! since Lady Aleena was already taken. Aerianna is an amalgamation of two of my characters' names, Drianna and Aegyn.
 3 Lady Olara
 I only used this handle on Hotmail since Lady Aleena was already taken.
+3 Other names
+I have also been known as Faerie Queen, Sorceress, and Lady Harper when I was active on a few telnet A<BBSs|href="Miscellany/BBSs.pl">. While on A<IRC|href="IRC_channels_I_visit.pl"> I use many abbreviations of Lady_Aleena. I've also used, briefly, Lady_Cookie, Scary_Aleena, and Santa_Aleena.
 2 Favorite quotes
 bq A man's knowledge is like an expanding sphere, the surface corresponding the boundary between the known and the unknown. As the sphere grows, so does its surface; the more a man learns, the more he realizes how much he does not know. Hence, the most ignorant man thinks he knows it all.
 by L. Sprague de Camp

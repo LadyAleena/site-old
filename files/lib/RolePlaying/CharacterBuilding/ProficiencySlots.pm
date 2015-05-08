@@ -8,7 +8,7 @@ use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
 
 my %slots;
 while (my $line = <DATA>) {
-  chomp($line);
+  chomp $line;
   my ($class, $weapon, $nonweapon) = split(/\|/, $line);
   my @slot_stats = qw(initial frequency);
   @{$slots{$class}{'weapon'}}{@slot_stats}     = split(/;/, $weapon);

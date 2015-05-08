@@ -20,22 +20,16 @@ sub print_word_find {
   my $word_find_file = filify($word_find).'.txt';
 
   open(my $word_find_board, '<', data_file('Role_playing/Word_finds/boards',$word_find_file)) || die $!;
-
   open(my $word_find_list,  '<', data_file('Role_playing/Word_finds/lists',$word_find_file))  || die $!;
-  my @monsters = map{chomp $_; $_} <$word_find_list>;
-  my @items;
-  for my $monster (@monsters) {
-    push @items, [$monster, { class => 'monster_item' }];
-  }
+  my @monsters = map { chomp $_; [$_, { class => 'monster_item' }] } <$word_find_list>;
 
   section(3, sub {
     pre(3,sub { while (<$word_find_board>) { print $_ } });
   });
   section(3, sub {
-    paragraph(3,'Find these monsters:');
-    list(4,'u', \@items, { class => 'four' });
+    list(4, 'u', \@monsters, { class => 'four' });
     paragraph(4,qq(There is a lone <span class="monster_item">$lone</span> in there too. $lone_sent));
-  });
+  }, { 'heading' => [2, 'Find these monsters'] });
 }
   
 1;

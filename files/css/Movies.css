@@ -1,12 +1,10 @@
 body.movie_series h1 { font-style: italic }
-ul.movie_list li { padding: .1em; }
 ul.season_list  li, ul.actor_list li { list-style: none; }
-ul.program_list li { list-style: none; font-style: oblique; }
+ul.program_list li { list-style: none; font-style: italic; }
 ol.episode_list, ul.actor_list { font-size: smaller; }
 
-.title { font-style: oblique; font-weight: bold; }
-.links { font-size: smaller; }
-.series, .program { font-style: oblique; }
+.title { font-style: italic; font-weight: bold; }
+.series, .program { font-style: italic; }
 
 /*Movie miscellany*/
 .dead  { background:#ccc; }
@@ -21,5 +19,4 @@ ol.episode_list, ul.actor_list { font-size: smaller; }
   ul.program_list,
   ul.season_list,
   .like,
-  .links { display: none; }
 }

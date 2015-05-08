@@ -8,7 +8,7 @@ use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
 
 my @turns = (qw(20 19 16 13 10 7 4 T T D D), 'D*');
 my @undead = (<DATA>);
-chomp(@undead);
+chomp @undead;
 my $base_turning = 4;
 
 sub turning_undead_table_rows {

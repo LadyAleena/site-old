@@ -16,7 +16,7 @@ sub get_directory {
   opendir(my $dir, $directory) || die "Can't open $directory $!";
   my @contents = File::Spec->no_upwards(readdir($dir));
   closedir($dir);
-  chomp(@contents);
+  chomp @contents;
   
   @contents = map("$directory/$_", @contents) if $opt->{'full path'} && $opt->{'full path'} =~ /^[yt1]/;
 

@@ -134,7 +134,7 @@ sub dissect_source {
   my @toc;
 
   while (my $line = <$source>) {
-    chomp($line);
+    chomp $line;
     next if !$line;
     
     if ($line =~ /^2 /) {

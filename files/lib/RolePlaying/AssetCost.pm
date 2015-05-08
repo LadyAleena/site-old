@@ -44,7 +44,7 @@ sub get_armor_value {
 
 open(my $armor_file, '<', data_file($directory,'armor.txt')) || die "Can't open armor.txt. Stopped $!";
 while (my $raw_armor = <$armor_file>) {
-  chomp($raw_armor);
+  chomp $raw_armor;
   my ($base_armor, $base_value) = split(/\|/, $raw_armor);
   $assets->{$base_armor}               = $base_value;
   $assets->{"$base_armor -1 (cursed)"} = 1000;
@@ -192,7 +192,7 @@ sub add_ammo_of {
 
 open(my $ammo_file, '<', data_file($directory,'ammunition.txt')) || die "Can't open ammunition.txt. Stopped $!";
 while (my $raw_ammo = <$ammo_file>) {
-  chomp($raw_ammo);
+  chomp $raw_ammo;
   my ($base_ammo, $base_value) = split(/\|/, $raw_ammo);
   $assets->{$base_ammo} = $base_value;
   $assets->{"$base_ammo -1 (cursed)"} = 1000;

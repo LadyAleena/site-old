@@ -11,7 +11,7 @@ use Encode qw(encode);
 
 use Base::Root qw(get_root);
 use Base::Data qw(data_file get_hash get_data);
-use HTML::Elements qw(footer section heading paragraph list anchor pre);
+use HTML::Elements qw(footer section heading paragraph list anchor pre span);
 use Util::Columns;
 use Util::Convert qw(filify textify idify searchify);
 use Util::GrammaticalJoin;
@@ -122,15 +122,14 @@ for my $movie (values %$movies) {
   next unless ($show_file && -f $show_file);
   open(my $file, '<', $show_file);
   my @data = <$file>;
-  chomp(@data);
+  chomp @data;
 
   my $season;
   my $inc;
   for my $line (@data) {
-    chomp($line);
     if ($line eq '.') {
       $inc++;
-      $movie->{'counts'}{'season'} = $inc;
+      $movie->{'counts'}{'season'}++;
       my $season_num = sprintf "%02s", $inc;
       $season = "season $season_num";
       $movie->{'seasons'}{$season}{'title'} = 'Season '.NUMWORDS($inc);
@@ -374,11 +373,12 @@ sub genre_s {
 sub about {
   my ($movie) = @_;
 
+  my $start = $movie->{'genre'}{'non-fiction'} ? 'about' : 'with';
   my @abouts;
   for my $genre (values %{$movie->{'genre'}}) {
     push @abouts, grep($_ ne 'main',@$genre);
   }
-  my $about = @abouts ? 'with '.grammatical_join('and', @abouts) : undef;
+  my $about = @abouts ? "$start ".grammatical_join('and', @abouts) : undef;
 
   return $about;
 }
@@ -447,7 +447,7 @@ sub search_link {
 sub series_text {
   my ($movie) = @_;
 
-  my @series = $movie->{'series'} ? map(search_link($_), keys %{$movie->{'series'}}) : ();
+  my @series = $movie->{'series'} ? map(search_link($_), sort { $movie->{'series'}{$b} <=> $movie->{'series'}{$a} } keys %{$movie->{'series'}}) : ();
   my $lists_text = grammatical_join('and',@series);
   my $series_text = $lists_text ? "part of the $lists_text series" : undef;
 
@@ -470,27 +470,28 @@ sub mini_parts {
 # The first parameter is the individual movie hash ref,
 # the second is a hash ref with the named parameters: series, links, and crossovers.
 sub display_movie {
-  my ($movie,$opt) = @_;
+  my ($movie, $opt) = @_;
 
   my $title  = $movie->{'title'};
-  my $text   = !$movie->{'series'} && $movie->{'media'} eq 'tv' ? anchor(textify($title), { 'href' => 'Movies_by_series?series='.searchify($title) }) : textify($title);
+  my $text   = !$movie->{'series'} && $movie->{'seasons'} ? anchor(textify($title), { 'href' => 'Movies_by_series?series='.searchify($title) }) : textify($title);
   my $id     = idify($title);
 
   my $start  = $movie->{'start year'} && $movie->{'start year'} ne 'tbd' ? $movie->{'start year'} : undef;
   my $parts  = $movie->{'media'} eq 'miniseries' ? mini_parts($movie) : undef;
-  my $media  = media($movie);
-  my $basis  = basis($movie);
-  my $run    = run_time($movie);
+  my $media  = $movie->{'media'} eq 'tv' ? 'television series' : $movie->{'media'};
   my $genre  = genre_s($movie);
   my $about  = about($movie);
+  my $basis  = basis($movie);
+  my $run    = run_time($movie);
   my $mseries = $opt->{'series'} ? series_text($movie) : undef;
 
+  my $verb = $movie->{'start year'} eq 'tbd' ? 'might be' : $movie->{'start year'} > $current_year ? 'will be' : 'is';
   my $movie_is    = A(join_defined(' ',[$start,$parts,$genre,$media,$about,$mseries,$basis,$run])).'.';
   my $crossover   = $opt->{'crossover'} && $movie->{'crossovers'} ? 'It '.crossovers($movie)   : undef;
   my $links       = $opt->{'links'} ? links($movie) : undef;
   my $movie_line  = join_defined(' ',[$movie_is,$crossover,$links]);
 
-  return qq(<span id="$id" class="title">$text</span> is $movie_line);
+  return span($text, { 'id' => $id, 'class' => 'title'}). " $verb $movie_line";
 }
 
 # returns the title in italics and the start year in parentheses.

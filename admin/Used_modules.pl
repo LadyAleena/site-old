@@ -20,7 +20,7 @@ sub file_list {
       open(my $fh, '<', $_) || die $!;
       my $loop = 0;
       while (my $line = <$fh>) {
-        chomp($line);
+        chomp $line;
         $uses{$1}++ if $line =~ /^use ((\w|\:)+)(.+)$/;
         die "$_ isn't using strict" if ($loop == 1 && $line !~ /use strict/ && $_ !~ /index/);
         die "$_ isn't using strict" if ($loop == 2 && $line !~ /use strict/ && $_ =~ /index/);

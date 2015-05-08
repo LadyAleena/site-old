@@ -46,21 +46,28 @@ p { text-indent: 1em; }
 p.no_indent { text-indent:0; }
 p.author { text-indent: 0; font-size: larger; }
 p.address { font-weight:bold; clear:both; }
+p.indent0  { margin-left:  0em; }
+p.indent2  { margin-left:  2em; }
+p.indent4  { margin-left:  4em; }
+p.indent6  { margin-left:  6em; }
+p.indent8  { margin-left:  8em; }
+p.indent12 { margin-left: 12em; }
+p.indent16 { margin-left: 16em; }
 
 strong { font-size:smaller; font-weight:bold; }
 strong.caps { font-size:smaller; font-variant:small-caps; }
 sup { font-size:x-small; }
 span.bigger { font-size:large; }
 q { quotes: '“' '”' '‘' '’' '“' '”' '‘' '’'; }
-blockquote p::before { content: "“"; font-size: 125%; }
-blockquote p::after  { content: "”"; font-size: 125%; }
+blockquote p::before { content: "“"; font-size: 110%; }
+blockquote p::after  { content: "”"; font-size: 110%; }
 blockquote p { display: inline-block; text-indent: 0; margin: 0; padding: 0; }
 
 /* The use of the em is safe since the font size should be the same for the list. */
 ul { margin: 0em 0em 0em 1.25em; padding: 0px 0px 0px 3px; }
 ul ul { margin-left: 1em; }
+li { padding: .1em 0; }
 ol { margin: 0em 0em 0em 1.75em; padding: 0px 0px 0px 3px; }
-li { padding: .05em }
 li.inactive { font-weight:normal; }
 li.active { font-weight:bold; }
 /* keep order of next 2 rules*/
@@ -75,6 +82,7 @@ dt {font-weight:bold;}
 
 .last { border-bottom:none; }
 table { border-collapse:collapse; border:1px solid #027; }
+table.full { float:left; margin-left:auto; margin-right:auto; width: 100%; }
 caption { border-color: #027; border-width: 1px 1px 0 1px; border-style: solid; white-space: nowrap; background-color: #eed; color: #027; font: normal large arial; }
 colgroup { border:1px solid #027; }
 tbody { border-bottom:1px solid #027; }
@@ -92,13 +100,15 @@ table.color td.prime { border:2px solid #333; }
 
 fieldset, legend, select, input, textarea { border:1px solid #027; border-radius: 3px; }
 legend, select, input, textarea { margin-bottom: 3px; background-color:#ffe; color: #027; }
-fieldset { background-color: #fff; color: #eed; }
+fieldset { background-color: #fff; color: #000; }
 input.search { margin-top: .5em; }
 input.block { display: block; }
 fieldset.hidden { display: none; }
 textarea { width:100%; height: 100px; }
 label { display: block; float: left; padding-right: 2px; width: 20%; font-weight: 700; text-align: right; color:#000;}
 label.specfic { display: inline; float: none; padding-right: 0; width: auto; text-align: left; font-weight: normal; }
+
+.links { font-size: smaller; }
 
 .two,.three,.four,.five,.six,.seven,.eight,.nine,.ten { clear:both; }
 .two   { -moz-column-count:2; -webkit-column-count:2; column-count:2; }

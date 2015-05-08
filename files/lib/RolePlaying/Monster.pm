@@ -75,7 +75,7 @@ sub print_monster {
     
     my $file = filify($monster).'.txt';
     my @file_lines = read_file(data_file('Role_playing/Monsters',$file));
-    chomp(@file_lines);
+    chomp @file_lines;
 
     my %long_fields;
     @long_fields{@long_values} = @file_lines;

@@ -1,41 +1,89 @@
-Flash Player|get.adobe.com/flashplayer|using
-Reader|get.adobe.com/reader|
-HTTP Server|httpd.apache.org/download.cgi|using
-iTunes|www.apple.com/itunes/download|
-QuickTime|www.apple.com/quicktime/download|using
-Safari|www.apple.com/safari/download|
-Internet Security (free)|www.comodo.com/home/internet-security/free-internet-security.php|
-DivX7 (free)|www.divx.com/en/downloads/postdownload/divx/win|
-Find Junk Files|eyeclaxton.com/download/fjf791.zip|
-interActual Player|player.interactual.com|
+Flash Player|get.adobe.com/flashplayer
+Reader|get.adobe.com/reader
+HTTP Server|httpd.apache.org/download.cgi
+iTunes|www.apple.com/itunes/download
+QuickTime|www.apple.com/quicktime/download
+Safari|www.apple.com/safari/download
+Internet Security (free)|www.comodo.com/home/internet-security/free-internet-security.php
+DivX7 (free)|www.divx.com/en/downloads/postdownload/divx/win
+Find Junk Files|eyeclaxton.com/download/fjf791.zip
+interActual Player|player.interactual.com
 WS_FTP Pro|www.ipswitchft.com/products/ws_ftp_professional
 EditPad Pro|www.editpadpro.com
-Artifact Mage|www.mapmage.com/artifactmage.html|
-Book Mage|www.mapmage.com/bookmage.html|
-Dice Mage|www.mapmage.com/dicemage.html|
-Inn Mage|www.mapmage.com/innmage.html|
-Name Mage|www.mapmage.com/namemage.html|
-Firefox|www.mozilla.com/en-US/firefox|using
-Lady Aleena's Add-ons|addons.mozilla.org/en-US/firefox/collections/lady_aleena/lady_aleena/|using
-TableSmith|mythosa.net/wiki/pmwiki.php?n=Main.TableSmith|
-Java|www.java.com/en|using
-OpenOffice|www.openoffice.org|
-CompuPic|www.photodex.com/downloads/products/compupicpro|
-CCleaner|www.piriform.com/ccleaner|using
-Defraggler|www.piriform.com/defraggler|using
-Alchemy|www.popcap.com/games/alchemy|
-Atomica|www.popcap.com/games/atomica|
-Bejeweled|www.popcap.com/games/bejeweled|
-Big Money|www.popcap.com/games/bigmoney|
-Bookworm|www.popcap.com/games/bookworm|
-Dynomite|www.popcap.com/games/dynomite|
-Mummy Maze|www.popcap.com/games/mummymaze|
-Noah's Ark|www.popcap.com/games/noahsark|
-Rocket Mania|www.popcap.com/games/rocketmania|
-Seven Seas|www.popcap.com/games/sevenseas|
-NingPo MahJong|pyrogon.bookofhook.com/games/ningpo|
-realPlayer|www.real.com/realplayer|
-Yahoo! Messenger|messenger.yahoo.com|
-Power Calculator|download.microsoft.com/download/whistler/Install/2/WXP/EN-US/PowerCalcPowertoySetup.exe|
-Tweak UI|download.microsoft.com/download/f/c/a/fca6767b-9ed9-45a6-b352-839afb2a2679/TweakUiPowertoySetup.exe|
-VLC media player|www.videolan.org/vlc/index.html|using
+Artifact Mage|www.mapmage.com/artifactmage.html
+Book Mage|www.mapmage.com/bookmage.html
+Dice Mage|www.mapmage.com/dicemage.html
+Inn Mage|www.mapmage.com/innmage.html
+Name Mage|www.mapmage.com/namemage.html
+Firefox|www.mozilla.com/en-US/firefox
+Lady Aleena's Add-ons|addons.mozilla.org/en-US/firefox/collections/lady_aleena/lady_aleena/
+TableSmith|mythosa.net/wiki/pmwiki.php?n=Main.TableSmith
+Java|www.java.com/en
+OpenOffice|www.openoffice.org
+CompuPic|www.photodex.com/downloads/products/compupicpro
+CCleaner|www.piriform.com/ccleaner
+Defraggler|www.piriform.com/defraggler
+Alchemy|www.popcap.com/games/alchemy
+Atomica|www.popcap.com/games/atomica
+Bejeweled|www.popcap.com/games/bejeweled
+Big Money|www.popcap.com/games/bigmoney
+Bookworm|www.popcap.com/games/bookworm
+Dynomite|www.popcap.com/games/dynomite
+Mummy Maze|www.popcap.com/games/mummymaze
+Noah's Ark|www.popcap.com/games/noahsark
+Rocket Mania|www.popcap.com/games/rocketmania
+Seven Seas|www.popcap.com/games/sevenseas
+NingPo MahJong|pyrogon.bookofhook.com/games/ningpo
+realPlayer|www.real.com/realplayer
+Yahoo! Messenger|messenger.yahoo.com
+Power Calculator|download.microsoft.com/download/whistler/Install/2/WXP/EN-US/PowerCalcPowertoySetup.exe
+Tweak UI|download.microsoft.com/download/f/c/a/fca6767b-9ed9-45a6-b352-839afb2a2679/TweakUiPowertoySetup.exe
+VLC media player|www.videolan.org/vlc/index.html
+Adobe|www.adobe.com/downloads
+The Apache Software Foundation|www.apache.org
+Apple|www.apple.com/downloads
+Avanquest software|www.avanquest.com/USA
+avast! Anitvirus|www.avast.com/free-antivirus-download
+Cerulean Studios TrillianAstra|www.trillian.im
+Comodo|www.comodo.com
+DivX|www.divx.com/en/win
+Ever Changing Book of Names|ebon.pyorre.net
+eyeClaxon|eyeclaxton.com/index.html
+FileZilla|filezilla-project.org
+Gene6|www.gene6.com
+ICQ.com|www.icq.com
+interActual|www.interactual.com
+Ipswitch|www.ipswitch.com
+JGSoft|www.just-great-software.com
+MapMage|www.mapmage.com
+mIRC|www.mirc.com
+Microsoft PowerToys for Windows XP|www.microsoft.com/windowsxp/Downloads/powertoys/Xppowertoys.mspx
+Microsoft Silverlight|silverlight.net
+Mozilla|www.mozilla.org
+Mythosa|www.mythosa.net
+Notepad++|notepad-plus.sourceforge.net/uk/site.htm
+Oracle|www.oracle.com
+Photodex|www.photodex.com
+Piriform|www.piriform.com
+PopCap Games|www.popcap.com
+PopUp Smasher|www.popupstop.com
+PuTTY|www.chiark.greenend.org.uk/~sgtatham/putty
+Pyrogon|www.pyrogon.com
+RarLab|www.rarlab.com
+real|www.real.com
+Spyware Terminiator|www.spywareterminator.com
+Strawberry Perl|strawberryperl.com
+Vandyke Software|www.vandyke.com
+WinZip|www.winzip.com
+Xenu's Link Sleuth|home.snafu.de/tilman/xenulink.html
+Yahoo!|www.yahoo.com
+grepWin|tools.tortoisesvn.net/grepWin.html
+HexChat|hexchat.github.io
+XChat|xchat.org
+Debian|www.debian.org
+KDE|www.kde.org
+LibreOffice|www.libreoffice.org
+VideoLAN|www.videolan.org
+Microsoft Windows|www.windows.com
+Microsoft Office|products.office.com
+Maxis|www.maxis.com

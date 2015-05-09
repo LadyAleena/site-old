@@ -10,53 +10,36 @@ use Base::Page qw(page story);
 use HTML::Elements qw(list anchor);
 use Util::Sort qw(article_sort);
 
-my $program_sites = get_hash( 'file' => ['Miscellany','Program_sites.txt'], 'headings' => [qw(name link using programs+)] );
-my $program_links = get_hash( 'file' => ['Miscellany','Program_links.txt'], 'headings' => [qw(name link using)] );
-
-# I haven't added Mircosoft just yet, because it is an exception to the structure below. I am not sure what I will do with it.
-
-sub program_link {
-  my ($using, $link, $name) = @_;
-  
-  my $use = $using ? $using : 'none';
-  my $link_text = $link ? anchor( $name, { href => "http://$link", target => '_new', class => $using } ) : $name;
-  
-  return $link_text;
-}
+my $program_sites = get_hash( 'file' => ['Miscellany','Program_sites.txt'], 'headings' => [qw(name using programs+)] );
+my $program_links = get_hash( 'file' => ['Miscellany','Program_links.txt'] );
 
 my @items;
 for my $site (sort {article_sort(lc $a->{'name'},lc $b->{'name'})} values %$program_sites) {
-  my $site_name = $site->{'name'};
-  my ($site_link,$download_link) = split(/;/,$site->{'link'});
-  my $site_link_text = program_link($site->{'using'},$site_link,$site_name);
-  my $download_link_text = $download_link ? anchor('download', { href => "http://$download_link",  target => '_new' }) : undef;
-  my $links = join(' - ',grep(defined,($site_link_text,$download_link_text)));
+  my $name = $site->{'name'};
+  my $use  = $site->{'using'} ? $site->{'using'} : undef;
+  my $link = $program_links->{$name} ? $program_links->{$name} : undef;
+  my $item = $link ? anchor( $name, { href => "http://$link", target => 'ex_tab', class => $use } ) : $name;
 
-  if (!$site->{'programs'}) {
-    push @items, $links;
-  }
-  else {
-    my @initems;
+  if ($site->{'programs'}) {
+    my @in_items;
     my @programs = @{$site->{'programs'}};
-    for my $program (sort {article_sort(lc $a,lc $b)} @programs) {
-      my $info = $program_links->{$program};
-      my $link = program_link($info->{'using'}, $info->{'link'}, $program);
-      push @initems, $link;
+    for my $program (sort {article_sort(lc $a, lc $b)} @programs) {
+      my ($p_name, $p_use) = split(/:/, $program);
+      my $p_link = $program_links->{$p_name} ? $program_links->{$p_name} : undef;
+      my $p_item = $p_link ? anchor( $p_name, { href => "http://$p_link", target => 'ex_tab', class => $p_use } ) : $p_name;
+      push @in_items, $p_item;
     }
     
-    if (@initems == 1) {
-      push @items, qq($links - $initems[0]);
-    }
-    else {
-      push @items, [$links, { 'inlist' => ['u', \@initems] } ];
-    }
+    my $item_bk = $item;
+    $item = @in_items > 1 ? [$item_bk, { 'inlist' => ['u', \@in_items] } ] : "$item_bk - $in_items[0]";
   }
+  push @items, $item;
 }
 
-my $doc_magic = { 'programs' => sub { list(3,'u',\@items, { class => 'two' } ) } };
+my $doc_magic = { 'programs' => sub { list(3, 'u', \@items, { class => 'two' } ) } };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
-This is a list of programs that I B<am using> or have used. Some have been made obsolete by others.
+This is a list of programs that I B<am using> or have used. I can not account for I<all> the software we have had and used over the years. Some of it was so bad, we blanked it out of our heads. This list does not have the full list of hardware drivers either. So much software, so little time or in this case patience.
 & programs

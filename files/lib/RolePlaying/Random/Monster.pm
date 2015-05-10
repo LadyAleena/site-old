@@ -2,7 +2,7 @@ package RolePlaying::Random::Monster;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(random_monster);
+our @EXPORT_OK = qw(random_monster random_monster_list);
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
@@ -67,16 +67,13 @@ $submonsters{'dragon'} = {
   'metallic dragon'  => [map( "$_ dragon", qw(brass bronze copper gold silver) )],
   'neutral dragon'   => [map( "$_ neutral dragon", qw(amber jacinth jade pearl moonstone) )],
   'ferrous dragon'   => [map( "$_ ferrous dragon", qw(iron nickel tungsten cobalt chromium) )],
-  'dragonette'       => ['faerie dragon','firedrake','pseudodragon','rainbow dragonette'],
-  'other dragon'     => [qw(dragon-kin dracotaur half-dragon weredragon sea-wyrm),'albino wyrm'],
-  'pseudodragon'     => [qw(chimera dragonne gorynych salamander scalamagdrion wyvern)],
+  'linnorm dragon'   => [map( "$_ linnorm dragon", qw(dread flame forest frost gray land midgard rain sea) ), 'corpse tearer'],
+  'dragonet'         => ['faerie dragon','firedrake','pseudodragon','rainbow dragonette'],
+  'dragon-kin'       => [qw(dracotaur dracolisk dragon-kin half-dragon weredragon sea-wyrm chimera dragonne gorynych salamander scalamagdrion wyvern),'albino wyrm'],
   'undead dragon'    => ['dracolich','ghost dragon'],
-  'Linnorm dragon'   => [map( "Linnorm $_ dragon", qw(dread flame forest frost gray land midgard rain sea) ), 'corpse tearer'],
   'Thessalamonster'  => [map("$_ <small>(Thessalamonster)</small>",qw(Thessalhydra Thessalmerro Thessalgorgen Thessaltrice))],
   'elemental drake'  => [map( "elemental $_ drake", (@elements,@paraelements) )],
   'hydra'            => [qw(hydra pyrohydra cryohydra gulgutghhydra), 'lemaean hydra'],
-  'basilisk'         => ['lesser basilisk','greater basilisk','dracolisk'],
-  'cockatrice'       => [qw(cockatrice pyrolisk)],
   'dragon'           => ['dragon', map( "$_ dragon", qw(brine brown Cerillian cloud deep electrum fang mercury mist radiant shadow spider steel yellow prismatic) )]
 };
 
@@ -114,7 +111,7 @@ $submonsters{'goblinoid'} = {
   'kobold'          => [qw(kobold urd trobold)],
   'orc'             => [qw(orc ondonti scro)],
   'ogre'            => [qw(ogre merrow),'ogre mage','ogrima'],
-  'orc/ogre hybrid' => ['ogrillion', map( "$_ neo orog", qw(black red) )],
+  'orc/ogre hybrid' => ['ogrillion', 'orog', map( "$_ neo orog", qw(black red) )],
   'troll'           => ['troll', map( "$_ troll", qw(desert freshwater giant ice saltwater snow spectral), 'two-headed'), 'trobold', @$tralg, @$throglin],
   'goblinoid'       => ['goblin','bugbear','mongrelman','gobpry']
 };
@@ -128,13 +125,13 @@ $submonsters{'humanoid'} = {
 };
 
 $submonsters{'insectoid monster'}  = {
-  'giant beetle'      => [map("$_ beetle", qw(bombardier boring fire rhinoceros stag water deathwatch slicer stink))],
-  'neogi'             => ['neogi', 'great old master neogi'],
+  'giant beetle' => [map("$_ beetle", qw(bombardier boring fire rhinoceros stag water deathwatch slicer stink))],
+  'neogi'        => ['neogi', 'great old master neogi'],
   'insectoid monster' => [qw(ankheg manscorpion neogi rastipede thri-kreen xixchil)]
 };
 
 $submonsters{'planar creature'} = {
-  'aasimon'  => ['aasimon',  map( "$_ aasimon",  qw(agathinon deva light planetar solar) )],
+  'aasimon'  => ['aasimon',  map( "$_ aasimon",  qw(agathinon deva light planetar solar) ), 'aasimar'],
   'eledrin'  => ['eledrin',  map( "$_ eledrin",  qw(bralani coure firre ghaele noviere shiere tulani) )],
   'guadinal' => ['guadinal', map( "$_ guadinal", qw(avoral cervidal equinal leonal lupinal ursinal) )],
   'modron'   => ['modron',   map( "$_ modron",   qw(monodrone duodrone tridrone quadrone pentadrone decaton nonaton octon septon hexton quinton quarton tertian secundi primus) )],
@@ -158,6 +155,7 @@ $submonsters{'planar creature'} = {
     'elemental',       map( "$_ elemental",       @elements ),
     'paraelemental',   map( "$_ paraelemental",   @paraelements ),
     'quasi-elemental', map( "$_ quasi-elemental", @quasielements ),
+    'genasi', map( "$_ genasi", (@elements, @paraelements) ),
     'grue',   map( "$_ grue",   @all_elements ),
     'mephit', map( "$_ mephit", @all_elements ),
     map( "$_ swarm", ('elemental',@all_elements) ),
@@ -172,7 +170,7 @@ $submonsters{'planar creature'} = {
     'marid',   'tasked administrator marid',
   ],
   "tanar'ri" => [
-    "tanar'ri",
+    "tanar'ri", 'tiefling',
     map_in_map({ 'after' => "tanar'ri" },[
       [map( "$_ least",    qw(dretch jovoc mane rutterkin) )],
       [map( "$_ lesser",   qw(alu-fiend armanite bar-lgura bulezau cambian colchiln incubus maurezhi succubis uridezu yochlol) )],
@@ -195,11 +193,12 @@ $submonsters{'planar creature'} = {
 };
 
 $submonsters{'reptilian monster'} = {
-  'lizard man'         => ['lizard man', 'lizard king'],
-  'naga'               => ['naga',    map( "$_ naga",    qw(bone dark guardian spirit water) )],
-  'saurial'            => ['saurial', map( "$_ saurial", qw(bladeback finhead flyer hornhead) )],
-  'snake'              => [map( "$_ snake", qw(messenger winged) )],
-  'reptilian monaster' => [qw(behir laerti muckdweller troglodyte yuan-ti)]
+  'basilisk'   => ['lesser basilisk','greater basilisk','dracolisk'],
+  'cockatrice' => [qw(cockatrice pyrolisk)],
+  'lizard man' => ['lizard man', 'lizard king'],
+  'naga'       => ['naga',    map( "$_ naga",    qw(bone dark guardian spirit water) )],
+  'snake'      => [map( "$_ snake", qw(messenger winged) )],
+  'reptilian monster' => [qw(behir laerti muckdweller troglodyte yuan-ti)]
 };
 
 $submonsters{'undead'} = {
@@ -234,8 +233,8 @@ $submonsters{'undead'} = {
 };
 
 $submonsters{'underwater monster'} = {
-  'aboleth'            => ['aboleth', map( "aboleth $_", qw(savant skum) )],
-  'ixitxachitl'        => [qw(ixitxachitl ixzan)],
+  'aboleth'     => ['aboleth', map( "aboleth $_", qw(savant skum) )],
+  'ixitxachitl' => [qw(ixitxachitl ixzan)],
   'underwater monster' => [qw(crabman hippocampus kuo-toa locathah sehaugin merman triton), 'dragon turtle']
 };
 
@@ -246,8 +245,10 @@ for my $submonster (keys %submonsters) {
 $monsters{'grell'}              = ['grell',       map( "$_ grell", qw(worker philosopher patriarch) )];
 $monsters{'hag'}                = ['hag',         map( "$_ hag", qw(annis green sea) ), 'bheur'];
 $monsters{'lycanthrope'}        = ['lycanthrope', map( "were$_" , qw(badger bat bear boar crocodile dragon fox jackal jaguar leopard panther rat raven ray shark spider tiger wolf) ), 'seawolf','loop du noir','lythari','loup-garou'];
+$monsters{'saurial'}            = ['saurial',     map( "$_ saurial", qw(bladeback finhead flyer hornhead) )];
 $monsters{'sphinx'}             = ['sphinx',      map( "${_}sphinx", ('andro','crio','gyno','hieraco','draco') )];
 $monsters{'gargantua'}          = [map( "$_ gargantua", qw(humanoid insectoid reptilian) )];
+$monsters{'gith (special)'}     = [map( "$_  githyanki", ("'g'lathk","mlar","hr'a'cknir") ), 'githzerai'];
 $monsters{'amphibian monster'}  = [qw(bullywug grippli)];
 $monsters{'antherion'}          = [qw(jackalwere wolfwere)];
 $monsters{'avian moster'}       = [qw(aarakocra couatl kenku)];
@@ -256,6 +257,7 @@ $monsters{'gremlin'}            = [qw(fremlin galltrit gremlin jermlaine mite sn
 $monsters{'harpy'}              = [qw(harpy gobpry)];
 $monsters{'illithid'}           = ['mind flayer', 'psionic illithid', 'alhoon'];
 $monsters{'medusa'}             = [qw(medusa maedar), 'greater medusa'];
+$monsters{'spacefaring'}        = [qw(grommish hadozee hurwaeti)];
 $monsters{'monster'}            = [
   qw(arcane cloaker doppleganger giff gith grimlock mimic minotaur),
   'broken one', 'galeb dur', 'hook horror','living wall'
@@ -274,6 +276,13 @@ sub random_monster {
   }
   
   return $monster;
+}
+
+sub random_monster_list {
+  my $monster_list = random_monster('keys');
+  my @monsters = ('<strong>Random monster:</strong> '.random_monster);
+  push @monsters, "<strong>Random $_:</strong> ".random_monster($_) for sort @$monster_list;
+  return \@monsters;
 }
 
 1;

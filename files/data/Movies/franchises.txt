@@ -1,8 +1,10 @@
+Alice in Wonderland|||Alice in Wonderland (1951);Alice in Wonderland (1985);Alice in Wonderland (1999);Alice;Alice in Wonderland (2010)
 Alien vs. Predator|||Alien;Predator;Alien vs. Predator
 Baby Boom|||Baby Boom (1987);Baby Boom (1988)
 Batman|||Batman (1966);Batman (1989);Batman (2005);Batman v Superman: Dawn of Justice
 The Beastmaster|||The Beastmaster;BeastMaster
 Being Human|||Being Human (2008);Being Human (2011)
+Conan the Barbarian|||Conan the Barbarian;Red Sonja;Conan the Adventurer;Kull the Conqueror;Conan the Barbarian (2011)
 The Dark Tower|||IT;The Tommyknockers;The Stand;The Shawshank Redemption;Haven
 The Dead Zone|||The Dead Zone (1983);The Dead Zone (2002)
 Fame|||Fame (1980);Fame (1982);Fame L.A.;Un Paso Adelante;Fame (2009)
@@ -13,11 +15,15 @@ Halloween|||Halloween (1978);Halloween (2007)
 The Hitchhiker's Guide to the Galaxy|||The Hitchhiker's Guide to the Galaxy (1981);The Hitchhiker's Guide to the Galaxy (2005)
 Jumanji|||Jumanji;Zathura
 Land of the Lost|||Land of the Lost (1974);Land of the Lost (1991);Land of the Lost (2009)
+Massacre Collection|||Slumber Party Massacre;Sorority House Massacre;Hard to Die;Cheerleader Massacre
 Monty Python|||Monty Python's Flying Circus;And Now for Something Completely Different;Monty Python and the Holy Grail;Life of Brian;Monty Python Live at the Hollywood Bowl;The Meaning of Life
 Puppet Master vs. Dollman vs. Demonic Toys|||Puppet Master;Dollman vs. Demonic Toys
 Spider-Man|||The Amazing Spider-Man (1977);Spider-Man;The Amazing Spider-Man
 Superman|||Adventures of Superman;Superman (1978);Lois & Clark: The New Adventures of Superman;Smallville;Superman Returns;Man of Steel
 Survivors|||Survivors (1975);Survivors (2008)
+Ultraviolet|||Ultraviolet: Code 044;Ultraviolet
+Witch Mountain|||Witch Mountain;Race to Witch Mountain
 The Witches of Eastwick|||The Witches of Eastwick (1987);The Witches of Eastwick (1992);Eastwick (2002);Eastwick (2009)
-Wonder Woman|||Wonder Woman (1975);Wonder Woman (2011);Wonder Woman (tbd)
-Massacre Collection|||Slumber Party Massacre;Sorority House Massacre;Hard to Die;Cheerleader Massacre
+Wizard of Oz|||The Wizard of Oz;The Wiz;Tin Man;Oz: The Great and Powerful
+Wonder Woman|||Wonder Woman (1975);Wonder Woman (2011);Wonder Woman (2017)
+Æon Flux|||Æon Flux (1991);Æon Flux (2005)

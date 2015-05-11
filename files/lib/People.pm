@@ -12,7 +12,7 @@ use Util::ExternalLinks;
 sub get_people {
   my ($file) = @_;
 
-  open(my $data_file,'<',data_file('People',$file));
+  open(my $data_file,'<',data_file('People',$file)) || return undef;
   my @base_people = map { chomp $_; [ split(/\|/, $_) ] } <$data_file>;
   
   my @people;
@@ -24,7 +24,7 @@ sub get_people {
     push @people, "$name $link";
   }
   
-  return @people ? \@people : undef;
+  return \@people;
 }
 
 1;

@@ -60,13 +60,12 @@ sub get_styles {
 }
 
 sub get_contacts {
-  my $contacts = get_array( 'file' => ['Base','other_sites.txt'], 'headings' => ['site','link'] );
+  my $contacts = get_hash( 'file' => ['Base', 'other_sites.txt'] );
 
   my @links = ( anchor('Email', { 'href' => 'mailto:fantasy@xecu.net' }) );
-  for my $link (sort { lc $a->{'site'} cmp lc $b->{'site'} } @$contacts) {
-    my $text = $link->{'site'};
-    my $address = $link->{'link'};
-    my $title = "Lady Aleena on $text";
+  for my $link (sort { lc $a cmp lc $b } keys %$contacts) {
+    my $address = $contacts->{$link};
+    my $title = "Lady Aleena on $link";
     my $image = img({ 'src' => "http://www.google.com/s2/favicons?domain=$address", 'alt' => $title });
     
     push @links, anchor($image, { 'href' => "http://$address", 'target' => 'ex_tab', 'title' => $title });

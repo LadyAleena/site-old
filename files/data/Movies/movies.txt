@@ -71,6 +71,7 @@ Alaska|1996||film||Alaska_(film)|136514|0115493||alaska|drama||
 Alcoa Presents: One Step Beyond|1959|1961|tv||One_Step_Beyond_(TV_series)||0052442|4199||speculative fiction;anthology||
 Alex & Emma|2003||film||Alex_%26_Emma|152914|0318283||alex-emma|romantic comedy||
 Alf|1986|1990|tv||ALF_(TV_series)||0090390|761||science fiction:aliens;situation comedy||
+Alice|2009||miniseries:2||Alice_(miniseries)|506890|1461312|78104|alice-2009|fantasy|novel|Lewis Carroll
 Alice in Wonderland (1951)|1951||film||Alice_in_Wonderland_(1951_film)|1492|0043274||alice-in-wonderland1951|fantasy;animated|novel|Lewis Carroll
 Alice in Wonderland (1985)|1985||film||Alice_in_Wonderland_(1985_film)|1494|0088693||alice-in-wonderland1985|fantasy|novel|Lewis Carroll
 Alice in Wonderland (1999)|1999||film||Alice_in_Wonderland_(1999_film)|178299|0164993||alice-in-wonderland1999|fantasy|novel|Lewis Carroll
@@ -125,7 +126,7 @@ Annie|1982||film||Annie_(film)|83778|0083564||annie|musical||
 Anonymous Rex|2004||film||Anonymous_Rex|350883|0397312||anonymous-rex|monster:dinosaurs||
 Ant-Man|2015||film|||453126|0478970||antman|superhero fiction|comics|Marvel Comics
 Apollo 13|1995||film||Apollo_13_(film)|134963|0112384||apollo-13|docudrama||
-Aquaman|tbd||film||||1477834|||superhero fiction|comics|DC Comics
+Aquaman|2018||film||||1477834|||superhero fiction|comics|DC Comics
 Aquamarine|2006||film||Aquamarine_(film)|323755|0429591||aquamarine|monster:mermaids||
 Arachnid|2001||film|||251914|0271972||arachnid|monster:mutant animals||
 Are You Afraid of the Dark?|1992|2000|tv||Are_You_Afraid_of_the_Dark?|174791|0103352|744||speculative fiction||
@@ -257,7 +258,7 @@ Blade: Trinity|2004||film||Blade:_Trinity|287617|0359013||blade-trinity|superher
 Blade: The Series|2006||tv||Blade:_The_Series|354360|0823333|22167||superhero fiction;monster:vampires|comics|Marvel Comics
 Blast from the Past|1999||film|dvd|Blast_from_the_Past_(film)|176002|0124298||blast-from-the-past|romantic comedy||
 Blazing Saddles|1974||film|dvd|Blazing_Saddles|6029|0071230||blazing-saddles|western;parody||
-Blood Ties|2006|2008|tv|bd:1..2|Blood_Ties_(TV_series)|392972|0808013|68415||monster:vampires|novels|Tanya Huff
+Blood Ties|2006|2008|tv|bd:1..2|Blood_Ties_(TV_series)|392972|0808013|68415||monster:vampires;detective|novels|Tanya Huff
 Blue Collar Comedy Tour Rides Again|2004||film||Blue_Collar_Comedy_Tour_Rides_Again|314677|0423871||blue-collar-comedy-tour-rides-again|stand-up comedy||
 Blue Collar Comedy Tour: One for the Road|2006||film||Blue_Collar_Comedy_Tour:_One_for_the_Road|348809|0807745||blue-collar-comedy-tour-one-for-the-road|stand-up comedy||
 Blue Collar Comedy Tour: The Movie|2003||film||Blue_Collar_Comedy_Tour:_The_Movie|270865|0330069||blue-collar-comedy-tour-the-movie|stand-up comedy||
@@ -290,7 +291,7 @@ Bubba Ho-Tep|2002||film||Bubba_Ho-Tep_(film)|266235|0281686||bubba-hotep|horror;
 Buck Rogers in the 25th Century|1979|1981|tv||Buck_Rogers_in_the_25th_Century_(TV_series)|7357|0078579|2724||science fiction||
 Buffy the Vampire Slayer (1992)|1992||film||Buffy_the_Vampire_Slayer_(film)|7425|0103893||buffy-the-vampire-slayer|monster:vampires||
 Buffy the Vampire Slayer (1997)|1997|2003|tv|dvd:1..7|Buffy_the_Vampire_Slayer_(TV_series)|174873|0118276|10||monster:vampires,demons,spellcasters,ghosts,therianthropes||
-Angel|1999|2004|tv|dvd:1..5|Angel_(TV_series)|181391|0162065|12||monster:vampires,demons,spellcasters,ghosts,therianthropes||
+Angel|1999|2004|tv|dvd:1..5|Angel_(TV_series)|181391|0162065|12||monster:vampires,demons,spellcasters,ghosts,therianthropes;detective||
 Burn Notice|2007|2013|tv|dvd:1..3|Burn_Notice|400987|0810788|69107||spy fiction||
 Burn Notice: The Fall of Sam Axe|2011||film|dvd|||1697851|||spy fiction||
 Buzz Lightyear of Star Command|2000|2001|tv||Buzz_Lightyear_of_Star_Command||0260602|1865||animated||Disney
@@ -298,11 +299,11 @@ Buzz Lightyear of Star Command: The Adventure Begins|2000||film||Buzz_Lightyear_
 Caddyshack|1980||film||Caddyshack|7796|0080487||caddyshack|sports;comedy||
 Caddyshack II|1988||film||Caddyshack_II|7797|0094824||caddyshack-ii|sports;comedy||
 Caffeine|2006||film||Caffeine_(film)|376339|0460732||caffeine|romantic comedy||
-Cagney & Lacey|1982|1988|tv||Cagney_%26_Lacey|280679|0083395|628||detective||
-Cagney & Lacey: Together Again|1995||film|||162561|0112615||cagney-lacey-together-again|detective||
-Cagney & Lacey: True Convictions|1996||film|||412154|0112616||cagney-lacey-true-convictions|detective||
-Cagney & Lacey: The Return|1994||film|||412686|0109365||cagney-lacey-the-return|detective||
-Cagney & Lacey: The View Through the Glass Ceiling|1995||film|||412757|0112614||cagney-lacey-the-view-through-the-glass-ceiling|detective||
+Cagney & Lacey|1982|1988|tv||Cagney_%26_Lacey|280679|0083395|628||police procedural||
+Cagney & Lacey: Together Again|1995||film|||162561|0112615||cagney-lacey-together-again|police procedural||
+Cagney & Lacey: True Convictions|1996||film|||412154|0112616||cagney-lacey-true-convictions|police procedural||
+Cagney & Lacey: The Return|1994||film|||412686|0109365||cagney-lacey-the-return|police procedural||
+Cagney & Lacey: The View Through the Glass Ceiling|1995||film|||412757|0112614||cagney-lacey-the-view-through-the-glass-ceiling|police procedural||
 Calendar Girls|2003||film||Calendar_Girls|286541|0337909||calendar-girls|docudrama||
 The Cannonball Run|1981||film||The_Cannonball_Run_(film)|150330|0082136||the-cannonball-run|crime||
 Cannonball Run II|1984||film||Cannonball_Run_II|8032|0087032||cannonball-run-ii|crime||
@@ -341,7 +342,7 @@ Chasing Amy|1997||film||Chasing_Amy|154583|0118842||chasing-amy|comedy||
 Chasing Liberty|2004||film||Chasing_Liberty|291580|0360139||chasing-liberty|romantic comedy||
 Chicago|2002||film||Chicago_(2002_film)|272628|0299658||chicago|musical||
 Chicago Fire|2012|tbd|tv||Chicago_Fire_(TV_series)|581804|2261391|158553||drama||
-Chicago P.D.|2014|tbd|tv||Chicago_P.D._(TV_series)||2805096|183140||drama||
+Chicago P.D.|2014|tbd|tv||Chicago_P.D._(TV_series)||2805096|183140||drama;police procedural||
 Children of Dune|2003||miniseries:3||Frank_Herbert%27s_Children_of_Dune|282693|0287839|69658|children-of-dune|science fiction;adventure|novel|Frank Herbert
 Children of the Corn|1984||film||Children_of_the_Corn_(film)|9274|0087050||children-of-the-corn|horror||
 Children of the Corn 666: Isaac's Return|1999||film||Children_of_the_Corn_666:_Isaac%27s_Return|180710|0177625||children-of-the-corn-666-isaacs-return|horror||
@@ -407,8 +408,8 @@ Covert Affairs|2010|2014|tv||Covert_Affairs|516200|1495708|77661||spy fiction||
 Cowboys & Aliens|2011||film||Cowboys_%26_Aliens_(film)|409098|0409847||cowboys-and-aliens|science fiction western;science fiction:aliens|comics|Platinum Studios
 Coyote Ugly|2000||film||Coyote_Ugly_(film)|196442|0200550||coyote-ugly|docudrama||
 Crazy on the Outside|2010||film||Crazy_on_the_Outside|433434|1196134||crazy-on-the-outside|comedy||
-Criminal Minds|2005|tbd|tv||Criminal_Minds|323968|0452046|33484||detective||
-Criminal Minds: Suspect Behavior|2011|2011|tv||Criminal_Minds:_Suspect_Behavior|534141|1703874|75883||detective||
+Criminal Minds|2005|tbd|tv||Criminal_Minds|323968|0452046|33484||police procedural||
+Criminal Minds: Suspect Behavior|2011|2011|tv||Criminal_Minds:_Suspect_Behavior|534141|1703874|75883||police procedural||
 Cross Creek|1983||film|dvd|Cross_Creek_(film)|11602|0085380||cross-creek|docudrama||
 Crossing Jordan|2001|2007|tv||Crossing_Jordan|255243|0284718|2921||detective;medical||
 Crusade|1999||tv|dvd:1|Crusade_(TV_series)|180273|0149437|1526||science fiction;adventure||
@@ -479,7 +480,7 @@ The Distinguished Gentleman|1992||film||The_Distinguished_Gentleman|14030|010411
 Divine Secrets of the Ya-Ya Sisterhood|2002||film||Divine_Secrets_of_the_Ya-Ya_Sisterhood_(film)|260292|0279778||divine-secrets-of-the-yaya-sisterhood|drama||
 Doc Hollywood|1991||film||Doc_Hollywood|14136|0101745||doc-hollywood|comedy||
 Doctor Dolittle|1998||film||Dr._Dolittle_(film)|162762|0118998||dr-dolittle1998|monster:mutants||
-Doctor Strange|tbd||film||||1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
+Doctor Strange|2016||film||||1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
 Doctor Who (1963)|1963|1989|tv|||174951|0056751|355||science fiction;adventure||
 Doctor Who (1996)|1996||film|dvd|Doctor_Who_(1996_film)|154415|0116118||doctor-who|science fiction;adventure||
 Doctor Who (2005)|2005|tbd|tv|dvd:1..4;bd:5||346477|0436992|34391||science fiction;adventure||
@@ -527,7 +528,7 @@ Dragonheart|1996||film|dvd|Dragonheart|136309|0116136||dragonheart|monster:drago
 Dragonheart: A New Beginning|2000||film|dvd|Dragonheart:_A_New_Beginning|201866|0214641||dragonheart-a-new-beginning|monster:dragons||
 Dragonslayer|1981||film|dvd|Dragonslayer|14701|0082288||dragonslayer|fantasy;monster:dragons,spellcasters||
 Dredd|2012||film||Dredd|523995|1343727||judge-dredd-2012|science fiction;legal|comics|2000 AD
-The Dresden Files|2007||tv|dvd:1|The_Dresden_Files_(TV_series)|385959|0486657|50381||fantasy;monster:spellcasters|novels|Jim Butcher
+The Dresden Files|2007||tv|dvd:1|The_Dresden_Files_(TV_series)|385959|0486657|50381||fantasy;monster:spellcasters;detective|novels|Jim Butcher
 Drive Me Crazy|1999||film|dvd|Drive_Me_Crazy|180982|0164114||drive-me-crazy|romantic comedy||
 Driving Miss Daisy|1989||film||Driving_Miss_Daisy|14828|0097239||driving-miss-daisy|drama||
 Drones|2010||film||Drones_(film)|509473|1232775||drones|science fiction:aliens;comedy||
@@ -635,7 +636,7 @@ First Monday|2002||tv||First_Monday||0297560|7213||legal||
 First Wave|1998|2001|tv||First_Wave_(TV_series)|177614|0160277|2700||science fiction:aliens||
 The First Wives Club|1996||film|dvd|The_First_Wives_Club|154488|0116313||the-first-wives-club|comedy||
 A Fish Called Wanda|1988||film||A_Fish_Called_Wanda|17540|0095159||a-fish-called-wanda|comedy||
-The Flash|tbd||film|||387939|0439572|||superhero fiction|comics|DC Comics
+The Flash|2018||film|||387939|0439572|||superhero fiction|comics|DC Comics
 Flash Gordon (1936)|1936|1936|tv||Flash_Gordon_(serial)||0027623|||science fiction|comic|Alex Raymond
 Flash Gordon (1954)|1954|1955|tv||Flash_Gordon_(1954_TV_series)||0140738|||science fiction|comic|Alex Raymond
 Flash Gordon (1980)|1980||film|dvd|Flash_Gordon_(film)|17730|0080745||flash-gordon|science fiction|comic|Alex Raymond
@@ -731,9 +732,9 @@ Get Smart's Bruce and Lloyd: Out of Control|2008||film||Get_Smart's_Bruce_and_Ll
 Get Smart, Again!|1989||film||Get_Smart,_Again!|19567|0097423||get-smart-again|spy fiction;comedy||
 Ghost Rider|2007||film||Ghost_Rider_(film)|291033|0259324||ghost-rider|superhero fiction;monster:angels,demons|comics|Marvel Comics
 Ghost Rider: Spirit of Vengeance|2011||film||Ghost_Rider:_Spirit_of_Vengeance|525865|1071875||ghost-rider-spirit-of-vengeance|superhero fiction;monster:angels,demons|comics|Marvel Comics
-Ghostbusters|1984||film|dvd|Ghostbusters|19671|0087332||ghostbusters|monster:ghosts||
+Ghostbusters (1984)|1984||film|dvd|Ghostbusters|19671|0087332||ghostbusters|monster:ghosts||
 Ghostbusters II|1989||film|dvd|Ghostbusters_II|19672|0097428||ghostbusters-2|monster:ghosts||
-Ghostbusters III|tbd||film|||469248|1289401|||monster:ghosts||
+Ghostbusters (2016)|2016||film|||469248|1289401|||monster:ghosts||
 Ghosts of Mars|2001||film||Ghosts_of_Mars|250566|0228333||ghosts-of-mars|science fiction||
 Gigi|1958||film||Gigi_(1958_film)|19761|0051658||gigi|musical||
 The Girl from U.N.C.L.E.|1966|1967|tv||The_Girl_from_U.N.C.L.E.|240983|0059988|5319||spy fiction||
@@ -775,8 +776,8 @@ Halloween: The Curse of Michael Myers|1995||film||Halloween:_The_Curse_of_Michae
 Hancock|2008||film||Hancock_(film)|376678|0448157||hancock|monster:mutants||
 The Hands of Shang-Chi|2011||film||||0366547||the-hands-of-shangchi|superhero fiction|comics|Marvel Comics
 Hanging Up|2000||film|dvd|Hanging_Up|181279|0162983||hanging-up|comedy||
-Hansel & Gretel: Witch Hunters 2|2016||film||603312||2784082||hansel-and-gretel-witch-hunters-2|action;horror;fantasy;monster:spellcasters||
 Hansel & Gretel: Witch Hunters|2013||film||Hansel_&_Gretel:_Witch_Hunters|532211|1428538||hansel-and-gretel-witch-hunters|action;horror;fantasy;monster:spellcasters||
+Hansel & Gretel: Witch Hunters 2|tbd||film||603312||2784082||hansel-and-gretel-witch-hunters-2|action;horror;fantasy;monster:spellcasters||
 Happy Town|2010||tv||Happy_Town_(TV_series)|516279|1379722|76797||fantasy||
 Harry Potter and the Chamber of Secrets|2002||film|bd|Harry_Potter_and_the_Chamber_of_Secrets_(film)|260383|0295297||harry-potter-and-the-chamber-of-secrets|fantasy;monster:spellcasters|novel|J. K. Rowling
 Harry Potter and the Deathly Hallows: Part 1|2010||film|bd|Harry_Potter_and_the_Deathly_Hallows_(films)|393092|0926084||harry-potter-and-the-deathly-hallows|fantasy;monster:spellcasters|novel|J. K. Rowling
@@ -790,9 +791,9 @@ Harry's Law|2011|2012|tv||Harry's_Law|533216|1582453|79497||legal||
 Harsh Realm|1999|2000|tv||Harsh_Realm|181388|0182587|1513||science fiction||
 The Haunted Mansion|2003||film||The_Haunted_Mansion_(film)|283306|0338094||the-haunted-mansion|monster:ghosts||
 Haven|2010|tbd|tv||Haven_(TV_series)||1519931|78043||horror;monster:mutants|short story|Stephen King
-Hawaii|2004|2004|tv||Hawaii_(TV_series)|314519|0410987|23581||detective||
-Hawaii Five-0|2010|tbd|tv||Hawaii_Five-0|519678|1600194|hawaii-five-0||detective||
-Hawaii Five-O|1968|1980|tv||Hawaii_Five-O|126101|0062568|hawaii-fiveo||detective||
+Hawaii|2004|2004|tv||Hawaii_(TV_series)|314519|0410987|23581||police procedural||
+Hawaii Five-0|2010|tbd|tv||Hawaii_Five-0|519678|1600194|hawaii-five-0||police procedural||
+Hawaii Five-O|1968|1980|tv||Hawaii_Five-O|126101|0062568|hawaii-fiveo||police procedural||
 He's Just Not That Into You|2009||film||He%27s_Just_Not_That_into_You_(film)|393740|1001508||hes-just-not-that-into-you|romantic comedy||
 Head of State|2003||film||Head_of_State_(film)|276231|0325537||head-of-state|comedy||
 Heartbreak Ridge|1986||film|dvd|Heartbreak_Ridge|21914|0091187||heartbreak-ridge|military||
@@ -932,7 +933,7 @@ IRT: Deadliest Roads|2010|2011|tv|||527253|1739276|80139||non-fiction:trucking||
 IT|1990||miniseries:2|dvd|It_(1990_film)|46835|0099864|74848|it|horror;monster|novel|Stephen King
 It Could Happen Tomorrow|2006||tv||It_Could_Happen_Tomorrow||0454473|64101||non-fiction:disasters||
 Jack of All Trades|2000||tv||Jack_of_All_Trades_(TV_series)||0220906|869||comedy;adventure;spy fiction||
-JAG|1995|2005|tv||JAG_(TV_series)|348008|0112022|242||detective||
+JAG|1995|2005|tv||JAG_(TV_series)|348008|0112022|242||legal||
 The Jane Austen Book Club|2007||film||The_Jane_Austen_Book_Club_(film)|379686|0866437||the-jane-austen-book-club|romantic comedy||
 Jane Eyre|1996||film||Jane_Eyre_(1996_film)|135981|0116684||jane-eyre|drama||
 Jason Goes to Hell: The Final Friday|1993||film||Jason_Goes_to_Hell:_The_Final_Friday|25904|0107254||jason-goes-to-hell-the-final-friday|slasher||
@@ -1020,13 +1021,13 @@ The Last Samurai|2003||film||The_Last_Samurai|284009|0325710||the-last-samurai|d
 The Last Starfighter|1984||film|dvd|The_Last_Starfighter|28385|0087597||the-last-starfighter|science fiction:aliens||
 The Last Unicorn|1982||film||The_Last_Unicorn_(film)|28398|0084237||the-last-unicorn|animated;fantasy||
 Late Night with Conan O'Brien|1993|2009|tv||Late_Night_with_Conan_O%27Brien|308383|0106052|4748||talk show||
-Law & Order|1990|2010|tv||Law_%26_Order|242082|0098844|180||detective;legal||
-Law & Order: Criminal Intent|2001|2011|tv||Law_%26_Order:_Criminal_Intent|255664|0275140|1381||detective||
-Law & Order: Los Angeles|2010|2011|tv||Law_%26_Order:_Los_Angeles||1657081|78504||detective;legal||
-Law & Order: Special Victims Unit|1999|tbd|tv||Law_%26_Order:_Special_Victims_Unit|181329|0203259|334||detective||
-Law & Order: Special Victims Unit: Russia|2007||tv||||1465977|||detective;legal||
-Law & Order: Trial by Jury|2005|2006|tv||Law_%26_Order:_Trial_by_Jury|322899|0406429|25938||detective||
-Law & Order: UK|2009|2014|tv||Law_%26_Order:_UK||1166893|75193||detective;legal||
+Law & Order|1990|2010|tv||Law_%26_Order|242082|0098844|180||police procedural;legal||
+Law & Order: Criminal Intent|2001|2011|tv||Law_%26_Order:_Criminal_Intent|255664|0275140|1381||police procedural||
+Law & Order: Los Angeles|2010|2011|tv||Law_%26_Order:_Los_Angeles||1657081|78504||police procedural;legal||
+Law & Order: Special Victims Unit|1999|tbd|tv||Law_%26_Order:_Special_Victims_Unit|181329|0203259|334||police procedural;legal||
+Law & Order: Special Victims Unit: Russia|2007||tv||||1465977|||police procedural;legal||
+Law & Order: Trial by Jury|2005|2006|tv||Law_%26_Order:_Trial_by_Jury|322899|0406429|25938||legal||
+Law & Order: UK|2009|2014|tv||Law_%26_Order:_UK||1166893|75193||police procedural;legal||
 The Lawnmower Man|1992||film|dvd|The_Lawnmower_Man_(film)|28590|0104692||the-lawnmower-man|science fiction:malignant technology||
 Lawnmower Man 2: Beyond Cyberspace|1996||film|dvd|Lawnmower_Man_2:_Beyond_Cyberspace|135587|0116839||lawnmower-man-2-jobes-war|science fiction:malignant technology||
 Laws of Attraction|2004||film|dvd|Laws_of_Attraction|290201|0323033||laws-of-attraction|romantic comedy||
@@ -1113,7 +1114,7 @@ Major League: Back to the Minors|1998||film||Major_League:_Back_to_the_Minors|16
 Mallrats|1995||film||Mallrats|135676|0113749||mallrats|comedy||
 Mamma Mia!|2008||film|dvd|Mamma_Mia!_(film)|385390|0795421||mamma-mia|musical|musical|ABBA
 The Man from U.N.C.L.E. (1964)|1964|1968|tv||The_Man_from_U.N.C.L.E.|175167|0057765|3323||spy fiction||
-The Man from U.N.C.L.E. (tbd)|tbd||film||||1638355|||spy fiction||
+The Man from U.N.C.L.E. (2015)|2015||film||||1638355|||spy fiction||
 Man of Steel|2013||film||Man_of_Steel_(film)|527047|0770828||superman-man-of-steel|superhero fiction|comics|DC Comics
 Man of the Year|2006||film||Man_of_the_Year_(2006_film)|340657|0483726||man-of-the-year|parody||
 The Manhattan Project|1986||film||The_Manhattan_Project_(film)|31292|0091472||the-manhattan-project|disaster:nuclear||
@@ -1330,12 +1331,13 @@ Outland|1981||film||Outland_(film)|36879|0082869||outland|science fiction||
 Outlaw|2010|2010|tv||Outlaw_(TV_series)|526834|1592226|78629||legal||
 Overboard|1987||film|dvd|Overboard_(1987_film)|36936|0093693||overboard|romantic comedy||
 Oz: The Great and Powerful|2013||film||Oz_the_Great_and_Powerful|527188|1623205||oz-the-great-and-powerful|adventure;fantasy|novel|L. Frank Baum
+Oz: The Great and Powerful 2|tbd||film||||2761172|||adventure;fantasy|novel|L. Frank Baum
 Pacific Rim|2013||film||Pacific_Rim_(film)|535242|1663662||pacific-rim-2013|science fiction:aliens,robots||
 Pacific Rim 2|2017||film|||604399|2557478||pacific-rim-2|science fiction:aliens,robots||
 Painkiller Jane (2005)|2005||film||Painkiller_Jane_(film)|412535|0466391||painkiller-jane|monster:mutants||
 Painkiller Jane (2007)|2007||tv||Painkiller_Jane_(TV_series)|394532|0866432|32707|painkiller-jane-2007|monster:mutants||
 Pandora's Clock|1996||miniseries:2||Pandora%27s_Clock|162997|0115309|34125|pandoras-clock|disaster:pathological threat|novel|John J. Nance
-Paris enquêtes criminelles|2007|2008|tv||Paris_enqu%C3%AAtes_criminelles||1002919|75474||detective||
+Paris enquêtes criminelles|2007|2008|tv||Paris_enqu%C3%AAtes_criminelles||1002919|75474||police procedural||
 Patch Adams|1998||film||Patch_Adams|174233|0129290||patch-adams|docudrama||
 The Patriot|2000||film||The_Patriot|186753|0187393||the-patriot|drama||
 Patriot Games|1992||film||Patriot_Games_(film)|37441|0105112||patriot-games|spy fiction|novel|Tom Clancy
@@ -1483,7 +1485,7 @@ Ripley's Believe It or Not! (1999)|1999|2003|tv|||307143|0218787|10278||non-fict
 Ripley's Believe It or Not! (tbd)|tbd||film|||340030|0492445|||docudrama||
 Rise of the Guardians|2012||film||Rise_of_the_Guardians|533218|1446192||rise-of-the-guardians-2012|animated;fantasy|novels|William Joyce
 Riverworld|2003||film||Riverworld_(film)|284089|0310952||riverworld|speculative fiction||
-Rizzoli & Isles|2010|tbd|tv||Rizzoli_&_Isles|524762|1551632|78590||detective;medical|novels|Tess Gerritsen
+Rizzoli & Isles|2010|tbd|tv||Rizzoli_&_Isles|524762|1551632|78590||police procedural;medical|novels|Tess Gerritsen
 Robin Hood|1973||film||Robin_Hood_(1973_film)|41674|0070608||robin-hood|animated||Disney
 Robin Hood: Men in Tights|1993||film||Robin_Hood:_Men_in_Tights|41688|0107977||robin-hood-men-in-tights|parody||
 Robots|2005||film||Robots_(film)|289664|0358082||robots|animated;science fiction:robots||
@@ -1551,7 +1553,7 @@ Serendipity|2001||film||Serendipity_(film)|253784|0240890||serendipity|romantic 
 Serenity|2005||film|dvd|Serenity_(film)|312564|0379786||serenity|science fiction western;adventure||
 Serious Moonlight|2009||film||Serious_Moonlight_(2009_film)|483048|1133993||serious-moonlight|romantic comedy||
 Seven Mummies|2006||film|||326844|0415345||seven-mummies|monster:mummies,vampires,zombies||
-Sex in the 20th Century|2001||tv||||0418149|||non-fiction:sex||
+Sex in the 20th Century|2001||miniseries:4||||0418149|||non-fiction:sex||
 Sgt. Pepper's Lonely Hearts Club Band|1978||film||Sgt._Pepper%27s_Lonely_Hearts_Club_Band_(film)|66209|0078239||sgt-peppers-lonely-hearts-club-band|musical|musical|The Beatles
 Shall We Dance|2004||film||Shall_We_Dance|288231|0358135||shall-we-dance|drama||
 Shanghai Knights|2003||film||Shanghai_Knights|274885|0300471||shanghai-knights|crime;comedy||
@@ -1577,8 +1579,7 @@ Silent Movie|1976||film||Silent_Movie|44686|0075222||silent-movie|parody||
 Silver Bullet|1985||film||Silver_Bullet|44737|0090021||silver-bullet|monster:therianthropes||
 Silver Surfer|2014||film||||1051916||silver-surfer|superhero fiction|comics|Marvel Comics
 Sin City|2005||film|dvd|Sin_City_(film)|303869|0401792||sin-city|superhero fiction|comics|Dark Horse
-Sin City 3|tbd||film||||||sin-city-3|crime|comics|Dark Horse
-Sin City: A Dame to Kill For|2013||film||||0458481||sin-city-2|crime|comics|Dark Horse
+Sin City: A Dame to Kill For|2013||film||Sin_City:_A_Dame_to_Kill_For|548182|0458481||frank-millers-sin-city-a-dame-to-kill-for|crime|comics|Dark Horse
 Sin of Innocence|1986||film|||128994|0091958||sin-of-innocence|drama||
 Sinbad: Legend of the Seven Seas|2003||film||Sinbad:_Legend_of_the_Seven_Seas|281051|0165982||sinbad-legend-of-the-seven-seas|animated;fantasy||
 Single Santa Seeks Mrs. Claus|2004||film|||332328|0413900||single-santa-seeks-mrs-claus|fantasy||
@@ -1779,7 +1780,7 @@ Too Cute!|2011|tbd|tv||||2197519|||non-fiction:animals||
 Toothless|1997||film||Toothless_(film)|163242|0127322||toothless|fantasy||
 Top Gun|1986||film||Top_Gun_(film)|50435|0092099||top-gun|military||
 Top Secret!|1984||film|dvd|Top_Secret!|50450|0088286||top-secret|spoof||
-Torchwood|2006|tbd|tv|dvd:1..3|Torchwood|416967|0485301|50470||science fiction;adventure||
+Torchwood|2006|2011|tv|dvd:1..3|Torchwood|416967|0485301|50470||science fiction;adventure||
 Tornado Warning|2002||film|||272487|0331357||tornado-warning|disaster:tornado||
 Tornado!|1996||film|dg|Tornado!|154462|0117942||tornado|disaster:tornado||
 Total Recall|1990||film||Total_Recall|50523|0100802||total-recall|science fiction|short story|Philip K. Dick
@@ -2258,7 +2259,7 @@ Sadako 3D 2|2013||film||Sadako_3D_2|589132|2440362||sadako-3d-2|horror;monster:g
 RoboCop (1987)|1987||film||RoboCop|41702|0093870||robocop1987|science fiction:cyborgs||
 RoboCop 2|1990||film||RoboCop_2|41703|0100502||robocop-2|science fiction:cyborgs||
 RoboCop 3|1993||film||RoboCop_3|121763|0107978||robocop-3|science fiction:cyborgs||
-Robocop: The Series|1994|1995|tv||RoboCop:_The_Series|311721|0108909|3481||science fiction:cyborgs||
+RoboCop: The Series|1994|1995|tv||RoboCop:_The_Series|311721|0108909|3481||science fiction:cyborgs||
 RoboCop: Prime Directives|2001||tv||RoboCop:_Prime_Directives|278073|0220008|10280||science fiction:cyborgs||
 RoboCop (2014)|2014||film||RoboCop_(2014_film)|535343|1234721||robocop-2010|science fiction:cyborgs||
 Robot Monster|1953||film||Robot_Monster|41709|0046248||robot-monster|science fiction:aliens,robots||

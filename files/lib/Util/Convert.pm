@@ -31,8 +31,8 @@ sub idify {
     $_ =~ s/ /_/g;
     $_ =~ s/[^\w:.\-]//g;
     $_;
-  } @base;
-  return join('_',grep(defined,@ids));
+  } grep {defined($_)} @base;
+  return join('_',@ids);
 }
 
 sub linkify {
@@ -84,7 +84,7 @@ Util::Convert - converts strings into various formats.
   
   my $file    = filify($string);     # returns Mr_&_Mrs_Smith
   my $id      = idify($string);      # returns Mr_and_Mrs_Smith
-  my $text    = textify($string);    # returns Mr &amp; Mrs Smith
+  my $text    = textify($string);    # returns Mr. &amp; Mrs. Smith
   my $search  = searchify($string);  # returns Mr+%26+Mrs+Smith
   my $hashtag = hashtagify($string); # returns #MrandMrsSmith
   

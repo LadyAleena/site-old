@@ -8,6 +8,7 @@ use HTML::Entities qw(encode_entities);
 use lib '../files/lib';
 use Base::Page qw(page story);
 use HTML::Elements qw(list anchor);
+use Util::Convert qw(searchify);
 
 my @items = <<List_end =~ m/(.+\n)/g;
 Creation of Pussy
@@ -23,12 +24,7 @@ The Shit List
 So, you don't know Jack Schitt?
 List_end
 
-my @funnies;
-for (@items) {
-  my $item_link = encode_entities($_);
-     $item_link =~ s/ /+/g;
-  push @funnies, anchor($_, { 'href' => "http://www.google.com/search?hl=en&amp;lr=&amp;safe=off&amp;q=$item_link&amp;btnG=Search" });
-}
+my @funnies = map { chomp $_; anchor($_, { 'href' => "http://www.google.com/search?safe=off&amp;q=".searchify(encode_entities($_)), 'target' => 'ex_tab' }); } @items;
 
 my $doc_magic = { 'funnies' => sub { list(3,'u',\@funnies) } };
 

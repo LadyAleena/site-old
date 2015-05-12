@@ -41,7 +41,7 @@ sub data_file {
      $relative_path =~ s/\.\w+$//;
      $relative_path =~ s/working(?:\/|\\)//;
 
-  my $data;
+  my $data = undef;
   if ($directory && $filename) {
     $data = "$root_data/$directory/$filename";
   }
@@ -53,14 +53,6 @@ sub data_file {
   }
   else {
     $data = "$root_data/$relative_path.txt";
-  }
-  
-  unless (-f $data) {
-    use Data::Dumper;
-    local $\ = "\n";
-    print Dumper($directory);
-    print Dumper($filename);
-    die "No file associated with $data, stopped";
   }
   
   return $data;
@@ -82,11 +74,9 @@ sub get_hash {
     my @values   = split(/\|/,$line);
     my $key = scalar @headings > 1 ? $values[0] : shift @values;
 
-    $hash{$key}{'sort number'} = $. if $opt{'sorted'};
-
     my $n = 0;
     for my $r_heading (@headings) {
-      goto INC if !$values[$n];
+      goto INC if (!defined($values[$n]) || length($values[$n]) == 0);
       my $split = $r_heading =~ /\+$/ ? 1 : 0;
       (my $heading = $r_heading) =~ s/\+$//;
       my $value = defined($values[$n]) ? $split == 1 ? [map { $_ =~ s/^ //; $_ } split(/;/,$values[$n])] : $values[$n] : undef;

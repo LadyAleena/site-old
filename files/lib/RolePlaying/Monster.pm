@@ -9,7 +9,7 @@ use File::Basename;
 use File::Slurp; # read_file
 
 use Base::Page qw(passage);
-use Base::Data qw(get_directory data_directory get_hash data_file);
+use Base::Data qw(get_directory data_directory get_hash get_array data_file);
 use HTML::Elements qw(section heading paragraph table list);
 use Util::Convert qw(filify textify);
 
@@ -33,10 +33,9 @@ my %rainbow_dragonette_headings = (
 );
 
 for my $param ('odf','age') {
-  $rainbow_dragonette{$param} = get_hash(
+  $rainbow_dragonette{$param} = get_array(
     'file'     => ['Role_playing/Monsters',"Rainbow_dragonette_$param.txt"],
     'headings' => \@{$rainbow_dragonette_headings{$param}},
-    'sorted'   => 'yes',
   );
 }
 
@@ -44,8 +43,8 @@ sub dragonette_table {
   my ($var) = @_;
 
   my @rows;
-  for my $row (sort { $a->{'sort number'} <=> $b->{'sort number'} } values %{$rainbow_dragonette{$var}}) {
-    push @rows, [map($row->{$_} ? $row->{$_} : '', @{$rainbow_dragonette_headings{$var}})];
+  for my $row (@{$rainbow_dragonette{$var}}) {
+    push @rows, [map($row->{$_}, @{$rainbow_dragonette_headings{$var}})];
   }
   table(4, { class => 'rainbow_dragonette', rows => [['header',$rainbow_dragonette_headings{$var}],['data',\@rows]] });
 }

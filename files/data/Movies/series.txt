@@ -75,7 +75,7 @@ Cyborg|||Cyborg;Cyborg 2;Cyborg 3
 Cyborg Cop|||Cyborg Cop;Cyborg Cop II;Cyborg Cop III
 Dangerous Minds|||Dangerous Minds (1995);Dangerous Minds (1996)
 Danny Ocean||413040|Ocean's Eleven;Ocean's Twelve;Ocean's Thirteen
-Daredevil|||Daredevil;Elektra
+Daredevil|||Daredevil (2003);Elektra
 The Dark Crystal|||The Dark Crystal;The Power of the Dark Crystal
 Dark Shadows|||Dark Shadows (1966);House of Dark Shadows;Night of Dark Shadows
 Dead Like Me|||Dead Like Me;Dead Like Me: Life After Death
@@ -131,6 +131,7 @@ Halloween (2007)|||Halloween (2007);Halloween II (2009)
 Hannibal|Hannibal_Lecter_(franchise)||The Silence of the Lambs;Hannibal (2001);Red Dragon;Hannibal Rising|n
 Hansel & Gretel: Witch Hunters|||Hansel & Gretel: Witch Hunters;Hansel & Gretel: Witch Hunters 2
 Harry Potter|Harry_Potter_(film_series)|286867|Harry Potter and the Sorcerer's Stone;Harry Potter and the Chamber of Secrets;Harry Potter and the Prisoner of Azkaban;Harry Potter and the Goblet of Fire;Harry Potter and the Order of the Phoenix;Harry Potter and the Half-Blood Prince;Harry Potter and the Deathly Hallows: Part 1;Harry Potter and the Deathly Hallows: Part 2
+Hart to Hart|||Hart to Hart;Hart to Hart Returns;Home is Where the Hart Is;Crimes of the Hart;Old Friends Never Die;Secrets of the Hart;Two Harts in 3/4 Time;Harts in High Season;Till Death Do Us Hart
 Heavy Metal|||Heavy Metal;Heavy Metal 2000
 Hellboy|||Hellboy;Hellboy II: The Golden Army
 Hellraiser||283163|Hellraiser (1987);Hellbound: Hellraiser II;Hellraiser III: Hell on Earth;Hellraiser: Bloodline;Hellraiser: Inferno;Hellraiser: Hellseeker;Hellraiser: Deader;Hellraiser: Hellworld
@@ -191,7 +192,7 @@ Mad Max|||Mad Max;Mad Max 2;Mad Max Beyond Thunderdome
 The Magnificent Seven|||The Magnificent Seven;Return of the Seven;Guns of the Magnificent Seven;The Magnificent Seven Ride!
 Major League||288069|Major League;Major League II;Major League: Back to the Minors
 The Mangler|||The Mangler;The Mangler 2;The Mangler Reborn
-Marvel Cinematic Universe|||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Avengers: Age of Ultron;Ant-Man;Nick Fury
+Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;A.K.A. Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy 2;Thor: Ragnarok;Avengers: Infinity War – Part 1;Black Panther;Captain Marvel;Avengers: Infinity War – Part 2;Inhumans
 MASH|||MASH (1970);M*A*S*H (1972);AfterMASH;W*A*L*T*E*R
 Slumber Party Massacre|||The Slumber Party Massacre;Slumber Party Massacre II;Slumber Party Massacre III|n
 Sorority House Massacre|||Sorority House Massacre;Sorority House Massacre II|nThe Matrix|The_Matrix_(franchise)|282918|The Matrix;The Matrix Reloaded;The Matrix Revolutions
@@ -249,6 +250,7 @@ The Quatermass Experiment|||The Quatermass Experiment (1953);Quatermass II;Quate
 The Quatermass Xperiment|||The Quatermass Xperiment;Quatermass 2;Quatermass and the Pit (1967)
 Rambo||282873|First Blood;Rambo: First Blood Part II;Rambo III;Rambo;Rambo V: The Savage Hunt
 Re-Animator||319183|Re-Animator;Bride of Re-Animator;Beyond Re-Animator
+Red|||Red;Red 2
 Remo Williams|||Remo Williams: The Adventure Begins;Remo Williams
 The Rescuers|||The Rescuers;The Rescuers Down Under|1
 Resident Evil||347795|Biohazard 4D-Executer;Resident Evil;Resident Evil: Apocalypse;Resident Evil: Extinction;Resident Evil: Degeneration;Resident Evil: Afterlife

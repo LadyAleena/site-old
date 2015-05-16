@@ -16,7 +16,7 @@ Breaking and Entering
 Turn and Burn
 Trust Me
 Comrades
-Scatter Point
+Scatter Point|//The X-Files (1993)/The X-Files
 Bad Blood
 Rough Seas
 Double Booked
@@ -32,7 +32,7 @@ Lesser Evil
 Friends and Family
 Question & Answer
 End Run
-Fearless Leader|//The X-files/
+Fearless Leader
 Signals and Codes
 The Hunter
 Shot In The Dark

@@ -16,7 +16,7 @@ use Util::Columns;
 use Util::Convert qw(filify textify idify searchify);
 use Util::GrammaticalJoin;
 use Util::JoinDefined;
-use Util::ExternalLinks qw(external_links);
+use Util::ExternalLinks;
 use People qw(get_people);
 
 my $movies = get_hash(
@@ -236,7 +236,7 @@ my $options = {
   'media'  => [qw(film miniseries tv)],
   'format' => [qw(vhs dvd bd dg)],
   'genre'  => [sort keys %$genres],
-  'based on' => ['novel','short story',qw(play musical radio comics cartoon game toy)],
+  'based on' => ['novel','short story', 'fairy tale', qw(play musical radio comics cartoon game toy)],
   'series' => $series_select,
 };
 
@@ -352,23 +352,6 @@ sub links {
   return $links;
 }
 
-# returns the media type of a movie.
-sub media { 
-  my ($movie) = @_;
-  my $media = $movie->{'media'} eq 'tv' ? 'television series' : $movie->{'media'};
-  return $media;
-}
-
-# returns a string of the genres in which a movie falls.
-sub genre_s {
-  my ($movie) = @_;
-
-  my @genres = keys %{$movie->{'genre'}};
-  my $genre = @genres ? grammatical_join('and', @genres) : undef;
-
-  return $genre;
-}
-
 # returns a string of what I felt is important about a movie.
 sub about {
   my ($movie) = @_;
@@ -476,13 +459,13 @@ sub display_movie {
   my $text   = !$movie->{'series'} && $movie->{'seasons'} ? anchor(textify($title), { 'href' => 'Movies_by_series?series='.searchify($title) }) : textify($title);
   my $id     = idify($title);
 
-  my $start  = $movie->{'start year'} && $movie->{'start year'} ne 'tbd' ? $movie->{'start year'} : undef;
-  my $parts  = $movie->{'media'} eq 'miniseries' ? mini_parts($movie) : undef;
-  my $genre  = genre_s($movie);
-  my $media  = $movie->{'media'} eq 'tv' ? 'television series' : $movie->{'media'};
+  my $start  = $movie->{'start year'} && $movie->{'start year'} ne 'tbd' ? $movie->{'start year'}     : undef;
+  my $media  = $movie->{'media'} eq 'tv'         ? 'television series'                                : $movie->{'media'};
+  my $run    = $movie->{'media'} eq 'tv'         ? run_time($movie)                                   : undef;
+  my $parts  = $movie->{'media'} eq 'miniseries' ? mini_parts($movie)                                 : undef;
+  my $basis  = $movie->{'based on'}              ? basis($movie)                                      : undef;
+  my $genre  = $movie->{'genre'}                 ? grammatical_join('and', keys %{$movie->{'genre'}}) : undef;
   my $about  = about($movie);
-  my $basis  = basis($movie);
-  my $run    = run_time($movie);
 
   my $mseries = $opt->{'series'} ? series_text($movie) : undef;
 
@@ -713,7 +696,7 @@ sub print_movie {
         list($tab, 'u', \@links, { 'class' => "season_list $cols" });
       }
       if ($people && !$in_series) {
-        my $cols = get_columns(3,scalar @$people);
+        my $cols = get_columns(3, scalar @$people);
         heading($tab, $heading + 1, 'Actors', { 'id' => "actors_in_$id" });
         list($tab + 1, 'u', $people, { 'class' => "actor_list $cols" });
       }

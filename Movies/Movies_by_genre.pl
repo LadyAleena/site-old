@@ -11,7 +11,7 @@ use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section list);
 use Util::Sort qw(article_sort);
-use Movie::LookUp qw(display_simple_movie movie genre);
+use Movie qw(display_simple_movie movie genre);
 
 my $genres = genre('data');
 
@@ -27,7 +27,7 @@ page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
       unshift @subgenres, 'main' if $genres->{$select}{'main'};
 
       for my $subgenre (@subgenres) {
-        my @movies = map { display_simple_movie(movie($_)) } sort { article_sort(lc $a,lc $b) } @{$genres->{$select}{$subgenre}};
+        my @movies = map { display_simple_movie(movie($_)) } sort { article_sort(lc $a, lc $b) } @{$genres->{$select}{$subgenre}};
         my $class = scalar(@movies) > 72 ? 'three' : scalar(@movies) > 36 ? 'two' : 'one';
         my $style = $class eq 'three' ? 'font-size:smaller' : undef;
         section(4, sub {

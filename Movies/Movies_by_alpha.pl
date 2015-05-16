@@ -95,7 +95,7 @@ page( 'code' => sub {
     }, { 'legend' => 'Search...' });
   }, { 'action' => 'Movies_by_alpha.pl', 'method' => 'get', 'id' => 'Search' });
   section(3, sub {
-    paragraph(4,qq(This is a list of films and television series which interest my fiancé or me in some way, we either want to just watch them or own them.));
+    paragraph(4,qq(This is a list of films and television series I have collected which either interest my fiancé or me in some way or helps populate other pages.));
     paragraph(4,$search) if $search;
   });
   for my $alpha (sort keys %alpha_movies) {

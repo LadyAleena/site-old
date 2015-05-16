@@ -42,14 +42,14 @@ Mai Ka Wa Kahiko (Out of the Past)
 I Helu Pu (The Reckoning)
 Kupale (Defender)
 Lekio (Radio)
-Kalele (Faith)|Wooden Model of a Rat/08/Hawaii Five-O/Hawaii Five
+Kalele (Faith)|Wooden Model of a Rat/08/Hawaii Five-O
 Ha'Alele (Abandoned)
 Pa Make Loa (Touch of Death)|Touch of Death/03/NCIS: Los Angeles/NCIS
 Ua Hopu (Caught)
 Ua Hala (Death in The Family)
 .
 La O Na Makuahine (Mother's Day)
-Kanalua (Doubt)|Wooden Model of a Rat/08/Hawaii Five-O/Hawaii Five
+Kanalua (Doubt)|Wooden Model of a Rat/08/Hawaii Five-O
 Lana I Ka Moana (Adrift)
 Popilikia (Misfortune)
 Mohai (Offering)
@@ -111,5 +111,12 @@ La Po?ino (Doomsday)
 Powehiwehi (Blackout)
 E 'Imi Pono (Searching for the Truth)
 Nanahu (Embers)
-Kuka'awale
-Pono Kaulike
+Kuka'awale (Stakeout)
+Pono Kaulike (Justice for All)
+Kahania (Close Shave)
+’Ike Hanau (Instinct)
+Ua Helele'i Ka Hoku (Fallen Star)
+Ho’amoano (Chasing Yesterday)
+Mo’o’ Olelo Pu (Sharing Traditions)
+Luapo’i (Prey)
+A Makekaua (Until We Die)

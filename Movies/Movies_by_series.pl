@@ -13,12 +13,12 @@ use Base::Data qw(alpha_array);
 use HTML::Elements qw(section paragraph list);
 use Util::Sort qw(article_sort);
 use Util::Columns qw(get_columns);
-use Movie qw(option print_series print_program);
+use Movie qw(option print_franchise print_series print_movie);
 
 my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('series'),'<>"');
 my $series_select = option('series');
-my @selects = sort {article_sort(lc $a,lc $b)} keys %$series_select;
+my @selects = sort {article_sort(lc $a, lc $b)} keys %$series_select;
 my $file_menu = file_menu('series', \@selects, $select);
 my %alpha_movies = alpha_array(\@selects);
 my $alpha_menu = alpha_menu(\%alpha_movies);
@@ -31,7 +31,7 @@ page( 'heading' => $body_head, 'file menu' => $file_menu, 'class' => $body_class
       print_series(2, 1, $select);
     }
     else {
-      print_program(2, 1, $select);
+      print_movie(2, 1, $select);
     }
   }
   else {

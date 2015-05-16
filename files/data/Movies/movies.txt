@@ -55,9 +55,9 @@ Adventures of Superman|1952|1957|tv||Adventures_of_Superman_(TV_series)||0044231
 After.Life|2009||film||After.Life|478041|0838247||afterlife-2009|speculative fiction||
 AfterMASH|1983|1984|tv||After_MASH||0084969|120||comedy;medical||
 Aftershock: Earthquake in New York|1999||miniseries:2||Aftershock:_Earthquake_in_New_York|184324|0186804|75589|aftershock-earthquake-in-new-york|disaster:earthquake||
-Agents of S.H.I.E.L.D.|2013|tbd|tv||Agents_of_Shield||2364582|183210||superhero fiction|comics|Marvel Comics
 The Air Up There|1994||film||The_Air_Up_There|123164|0109067||the-air-up-there|sports;comedy||
 Airborne|1998||film|||181120|0121974||airborne1999|action||
+Air Force One|1997||film||Air_Force_One_(film)|156948|0118571||air-force-one|disaster:terrorism;action||
 Airplane!|1980||film|dvd|Airplane!|1306|0080339||airplane|spoof;disaster:technological failure||
 Airplane II: The Sequel|1982||film|dvd|Airplane_II:_The_Sequel|1305|0083530||airplane-2-the-sequel|spoof;disaster:technological failure||
 Airport|1970||film||Airport_(1970_film)|1307|0065377||airport|disaster:blizzard,terrorism;action|novel|Arthur Hailey
@@ -94,6 +94,7 @@ Alienated|2003|2004|tv||Alienated_(TV_series)||0338574|19740||science fiction;si
 Aliens|1986||film||Aliens|1524|0090605||aliens|science fiction:aliens||
 Aliens vs. Predator: Requiem|2007||film||Aliens_vs._Predator:_Requiem|352388|0758730||alien-vs-predator-avp2|science fiction:aliens||
 Alien³|1992||film|vhs|Alien%C2%B3|1504|0103644||alien-3|science fiction:aliens||
+Alive|1993||film||Alive_(1993_film)|1531|0106246||alive|docudrama;disaster:technological failure|book|Piers Paul Read
 All of Me|1984||film||All_of_Me_(1984_film)|1601|0086873||all-of-me|monster:ghosts||
 All Souls|2001||tv||All_Souls_(TV_series)||0280229|2387||speculative fiction||
 Alphas|2011|2012|tv||Alphas|538277|1183865|75264||monster:mutants||
@@ -104,15 +105,20 @@ Amazing Stories|1985|1987|tv||Amazing_Stories_(TV_series)|174768|0088478|360||sp
 America's Sweethearts|2001||film|dvd|America%27s_Sweethearts|247222|0265029||americas-sweethearts|romantic comedy||
 American Chopper|2002|tbd|tv||American_Chopper|284172|0364779|21794||non-fiction:motorcycles||
 American Chopper: Senior vs. Junior|2010|2012|tv||American_Chopper:_Senior_vs._Junior|456407|2069135|79123||non-fiction:motorcycles||
+American Cyborg: Steel Warrior|1994||film||American_Cyborg:_Steel_Warrior|122335|0109098||american-cyborg-steel-warrior|science fiction:cyborgs||
 American Gothic|1995|1996|tv||American_Gothic_(TV_series)|334091|0111880|444||speculative fiction;monster:ghosts||
+An American Haunting|2005||film||An_American_Haunting|316215|0429573||an-american-haunting|horror;monster:ghosts,spellcasters|novel|Brent Monahan
 The American President|1995||film|dvd|The_American_President|135601|0112346||the-american-president|romantic comedy||
+American Psycho|2000||film||American_Psycho_(film)|184482|0144084||american-psycho|horror|novel|Bret Easton Ellis
+American Psycho 2|2002||film||American_Psycho_2|262853|0283877||american-psycho-ii-all-american-girl|horror||
 Anastasia|1997||film|dvd|Anastasia_(1997_film)|159952|0118617||anastasia1997|animated;fantasy;monster:spellcasters||
 Ancient Alien|1998||film|||176993|0166980||ancient-alien|animated;music||
 And Now for Something Completely Different|1971||film||And_Now_for_Something_Completely_Different|2207|0066765||monty-pythons-and-now-for-something-completely-different|comedy||
 Andromeda|2000|2005|tv||Andromeda_(TV_series)|227023|0213327|637||science fiction||
 The Andromeda Strain (1971)|1971||film||The_Andromeda_Strain_(film)|2247|0066769||the-andromeda-strain1971|disaster:pathological threat|novel|Michael Crichton
 The Andromeda Strain (2008)|2008||miniseries:2||The_Andromeda_Strain_(2008_miniseries)|446456|0424600|75591|the-andromeda-strain2008|disaster:pathological threat|novel|Michael Crichton
-Angels & Demons|2009||film||Angels_%26_Demons_(film)|381322|0808151||angels-demons|spy fiction|novel|Dan Brown
+Angels & Demons|2009||film||Angels_%26_Demons_(film)|381322|0808151||angels-demons|mystery;thriller|novel|Dan Brown
+Angry and Moist: An Undead Chronicle|2004||film||||0436067||angry-and-moist-an-undead-chronicle|horror;monster:zombies||
 Animal Cops: Detroit|2002|2006|tv||Animal_Cops:_Detroit||0381732|29892||non-fiction:animals||
 Animal Cops: Houston|2003|2012|tv||Animal_Cops:_Houston||0408368|34637||non-fiction:animals||
 Animal Cops: Phoenix|2008|2009|tv||Animal_Cops:_Phoenix||1542800|77890||non-fiction:animals||
@@ -124,7 +130,7 @@ Anne of Green Gables: The Continuing Story|2000||miniseries:2||Anne_of_Green_Gab
 Anne of Green Gables: A New Beginning|2008||film||Anne_of_Green_Gables:_A_New_Beginning|470846|1063034|76574|anne-of-green-gables-a-new-beginning|drama||
 Annie|1982||film||Annie_(film)|83778|0083564||annie|musical||
 Anonymous Rex|2004||film||Anonymous_Rex|350883|0397312||anonymous-rex|monster:dinosaurs||
-Ant-Man|2015||film|||453126|0478970||antman|superhero fiction|comics|Marvel Comics
+Antibody|2002||film||Antibody_(film)|280701|0295173||antibody|disaster:terrorism;science fiction||
 Apollo 13|1995||film||Apollo_13_(film)|134963|0112384||apollo-13|docudrama||
 Aquaman|2018||film||||1477834|||superhero fiction|comics|DC Comics
 Aquamarine|2006||film||Aquamarine_(film)|323755|0429591||aquamarine|monster:mermaids||
@@ -145,12 +151,17 @@ Atlantis: Milo's Return|2003||film||Atlantis:_Milo%27s_Return|280185|0344864||at
 Atlantis: The Lost Empire|2001||film||Atlantis:_The_Lost_Empire|244862|0230011||atlantis-the-lost-empire|animated||Disney
 Atomic Train|1999||film||Atomic_Train|180063|0144039||atomic-train|disaster:nuclear||
 Atomic Twister|2002||film||Atomic_Twister|267534|0281617||atomic-twister|disaster:nuclear,tornado||
+Attack of the Flesh Devouring Space Worms from Outer Space|1998||film||Attack_of_the_Flesh_Devouring_Space_Worms||0155510|||comedy;horror;science fiction:aliens;monster:zombies||
 Automan|1983|1984|tv||Automan|347864|0084978|1921||superhero fiction||
+Avalanche (1969)|1969||film|||311764|0176467||avalanche-1969|disaster:avalanche||
+Avalanche (1978)|1978||film||Avalanche_(1978_film)|3382|0077189|||disaster:avalanche||
+Avalanche (1994)|1994||film|||149425|0109180||avalanche-1994|disaster:avalanche||
+Avalanche (1999)|1999||film|||261109|0181299||avalanche|disaster:avalanche||
+Avalanche Alley|2001||film||Avalanche_Alley|258977|0289079||avalanche-alley|disaster:avalanche||
+Avalanche Express|1979||film||Avalanche_Express|3384|0078812||avalanche-express|spy fiction;disaster:avalanche,terrorism;action|novel|Colin Forbes
 Avatar|2009||film||Avatar_(2009_film)|352199|0499549||avatar|science fiction||
 The Avengers (1961)|1961|1969|tv||The_Avengers_(TV_series)|132977|0054518|1196||spy fiction||
 The Avengers (1998)|1998||film|dvd|The_Avengers_(film)|158879|0118661||the-avengers|spy fiction||
-The Avengers (2012)|2012||film|bd|The_Avengers_(2012_film)|451151|0848228||the-avengers-2011|superhero fiction|comics|Marvel Comics
-Avengers: Age of Ultron|2015||film||Avengers:_Age_of_Ultron|570172|2395427||the-avengers-age-of-ultron|superhero fiction|comics|Marvel Comics
 Awakenings|1990||film||Awakenings|3464|0099077||awakenings|docudrama||
 Baby Boom (1987)|1987||film|dvd|Baby_Boom_(film)|3565|0092605||baby-boom|dramedy||
 Baby Boom (1988)|1988|1989|tv||Baby_Boom_(TV_series)|311765|0094419|1545||dramedy||
@@ -203,9 +214,9 @@ Beaches|1988||film||Beaches_(film)|4424|0094715||beaches|drama||
 The Beastmaster|1982||film|dvd|The_Beastmaster_(film)|4471|0083630||the-beastmaster|fantasy;monster:mutants||
 BeastMaster|1999|2002|tv||BeastMaster_(TV_series)|329112|0215392|2483||fantasy;monster:demons,spellcasters||
 The Beautician and the Beast|1997||film||The_Beautician_and_the_Beast|154605|0118691||the-beautician-and-the-beast|romantic comedy||
-Beauty and the Beast (1987)|1987|1990|tv||Beauty_and_the_Beast_(TV_series)|132980|0092319|297||monster:mutants||
-Beauty and the Beast (1991)|1991||film||Beauty_and_the_Beast_(1991_film)|4522|0101414||beauty-and-the-beast-1991|animated||Disney
-Beauty and the Beast: The Enchanted Christmas|1997||film||Beauty_and_the_Beast:_The_Enchanted_Christmas|175588|0118692||beauty-and-the-beast-the-enchanted-christmas|animated||Disney
+Beauty and the Beast (1987)|1987|1990|tv||Beauty_and_the_Beast_(TV_series)|132980|0092319|297||monster:mutants|fairy tale
+Beauty and the Beast (1991)|1991||film||Beauty_and_the_Beast_(1991_film)|4522|0101414||beauty-and-the-beast-1991|animated|fairy tale
+Beauty and the Beast: The Enchanted Christmas|1997||film||Beauty_and_the_Beast:_The_Enchanted_Christmas|175588|0118692||beauty-and-the-beast-the-enchanted-christmas|animated|fairy tale
 Bedknobs and Broomsticks|1971||film||Bedknobs_and_Broomsticks|4565|0066817||bedknobs-and-broomsticks|animated||Disney
 Bedtime Stories|2008||film||Bedtime_Stories_(film)|389191|0960731||bedtime-stories|speculative fiction||
 Beetlejuice|1988||film||Beetlejuice|4624|0094721||beetlejuice|monster:ghosts||
@@ -309,8 +320,6 @@ The Cannonball Run|1981||film||The_Cannonball_Run_(film)|150330|0082136||the-can
 Cannonball Run II|1984||film||Cannonball_Run_II|8032|0087032||cannonball-run-ii|crime||
 The Cape|2011||tv||The_Cape_(2011_TV_series)|532256|1593823|78652||superhero fiction||
 Caprica|2010|2010|tv||Caprica_(TV_series)|480469|0799862|65632||science fiction;adventure||
-Captain America: The First Avenger|2011||film||The_First_Avenger:_Captain_America|451108|0458339||captain-america|superhero fiction|comics|Marvel Comics
-Captain America: The Winter Soldier|2014||film|bd|Captain_America:_The_Winter_Soldier|562324|1843866||captain-america-the-winter-soldier-2014|superhero fiction|comics|Marvel Comics
 Caravan of Courage: An Ewok Adventure|1984||film||Caravan_of_Courage:_An_Ewok_Adventure|16276|0087225||the-ewok-adventure-caravan-of-courage|science fiction||
 Carrie (1976)|1976||film||Carrie_(1976_film)|8351|0074285||carrie|monster:mutants|novel|Stephen King
 Carrie (2002)|2002||film||Carrie_(2002_film)|276072|0319970||carrie2002|monster:mutants|novel|Stephen King
@@ -361,9 +370,9 @@ The Chronicles of Narnia: The Silver Chair|2015||film||||1223947|||fantasy|novel
 The Chronicles of Riddick|2004||film|dvd|The_Chronicles_of_Riddick|286673|0296572||the-chronicles-of-riddick|speculative fiction||
 The Chronicles of Riddick: Dark Fury|2004||film||The_Chronicles_of_Riddick:_Dark_Fury|304177|0407658||dark-fury-the-chronicles-of-riddick|speculative fiction||
 Chuck|2007|2012|tv|bd:1..5|Chuck_(TV_series)|400700|0934814|68724||action;dramedy;spy fiction;science fiction||
-Cinderella|1950||film|dvd|Cinderella_(1950_film)|9656|0042332||cinderella|animated;fantasy;monster:spellcasters||Disney
-Cinderella II: Dreams Come True|2002||film||Cinderella_II:_Dreams_Come_True|257005|0291082||cinderella-ii-dreams-come-true|animated||Disney
-Cinderella III: A Twist in Time|2007||film||Cinderella_III|376073|0465940||cinderella-iii-a-twist-in-time|animated||Disney
+Cinderella|1950||film|dvd|Cinderella_(1950_film)|9656|0042332||cinderella|animated;fantasy;monster:spellcasters|fairy tale
+Cinderella II: Dreams Come True|2002||film||Cinderella_II:_Dreams_Come_True|257005|0291082||cinderella-ii-dreams-come-true|animated|fairy tale
+Cinderella III: A Twist in Time|2007||film||Cinderella_III|376073|0465940||cinderella-iii-a-twist-in-time|animated|fairy tale
 City of Angels|1998||film||City_of_Angels|161651|0120632||city-of-angels|monster:angels||
 City of Ember|2008||film||City_of_Ember|399607|0970411/||city-of-ember|post-apocalypse||
 Clash of the Titans|1981||film||Clash_of_the_Titans|9812|0082186||clash-of-the-titans|fantasy||
@@ -423,12 +432,12 @@ Cypher|2002||film||Cypher_(film)|287455|0284978||cypher|science fiction;thriller
 D-War|2007||film||D-War|393888|0372873||dragon-wars-dwar|monster:dragons||
 D2: The Mighty Ducks|1994||film|vhs|D2:_The_Mighty_Ducks|131156|0109520||d2-the-mighty-ducks|sports;comedy||
 D3: The Mighty Ducks|1996||film|vhs|D3:_The_Mighty_Ducks|136813|0116000||d3-the-mighty-ducks|sports;comedy||
-The Da Vinci Code|2006||film||The_Da_Vinci_Code_(film)|309461|0382625||the-da-vinci-code|spy fiction|novel|Dan Brown
+The Da Vinci Code|2006||film||The_Da_Vinci_Code_(film)|309461|0382625||the-da-vinci-code|mystery;thriller|novel|Dan Brown
 Dances with Wolves|1990||film||Dances_with_Wolves|12092|0099348||dances-with-wolves|drama||
 Dangerous Minds (1995)|1995|1995|film||Dangerous_Minds|134864|0112792||dangerous-minds|docudrama:teacher||
 Dangerous Minds (1996)|1996|1997|tv||Dangerous_Minds_(TV_series)||0115149|480||docudrama:teacher||
 Dante's Peak|1997||film|dvd|Dante%27s_Peak|154604|0118928||dantes-peak|disaster:volcano||
-Daredevil|2003||film||Daredevil_(film)|273845|0287978||daredevil|superhero fiction|comics|Marvel Comics
+Daredevil (2003)|2003||film||Daredevil_(film)|273845|0287978||daredevil|superhero fiction|comics|Marvel Comics
 Dark City|1998||film|dvd|Dark_City_(1998_film)|158819|0118929||dark-city|science fiction:aliens||
 The Dark Crystal|1982||film|dvd|The_Dark_Crystal|12243|0083791||the-dark-crystal|fantasy||
 The Dark Knight|2008||film||The_Dark_Knight_(film)|357349|0468569||the-dark-knight|superhero fiction|comics|DC Comics
@@ -447,7 +456,7 @@ The Dead Zone (2002)|2002|2007|tv||The_Dead_Zone_(TV_series)|268424|0281432|7420
 Deadliest Catch|2005|tbd|tv||Deadliest_Catch|354655|0446809|34348||non-fiction:fishing||
 Deadline|2000|2001|tv||Deadline_(American_TV_series)|220885|0247086|24||drama||
 Dear God|1996||film|dvd|Dear_God|136680|0116059||dear-god|crime;comedy||
-Dear John|1988|1992|tv||Dear_John_(U.S._TV_series)||0094447|47||romantic comedy||
+Dear John|1988|1992|tv||Dear_John_(U.S._TV_series)||0094447|47||romantic comedy;situation comedy||
 Death Becomes Her|1992||film|vhs|Death_Becomes_Her|12860|0104070||death-becomes-her|monster:zombies||
 The Death of the Incredible Hulk|1990||film|||12960|0099387||the-death-of-the-incredible-hulk|superhero fiction|comics|Marvel Comics
 The Decoy Bride|2011||film||The_Decoy_Bride|549206|1657229||the-decoy-bride|romantic comedy||
@@ -480,7 +489,6 @@ The Distinguished Gentleman|1992||film||The_Distinguished_Gentleman|14030|010411
 Divine Secrets of the Ya-Ya Sisterhood|2002||film||Divine_Secrets_of_the_Ya-Ya_Sisterhood_(film)|260292|0279778||divine-secrets-of-the-yaya-sisterhood|drama||
 Doc Hollywood|1991||film||Doc_Hollywood|14136|0101745||doc-hollywood|comedy||
 Doctor Dolittle|1998||film||Dr._Dolittle_(film)|162762|0118998||dr-dolittle1998|monster:mutants||
-Doctor Strange|2016||film||||1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
 Doctor Who (1963)|1963|1989|tv|||174951|0056751|355||science fiction;adventure||
 Doctor Who (1996)|1996||film|dvd|Doctor_Who_(1996_film)|154415|0116118||doctor-who|science fiction;adventure||
 Doctor Who (2005)|2005|tbd|tv|dvd:1..4;bd:5||346477|0436992|34391||science fiction;adventure||
@@ -646,9 +654,9 @@ Flatliners|1990||film|dvd|Flatliners|17756|0099582||flatliners|monster:ghosts||
 Flesh for Frankenstein|1973||film||Andy_Warhol's_Frankenstein|2341|0071508||flesh-for-frankenstein-1973|monster:creations||
 Flesh Gordon|1974||film||Flesh_Gordon|17776|0068595||flesh-gordon|science fiction||
 Flesh+Blood|1985||film||Flesh_%26_Blood_(film)|17769|0089153||flesh-blood|fantasy||
-Fletch|1985||film||Fletch|17781|0089155||fletch|spy fiction||
-Fletch Lives|1989||film||Fletch_Lives|17782|0097366||fletch-lives|spy fiction||
-Fletch Won|2013||film||Fletch_Won|356869|0275354||fletch-won|spy fiction||
+Fletch|1985||film||Fletch|17781|0089155||fletch|comedy;detective|novel|Gregory Mcdonald
+Fletch Lives|1989||film||Fletch_Lives|17782|0097366||fletch-lives|comedy;detective|novel|Gregory Mcdonald
+Fletch Won|tbd||film||Fletch_Won|356869|0275354||fletch-won|comedy;detective|novel|Gregory Mcdonald
 Flood: A River's Rampage|1997||film|||162122|0132965/||flood-a-rivers-rampage|disaster:flood||
 The Fly (1958)|1958||film||The_Fly_(1958_film)|17924|0051611||the-fly1958|monster:mutants|short story|George Langelaan
 Return of the Fly|1959||film||Return_of_the_Fly|41090|0053219||return-of-the-fly|monster:mutants||
@@ -712,6 +720,7 @@ Fringe|2008|2013|tv||Fringe_(TV_series)|466814|1119644|75146||science fiction||
 From Dusk Till Dawn|1996||film||From_Dusk_till_Dawn|135472|0116367||from-dusk-till-dawn|monster:vampires||
 From Dusk Till Dawn 2: Texas Blood Money|1999||film||From_Dusk_Till_Dawn_2:_Texas_Blood_Money|175660|0120860||from-dusk-till-dawn-2-texas-blood-money|monster:vampires||
 From Dusk Till Dawn 3: The Hangman's Daughter|1999||film||From_Dusk_till_Dawn_3:_The_Hangman%27s_Daughter|181750|0120695||from-dusk-till-dawn-3-the-hangmans-daughter|monster:vampires||
+Frozen|2013||film||Frozen_(2013_film)|555200|2294629||frozen-2013|animated|fairy tale|Hans Christian Andersen
 The Frozen Inferno|2000||film||||0204618|||monster:mutants;post-apocalypse||
 Full Frontal|2002||film||Full_Frontal_(film)|259839|0290212||full-frontal|drama||
 The Full Monty|1997||film||The_Full_Monty|158564|0119164||the-full-monty|drama||
@@ -757,7 +766,6 @@ Gridiron Gang|2006||film||Gridiron_Gang|325504|0421206||gridiron-gang|docudrama;
 Grosse Pointe Blank|1997||film||Grosse_Pointe_Blank|154792|0119229||grosse-pointe-blank|comedy||
 Ground Control|1998||film||Ground_Control_(film)|176061|0137799||ground-control-jet|disaster||
 Groundhog Day|1993||film||Groundhog_Day_(film)|20982|0107048||groundhog-day|speculative fiction||
-Guardians of the Galaxy|2014||film|bd|Guardians_of_the_Galaxy_(film)|568178|2015381||guardians-of-the-galaxy|superhero fiction|comics|Marvel Comics
 Gulliver's Travels|1996||miniseries:2||Gulliver%27s_Travels_(miniseries)|162826|0115195|3939|gullivers-travels|fantasy|novel|Jonathan Swift
 Guns of the Magnificent Seven|1969||film||Guns_of_the_Magnificent_Seven|21180|0064395||guns-of-the-magnificent-seven|western||
 H.G. Wells' War of the Worlds|2005||film||H._G._Wells'_War_of_the_Worlds_(2005_film)|33092|0449040||hg-wells-war-of-the-worlds|science fiction:aliens|novel|H.G. Wells
@@ -776,8 +784,8 @@ Halloween: The Curse of Michael Myers|1995||film||Halloween:_The_Curse_of_Michae
 Hancock|2008||film||Hancock_(film)|376678|0448157||hancock|monster:mutants||
 The Hands of Shang-Chi|2011||film||||0366547||the-hands-of-shangchi|superhero fiction|comics|Marvel Comics
 Hanging Up|2000||film|dvd|Hanging_Up|181279|0162983||hanging-up|comedy||
-Hansel & Gretel: Witch Hunters|2013||film||Hansel_&_Gretel:_Witch_Hunters|532211|1428538||hansel-and-gretel-witch-hunters|action;horror;fantasy;monster:spellcasters||
-Hansel & Gretel: Witch Hunters 2|tbd||film||603312||2784082||hansel-and-gretel-witch-hunters-2|action;horror;fantasy;monster:spellcasters||
+Hansel & Gretel: Witch Hunters|2013||film||Hansel_&_Gretel:_Witch_Hunters|532211|1428538||hansel-and-gretel-witch-hunters|action;horror;fantasy;monster:spellcasters|fairy tale
+Hansel & Gretel: Witch Hunters 2|tbd||film||603312||2784082||hansel-and-gretel-witch-hunters-2|action;horror;fantasy;monster:spellcasters|fairy tale
 Happy Town|2010||tv||Happy_Town_(TV_series)|516279|1379722|76797||fantasy||
 Harry Potter and the Chamber of Secrets|2002||film|bd|Harry_Potter_and_the_Chamber_of_Secrets_(film)|260383|0295297||harry-potter-and-the-chamber-of-secrets|fantasy;monster:spellcasters|novel|J. K. Rowling
 Harry Potter and the Deathly Hallows: Part 1|2010||film|bd|Harry_Potter_and_the_Deathly_Hallows_(films)|393092|0926084||harry-potter-and-the-deathly-hallows|fantasy;monster:spellcasters|novel|J. K. Rowling
@@ -789,6 +797,15 @@ Harry Potter and the Prisoner of Azkaban|2004||film|bd|Harry_Potter_and_the_Pris
 Harry Potter and the Sorcerer's Stone|2001||film|bd|Harry_Potter_and_the_Sorcerer%27s_Stone_(film)|255538|0241527||harry-potter-and-the-sorcerer's-stone|fantasy;monster:spellcasters|novel|J. K. Rowling
 Harry's Law|2011|2012|tv||Harry's_Law|533216|1582453|79497||legal||
 Harsh Realm|1999|2000|tv||Harsh_Realm|181388|0182587|1513||science fiction||
+Hart to Hart|1979|1984|tv||Hart_to_Hart|334099|0078622|1314||detective
+Hart to Hart Returns|1993||film|||135396|0107082|||detective
+Home is Where the Hart Is|1994||film|||135432|0109989|||detective
+Crimes of the Hart|1994||film|||161936|0109988|||detective
+Old Friends Never Die|1994||film|||135433|0109990||hart-to-hart-old-friends-never-die-1994|detective
+Secrets of the Hart|1995||film|||154313|0113266|||detective
+Two Harts in 3/4 Time|1995||film|||412126|0113267||hart-to-hart-two-harts-in-three-quarter-time-1995|detective
+Harts in High Season|1996||film|||172942|0116495||hart-to-hart-harts-in-high-season-1996|detective
+Till Death Do Us Hart|1996||film|||173601|0160356||hart-to-hart-til-death-do-us-hart|detective
 The Haunted Mansion|2003||film||The_Haunted_Mansion_(film)|283306|0338094||the-haunted-mansion|monster:ghosts||
 Haven|2010|tbd|tv||Haven_(TV_series)||1519931|78043||horror;monster:mutants|short story|Stephen King
 Hawaii|2004|2004|tv||Hawaii_(TV_series)|314519|0410987|23581||police procedural||
@@ -864,7 +881,7 @@ The Hunt for Red October|1990||film|dvd|The_Hunt_for_Red_October_(film)|23882|00
 The Hunter|1980||film||The_Hunter|23890|0080907||the-hunter|docudrama||
 The Huntress|2000|2001|tv||The_Huntress|210855|0250157|1319||docudrama||
 I Hate Valentine's Day|2009||film||I_Hate_Valentine%27s_Day|484461|0762105||i-hate-valentines-day|romantic comedy||
-I Love Trouble|1994||film|dvd|I_Love_Trouble|131227|0110093||i-love-trouble|romantic comedy||
+I Love Trouble|1994||film|dvd|I_Love_Trouble|131227|0110093||i-love-trouble|romantic comedy;detective||
 I Love the '70s|2003||miniseries:10||I_Love_the_%2770s_(U.S._TV_series)|269091|0377192|21163||non-fiction:media history||
 I Love the '70s: Volume 2|2006||miniseries:10||I_Love_the_%2770s:_Volume_2||0830356|65986||non-fiction:media history||
 I Love the '80s|2002||miniseries:10||I_Love_the_%2780s_(U.S._TV_series)|269092|0346299|16144||non-fiction:media history||
@@ -894,7 +911,6 @@ The Immortal (2000)|2000|2001|tv||The_Immortal_(2000_TV_series)|380042|0248644|2
 In Plain Sight|2008|2012|tv||In_Plain_Sight||0935095|67607||police procedural||
 In the Army Now|1994||film||In_the_Army_Now_(film)|133726|0110123||in-the-army-now|military;comedy||
 The Incredible Hulk (1978)|1978|1982|tv||The_Incredible_Hulk_(1978_TV_series)|24707|0077031|150||superhero fiction|comics|Marvel Comics
-The Incredible Hulk (2008)|2008||film|bd|The_Incredible_Hulk_(film)|356353|0800080||the-incredible-hulk2008|superhero fiction|comics|Marvel Comics
 The Incredible Hulk Returns|1988||film|||128487|0095368||the-incredible-hulk-returns|superhero fiction|comics|Marvel Comics
 Hulk|2003||film||Hulk_(film)|272534|0286716||hulk|superhero fiction|comics|Marvel Comics
 Gamma Project|2003||film||||0347039||projet-gamma|superhero fiction|comics|Marvel Comics
@@ -926,9 +942,6 @@ The Invisible Man's Revenge|1944||film||The_Invisible_Man's_Revenge|96699|003695
 Abbott and Costello Meet the Invisible Man|1951||film||Abbott_and_Costello_Meet_the_Invisible_Man|576|0043255||abbott-and-costello-meet-the-invisible-man|comedy;monster:mutants||
 The Invisible Man (2000)|2000|2002|tv||The_Invisible_Man_(2000_TV_series)|346032|0220238|2693||monster:mutants||
 Iron Jawed Angels|2004||film||Iron_Jawed_Angels|300964|0338139||iron-jawed-angels|docudrama||
-Iron Man|2008||film|bd|Iron_Man_(film)|353425|0371746||iron-man-ironman|superhero fiction|comics|Marvel Comics
-Iron Man 2|2010||film|bd||451107|1228705||iron-man-2|superhero fiction|comics|Marvel Comics
-Iron Man 3|2013||film|bd|Iron_Man_3|527818|1300854||iron-man-3|superhero fiction|comics|Marvel Comics
 IRT: Deadliest Roads|2010|2011|tv|||527253|1739276|80139||non-fiction:trucking||
 IT|1990||miniseries:2|dvd|It_(1990_film)|46835|0099864|74848|it|horror;monster|novel|Stephen King
 It Could Happen Tomorrow|2006||tv||It_Could_Happen_Tomorrow||0454473|64101||non-fiction:disasters||
@@ -1065,10 +1078,10 @@ The Lion King 1½|2004||film||The_Lion_King_1%C2%BD|294752|0318403||the-lion-kin
 The Lion King II: Simba's Pride|1998||film||The_Lion_King_II:_Simba%27s_Pride|173545|0120131||the-lion-king-2-simbas-pride|animated||Disney
 Lipstick Jungle|2008|2009|tv||Lipstick_Jungle_(TV_series)||0489606|58145||drama|novel|Candace Bushnell
 Little Bytes|2000||film|||210260|||little-bytes|animated;music||
-The Little Mermaid (1989)|1989||film||The_Little_Mermaid|29563|0097757||the-little-mermaid|animated;monster:mermaids||Disney
-The Little Mermaid (1992)|1992|1994|tv||The_Little_Mermaid_(TV_series)||0103477|5426||animated;monster:mermaids||Disney
-The Little Mermaid II: Return to the Sea|2000||film||The_Little_Mermaid_II:_Return_to_the_Sea|199825|0240684||the-little-mermaid-ii-return-to-the-sea|animated;monster:mermaids||Disney
-The Little Mermaid: Ariel's Beginning|2008||film||The_Little_Mermaid:_Ariel%27s_Beginning|422634|0969647||the-little-mermaid-ariels-beginning|animated;monster:mermaids||Disney
+The Little Mermaid (1989)|1989||film||The_Little_Mermaid|29563|0097757||the-little-mermaid|animated;monster:mermaids|fairy tale
+The Little Mermaid (1992)|1992|1994|tv||The_Little_Mermaid_(TV_series)||0103477|5426||animated;monster:mermaids|fairy tale
+The Little Mermaid II: Return to the Sea|2000||film||The_Little_Mermaid_II:_Return_to_the_Sea|199825|0240684||the-little-mermaid-ii-return-to-the-sea|animated;monster:mermaids|fairy tale
+The Little Mermaid: Ariel's Beginning|2008||film||The_Little_Mermaid:_Ariel%27s_Beginning|422634|0969647||the-little-mermaid-ariels-beginning|animated;monster:mermaids|fairy tale
 Loaded Weapon 1|1993||film||Loaded_Weapon_1|34584|0107659||national-lampoons-loaded-weapon-1|spoof||
 Logan's Run (1976)|1976||film||Logan%27s_Run_(1976_film)|29834|0074812||logans-run|post-apocalypse||
 Logan's Run (1977)|1977|1978|tv|||322636|0075527|1275||post-apocalypse||
@@ -1088,7 +1101,7 @@ Lost Girl|2010|2015|tv||Lost_Girl||1429449|80318||fantasy;monster:demons||
 Lost Girls|2005||film||||||lost-girls|monster:vampires||
 Lost in Space|1998||film||Lost_in_Space_(film)|161716|0120738||lost-in-space|science fiction||
 Lost in Translation|2003||film||Lost_in_Translation_(film)|283628|0335266||lost-in-translation|drama||
-The Lost Symbol|tbd||film||The_Lost_Symbol_(film)||1422137|||spy fiction|novel|Dan Brown
+The Lost Symbol|tbd||film||The_Lost_Symbol_(film)||1422137|||mystery;thriller|novel|Dan Brown
 Love Actually|2003||film|dvd|Love_Actually|284676|0314331||love-actually|romantic comedy||
 Love and Other Disasters|2006||film||Love_and_Other_Disasters|326488|0452643||love-and-other-disasters|romantic comedy||
 Love and Other Drugs|2010||film||Love_and_Other_Drugs|506003|0758752||love-and-other-drugs|romantic dramedy|novel|Jamie Reidy
@@ -1449,6 +1462,7 @@ Re-Animator|1985||film||Re-Animator|re-animator-40416|0089885||reanimator|horror
 Real People|1979|1984|tv||Real_People|422671|0078676|7248||non-fiction||
 Rebound|2005||film||Rebound_(film)|290096|0376108||rebound|sports;drama||
 Red|2010||film||Red_(2010_film)|504371|1245526||red-2010|action;spy fiction|comics|DC Comics
+Red 2|2013||film||Red_2_(film)|551206|1821694||red-2|action;spy fiction|comics|DC Comics
 Red Dawn|1984||film||Red_Dawn|40667|0087985||red-dawn|post-apocalypse||
 Red Planet|2000||film||Red_Planet|214074|0199753||red-planet|science fiction||
 Red Sonja|1985||film||Red_Sonja_(1985_film)|40745|0089893||red-sonja|fantasy|novel|Robert E. Howard
@@ -1594,7 +1608,7 @@ The Sixth Sense|1999||film||The_Sixth_Sense|180403|0167404||the-sixth-sense|mons
 Sky Captain and the World of Tomorrow|2004||film|dvd|Sky_Captain_and_the_World_of_Tomorrow|288387|0346156||sky-captain-and-the-world-of-tomorrow|science fiction||
 Sky High|2005||film||Sky_High|313197|0405325||sky-high|superhero fiction||
 Slash|2002||film|||288188|0301848||slash|horror||
-Sleeping Beauty|1959||film|dvd|Sleeping_Beauty|45151|0053285||sleeping-beauty|animated;fantasy;monster:spellcasters||Disney
+Sleeping Beauty|1959||film|dvd|Sleeping_Beauty|45151|0053285||sleeping-beauty|animated;fantasy;monster:spellcasters|fairy tale
 Sleepless in Seattle|1993||film|dvd|Sleepless_in_Seattle|45166|0108160||sleepless-in-seattle|romantic comedy||
 Sliders|1995|2000|tv||Sliders|306352|0112167|438||science fiction||
 Sliding Doors|1998||film||Sliding_Doors|160211|0120148||sliding-doors|romantic comedy||
@@ -1604,7 +1618,7 @@ Smokey and the Bandit|1977||film||Smokey_and_the_Bandit|45289|0076729||movie/smo
 Smokey and the Bandit II|1980||film||Smokey_and_the_Bandit_II|45290|0081529||smokey-and-the-bandit-ii|crime;comedy||
 Smokey and the Bandit Part 3|1983||film||Smokey_and_the_Bandit_Part_3|45291|0086325||smokey-and-the-bandit-part-3|crime;comedy||
 Snow Dogs|2002||film||Snow_Dogs_(film)|259129|0281373||snow-dogs|sports;comedy||
-Snow White and the Seven Dwarfs|1937||film||Snow_White_and_the_Seven_Dwarfs_(1937_film)|45383|0029583||snow-white-and-the-seven-dwarfs|animated;fantasy;monster:spellcasters||Disney
+Snow White and the Seven Dwarfs|1937||film||Snow_White_and_the_Seven_Dwarfs_(1937_film)|45383|0029583||snow-white-and-the-seven-dwarfs|animated;fantasy;monster:spellcasters|fairy tale
 Soapdish|1991||film||Soapdish|45425|0102951||soapdish|romantic comedy||
 Society|1989||film||Society_(film)|45473|0098354|||monster:mutants||
 Soldier|1998||film|dvd|Soldier_(film)|173552|0120157||soldier|science fiction||
@@ -1644,6 +1658,7 @@ Splice|2009||film||Splice_(film)|420061|1017460||splice|monster:mutants||
 Spy Hard|1996||film||Spy_Hard|136311|0117723||spy-hard|spy fiction;spoof||
 SST: Death Flight|1977||film||SST:_Death_Flight|147223|0076650||sst-death-flight|disaster:pathological threat||
 St. Elmo's Fire|1985||film|dvd|St._Elmo%27s_Fire_(film)|46354|0090060||st-elmos-fire|drama||
+St. Elsewhere|1982|1988|tv||St._Elsewhere|175363|0083483|205||medical||
 The Stand|1994||miniseries:3||The_Stand_(TV_miniseries)|134603|0108941|75151||disaster:pathological threat|novel|Stephen King
 Stand and Deliver|1988||film||Stand_and_Deliver|46436|0094027||stand-and-deliver|docudrama:teacher||
 Stand by Me|1986||film||Stand_by_Me_(film)|46439|0092005||stand-by-me|drama||
@@ -1730,7 +1745,7 @@ Tabitha|1977|1978|tv||Tabitha_(TV_series)|323881|0075590|2326||fantasy;monster:s
 Take the Lead|2006||film|dvd|Take_the_Lead|320862|0446046||take-the-lead|docudrama:teacher||
 Taken|2002||tv||Taken_(mini_series)|278437|0289830|8212||science fiction:aliens||
 Taking Woodstock|2009||film||Taking_Woodstock|449996|1127896||taking-woodstock|dramedy|book|Elliot Tiber and Tom Monte
-Tangled|2010||film||Tangled|448227|0398286||disneys-tangled|animated||
+Tangled|2010||film||Tangled|448227|0398286||disneys-tangled|animated|fairy tale
 Tango & Cash|1989||film|dvd|Tango_%26_Cash|48611|0098439||tango-and-cash|detective;action||
 Tank Girl|1995||film||Tank_Girl_(film)|134610|0114614||tank-girl|science fiction|comics|Deadline Magazine
 Team Knight Rider|1997|1998|tv||Team_Knight_Rider||0127398|1169||science fiction||
@@ -1752,8 +1767,6 @@ They Call Me MISTER Tibbs!|1970||film||They_Call_Me_MISTER_Tibbs!|67103|0066450|
 Thir13en Ghosts|2001||film|dvd|Thir13en_Ghosts|254895|0245674||thirteen-ghosts|monster:ghosts||
 Third Watch|1999|2005|tv||Third_Watch|181330|0197182|218||drama||
 Thirst|1998||film|||172995|0163337||thirst|disaster:pathological threat||
-Thor|2011||film|bd|Thor_(film)|411473|0800369||thor|superhero fiction|comics|Marvel Comics
-Thor: The Dark World|2013||film||Thor:_The_Dark_World|546686|1981115||thor-the-dark-world|superhero fiction|comics|Marvel Comics
 Three Kings|1999||film||Three_Kings_(film)|180980|0120188||three-kings|crime||
 Three Men and a Baby|1987||film||Three_Men_and_a_Baby|49677|0094137||three-men-and-a-baby|comedy||
 Three Men and a Little Lady|1990||film||Three_Men_and_a_Little_Lady|49680|0098966||three-men-and-a-little-lady|comedy||
@@ -1970,21 +1983,6 @@ Zoom|2006||film||Zoom_(film)|333828|0383060||zoom|superhero fiction;comedy|novel
 Zorro, the Gay Blade|1981||film|dvd|Zorro,_The_Gay_Blade|56214|0083366||zorro-the-gay-blade|parody||
 Æon Flux (1991)|1991|1995|tv||Æon_Flux||0402022|9717||post-apocalypse||
 Æon Flux (2005)|2005||film|dvd|Æon_Flux_(film)|304590|0402022||aeon-flux|post-apocalypse||
-Air Force One|1997||film||Air_Force_One_(film)|156948|0118571||air-force-one|disaster:terrorism;action||
-Alive|1993||film||Alive_(1993_film)|1531|0106246||alive|docudrama;disaster:technological failure|book|Piers Paul Read
-American Cyborg: Steel Warrior|1994||film||American_Cyborg:_Steel_Warrior|122335|0109098||american-cyborg-steel-warrior|science fiction:cyborgs||
-An American Haunting|2005||film||An_American_Haunting|316215|0429573||an-american-haunting|horror;monster:ghosts,spellcasters|novel|Brent Monahan
-American Psycho|2000||film||American_Psycho_(film)|184482|0144084||american-psycho|horror|novel|Bret Easton Ellis
-American Psycho 2|2002||film||American_Psycho_2|262853|0283877||american-psycho-ii-all-american-girl|horror||
-Angry and Moist: An Undead Chronicle|2004||film||||0436067||angry-and-moist-an-undead-chronicle|horror;monster:zombies||
-Antibody|2002||film||Antibody_(film)|280701|0295173||antibody|disaster:terrorism;science fiction||
-Attack of the Flesh Devouring Space Worms from Outer Space|1998||film||Attack_of_the_Flesh_Devouring_Space_Worms||0155510|||comedy;horror;science fiction:aliens;monster:zombies||
-Avalanche (1969)|1969||film|||311764|0176467||avalanche-1969|disaster:avalanche||
-Avalanche (1978)|1978||film||Avalanche_(1978_film)|3382|0077189|||disaster:avalanche||
-Avalanche (1994)|1994||film|||149425|0109180||avalanche-1994|disaster:avalanche||
-Avalanche (1999)|1999||film|||261109|0181299||avalanche|disaster:avalanche||
-Avalanche Alley|2001||film||Avalanche_Alley|258977|0289079||avalanche-alley|disaster:avalanche||
-Avalanche Express|1979||film||Avalanche_Express|3384|0078812||avalanche-express|spy fiction;disaster:avalanche,terrorism;action|novel|Colin Forbes
 Bachelor Party|1984||film||Bachelor_Party_(1984_film)|3642|0086927||bachelor-party1984|comedy||
 Bhoot|2003||film||Bhoot_(film)|287452|0341266||bhoot-ghost-house|horror;monster:ghosts||
 The Birds|1963||film||The_Birds_(film)|5727|0056869||the-birds|horror;disaster:animal attack|novelette|Daphne du Maurier
@@ -2366,6 +2364,32 @@ Wishmaster 3: Beyond the Gates of Hell|2001||film||Wishmaster_3:_Beyond_the_Gate
 Wishmaster 4: The Prophecy Fulfilled|2002||film||Wishmaster_4:_The_Prophecy_Fulfilled|270981|0254872||wishmaster-4-the-prophecy-fulfilled|monster:demons||
 Witchcraft|1988||film|||54952|0245567||witchcraft-1988|horror;monster:ghosts,spellcasters;fantasy||
 World Trade Center|2006||film||World_Trade_Center_(film)|336150|0469641||world-trade-center|docudrama;disaster:terrorism||
+Iron Man|2008||film|bd|Iron_Man_(film)|353425|0371746||iron-man-ironman|superhero fiction|comics|Marvel Comics
+The Incredible Hulk (2008)|2008||film|bd|The_Incredible_Hulk_(film)|356353|0800080||the-incredible-hulk2008|superhero fiction|comics|Marvel Comics
+Iron Man 2|2010||film|bd|Iron_Man_2|451107|1228705||iron-man-2|superhero fiction|comics|Marvel Comics
+Thor|2011||film|bd|Thor_(film)|411473|0800369||thor|superhero fiction|comics|Marvel Comics
+Captain America: The First Avenger|2011||film||The_First_Avenger:_Captain_America|451108|0458339||captain-america|superhero fiction|comics|Marvel Comics
+The Avengers (2012)|2012||film|bd|The_Avengers_(2012_film)|451151|0848228||the-avengers-2011|superhero fiction|comics|Marvel Comics
+Agents of S.H.I.E.L.D.|2013|tbd|tv||Agents_of_Shield||2364582|183210||superhero fiction|comics|Marvel Comics
+Iron Man 3|2013||film|bd|Iron_Man_3|527818|1300854||iron-man-3|superhero fiction|comics|Marvel Comics
+Thor: The Dark World|2013||film||Thor:_The_Dark_World|546686|1981115||thor-the-dark-world|superhero fiction|comics|Marvel Comics
+Captain America: The Winter Soldier|2014||film|bd|Captain_America:_The_Winter_Soldier|562324|1843866||captain-america-the-winter-soldier-2014|superhero fiction|comics|Marvel Comics
+Guardians of the Galaxy|2014||film|bd|Guardians_of_the_Galaxy_(film)|568178|2015381||guardians-of-the-galaxy|superhero fiction|comics|Marvel Comics
+Agent Carter|2015|tbd|tv||Agent_Carter_(TV_series)||3475734|193972||superhero fiction|comics|Marvel Comics
+Daredevil (2015)|2015|tbd|tv||Daredevil_(TV_series)||3322312|195188||superhero fiction|comics|Marvel Comics
+Avengers: Age of Ultron|2015||film||Avengers:_Age_of_Ultron|570172|2395427||the-avengers-age-of-ultron|superhero fiction|comics|Marvel Comics
+A.K.A. Jessica Jones|2015|tbd|tv||||2357547|195337||superhero fiction|comics|Marvel Comics
+Ant-Man|2015||film||Ant-Man_(film)|453126|0478970||antman|superhero fiction|comics|Marvel Comics
+Captain America: Civil War|2016||film||Captain_America:_Civil_War|596036|3498820||captain-america-civil-war|superhero fiction|comics|Marvel Comics
+Luke Cage|2016|tbd|tv||||3322314|||superhero fiction|comics|Marvel Comics
+Doctor Strange|2016||film|||601168|1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
+Guardians of the Galaxy 2|2017||film|||609066|3896198||guardians-of-the-galaxy-2|superhero fiction|comics|Marvel Comics
+Thor: Ragnarok|2017||film||||3501632||thor-ragnarok-2017|superhero fiction|comics|Marvel Comics
+Avengers: Infinity War – Part 1|2018||film||||4154756||avengers-infinity-war-part-i|superhero fiction|comics|Marvel Comics
+Black Panther|2018||film||||1825683|||superhero fiction|comics|Marvel Comics
+Captain Marvel|2018||film||||4154664||captain-marvel-2018|superhero fiction|comics|Marvel Comics
+Avengers: Infinity War – Part 2|2019||film||||4154796||avengers-infinity-war-part-ii|superhero fiction|comics|Marvel Comics
+Inhumans|2019||film||||4154858|||superhero fiction|comics|Marvel Comics
 Night of the Living Dead (1968)|1968||film||Night_of_the_Living_Dead|35311|0063350||night-of-the-living-dead|horror;monster:zombies||
 Dawn of the Dead (1978)|1978||film||Dawn_of_the_Dead|12579|0077402||dawn-of-the-dead1978|horror;monster:zombies||
 Day of the Dead (1985)|1985||film||Day_of_the_Dead_(1985_film)|12621|0088993||day-of-the-dead|horror;monster:zombies||

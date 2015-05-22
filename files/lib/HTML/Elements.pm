@@ -2,30 +2,36 @@ package HTML::Elements;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(html head script style body div main section article aside nav header footer heading pre
-                 paragraph anchor img span rparagraph blockquote item list definition_list caption row table
-                 form fieldset selection input inputs textarea noscript);
+our @EXPORT_OK = qw(html style body div section article nav footer heading pre
+                 paragraph anchor img span rparagraph blockquote list definition_list table
+                 form fieldset selection input inputs textarea figure noscript);
 
 use Base::Line qw(rline line);
 
-my @ics = qw(id class style lang);
+my @ics  = qw(id class style lang);
 my @java = qw(onclick ondblclick onkeypress onkeydown onkeyup onmouseover onmousedown onmouseup onmousemove onmouseout);
+my $gen  = [@ics, @java];
 
 sub get_attributes {
-  my ($options, $valid) = @_;
+  my ($valid, $opt) = @_;
   my @attributes;
   for (@{$valid}) {
-    my $value = $options->{$_};
-    push @attributes, qq($_="$value") if defined($options->{$_});
+    my $value = $opt->{$_};
+    push @attributes, qq($_="$value") if defined($opt->{$_});
   }
-  return join(' ',('',@attributes));
+  return join(' ', @attributes);
 }
 
-sub open_tag {
-  my ($tag,$opt,$attributes) = @_;
-  my $tag_attributes = get_attributes($opt,$attributes);
+sub start_tag {
+  my ($tag, $attributes, $opt) = @_;
+  my $tag_attributes = get_attributes($attributes, $opt);
+  $tag .= " $tag_attributes" if $tag_attributes;
+  return "<$tag>";
+}
 
-  return $tag.$tag_attributes;
+sub end_tag {
+  my ($tag) = @_;
+  return "</$tag>";
 }
 
 sub break {
@@ -38,166 +44,132 @@ sub break {
 }
 
 # plain_element is used in the following functions:
-# term, caption, label, option, legend, heading
+# term, caption, label, option, legend, heading, figcaption
 sub plain_element {
-  my ($tag,$attributes,$tab,$value,$opt) = @_;
-  my $open = open_tag($tag,$opt,$attributes);
-  
-  return rline($tab,"<$open>$value</$tag>");
+  my ($tag, $attributes, $value, $opt) = @_;
+  my $start = start_tag($tag, $attributes, $opt);
+  my $end   = end_tag($tag);
+  return $start.$value.$end;
 }
 
 # code_element is used in the following functions:
 # body, main, section, article, nav, aside, div, noscript, form, pre, header, footer
 sub code_element {
-  my ($tag,$attributes,$tab,$value,$opt) = @_;
-  my $open = open_tag($tag,$opt,$attributes);
+  my ($tag, $attributes, $tab, $value, $opt) = @_;
 
-  line($tab,"<$open>");
-  header( $tab + 1, @{$opt->{'header'}})  if ($opt->{'header'}  && $tag !~ /(?:header|footer|pre)/);
-  heading($tab + 1, @{$opt->{'heading'}}) if ($opt->{'heading'} && $tag !~ /pre/);
-  ref($value) eq 'CODE' ? &$value : paragraph($tab + 2, $value, { 'separator' => $opt->{'separator'} });
-  footer( $tab + 1, @{$opt->{'footer'}})  if ($opt->{'footer'}  && $tag !~ /(?:header|footer|pre)/);
-  line($tab,"</$tag>");
+  line($tab, start_tag($tag, $attributes, $opt));
+
+  $tab++;
+    header ($tab, @{$opt->{'header'}})  if ($opt->{'header'}  && $tag !~ /(?:header|footer|pre)/);
+    heading($tab, @{$opt->{'heading'}}) if ($opt->{'heading'} && $tag !~ /pre/);
+    ref($value) eq 'CODE' ? &$value : paragraph($tab + 1, $value, { 'separator' => $opt->{'separator'} });
+    footer ($tab, @{$opt->{'footer'}})  if ($opt->{'footer'}  && $tag !~ /(?:header|footer|pre)/);
+  $tab--;
+
+  line($tab, end_tag($tag));
 }
 
 # Start elements
 
 sub anchor {
-  my ($value,$opt) = @_;
-  my $tag = 'a';
-  my $open = open_tag($tag,$opt,['href','target','title',@ics,@java,'tabindex']);
-
-  return "<$open>$value</$tag>";
+  plain_element('a', ['href', 'target', 'title', @$gen, 'tabindex'], @_);
 }
 
 sub img {
   my ($opt) = @_;
-  my $tag = 'img';
-  my $open = open_tag($tag,$opt,['src','alt',@ics,@java,'tabindex']);
-  
-  return "<$open>";
+  return start_tag('img', ['src', 'alt', @$gen, 'tabindex'], $opt);
 }
 
 sub span {
-  my ($value, $opt) = @_;
-  my $tag = 'span';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
-
-  return "<$open>$value</$tag>";
+  plain_element('span', $gen, @_);
 }
 
 # Start elements for head.
 
 sub title {
-  my ($tab,$value,$opt) = @_;
-  my $tag = 'title';
-  my $open = $tag;
-
-  line($tab,"<$open>$value</$tag>");
+  my $tab = shift;
+  line($tab, plain_element('title', undef, @_));
 }
 
 sub meta {
-  my ($tab,$metas) = @_;
-  my $tag = 'meta';
-  
+  my ($tab, $metas) = @_;
   for (@$metas) {
-    my $open = open_tag($tag,$_,['name','http-equiv','lang','content']);
-    line($tab,"<$open>");
+    line($tab, start_tag('meta', ['name', 'http-equiv', 'lang', 'content'], $_));
   }
 }
 
 sub base {
-  my ($tab,$links) = @_;
-  my $tag = 'base';
-  my $open = open_tag($tag,$_,['href','target']);
-
-  line($tab,"<$open>");
+  my ($tab, $opt) = @_;
+  line($tab, start_tag('base', ['href', 'target'], $opt));
 }
 
 sub links {
-  my ($tab,$links) = @_;
-  my $tag = 'link';
-  
+  my ($tab, $links) = @_;
   for (@$links) {
-    my $open = open_tag($tag,$_,['rel','rev','type','href']);
-    line($tab,"<$open>");
+    line($tab, start_tag('link', ['rel', 'rev', 'type', 'href'], $_));
   }
-}
-
-sub script {
-  my ($tab,$opt) = @_;
-  my $tag = 'script';
-  my $open = open_tag($tag,$opt,['type','src']);
-   
-  line($tab,"<$open></$tag>");
- 
 }
 
 sub scripts {
-  my ($tab,$scripts) = @_;
-  for (@$scripts) {
-    script($tab,$_);
-  }
+  my ($tab, $scripts) = @_;
+  line($tab, plain_element('script', ['type', 'src'], '', $_)) for @$scripts;
 }
 
 sub noscript {
-  code_element('noscript',[@ics,@java],@_);
+  code_element('noscript', $gen, @_);
 }
 
 sub style {
-  my ($tab,$value,$opt) = @_;
+  my ($tab, $value, $opt) = @_;
   my $tag = 'style';
-  my $open = open_tag($tag,$opt,['type']);
 
-  my $sep = $opt->{separator} ? $opt->{separator} : "\n";
+  my $sep = $opt->{'separator'} ? $opt->{'separator'} : "\n";
 
-  line($tab,"<$open>");
-  for (grep(length,split(/$sep/,$value))) {
+  line($tab, start_tag($tag, ['type'], $opt));
+  for (grep(length, split(/$sep/, $value))) {
     $_ =~ s/^\s+//;
     line($tab + 1, $_);
   }
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 sub head {
-  my ($tab,$opt) = @_;
+  my ($tab, $opt) = @_;
   my $tag = 'head';
-  my $open = open_tag($tag,$opt,['profile']);
 
-  line($tab,"<$open>");
+  line($tab, start_tag($tag, ['profile'], $opt));
+
   $tab++;
-  title($tab,    $opt->{title});
-  base($tab,     $opt->{base})     if $opt->{base};
-  meta($tab,     $opt->{meta})     if $opt->{meta};
-  links($tab,    $opt->{links})    if $opt->{links};
-  scripts($tab,  $opt->{scripts})  if $opt->{scripts};
-  style($tab,  @{$opt->{style}})   if $opt->{style};
-  noscript($tab, $opt->{noscript}) if $opt->{noscript};
+    title   ($tab,   $opt->{'title'});
+    base    ($tab,   $opt->{'base'})     if $opt->{'base'};
+    meta    ($tab,   $opt->{'meta'})     if $opt->{'meta'};
+    links   ($tab,   $opt->{'links'})    if $opt->{'links'};
+    scripts ($tab,   $opt->{'scripts'})  if $opt->{'scripts'};
+    style   ($tab, @{$opt->{'style'}})   if $opt->{'style'};
+    noscript($tab,   $opt->{'noscript'}) if $opt->{'noscript'};
   $tab--;
-  line($tab,"</$tag>");
+
+  line($tab, end_tag($tag));
 }
 
 # End elements for head.
 
 # Begin elements for body.
-# HTML5 elements which need to be added: figure, figcaption, main.
 
 # Begin paragraphs
 
 sub rparagraph {
-  my ($tab,$value,$opt) = @_;
+  my ($tab, $value, $opt) = @_;
   my $tag = 'p';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
-  
   my $sep = $opt->{'separator'} ? $opt->{'separator'} : "\n";
 
   my $line;
   for (grep(length, split(/$sep/, $value))) {
     my $paragraph = $opt->{'break'} ? break($_, $opt->{'break'}) : $_;
     
-    $line .= rline($tab, "<$open>");
+    $line .= rline($tab, start_tag($tag, $gen, $opt));
     $line .= rline($tab + 1, $paragraph);
-    $line .= rline($tab, "</$tag>");
+    $line .= rline($tab, end_tag($tag));
   }
   
   return $line;
@@ -212,13 +184,12 @@ sub paragraph {
 # Begin blockquotes
 
 sub blockquote {
-  my ($tab,$value,$opt) = @_;
+  my ($tab, $value, $opt) = @_;
   my $tag = 'blockquote';
-  my $open = open_tag($tag, $opt, ['value', @ics, @java]);
 
-  line($tab, "<$open>");
+  line($tab, start_tag($tag, ['value', @$gen], $opt));
   paragraph($tab + 1, $value);
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 # End blockquotes
@@ -226,37 +197,32 @@ sub blockquote {
 # Begin elements for ordered and unordered lists.
 
 sub item {
-  my ($tab,$value,$opt) = @_;
+  my ($tab, $value, $opt) = @_;
   my $tag = 'li';
-  my $open = open_tag($tag, $opt, ['value', @ics, @java]);
 
-  line($tab, "<$open>");
-
+  line($tab, start_tag($tag, ['value', @$gen], $opt));
   line($tab + 1, $value);
   if ($opt->{inlist}) {
-    list($tab + 1, @{$opt->{inlist}});
+    list($tab + 1, @{$opt->{'inlist'}});
   }
-
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 sub list {
-  my ($tab,$type,$list,$opt) = @_;
+  my ($tab, $type, $list, $opt) = @_;
   my $tag = $type.'l';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
 
 
-  line($tab,"<$open>");
+  line($tab, start_tag($tag, $gen, $opt));
   for my $item (@$list) {
     if (ref($item) eq 'ARRAY') {
-      item($tab + 1,$item->[0],$item->[1]);
+      item($tab + 1, $item->[0], $item->[1]);
     }
     else {
-      item($tab + 1,$item);
+      item($tab + 1, $item);
     }
   }
-
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 # End elements for ordered and unordered lists.
@@ -264,70 +230,62 @@ sub list {
 # Begin elements for definition lists.
 
 sub term {
-  print plain_element('dt',[@ics,@java],@_);
+  my $tab = shift;
+  line($tab, plain_element('dt', $gen, @_));
 }
 
 sub definition {
-  my ($tab,$value,$opt) = @_;
+  my ($tab, $value, $opt) = @_;
   my $tag = 'dd';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
 
-  line($tab,"<$open>");
-  line($tab + 1,$value);
-  line($tab,"</$tag>");
+  line($tab, start_tag($tag, $gen, $opt));
+  line($tab + 1, $value);
+  line($tab, end_tag($tag));
 }
 
 sub definition_list {
-  my ($tab,$definition_list,$opt) = @_;
+  my ($tab, $definition_list, $opt) = @_;
   my $tag = 'dl';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
 
-  line($tab,"<$open>");
+  line($tab, start_tag($tag, $gen, $opt));
   for my $item (@$definition_list) {
-    term($tab + 1,$item->{term});
-    if (!$opt->{headings}) {
-      definition($tab + 2,$item->{definition});
+    term($tab + 1, $item->{'term'});
+    if (!$opt->{'headings'}) {
+      definition($tab + 2, $item->{'definition'});
     }
     else {
-      for my $heading (@{$opt->{headings}}) {
+      for my $heading (@{$opt->{'headings'}}) {
         my $upheading = ucfirst $heading;
-        definition($tab + 2,qq(<strong>$upheading:</strong> ).$item->{$heading});
+        definition($tab + 2, qq(<strong>$upheading:</strong> ).$item->{$heading});
       }
     }
   }
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 # End elements for definition lists.
 
 # Begin elements for tables.
-
-sub caption {
-  print plain_element('caption', ['align', @ics, @java],@_);
-}
+# table elements to be added: tbody, thead, tfoot.
 
 sub cell {
   my ($tab, $type, $value, $opt) = @_;
   $type = $opt->{'type_override'} ? $opt->{'type_override'} : $type;
   my $tag = 't'.$type;
-  my $open = open_tag($tag, $opt, ['colspan', 'rowspan', @ics, @java]);
   
-  line($tab,"<$open>");
-  
+  line($tab, start_tag($tag, ['colspan', 'rowspan', @$gen], $opt));
   if ($value eq 'list') {
     list($tab + 1, @{$opt->{'list'}});
   }
   else {
     line($tab + 1, $value);
   }
-
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 sub row {
   my ($tab, $type, $cells, $opt) = @_;
   my $tag = 'tr';
-  my $open = open_tag($tag, $opt, [@ics, @java]);
 
   my %types = (
     'header' => 'h',
@@ -335,65 +293,61 @@ sub row {
     'whead'  => 'd'
   );
 
-  line($tab,"<$open>");
+  line($tab, start_tag($tag, $gen, $opt));
 
   if ($type eq 'whead') {
     my $cell = shift @{$cells};
     if (ref($cell) eq 'ARRAY') {
-      cell($tab + 1,'h',ucfirst $cell->[0], { class => 'row_header', $cell->[1] });
+      cell($tab + 1, 'h', ucfirst $cell->[0], { 'class' => 'row_header', %{$cell->[1]} });
     }
     else {
-      cell($tab + 1,'h',ucfirst $cell, { class => 'row_header' });
+      cell($tab + 1, 'h' , ucfirst $cell, { 'class' => 'row_header' });
     }
   }
 
   my $cell_type = $types{$type};
   for my $cell (@{$cells}) {
     if (ref($cell) eq 'ARRAY') {
-      cell($tab + 1,$cell_type,$cell->[0],$cell->[1]);
+      cell($tab + 1, $cell_type, $cell->[0], $cell->[1]);
     }
     else {
-      cell($tab + 1,$cell_type,$cell);
+      cell($tab + 1, $cell_type, $cell);
     }
   }
 
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 sub col {
-  my ($tab,$opt) = @_;
-  my $tag = 'col';
-  my $open = open_tag($tag,$opt,['span',@ics,@java]);
-
-  line($tab,"<$open>");
+  my ($tab, $opt) = @_;
+  line($tab, start_tag('col', ['span', @$gen], $opt));
 }
 
-sub cols {
-  my ($tab,$cols) = @_;
-  col($tab,$_) for @{$cols};
+sub caption {
+  my $tab = shift;
+  line($tab, plain_element('caption', ['align', @$gen], @_));
 }
 
 sub table {
-  my ($tab,$opt) = @_;
+  my ($tab, $opt) = @_;
   my $tag = 'table';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
 
-  line($tab,"<$open>");
+  line($tab, start_tag($tag, $gen, $opt));
 
-  if ($opt->{caption}) {
-    if (ref($opt->{caption}) eq 'ARRAY') {
-      caption($tab + 1, $opt->{caption}->[0],$opt->{caption}->[1]);
+  if ($opt->{'caption'}) {
+    if (ref($opt->{'caption'}) eq 'ARRAY') {
+      caption($tab + 1, $opt->{'caption'}->[0], $opt->{'caption'}->[1]);
     }
     else {
-      caption($tab + 1, $opt->{caption});
+      caption($tab + 1, $opt->{'caption'});
     }
   }
 
-  if ($opt->{cols}) {
-    col($tab + 1, $_) for @{$opt->{cols}};
+  if ($opt->{'cols'}) {
+    col($tab + 1, $_) for @{$opt->{'cols'}};
   }
 
-  for my $rowgroup (@{$opt->{rows}}) {
+  for my $rowgroup (@{$opt->{'rows'}}) {
     my $type = $rowgroup->[0];
     my @rows = $rowgroup->[1];
     my $attributes = $rowgroup->[2];
@@ -408,7 +362,7 @@ sub table {
     }
   }
 
-  line($tab,"</$tag>");
+  line($tab, end_tag($tag));
 }
 
 # End elements for tables.
@@ -416,133 +370,124 @@ sub table {
 # Begin elements for forms.
 
 sub label {
-  print plain_element('label',['for',@ics,@java],@_);
+  my $tab = shift;
+  line($tab, plain_element('label', ['for', @$gen], @_));
 }
 
 sub option {
-  print plain_element('option',['value',@ics,@java],@_);
+  my $tab = shift;
+  line($tab, plain_element('option', ['value', @$gen], @_));
 }
 
 sub selection {
-  my ($tab,$options,$opt) = @_;
+  my ($tab, $options, $opt) = @_;
   my $tag = 'select';
-  my $open = open_tag($tag,$opt,['name','multiple',@ics,@java,'tabindex']);
 
-  label($tab,@{$opt->{label}}) if ($opt->{label} && $opt->{place_label} eq 'before');
-  line($tab,"<$open>");
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
+  line($tab, start_tag($tag, ['name', 'multiple', @$gen, 'tabindex'], $opt));
   for (@$options) {
-    option($tab + 1,@$_);
+    option($tab + 1, @$_);
   }
-  line($tab,"</$tag>");
-  label($tab,@{$opt->{label}}) if ($opt->{label} && $opt->{place_label} eq 'after');
+  line($tab, end_tag($tag));
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
 }
 
 sub textarea {
-  my ($tab,$value,$opt) = @_;
-  my $tag = 'textarea';
-  my $open = open_tag($tag,$opt,['name','rows','cols',@ics,@java,'tabindex']);
+  my ($tab, $value, $opt) = @_;
   
-  label($tab,@{$opt->{label}}) if ($opt->{label} && $opt->{place_label} eq 'before');
-  line($tab,"<$open>$value</$tag>");
-  label($tab,@{$opt->{label}}) if ($opt->{label} && $opt->{place_label} eq 'after');
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
+  line($tab, plain_element('textarea', ['name', 'rows', 'cols', @$gen, 'tabindex'], ($value, $opt)));
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
 }
 
 sub input {
-  my ($tab,$opt) = @_;
+  my ($tab, $opt) = @_;
   my $tag = 'input';
-  my $open = open_tag($tag,$opt,['type','value','name','placeholder',@ics,@java,'tabindex']);
+  my $start = start_tag($tag, ['type', 'value', 'name', 'placeholder', @$gen, 'tabindex'], $opt);
   my $text = $opt->{text} ? "$opt->{text} " : '';
   
-  label($tab,@{$opt->{label}}) if ($opt->{label} && $opt->{place_label} eq 'before');
-  line($tab,"$text<$open>");
-  label($tab,@{$opt->{label}}) if ($opt->{label} && $opt->{place_label} eq 'after');
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
+  line($tab, $text.$start);
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
 }
 
 sub inputs {
-  my ($tab,$inputs) = @_;
+  my ($tab, $inputs) = @_;
   input($tab, $_) for @$inputs;
 }
 
 sub legend {
-  print plain_element('legend',[@ics,@java],@_);
+  my $tab = shift;
+  line($tab, plain_element('legend', $gen, @_));
 }
 
 sub fieldset {
-  my ($tab,$code,$opt) = @_;
+  my ($tab, $code, $opt) = @_;
   my $tag = 'fieldset';
-  my $open = open_tag($tag,$opt,[@ics,@java]);
 
-  line($tab,"<$open>");
-  legend($tab,$opt->{legend}) if $opt->{legend};
-  &$code;
-  line($tab,"</$tag>");
+  line($tab, start_tag($tag, $gen, $opt));
+    legend($tab, $opt->{'legend'}) if $opt->{'legend'};
+    &$code;
+  line($tab, end_tag($tag));
 }
 
 sub form {
-  code_element('form',['action','method',@ics,@java],@_);
+  code_element('form', ['action', 'method', @$gen], @_);
 }
 
 # End elements for forms.
 
+# Start figure elements.
+
+sub figcaption {
+  my $tab = shift;
+  line($tab, plain_element('figcaption', $gen, @_));
+}
+
+sub figure {
+  my ($tab, $code, $opt) = @_;
+  my $tag = 'figure';
+  
+  line($tab, start_tag($tag, $gen, $opt);
+    figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'before');
+    &$code;
+    figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'after');
+  line($tab, end_tag($tag));
+}
+
+
+# End figure elements.
+
 sub heading {
-  my ($tab,$level,$value,$opt) = @_;
+  my ($tab, $level, $value, $opt) = @_;
   my $tag = 'h'.$level;
-  print plain_element($tag,[@ics,@java],$tab,$value,$opt);
+  line($tab, plain_element($tag, $gen, $value, $opt));
 }
 
-sub pre {
-  code_element('pre',[@ics,@java],@_);
-}
-
-sub div {
-  code_element('div',[@ics,@java],@_);
-}
-
-sub header {
-  code_element('header',[@ics,@java],@_);
-}
-
-sub footer {
-  code_element('footer',[@ics,@java],@_);
-}
-
-sub aside {
-  code_element('aside',[@ics,@java],@_);
-}
-
-sub section {
-  code_element('section',[@ics,@java],@_);
-}
-
-sub article {
-  code_element('article',[@ics,@java],@_);
-}
-
-sub nav {
-  code_element('nav',[@ics,@java],@_);
-}
-
-sub main {
-  code_element('main',[@ics,@java],@_);
-}
-
-sub body {
-  code_element('body',[@ics,@java],@_);
-}
+sub pre     { code_element('pre',     $gen, @_) }
+sub div     { code_element('div',     $gen, @_) }
+sub header  { code_element('header',  $gen, @_) }
+sub footer  { code_element('footer',  $gen, @_) }
+sub aside   { code_element('aside',   $gen, @_) }
+sub article { code_element('article', $gen, @_) }
+sub nav     { code_element('nav',     $gen, @_) }
+sub section { code_element('section', $gen, @_) }
+sub main    { code_element('main',    $gen, @_) }
+sub body    { code_element('body',    $gen, @_) }
 
 # End elements for body.
 
 sub html {
-  my ($tab,$opt) = @_;
+  my ($tab, $opt) = @_;
   my $tag = 'html';
-  my $open = $tag;
+  my $start = $tag;
   
   print "content-type: text/html \n\n";
-  line(0,'<!DOCTYPE html>');
-  line($tab,"<$open>");
-  head($tab + 1, $opt->{'head'}) if $opt->{'head'};
+  line(0, '<!DOCTYPE html>');
+  line($tab, "<$start>");
+  head($tab + 1, $opt->{'head'})    if $opt->{'head'};
   body($tab + 1, @{$opt->{'body'}}) if $opt->{'body'};
-  line($tab,"</$tag>");
+  line($tab, "</$tag>");
 }
 
 # End elements
@@ -1281,6 +1226,27 @@ B<C<textarea>> has a value and the optional parameters C<name>, C<rows>, C<cols>
     id       => 'textarea_id',
     class    => 'textarea_class',
     style    => 'textarea_style'
+  });
+
+=head2 C<figure>
+
+B<C<figure>> has a value and the optional parameters C<figcaption> and C<place caption>.
+
+  figure($tab, {
+    print img({
+      src => 'image1.jpg',
+      alt => 'image one'
+    })
+  }, {
+    figcaption => ['figure caption text', {
+      id    => 'figcaption_id',
+      class => 'figcaption_class',
+      style => 'figcaption_style'
+    }],
+    'place caption' => 'after',
+    id    => 'figure_id',
+    class => 'figure_class',
+    style => 'figure_style'
   });
 
 =head2 C<script>

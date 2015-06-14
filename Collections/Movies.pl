@@ -13,7 +13,6 @@ use People qw(get_people);
 my $doc_magic = {
   'producers and directors' => sub { list(3, 'u', get_people('Producers_and_directors.txt'), { 'class' => 'three' }) },
   'film actors' => sub { list(3, 'u', get_people('Actors_in_films.txt'),      { 'class' => 'three' }) },
-  'tv actors'   => sub { list(3, 'u', get_people('Actors_in_television.txt'), { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
@@ -74,6 +73,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<A Dog's Breakfast|^dvd^> (2007)
 * I<Dragonslayer|^dvd^> (1981)
 * I<Drive Me Crazy|^dvd^> (1999)
+* I<Dune|^bd^> (1984)
 * I<E.T.: The Extra-Terrestrial|^dvd^> (1982)
 * I<Earth Girls Are Easy|^dvd^> (1988)
 * I<Eight Legged Freaks|^dvd^> (2002)
@@ -100,7 +100,6 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<Hanging Up|^dvd^> (2000)
 * I<Heartbreak Ridge|^dvd^> (1986)
 * I<Heavy Metal|^dvd^> (1981)
-* I<Hellboy|^dvd^> (2004)
 * I<High Spirits|^dvd^> (1988)
 * I<Highlander|^dvd^> (1986)
 * I<The Hitchhiker's Guide to the Galaxy|^dvd^> (2005)
@@ -152,6 +151,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<Oscar|^dvd^> (1991)
 * I<Outbreak|^dvd^> (1995)
 * I<Overboard|^dvd^> (1987)
+* I<Pacific Rim|^bd^> (2013)
 * I<Pay It Forward|^dvd^> (2000)
 * I<The Peacemaker|^dvd^> (1997)
 * I<The Postman|^dvd^> (1997)
@@ -160,6 +160,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<Pretty in Pink|^dvd^> (1986)
 * I<The Princess Bride|^dvd^> (1987)
 * I<The Producers|^dvd^> (2005)
+* I<Race to Witch Mountain|^bd^> (2009)
 * I<Reign of Fire|^dvd^> (2002)
 * I<Renaissance Man|^dvd^> (1994)
 * I<The Replacements|^dvd^> (2000)
@@ -168,7 +169,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<The Rocky Horror Picture Show|^dvd^> (1975)
 * I<Romy and Michele's High School Reunion|^dvd^> (1997)
 * I<Sahara|^dvd^> (2005)
-* I<The Secret of NIMH|^vhs^> (1982)
+* I<The Secret of NIMH|^bd^> (1982)
 * I<Short Circuit|^dvd^> (1986)
 * I<Sin City|^dvd^> (2005)
 * I<Six Days Seven Nights|^dvd^> (1998)
@@ -179,6 +180,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<Soldier|^dvd^> (1998)
 * I<Someone Like You...|^dvd^> (2001)
 * I<Something's Gotta Give|^dvd^> (2003)
+* I<The Sorcerer's Apprentice|^bd^> (2010)
 * I<The Sound of Music|^dvd^> (1965)
 * I<Space Cowboys|^dvd^> (2000)
 * I<SpaceCamp|^dvd^> (1986)
@@ -236,15 +238,6 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 3 Alien
 * I<Alien³|^vhs^> (1992)
 * I<Alien vs. Predator|^dvd^> (2004)
-3 The Avengers
-* I<Iron Man|^bd^> (2008)
-* I<The Incredible Hulk|^bd^> (2008)
-* I<Iron Man 2|^bd^> (2010)
-* I<Thor|^bd^> (2011)
-* I<The Avengers|^bd^> (2012)
-* I<Iron Man 3|^bd^> (2013)
-* I<Captain America: The Winter Soldier|^bd^> (2014)
-* I<The Guardians of the Galaxy|^bd^> (2014)
 3 Back to the Future
 * I<Back to the Future|^dvd^> (1985)
 * I<Back to the Future Part II|^dvd^> (1989)
@@ -287,7 +280,7 @@ See also the A<tie-ins|href="Tie-ins.pl#Ghostbusters"> I own.
 * I<Indiana Jones and the Last Crusade|^bd^> (1989)
 * I<Indiana Jones and the Temple of Doom|^bd^> (1984)
 (blu-ray boxed set)
-3 Harry Potter
+3 Harry Potter +
 * I<Harry Potter and the Sorcerer's Stone|^bd^> (2001)
 * I<Harry Potter and the Chamber of Secrets|^bd^> (2002)
 * I<Harry Potter and the Prisoner of Azkaban|^bd^> (2004)
@@ -297,6 +290,9 @@ See also the A<tie-ins|href="Tie-ins.pl#Ghostbusters"> I own.
 * I<Harry Potter and the Deathly Hallows: Part 1|^bd^> (2010)
 * I<Harry Potter and the Deathly Hallows: Part 2|^bd^> (2011)
 (blu-ray boxed set)
+3 Hellboy
+* I<Hellboy|^dvd^> (2004)
+* I<Hellboy II: The Golden Army|^bd^> (2008)
 3 Hot Shots!
 * I<Hot Shots!|^dvd^> (1991)
 * I<Hot Shots! Part Deux|^dvd^> (1993)
@@ -306,12 +302,22 @@ See also the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 * I<The Lost World: Jurassic Park|^dvd^> (1997)
 * I<Jurassic Park III|^dvd^> (2001)
 (boxed set)
-3 Kill Bill
+3 Kill Bill +
 * I<Kill Bill: Vol. 1|^dvd^> (2003)
 * I<Kill Bill: Vol. 2|^dvd^> (2004)
 3 The Lawnmower Man
 * I<The Lawnmower Man|^dvd^> (1992)
 * I<Lawnmower Man 2: Beyond Cyberspace|^dvd^> (1996)
+3 Marvel Cinematic Universe +
+* I<Iron Man|^bd^> (2008)
+* I<The Incredible Hulk|^bd^> (2008)
+* I<Iron Man 2|^bd^> (2010)
+* I<Thor|^bd^> (2011)
+* I<The Avengers|^bd^> (2012)
+* I<Iron Man 3|^bd^> (2013)
+* I<Thor: The Dark World|^bd^> (2013)
+* I<Captain America: The Winter Soldier|^bd^> (2014)
+* I<The Guardians of the Galaxy|^bd^> (2014)
 3 The Matrix
 * I<The Matrix|^bd^> (1999)
 * I<The Matrix Reloaded|^bd^> (2003)
@@ -401,7 +407,7 @@ See also the A<tie-ins|href="Tie-ins.pl#Star_Wars"> I own.
 * I<IT|^dvd^> (1990)
 * I<Leverage|^dvd^> (2008) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>)
 * I<The Magical Legend of the Leprechauns|^dvd^> (1999)
-* I<Necessary Roughness|^dvd^> (2011) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>)
+* I<Necessary Roughness|^dvd^> (2011)
 * I<Numb3rs|^dvd^> (2005) (Season: SPAN<2|^dvd^>)
 * I<Pride and Prejudice|^dvd^> (1995)
 * I<Scarecrow and Mrs. King|^dvd^> (1983) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>)
@@ -438,5 +444,3 @@ These are some of the people I follow when selecting films and television to wat
 & producers and directors
 3 Actors in films
 & film actors
-3 Actors in television
-& tv actors

@@ -6,7 +6,7 @@ use CGI::Minimal;
 use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
-use lib "../../files/lib";
+use lib '../../files/lib';
 use Base::Data qw(get_hash);
 use Base::Page qw(page);
 use HTML::Elements qw(section paragraph table anchor);
@@ -46,8 +46,8 @@ for my $proficiency (sort { $a->{'Proficiency'} cmp $b->{'Proficiency'} } values
   
   my $id = idify($proficiency->{'Proficiency'});
   my $contents = {
-    'Proficiency' => $proficiency->{'Proficiency'} , # anchor($proficiency->{'Proficiency'}, { href => "proficiency_descriptions.pl#$id" }),
-    'Source(s)' => join(', ',map(markupbooks($_),split(/;/,$proficiency->{'Source(s)'}))),
+    'Proficiency' => $proficiency->{'Proficiency'}, # anchor($proficiency->{'Proficiency'}, { href => "proficiency_descriptions.pl#$id" }),
+    'Source(s)' => join(', ',map(markupbooks($_), split(/;/,$proficiency->{'Source(s)'}))),
     'Class(es)' => join(', ',split(/;/,$proficiency->{'Class(es)'})),
   };
   
@@ -64,6 +64,6 @@ page( 'code' => sub {
   section(3, sub {
     paragraph(4,qq{These proficiencies are from Advanced Dungeons and Dragons, 2nd edition. You can select the proficiencies you wish to view. Please see the source books for the descriptions. If you know of more, please email me.});
     tiny_select(4, { 'location' => 'Proficiencies.pl', 'file' => ['Role_playing/Reference_tables','Proficiences_select.txt'] });
-    table(4, { 'class' => 'proficiency', 'rows' => [['header',\@headings],['data',\@rows]] });
+    table(4, { 'class' => 'proficiency', 'rows' => [['header',[\@headings]],['data',\@rows]] });
   });
 });

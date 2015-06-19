@@ -44,7 +44,7 @@ sub file_list {
     }
     if (-d $full) {
       file_list($full, $new_visible);
-   }
+    }
   }
 }
 
@@ -107,10 +107,10 @@ html(0, {
   },
   'body' => [
     sub {
-      table(3, { 'style' => 'float:right', 'rows' => [['header',['Ext','Count']],['data',\@ext_rows],['whead',\@ext_end_rows]] });
+      table(3, { 'style' => 'float:right', 'rows' => [['header',[['Ext','Count']]],['data',\@ext_rows],['whead',\@ext_end_rows]] });
       list(3,'u', main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 1, 'full' => 1, ), { 'class' => 'main' });
       heading(3, 2, 'Files by size');
-      table(3, { 'rows' => [['header',[qw(File bytes kilobytes megabytes)]],['whead',\@size_rows]] });
+      table(3, { 'rows' => [['header',[[qw(File bytes kilobytes megabytes)]]],['whead',\@size_rows]] });
       heading(3, 2, 'Visible files');
       list(4, 'u', [sort @files], { 'class' => 'visi' });
     }, { 'heading' => [1, "$root_user\'s file list"] }

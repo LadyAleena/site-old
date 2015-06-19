@@ -46,7 +46,7 @@ sub dragonette_table {
   for my $row (@{$rainbow_dragonette{$var}}) {
     push @rows, [map($row->{$_}, @{$rainbow_dragonette_headings{$var}})];
   }
-  table(4, { class => 'rainbow_dragonette', rows => [['header',$rainbow_dragonette_headings{$var}],['data',\@rows]] });
+  table(4, { class => 'rainbow_dragonette', rows => [['header', [$rainbow_dragonette_headings{$var}]], ['data', \@rows]] });
 }
 
 my $doc_magic = {

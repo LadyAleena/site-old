@@ -138,12 +138,12 @@ sub THAC0_table_rows {
   );
 
   my @rows = (
-    [ 'header', ['Proficiency', map( [$_, { 'style' => 'vertical-align:text-top' }], (@{$THAC0_table->{'headings'}}) )] ],
+    [ 'header', [['Proficiency', map( [$_, { 'style' => 'vertical-align:text-top' }], (@{$THAC0_table->{'headings'}}) )]] ],
     [ 'whead', $THAC0_table->{'table'} ]
   );
-  my $colspan = scalar @{$rows[0]->[1]};
+  my $colspan = scalar @{$rows[0]->[1]->[0]};
   if ($weapons) {
-    push @rows, [ 'header', [['Weapons', { 'colspan' => $colspan }]] ];
+    push @rows, [ 'header', [[['Weapons', { 'colspan' => $colspan }]]] ];
     push @rows, [ 'data', [[['list', { 'class' => 'info', 'colspan' => $colspan, 'list' => ['u', $weapons, { 'class' => get_columns( 3, scalar @$weapons) }] }]]] ];
   }
   

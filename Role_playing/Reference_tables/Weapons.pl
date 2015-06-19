@@ -34,6 +34,6 @@ my $head = $broad  ? $broad : $tight ? $tight : undef;
 page( 'heading' => $head, 'code' => sub {
   section(3, sub {
     tiny_select(4, { 'location' => 'Weapons.pl', 'file' => ['Role_playing/Reference_tables','Weapons_select.txt'], });
-    table(4, { 'class' => 'proficiency', 'rows' => [['header',\@headings],['data',\@rows]] });
+    table(4, { 'class' => 'proficiency', 'rows' => [['header',[\@headings]],['data',\@rows]] });
   });
 });

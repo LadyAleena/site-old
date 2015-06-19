@@ -31,7 +31,7 @@ for my $chess_row (1..12) {
 
 my $doc_magic = {
   'pieces' => sub { definition_list(5, $definition_list) },
-  'board'  => sub { table(4, { 'class' => 'royal_chess', 'rows' => [['data',\@rows]] }) },
+  'board'  => sub { table(4, { 'class' => 'royal_chess', 'rows' => [['data', \@rows]] }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });

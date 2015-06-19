@@ -73,7 +73,7 @@ sub ability_score_table {
   for my $game_effect_heading (grep($_ ne 'Spell Immunity',@{$game_effects{$ability}})) {
     push @top_row, [$game_effect_heading, { class => 'sub_score' }];
   }
-  push @rows, ['header',\@top_row];
+  push @rows, ['header',[\@top_row]];
 
   my @game_effects;
   for (grep($_ ne 'Spell Immunity',@{$game_effects{$ability}})) {

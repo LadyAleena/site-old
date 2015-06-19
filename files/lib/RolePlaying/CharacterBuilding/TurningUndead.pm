@@ -52,7 +52,7 @@ sub turning_undead_table_rows {
   }
   
   my @rows = (
-    [ 'header', ['Undead', 'Turn roll'] ],
+    [ 'header', [['Undead', 'Turn roll']] ],
     [ 'whead',  \@turning_undead]
   );
   

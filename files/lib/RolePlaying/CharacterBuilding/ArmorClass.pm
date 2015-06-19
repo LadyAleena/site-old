@@ -122,11 +122,11 @@ sub armor_class_table_rows {
   }
 
   my @rows = (
-    [ 'header', ['&nbsp;', map( ucfirst $_, qw(unarmored armored) )] ],
+    [ 'header', [['&nbsp;', map( ucfirst $_, qw(unarmored armored) )]] ],
     [ 'whead', \@data_rows],
   );
   if (scalar @$armor > 0) {
-    push @rows, [ 'header', [[ 'Armor', { 'colspan' => 3 } ]] ];
+    push @rows, [ 'header', [[[ 'Armor', { 'colspan' => 3 } ]]] ];
     push @rows, [ 'data', [[[ 'list', { 'class' => 'info', 'colspan' => 3, 'list' => ['u', $armor] } ]]] ];
   }
   

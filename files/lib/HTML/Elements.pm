@@ -2,7 +2,7 @@ package HTML::Elements;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(html style body div section article nav footer heading pre
+our @EXPORT_OK = qw(html style body div section article nav header footer heading head pre
                  paragraph anchor img span rparagraph blockquote list definition_list table
                  form fieldset selection input inputs textarea figure noscript);
 
@@ -60,10 +60,10 @@ sub code_element {
   line($tab, start_tag($tag, $attributes, $opt));
 
   $tab++;
-    header ($tab, @{$opt->{'header'}})  if ($opt->{'header'}  && $tag !~ /(?:header|footer|pre)/);
-    heading($tab, @{$opt->{'heading'}}) if ($opt->{'heading'} && $tag !~ /pre/);
-    ref($value) eq 'CODE' ? &$value : paragraph($tab + 1, $value, { 'separator' => $opt->{'separator'} });
-    footer ($tab, @{$opt->{'footer'}})  if ($opt->{'footer'}  && $tag !~ /(?:header|footer|pre)/);
+  header ($tab, @{$opt->{'header'}})  if ($opt->{'header'}  && $tag !~ /(?:header|footer|pre)/);
+  heading($tab, @{$opt->{'heading'}}) if ($opt->{'heading'} && $tag !~ /pre/);
+  ref($value) eq 'CODE' ? &$value : paragraph($tab + 1, $value, { 'separator' => $opt->{'separator'} });
+  footer ($tab, @{$opt->{'footer'}})  if ($opt->{'footer'}  && $tag !~ /(?:header|footer|pre)/);
   $tab--;
 
   line($tab, end_tag($tag));
@@ -318,6 +318,19 @@ sub row {
   line($tab, end_tag($tag));
 }
 
+sub rows {
+  my ($tab, $rows) = @_;
+  for my $rowgroup (@$rows) {
+    my $type = $rowgroup->[0];
+    my @rows = $rowgroup->[1];
+    my $attributes = $rowgroup->[2];
+    
+    for my $row (@rows) {
+      row($tab, $type , $_, $attributes) for @$row;
+    }
+  }
+}
+
 sub col {
   my ($tab, $opt) = @_;
   line($tab, start_tag('col', ['span', @$gen], $opt));
@@ -328,40 +341,69 @@ sub caption {
   line($tab, plain_element('caption', ['align', @$gen], @_));
 }
 
+sub thead {
+  my ($tab, $opt) = @_;
+  my $tag = 'thead';
+
+  return if !$opt->{'rows'};
+
+  line($tab, start_tag($tag, $gen, $opt));
+  rows($tab + 1, $opt->{'rows'});
+  line($tab, end_tag($tag));
+}
+
+sub tfoot {
+  my ($tab, $opt) = @_;
+  my $tag = 'tfoot';
+
+  return if !$opt->{'rows'};
+
+  line($tab, start_tag($tag, $gen, $opt));
+  rows($tab + 1, $opt->{'rows'});
+  line($tab, end_tag($tag));
+}
+
+sub tbody {
+  my ($tab, $opt) = @_;
+  my $tag = 'tbody';
+  
+  return if !$opt->{'rows'};
+
+  line($tab, start_tag($tag, $gen, $opt));
+  rows($tab + 1, $opt->{'rows'});
+  line($tab, end_tag($tag));
+}
+
 sub table {
   my ($tab, $opt) = @_;
   my $tag = 'table';
 
   line($tab, start_tag($tag, $gen, $opt));
 
+  $tab++;
   if ($opt->{'caption'}) {
     if (ref($opt->{'caption'}) eq 'ARRAY') {
-      caption($tab + 1, $opt->{'caption'}->[0], $opt->{'caption'}->[1]);
+      caption($tab, $opt->{'caption'}->[0], $opt->{'caption'}->[1]);
     }
     else {
-      caption($tab + 1, $opt->{'caption'});
+      caption($tab, $opt->{'caption'});
     }
   }
 
   if ($opt->{'cols'}) {
-    col($tab + 1, $_) for @{$opt->{'cols'}};
+    col($tab, $_) for @{$opt->{'cols'}};
   }
 
-  for my $rowgroup (@{$opt->{'rows'}}) {
-    my $type = $rowgroup->[0];
-    my @rows = $rowgroup->[1];
-    my $attributes = $rowgroup->[2];
-    
-    if ($type eq 'header') {
-      row($tab + 1, $type , @rows, $attributes);
-    }
-    else {
-      for my $row (@rows) {
-        row($tab + 1, $type , $_, $attributes) for @$row;
-      }
-    }
+  thead($tab, $opt->{'thead'}) if $opt->{'thead'};
+  tfoot($tab, $opt->{'tfoot'}) if $opt->{'tfoot'};
+  if ($opt->{'tbody'}) {
+    tbody($tab, $_) for @{$opt->{'tbody'}};
   }
-
+  else {
+    tbody($tab, { 'rows' => $opt->{'rows'} });
+  }
+  $tab--;
+  
   line($tab, end_tag($tag));
 }
 
@@ -448,10 +490,10 @@ sub figure {
   my ($tab, $code, $opt) = @_;
   my $tag = 'figure';
   
-  line($tab, start_tag($tag, $gen, $opt);
-    figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'before');
-    &$code;
-    figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'after');
+  line($tab, start_tag($tag, $gen, $opt));
+  figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'before');
+  &$code;
+  figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'after');
   line($tab, end_tag($tag));
 }
 
@@ -480,14 +522,13 @@ sub body    { code_element('body',    $gen, @_) }
 sub html {
   my ($tab, $opt) = @_;
   my $tag = 'html';
-  my $start = $tag;
   
   print "content-type: text/html \n\n";
   line(0, '<!DOCTYPE html>');
-  line($tab, "<$start>");
+  line($tab, start_tag($tag, $gen, $opt));
   head($tab + 1, $opt->{'head'})    if $opt->{'head'};
   body($tab + 1, @{$opt->{'body'}}) if $opt->{'body'};
-  line($tab, "</$tag>");
+  line($tab, end_tag($tag));
 }
 
 # End elements
@@ -1092,17 +1133,17 @@ C<whead> is a group of rows with a heading then data.
 =back
 
   rows => [
-    ['header',\@headings, {
+    ['header', \@headings, {
       id    => 'header_row_id',
       class => 'header_row_class',
-      style => 'header_row_style
+      style => 'header_row_style'
     }],
-    ['data',\@data, {
+    ['data', \@data, {
       id    => 'data_row_id',
       class => 'data_row_class',
-      style => 'data_row_style
+      style => 'data_row_style'
     }],
-    ['whead',\@data_with_heading],
+    ['whead', \@data_with_heading],
   ],
 
 =head4 Setting up the cells

@@ -35,18 +35,6 @@ sub ST_modifier {
   return $st_mod;
 }
 
-my %masks = (
-  'paralyzation' => 'ppd',
-  'poison'       => 'ppd',
-  'death magic'  => 'ppd',
-  'rod'   => 'rsw',
-  'staff' => 'rsw',
-  'wand'  => 'rsw',
-  'petrification' => 'pp',
-  'polymorph'     => 'pp',
-  'dragon breath' => 'breath weapon',
-);
-
 sub get_saving_throws {
   my ($class, $opt) = @_;
   $class = convert_class($class,'SavingThrows');
@@ -146,15 +134,27 @@ sub saving_throw_table_rows {
   }
   
   my @rows = (
-    [ 'header', ['Save', 'Throw'] ],
+    [ 'header', [['Save', 'Throw']] ],
     [ 'whead', \@data_rows ]
   );
   if (scalar @$modifiers > 0) {
-    push @rows, [ 'header', [['Modifiers', { 'colspan' => 2}]]];
+    push @rows, [ 'header', [[['Modifiers', { 'colspan' => 2}]]]];
     push @rows, [ 'data', [[[ 'list', { 'class' => "info", 'colspan' => 2, 'list' => ['u', $modifiers] }]]] ];
   }
   
   return \@rows;
 }
+
+my %masks = (
+  'paralyzation' => 'ppd',
+  'poison'       => 'ppd',
+  'death magic'  => 'ppd',
+  'rod'   => 'rsw',
+  'staff' => 'rsw',
+  'wand'  => 'rsw',
+  'petrification' => 'pp',
+  'polymorph'     => 'pp',
+  'dragon breath' => 'breath weapon',
+);
 
 1;

@@ -53,8 +53,8 @@ sub get_spells {
 
 sub spell_progression_table_rows {
   my %opt = @_;
-  my $name       = $opt{'name'};
-  my $classes    = $opt{'classes'};
+  my $name    = $opt{'name'};
+  my $classes = $opt{'classes'};
 
   my $spell_progression = get_spells($classes, { 'experience' => $opt{'experience'} });
   my @classes = grep( defined( $$spell_progression{$_} ), @$classes );
@@ -67,14 +67,14 @@ sub spell_progression_table_rows {
   }
 
   my @rows = (
-    [ 'header', \@headings ],
+    [ 'header', [\@headings] ],
     [ 'whead', \@data_rows ]
   );
   my $colspan = scalar(@classes) + 1;
-  if (-f data_file('Role_playing/Spellbooks',filify($name).'.txt')) {
+  if (-f data_file('Role_playing/Player_characters/spellbooks',filify($name).'.txt')) {
     my $searchname   = searchify($name);
-    my $spellbook = anchor("$name\'s spellbook", { 'href' => "../../../Role_playing/Spellbooks/index.pl?spellbook=$searchname" });
-    push @rows, [ 'header', [['Spellbook', { 'colspan' => $colspan }]] ];
+    my $spellbook = anchor("$name\'s spellbook", { 'href' => "../../../Role_playing/Player_characters/Spellbooks.pl?spellbook=$searchname" });
+    push @rows, [ 'header', [[['Spellbook', { 'colspan' => $colspan }]]] ];
     push @rows, [ 'data', [[[$spellbook, { 'colspan' => $colspan }]]] ];
   }
 

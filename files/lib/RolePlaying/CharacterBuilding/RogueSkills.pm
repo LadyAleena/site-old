@@ -79,9 +79,9 @@ sub rogue_skills_table_rows {
   }
 
   my @rows = (
-    [ 'header', ['Skill', '%'] ],
+    [ 'header', [['Skill', '%']] ],
     [ 'whead', \@data_rows ],
-    [ 'header', [['Other', { 'colspan' => 2 }]] ],
+    [ 'header', [[['Other', { 'colspan' => 2 }]]] ],
     [ 'data', [[['list', { 'class' => 'info', 'colspan' => 2, 'list' => ['u', $other_skills] }]]] ]
   );
 

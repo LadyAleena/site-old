@@ -30,8 +30,8 @@ sub psionics_table_rows {
   push @data_rows, [ucfirst $_, $psionics->{$_}] for ('disciplines','sciences','devotions','defense modes');
   
   my @rows = (
-    ['header',['&nbsp;','Amount']],
-    ['whead',\@data_rows]
+    ['header', [['&nbsp;','Amount']]],
+    ['whead', \@data_rows]
   );
 
   return \@rows;

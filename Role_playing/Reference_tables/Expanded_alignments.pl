@@ -4,7 +4,7 @@ use warnings FATAL => qw( all );
 
 use CGI::Carp qw(fatalsToBrowser);
 
-use lib "../../files/lib";
+use lib '../../files/lib';
 use Base::Page qw(page story);
 use HTML::Elements qw(table);
 use RolePlaying::CharacterBuilding::Alignment qw(expand_alignment);
@@ -43,6 +43,6 @@ page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 Are there times when you can't choose an alignment for your character with so few choices? That has come to an end. Here are 112 new alignments to choose from. A (+) next to an alignment means your character is true (alignment). A (-) next to an alignment means your character is just not that alignment. An alignment in parentheses means your character has those tendencies.
-This chart has been copied and modified A<here|href="http://easydamus.com/alignmenttracking.html">.
+This chart has been copied and modified A<here|href="http://easydamus.com/alignmenttracking.html" target="new_tab">.
 2 The Alignments
 & alignments

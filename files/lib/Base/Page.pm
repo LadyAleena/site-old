@@ -11,11 +11,11 @@ use HTML::Entities qw(encode_entities);
 use List::Util qw(max);
 
 use Base::Root qw(get_root);
-use Base::Data qw(get_array);
+use Base::Data qw(get_hash);
 use Base::Inline qw(inline);
 use Base::Line qw(line);
 use Base::Menu qw(main_menu);
-use HTML::Elements qw(html head style body header nav article section heading paragraph blockquote item list table anchor img div);
+use HTML::Elements qw(html style nav article section heading paragraph blockquote list table anchor img div);
 use Util::Convert qw(idify textify filify searchify);
 use Util::Columns;
 use Util::ExternalLinks;
@@ -140,14 +140,14 @@ sub dissect_source {
       my ($number,$text) = split(/ /,$line,2);
       $text =~ s/ \+$//;
       push @toc, [anchor(textify($text), { 'href' => '#'.idify($text) })];
-      $inc++  if $line =~ /^2 /;
     }
     if ($line =~ /^3 /) {
       my ($number,$text) = split(/ /,$line,2);
       $text =~ s/ \+$//;
-      $toc[$inc][1]->{inlist}[0] = 'u';
-      push @{$toc[$inc][1]->{inlist}[1]}, anchor(textify($text), { 'href' => '#'.idify($text) });
+      $toc[$inc-1][1]->{inlist}[0] = 'u';
+      push @{$toc[$inc-1][1]->{inlist}[1]}, anchor(textify($text), { 'href' => '#'.idify($text) });
     }
+    $inc++  if $line =~ /^2 /;
     $cols++ if $line =~ /^(?:2|3) /;
     
     push @{$sections[$inc]}, $line;
@@ -191,21 +191,17 @@ sub table_opts {
       $line =~ s/^\! (.+)$/$1/;
       $table_opts->{'caption'} = inline(convert_string($line), $opt->{'line magic'});
     }
-    elsif ($match eq '*') {
-      $line =~ s/^\* (.+)$/$1/;
-      push @{$table_opts->{'rows'}}, ['header', row_line($line, $opt)];
-    }
-    elsif ($match =~ /[\+-]/) {
+    elsif ($match =~ /[\*\+-]/) {
       my $start = $lineno;
       my $end   = $lineno;
       $end++ while ($end < $#$lines and $lines->[$end + 1] =~ /^[$match]/);
       
       my @table_rows = map { 
-        $_ =~ s/^[\+-] (.+)/$1/;
+        $_ =~ s/^[\*\+-] (.+)/$1/;
         row_line($_, $opt); 
       } @{$lines}[$start..$end];
 
-      my $type = $match =~ /\+/ ? 'whead' : 'data';
+      my $type = $match =~ /\*/ ? 'header' : $match =~ /\+/ ? 'whead' : 'data';
       push @{$table_opts->{'rows'}}, [$type, \@table_rows];
       
       $lineno = $end;
@@ -321,7 +317,7 @@ sub story {
   for my $section (@$sections) {
     section($tab, sub { passage($tab + 1, $section, $opt) }) if $section;
     
-    if ($inc == 0 && scalar @$sections > 1) {
+    if ($inc == 0 && $cols > 3) {
       nav($tab, sub {
         my $class = get_columns(4, $cols);
         list($tab + 2, 'u', $toc, { 'class' => $class });

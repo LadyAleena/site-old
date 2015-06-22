@@ -78,7 +78,7 @@ sub name_sort {
   return $t if $t;
 
   # When I sort by name I prefer lastname firstname.
-  # I have not yet written this to account for Sr., Jr., or Roman numerals after the last name.
+  # I have not yet written this to account for Roman numerals after the last name.
   
   for ($c,$d) {
     s/ (?:Jr.|Sr.)$//;

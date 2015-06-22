@@ -56,6 +56,7 @@ sub article_sort {
   for ($c, $d) {
     s/<.+?>//g; # Strip out any html tags.
     s/\s*\b(A|a|An|an|The|the)(_|\s)//xi; # Strip off leading articles (in English).
+    s/\((.+)\)/$1/g;
     decode_entities($_);
   }
   if ( $c =~/^((\d|,|\.)+)(.*)$/ && $d =~ /^((\d|,|\.)+)(.*)$/) {
@@ -80,7 +81,8 @@ sub name_sort {
   # I have not yet written this to account for Sr., Jr., or Roman numerals after the last name.
   
   for ($c,$d) {
-    $_ = join(' ', (reverse split(/(?:_|\s)(?=[^_\s]+$)/, $_,2))) if $_ !~ /^_/;
+    s/ (?:Jr.|Sr.)$//;
+    $_ = join(' ', (reverse split(/(?:_|\s)(?=[^_\s]+$)/, $_, 2))) if $_ !~ /^_/;
     s/^_//;
     s/\s*\b(A|a|An|an|The|the)(_|\s)//xi; # Strip off leading articles (in English).
     s/<.+?>//g; # Strip out any html tags.

@@ -66,7 +66,7 @@ sub get_contacts {
   for my $link (sort { lc $a cmp lc $b } keys %$contacts) {
     my $address = $contacts->{$link};
     my $title = "Lady Aleena on $link";
-    my $image = img({ 'src' => "http://www.google.com/s2/favicons?domain=$address", 'alt' => $title });
+    my $image = img({ 'src' => "http://www.google.com/s2/favicons?domain=$address", 'alt' => $title, 'class' => 'contact' });
     
     push @links, anchor($image, { 'href' => "http://$address", 'target' => 'ex_tab', 'title' => $title });
   }
@@ -111,8 +111,8 @@ sub page {
       {
         'header' => [
           sub {
-            paragraph(3, join(' ',get_contacts()), { 'class' => 'no_indent' });
-            div(3, img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'width:.9em' }).anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home' }));
+            paragraph(3, join(' ', get_contacts()), { 'class' => 'no_indent' });
+            div(3, img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'width:1.4em; float:left;' }).anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home', 'style' => 'height:100%; vertical-align:middle; font-size:125%' }));
           }
         ],
         'class' => $opt{'class'} ? $opt{'class'} : undef

@@ -4,7 +4,7 @@ body > header { position:absolute; top: 0; bottom: 6.5%; left: 0; right: 0; widt
 body > header div p { margin: 2px; padding: 0 0 2px 3px; clear: none; background-color:transparent; text-indent: 0; font-size: 250%; float: none; }
 body > header a { color:#eed; }
 body > header p  { float: right; }
-body > header p img { width: 6.5%; }
+body > header p img.contact { width: 6.5%; }
 
 nav#main, article { position:absolute; top:6.5%; bottom:0; height:93.5%; padding: 0px; }
 nav#main { right:81%; left:0; width:19%; overflow:auto; color:#000; font-size:smaller; }
@@ -78,7 +78,7 @@ li.closed::before { position: absolute; margin: -4px 0 0 -16px; content: "\21D2"
 li.open::before   { position: absolute; margin: -4px 0 0 -16px; content: "\21D3"; }
 li p { margin: 0px; text-indent: 0; }
 
-dt {font-weight:bold;}
+dt { font-weight:bold; }
 
 .last { border-bottom:none; }
 table { border-collapse:collapse; border:1px solid #027; }
@@ -86,7 +86,7 @@ table.full { float:left; margin-left:auto; margin-right:auto; width: 100%; }
 caption { border-color: #027; border-width: 1px 1px 0 1px; border-style: solid; white-space: nowrap; background-color: #eed; color: #027; font: normal large arial; }
 colgroup { border:1px solid #027; }
 tbody { border-bottom:1px solid #027; }
-td,th { border-width:1px; border-color:#027; border-bottom-style:dotted; }
+td,th { border-width:1px; border-color:#027; border-style:dotted; padding: .25em; }
 th { background-color:#eed; color:#027; }
 th.row_header { font-size: smaller; font-weight:bold; text-align:left; }
 td { font-size:smaller; white-space:nowrap; }

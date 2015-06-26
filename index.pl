@@ -18,7 +18,6 @@ page( 'heading' => $root_name, 'code' => sub { story(*DATA, { 'line magic' => $l
 
 __DATA__
 Welcome to my place online.
-Boycott marriage until it is gender blind in the United States! I am.
 2 Role playing
 Welcome to one of the larger resources for AD&amp;D 2nd Edition material on the web. Over 250 magic items are available and categorized as they would be listed if they were in the I<Encyclopedia Magica>© TSR, Inc. There are a dozen monsters for dungeon masters to pit against their players. There is a comprehensive, though not complete, list of proficiencies that TSR, Inc.™ and Wizards of the Coast, Inc.™ have been put out over the years. Reference tables and random generators are included to help make 2nd Edition game play easier and a little more exciting. Conversions to other editions are welcome.
 Many thanks to ^Robert Anderson^, Johnny Brant, Nathan Brown, ^Gabriel Elias^, ^Randy Furuyama^, ^Alan Gray^, Dan Grieg, Joshua Moore, Rob McDonald, ^Charlie Przybylek^, and Rich Rayburn for their contributions.

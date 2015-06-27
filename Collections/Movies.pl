@@ -12,7 +12,7 @@ use People qw(get_people);
 
 my $doc_magic = {
   'producers and directors' => sub { list(3, 'u', get_people('Producers_and_directors.txt'), { 'class' => 'three' }) },
-  'film actors' => sub { list(3, 'u', get_people('Actors_in_films.txt'),      { 'class' => 'three' }) },
+  'film actors' => sub { list(3, 'u', get_people('Actors_in_films.txt'), { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
@@ -395,27 +395,27 @@ See also the A<tie-ins|href="Tie-ins.pl#Star_Wars"> I own.
 3 Zorro
 * I<The Mask of Zorro|^dvd^> (1998)
 * I<The Legend of Zorro|^dvd^> (2005)
-2 Television series &amp; miniseries
+2 Television series and miniseries
 * I<The 10th Kingdom|^dvd^> (2000)
-* I<Blood Ties|^bd^> (2006) (SPAN<complete series boxed set|^bd^>)
+* I<Blood Ties|^bd^> (2006) (complete series boxed set)
 * I<Bones|^dvd^> (2005) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>)
-* I<Castle|^dvd^> (2009) (SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>, SPAN<6|^dvd^>)
-* I<Chuck|^bd^> (2007) (SPAN<complete series boxed set|^bd^>)
+* I<Castle|^dvd^> (2009) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>, SPAN<6|^dvd^>)
+* I<Chuck|^bd^> (2007) (complete series boxed set)
 * I<Crusade|^dvd^> (1999)
 * I<The Dresden Files|^dvd^> (2007)
 * I<Dinotopia|^dvd^> (2002)
 * I<IT|^dvd^> (1990)
-* I<Leverage|^dvd^> (2008) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>)
+* I<Leverage|^dvd^> (2008) (complete series)
 * I<The Magical Legend of the Leprechauns|^dvd^> (1999)
-* I<Necessary Roughness|^dvd^> (2011)
+* I<Necessary Roughness|^dvd^> (2011) (complete series)
 * I<Numb3rs|^dvd^> (2005) (Season: SPAN<2|^dvd^>)
 * I<Pride and Prejudice|^dvd^> (1995)
-* I<Scarecrow and Mrs. King|^dvd^> (1983) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>)
-* I<Star Blazers|^vhs^> (1979) (Seasons: SPAN<1|^vhs^>, SPAN<2|^vhs^>, SPAN<3|^vhs^>)
+* I<Scarecrow and Mrs. King|^dvd^> (1983) (complete series)
+* I<Star Blazers|^vhs^> (1979) (complete series)
 * I<Studio 60 on the Sunset Strip|^dvd^> (2006)
 3 Buffy the Vampire Slayer
-* I<Buffy the Vampire Slayer|^dvd^> (1997) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>, SPAN<6|^dvd^>, SPAN<7|^dvd^>)
-* I<Angel|^dvd^> (1999) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>)
+* I<Buffy the Vampire Slayer|^dvd^> (1997) (complete series)
+* I<Angel|^dvd^> (1999) (complete series)
 3 Burn Notice
 * I<Burn Notice|^dvd^> (2007) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>)
 * I<Burn Notice: The Fall of Sam Axe|^dvd^> (2011)
@@ -430,8 +430,8 @@ See also the A<tie-ins|href="Tie-ins.pl#Doctor_Who"> I own.
 * I<Serenity|^dvd^> (2005)
 3 Stargate
 * I<Stargate|^dvd^> (1994)
-* I<Stargate SG-1|^dvd^> (1997) (SPAN<10 season boxed set|^dvd^>)
-* I<Stargate: Atlantis|^dvd^> (2004) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>)
+* I<Stargate SG-1|^dvd^> (1997) (10 season boxed set)
+* I<Stargate: Atlantis|^dvd^> (2004) (complete series)
 * I<Stargate: Continuum|^dvd^> (2008)
 * I<Stargate: The Ark of Truth|^dvd^> (2008)
 3 V

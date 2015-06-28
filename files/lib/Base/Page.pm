@@ -102,7 +102,7 @@ sub page {
           section(3, sub {
             list(4, 'u', $menu, { 'id' => 'site_menu', 'onclick' => 'list_onclick(event)' }
             );
-          }, { 'heading' => [2, 'Site menu', { 'id' => 'Site_menu' }] });
+          });
         }, { 'id' => 'main' });
         article(2, sub {
           &{$opt{'code'}};
@@ -111,8 +111,11 @@ sub page {
       {
         'header' => [
           sub {
-            paragraph(3, join(' ', get_contacts()), { 'class' => 'no_indent' });
-            div(3, img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'width:1.4em; float:left;' }).anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home', 'style' => 'height:100%; vertical-align:middle; font-size:110%' }));
+            div(3, sub { print join(' ', get_contacts()) }, { 'id' => 'contacts', 'class' => 'no_indent' });
+            div(3, sub { print
+              img({ 'src' => "$root_link/files/images/avatar.jpg", 'alt' => "Lady Aleena's avatar", 'style' => 'height:100%; float:left;' }).
+              anchor('Lady Aleena', { 'href' => $root_link, 'title' => 'Home', 'style' => 'padding-left:.1em;'})
+            }, { 'style' => 'height:100%; vertical-align:middle; font-size:250%' });
           }
         ],
         'class' => $opt{'class'} ? $opt{'class'} : undef

@@ -1,12 +1,11 @@
 body { background-color:#ccb; font-family:arial, sans-serif; font-size: 100%; }
 
-body > header { position:absolute; top: 0; bottom: 6.5%; left: 0; right: 0; width:100%; height:6.5%; vertical-align: middle; background-color: #027; }
-body > header div p { margin: 2px; padding: 0 0 2px 3px; clear: none; background-color:transparent; text-indent: 0; font-size: 250%; float: none; }
+body > header { position:absolute; top: 0; bottom: 6%; left: 0; right: 0; width:100%; height:6%; vertical-align: middle; background-color: #027; }
 body > header a { color:#eed; }
-body > header p  { float: right; }
-body > header p img.contact { width: 6.5%; }
+body > header div#contacts  { float: right; }
+body > header div#contacts img.contact { width: 6.5%; }
 
-nav#main, article { position:absolute; top:6.5%; bottom:0; height:93.5%; padding: 0px; }
+nav#main, article { position:absolute; top:6%; bottom:0; height:93.5%; padding: 0px; }
 nav#main { right:81%; left:0; width:19%; overflow:auto; color:#000; font-size:smaller; }
 nav#main > section { background-color: #eed; }
 nav#main h2 { font-size: 115%; font-weight: bold; }

@@ -118,7 +118,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Notorious|^lp^> extended mix (1986)
 * I<Skin Trade|^lp^> extended mix (1987)
 * I<The Presidential Suite|^lp^> extended mix (1987)
-* I<Big Thing|^cassette^> (1988)
+* I<Big Thing|^cd^> (1988) <!-- & cassette -->
 * I<Decade|^cd^> (1989)
 * I<Duran Duran|^cd^> (1993)
 * I<Greatest|^cd^> (1998)

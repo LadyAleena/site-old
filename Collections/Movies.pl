@@ -313,6 +313,7 @@ See also the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 * I<The Incredible Hulk|^bd^> (2008)
 * I<Iron Man 2|^bd^> (2010)
 * I<Thor|^bd^> (2011)
+* I<Captain America: The First Avenger|^bd^> (2011)
 * I<The Avengers|^bd^> (2012)
 * I<Iron Man 3|^bd^> (2013)
 * I<Thor: The Dark World|^bd^> (2013)

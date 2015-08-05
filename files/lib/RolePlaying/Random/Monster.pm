@@ -31,7 +31,7 @@ $submonsters{'amorphous monster'} = {
 $submonsters{'beholder'} = {
   'beholder-kin'         => [map( "$_ beholder-kin", ('death kiss','eye of the deep','gauth','spectator','hive mother'))],
   'beholder abomination' => [map( "$_ beholder abomination" ,qw(astereater director examiner lensman overseer watcher))],
-  'undead beholder'      => ['undead beholder', map( "$_ (undead beholder)", ('doomsphere','kasharin') )],
+  'undead beholder'      => ['undead beholder', map( "$_, undead beholder", ('doomsphere','kasharin') )],
   'beholder mage'        => ['beholder mage', map( "$_ beholder", ('elder orb','orbus','gorbel') )],
   'beholder'             => ['beholder']
 };
@@ -43,12 +43,12 @@ $submonsters{'centaur'} = {
 
 my $lsc = 'life shaped creation';
 $submonsters{'construct'} = {
-  'automaton' => ['automaton','scalander', map( "$_ <small>Trioband automaton</small>", qw(farragan silversan thanatar) )],
+  'automaton' => ['automaton','scalander', map( "$_, Trioband automaton", qw(farragan silversan thanatar) )],
   'gargoyle'  => ['gargoyle','margoyle',
     map( "$_ gargoyle", (qw(any archer spouter),'grandfather plaque','stone lion','stone wolf') )],
   'life shaped creation' => ['life shaped creation',
-    map( "$_ <small>(guarding $lsc)</small>",  ('climb dog','darkstrike','protector','sheildbug','watcher')),
-    map( "$_ <small>(transport $lsc)</small>", ('ber-etherin','dhev-sahr','gun-evauth','yihn-eflan'))
+    map( "$_, guarding $lsc",  ('climb dog','darkstrike','protector','sheildbug','watcher')),
+    map( "$_, transport $lsc", ('ber-etherin','dhev-sahr','gun-evauth','yihn-eflan'))
   ],
   'clockwork horror'    => ['clockwork horror',    map( "$_ clockwork horror",     qw(copper silver electrum gold platinum adamantite) )],
   'lesser golem'        => ['lesser golem',        map( "$_ lesser golem",         qw(clay flesh) )],
@@ -71,7 +71,7 @@ $submonsters{'dragon'} = {
   'dragonet'         => ['faerie dragon','firedrake','pseudodragon','rainbow dragonette'],
   'dragon-kin'       => [qw(dracotaur dracolisk dragon-kin half-dragon weredragon sea-wyrm chimera dragonne gorynych salamander scalamagdrion wyvern),'albino wyrm'],
   'undead dragon'    => ['dracolich','ghost dragon'],
-  'Thessalamonster'  => [map("$_ <small>(Thessalamonster)</small>",qw(Thessalhydra Thessalmerro Thessalgorgen Thessaltrice))],
+  'Thessalamonster'  => [map("$_, Thessalamonster",qw(Thessalhydra Thessalmerro Thessalgorgen Thessaltrice))],
   'elemental drake'  => [map( "elemental $_ drake", (@elements,@paraelements) )],
   'hydra'            => [qw(hydra pyrohydra cryohydra gulgutghhydra), 'lemaean hydra'],
   'dragon'           => ['dragon', map( "$_ dragon", qw(brine brown Cerillian cloud deep electrum fang mercury mist radiant shadow spider steel yellow prismatic) )]
@@ -159,8 +159,8 @@ $submonsters{'planar creature'} = {
     'grue',   map( "$_ grue",   @all_elements ),
     'mephit', map( "$_ mephit", @all_elements ),
     map( "$_ swarm", ('elemental',@all_elements) ),
-    'elemental-kin',   map("$_ <small>(elemental-kin)</small>",    qw(nereid pech salamander sylph) ),
-    'elemental vermin',map("$_ <small>(elemental vermin)</small>", qw(crawler duster flameling spitter) ),
+    'elemental-kin',   map("$_, elemental-kin",    qw(nereid pech salamander sylph) ),
+    'elemental vermin',map("$_, elemental vermin", qw(crawler duster flameling spitter) ),
   ],
   'genie' => [
     'genie', 'jann',
@@ -258,7 +258,7 @@ $monsters{'harpy'}              = [qw(harpy gobpry)];
 $monsters{'illithid'}           = ['mind flayer', 'psionic illithid', 'alhoon'];
 $monsters{'medusa'}             = [qw(medusa maedar), 'greater medusa'];
 $monsters{'spacefaring'}        = [qw(grommish hadozee hurwaeti)];
-$monsters{'monster'}            = [
+$monsters{'unsorted'}            = [
   qw(arcane cloaker doppleganger giff gith grimlock mimic minotaur),
   'broken one', 'galeb dur', 'hook horror','living wall'
 ];
@@ -280,8 +280,7 @@ sub random_monster {
 
 sub random_monster_list {
   my $monster_list = random_monster('keys');
-  my @monsters = ('<strong>Random monster:</strong> '.random_monster);
-  push @monsters, "<strong>Random $_:</strong> ".random_monster($_) for sort @$monster_list;
+  my @monsters = ( '<strong>Random monster:</strong> '.random_monster, map( "<strong>Random $_:</strong> ".random_monster($_), sort @$monster_list ) );
   return \@monsters;
 }
 

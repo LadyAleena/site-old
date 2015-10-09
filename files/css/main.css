@@ -40,6 +40,7 @@ a { color:#027; text-decoration:none }
 a:hover { text-decoration:underline; }
 a img { width:45%;}
 a.img { display:block; text-align:center; }
+a.inline img { width: auto; max-width: 100%; }
 
 p { text-indent: 1em; }
 p.no_indent { text-indent:0; }

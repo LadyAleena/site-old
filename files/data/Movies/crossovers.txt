@@ -1,10 +1,11 @@
 Alien: Resurrection|//Firefly/Firefly;//Angel/Buffy the Vampire Slayer
-Angel|//Alien: Resurrection/Alien
 Andy Barker, P.I.|Doublemeat Palace/06/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer
+Angel|//Alien: Resurrection/Alien
 Battlestar Galactica (2003)|//Firefly/Firefly
 Bewitched (1964)|1.55/01/Passions
 Buffy the Vampire Slayer (1997)|//The X-Files (1993)/The X-Files
 Code of Vengeance|Mouth of the Snake/02/Knight Rider (1982)/Knight Rider
+Conviction|//Deadline
 Deadline|//Law & Order/Law & Order;//Law & Order: Special Victims Unit/Law & Order;//Law & Order: Criminal Intent/Law & Order;//Law & Order: Trial by Jury/Law & Order;//Conviction/Law & Order
 Doctor Who (1963)|Marooned//Red Dwarf;//Chelmsford 123
 ER|//The X-Files (1993)/The X-Files
@@ -12,11 +13,12 @@ Firefly|//Alien: Resurrection/Alien;//Battlestar Galactica (2003)/Battlestar Gal
 First Monday|//JAG/
 Get Smart, Again!|//The Man from U.N.C.L.E. (1964)/U.N.C.L.E.
 The Green Hornet (1966)|A Piece of the Action/02/Batman (1966 tv)/Batman (1966);Batman's Satisfaction/02/Batman (1966 tv)/Batman (1966)
-The Hitchhiker's Guide to the Galaxy (1981)|The Christmas Invasion/02/Doctor Who (2005)/Doctor Who
 Hart to Hart|//Moonlighting
+Hawaii Five-O|Skin Deep/01/Magnum P.I.
 Homicide: Life on the Street|Unusual Suspects/05/The X-Files (1993)/The X-Files;//Oz
+The Hitchhiker's Guide to the Galaxy (1981)|The Christmas Invasion/02/Doctor Who (2005)/Doctor Who
 In Plain Sight|Contract/07/Law & Order: Criminal Intent/Law & Order
-JAG|//First Monday/
+JAG|//First Monday/;//NCIS/NCIS
 Knight Rider (2008 film)|//Las Vegas
 L.A. Law|Potts Don't Fail Me Now/01/Cop Rocks;//Civil Wars
 Las Vegas|1.1489//Passions;1.1490//Passions;Method to His Madness/02/Medium;Collision/01/Heroes;//Knight Rider (2008 film)/Knight Rider
@@ -24,12 +26,9 @@ Law & Order|//Deadline;Smack Is Back/03/New York Undercover;Mob Street/04/New Yo
 Law & Order: Special Victims Unit|//Deadline;They Say It's Your Birthday/01/The Beat;Exit Strategy/03/Arrested Development;Took/05/The Wire;/01/Luther
 Law & Order: Criminal Intent|//Deadline;The Catacombes/01/Jo
 Law & Order: Trial by Jury|//Deadline
-Conviction|//Deadline
 M*A*S*H (1972)|//St. Elsewhere
 The Man from U.N.C.L.E. (1964)|//Get Smart, Again!/Get Smart (1965)
 Millennium|Millennium/07/The X-Files/The X-Files
-JAG|//NCIS/NCIS
 NCIS: Los Angeles|Ka Hakaka Maika'i/02/Hawaii Five-0;True Colors/01/Scorpion/
 St. Elsewhere|//White Shadow;//Tattingers;//M*A*S*H (1972)/MASH;//Chicago Hope;Mercy/06/Homicide: Life on the Street/Homicide;//Oz
 The X-Files (1993)|Struck by Lightning//Strange Luck;Eric Gets Suspended//That '70s Show;Stock Car Races//Malcolm in the Middle;Beyond Repair/08/ER;The Grain/02/Special Unit 2;Arms and the Girl//Jake 2.0;North Mammon/02/Criminal Minds;Bolshoi Booze//Prison Break;//Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer;Scatter Point/02/Burn Notice;The Ones You Love/04/Warehouse 13;Consumed/05/The Walking Dead;//CSI: Crime Scene Investigation
-Hawaii Five-O|Skin Deep/01/Magnum P.I./

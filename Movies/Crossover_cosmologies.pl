@@ -20,6 +20,7 @@ page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
 I hope you enjoy these crossover cosmologies. I have included official and unofficial crossovers. Some may be in dispute. There are two sites which helped me in putting this together. First is Thomas Holbrook's site A<Crossovers and Spin Offs|href="http://www.poobala.com/crossoverlistb.html" target="new">. Second is Keith Gow's and Ash Crowe's site A<The Tommy Westphall Universe|href="https://thetommywestphall.wordpress.com" target="new">. Without those two resources, I would not be as far along as I am now. There are a few places where I have disagreed with Holbrook, Gow, and Crowe; but I am still very thankful for their work.
+Click the images for a better view and see the A<legend|href="../files/images/Movies/legend.png">.
 2 I Love Lucy
 from CBS
 & I Love Lucy
@@ -35,9 +36,12 @@ Barney Fife from I<The Andy Griffith Show> appeared on on I<The Joey Bishop Show
 Maurice Sorrell from I<The Dick Van Dyke Show> appeared on I<The Danny Thomas Show> Q<The Woman Behind the Jokes>. Alan Brady from I<The Dick Van Dyke Show> appeared on I<Mad About You> Q<The Alan Brady Show>. SMALL<(A<Mad About Friends|href="#Mad_About_Friends">)> Sally Rogers and Maurice Sorrell from I<The Dick Van Dyke Show> appear on I<Herman's Head>.
 3 Lucy's Diagnosis
 from NBC, CBS, and ABC
-Bob Collins of I<The Bob Cummings Show> appeared on I<Here's Lucy> Q<Lucy's Punctured Romance> and on I<The George Burns and Gracie Allen Show> Q<A Marital Mix-Up>. Ralph Kramden of I<The Honeymooners> appeared on I<Here's Lucy> Q<Lucy Visits Jack Benny>. I<The Honeymooners> spun off I<The Jackie Gleason Show>. Joe Mannix of I<Mannix> appeared on I<Here's Lucy> Q<Lucy and Mannix Are Held Hostage> and on I<Diagnosis Murder> Q<Hard-Boiled Murder>.
+Ralph Kramden of I<The Honeymooners> appeared on I<Here's Lucy> Q<Lucy Visits Jack Benny>.
+Mary Jane Lewis from I<The Lucy Show> appears on I<Here's Lucy> "A Date for Lucy" and recurs thereafter.
+Joe Mannix of I<Mannix> appeared on I<Here's Lucy> Q<Lucy and Mannix Are Held Hostage> and on I<Diagnosis Murder> Q<Hard-Boiled Murder>.
+Bob Collins of I<The Bob Cummings Show> appeared on I<Here's Lucy> Q<Lucy's Punctured Romance> and on I<The George Burns and Gracie Allen Show> Q<A Marital Mix-Up>.  I<The Honeymooners> spun off I<The Jackie Gleason Show>. 
 Cinnamon Carter of I<Mission: Impossible> appeared on I<Diagnosis Murder> Q<Discards>. I<Mission: Impossible> spun off I<Mission: Impossible> (1988). Ben Matlock of I<Matlock> appeared on the two-part I<Diagnosis Murder> Q<Murder Two>. I<Promised Land> Q<Total Security> concludes on I<Diagnosis Murder> Q<Promises to Keep>. I<Diagnosis Murder> is a spin off of I<Jake and the Fatman>. I<Promised Land> is a spin off of I<Touched By an Angel>.
-A<Morleys brand cigarettes|href="Morley_cigarettes"> appeared on I<Mission: Impossible> after I<The Twilight Zone> episode Q<Nightmare at 20,000 Feet>. The packaging of the Morleys in I<The Twilight Zone> and I<Mission: Impossible> is different from the packaging from I<A<The X-Files|href="#The_X-Files">>. If the two brands of Morelys are supposed to be the same brand just repackaged, then I<Mission: Impossible> and I<The X-Files> cross.
+A<Morley cigarettes|href="Morley_cigarettes"> appeared on I<Mission: Impossible> after I<The Twilight Zone> Q<Nightmare at 20,000 Feet>. The Morley packaging in I<The Twilight Zone> and I<Mission: Impossible> is different from the packaging in I<A<The X-Files|href="#The_X-Files">>. If the two brands of Morelys are supposed to be the same brand just repackaged, then I<Mission: Impossible> and I<The X-Files> cross.
 3 Mad About Friends
 from NBC
 Cosmo Kramer from I<Seinfeld> appeared on I<Mad About You> Q<The Apartment>.
@@ -273,3 +277,7 @@ Many series have been linked because of the series I<Hi Honey, I'm Home!>. I<Hi 
 * I<A<The Mary Tyler Moore Show|href="#Mary_Tyler_Moore">>
 * I<The Cosby Show> and its spin-off I<A Different World>
 3 Untying Lariat Rent-A-Car
+The Lariat Rent-A-Car company has been seen on A<I<The X-Files>|href="#The_X-Files">, I<Veronica Mars>, I<Supernatural>, and I<Breaking Bad> SMALL<(A<Breaking Dead|href="#Breaking_Dead">)>. Lariat Rent-A-Car is a fake company which can be used when a real car rental company can not be used. The use of this fake company does not constitute a crossover. However, if there is another way to cross the series, it is entirely possible the Lariat Rent-A-Car companies are the same company.
+3 The name is not the same
+* Barbara Rhoades played Maggie Gallagher on I<Hanging In>, and Maggie Chandler on I<Soap>. Gallagher &ne; Chandler
+* Kelly Connell played Carter Pike on I<Picket Fences>, and C. Peck on I<Harry's Law> Q<Onward and Upward>. Pike &ne; Peck

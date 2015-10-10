@@ -56,7 +56,7 @@ Carrie|||Carrie (1976);The Rage: Carrie 2
 Casper|||Casper;Casper: A Spirited Beginning;Casper Meets Wendy;Casper's Haunted Christmas;Casper's Scare School|1
 Category 6|||Category 6: Day of Destruction;Category 7: The End of the World
 Charlie's Angels|||Charlie's Angels (1976);Charlie's Angels (2000);Charlie's Angels: Full Throttle
-Chicago|||Chicago Fire;Chicago P.D.
+Chicago|||Chicago Fire;Chicago P.D.;Chicago Med
 Child's Play|Child's_Play_(franchise)|281486|Child's Play;Child's Play 2;Child's Play 2;Bride of Chucky;Seed of Chucky|n
 Children of the Corn|Children_of_the_Corn_(film_series)|281485|Disciples of the Crow;Children of the Corn;Children of the Corn II: The Final Sacrifice;Children of the Corn III;Children of the Corn IV: The Gathering;Children of the Corn V: Fields of Terror;Children of the Corn 666: Isaac's Return;Children of the Corn: Revelation;Slash
 CHiPs|||CHiPs;CHiPs '99
@@ -176,7 +176,7 @@ Kolchak The Night Stalker|||The Night Stalker;The Night Strangler;Kolchak: The N
 L.A. Law|||L.A. Law;L.A. Law: The Movie
 La Casa|||La Casa 3;La Casa 4; La Casa 5|n
 Lady and the Tramp|||Lady and the Tramp;Lady and the Tramp II: Scamp's Adventure|1
-Law & Order|Law_&_Order_(franchise)||Law & Order;Exiled;Law & Order: Special Victims Unit;Law & Order: Criminal Intent;Law & Order: Trial by Jury;Conviction;Paris enquêtes criminelles;Law & Order: Special Victims Unit: Russia;Law & Order: UK;Law & Order: Los Angeles
+Law & Order|Law_&_Order_(franchise)||Law & Order;Exiled;Law & Order: Special Victims Unit;Law & Order: Criminal Intent;Law & Order: Trial by Jury;Conviction;Paris enquêtes criminelles;Law & Order: Division of Field Investigation (Russia);Law & Order: Criminal Intent (Russia);Law & Order: UK;Law & Order: Los Angeles
 The Lawnmower Man|||The Lawnmower Man;Lawnmower Man 2: Beyond Cyberspace
 Leprechaun|Leprechaun_(film_series)|281906|Leprechaun;Leprechaun 2;Leprechaun 3;Leprechaun 4: In Space;Leprechaun: In the Hood;Leprechaun: Back 2 tha Hood;Leprechaun: Origins|n
 Lethal Weapon||289855|Lethal Weapon;Lethal Weapon 2;Lethal Weapon 3;Lethal Weapon 4
@@ -337,7 +337,7 @@ The Whole Yards|||The Whole Nine Yards;The Whole Ten Yards
 Wishmaster||281378|Wishmaster;Wishmaster 2: Evil Never Dies;Wishmaster 3: Beyond the Gates of Hell;Wishmaster 4: The Prophecy Fulfilled|n
 The Wild Wild West|||The Wild Wild West;The Wild Wild West Revisited;More Wild Wild West
 Witch Mountain|||Escape to Witch Mountain (1975);Return from Witch Mountain;Beyond Witch Mountain
-The X-Files|||The X-Files (1993);Millennium;The X-Files (1998);The Lone Gunmen;The X-Files: I Want to Believe
+The X-Files|||The X-Files (1993);The X-Files (1998);The Lone Gunmen;The X-Files: I Want to Believe
 X-Men|X-Men_(film_series)|291113|X-Men;X2;X-Men: The Last Stand;X-Men Origins: Wolverine;X-Men: First Class;The Wolverine
 xXx|||xXx;xXx: State of the Union
 Zorro (1998)|||The Mask of Zorro;The Legend of Zorro

@@ -21,7 +21,7 @@ Knight Rider (2008 film)|//Las Vegas
 L.A. Law|Potts Don't Fail Me Now/01/Cop Rocks;//Civil Wars
 Las Vegas|1.1489//Passions;1.1490//Passions;Method to His Madness/02/Medium;Collision/01/Heroes;//Knight Rider (2008 film)/Knight Rider
 Law & Order|//Deadline;Smack Is Back/03/New York Undercover;Mob Street/04/New York Undercover
-Law & Order: Special Victims Unit|//Deadline;They Say It's Your Birthday//The Beat;Exit Strategy//Arrested Development;Took//The Wire
+Law & Order: Special Victims Unit|//Deadline;They Say It's Your Birthday/01/The Beat;Exit Strategy/03/Arrested Development;Took/05/The Wire;/01/Luther
 Law & Order: Criminal Intent|//Deadline;The Catacombes/01/Jo
 Law & Order: Trial by Jury|//Deadline
 Conviction|//Deadline

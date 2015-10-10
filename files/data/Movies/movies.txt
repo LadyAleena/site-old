@@ -117,6 +117,7 @@ And Now for Something Completely Different|1971||film||And_Now_for_Something_Com
 Andromeda|2000|2005|tv||Andromeda_(TV_series)|227023|0213327|637||science fiction||
 The Andromeda Strain (1971)|1971||film||The_Andromeda_Strain_(film)|2247|0066769||the-andromeda-strain1971|disaster:pathological threat|novel|Michael Crichton
 The Andromeda Strain (2008)|2008||miniseries:2||The_Andromeda_Strain_(2008_miniseries)|446456|0424600|75591|the-andromeda-strain2008|disaster:pathological threat|novel|Michael Crichton
+Andy Barker, P.I.|2007||tv||Andy_Barker,_P.I.|389618|0775349|58132||detective;situation comedy
 Angels & Demons|2009||film||Angels_%26_Demons_(film)|381322|0808151||angels-demons|mystery;thriller|novel|Dan Brown
 Angry and Moist: An Undead Chronicle|2004||film||||0436067||angry-and-moist-an-undead-chronicle|horror;monster:zombies||
 Animal Cops: Detroit|2002|2006|tv||Animal_Cops:_Detroit||0381732|29892||non-fiction:animals||
@@ -352,6 +353,7 @@ Chasing Liberty|2004||film||Chasing_Liberty|291580|0360139||chasing-liberty|roma
 Chicago|2002||film||Chicago_(2002_film)|272628|0299658||chicago|musical||
 Chicago Fire|2012|tbd|tv||Chicago_Fire_(TV_series)|581804|2261391|158553||drama||
 Chicago P.D.|2014|tbd|tv||Chicago_P.D._(TV_series)||2805096|183140||drama;police procedural||
+Chicago Med|2015|tbd|tv||Chicago_Med||4655480|196067||medical;drama||
 Children of Dune|2003||miniseries:3||Frank_Herbert%27s_Children_of_Dune|282693|0287839|69658|children-of-dune|science fiction;adventure|novel|Frank Herbert
 Children of the Corn|1984||film||Children_of_the_Corn_(film)|9274|0087050||children-of-the-corn|horror||
 Children of the Corn 666: Isaac's Return|1999||film||Children_of_the_Corn_666:_Isaac%27s_Return|180710|0177625||children-of-the-corn-666-isaacs-return|horror||
@@ -409,7 +411,6 @@ Constantine 2|tbd||film||||1071873||constantine-2|horror|comics|DC Comics
 Constantine (2014)|2014|tbd|tv||Constantine_(TV_series)||3489184|193994||horror;monster:angels,spellcasters|comics|DC Comics
 Contact|1997||film|dvd|Contact_(film)|156934|0118884||contact|science fiction:aliens||
 Contagious|1997||film|||162934|0118885||contagious|disaster:pathological threat||
-Conviction|2006||tv||Conviction_(TV_series)|346161|0494186|30090||detective||
 Cool Runnings|1993||film||Cool_Runnings|119004|0106611||cool-runnings|sports;docudrama||
 The Core|2003||film|dvd|The_Core|267270|0298814||the-core|disaster:earth||
 The Covenant|2006||film||The_Covenant_(film)|334173|0475944||the-covenant|fantasy;monster:spellcasters||
@@ -454,7 +455,6 @@ Dead Poets Society|1989||film|dvd|Dead_Poets_Society|12714|0097165||dead-poets-s
 The Dead Zone (1983)|1983||film||The_Dead_Zone_(film)|12729|0085407||the-dead-zone|monster:mutants|novel|Stephen King
 The Dead Zone (2002)|2002|2007|tv||The_Dead_Zone_(TV_series)|268424|0281432|7420||monster:mutants|novel|Stephen King
 Deadliest Catch|2005|tbd|tv||Deadliest_Catch|354655|0446809|34348||non-fiction:fishing||
-Deadline|2000|2001|tv||Deadline_(American_TV_series)|220885|0247086|24||drama||
 Dear God|1996||film|dvd|Dear_God|136680|0116059||dear-god|crime;comedy||
 Dear John|1988|1992|tv||Dear_John_(U.S._TV_series)||0094447|47||romantic comedy;situation comedy||
 Death Becomes Her|1992||film|vhs|Death_Becomes_Her|12860|0104070||death-becomes-her|monster:zombies||
@@ -543,7 +543,7 @@ Drones|2010||film||Drones_(film)|509473|1232775||drones|science fiction:aliens;c
 Drumline|2002||film||Drumline|263576|0303933||drumline|drama:teacher||
 Dumbo|1941||film||Dumbo|14958|0033563||dumbo|animated||Disney
 Dumbo's Circus|1985||tv||Dumbo%27s_Circus||0252399|27189||animated||Disney
-Dune (1984)|1984||film||Dune_(film)|14962|0087182||dune|science fiction;adventure|novel|Frank Herbert
+Dune (1984)|1984||film|bd|Dune_(film)|14962|0087182||dune|science fiction;adventure|novel|Frank Herbert
 Dune (2000)|2000||miniseries:3||Frank_Herbert%27s_Dune|227294|0142032|69655|dune|science fiction;adventure|novel|Frank Herbert
 Dungeons & Dragons (1983)|1983|1985|tv||Dungeons_%26_Dragons_(TV_series)|335733|0085011|5499||monster:dragons|role-playing game|TSR Inc.
 Dungeons & Dragons (2000)|2000||film||Dungeons_%26_Dragons_(film)|227129|0190374||dungeons-dragons|monster:dragons|role-playing game|TSR Inc.
@@ -757,6 +757,7 @@ Good Morning, Vietnam|1987||film||Good_Morning,_Vietnam|20309|0093105||good-morn
 Good Will Hunting|1997||film||Good_Will_Hunting|160083|0119217||good-will-hunting|drama||
 The Goodbye Girl|2004||film|||301273|0377990||the-goodbye-girl|romantic comedy||
 The Goonies|1985||film|dvd|The_Goonies|20368|0089218||the-goonies|adventure;comedy||
+Grabbers|2012||film||Grabbers|554700|1525366||grabbers|science fiction:aliens|
 Grease|1978||film|dvd|Grease_(film)|20546|0077631||grease|musical||
 Grease 2|1982||film|dvd|Grease_2|151390|0084021||grease-2|musical||
 The Green Hornet (1966)|1966|1967|tv||The_Green_Hornet_(TV_series)||0059991|587||superhero fiction|radio show|George W. Trendle and Fran Striker
@@ -819,7 +820,7 @@ Heavy Metal 2000|2000||film||Heavy_Metal_2000|201755|0119273||heavy-metal-2000|a
 Helen|2008||film|||415884|1012729||helen|drama||
 Hellbound: Hellraiser II|1988||film||Hellbound:_Hellraiser_II|22091|0095294||hellbound-hellraiser-ii|horror||
 Hellboy|2004||film|dvd|Hellboy_(film)|287448|0167190||hellboy|superhero fiction|comics|Dark Horse
-Hellboy II: The Golden Army|2008||film||Hellboy_II:_The_Golden_Army|357814|0411477||hellboy-ii-the-golden-army-hellboy-2|superhero fiction|comics|Dark Horse
+Hellboy II: The Golden Army|2008||film|bd|Hellboy_II:_The_Golden_Army|357814|0411477||hellboy-ii-the-golden-army-hellboy-2|superhero fiction|comics|Dark Horse
 Hello, Dolly!|1969||film||Hello,_Dolly!_(film)|22113|0064418||hello-dolly|musical||
 Hellraiser (1987)|1987||film||Hellraiser|22114|0093177||hellraiser|horror||
 Hellraiser (tbd)|tbd||film||||0887261||hellraiser-2008|horror||
@@ -1038,9 +1039,13 @@ Law & Order|1990|2010|tv||Law_%26_Order|242082|0098844|180||police procedural;le
 Law & Order: Criminal Intent|2001|2011|tv||Law_%26_Order:_Criminal_Intent|255664|0275140|1381||police procedural||
 Law & Order: Los Angeles|2010|2011|tv||Law_%26_Order:_Los_Angeles||1657081|78504||police procedural;legal||
 Law & Order: Special Victims Unit|1999|tbd|tv||Law_%26_Order:_Special_Victims_Unit|181329|0203259|334||police procedural;legal||
-Law & Order: Special Victims Unit: Russia|2007||tv||||1465977|||police procedural;legal||
+Law & Order: Division of Field Investigation (Russia)|2007|2008|tv||||1465977|||police procedural;legal||
+Law & Order: Criminal Intent (Russia)|2007|2009|tv||||1601069|||police procedural;legal||
 Law & Order: Trial by Jury|2005|2006|tv||Law_%26_Order:_Trial_by_Jury|322899|0406429|25938||legal||
 Law & Order: UK|2009|2014|tv||Law_%26_Order:_UK||1166893|75193||police procedural;legal||
+New York Undercover|1994|1998|tv||New_York_Undercover|392959|0108876|377||police procedural||
+Deadline|2000|2001|tv||Deadline_(American_TV_series)|220885|0247086|24||drama||
+Conviction|2006||tv||Conviction_(TV_series)|346161|0494186|30090||detective||
 The Lawnmower Man|1992||film|dvd|The_Lawnmower_Man_(film)|28590|0104692||the-lawnmower-man|science fiction:malignant technology||
 Lawnmower Man 2: Beyond Cyberspace|1996||film|dvd|Lawnmower_Man_2:_Beyond_Cyberspace|135587|0116839||lawnmower-man-2-jobes-war|science fiction:malignant technology||
 Laws of Attraction|2004||film|dvd|Laws_of_Attraction|290201|0323033||laws-of-attraction|romantic comedy||
@@ -1276,7 +1281,7 @@ Nature Unleashed: Volcano|2004||film|||315366|0374324||nature-unleashed-volcano|
 NCIS|2003|tbd|tv||NCIS_(TV_series)|295554|0364845|16772||detective||
 NCIS: Los Angeles|2009|tbd|tv||NCIS:_Los_Angeles|490540|1378167|76607||detective||
 NCIS: New Orleans|2014|tbd|tv||NCIS:_New_Orleans||3560084|193997||detective||
-Necessary Roughness|2011|2013|tv|dvd:1..2|Necessary_Roughness_(TV_series)||1657505|79510||drama||
+Necessary Roughness|2011|2013|tv|dvd:1..3|Necessary_Roughness_(TV_series)||1657505|79510||drama||
 Needful Things|1993||film||Needful_Things_(film)|34722|0107665||needful-things|speculative fiction|novel|Stephen King
 Nemesis Game|2003||film||Nemesis_Game|283614|0323571||nemesis-game|speculative fiction||
 Never Been Kissed|1999||film||Never_Been_Kissed|177528|0151738||never-been-kissed|romantic comedy||
@@ -1345,7 +1350,7 @@ Outlaw|2010|2010|tv||Outlaw_(TV_series)|526834|1592226|78629||legal||
 Overboard|1987||film|dvd|Overboard_(1987_film)|36936|0093693||overboard|romantic comedy||
 Oz: The Great and Powerful|2013||film||Oz_the_Great_and_Powerful|527188|1623205||oz-the-great-and-powerful|adventure;fantasy|novel|L. Frank Baum
 Oz: The Great and Powerful 2|tbd||film||||2761172|||adventure;fantasy|novel|L. Frank Baum
-Pacific Rim|2013||film||Pacific_Rim_(film)|535242|1663662||pacific-rim-2013|science fiction:aliens,robots||
+Pacific Rim|2013||film|bd|Pacific_Rim_(film)|535242|1663662||pacific-rim-2013|science fiction:aliens,robots||
 Pacific Rim 2|2017||film|||604399|2557478||pacific-rim-2|science fiction:aliens,robots||
 Painkiller Jane (2005)|2005||film||Painkiller_Jane_(film)|412535|0466391||painkiller-jane|monster:mutants||
 Painkiller Jane (2007)|2007||tv||Painkiller_Jane_(TV_series)|394532|0866432|32707|painkiller-jane-2007|monster:mutants||
@@ -1356,12 +1361,13 @@ The Patriot|2000||film||The_Patriot|186753|0187393||the-patriot|drama||
 Patriot Games|1992||film||Patriot_Games_(film)|37441|0105112||patriot-games|spy fiction|novel|Tom Clancy
 Pay It Forward|2000||film|dvd|Pay_It_Forward|214072|0223897||pay-it-forward|drama||
 The Peacemaker|1997||film|dvd|The_Peacemaker_(1997_film)|158555|0119874||the-peacemaker|disaster:nuclear||
-People's Choice Awards|1975|tbd|tv||People's_Choice_Awards|||74895||award show||
 The Pelican Brief|1993||film||The_Pelican_Brief_(film)|119901|0107798||the-pelican-brief|legal;drama||
+People's Choice Awards|1975|tbd|tv||People's_Choice_Awards|||74895||award show||
 Percy Jackson & the Olympians: The Lightning Thief|2010||film||Percy_Jackson_&_the_Olympians:_The_Lightning_Thief|473930|0814255||percy-jackson|fantasy||
 Percy Jackson & the Olympians: The Sea of Monsters|2013||film||Percy_Jackson_%26_the_Olympians:_The_Sea_of_Monsters_(film)||1854564|||fantasy||
 Perfect Disaster|2006||miniseries:6||Perfect_Disaster||0817543|56671||non-fiction:disasters||
 The Perfect Storm|2000||film||The_Perfect_Storm|186759|0177971||the-perfect-storm|docudrama||
+Person of Interest|2011|tbd|tv||Person_of_Interest_(TV_series)|545518|1839578|80967||drama||
 Pete's Dragon|1977||film||Pete%27s_Dragon|37848|0076538||petes-dragon|animated||Disney
 Peter Pan|1953||film||Peter_Pan_(film)|75586|0046183||peter-pan|animated||Disney
 Phantasm|1979||film||Phantasm_(film)|37911|0079714||phantasm|horror||
@@ -1448,7 +1454,7 @@ Quatermass and the Pit (1967)|1967||film||Quatermass_and_the_Pit_(film)|91597|00
 The Quatermass Experiment (2005)|2005||film||The_Quatermass_Experiment_(2005 TV film)||0450315|||science fiction||
 Queen to Play|2009||film||Queen_to_Play|483285|1082009||joueuse|drama||
 The Quick and the Dead|1995||film||The_Quick_and_the_Dead_(1995_film)|132303|0114214||the-quick-and-the-dead|western||
-Race to Witch Mountain|2009||film||Race_to_Witch_Mountain|415336|1075417||race-to-witch-mountain|science fiction:aliens||
+Race to Witch Mountain|2009||film|bd|Race_to_Witch_Mountain|415336|1075417||race-to-witch-mountain|science fiction:aliens||
 Radio|2003||film||Radio_(film)|283265|0316465||radio|drama||
 Raiders of the Lost Ark|1981||film|bd|Raiders_of_the_Lost_Ark|40118|0082971||raiders-of-the-lost-ark|speculative fiction;adventure||
 Raines|2007||tv||Raines|385415|0802148|8148||detective||
@@ -1627,7 +1633,7 @@ Someone Like You...|2001||film|dvd|Someone_Like_You...|239480|0244970||someone-l
 Something's Gotta Give|2003||film|dvd|Something%27s_Gotta_Give|291162|0337741||somethings-gotta-give2003|romantic comedy||
 Something the Lord Made|2004||film||Something_the_Lord_Made|315644|0386792||something-the-lord-made|docudrama||
 Son in Law|1993||film||Son_in_Law|45632|0108186||soninlaw|romantic comedy||
-The Sorcerer's Apprentice|2010||film||The_Sorcerer's_Apprentice_(2010_film)|478633|0963966||the-sorcerers-apprentice-2009|fantasy;monster:spellcasters||
+The Sorcerer's Apprentice|2010||film|bd|The_Sorcerer's_Apprentice_(2010_film)|478633|0963966||the-sorcerers-apprentice-2009|fantasy;monster:spellcasters||
 The Sound of Music|1965||film|dvd|The_Sound_of_Music_(film)|45745|0059742||the-sound-of-music|musical||
 Space: 1999|1975|1977|tv||Space:_1999|66466|0072564|4026||science fiction;disaster||
 Space Cowboys|2000||film|dvd|Space_Cowboys|196444|0186566||space-cowboys|drama||
@@ -2372,7 +2378,7 @@ Captain America: The First Avenger|2011||film||The_First_Avenger:_Captain_Americ
 The Avengers (2012)|2012||film|bd|The_Avengers_(2012_film)|451151|0848228||the-avengers-2011|superhero fiction|comics|Marvel Comics
 Agents of S.H.I.E.L.D.|2013|tbd|tv||Agents_of_Shield||2364582|183210||superhero fiction|comics|Marvel Comics
 Iron Man 3|2013||film|bd|Iron_Man_3|527818|1300854||iron-man-3|superhero fiction|comics|Marvel Comics
-Thor: The Dark World|2013||film||Thor:_The_Dark_World|546686|1981115||thor-the-dark-world|superhero fiction|comics|Marvel Comics
+Thor: The Dark World|2013||film|bd|Thor:_The_Dark_World|546686|1981115||thor-the-dark-world|superhero fiction|comics|Marvel Comics
 Captain America: The Winter Soldier|2014||film|bd|Captain_America:_The_Winter_Soldier|562324|1843866||captain-america-the-winter-soldier-2014|superhero fiction|comics|Marvel Comics
 Guardians of the Galaxy|2014||film|bd|Guardians_of_the_Galaxy_(film)|568178|2015381||guardians-of-the-galaxy|superhero fiction|comics|Marvel Comics
 Agent Carter|2015|tbd|tv||Agent_Carter_(TV_series)||3475734|193972||superhero fiction|comics|Marvel Comics

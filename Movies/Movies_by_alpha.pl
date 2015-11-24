@@ -24,8 +24,7 @@ my $source = $cgi->param('source') ? encode_entities($cgi->param('source'), '<>"
 my $title  = $cgi->param('title')  ? encode_entities($cgi->param('title'),  '<>"') : '';
 
 my @selects = (qw(year media genre), 'source');
-my %select_options;
-$select_options{$_} = option($_) for @selects;
+my %select_options = map { $_ => option($_) } @selects;
 
 my $movies_data = movie('data');
 my $search;

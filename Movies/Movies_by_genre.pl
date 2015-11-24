@@ -19,6 +19,7 @@ my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('genre'),'<>"');
 my $head = $select && $genres->{$select} ? ucfirst "$select movies" : undef;
 my $file_menu = file_menu('genre', [sort keys %$genres] , $select);
+
 page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
   my $heading;
   section(3, sub {

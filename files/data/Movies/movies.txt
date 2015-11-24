@@ -71,6 +71,7 @@ Alaska|1996||film||Alaska_(film)|136514|0115493||alaska|drama||
 Alcoa Presents: One Step Beyond|1959|1961|tv||One_Step_Beyond_(TV_series)||0052442|4199||speculative fiction;anthology||
 Alex & Emma|2003||film||Alex_%26_Emma|152914|0318283||alex-emma|romantic comedy||
 Alf|1986|1990|tv||ALF_(TV_series)||0090390|761||science fiction:aliens;situation comedy||
+Alias|2001|2006|tv||Alias_(TV_series)|255661|0285333|3451||spy fiction||
 Alice|2009||miniseries:2||Alice_(miniseries)|506890|1461312|78104|alice-2009|fantasy|novel|Lewis Carroll
 Alice in Wonderland (1951)|1951||film||Alice_in_Wonderland_(1951_film)|1492|0043274||alice-in-wonderland1951|fantasy;animated|novel|Lewis Carroll
 Alice in Wonderland (1985)|1985||film||Alice_in_Wonderland_(1985_film)|1494|0088693||alice-in-wonderland1985|fantasy|novel|Lewis Carroll
@@ -178,6 +179,7 @@ Babylon A.D.|2008||film||Babylon_A.D.|361086|0364970||babylon-ad|monster:mutants
 Back to the Future|1985||film|dvd|Back_to_the_Future|3671|0088763||back-to-the-future|speculative fiction||
 Back to the Future Part II|1989||film|dvd|Back_to_the_Future_Part_II|3672|0096874||back-to-the-future-part-ii|speculative fiction||
 Back to the Future Part III|1990||film|dvd|Back_to_the_Future_Part_III|3673|0099088||back-to-the-future-part-iii|speculative fiction||
+Back in Time|2015||film||Back in Time (2015 film)|621298|3118874||back-in-time-2015|non-fiction:film||
 Back to the Secret Garden|2001||film|||251944|0233277||back-to-the-secret-garden|drama||
 Bad Boys|1995||film||Bad_Boys|134608|0112442||bad-boys|detective;action||
 Bad Boys II|2003||film||Bad_Boys_II|279009|0172156||bad-boys-ii|detective;action||
@@ -408,7 +410,7 @@ Connections³|1997|1998|tv|||306993|0910624|||non-fiction:science||
 Connie and Carla|2004||film|dvd|Connie_and_Carla|287460|0345074||connie-and-carla|romantic comedy||
 Constantine (2005)|2005||film|dvd|Constantine_(film)|260384|0360486||constantine|horror;monster:angels,spellcasters|comics|DC Comics
 Constantine 2|tbd||film||||1071873||constantine-2|horror|comics|DC Comics
-Constantine (2014)|2014|tbd|tv||Constantine_(TV_series)||3489184|193994||horror;monster:angels,spellcasters|comics|DC Comics
+Constantine (2014)|2014|2015|tv||Constantine_(TV_series)||3489184|193994||horror;monster:angels,spellcasters|comics|DC Comics
 Contact|1997||film|dvd|Contact_(film)|156934|0118884||contact|science fiction:aliens||
 Contagious|1997||film|||162934|0118885||contagious|disaster:pathological threat||
 Cool Runnings|1993||film||Cool_Runnings|119004|0106611||cool-runnings|sports;docudrama||
@@ -471,8 +473,9 @@ Destroyed in Seconds|2008|2009|tv||Destroyed_In_Seconds||1278202|76015||non-fict
 The Devil Wears Prada|2006||film||The_Devil_Wears_Prada_(film)|336015|0458352||the-devil-wears-prada|drama||
 Die Hard|1988||film||Die_Hard|13728|0095016||die-hard|detective;action;disaster:terrorism||
 Die Hard 2|1990||film||Die_Hard_2|72519|0099423||die-hard-2|detective;action;disaster:terrorism||
-Die Hard: With a Vengeance|1995||film||Die_Hard:_With_a_Vengeance|134726|0112864||die-hard-with-a-vengeance|detective;action;disaster:terrorism||
+Die Hard with a Vengeance|1995||film||Die_Hard_with_a_Vengeance|134726|0112864||die-hard-with-a-vengeance|detective;action;disaster:terrorism||
 Live Free or Die Hard|2007||film||Live_Free_or_Die_Hard|357700|0337978||live-free-or-die-hard|detective;action;disaster:terrorism||
+A Good Day to Die Hard|2013||film||A_Good_Day_to_Die_Hard|533901|1606378||a-good-day-to-die-hard|detective;action;disaster:terrorism||
 Diner|1982||film||Diner_(film)|13809|0083833||diner|comedy||
 Diners, Drive-Ins and Dives|2006|tbd|tv||Diners,_Drive-Ins_and_Dives||1020913|71720||non-fiction:food||
 Dinotopia (2002 miniseries)|2002||miniseries:2|dvd|Dinotopia_(miniseries)|263844|0233044||dinotopia|monster:dinosaurs|novels|James Gurney
@@ -595,6 +598,7 @@ The Evening Star|1996||film||The_Evening_Star|136444|0116240||the-evening-star|d
 Evil Dead (1981)|1981||film|bd|The_Evil_Dead|16251|0083907||the-evil-dead|horror;monster||
 Evil Dead II|1987||film|dvd|Evil_Dead_II|16252|0092991||evil-dead-2|horror;monster||
 The Evil Dead (2013)|2013||film||Evil_Dead_(2013_film)|545488|1288558||the-evil-dead-2013|horror;monster||
+Ash vs. Evil Dead|2015||tv||Ash_vs._Evil_Dead||4189022|194702||horror;monster||
 Evolution|2001||film|dvd|Evolution_(film)|244328|0251075||evolution|science fiction:aliens||
 Evolve|2008||tv||Evolve_(TV_series)||1283572|76032||non-fiction:science||
 Ewoks: The Battle for Endor|1985||film||Ewoks:_The_Battle_for_Endor|16277|0089110||ewoks-the-battle-for-endor|science fiction||
@@ -779,9 +783,9 @@ Halloween H20: 20 Years Later|1998||film||Halloween_H20:_20_Years_Later|163083|0
 Halloween II (1981)|1981||film||Halloween_II|63109|0082495||halloween-ii|slasher||
 Halloween II (2009)|2009||film|||477258|1311067||h2-halloween-2|slasher||
 Halloween III: Season of the Witch|1982||film||Halloween_III:_Season_of_the_Witch|21319|0085636||halloween-iii-season-of-the-witch|slasher||
-Halloween: 25 Years of Terror|2006||film|||347367|0469093|||slasher||
 Halloween: Resurrection|2002||film||Halloween:_Resurrection|263137|0220506||halloween-resurrection|slasher||
 Halloween: The Curse of Michael Myers|1995||film||Halloween:_The_Curse_of_Michael_Myers|135827|0113253||halloween-the-curse-of-michael-myers|slasher||
+Halloween: 25 Years of Terror|2006||film|||347367|0469093|||non-fiction:film||
 Hancock|2008||film||Hancock_(film)|376678|0448157||hancock|monster:mutants||
 The Hands of Shang-Chi|2011||film||||0366547||the-hands-of-shangchi|superhero fiction|comics|Marvel Comics
 Hanging Up|2000||film|dvd|Hanging_Up|181279|0162983||hanging-up|comedy||
@@ -841,6 +845,7 @@ Hercules: Zero to Hero|1999||film||Hercules:_Zero_to_Hero|181530|0211409|||anima
 Hercules (1998)|1997|1998|tv||Hercules_(1998_TV_series)||0138967|1696||animated||Disney
 Hercules: The Legendary Journeys|1994|1999|tv||Hercules:_The_Legendary_Journeys|175066|0111999|1878||fantasy;adventure||
 Heroes|2006|2010|tv||Heroes_(TV_series)|358376|0813715|17552||monster:mutants||
+Heroes Reborn|2015|2016|tv||Heroes_Reborn_(miniseries)||3556944|193600||monster:mutants||
 Hideaway|1995||film||Hideaway|134423|0113303||hideaway|monster:mutants||
 High Anxiety|1977||film||High_Anxiety|22354|0076141||high-anxiety|parody||
 High Spirits|1988||film|dvd|High_Spirits_(film)|22405|0095304||high-spirits|monster:ghosts||
@@ -918,9 +923,10 @@ Gamma Project|2003||film||||0347039||projet-gamma|superhero fiction|comics|Marve
 The Incredible Life and Times of Robert Ripley: Believe it or Not!|1994||film|||203653|0249114|||docudrama||
 The Incredibles|2004||film||The_Incredibles|287450|0317705||the-incredibles|animated||Disney
 Independence Day|1996||film|dvd|Independence_Day_(film)|136197|0116629||independence-day|science fiction:aliens||
-Indiana Jones and the Kingdom of the Crystal Skull|2008||film|bd|Indiana_Jones_and_the_Kingdom_of_the_Crystal_Skull|384336|0367882||indiana-jones-and-the-kingdom-of-the-crystal-skull-4|speculative fiction;adventure||
-Indiana Jones and the Last Crusade|1989||film|bd|Indiana_Jones_and_the_Last_Crusade|24754|0097576||indiana-jones-and-the-last-crusade|speculative fiction;adventure||
+Independence Day: Resurgence|2016||film||Independence_Day:_Resurgence|583977|1628841||independence-day-resurgence|science fiction:aliens||
 Indiana Jones and the Temple of Doom|1984||film|bd|Indiana_Jones_and_the_Temple_of_Doom|24755|0087469||indiana-jones-and-the-temple-of-doom|speculative fiction;adventure||
+Indiana Jones and the Last Crusade|1989||film|bd|Indiana_Jones_and_the_Last_Crusade|24754|0097576||indiana-jones-and-the-last-crusade|speculative fiction;adventure||
+Indiana Jones and the Kingdom of the Crystal Skull|2008||film|bd|Indiana_Jones_and_the_Kingdom_of_the_Crystal_Skull|384336|0367882||indiana-jones-and-the-kingdom-of-the-crystal-skull-4|speculative fiction;adventure||
 Inferno|1980||film||Inferno_(1980_film)|24825|0080923||inferno1980|horror||
 In the Heat of the Night (1967)|1967||film||In_the_Heat_of_the_Night_(film)|24638|0061811||in-the-heat-of-the-night|police procedural||
 In the Heat of the Night (1988)|1988|1994|tv||In_the_Heat_of_the_Night_(TV_series)|135294|0094484|656||police procedural||
@@ -948,6 +954,7 @@ IT|1990||miniseries:2|dvd|It_(1990_film)|46835|0099864|74848|it|horror;monster|n
 It Could Happen Tomorrow|2006||tv||It_Could_Happen_Tomorrow||0454473|64101||non-fiction:disasters||
 Jack of All Trades|2000||tv||Jack_of_All_Trades_(TV_series)||0220906|869||comedy;adventure;spy fiction||
 JAG|1995|2005|tv||JAG_(TV_series)|348008|0112022|242||legal||
+Jake 2.0|2003|2004|tv||Jake_2.0|294152|0367344|16751||science fiction||
 The Jane Austen Book Club|2007||film||The_Jane_Austen_Book_Club_(film)|379686|0866437||the-jane-austen-book-club|romantic comedy||
 Jane Eyre|1996||film||Jane_Eyre_(1996_film)|135981|0116684||jane-eyre|drama||
 Jason Goes to Hell: The Final Friday|1993||film||Jason_Goes_to_Hell:_The_Final_Friday|25904|0107254||jason-goes-to-hell-the-final-friday|slasher||
@@ -1007,6 +1014,7 @@ Knight Rider 2000|1991||film||Knight_Rider_2000|126810|0102227||knight-rider-200
 Knight Rider 2010|1994||film||Knight_Rider_2010|154232|0110273||knight-rider-2010|science fiction||
 Knights of the South Bronx|2005||film||Knights_of_the_South_Bronx|377756|0471768||knights-of-the-south-bronx|docudrama:teacher||
 Knocked Up|2007||film||Knocked_Up|347981|0478311||knocked-up|romantic dramedy||
+This Is 40|2012||film||This_Is_40|532264|1758830||this-is-40|romantic dramedy||
 Knowing|2009||film||Knowing_(film)|426822|0448011||knowing|science fiction:aliens;disaster||
 Kolchak: The Night Stalker|1974|1975|tv||Kolchak:_The_Night_Stalker|265197|0071003|2694||detective;science fiction|novel|Jeff Rice
 Kronk's New Groove|2005||film||Kronk%27s_New_Groove|335271|0401398||kronks-new-groove|animated||Disney
@@ -1099,6 +1107,7 @@ The Lord of the Rings: The Fellowship of the Ring|2001||film||The_Lord_of_the_Ri
 The Lord of the Rings: The Return of the King|2003||film||The_Lord_of_the_Rings:_The_Return_of_the_King|278981|0167260||the-lord-of-the-rings-the-return-of-the-king|fantasy||
 The Lord of the Rings: The Two Towers|2002||film||The_Lord_of_the_Rings:_The_Two_Towers|271070|0167261||the-lord-of-the-rings-the-two-towers|fantasy||
 Lord of the Dance|1997||film|dvd|Lord_of_the_Dance_(musical)|176728|0148422||lord-of-the-dance-michael-flatley-the-lord-of-the-dance|non-fiction:dance||
+Lost|2004|2010|tv||Lost_(TV_series)||0411008|24313||actio;mystery;speculative fiction||
 The Lost Boys|1987||film||The_Lost_Boys|30136|0093437||the-lost-boys|monster:vampires||
 Lost Boys: The Thirst|2010||film||Lost_Boys:_The_Thirst|524082|1400526||lost-boys-the-thirst-2010|monster:vampires||
 Lost Boys: The Tribe|2008||film||Lost_Boys:_The_Tribe|413907|1031254||lost-boys-the-tribe|monster:vampires||
@@ -1116,7 +1125,9 @@ Lucky 7|2003||film||Lucky_7_(film)|290567|0370904||lucky-7|romantic comedy||
 Luminarias|2000||film|||181820|0160498||luminarias|drama||
 Luminous Visions|1998||film|||176985|0174888||luminous-visions|animated;music||
 Låt den rätte komma in|2008||film||Let_the_Right_One_In|430230|1139797||lat-den-ratte-komma-in|monster:vampires||
+MASH (1970)|1970||film||MASH|64361|0066026||mash|comedy;medical;military||
 M*A*S*H (1972)|1972|1983|tv||M*A*S*H|133103|0068098|119||comedy;medical;military||
+The Fighting Nightingales|1978||film||||2849382|||comedy;military||
 Mad Max|1979||film||Mad_Max|30657|0079501||mad-max|post-apocalypse||
 Mad Max 2|1981||film||Mad_Max_2|64375|0082694||mad-max-2-the-road-warrior|post-apocalypse||
 Mad Max Beyond Thunderdome|1985||film||Mad_Max_Beyond_Thunderdome|30658|0089530||mad-max-beyond-thunderdome|post-apocalypse||
@@ -1141,7 +1152,6 @@ Mars Attacks!|1996||film||Mars_Attacks!|136613|0116996||mars-attacks|science fic
 Martian Child|2007||film||Martian_Child|325741|0415965||the-martian-child|dramedy|novel|David Gerrold
 Mary Poppins|1964||film||Mary_Poppins_(film)|31639|0058331||mary-poppins|animated||Disney
 Mary Reilly|1996||film|dvd|Mary_Reilly_(film)|135895|0117002||mary-reilly|monster:changelings||
-MASH (1970)|1970||film||MASH|64361|0066026||mash|comedy;medical;military||
 The Mask of Zorro|1998||film|dvd|The_Mask_of_Zorro|158887|0120746||the-mask-of-zorro|action||
 Masters of the Universe|1987||film||Masters_of_the_Universe_(film)|31786|0093507||masters-of-the-universe|speculative fiction||
 The MatchMaker|1997||film|dvd|The_MatchMaker|158749|0119632||the-matchmaker|romantic comedy||
@@ -1288,6 +1298,7 @@ Never Been Kissed|1999||film||Never_Been_Kissed|177528|0151738||never-been-kisse
 The NeverEnding Story|1984||film|dvd|The_NeverEnding_Story_(film)|34833|0088323||the-neverending-story|fantasy||
 Neverwhere|1996||tv||Neverwhere|288171|0115288|10247||speculative fiction||
 The New Addams Family|1998|1999|tv||The_New_Addams_Family||0172031|1175||gothic|cartoon|Charles Addams
+New Amsterdam|2008|2008|tv||New_Amsterdam_(TV_series)|407298|0928414|68703||speculative fiction;detective;monster:immortals||
 The New Avengers|1976|1977|tv||The_New_Avengers|291575|0074031|4010||spy fiction||
 New Nightmare|1994||film||Wes_Craven%27s_New_Nightmare|133863|0111686||wes-cravens-new-nightmare|slasher||
 The Next Karate Kid|1994||film||The_Next_Karate_Kid|133409|0110657||the-next-karate-kid|sports;drama||
@@ -1296,6 +1307,7 @@ Nick Fury|tbd||film||||0482631||nick-fury|superhero fiction|comics|Marvel Comics
 Nick Knight|1989||film||Nick_Knight_(film)|35173|0097969||nick-knight|monster:vampires||
 Night at the Museum|2006||film||Night_at_the_Museum|340663|0477347||night-at-the-museum|speculative fiction||
 Night at the Museum: Battle of the Smithsonian|2009||film||Night_at_the_Museum:_Battle_of_the_Smithsonian|426891|1078912||night-at-the-museum-2-escape-from-the-smithsonian|speculative fiction||
+Night at the Museum: Secret of the Tomb|2014||film||Night_at_the_Museum:_Secret_of_the_Tomb|577901|2692250||night-at-the-museum-secret-of-the-tomb|speculative fiction||
 Night Court|1984|1992|tv||Night_Court|273222|0086770|113||situation comedy;legal||
 Night of the Comet|1984||film|dvd|Night_of_the_Comet|35289|0087799||night-of-the-comet|disaster:astronomical threat||
 Night of the Twisters|1996||film|dvd|Night_of_the_Twisters|154439|0117179||night-of-the-twisters|disaster:tornado||
@@ -1443,6 +1455,7 @@ Puppet Master vs Demonic Toys|2004||film||Puppet_Master_vs_Demonic_Toys|336962|0
 Puppet Master: The Legacy|2004||film||Puppet_Master:_The_Legacy|308057|0390393||puppet-master-the-legacy|horror||
 Purgatory|1999||film||Purgatory_(film)|179662|0158131||purgatory|speculative fiction||
 Push|2009||film||Push_(2009_action_film)|413360|0465580||push-2009|monster:mutants||
+Pushing Daisies|2007|2009|tv||Pushing_Daisies|398647|0925266|68663||romantic comedy;monster:mutants||
 Quantum Leap|1989|1993|tv||Quantum_Leap_(TV_series)|175281|0096684|173||science fiction||
 The Quatermass Experiment (1953)|1953||tv||The_Quatermass_Experiment||0045436|6966||science fiction||
 Quatermass II|1955||tv||Quatermass_II||0047766|||science fiction||
@@ -1466,6 +1479,7 @@ Rambo: First Blood Part II|1985||film||Rambo:_First_Blood_Part_II|40204|0089880|
 The Raven|2013||film||The_Raven_(2012_film)|532988|1486192||untitled-raven-project|crime;thriller||
 Re-Animator|1985||film||Re-Animator|re-animator-40416|0089885||reanimator|horror|short story|H. P. Lovecraft
 Real People|1979|1984|tv||Real_People|422671|0078676|7248||non-fiction||
+Reaper|2007|2009|tv||Reaper_(TV_series)||0955322|68745||speculative fiction;monster:demons||
 Rebound|2005||film||Rebound_(film)|290096|0376108||rebound|sports;drama||
 Red|2010||film||Red_(2010_film)|504371|1245526||red-2010|action;spy fiction|comics|DC Comics
 Red 2|2013||film||Red_2_(film)|551206|1821694||red-2|action;spy fiction|comics|DC Comics
@@ -1493,7 +1507,7 @@ Resident Evil: Extinction|2007||film||Resident_Evil:_Extinction|347794|0432021||
 Retro Puppet Master|1999||film||Retro_Puppet_Master|181125|0189047||retro-puppet-master|horror||
 Return from Witch Mountain|1978||film||Return_from_Witch_Mountain|41049|0078158||return-from-witch-mountain|science fiction:aliens||
 The Return of Jafar|1994||film||The_Return_of_Jafar|121846|0107952||the-return-of-jafar|animated||Disney
-The Return of the Man from U.N.C.L.E.: The Fifteen Years Later Affair|1983||film|||41100|0086191||the-return-of-the-man-from-uncle-the-fifteen-years-later-affair|spy fiction||
+The Return of the Man from U.N.C.L.E.|1983||film||The_Return_of_the_Man_from_U.N.C.L.E|41100|0086191||the-return-of-the-man-from-uncle-the-fifteen-years-later-affair|spy fiction||
 The Return of the Six-Million-Dollar Man and the Bionic Woman|1987||film|||128493|0093853||the-return-of-the-sixmilliondollar-man-and-the-bionic-woman|science fiction:cyborgs||
 Return of the Seven|1966||film||Return_of_the_Seven|41113|0060897||return-of-the-magnificent-seven|western||
 Return to Me|2000||film|dvd|Return_to_Me|181897|0122459||return-to-me|romantic comedy||
@@ -1516,6 +1530,7 @@ Rocky III|1982||film||Rocky_III|41860|0084602||rocky-iii|sports;drama||
 Rocky IV|1985||film||Rocky_IV|41861|0089927||rocky-iv|sports;drama||
 Rocky V|1990||film||Rocky_V|41862|0100507||rocky-v|sports;drama||
 Rocky Balboa|2006||film||Rocky_Balboa|337682|0479143||rocky-balboa|sports;drama||
+Creed|2015||film||Creed_(film)|620055|3076658||creed-2015|sports;drama||
 The Rocky Horror Picture Show|1975||film|dvd|The_Rocky_Horror_Picture_Show|41864|0073629||the-rocky-horror-picture-show|musical||
 Romancing the Stone|1984||film|dvd|Romancing_the_Stone|41997|0088011||romancing-the-stone|adventure||
 Romy and Michele's High School Reunion|1997||film|dvd|Romy_and_Michele%27s_High_School_Reunion|154865|0120032||romy-and-micheles-high-school-reunion|comedy||
@@ -1636,6 +1651,7 @@ Son in Law|1993||film||Son_in_Law|45632|0108186||soninlaw|romantic comedy||
 The Sorcerer's Apprentice|2010||film|bd|The_Sorcerer's_Apprentice_(2010_film)|478633|0963966||the-sorcerers-apprentice-2009|fantasy;monster:spellcasters||
 The Sound of Music|1965||film|dvd|The_Sound_of_Music_(film)|45745|0059742||the-sound-of-music|musical||
 Space: 1999|1975|1977|tv||Space:_1999|66466|0072564|4026||science fiction;disaster||
+Space: Above and Beyond|1995|1996|tv||Space:_Above_and_Beyond||0112173|427||science fiction||
 Space Cowboys|2000||film|dvd|Space_Cowboys|196444|0186566||space-cowboys|drama||
 Space Truckers|1996||film||Space_Truckers|159956|0120199||space-truckers|science fiction:robots||
 Spaceballs|1987||film|dvd|Spaceballs|45901|0094012||spaceballs|science fiction;parody||
@@ -1706,6 +1722,7 @@ Star Wars: Episode II - Attack of the Clones|2002||film||Star_Wars_Episode_II:_A
 Star Wars: Episode III - Revenge of the Sith|2005||film||Star_Wars_Episode_III:_Revenge_of_the_Sith|286686|0121766||star-wars-episode-iii-revenge-of-the-sith|science fiction||
 Star Wars: Episode V - The Empire Strikes Back|1980||film|dvd|Star_Wars_Episode_V:_The_Empire_Strikes_Back|15750|0080684||star-wars-episode-v-the-empire-strikes-back|science fiction||
 Star Wars: Episode VI - Return of the Jedi|1983||film|dvd|Star_Wars_Episode_VI:_Return_of_the_Jedi|41093|0086190||star-wars-episode-vi-return-of-the-jedi|science fiction||
+Star Wars: Episode VII - The Force Awakens|2015||film||Star_Wars:_The_Force_Awakens|574143|2488496||star-wars-episode-vii-the-force-awakens|science fiction||
 The Stars of Star Wars: Interviews from the Cast|1999||film|||204961|0214158||the-stars-of-star-wars-interviews-from-the-cast|non-fiction:film||
 Stardust|2007||film||Stardust|345070|0486655||stardust|fantasy;monster:spellcasters||
 Stargate|1994||film|dvd|Stargate_(film)|132284|0111282||stargate|science fiction;adventure||
@@ -1763,9 +1780,9 @@ Terminal Invasion|2002||film|||272525|0322008||terminal-invasion|science fiction
 The Terminator|1984||film|vhs|The_Terminator|49101|0088247||the-terminator|science fiction:robots||
 Terminator 2: Judgment Day|1991||film|vhs|Terminator_2:_Judgment_Day|49102|0103064||terminator-2-judgment-day|science fiction:robots||
 Terminator 3: Rise of the Machines|2003||film||Terminator_3:_Rise_of_the_Machines|272537|0181852||terminator-3-rise-of-the-machines|science fiction:robots||
-Terminator 5|2014||film||||1340138|||science fiction:robots||
 Terminator: Salvation|2009||film||Terminator_Salvation|398155|0438488||terminator-salvation|science fiction:robots||
 Terminator: The Sarah Connor Chronicles|2008|2009|tv||Terminator:_The_Sarah_Connor_Chronicles|407328|0851851|68708||science fiction:robots||
+Terminator Genisys|2015||film||Terminator_Genisys|584258|1340138||terminator-genisys|science fiction:robots||
 Terms of Endearment|1983||film||Terms_of_Endearment|49104|0086425||terms-of-endearment|drama||
 Terra Nova|2011|2011|tv||Terra_Nova_(TV_series)|574974|1641349|79286||science fiction||
 That's Incredible!|1980|1984|tv||That's Incredible!|422670|0080291|1488||non-fiction||
@@ -1893,7 +1910,7 @@ W*A*L*T*E*R|1984||tv||||0203189|71598||comedy;medical||
 The Walking Dead|2010|tbd|tv||The_Walking_Dead_(TV_series)|527037|1520211|78582||monster:zombies|comics|Image Comics
 WALL·E|2008||film||WALL-E|379342|0910970||wall-e|animated||Pixar
 Wanted|2008||film||Wanted_(2008_film)|389654|0493464||wanted2008|speculative fiction||
-Wanted 2|2011||film||||1262421|||speculative fiction||
+Wanted 2|tbd||film||||1262421|||speculative fiction||
 War, Inc.|2008||film||War,_Inc.|376925|0884224||war-inc|action;comedy;thriller||
 The War of the Worlds|1953||film||The_War_of_the_Worlds_(1953_film)|53372|0046534||the-war-of-the-worlds|science fiction:aliens|novel|H.G. Wells
 War of the Worlds (1988)|1988|1990|tv||War_of_the_Worlds_(TV_series)|333924|0094578|4495||science fiction:aliens|novel|H.G. Wells
@@ -1960,10 +1977,12 @@ Wonder Woman (1975)|1975|1979|tv||Wonder_Woman_(TV_series)|305784|0074074|128||s
 Wonder Woman (2011)|2011||film||||1740828|80222||superhero fiction|comics|DC Comics
 Wonder Woman (2017)|2017||film||||0451279||wonder-woman-2009|superhero fiction|comics|DC Comics
 The Woods|2006||film||The_Woods_(film)|292778|0380066||the-woods|fantasy;monster:spellcasters||
+Wonderfalls|2004|2004|tv||Wonderfalls|305155|0361256|18158||speculative fiction;dramedy||
 Working Girl|1988||film|dvd|Working_Girl|55284|0096463||working-girl|drama||
 The X-Files (1993)|1993|2002|tv||The_X-Files|163252|0106179|61||speculative fiction;detective||
 The X-Files (1998)|1998||film||The_X-Files_(film)|162748|0120902||the-xfiles-fight-the-future|speculative fiction;detective||
 The X-Files: I Want to Believe|2008||film||The_X-Files:_I_Want_to_Believe|423337|0443701||the-x-files-i-want-to-believe|speculative fiction;detective||
+The X-Files (2016)|2016|2016|tv||The_X-Files_(2016_miniseries)||4370492|||speculative fiction;detective||
 X-Men|2000||film|dvd|X-Men_(film)|187123|0120903||xmen|superhero fiction;monster:mutants|comics|Marvel Comics
 X-Men Origins: Wolverine|2009||film||X-Men_Origins:_Wolverine|396429|0458525||wolverine|superhero fiction;monster:mutants|comics|Marvel Comics
 X-Men: First Class|2011||film||X-Men:_First_Class_(film)|475797|1270798||x-men-first-class|superhero fiction;monster:mutants|comics|Marvel Comics
@@ -2145,7 +2164,7 @@ In Search Of The Castaways|1962||film||In_Search_of_the_Castaways_(film)|24579|0
 Invader|1996||film|||162159|0116646||invader-lifeform|science fiction:aliens||
 The Invader|1997||film||The_Invader_(1997_film)|162967|0119380||the-invader|science fiction:aliens||
 The Invasion|2007||film||The_Invasion_(film)|333254|0427392||the-invasion|science fiction:aliens;disaster:pathological threat||
-Invasion|2005|tbd|tv||Invasion_(TV_series)|335326|0460651|32917||science fiction:aliens||
+Invasion|2005|2006|tv||Invasion_(TV_series)|335326|0460651|32917||science fiction:aliens||
 Invasion Earth: The Aliens Are Here|1988||film|||25279|0093272||invasion-earth-the-aliens-are-here|spoof;science fiction:aliens||
 Invasion of the Body Snatchers|1956||film||Invasion_of_the_Body_Snatchers|25288|0049366||invasion-of-the-body-snatchers1956|science fiction:aliens||
 Invasion of the Body Snatchers|1978||film||Invasion_of_the_Body_Snatchers_(1978_flim)|25289|0077745||invasion-of-the-body-snatchers|science fiction:aliens||

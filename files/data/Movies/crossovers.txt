@@ -1,15 +1,22 @@
-Alien: Resurrection|//Firefly/Firefly;//Angel/Buffy the Vampire Slayer
+Alien|//Alien vs. Predator/Alien vs. Predator;Serenity/01/Firefly/Firefly;Harm's Way/05/Angel/Buffy the Vampire Slayer
+Aliens|//Soldier
+Predator|//Alien vs. Predator/Alien vs. Predator
+Alien vs. Predator|//Alien/Alien;//Predator/Predator
 Andy Barker, P.I.|Doublemeat Palace/06/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer
-Angel|//Alien: Resurrection/Alien
 Battlestar Galactica (2003)|//Firefly/Firefly
 Bewitched (1964)|1.55/01/Passions
-Buffy the Vampire Slayer (1997)|//The X-Files (1993)/The X-Files
+Blade Runner|//Soldier
+Dead Like Me|Bzzzzzzzzz!/02/Pushing Daisies
+Die Hard|Chuck Versus Santa Claus/02/Chuck
+Die Hard 2|Chuck Versus Santa Claus/02/Chuck
 Code of Vengeance|Mouth of the Snake/02/Knight Rider (1982)/Knight Rider
+Constantine (2014)|//Arrow
 Conviction|//Deadline
 Deadline|//Law & Order/Law & Order;//Law & Order: Special Victims Unit/Law & Order;//Law & Order: Criminal Intent/Law & Order;//Law & Order: Trial by Jury/Law & Order;//Conviction/Law & Order
 Doctor Who (1963)|Marooned//Red Dwarf;//Chelmsford 123
 ER|//The X-Files (1993)/The X-Files
-Firefly|//Alien: Resurrection/Alien;//Battlestar Galactica (2003)/Battlestar Galactica (2003)
+Firefly|//Battlestar Galactica (2003)/Battlestar Galactica (2003)
+Serenity|//The Postman
 First Monday|//JAG/
 Get Smart, Again!|//The Man from U.N.C.L.E. (1964)/U.N.C.L.E.
 The Green Hornet (1966)|A Piece of the Action/02/Batman (1966 tv)/Batman (1966);Batman's Satisfaction/02/Batman (1966 tv)/Batman (1966)
@@ -27,8 +34,22 @@ Law & Order: Special Victims Unit|//Deadline;They Say It's Your Birthday/01/The 
 Law & Order: Criminal Intent|//Deadline;The Catacombes/01/Jo
 Law & Order: Trial by Jury|//Deadline
 M*A*S*H (1972)|//St. Elsewhere
-The Man from U.N.C.L.E. (1964)|//Get Smart, Again!/Get Smart (1965)
+The Man from U.N.C.L.E. (1964)|//McHale's Navy;//Get Smart, Again!/Get Smart (1965);//Please Don't Eat the Daisies
+The Girl from U.N.C.L.E.|//Please Don't Eat the Daisies
 Millennium|Millennium/07/The X-Files/The X-Files
 NCIS: Los Angeles|Ka Hakaka Maika'i/02/Hawaii Five-0;True Colors/01/Scorpion/
+Soldier|//Aliens/Alien;//Blade Runner
 St. Elsewhere|//White Shadow;//Tattingers;//M*A*S*H (1972)/MASH;//Chicago Hope;Mercy/06/Homicide: Life on the Street/Homicide;//Oz
-The X-Files (1993)|Struck by Lightning//Strange Luck;Eric Gets Suspended//That '70s Show;Stock Car Races//Malcolm in the Middle;Beyond Repair/08/ER;The Grain/02/Special Unit 2;Arms and the Girl//Jake 2.0;North Mammon/02/Criminal Minds;Bolshoi Booze//Prison Break;//Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer;Scatter Point/02/Burn Notice;The Ones You Love/04/Warehouse 13;Consumed/05/The Walking Dead;//CSI: Crime Scene Investigation
+Star Trek (1966)|Daybreak/04/Battlestar Galactica (2004)/Battlestar Galactica (2003)
+Star Trek (2009)|It Begins/01/Alias
+Star Wars|Serenity/01/Firefly/Firefly
+Star Wars: Episode I - The Phantom Menace|//E.T.: The Extra-Terrestrial
+E.T.: The Extra-Terrestrial|//Star Wars: Episode I - The Phantom Menace
+Warehouse 13|Never Let Me Go/01/Alphas
+Wonderfalls|Amuse-bouche/01/Hannibal (2013)
+The X-Files (1993)|Struck by Lightning//Strange Luck;A New Day in the Old Town/02/Fringe
+Lost|Authorized Personnel Only, Part 2/02/Alias;A Clean Conscience/02/Alias;Senator's Daughter/01/LAX;No More Good Days/01/FlashForward;The Stranger/01/Once Upon a Time;Chuck Versus the Helicopter/01/Chuck
+Cloverfield|So It Begins/01/Alias
+Super 8|So It Begins/01/Alias
+Alias|The Path//Eli Stone
+Beveryly Hills, 90210|//The X-Files/The X-Files;Eric Gets Suspended//That '70s Show;Stock Car Races//Malcolm in the Middle;Beyond Repair/08/ER;The Grain/02/Special Unit 2;Arms and the Girl//Jake 2.0;North Mammon/02/Criminal Minds;Bolshoi Booze//Prison Break;School Hard/02/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer;Scatter Point/02/Burn Notice;The Ones You Love/04/Warehouse 13;Consumed/05/The Walking Dead;//CSI: Crime Scene Investigation

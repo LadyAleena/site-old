@@ -23,7 +23,7 @@ Assume the Position|||Assume the Position with Mr. Wuhl;Assume the Position 201 
 Atlantis|||Atlantis: The Lost Empire;Atlantis: Milo's Return|1
 The Avengers|||The Avengers (1961);The New Avengers
 Babylon 5|||Babylon 5: The Gathering;Babylon 5;Babylon 5: In the Beginning;Babylon 5: The River of Souls;Babylon 5: Thirdspace;Babylon 5: A Call to Arms;Crusade;Babylon 5: The Legend of the Rangers;Babylon 5: The Lost Tales
-Back to the Future||282872|Back to the Future;Back to the Future Part II;Back to the Future Part III
+Back to the Future||282872|Back to the Future;Back to the Future Part II;Back to the Future Part III;Back in Time
 Bad Boys|||Bad Boys;Bad Boys II
 Bambi|||Bambi;Bambi II|1
 Batman (1966)|||Batman (1966 tv);Batman (1966 film)
@@ -39,7 +39,6 @@ Bionics|||The Six Million Dollar Man (1973);The Six Million Dollar Man (1974);Th
 The Birds|||The Birds;The Birds II: Land's End|n
 Black Scorpion|||Black Scorpion (1995);Black Scorpion II: Aftershock;Black Scorpion (2001)
 Blade|Blade_(film_series)|287620|Blade;Blade II;Blade: Trinity;Blade: The Series
-Blade Runner|||Blade Runner;Total Recall;Soldier;Total Recall 2070
 Blair Witch|||The Blair Witch Project;Book of Shadows: Blair Witch 2
 Blue Collar Comedy|Blue_Collar_Comedy_Tour||Blue Collar Comedy Tour: The Movie;Blue Collar Comedy Tour Rides Again;Blue Collar Comedy Tour: One for the Road;Blue Collar Comedy: The Next Generation;Blue Collar TV
 Bones & The Finder|||Bones;The Finder
@@ -81,7 +80,7 @@ Dark Shadows|||Dark Shadows (1966);House of Dark Shadows;Night of Dark Shadows
 Dead Like Me|||Dead Like Me;Dead Like Me: Life After Death
 Delos Amusement Park|||Westworld;Futureworld;Beyond Westworld
 Dèmoni|||Dèmoni;Dèmoni 2;Dèmoni 3|n
-Die Hard||282871|Die Hard;Die Hard 2;Die Hard: With a Vengeance;Live Free or Die Hard
+Die Hard||282871|Die Hard;Die Hard 2;Die Hard with a Vengeance;Live Free or Die Hard;A Good Day to Die Hard
 Dinotopia|||Dinotopia (2002 miniseries);Dinotopia (2002 tv)
 The Dirty Dozen|||The Dirty Dozen;The Dirty Dozen: Next Mission;The Dirty Dozen: The Deadly Mission;The Dirty Dozen: The Fatal Mission;Dirty Dozen: The Series
 Dr. Dolittle||341682|Doctor Dolittle;Dr. Dolittle 2;Dr. Dolittle 3;Dr. Dolittle: Tail to the Chief|1
@@ -97,7 +96,7 @@ Dungeons & Dragons|||Dungeons & Dragons (1983);Dungeons & Dragons (2000);Dungeon
 The Emmy Awards|||The Daytime Emmy Awards;The Primetime Emmy Awards
 Epoch|||Epoch;Epoch: Evolution
 Escape from|||Escape from L.A.;Escape from New York
-The Evil Dead||282677|Within the Woods;Evil Dead (1981);Evil Dead II;Army of Darkness
+The Evil Dead||282677|Within the Woods;Evil Dead (1981);Evil Dead II;Army of Darkness;Ash vs. Evil Dead
 The Exorcist|||The Exorcist;Exorcist II: The Heretic;The Exorcist III;Exorcist: The Beginning;Dominion: Prequel to the Exorcist|1
 The Expendables|||The Expendables;The Expendables 2;The Expendables 3
 Fantasia|||Fantasia;Fantasia/2000
@@ -137,6 +136,7 @@ Hellboy|||Hellboy;Hellboy II: The Golden Army
 Hellraiser||283163|Hellraiser (1987);Hellbound: Hellraiser II;Hellraiser III: Hell on Earth;Hellraiser: Bloodline;Hellraiser: Inferno;Hellraiser: Hellseeker;Hellraiser: Deader;Hellraiser: Hellworld
 Hercules and Xena|||Hercules and the Amazon Women;Hercules and the Lost Kingdom;Hercules and the Circle of Fire;Hercules in the Underworld;Hercules in the Maze of the Minotaur;Hercules: The Legendary Journeys;Xena: Warrior Princess;Hercules and Xena: The Battle for Mount Olympus;Young Hercules (1998 film);Young Hercules (1998 tv)
 Hercules|||Hercules;Hercules (1998);Hercules: Zero to Hero|1
+Heroes|||Heroes;Heroes Reborn
 Highlander|Highlander_(franchise)|281484|Highlander (1986);Highlander II: The Quickening;Highlander III: The Sorcerer;Highlander (1992);Highlander: The Raven;Highlander: Endgame;Highlander: The Source
 The Hills Have Eyes (1977)|||The Hills Have Eyes (1977);The Hills Have Eyes Part II|n
 The Hills Have Eyes (2006)|||The Hills Have Eyes (2006);The Hills Have Eyes 2|n
@@ -157,6 +157,7 @@ Ice Road Truckers|||Ice Road Truckers;IRT: Deadliest Roads
 In the Heat of the Night (1967)|||In the Heat of the Night (1967);They Call Me MISTER Tibbs!;The Organization
 In the Heat of the Night (1988)|||In the Heat of the Night (1988);In the Heat of the Night: A Matter of Justice;In the Heat of the Night: Give Me Your Life;In the Heat of the Night: Who Was Geli Bendl?;In the Heat of the Night: By Duty Bound;In the Heat of the Night: Grow Old Along with Me
 The Incredible Hulk|||The Incredible Hulk (1978);The Incredible Hulk Returns;The Trial of the Incredible Hulk;The Death of the Incredible Hulk
+Independence Day|||Independence Day;Independence Day: Resurgence
 Interceptor Force|||Interceptor Force;Interceptor Force 2
 Jack Ryan|||Patriot Games;Clear and Present Danger
 Jaws|Jaws_(franchise)||Jaws;Jaws 2;Jaws 3-D;Jaws: The Revenge|n
@@ -172,6 +173,7 @@ The Karate Kid||280983|The Karate Kid;The Karate Kid, Part II;The Karate Kid, Pa
 The Karnstein Trilogy|The_Karnstein_Trilogy||The Vampire Lovers;Lust for a Vampire;Twins of Evil
 Kill Bill|Kill_Bill||Kill Bill: Vol. 1;Kill Bill: Vol. 2
 Knight Rider|||Knight Rider (1982);Code of Vengeance;Knight Rider 2000;Knight Rider 2010;Team Knight Rider;Knight Rider (2008 film);Knight Rider (2008 tv)
+Knocked Up|||Knocked Up;This Is 40
 Kolchak The Night Stalker|||The Night Stalker;The Night Strangler;Kolchak: The Night Stalker
 L.A. Law|||L.A. Law;L.A. Law: The Movie
 La Casa|||La Casa 3;La Casa 4; La Casa 5|n
@@ -193,15 +195,17 @@ The Magnificent Seven|||The Magnificent Seven;Return of the Seven;Guns of the Ma
 Major League||288069|Major League;Major League II;Major League: Back to the Minors
 The Mangler|||The Mangler;The Mangler 2;The Mangler Reborn
 Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;A.K.A. Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy 2;Thor: Ragnarok;Avengers: Infinity War – Part 1;Black Panther;Captain Marvel;Avengers: Infinity War – Part 2;Inhumans
-MASH|||MASH (1970);M*A*S*H (1972);AfterMASH;W*A*L*T*E*R
+MASH|||MASH (1970);M*A*S*H (1972);AfterMASH;W*A*L*T*E*R;The Fighting Nightingales
 Slumber Party Massacre|||The Slumber Party Massacre;Slumber Party Massacre II;Slumber Party Massacre III|n
-Sorority House Massacre|||Sorority House Massacre;Sorority House Massacre II|nThe Matrix|The_Matrix_(franchise)|282918|The Matrix;The Matrix Reloaded;The Matrix Revolutions
+Sorority House Massacre|||Sorority House Massacre;Sorority House Massacre II|n
+The Matrix|The_Matrix_(franchise)|282918|The Matrix;The Matrix Reloaded;The Matrix Revolutions
 Men in Black|||Men in Black;Men in Black II;Men in Black III
 Merlin|||Merlin;Merlin's Apprentice
 The Mighty Ducks||319606|The Mighty Ducks;D2: The Mighty Ducks;D3: The Mighty Ducks
 The Mind's Eye|Mind%27s_Eye_(series)||The Mind's Eye;Beyond the Mind's Eye;The Gate to the Mind's Eye;Odyssey Into the Mind's Eye;Ancient Alien;Luminous Visions;Little Bytes
 Miss Congeniality|||Miss Congeniality;Miss Congeniality 2: Armed and Fabulous
 Monsters, Inc|||Monsters, Inc.;Mike's New Car|1
+Monty Python|||Monty Python's Flying Circus;Monty Python and the Holy Grail;Life of Brian;Monty Python Live at the Hollywood Bowl;The Meaning of Life
 Mortal Kombat|||Mortal Kombat (1995);Mortal Kombat: Annihilation;Mortal Kombat (tbd)
 Mulan|||Mulan;Mulan II
 The Mummy (1959)|||The Mummy (1959);The Curse of the Mummy's Tomb;The Mummy's Shroud;Blood from the Mummy's Tomb
@@ -212,10 +216,10 @@ My Girl|||My Girl;My Girl 2
 Nanny McPhee|||Nanny McPhee;Nanny McPhee and the Big Bang
 National Treasure|National_Treasure_(franchise)||National Treasure;National Treasure: Book of Secrets;National Treasure 3
 Nature Unleashed|||Nature Unleashed: Avalanche;Nature Unleashed: Earthquake;Nature Unleashed: Fire;Nature Unleashed: Tornado;Nature Unleashed: Volcano
-NCIS|||NCIS;NCIS: Los Angeles;NCIS: New Orleans
+NCIS|||JAG;NCIS;NCIS: Los Angeles;NCIS: New Orleans
 Nemesis|||Nemesis;Nemesis 2: Nebula;Nemesis 3: Prey Harder;Nemesis 4: Death Angel|n
 New Groove|||The Emperor's New Groove;Kronk's New Groove;The Emperor's New School|1
-Night at the Museum|||Night at the Museum;Night at the Museum: Battle of the Smithsonian
+Night at the Museum|||Night at the Museum;Night at the Museum: Battle of the Smithsonian;Night at the Museum: Secret of the Tomb
 Night of the Living Dead (1968)|Night_of_the_Living_Dead_(film_series)||Night of the Living Dead (1968);Dawn of the Dead (1978);Day of the Dead (1985);Land of the Dead;Diary of the Dead;Survival of the Dead
 Night of the Living Dead (1968 Return)|Return_of_the_Living_Dead_(film_series)|281690|Night of the Living Dead (1968);The Return of the Living Dead;Return of the Living Dead Part II;Return of the Living Dead III;Return of the Living Dead: Necropolis;Return of the Living Dead: Rave to the Grave
 Night of the Living Dead (1968 Zombi)|Zombi_(film_series)||Night of the Living Dead (1968);Dawn of the Dead (1978);Zombi 2;Zombi 3
@@ -224,6 +228,7 @@ Night of the Living Dead 3D|||Night of the Living Dead 3D;Night of the Living De
 Day of the Dead|||Night of the Living Dead (1968);Dawn of the Dead (1978);Day of the Dead (1985);Day of the Dead 2: Contagium
 Antropophagus|||Antropophagus;Zombie 6: Monster Hunter
 The Omen|The_Omen_(film_series)|306954|The Omen (1976);Damien: Omen II;Omen III: The Final Conflict;Omen IV: The Awakening
+Oz: The Great and Powerful|||Oz: The Great and Powerful;Oz: The Great and Powerful 2
 Pacific Rim|||Pacific Rim;Pacific Rim 2
 Painkiller Jane|||Painkiller Jane (2005);Painkiller Jane (2007)
 Percy Jackson & the Olympians|||Percy Jackson & the Olympians: The Lightning Thief;Percy Jackson & the Olympians: The Sea of Monsters
@@ -244,7 +249,7 @@ The Prophecy|The_Prophecy_(film_series)|282038|The Prophecy (1995);The Prophecy 
 Pumpkinhead|Pumpkinhead_(franchise)||Pumpkinhead;Pumpkinhead II: Blood Wings;Pumpkinhead: Ashes to Ashes;Pumpkinhead: Blood Feud|n
 The Punisher|||The Punisher (1989);The Punisher (2004);Punisher: War Zone
 Puppet Master|||Puppet Master;Puppet Master II;Puppet Master III: Toulon's Revenge;Puppet Master 4;Puppet Master 5: The Final Chapter;Curse of the Puppet Master;Retro Puppet Master;Puppet Master: The Legacy;Puppet Master vs Demonic Toys
-Psycho|||Psycho (1960);Psycho II;Psycho III;Psycho IV: The Beginning;The Psycho Legacy|n
+Psycho|||Psycho (1960);Psycho II;Psycho III;Bates Motel (1987);Psycho IV: The Beginning;The Psycho Legacy|n
 Python|||Python;New Alcatraz;Python 2;Boa vs. Python|n
 The Quatermass Experiment|||The Quatermass Experiment (1953);Quatermass II;Quatermass and the Pit (1958);Quatermass
 The Quatermass Xperiment|||The Quatermass Xperiment;Quatermass 2;Quatermass and the Pit (1967)
@@ -260,7 +265,7 @@ Sadako 3D|||Rasen;Sadako 3D;Sadako 3D 2|n
 Ripley's Believe It or Not!|Ripley%27s_Believe_It_or_Not!||Ripley's Believe It or Not! (1949);Ripley's Believe It or Not! (1982);Ripley's Believe It or Not! (1999)
 Robert Langdon|||The Da Vinci Code;Angels & Demons;The Lost Symbol
 RoboCop|RoboCop_(franchise)||RoboCop (1987);RoboCop: The Series;RoboCop 2;RoboCop 3;RoboCop: Prime Directives|1
-Rocky||280989|Rocky;Rocky II;Rocky III;Rocky IV;Rocky V;Rocky Balboa
+Rocky||280989|Rocky;Rocky II;Rocky III;Rocky IV;Rocky V;Rocky Balboa;Creed
 Rocky Horror|||The Rocky Horror Picture Show;Shock Treatment
 Romancing the Stone|||Romancing the Stone;The Jewel of the Nile
 Rosemary's Baby|||Rosemary's Baby;Look What's Happened to Rosemary's Baby
@@ -290,7 +295,7 @@ Spider-Man||325280|Spider-Man;Spider-Man 2;Spider-Man 3
 The Amazing Spider-Man|||The Amazing Spider-Man (2012);The Amazing Spider-Man 2|n
 Star Trek|Star_Trek|289034|Star Trek (1966);Star Trek (1973);Star Trek: Phase II;Star Trek: The Motion Picture;Star Trek: The Wrath of Khan;Star Trek III: The Search for Spock;Star Trek IV: The Voyage Home;Star Trek: The Next Generation;Star Trek V: The Final Frontier;Star Trek VI: The Undiscovered Country;Star Trek: Deep Space Nine;Star Trek: Generations;Star Trek: Voyager;Star Trek: First Contact;Star Trek: Insurrection;Enterprise;Star Trek: Nemesis;Star Trek: New Voyages;Star Trek (2009)
 Star Trek documentaries|||Leonard Nimoy: Star Trek Memories;Star Trek 25th Anniversary Special;The Twenty-Five Year Mission Tour;From Here to Infinity: The Ultimate Voyage;William Shatner's Star Trek Memories;Star Trek: 30 Years and Beyond;Ultimate Trek: Star Trek's Greatest Moments;Mind Meld: Secrets Behind the Voyage of a Lifetime;How William Shatner Changed the World;Star Trek: Beyond the Final Frontier
-Star Wars|Star_Wars|72309|Star Wars;The Star Wars Holiday Special;Star Wars: Episode V - The Empire Strikes Back;Star Wars: Episode VI - Return of the Jedi;Caravan of Courage: An Ewok Adventure;Ewoks: The Battle for Endor;Star Wars: Episode I - The Phantom Menace;Star Wars: Episode II - Attack of the Clones;Star Wars: Episode III - Revenge of the Sith;The Clone Wars|3
+Star Wars|Star_Wars|72309|Star Wars;The Star Wars Holiday Special;Star Wars: Episode V - The Empire Strikes Back;Star Wars: Episode VI - Return of the Jedi;Caravan of Courage: An Ewok Adventure;Ewoks: The Battle for Endor;Star Wars: Episode I - The Phantom Menace;Star Wars: Episode II - Attack of the Clones;Star Wars: Episode III - Revenge of the Sith;The Clone Wars;Star Wars: Episode VII - The Force Awakens|3
 Stargate|||Stargate;Stargate SG-1;Stargate: Atlantis;Stargate: The Ark of Truth;Stargate: Continuum;Stargate Universe
 Starman|||Starman (1984);Starman (1986)
 Starship Troopers|||Starship Troopers;Starship Troopers 2: Hero of the Federation;Starship Troopers 3: Marauder;Starship Troopers: Invasion
@@ -298,7 +303,7 @@ The Stepfather|||The Stepfather (1987);Stepfather II;Stepfather III|n
 Superman (1978)||281438|Superman;Superman II;Superman III;Supergirl;Superman IV: The Quest for Peace|2
 Man of Steel|||Man of Steel;Batman v Superman: Dawn of Justice|n
 Teen Wolf|||Teen Wolf;Teen Wolf Too|1
-Terminator|||The Terminator;Terminator 2: Judgment Day;Terminator 3: Rise of the Machines;Terminator: The Sarah Connor Chronicles;Terminator: Salvation;Terminator 5
+Terminator|||The Terminator;Terminator 2: Judgment Day;Terminator 3: Rise of the Machines;Terminator: The Sarah Connor Chronicles;Terminator: Salvation;Terminator Genisys
 Terms of Endearment|||Terms of Endearment;The Evening Star
 The Texas Chainsaw Massacre (1974)|The_Texas_Chainsaw_Massacre_(franchise)|282087|The Texas Chain Saw Massacre (1974);The Texas Chainsaw Massacre 2;Leatherface: Texas Chainsaw Massacre III;Texas Chainsaw Massacre: The Next Generation|n
 The Texas Chainsaw Massacre (2003)|The_Texas_Chainsaw_Massacre_(franchise)||The Texas Chainsaw Massacre (2003);The Texas Chainsaw Massacre: The Beginning|n
@@ -306,6 +311,7 @@ The Texas Chainsaw Massacre 3D|The_Texas_Chainsaw_Massacre_(franchise)||The Texa
 Three Mothers|The_Three_Mothers||Suspiria (1977);Inferno;Mother of Tears|n
 The Tomorrow People|The_Tomorrow_People||The Tomorrow People (1973);The Tomorrow People (1992)
 The Tonight Show|||The Tonight Show with Jay Leno;The Tonight Show with Conan O'Brien;The Tonight Show with Jimmy Fallon
+Total Recall|||Total Recall;Total Recall 2070
 Toy Story|||Toy Story;Toy Story 2;Buzz Lightyear of Star Command;Buzz Lightyear of Star Command: The Adventure Begins;Toy Story 3|1
 Trancers|||Trancers;Pulse Pounders;Trancers II;Trancers III;Trancers 4: Jack of Swords;Trancers 5: Sudden Deth;Trancers 6|n
 Transformers|||Transformers;Transformers: Revenge of the Fallen;Transformers: Dark of the Moon
@@ -313,8 +319,8 @@ Tremors|||Tremors (1990);Tremors II: Aftershocks;Tremors 3: Back to Perfection;T
 TRON|||TRON;TRON: Legacy
 Turbulence|||Turbulence;Turbulence 2: Fear of Flying;Turbulence 3: Heavy Metal|n
 The Twilight Zone|The_Twilight_Zone||Twilight Zone (1959);Twilight Zone: The Movie;Twilight Zone (1985);Rod Serling's Lost Classics;Twilight Zone (2002)|n
+U.N.C.L.E.|||The Man from U.N.C.L.E. (1964);The Girl from U.N.C.L.E.;The Return of the Man from U.N.C.L.E.
 UFOs|||UFO Files;UFO Hunters|n
-U.N.C.L.E.|||The Man from U.N.C.L.E. (1964);The Girl from U.N.C.L.E.;The Return of the Man from U.N.C.L.E.: The Fifteen Years Later Affair
 Ultraviolet|||Ultraviolet;Ultraviolet: Code 044
 Underworld|Underworld_(film_series)|479335|Underworld;Underworld: Evolution;Underworld: Rise of the Lycans
 Dr. Jekyll and Mr. Hyde|||Dr. Jekyll and Mr. Hyde (1913);Abbott and Costello Meet Dr. Jekyll and Mr. Hyde|n
@@ -329,6 +335,7 @@ V|||V (1983);V: The Final Battle;V (1984)
 Vampires||333937|Vampires;Vampires: Los Muertos;Vampires: The Turning|1
 View Askewniverse|||Clerks;Mallrats;Chasing Amy;Dogma;Jay and Silent Bob Strike Back;Clerks II
 Waldemar Daninsky|||La Marca del Hombre-lobo;Las Noches del Hombre Lobo;Los Monstruos del terror;La Furia del Hombre Lobo;La Noche de Walpurgis;Dr. Jekyll y el Hombre Lobo;El Retorno de Walpurgis;La Maldición de la bestia;El Retorno del Hombre-Lobo;La Bestia y la espada mágica;Licántropo;Tomb of the Werewolf|nWanted|||Wanted;Wanted 2
+Wanted|||Wanted;Wanted 2
 The War of the Worlds|||The War of the Worlds;War of the Worlds (1988)
 Warlock|||Warlock;Warlock: The Armageddon;Warlock III: The End of Innocence|n
 WarGames|||WarGames;Wargames: The Dead Code|1
@@ -337,7 +344,7 @@ The Whole Yards|||The Whole Nine Yards;The Whole Ten Yards
 Wishmaster||281378|Wishmaster;Wishmaster 2: Evil Never Dies;Wishmaster 3: Beyond the Gates of Hell;Wishmaster 4: The Prophecy Fulfilled|n
 The Wild Wild West|||The Wild Wild West;The Wild Wild West Revisited;More Wild Wild West
 Witch Mountain|||Escape to Witch Mountain (1975);Return from Witch Mountain;Beyond Witch Mountain
-The X-Files|||The X-Files (1993);The X-Files (1998);The Lone Gunmen;The X-Files: I Want to Believe
+The X-Files|||The X-Files (1993);The X-Files (1998);The Lone Gunmen;The X-Files: I Want to Believe;The X-Files (2016)
 X-Men|X-Men_(film_series)|291113|X-Men;X2;X-Men: The Last Stand;X-Men Origins: Wolverine;X-Men: First Class;The Wolverine
 xXx|||xXx;xXx: State of the Union
 Zorro (1998)|||The Mask of Zorro;The Legend of Zorro

@@ -5,14 +5,14 @@ Astro|astro.sci.muni.cz||astro.sci.muni.cz
 Atlantis|bbs.resus.univ-mrs.fr|139.124.29.1
 Atrium|atriumbbs.org|209.32.135.201
 Auggie|bbs.theschwartz.net|208.138.46.68
-Baud Town|baudtown.com|64.81.236.179|www.baudtown.com
+Baud Town|baudtown.com|64.81.236.179|
 Bear's BBS|grizz.avalon.net|204.71.107.60
 Bobcat Hotel|voyager.cns.ohiou.edu|132.235.197.85
 Brinta (defunct)
 Cactus|cactus.cedarville.edu|163.11.13.102
 Cetys|cetysbbs.mxl.cetys.mx|158.122.1.9|www.mxl.cetys.mx/cetysbbs
 CyBer HoUSE|cyberhouse.org
-Data's Lab|lab.jys.cx||datas-lab.nl
+Data's Lab|lab.jys.cx||
 Digitech|bbs.digitech.org|156.46.8.140
 Discordia|discordia.susqu.edu|216.87.206.21
 Dog Pound|bbs.compucomis.net

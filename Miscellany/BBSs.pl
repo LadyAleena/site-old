@@ -12,19 +12,15 @@ use HTML::Elements qw(anchor list);
 my $BBSs = get_hash( 'file' => ['Miscellany', 'BBSs.txt'], 'headings' => [qw(name domain ip site)] );
 
 my @items;
-for my $BBS (sort { $a->{name} cmp $b->{name} } values %$BBSs) {
-  my $name = $BBS->{name};
-  my $link = $BBS->{site};
-  my $BBS_head = $link ? anchor($name, { href => "http://$link" }) : $name;
-  my @telnet_links;
-  for my $telnet_link ('domain','ip') {
-    my $link = $BBS->{$telnet_link};
-    push @telnet_links, anchor($link, { href => "telnet://$link" }) if $link;
-  }
-  push @items, qq{$BBS_head <small>(}.join(', ',@telnet_links).q{)</small>};
+for my $BBS (sort { $a->{'name'} cmp $b->{'name'} } values %$BBSs) {
+  my $name = $BBS->{'name'};
+  my $link = $BBS->{'site'};
+  my $BBS_head = $link ? anchor($name, { 'href' => "http://$link" }) : $name;
+  my @telnet_links = map { $BBS->{$_} ? anchor($BBS->{$_}, { 'href' => "telnet://$BBS->{$_}" }) : undef } ('domain','ip');
+  push @items, qq{$BBS_head <small>(}.join(', ', grep(defined, @telnet_links)).q{)</small>};
 }
 
-my $doc_magic = { 'bbss' => sub { list(4,'u',\@items, { class => 'two' }) } };
+my $doc_magic = { 'bbss' => sub { list(4, 'u', \@items, { class => 'two' }) } };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 

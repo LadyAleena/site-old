@@ -11,17 +11,17 @@ use Util::Columns;
 
 my %irc = (
   freenode => {
-    web        => [qw(apache css html httdp svg javascript web design)],
+    web        => [qw(apache css html httpd svg javascript web design)],
     linux      => [qw(linux winehq alsa bash videolan rsync sed vim emacs awk)],
-    perl       => [qw(perl perlcafe cbstream)],
+    perl       => [qw(perlcafe cbstream)],
     computing  => [qw(hardware programming windows sql yaml Openoffice.org notepad++)],
     mediawiki  => [qw(autowikibrowser mediawiki mediawiki-scripts wikimedia wikimedia-commons wikimedia-tech wikipedia wikipedia-en wikipedia-en-help wikipedia-plot wikipedia-social wp-doctor-who)],
     chat       => [qw(hexchat xchat)],
-    fangirling => ['scarecrow-and-mrs-king','bruce-campbell'],
+    fangirling => [qw(scarecrow-and-mrs-king bruce-campbell)],
     general    => [qw(chat freenode comcast-users scifi)],
-    'linux distributions' => ['debian','linuxmint','debian-offtopic'],
-    'desktop environments' => ['kde','gnome'],
-    'desktop environment - kde' => ['kde','amarok','kde-chat','kde-women','kontact'],
+    'linux distributions' => [qw(debian linuxmint debian-offtopic)],
+    'desktop environments' => [qw(kde gnome)],
+    'desktop environment - kde' => [qw(kde amarok kde-chat kde-women kontact okular)],
   },
   moznet => {
     general => [qw(amo Chatzilla firefox firebug)],
@@ -31,13 +31,13 @@ my %irc = (
   },
 );
 
-my @double_bang = qw(chat windows linux gnome javascript linuxmint scarecrow-and-mrs-king bruce-campbell design hardware programming windows);
+my @double_bang = qw(chat windows linux gnome javascript linuxmint scarecrow-and-mrs-king bruce-campbell design hardware programming);
 my @favorites = qw(cbstream linux programming perlcafe scarecrow-and-mrs-king bruce-campbell debian-offtopic);
 
 sub irc_link {
   my ($server, $channel) = @_;
-  my $channel_link = grep($_ eq $channel,@double_bang) ? '%23%23'.$channel   : $channel;
-  my $channel_text = grep($_ eq $channel,@favorites)   ? $channel.' &#9829;' : $channel;
+  my $channel_link = grep($_ eq $channel, @double_bang) ? '%23%23'.$channel   : $channel;
+  my $channel_text = grep($_ eq $channel, @favorites)   ? $channel.' &#9829;' : $channel;
   return anchor($channel_text, { href => "irc://$server/$channel_link" });
 }
 
@@ -58,8 +58,7 @@ page( 'code' => sub {
   for my $server (sort {lc $a cmp lc $b} keys %irc) {
     section(3, sub {
       irc_list( 4, $server, $irc{$server}{'general'} );
-      for my $subject (sort {lc $a cmp lc $b} keys %{$irc{$server}}) {
-        next if $subject eq 'general';
+      for my $subject (sort {lc $a cmp lc $b} grep(!/general/, keys %{$irc{$server}})) {
         irc_list(4, $server, $irc{$server}{$subject}, $subject);
       }
     }, { 'heading' => [2, anchor($server, { 'href' => "irc://$server" })] });

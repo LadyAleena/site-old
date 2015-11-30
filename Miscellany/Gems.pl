@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+# This is a script which I removed from my site, but am keeping here for historical reasons.
+# So, if you are looking at this, just know it is not on my website anymore.
+
 use strict;
 use warnings FATAL => qw( all );
 

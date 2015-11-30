@@ -10,6 +10,8 @@ use Base::Page qw(page story);
 page( 'code' => sub { story(*DATA) });
 
 __DATA__
+2 Command and rank
+The Air Force will be the military branch overseeing any space fleet. The ranks of the Air Force will be used.
 2 Ship Orientation
 * All ships will orient themselves to the same Z axis as the capital ship.
 * The largest ship will be considered the capital ship when meeting with smaller craft.

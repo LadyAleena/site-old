@@ -37,9 +37,13 @@ my $doc_magic = {
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
+At one time I played chess regularly, however, I have grown rusty from not playing. I do like to come up with new rules for chess, and here are some of them. Bughouse chess is my favorite variant to play.
+2 Pez chess
+If Pez ever comes out with a set of chess piece dispensers, one could play Pez chess. After setting up the board, it would be a good idea for each player to have a little dish for the Pez candies. Pez chess uses the same moves and rules from normal chess except whenever a piece is captured, one candy is removed from the dispenser. The dispenser is placed back on the board, and the game resumes. Only after a dispenser is empty of candy can it be permanently captured.
+2 Royal chess
 This is a game of capture, so there are no checks or checkmate. The standard pieces move the same. If the king is captured, the prince becomes the king. If the prince (king) is captured, the princess becomes king. If the princess (king) is captured, the queen becomes king. The captures do not have to be in that order. If the prince is captured before the king, the princess becomes the prince. If a pawn is on the outer edge on the opponent's side of the board, the pawn can be replaced by the lowest ranking member of the royal family (queen, princess, prince, king). Once the entire royal family is captured, the game is over.
 I have not tested this version. If anyone does test it, please A<let me know|href="mailto:fantasy@xecu.net"> how it turned out.
-2 Royal chess pieces
+3 Royal chess pieces
 & pieces
-2 Royal chess board
+3 Royal chess board
 & board

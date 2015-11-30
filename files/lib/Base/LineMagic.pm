@@ -38,6 +38,15 @@ for my $count (0..9) {
   $line_magic->{$charges} = qq(STRONG<$charges|class="charges">);
 }
 
+# used in 2 places
+my $program_links = get_hash( 'file' => ['Miscellany','Programs.txt'] );
+
+for my $link (keys %$program_links) {
+  my $link_dest = $program_links->{$link};
+  $line_magic->{$link} = qq(A<$link|href="http://$link_dest">);
+}
+
+
 # to be used on any story involving my player characters
 open(my $pc_fh, '<', data_file('Role_playing/Player_characters','blank_list.txt')) or die $!;
 my @pcs = <$pc_fh>;

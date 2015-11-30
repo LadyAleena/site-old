@@ -6,8 +6,9 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib 'files/lib';
 use Base::Page qw(page story);
+use Base::LineMagic qw($line_magic);
 
-my $line_magic = { 'blue text' => qq(style="color:#009") };
+$line_magic->{'blue text'} = qq(style="color:#009");
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
@@ -21,22 +22,31 @@ The main issue causing my headaches was my frames looked bad in Firefox. So, I h
 After telling someone I use SSI on my site, I was told Perl would do an even better job. So now I am learning Perl so it can be the foundation of this site.
 2 Me
 I was born on July 10th, 1971 at Fort George G. Meade, Maryland. My father was posted to Fort Huachuca, Arizona, and we lived in Sierra Vista, Arizona. My father's next post took us to Fort Jackson, South Carolina where we lived on base. My family moved to Marktsteft and then to Kitzingen in, then, West Germany. After living there for a few years, my father was posted to Fort Ord, California. This was the last military post on which we would live. When my father retired, my family moved to Frederick, Maryland. We briefly lived in Brunswick, Maryland. I now live in Woodsboro, Maryland with my fiancé. I have gone back to Germany on a student exchange program. I have briefly visited Mexico and France.
-I have A<Debian Wheezy|href="http://www.debian.org"> with A<KDE|href="http://www.kde.org">. I use A<Mozilla|href="http://www.mozilla.org"> A<Firefox|href="http://www.mozilla.com/en-US/firefox"> to browse the internet with A<Google|href="http://www.google.com"> as my preferred search engine. I connect with A<XChat|href="http://xchat.org"> to chat on IRC. I used to send instant messages with A<Trillian|href="http://www.trillian.im">, but I now primarily hang out on A<Twitter|href="http://www.twitter.com">. I do most of my editing off-line using A<Notepad++|href="http://notepad-plus.sourceforge.net/uk/site.htm">. My favorite off-line computer games are those produced by A<PopCap Games|href="http://www.popcap.com">.
+I have ^Debian^ Jessie with ^KDE^. I use ^Mozilla^ ^Firefox^ to browse the internet with A<Google|href="http://www.google.com"> as my preferred search engine. I connect with ^XChat^ to chat on IRC. I used to send instant messages with A<Trillian|href="http://www.trillian.im">, but I now primarily hang out on A<Twitter|href="http://www.twitter.com">. I do most of my editing off-line using ^Notepad++^. My favorite off-line computer games are those produced by ^PopCap Games^.
 I like putting together jigsaw puzzles and enjoy playing chess, mahjong, and spades.
-When I was younger, I was simultaneously interested in astronomy and mythology. From my interest in those fields, I became interested in the various fields of divination. My interest in gemstones and minor interest in mineralogy sprang from playing Dungeons & Dragons, I no longer play, which interested me in titles of nobility and geography. I am only mildly interested in politics and then only in theoretical applications.
+When I was younger, I was simultaneously interested in astronomy and mythology. From my interest in those fields, I became interested in the various fields of divination. My interest in gemstones and minor interest in mineralogy sprang from playing Dungeons & Dragons which interested me in titles of nobility and geography. I no longer play Dungeons & Dragons.
+I am only mildly interested in politics and then only in theoretical applications.
 3 Pets
 We love cats. We have a cat named Cache. Before Cache, we had a cat named Peepers, but she died on 8 January 2010. Before Peepers we owned a cat named Percher who died from feline leukemia.
 3 Colors
 I do not have one favorite color but prefer shades of blue and yellow, though I do like other color combinations. This site used to use colors from the Maryland flag which I like.
 3 Birthstones and the Zodiac
-My birth stone is the ruby and birthday stone is sapphire. My birth flower is the larkspur. My tropical zodiac sign is Cancer (negative quality, water triplicity, cardinal quadrplicity, emerald stone), sidereal is Gemini (positive quality, air triplicity, mutable quadrplicity, spinel stone), and Chinese is Pig (element water, stone topaz).
+* B<Birth stone:> ruby
+* B<Birthday stone:> turquoise or diamond
+* B<Birth flowers>
+** B<British:> larkspur
+** B<United States:> water lily or delphinium
+* B<Zodiac signs>
+** B<Tropical:> Cancer (negative quality, water triplicity, cardinal quadrplicity, emerald stone)
+** B<Sidereal:> Gemini (positive quality, air triplicity, mutable quadrplicity, spinel stone)
+** B<Chinese:> Pig (element water, stone topaz).
 2 Preferred user names
 I have used many user names over the years. There are so many once offs, but those which are important are mentioned here. Lady Aleena is my favorite.
 3 Fantasy
 Fantasy is my favorite genre so when it came time to pick a CB handle, I chose it. (You used to be able to find me on channel 1.) Nothing more complicated than that. I use a derivative of it elsewhere on the web, Lady Fantasy.
 3 Lady Aleena - a story
-A woman sat at the keyboard of her computer and was posting on a Telnet BBS called Brinta (now defunct). She already had a user name but didn't want her comments in one "room" to come back to her, so she needed to post with another level of anonymity. The first name she came up with was Alexana. After a while she got tired of it, so she used the name Eileen. Even Eileen bored her, so she changed it to Olara.
-Years later she started to play Dungeons and Dragons. She was creating new characters and needed names for them. She searched her memory for some names. She remembered her masks on Brinta and put them on her character sheets, Alexana Olara and Eileen Olara. They were twin sisters who eventually were relegated to dormancy.
+A woman sat at the keyboard of her computer and was posting on a Telnet BBS called Brinta (now defunct). She already had a user name but didn't want her comments in one "room" to come back to her, so she needed to post with another level of anonymity. The first name she came up with was ^Alexana^. After a while she got tired of it, so she used the name ^Eileen^. Even Eileen bored her, so she changed it to Olara.
+Years later she started to play Dungeons and Dragons. She was creating new characters and needed names for them. She searched her memory for some names. She remembered her masks on Brinta and put them on her character sheets, ^Alexana Olara^ and ^Eileen Olara^. They were twin sisters who eventually were relegated to dormancy.
 Not long after that, she found Excite.com. She needed a user name there and scanned her brain again for a name. She liked her characters Alexana and Eileen, so she merged them into a new one, Aleena. Well Aleena was a bit plain, so she prefixed it with Lady. She liked the user name so much that she has adopted it where ever she goes, when she can. She is sometimes annoyed that it is already taken. She has a few other user names out there, but Lady Aleena is her favorite.
 4 Aleena, the Overpower of Afa
 I<This was written by a man I know only as Thraymire not by me. I have regretfully lost touch with him. I made a few additions to his story which will be in blue. I met Thraymire in a group I created on Excite.com when they had groups. The group was called AD&amp;&#8482; for Adults (Afa). I was pretty lenient on how people should act in the group, but some of the users began to get on my nerves to the point I nearly deleted the group. I was persuaded to leave it alone and just monitored it without posting anything. I spun off a new group called AD&amp;&#8482; for Mature Adults (Afma) with a select group from Afa. Both groups have been gone for a very long time, but I just happened to come upon this story and wanted to share with you how another person viewed me at the time.>
@@ -53,7 +63,7 @@ SPAN<The Goddess took some of the portfolios of the fallen gods. She took back i
 SPAN<She sits on her throne in what appears to be a stupor. She is, in reality, keeping an eye on her created children and those who have replaced her children after the godswar. She manipulates the magical energies and maintains the weather. She may set loose a plague upon a whim or in a calculated maneuver to control a population. She knows all that passes on Afa. She lets nothing interfere with her vigilant watch on the world she created.  The breadth of her power has yet to be seen.|^blue text^>
 SPAN<There is no official church for Aleena. She has no priests and grants no spells to her followers. The Order of the Goddess does not get spells from her. Those who follow Aleena do so as a labor of love. They are the ones who watch the other churches and make note if one is getting too much of an upper hand. The appointed leader of the church makes his or her way to the Isle of the Goddess to report such matters, but can sometimes come away with a feeling of not being heard. The Goddess does listen however but, since she already knows what is going on, does not respond. The person who comes to her may never be aware of the gift she gives each time he or she visits. (This is usually a +1 to an ability score or a saving throw, but it could be as different as something beneficial on the wild magic surge chart.) She actually enjoys these visits since it gives her the prospective of a mortal. The more information the mortal gives her, the more beneficial the unknown gift will be.|^blue text^>
 3 Lady Aerianna
-I only use this handle on Yahoo! since Lady Aleena was already taken. Aerianna is an amalgamation of two of my characters' names, Drianna and Aegyn.
+I only use this handle on Yahoo! since Lady Aleena was already taken. Aerianna is an amalgamation of two of my characters' names, ^Drianna^ and ^Aegyn^.
 3 Lady Olara
 I only used this handle on Hotmail since Lady Aleena was already taken.
 3 Other names

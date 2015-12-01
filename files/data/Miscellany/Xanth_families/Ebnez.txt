@@ -1,20 +1,16 @@
                               Ebnez + Mnem
-    ________________________________|___________________________________________
-   |       |      |       |         |           |            |          |       |
+   ________v______v_______v_________t___________v____________v__________v________
 Calliope  Clio  Erato  Euterpe  Melpomene  Polyhymenia  Terpsichore  Thalia  Urania
             One of the Muses is an ancestress of Roland, who is unknown.
                                 :   
                              Roland + Bianca
                                     |
                                   Bink + Chameleon                   Trent + Iris
-                                       |                     ______________|______________
-                                       |                    |         |         |         |
-                     Murphy + Vadne   Dor -------+------- Irene     Ilene    Trenris*   Xrenti*
-                            |          __________|______________________
-                            |         |                      |          |
+                                       |                    __________v____l____v__________
+                     Murphy + Vadne   Dor -------+------- Irene     Ilene    Trenris?   Xrenti?
+                            |         ___________l___________v___________
                           Grey --+-- Ivy                    Ida       Dolph + Electra
-            _____________________|_________________          |         _____|_____
-           |          |          |          |      |         |        |           |
- Anomy + Melody    Harmony     Rhythm     Green*  Revy*    Idyll*    Dawn        Eve
+           ___________v__________t__________v_______         |        ______l______
+ Anomy + Melody    Harmony     Rhythm     Green?  Revy?    Idyll?    Dawn        Eve
        |
-   Melanoma*
+   Melanoma?

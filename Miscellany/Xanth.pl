@@ -3,7 +3,7 @@ use strict;
 use warnings FATAL => qw( all );
 
 use CGI::Carp qw(fatalsToBrowser);
-use File::Slurp qw(read_file);
+use File::Slurp qw(read_file); # read_file
 
 use lib '../files/lib';
 use Base::Page qw(page story);
@@ -14,10 +14,24 @@ use Util::Convert qw(textify);
 my $directory = 'Miscellany/Xanth_families';
 my @files = get_directory(data_directory($directory));
 
+my %boxes;
+@boxes{qw(l v t)} = map {"&box$_;"} qw(hu hd vh);
+
 my $doc_magic;
 for my $file (@files) {
-  my $read = read_file(data_file($directory, $file));
-  $doc_magic->{textify($file)} = sub { pre(5, sub { print $read })}
+  $doc_magic->{textify($file)} = sub {
+    my $read = read_file(data_file($directory, $file));
+       $read =~ s/\+/&#9829;/g;
+       $read =~ s/\*/&#9825;/g;
+       $read =~ s/-/&boxH;/g;
+       $read =~ s/:/&brvbar;/g;
+       $read =~ s/_([lvt])_/_$boxes{$1}_/g;
+       $read =~ s/\|/&boxv;/g;
+       $read =~ s/(\s)_/$1&boxdr;/g;
+       $read =~ s/_(\s|$)/&boxdl;$1/g;
+       $read =~ s/_/&boxh;/g;
+    pre(5, sub { print $read })
+  }
 }
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
@@ -33,7 +47,7 @@ This is a collection of my notes about the I<Xanth> series I have gathered for r
 # B<Rune>, magician of evocation and son of Rana
 # B<A<Jonathan|href="#The_family_of_Merlin">> is the magician of zombies. He will return to the throne pro tem in I<Centaur Aisle> and I<Night Mare>.
 # B<Vortex>, magician of demon summoning
-# B<Neytron>, magician who bringing paintings to life
+# B<Neytron>, magician who brings paintings to life
 # B<Nero>, magician who brings golems to life
 # B<A<Gromden|href="#Humfrey_and_Rose_of_Roogna">>, magician of divining the history of things he touches
 # B<A<Yin-Yang|href="#Humfrey_and_Rose_of_Roogna">>, magician who can create invokable spells
@@ -47,11 +61,11 @@ This is a collection of my notes about the I<Xanth> series I have gathered for r
 # B<A<Trent|href="The_family_of_Ebnez">> is the magician of transformation. During the Next Wave in I<Night Mare>, several magicians acted as King pro tem.
 ## B<Dor> served as King pro tem previously in I<Centaur Aisle> and becomes King at the end of I<Night Mare>.
 ## B<Jonathan> served as King pro tem previously in I<Centaur Aisle>.
-## B<Humfrey>
+## B<Humfrey> served as King previously until B<Aeolus> replaced him.
 ## B<Bink>
-## B<Arnold>
+## B<Arnold>, a centaur, is the first non-human Magician to rule Xanth in any capacity.
 ## B<Iris>
-## B<Irene>
+## B<Irene> was classified a neo-Sorceress until I<Night Mare> when she was elevated to full Sorceres so she could take the throne.
 ## B<Chameleon>
 ## Imbri
 # B<A<Dor|href="The_family_of_Ebnez">> is the magician who can talk to inanimate objects; he called upon B<Murphy> to act as King pro tem in I<Isle of View>.
@@ -106,7 +120,7 @@ Jim and Mary Baldwin are mundanes who enter Xanth in I<Yon Ill Wind> with their 
 * The Simurgh had Sim.
 * Justin who was turned into a tree by Trent, became human again and married Breanna. They had Amber Dawn.
 * The clouds Cumulo Fracto Nimbus married and and Happy Bottom (Hurricane Gladys) had Fray Cloud and Wynde Tchill.
-* The dragons Stanley Steamer married and and Stacy (Stella) had Steven.
+* The dragons Stanley Steamer married and Stacy (Stella) had Steven.
 * The fairies Joan (John) and John (Joan) married.
 * The gargoyles Gary Gar and Gayle Goyle married.
 * The harpies Harold and Heavenly Helen married.

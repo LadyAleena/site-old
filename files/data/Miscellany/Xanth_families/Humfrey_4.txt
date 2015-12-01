@@ -5,8 +5,7 @@
       Griselda    Tandy ------+------ Smash  Blythe + Brawye
                               |                     |
 Draco Dragon + Human        Eskil --------+------- Bria
-             |         ___________________|__________________
-             |        |           |                |         |
-           Becka + Brusque    Briskil* + Nina    Epoxy    Benzene
+             |        ____________v_______l________v__________
+           Becka + Brusque    Briskil? + Nina    Epoxy    Benzene
                                        |
                                       Nora

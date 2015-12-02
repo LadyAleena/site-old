@@ -194,11 +194,12 @@ Mad Max|||Mad Max;Mad Max 2;Mad Max Beyond Thunderdome
 The Magnificent Seven|||The Magnificent Seven;Return of the Seven;Guns of the Magnificent Seven;The Magnificent Seven Ride!
 Major League||288069|Major League;Major League II;Major League: Back to the Minors
 The Mangler|||The Mangler;The Mangler 2;The Mangler Reborn
-Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;A.K.A. Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy 2;Thor: Ragnarok;Avengers: Infinity War – Part 1;Black Panther;Captain Marvel;Avengers: Infinity War – Part 2;Inhumans
+Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;A.K.A. Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy 2;Thor: Ragnarok;Avengers: Infinity War – Part I;Black Panther;Captain Marvel;Avengers: Infinity War – Part II;Inhumans
 MASH|||MASH (1970);M*A*S*H (1972);AfterMASH;W*A*L*T*E*R;The Fighting Nightingales
 Slumber Party Massacre|||The Slumber Party Massacre;Slumber Party Massacre II;Slumber Party Massacre III|n
 Sorority House Massacre|||Sorority House Massacre;Sorority House Massacre II|n
 The Matrix|The_Matrix_(franchise)|282918|The Matrix;The Matrix Reloaded;The Matrix Revolutions
+The Maze Runner|Maze_Runner_(film_series)||The Maze Runner;Maze Runner: The Scorch Trials
 Men in Black|||Men in Black;Men in Black II;Men in Black III
 Merlin|||Merlin;Merlin's Apprentice
 The Mighty Ducks||319606|The Mighty Ducks;D2: The Mighty Ducks;D3: The Mighty Ducks
@@ -253,7 +254,7 @@ Psycho|||Psycho (1960);Psycho II;Psycho III;Bates Motel (1987);Psycho IV: The Be
 Python|||Python;New Alcatraz;Python 2;Boa vs. Python|n
 The Quatermass Experiment|||The Quatermass Experiment (1953);Quatermass II;Quatermass and the Pit (1958);Quatermass
 The Quatermass Xperiment|||The Quatermass Xperiment;Quatermass 2;Quatermass and the Pit (1967)
-Rambo||282873|First Blood;Rambo: First Blood Part II;Rambo III;Rambo;Rambo V: The Savage Hunt
+Rambo||282873|First Blood;Rambo: First Blood Part II;Rambo III;Rambo;Rambo: Last Blood
 Re-Animator||319183|Re-Animator;Bride of Re-Animator;Beyond Re-Animator
 Red|||Red;Red 2
 Remo Williams|||Remo Williams: The Adventure Begins;Remo Williams

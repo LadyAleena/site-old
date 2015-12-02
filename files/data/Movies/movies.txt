@@ -240,7 +240,7 @@ Beyond Belief: Fact or Fiction|1997|2002|tv||Beyond_Belief:_Fact_or_Fiction|4835
 Beyond Re-Animator|2003||film||Beyond_Re-Animator|beyond-re-animator-280078|0222812||beyond-reanimator|horror||
 Beyond Reality|1991|1993|tv||Beyond_Reality_(TV_series)|385693|0101046|4118||science fiction||
 Beyond Therapy|1987||film||Beyond_Therapy_(film)|5270|0092646||beyond-therapy|comedy||
-Beyond Westworld|1980||film||Beyond_Westworld||0080198|7530|westworld|science fiction:robots||
+Beyond Westworld|1980||tv||Beyond_Westworld||0080198|7530||science fiction:robots||
 Beyond Witch Mountain|1982||film||Beyond_Witch_Mountain||0249397||beyond-witch-mountain|science fiction:aliens||
 Beyond the Mind's Eye|1992||film|||5290|0167046||beyond-the-minds-eye|animated;music||
 Beyond the Poseidon Adventure|1979||film||Beyond_the_Poseidon_Adventure|5294|0078856||beyond-the-poseidon-adventure|disaster:tsunami||
@@ -370,7 +370,7 @@ The Chronicle|2001|2002|tv||The_Chronicle_(TV_series)||0242733|3515||science fic
 The Chronicles of Narnia: The Lion, the Witch and the Wardrobe|2005||film||The_Chronicles_of_Narnia:_The_Lion,_the_Witch_and_the_Wardrobe|288381|0363771||the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe|fantasy|novel|C.S. Lewis
 The Chronicles of Narnia: Prince Caspian|2008||film||The_Chronicles_of_Narnia:_Prince_Caspian|342549|0499448||the-chronicles-of-narnia-prince-caspian|fantasy|novel|C.S. Lewis
 The Chronicles of Narnia: The Voyage of the Dawn Treader|2010||film|||402092|0980970||the-chronicles-of-narnia-the-voyage-of-the-dawn-treader|fantasy|novel|C.S. Lewis
-The Chronicles of Narnia: The Silver Chair|2015||film||||1223947|||fantasy|novel|C.S. Lewis
+The Chronicles of Narnia: The Silver Chair|tbd||film||||1223947|||fantasy|novel|C.S. Lewis
 The Chronicles of Riddick|2004||film|dvd|The_Chronicles_of_Riddick|286673|0296572||the-chronicles-of-riddick|speculative fiction||
 The Chronicles of Riddick: Dark Fury|2004||film||The_Chronicles_of_Riddick:_Dark_Fury|304177|0407658||dark-fury-the-chronicles-of-riddick|speculative fiction||
 Chuck|2007|2012|tv|bd:1..5|Chuck_(TV_series)|400700|0934814|68724||action;dramedy;spy fiction;science fiction||
@@ -766,7 +766,7 @@ Grease|1978||film|dvd|Grease_(film)|20546|0077631||grease|musical||
 Grease 2|1982||film|dvd|Grease_2|151390|0084021||grease-2|musical||
 The Green Hornet (1966)|1966|1967|tv||The_Green_Hornet_(TV_series)||0059991|587||superhero fiction|radio show|George W. Trendle and Fran Striker
 The Green Hornet (2011)|2011||film||The_Green_Hornet_(2011_film)|393767|0990407||the-green-hornet|superhero fiction|radio show|George W. Trendle and Fran Striker
-Greent Lantern|2011||film||Green_Lantern_(film)|422777|1133985||green-lantern|superhero fiction|comics|DC Comics
+Green Lantern|2011||film||Green_Lantern_(film)|422777|1133985||green-lantern|superhero fiction|comics|DC Comics
 Gridiron Gang|2006||film||Gridiron_Gang|325504|0421206||gridiron-gang|docudrama;sports||
 Grosse Pointe Blank|1997||film||Grosse_Pointe_Blank|154792|0119229||grosse-pointe-blank|comedy||
 Ground Control|1998||film||Ground_Control_(film)|176061|0137799||ground-control-jet|disaster||
@@ -1003,6 +1003,7 @@ Kill Bill: Vol. 1|2003||film|dvd|Kill_Bill|280648|0266697||kill-bill-volume-1|ac
 Kill Bill: Vol. 2|2004||film|dvd||289932|0378194||kill-bill-volume-2|action||
 Kindred: The Embraced|1996||tv||Kindred:_The_Embraced|325455|0115232|337||monster:vampires||
 Kingdom Hospital|2004||tv||Kingdom_Hospital|303582|0324864|21043||monster:ghosts||
+Kingsman: The Secret Service|2014||film||Kingsman:_The_Secret_Service|579827|2802144||kingsman-the-secret-service|spy fiction;action;science fiction|comic|Mark Millar and Dave Gibbons
 Kinky Boots|2005||film||Kinky_Boots_(film)|317307|0434124||kinky-boots|drama||
 Kinsey|2004||film||Kinsey_(film)|290324|0362269||kinsey|docudrama||
 Kiss Kiss Bang Bang|2005||film||Kiss_Kiss_Bang_Bang|305451|0373469||kiss-kiss-bang-bang|detective;action||
@@ -1022,6 +1023,7 @@ Krull|1983||film||Krull_(film)|27743|0085811||krull|fantasy||
 Kull the Conqueror|1997||film|dvd|Kull_the_Conqueror|158554|0119484||kull-the-conqueror|fantasy|novel|Robert E. Howard
 L.A. Law|1986|1994|tv||L.A._Law|27835|0090466|183||legal||
 L.A. Law: The Movie|2002||film||L.A._Law:_The_Movie|269215|0307078||la-law-the-movie|legal||
+La Femme Vampir|2009||film||||1510273||lost-girls|science fiction:aliens;horror||
 Labyrinth|1986||film|dvd|Labyrinth_(film)|28019|0091369||labyrinth|musical;fantasy||
 Lady and the Tramp|1955||film||Lady_and_the_Tramp|28038|0048280||lady-and-the-tramp|animated||Disney
 Lady and the Tramp II: Scamp's Adventure|2001||film||Scamp_(Lady_and_the_Tramp)|220854|0249677||lady-and-the-tramp-ii-scamps-adventure|animated||Disney
@@ -1107,12 +1109,11 @@ The Lord of the Rings: The Fellowship of the Ring|2001||film||The_Lord_of_the_Ri
 The Lord of the Rings: The Return of the King|2003||film||The_Lord_of_the_Rings:_The_Return_of_the_King|278981|0167260||the-lord-of-the-rings-the-return-of-the-king|fantasy||
 The Lord of the Rings: The Two Towers|2002||film||The_Lord_of_the_Rings:_The_Two_Towers|271070|0167261||the-lord-of-the-rings-the-two-towers|fantasy||
 Lord of the Dance|1997||film|dvd|Lord_of_the_Dance_(musical)|176728|0148422||lord-of-the-dance-michael-flatley-the-lord-of-the-dance|non-fiction:dance||
-Lost|2004|2010|tv||Lost_(TV_series)||0411008|24313||actio;mystery;speculative fiction||
+Lost|2004|2010|tv||Lost_(TV_series)||0411008|24313||action;mystery;speculative fiction||
 The Lost Boys|1987||film||The_Lost_Boys|30136|0093437||the-lost-boys|monster:vampires||
 Lost Boys: The Thirst|2010||film||Lost_Boys:_The_Thirst|524082|1400526||lost-boys-the-thirst-2010|monster:vampires||
 Lost Boys: The Tribe|2008||film||Lost_Boys:_The_Tribe|413907|1031254||lost-boys-the-tribe|monster:vampires||
 Lost Girl|2010|2015|tv||Lost_Girl||1429449|80318||fantasy;monster:demons||
-Lost Girls|2005||film||||||lost-girls|monster:vampires||
 Lost in Space|1998||film||Lost_in_Space_(film)|161716|0120738||lost-in-space|science fiction||
 Lost in Translation|2003||film||Lost_in_Translation_(film)|283628|0335266||lost-in-translation|drama||
 The Lost Symbol|tbd||film||The_Lost_Symbol_(film)||1422137|||mystery;thriller|novel|Dan Brown
@@ -1159,6 +1160,8 @@ The Matrix|1999||film|bd|The_Matrix|177524|0133093||the-matrix|science fiction:m
 The Matrix Reloaded|2003||film|bd|The_Matrix_Reloaded|279420|0234215||the-matrix-reloaded|science fiction:malignant technology,robots||
 The Matrix Revolutions|2003||film|bd|The_Matrix_Revolutions|282917|0242653||the-matrix-revolutions|science fiction:malignant technology,robots||
 Matt Houston|1982|1985|tv||Matt_Houston|507606|0083447|979||detective||
+The Maze Runner|2014||film||The_Maze_Runner_(film)|577902|1790864||the-maze-runner|science fiction;action|novel|James Dashner
+Maze Runner: The Scorch Trials|2015||film||Maze_Runner:_The_Scorch_Trials|615780|4046784||maze-runner-the-scorch-trials|science fiction;action|novel|James Dashner
 McHale's Navy|1997||film|dvd|McHale's_Navy_(1997_film)|154847|0119640||mchales-navy-1997|comedy;military||
 Mean Guns|1997||film||Mean_Guns|162980|0119642||mean-guns|action||
 The Meaning of Life|1983||film||Monty_Python%27s_The_Meaning_of_Life|33235|0085959||monty-pythons-the-meaning-of-life|comedy||
@@ -1305,9 +1308,9 @@ The Next Karate Kid|1994||film||The_Next_Karate_Kid|133409|0110657||the-next-kar
 Nick and Norah's Infinite Playlist|2008||film||Nick_and_Norah%27s_Infinite_Playlist|420363|0981227||nick-and-norahs-infinite-playlist|romantic comedy||
 Nick Fury|tbd||film||||0482631||nick-fury|superhero fiction|comics|Marvel Comics
 Nick Knight|1989||film||Nick_Knight_(film)|35173|0097969||nick-knight|monster:vampires||
-Night at the Museum|2006||film||Night_at_the_Museum|340663|0477347||night-at-the-museum|speculative fiction||
-Night at the Museum: Battle of the Smithsonian|2009||film||Night_at_the_Museum:_Battle_of_the_Smithsonian|426891|1078912||night-at-the-museum-2-escape-from-the-smithsonian|speculative fiction||
-Night at the Museum: Secret of the Tomb|2014||film||Night_at_the_Museum:_Secret_of_the_Tomb|577901|2692250||night-at-the-museum-secret-of-the-tomb|speculative fiction||
+Night at the Museum|2006||film||Night_at_the_Museum|340663|0477347||night-at-the-museum|fantasy||
+Night at the Museum: Battle of the Smithsonian|2009||film||Night_at_the_Museum:_Battle_of_the_Smithsonian|426891|1078912||night-at-the-museum-2-escape-from-the-smithsonian|fantasy||
+Night at the Museum: Secret of the Tomb|2014||film||Night_at_the_Museum:_Secret_of_the_Tomb|577901|2692250||night-at-the-museum-secret-of-the-tomb|fantasy||
 Night Court|1984|1992|tv||Night_Court|273222|0086770|113||situation comedy;legal||
 Night of the Comet|1984||film|dvd|Night_of_the_Comet|35289|0087799||night-of-the-comet|disaster:astronomical threat||
 Night of the Twisters|1996||film|dvd|Night_of_the_Twisters|154439|0117179||night-of-the-twisters|disaster:tornado||
@@ -1396,6 +1399,7 @@ Pirates of the Caribbean: Dead Man's Chest|2006||film||Pirates_of_the_Caribbean:
 Pirates of the Caribbean: On Stranger Tides|2011||film||Pirates_of_the_Caribbean:_On_Stranger_Tides|500489|1298650||pirates-of-the-caribbean-on-stranger-tides-2011|fantasy||
 Pirates of the Caribbean: The Curse of the Black Pearl|2003||film||Pirates_of_the_Caribbean:_The_Curse_of_the_Black_Pearl|281052|0325980||pirates-of-the-caribbean-the-curse-of-the-black-pearl|fantasy||
 Pitch Black|2000||film|dvd|Pitch_Black_(film)|181890|0134847||pitch-black|speculative fiction||
+Pixels|2015||film||Pixels_(2015_film)|553682|2120120||pixels|science fiction:aliens|short film|Patrick Jean
 Planet of the Apes (1968)|1968||film||Planet_of_the_Apes_(1968_film)|38295|0063442||planet-of-the-apes1968|monster:mutant animals|novel|Pierre Boulle
 Beneath the Planet of the Apes|1970||film||Beneath_the_Planet_of_the_Apes|4812|0065462||beneath-the-planet-of-the-apes|monster:mutant animals|novel|Pierre Boulle
 Escape from the Planet of the Apes|1971||film||Escape_from_the_Planet_of_the_Apes|16041|0067065||escape-from-the-planet-of-the-apes|monster:mutant animals|novel|Pierre Boulle
@@ -1472,11 +1476,11 @@ Radio|2003||film||Radio_(film)|283265|0316465||radio|drama||
 Raiders of the Lost Ark|1981||film|bd|Raiders_of_the_Lost_Ark|40118|0082971||raiders-of-the-lost-ark|speculative fiction;adventure||
 Raines|2007||tv||Raines|385415|0802148|8148||detective||
 Raising Helen|2004||film||Raising_Helen|290661|0350028||raising-helen|romantic comedy||
-Rambo|2008||film||Rambo_(film)|389422|0462499||rambo-rambo-iv|action||
-Rambo III|1988||film||Rambo_III|40200|0095956||rambo-iii|action||
-Rambo V: The Savage Hunt|2011||film||||||rambo-v|action||
 Rambo: First Blood Part II|1985||film||Rambo:_First_Blood_Part_II|40204|0089880||rambo-first-blood-part-ii|action||
-The Raven|2013||film||The_Raven_(2012_film)|532988|1486192||untitled-raven-project|crime;thriller||
+Rambo III|1988||film||Rambo_III|40200|0095956||rambo-iii|action||
+Rambo|2008||film||Rambo_(film)|389422|0462499||rambo-rambo-iv|action||
+Rambo: Last Blood|tbd||film||||1206885||rambo-v|action||
+The Raven|2012||film||The_Raven_(2012_film)|532988|1486192||untitled-raven-project|crime;thriller||
 Re-Animator|1985||film||Re-Animator|re-animator-40416|0089885||reanimator|horror|short story|H. P. Lovecraft
 Real People|1979|1984|tv||Real_People|422671|0078676|7248||non-fiction||
 Reaper|2007|2009|tv||Reaper_(TV_series)||0955322|68745||speculative fiction;monster:demons||
@@ -1975,7 +1979,7 @@ The Wolverine|2013||film|||496814|1430132||wolverine-2|superhero fiction|comics|
 The Women|2008||film||The_Women_(2008_film)|400300|0430770||the-women2008|romantic comedy||
 Wonder Woman (1975)|1975|1979|tv||Wonder_Woman_(TV_series)|305784|0074074|128||superhero fiction|comics|DC Comics
 Wonder Woman (2011)|2011||film||||1740828|80222||superhero fiction|comics|DC Comics
-Wonder Woman (2017)|2017||film||||0451279||wonder-woman-2009|superhero fiction|comics|DC Comics
+Wonder Woman (2017)|2017||film||||0451279||wonder-woman-2017|superhero fiction|comics|DC Comics
 The Woods|2006||film||The_Woods_(film)|292778|0380066||the-woods|fantasy;monster:spellcasters||
 Wonderfalls|2004|2004|tv||Wonderfalls|305155|0361256|18158||speculative fiction;dramedy||
 Working Girl|1988||film|dvd|Working_Girl|55284|0096463||working-girl|drama||
@@ -2182,7 +2186,7 @@ Ju-on: Black Ghost|2009||film||Ju-on:_Black_Ghost|534138|1422674||ju-on-kuroi-sh
 Ju-on: Beginning of the End|2014||film||Ju-on:_The_Beginning_of_the_End|604920|3572132||ju-on-the-beginning-of-the-end|horror;monster:ghosts||
 The Grudge|2004||film||The_Grudge|301035|0391198||the-grudge|horror;monster:ghosts||
 The Grudge 2|2006||film||The_Grudge_2|325767|0433386||the-grudge-2|horror;monster:ghosts||
-The Grudge 3|2008||film||The_Grudge_3|422211|1053859||the-grudge-2|horror;monster:ghosts||Killer Flood: The Day the Dam Broke|2003||film||Killer_Flood|285828|0338034||killer-flood-the-day-the-dam-broke|disaster:flood||
+The Grudge 3|2008||film||The_Grudge_3|422211|1053859||the-grudge-3|horror;monster:ghosts||Killer Flood: The Day the Dam Broke|2003||film||Killer_Flood|285828|0338034||killer-flood-the-day-the-dam-broke|disaster:flood||
 Ladybug Ladybug|1963||film||Ladybug_Ladybug_(film)|98568|0057242||ladybug-ladybug|disaster:nuclear||
 The Lair of the White Worm|1988||film||The_Lair_of_the_White_Worm_(film)|28120|0095488||the-lair-of-the-white-worm|monster|novel|Bram Stoker
 The Last War|1961||film||The_Last_War_(1961_film)|152637|0055428||last-war|disaster:nuclear||
@@ -2294,7 +2298,7 @@ A Return to Salem's Lot|1987||film||A_Return_to_Salem's_Lot|41135|0093855||a-ret
 Saw|2003||film||Saw_(2003_film)||0495241|||horror:torture porn||
 Saw|2004||film||Saw_(2004_film)|301717|0387564||saw|horror:torture porn||
 Saw II|2005||film||Saw_II|316833|0432348||saw-ii2005|horror:torture porn||
-Saw III|2006||film||Saw_III|344760|0489270||saw-iii200|horror:torture porn||
+Saw III|2006||film||Saw_III|344760|0489270||saw-iii2006|horror:torture porn||
 Saw IV|2007||film||Saw_IV|379341|0890870||saw-iv2007|horror:torture porn||
 Saw V|2008||film||Saw_V|426663|1132626||saw-v|horror:torture porn||
 Saw VI|2009||film||Saw_VI|475297|1233227||saw-vi|horror:torture porn||
@@ -2394,7 +2398,7 @@ The Incredible Hulk (2008)|2008||film|bd|The_Incredible_Hulk_(film)|356353|08000
 Iron Man 2|2010||film|bd|Iron_Man_2|451107|1228705||iron-man-2|superhero fiction|comics|Marvel Comics
 Thor|2011||film|bd|Thor_(film)|411473|0800369||thor|superhero fiction|comics|Marvel Comics
 Captain America: The First Avenger|2011||film||The_First_Avenger:_Captain_America|451108|0458339||captain-america|superhero fiction|comics|Marvel Comics
-The Avengers (2012)|2012||film|bd|The_Avengers_(2012_film)|451151|0848228||the-avengers-2011|superhero fiction|comics|Marvel Comics
+The Avengers (2012)|2012||film|bd|The_Avengers_(2012_film)|451151|0848228||marvels-the-avengers|superhero fiction|comics|Marvel Comics
 Agents of S.H.I.E.L.D.|2013|tbd|tv||Agents_of_Shield||2364582|183210||superhero fiction|comics|Marvel Comics
 Iron Man 3|2013||film|bd|Iron_Man_3|527818|1300854||iron-man-3|superhero fiction|comics|Marvel Comics
 Thor: The Dark World|2013||film|bd|Thor:_The_Dark_World|546686|1981115||thor-the-dark-world|superhero fiction|comics|Marvel Comics
@@ -2410,10 +2414,10 @@ Luke Cage|2016|tbd|tv||||3322314|||superhero fiction|comics|Marvel Comics
 Doctor Strange|2016||film|||601168|1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
 Guardians of the Galaxy 2|2017||film|||609066|3896198||guardians-of-the-galaxy-2|superhero fiction|comics|Marvel Comics
 Thor: Ragnarok|2017||film||||3501632||thor-ragnarok-2017|superhero fiction|comics|Marvel Comics
-Avengers: Infinity War – Part 1|2018||film||||4154756||avengers-infinity-war-part-i|superhero fiction|comics|Marvel Comics
+Avengers: Infinity War – Part I|2018||film||||4154756||avengers-infinity-war-part-i|superhero fiction|comics|Marvel Comics
 Black Panther|2018||film||||1825683|||superhero fiction|comics|Marvel Comics
 Captain Marvel|2018||film||||4154664||captain-marvel-2018|superhero fiction|comics|Marvel Comics
-Avengers: Infinity War – Part 2|2019||film||||4154796||avengers-infinity-war-part-ii|superhero fiction|comics|Marvel Comics
+Avengers: Infinity War – Part II|2019||film||||4154796||avengers-infinity-war-part-ii|superhero fiction|comics|Marvel Comics
 Inhumans|2019||film||||4154858|||superhero fiction|comics|Marvel Comics
 Night of the Living Dead (1968)|1968||film||Night_of_the_Living_Dead|35311|0063350||night-of-the-living-dead|horror;monster:zombies||
 Dawn of the Dead (1978)|1978||film||Dawn_of_the_Dead|12579|0077402||dawn-of-the-dead1978|horror;monster:zombies||

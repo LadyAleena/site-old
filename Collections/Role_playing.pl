@@ -31,14 +31,14 @@ This is my role playing novel collection of SPAN<hardcovers|^hardcovers^>, SPAN<
 3 Dark Sun
 4 Chronicles of Athas
 * I<The Brazen Gambit|^massmarket^> by Lynn Abbey
-5 Prism Pentad
+4 Prism Pentad
 by Troy Denning
 * I<The Verdant Passage|^massmarket^>
 * I<The Crimson Legion|^massmarket^>
 * I<The Amber Enchantress|^massmarket^>
 * I<The Obsidian Oracle|^massmarket^>
 * I<The Cerulean Storm|^massmarket^>
-5 Tribe of One
+4 Tribe of One
 by Simon Hawke
 * I<The Outcast|^massmarket^>
 * I<The Seeker|^massmarket^>
@@ -112,8 +112,17 @@ by Margaret Weis & Tracy Hickman etc.
 * I<Realms of the Arcane|^massmarket^> by Brian M. Thomsen, Ed.
 * I<Realms of Valor|^massmarket^> by James Lowder, Ed.
 * I<Spellfire|^massmarket^> by Ed Greenwood
-4 unknown series title
+4 The Legend of Drizzt
 by R. A. Salvatore
+5 The Dark Elf Trilogy
+* I<Homeland|^massmarket^>
+* I<Exile|^massmarket^>
+* I<Sojourn|^massmarket^>
+5 The Icewind Dale Trilogy
+* I<The Crystal Shard|^massmarket^>
+* I<Streams of Silver|^massmarket^>
+* I<The Halflings Gem|^massmarket^>
+5 Legacy of the Drow
 * I<Starless Night|^hardcover^>
 * I<Seige of Darkness|^hardcover^>
 4 The Avatar Trilogy
@@ -128,11 +137,6 @@ by R. A. Salvatore
 * I<Night Masks|^massmarket^>
 * I<The Fallen Fortress|^massmarket^>
 * I<The Chaos Curse|^massmarket^>
-4 The Dark Elf Trilogy
-by R. A. Salvatore
-* I<Homeland|^massmarket^>
-* I<Exile|^massmarket^>
-* I<Sojourn|^massmarket^>
 4 The Druidhome Trilogy
 by Douglas Niles
 * I<Prophet of Moonshae|^massmarket^>
@@ -147,11 +151,6 @@ by Douglas Niles
 # I<Masquerades|^massmarket^> by Kate Novak & Jeff Grubb
 # I<Curse of the Shadowmage|^massmarket^> by Mark Anthony
 #13 I<Silver Shadows|^massmarket^> by Elaine Cunningham
-4 The Icewind Dale Trilogy
-by R. A. Salvatore
-* I<The Crystal Shard|^massmarket^>
-* I<Streams of Silver|^massmarket^>
-* I<The Halflings Gem|^massmarket^>
 4 The Lost Gods
 * I<Tymora's Luck|^massmarket^> by Kate Novak & Jeff Grubb
 4 The Maztica Trilogy
@@ -182,7 +181,7 @@ by J. Robert King
 # I<The Enemy Within|^massmarket^> by Christine Golden
 # I<Mordenheim|^massmarket^> by Chet Williams
 4 Independent
-* I<I, Strahd:The Memoirs of a Vampire</i>|^hardcover^> by P. N. Elrod
+* I<I, Strahd:The Memoirs of a Vampire|^hardcover^> by P. N. Elrod
 * I<Tales of Ravenloft|^massmarket^>
 3 Spelljammer
 4 The Cloakmaster Cycle

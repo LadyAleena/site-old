@@ -3,6 +3,8 @@ Aliens|//Soldier
 Predator|//Alien vs. Predator/Alien vs. Predator
 Alien vs. Predator|//Alien/Alien;//Predator/Predator
 Andy Barker, P.I.|Doublemeat Palace/06/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer
+Armageddon|//The Rock
+The Rock|//Armageddon
 Back to the Future|And the Final Curtain/02/The Librarians/The Librarian
 Battlestar Galactica (2003)|//Firefly/Firefly
 Bewitched (1964)|1.55/01/Passions
@@ -47,6 +49,9 @@ Star Trek (2009)|It Begins/01/Alias
 Star Wars|Serenity/01/Firefly/Firefly
 Star Wars: Episode I - The Phantom Menace|//E.T.: The Extra-Terrestrial
 E.T.: The Extra-Terrestrial|//Star Wars: Episode I - The Phantom Menace
+The Terminator|//The Abyss
+Terminator 2: Judgment Day|//The Abyss
+The Abyss|//The Terminator/Terminator;//Terminator 2: Judgment Day/Terminator
 Warehouse 13|Never Let Me Go/01/Alphas
 Wonderfalls|Amuse-bouche/01/Hannibal (2013)
 The X-Files (1993)|Struck by Lightning//Strange Luck;A New Day in the Old Town/02/Fringe

@@ -1527,6 +1527,7 @@ Rizzoli & Isles|2010|tbd|tv||Rizzoli_&_Isles|524762|1551632|78590||police proced
 Robin Hood|1973||film||Robin_Hood_(1973_film)|41674|0070608||robin-hood|animated||Disney
 Robin Hood: Men in Tights|1993||film||Robin_Hood:_Men_in_Tights|41688|0107977||robin-hood-men-in-tights|parody||
 Robots|2005||film||Robots_(film)|289664|0358082||robots|animated;science fiction:robots||
+The Rock|1996||film||The_Rock_(film)|136282|0117500||the-rock|action||
 The Rocker|2008||film||The_Rocker_(film)|399149|1031969||the-rocker2008|comedy||
 Rocky|1976||film||Rocky|41846|0075148||rocky|sports;drama||
 Rocky II|1979||film||Rocky_II|41859|0079817||rocky-ii|sports;drama||
@@ -1753,7 +1754,8 @@ Studio 60 on the Sunset Strip|2006|2007|tv|dvd:1|Studio_60_on_the_Sunset_Strip|3
 Sub-Mariner|2014||film|||361497|0436803|||superhero fiction|comics|Marvel Comics
 The Sum of All Fears|2002||film|dvd|The_Sum_of_All_Fears_(film)|261810|0164184||the-sum-of-all-fears|spy fiction;disaster:nuclear|novel|Tom Clancy
 Super Secret Movie Rules|2004||tv||Super_Secret_Movie_Rules||1904067|24466||non-fiction:film||
-Supergirl|1984||film||Supergirl|47863|0088206||supergirl|superhero fiction|comics|DC Comics
+Supergirl (1984)|1984||film||Supergirl_(film)|47863|0088206||supergirl|superhero fiction|comics|DC Comics
+Supergirl (2015)|2015||tv||Supergirl_(U.S._TV_series)||4016454|195575||superhero fiction|comics|DC Comics
 Superman|1978||film|dvd|Superman_(film)|66900|0078346||superman|superhero fiction|comics|DC Comics
 Superman II|1980||film|dvd|Superman_II|47870|0081573||superman-ii|superhero fiction|comics|DC Comics
 Superman III|1983||film|dvd|Superman_III|47871|0086393||superman-iii|superhero fiction|comics|DC Comics
@@ -2448,3 +2450,6 @@ Day of the Dead (2008)|2008||film||Day_of_the_Dead_(2008_film)|355655|0489018||d
 The Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?|1964||film||The_Incredibly_Strange_Creatures_Who_Stopped_Living_and_Became_Mixed-Up_Zombies|63544|0057181||the-incredibly-strange-creatures-who-stopped-living-and-became-mixedup-zombies|horror;monster:zombies||
 Night of the Day of the Dawn of the Son of the Bride of the Return of the Terror|1991||film|||332506|0230575||night-of-the-day-of-the-dawn-of-the-son-of-the-bride-of-the-return-of-the-revenge-of-the-terror-of-th-1991|horror;comedy;monster:zombies||
 Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Hellbound, Flesh-Eating Subhumanoid Zombified Living Dead, Part 3|2005||film||||0475343|||horror;comedy;monster:zombies||
+Arrow|2012||tv||Arrow_(TV_series)|574062|2193021|158560||superhero fiction|comics|DC Comics
+The Flash|2014||tv||The_Flash_(2014_TV_series)||3107288|193920||superhero fiction|comics|DC Comics
+Legends of Tomorrow|2016||tv||Legends_of_Tomorrow||4532368|196111||superhero fiction|comics|DC Comics

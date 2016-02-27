@@ -18,6 +18,7 @@ American Psycho|||American Psycho;American Psycho 2
 Animal Cops|Animal_Cops||Animal Precinct;Animal Cops: Detroit;Animal Cops: Houston;Miami Animal Police;Animal Cops: San Francisco;Animal Cops: Phoenix
 Anne of Green Gables|||Anne of Green Gables;Anne of Avonlea;Anne of Green Gables: The Continuing Story;Anne of Green Gables: A New Beginning
 The Arrival|||The Arrival;The Second Arrival
+Arrowverse|Arrowverse||Arrow;The Flash;Legends of Tomorrow
 Arthur|||Arthur;Arthur 2: On the Rocks
 Assume the Position|||Assume the Position with Mr. Wuhl;Assume the Position 201 with Mr. Wuhl
 Atlantis|||Atlantis: The Lost Empire;Atlantis: Milo's Return|1
@@ -301,7 +302,7 @@ Stargate|Stargate_(franchise)||Stargate;Stargate SG-1;Stargate: Atlantis;Stargat
 Starman|||Starman (1984);Starman (1986)
 Starship Troopers|||Starship Troopers;Starship Troopers 2: Hero of the Federation;Starship Troopers 3: Marauder;Starship Troopers: Invasion
 The Stepfather|||The Stepfather (1987);Stepfather II;Stepfather III|n
-Superman (1978)||281438|Superman;Superman II;Superman III;Supergirl;Superman IV: The Quest for Peace|2
+Superman (1978)||281438|Superman;Superman II;Superman III;Supergirl (1984);Superman IV: The Quest for Peace|2
 Man of Steel|||Man of Steel;Batman v Superman: Dawn of Justice|n
 Teen Wolf|||Teen Wolf;Teen Wolf Too|1
 Terminator|Terminator_(franchise)||The Terminator;Terminator 2: Judgment Day;Terminator 3: Rise of the Machines;Terminator: The Sarah Connor Chronicles;Terminator: Salvation;Terminator Genisys

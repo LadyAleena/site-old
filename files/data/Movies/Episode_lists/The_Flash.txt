@@ -1,12 +1,12 @@
 .
-City of Heroes
+City of Heroes|The Calm/03/Arrow/Arrowverse
 Fastest Man Alive
 Things You Can't Outrun
 Going Rogue
 Plastique
 The Flash Is Born
 Power Outage
-Flash vs. Arrow
+Flash vs. Arrow|The Brave and the Bold/03/Arrow/Arrowverse
 The Man in the Yellow Suit
 Revenge of the Rogues
 The Sound and the Fury
@@ -16,11 +16,11 @@ Fallout
 Out of Time
 Rogue Time
 Tricksters
-All Star Team Up
+All Star Team Up|//Arrow/Arrowverse
 Who Is Harrison Wells?
 The Trap
 Grodd Lives
-Rogue Air
+Rogue Air|//Arrow/Arrowverse
 Fast Enough
 .
 The Man Who Saved Central City
@@ -30,13 +30,13 @@ The Fury of Firestorm
 The Darkness and the Light
 Enter Zoom
 Gorilla Warfare
-Legends of Today
+Legends of Today|Legends of Yesterday/04/Arrow/Arrowverse
 Running to Stand Still
 Potential Energy
 The Reverse-Flash Returns
 Fast Lane
 Welcome to Earth-2
 Escape from Earth-2
-King Shark
+King Shark|//Arrow/Arrowverse
 Trajectory
 Flash Back

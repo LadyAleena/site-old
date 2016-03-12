@@ -7,8 +7,8 @@ The Courier
 Gina Zanetakos
 Frederick Barnes
 General Ludd
-Anslo Garrick, Part 1
-Anslo Garrick, Part 2
+Anslo Garrick
+Anslo Garrick: Conclusion
 The Good Samaritan Killer
 The Alchemist
 The Cyprus Agency
@@ -30,8 +30,8 @@ The Front
 Mombasa Cartel
 The Scimitar
 The Decembrist
-Luther Braxton, Part 1
-Luther Braxton, Part 2
+Luther Braxton
+Luther Braxton: Conclusion
 Ruslan Denisov
 The Kenyon Family
 The Deer Hunter
@@ -43,4 +43,21 @@ Vanessa Cruz
 Leonard Caul
 Quon Zhang
 Karakurt
-Masha Rostova
+Tom Connolly
+.
+The Troll Farmer
+Marvin Gerard
+Eli Matchett
+The Djinn
+Arioch Cain
+Sir Crispin Crandall
+Zal Bin Hasaan
+Kings of the Highway
+The Director
+The Director: Conclusion
+Mr. Gregory Devry
+The Vehm
+Alistair Pitt
+Lady Ambrosia
+Drexel
+The Caretaker

@@ -1,4 +1,4 @@
-.
+
 Pilot
 Wendigo
 Dead in the Water
@@ -42,8 +42,8 @@ Heart
 Hollywood Babylon
 Folsom Prison Blues
 What Is and What Should Never Be
-All Hell Breaks Loose (1)
-All Hell Breaks Loose (2)
+All Hell Breaks Loose, Part 1
+All Hell Breaks Loose, Part 2
 .
 The Magnificent Seven
 The Kids are Alright
@@ -219,3 +219,28 @@ About a Boy
 Halt & Catch Fire
 The Executioner's Song
 The Things They Carried
+Paint it Black
+Inside Man
+Book Of The Damned
+The Werther Project
+Angel Heart
+Dark Dynasty
+The Prisoner
+Brother's Keeper
+.
+Out of the Darkness, Into the Fire
+Form and Void
+The Bad Seed
+Baby
+Thin Lizzie
+Our Little World
+Plush
+Just My Imagination
+O Brother Where Art Thou?
+The Devil in the Details
+Into the Mystic
+Don't You Forget About Me
+Love Hurts
+The Vessel
+Beyond the Mat
+Safe House

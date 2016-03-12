@@ -13,7 +13,7 @@ Dead Like Me|Bzzzzzzzzz!/02/Pushing Daisies
 Die Hard|Chuck Versus Santa Claus/02/Chuck
 Die Hard 2|Chuck Versus Santa Claus/02/Chuck
 Code of Vengeance|Mouth of the Snake/02/Knight Rider (1982)/Knight Rider
-Constantine (2014)|//Arrow
+Constantine (2014)|Haunted/04/Arrow/Arrowverse
 Conviction|//Deadline
 Deadline|//Law & Order/Law & Order;//Law & Order: Special Victims Unit/Law & Order;//Law & Order: Criminal Intent/Law & Order;//Law & Order: Trial by Jury/Law & Order;//Conviction/Law & Order
 Doctor Who (1963)|Marooned//Red Dwarf;//Chelmsford 123
@@ -22,6 +22,7 @@ ER|//The X-Files (1993)/The X-Files
 Firefly|//Battlestar Galactica (2003)/Battlestar Galactica (2003)
 Serenity|//The Postman
 First Monday|//JAG/
+The Flash|World's Finest/01/Supergirl (2015)
 Get Smart, Again!|//The Man from U.N.C.L.E. (1964)/U.N.C.L.E.
 The Green Hornet (1966)|A Piece of the Action/02/Batman (1966 tv)/Batman (1966);Batman's Satisfaction/02/Batman (1966 tv)/Batman (1966)
 Hart to Hart|//Moonlighting

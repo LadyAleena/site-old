@@ -47,14 +47,14 @@ City of Blood
 Streets of Fire
 Unthinkable
 .
-The Calm
+The Calm|City of Heroes/01/The Flash/Arrowverse
 Sara
 Corto Maltese
 The Magician
 The Secret Origin of Felicity Smoak
 Guilty
 Draw Back Your Bow
-The Brave and the Bold
+The Brave and the Bold|Flash vs. Arrow/01/The Flash/Arrowverse
 The Climb
 Left Behind
 Midnight City
@@ -69,7 +69,7 @@ Broken Arrow
 The Fallen
 Al Sah-Him
 This Is Your Sword
-My Name Is Oliver Queen
+My Name Is Oliver Queen|//The Flash/Arrowverse
 .
 Green Arrow
 The Candidate
@@ -78,7 +78,7 @@ Beyond Redemption
 Haunted|//Constantine (2014)
 Lost Souls
 Brotherhood
-Legends of Yesterday
+Legends of Yesterday|Legends of Today/02/The Flash/Arrowverse
 Dark Waters
 Blood Debts
 A.W.O.L.

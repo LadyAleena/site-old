@@ -44,17 +44,17 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 * I<Two of a Kind|^cassette^> (1983)
 * I<The Witches of Eastwick|^cd^> (1987)
 * I<Xanadu|^lp^> (1980) by Olivia Newton-John and ELO
-2 Babylon 5
+2 Babylon 5 novels
 # I<Voices|^massmarket^> by John Vornholt
 #5 I<The Touch of Your Shadow, the Whisper of Your Name|^massmarket^> by Neal Barrett Jr.
 #6 I<Betrayals|^massmarket^> by S. M. Stirling
-2 Dirty Dancing
+2 Dirty Dancing soundtracks
 * I<(I've Had) The Time of My Life/Love Is Strange|^ff^> (1987)
 * I<Dirty Dancing|^cd^> (1987) (Original Soundtrack from the Vestron Motion Picture)
-2 Doctor Who
+2 Doctor Who books
 * I<The Doctor Who File|^trade^> by Peter Haining
 * I<The Time Traveler's Guide|^trade^>
-2 Earth 2
+2 Earth 2 novels
 # I<Earth 2|^massmarket^> by Melissa Crandell
 # I<Puzzle|^massmarket^> by Sean Dalton
 2 Ghostbusters soundtracks

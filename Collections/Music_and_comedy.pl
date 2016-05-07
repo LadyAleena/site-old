@@ -51,6 +51,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<pure and simple|^cassette^> (1994) by Joan Jett and the Blackhearts
 * I<The Hits|^cd^> (2010) by Billy Joel
 * I<Something About the Way You Look Tonight|^cd^> (1997) by Elton John
+* I<The Essential Journey|^cd^> (2007) by Journey
 * I<World Machine|^lp^> (1985) by Level 42
 * I<"Living in a Box"|^ff^> (1987) by Living in a Box
 * I<Then and Now|^cd^> (1987) by Don McLean
@@ -114,7 +115,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Rio|^lp^> extended mix (1985)
 * I<The Power Station|^lp^> (1985) by The Power Station
 * I<So Red the Rose|^lp^> (1985) by Arcadia
-* I<Notorious|^lp^> (1986)
+* I<Notorious|^cd^> (1986) <!-- & lp -->
 * I<Notorious|^lp^> extended mix (1986)
 * I<Skin Trade|^lp^> extended mix (1987)
 * I<The Presidential Suite|^lp^> extended mix (1987)
@@ -175,6 +176,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<1999|^cd^> (1982)
 * I<Purple Rain|^cd^> (1984)
 * I<"Purple Rain"/"God"|^ff^> (1984)
+* I<Around the World in a Day|^cd^> (1985)
 * I<"Mountains"/"Alexa De Paris"|^ff^> (1986)
 * I<Batman|^cd^> (1989)
 4 Queen|Queen (band) +

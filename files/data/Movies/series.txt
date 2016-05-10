@@ -44,7 +44,7 @@ Blair Witch|Blair_Witch_(franchise)||The Blair Witch Project;Book of Shadows: Bl
 Blue Collar Comedy|Blue_Collar_Comedy_Tour||Blue Collar Comedy Tour: The Movie;Blue Collar Comedy Tour Rides Again;Blue Collar Comedy Tour: One for the Road;Blue Collar Comedy: The Next Generation;Blue Collar TV
 Bones & The Finder|||Bones;The Finder
 The Boogeyman|||The Boogeyman;Revenge of the Boogeyman;Return of the Boogeyman|n
-Bridget Jones|||Bridget Jones's Diary;Bridget Jones: The Edge of Reason
+Bridget Jones|||Bridget Jones's Diary;Bridget Jones: The Edge of Reason;Bridget Jones's Baby
 Bring It On||426082|Bring It On;Bring It on Again;Bring It On: All or Nothing;Bring It On: In It to Win It
 Buffy the Vampire Slayer|||Buffy the Vampire Slayer (1992);Buffy the Vampire Slayer (1997);Angel
 Burn Notice|||Burn Notice;Burn Notice: The Fall of Sam Axe
@@ -195,7 +195,7 @@ Mad Max|Mad_Max_(franchise)||Mad Max;Mad Max 2;Mad Max Beyond Thunderdome
 The Magnificent Seven|||The Magnificent Seven;Return of the Seven;Guns of the Magnificent Seven;The Magnificent Seven Ride!
 Major League||288069|Major League;Major League II;Major League: Back to the Minors
 The Mangler|||The Mangler;The Mangler 2;The Mangler Reborn
-Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;A.K.A. Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy 2;Thor: Ragnarok;Avengers: Infinity War – Part I;Black Panther;Captain Marvel;Avengers: Infinity War – Part II;Inhumans
+Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy 2;Thor: Ragnarok;Avengers: Infinity War – Part I;Black Panther;Captain Marvel;Avengers: Infinity War – Part II;Inhumans
 MASH|||MASH (1970);M*A*S*H (1972);AfterMASH;W*A*L*T*E*R;The Fighting Nightingales
 Slumber Party Massacre|||The Slumber Party Massacre;Slumber Party Massacre II;Slumber Party Massacre III|n
 Sorority House Massacre|||Sorority House Massacre;Sorority House Massacre II|n
@@ -214,6 +214,7 @@ The Mummy (1959)|||The Mummy (1959);The Curse of the Mummy's Tomb;The Mummy's Sh
 The Mummy (1999)|The_Mummy_(franchise)|388977|The Mummy (1999);The Mummy Returns;The Mummy: Tomb of the Dragon Emperor
 The Scorpion King|The_Mummy_(franchise)||The Scorpion King;The Scorpion King 2: Rise of a Warrior;The Scorpion King 3: Battle for Redemption;The Scorpion King 4: Quest for Power
 The Munsters|||The Munsters;Munster, Go Home!;The Mini-Munsters;The Munsters' Revenge;The Munsters Today;Here Come the Munsters;The Munsters' Scary Little Christmas
+My Big Fat Greek Wedding|||My Big Fat Greek Wedding;My Big Fat Greek Wedding 2
 My Girl|||My Girl;My Girl 2
 Nanny McPhee|||Nanny McPhee;Nanny McPhee and the Big Bang
 National Treasure|National_Treasure_(franchise)||National Treasure;National Treasure: Book of Secrets;National Treasure 3
@@ -350,3 +351,4 @@ The X-Files|The_X-Files_(franchise)||The X-Files (1993);The X-Files (1998);The L
 X-Men|X-Men_(film_series)|291113|X-Men;X2;X-Men: The Last Stand;X-Men Origins: Wolverine;X-Men: First Class;The Wolverine
 xXx|||xXx;xXx: State of the Union
 Zorro (1998)|||The Mask of Zorro;The Legend of Zorro
+Prison Break|||Prison Break;Prison Break: Proof of Innocence;Breakout Kings

@@ -294,6 +294,7 @@ Bridge to Terabithia|2007||film||Bridge_to_Terabithia_(2007_film)|345717|0398808
 The Bridges of Madison County|1995||film||The_Bridges_of_Madison_County_(film)|134725|0112579||the-bridges-of-madison-county|drama||
 Bridget Jones's Diary|2001||film|dvd|Bridget_Jones%27s_Diary_(film)|240532|0243155||bridget-joness-diary|romantic comedy|novel|Helen Fielding
 Bridget Jones: The Edge of Reason|2004||film|dvd|Bridget_Jones:_The_Edge_of_Reason_(film)|299522|0317198||bridget-jones-the-edge-of-reason|romantic comedy|novel|Helen Fielding
+Bridget Jones's Baby|2016||film||Bridget_Jones’s_Baby|557024|1473832||bridget-joness-baby-2016|romantic comedy|novel|Helen Fielding
 Bring It On|2000||film|dvd|Bring_It_On_(film)|198455|0204946||bring-it-on|sports;comedy||
 Bring It on Again|2004||film|dvd|Bring_It_On_Again|296833|0334965||bring-it-on-again|sports;comedy||
 Bring It On: All or Nothing|2006||film||Bring_It_On:_All_or_Nothing|351087|0490822||bring-it-on-all-or-nothing|sports;comedy||
@@ -612,7 +613,7 @@ Extreme Makeover: Home Edition|2003|2012|tv||Extreme_Makeover:_Home_Edition|3166
 Face of the Screaming Werewolf|1964||film||Face_of_the_Screaming_Werewolf|350422|0058079||face-of-the-screaming-werewolf|monster:mummies,therianthropes||
 Failure to Launch|2006||film||Failure_to_Launch|329645|0427229||failure-to-launch|romantic comedy||
 Fairly Legal|2011|2012|tv||Fairly_Legal|531235|1586676|78938||legal;dramedy||
-Falling Skies|2011|tbd|tv||Falling_Skies|538326|1462059|79488||science fiction:aliens||
+Falling Skies|2011|2015|tv||Falling_Skies|538326|1462059|79488||science fiction:aliens||
 Fame (1980)|1980||film||Fame_(1980_film)|16668|0080716||fame1980|musical||
 Fame (1982)|1982|1987|tv||Fame_(1982_TV_series)|280668|0083412|2060||musical||
 Fame (2009)|2009||film||Fame_(2009_film)|410957|1016075||fame|musical||
@@ -812,7 +813,7 @@ Two Harts in 3/4 Time|1995||film|||412126|0113267||hart-to-hart-two-harts-in-thr
 Harts in High Season|1996||film|||172942|0116495||hart-to-hart-harts-in-high-season-1996|detective
 Till Death Do Us Hart|1996||film|||173601|0160356||hart-to-hart-til-death-do-us-hart|detective
 The Haunted Mansion|2003||film||The_Haunted_Mansion_(film)|283306|0338094||the-haunted-mansion|monster:ghosts||
-Haven|2010|tbd|tv||Haven_(TV_series)||1519931|78043||horror;monster:mutants|short story|Stephen King
+Haven|2010|2015|tv||Haven_(TV_series)||1519931|78043||horror;monster:mutants|short story|Stephen King
 Hawaii|2004|2004|tv||Hawaii_(TV_series)|314519|0410987|23581||police procedural||
 Hawaii Five-0|2010|tbd|tv||Hawaii_Five-0|519678|1600194|hawaii-five-0||police procedural||
 Hawaii Five-O|1968|1980|tv||Hawaii_Five-O|126101|0062568|hawaii-fiveo||police procedural||
@@ -1268,6 +1269,7 @@ Mutant Chronicles|2009||film||Mutant_Chronicles_(film)|352386|0490181||the-mutan
 Mutant X|2001|2004|tv||Mutant_X_(TV_series)|261763|0283203|4329||monster:mutants||
 My Best Friend's Wedding|1997||film||My_Best_Friend%27s_Wedding|154941|0119738||my-best-friends-wedding|romantic comedy||
 My Big Fat Greek Wedding|2002||film|dvd|My_Big_Fat_Greek_Wedding|261239|0259446||my-big-fat-greek-wedding|romantic comedy||
+My Big Fat Greek Wedding 2|2016||film||My_Big_Fat_Greek_Wedding_2|600262|3760922||my-big-fat-greek-wedding-2|romantic comedy||
 My Cousin Vinny|1992||film|dvd|My_Cousin_Vinny|34008|0104952||my-cousin-vinny|legal;comedy||
 My Demon Lover|1987||film|||34013|0093589||my-demon-lover|monster:demons||
 My Fair Lady|1964||film||My_Fair_Lady_(film)|34019|0058385||my-fair-lady|musical||
@@ -2409,7 +2411,7 @@ Guardians of the Galaxy|2014||film|bd|Guardians_of_the_Galaxy_(film)|568178|2015
 Agent Carter|2015|tbd|tv||Agent_Carter_(TV_series)||3475734|193972||superhero fiction|comics|Marvel Comics
 Daredevil (2015)|2015|tbd|tv||Daredevil_(TV_series)||3322312|195188||superhero fiction|comics|Marvel Comics
 Avengers: Age of Ultron|2015||film||Avengers:_Age_of_Ultron|570172|2395427||the-avengers-age-of-ultron|superhero fiction|comics|Marvel Comics
-A.K.A. Jessica Jones|2015|tbd|tv||||2357547|195337||superhero fiction|comics|Marvel Comics
+Jessica Jones|2015|tbd|tv||||2357547|195337||superhero fiction|comics|Marvel Comics
 Ant-Man|2015||film||Ant-Man_(film)|453126|0478970||antman|superhero fiction|comics|Marvel Comics
 Captain America: Civil War|2016||film||Captain_America:_Civil_War|596036|3498820||captain-america-civil-war|superhero fiction|comics|Marvel Comics
 Luke Cage|2016|tbd|tv||||3322314|||superhero fiction|comics|Marvel Comics
@@ -2450,6 +2452,13 @@ Day of the Dead (2008)|2008||film||Day_of_the_Dead_(2008_film)|355655|0489018||d
 The Incredibly Strange Creatures Who Stopped Living and Became Mixed-Up Zombies!!?|1964||film||The_Incredibly_Strange_Creatures_Who_Stopped_Living_and_Became_Mixed-Up_Zombies|63544|0057181||the-incredibly-strange-creatures-who-stopped-living-and-became-mixedup-zombies|horror;monster:zombies||
 Night of the Day of the Dawn of the Son of the Bride of the Return of the Terror|1991||film|||332506|0230575||night-of-the-day-of-the-dawn-of-the-son-of-the-bride-of-the-return-of-the-revenge-of-the-terror-of-th-1991|horror;comedy;monster:zombies||
 Night of the Day of the Dawn of the Son of the Bride of the Return of the Revenge of the Terror of the Attack of the Evil, Mutant, Hellbound, Flesh-Eating Subhumanoid Zombified Living Dead, Part 3|2005||film||||0475343|||horror;comedy;monster:zombies||
-Arrow|2012||tv||Arrow_(TV_series)|574062|2193021|158560||superhero fiction|comics|DC Comics
-The Flash|2014||tv||The_Flash_(2014_TV_series)||3107288|193920||superhero fiction|comics|DC Comics
-Legends of Tomorrow|2016||tv||Legends_of_Tomorrow||4532368|196111||superhero fiction|comics|DC Comics
+Arrow|2012|tbd|tv||Arrow_(TV_series)|574062|2193021|158560||superhero fiction|comics|DC Comics
+The Flash|2014|tbd|tv||The_Flash_(2014_TV_series)||3107288|193920||superhero fiction|comics|DC Comics
+Legends of Tomorrow|2016|tbd|tv||Legends_of_Tomorrow||4532368|196111||superhero fiction|comics|DC Comics
+Prison Break|2005|2009|tv||Prison_Break|334986|0455275|31635||drama;crime||
+Prison Break: Proof of Innocence|2006|2006|tv||Prison_Break:_Proof_of_Innocence||0825355|||drama;crime
+Breakout Kings|2011|2012|tv||Breakout_Kings||1590961|78606||drama;crime
+Chicago Hope|1994|2000|tv||Chicago_Hope|309465|0108724|327||drama;medical||
+FlashForward|2009|2010|tv||FlashForward|501076|1441135|76455||drama;science fiction||
+Once Upon a Time|2011|tbd|tv||Once_Upon_a_Time_(TV_series)||1843230|80922||drama;fantasy||
+Once Upon a Time in Wonderland|2013|tbd|tv||Once_Upon_a_Time_in_Wonderland||2802008|183211||drama;fantasy||

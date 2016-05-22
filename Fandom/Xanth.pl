@@ -10,27 +10,17 @@ use Base::Page qw(page story);
 use Base::Data qw(data_directory get_directory data_file);
 use HTML::Elements qw(pre);
 use Util::Convert qw(textify);
+use Util::FamilyTree qw(make_tree);
 
-my $directory = 'Miscellany/Xanth_families';
+my $directory = 'Fandom/Xanth_families';
 my @files = get_directory(data_directory($directory));
-
-my %boxes;
-@boxes{qw(l v t)} = map {"&box$_;"} qw(hu hd vh);
 
 my $doc_magic;
 for my $file (@files) {
   $doc_magic->{textify($file)} = sub {
     my $read = read_file(data_file($directory, $file));
-       $read =~ s/\+/&#9829;/g;
-       $read =~ s/\*/&#9825;/g;
-       $read =~ s/-/&boxH;/g;
-       $read =~ s/:/&brvbar;/g;
-       $read =~ s/_([lvt])_/_$boxes{$1}_/g;
-       $read =~ s/\|/&boxv;/g;
-       $read =~ s/(\s)_/$1&boxdr;/g;
-       $read =~ s/_(\s|$)/&boxdl;$1/g;
-       $read =~ s/_/&boxh;/g;
-    pre(5, sub { print $read })
+    my $tree = make_tree($read);
+    pre(5, sub { print $tree })
   }
 }
 

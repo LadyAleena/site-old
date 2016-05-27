@@ -35,15 +35,15 @@ B<Aloria> was once a large kingdom in the north on the western continent until B
 3 Arendia
 B<Arendia> is a kingdom on the western continent. It once had four duchies, now it has only two.
 * Mimbre is the southern duchy which contains the kingdom's capital, Vo Mimbre.
-* Astur is the northern duchy
-* Wacune was destroyed in a civil war with the Mimbrates and Asturians
-* Erat is now the independent kingdom of Sendaria created by Polgara
+* Astur is the northern duchy.
+* Wacune was destroyed in a civil war with the Mimbrates and Asturians.
+* Erat is now the independent kingdom of Sendaria created by Polgara.
 3 The East
 B<The East> is considered all lands held by the Angaraks, though not all within are Angarak.
+* Mallorea
+* Cthol Murgos
 * Gar og Nadrak
 * Mishrak ac Thull
-* Cthol Murgos
-* Mallorea
 4 Mallorea
 B<Mallorea> is an empire which encompasses the entire eastern continent and includes several groups of nations. The Emperor is also the overlord of Cthol Murgos, Mishrak ac Thull, and Gar og Nadrak on the western continent.
 * Ancient Mallorea - the northwesten Angarak kingdom in Mallorea

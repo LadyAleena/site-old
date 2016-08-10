@@ -133,8 +133,8 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 # I<Pet Peeve|^hardcover^>
 # I<Stork Naked|^hardcover^>
 # I<Air Apparent|^hardcover^>
-# I<Jumper Cable|^hardcover^>
 # I<Two to the Fifth|^hardcover^>
+# I<Jumper Cable|^hardcover^>
 # I<Knot Gneiss|^hardcover^>
 # I<Well-Tempered Clavicle|^hardcover^>
 # I<Luck of the Draw|^hardcover^>

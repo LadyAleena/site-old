@@ -40,8 +40,9 @@ This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade p
 * The 1997 Astrology Guide
 * The Lost Zodiac (with deck) by Catherine Tennant
 2 Biography
-* DON'T PANIC: The Official Hitchhiker's Guide to the Galaxy Companion by Neil Gaiman
-* Knee Deep in Paradise by Brett Butler
+* I<DON'T PANIC: The Official Hitchhiker's Guide to the Galaxy Companion|^trade^> by Neil Gaiman
+* I<Knee Deep in Paradise|^hardcover^> by Brett Butler
+* I<Bring on the Sword!|^massmarket^> by Dana White
 2 Business
 * The Portable MBA by Eliza G. C. Collins/Mary Anne Devanna
 3 Louis E. Boone and David L. Kurtz

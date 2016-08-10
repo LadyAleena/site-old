@@ -131,6 +131,16 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 # I<Cube Route|^hardcover^>
 # I<Current Events|^hardcover^>
 # I<Pet Peeve|^hardcover^>
+# I<Stork Naked|^hardcover^>
+# I<Air Apparent|^hardcover^>
+# I<Jumper Cable|^hardcover^>
+# I<Two to the Fifth|^hardcover^>
+# I<Knot Gneiss|^hardcover^>
+# I<Well-Tempered Clavicle|^hardcover^>
+# I<Luck of the Draw|^hardcover^>
+# I<Esrever Doom|^hardcover^>
+# I<Board Stiff|^hardcover^>
+# I<Five Portraits|^hardcover^>
 3 Robert Asprin +
 4 Myth
 #2 I<Myth Conceptions|^massmarket^>
@@ -457,7 +467,7 @@ as A. N. Roquelaure
 # I<Twilight at the Well of Souls|^massmarket^>
 4 The Watchers at the Well
 # I<Echos of the Well of Souls|^massmarket^>
-3  Arhtur C. Clarke +
+3 Arthur C. Clarke +
 * I<Cradle|^massmarket^> with Gentry Lee
 * I<The Light of Other Days|^hardcover^> with Stephen Baxter
 * I<Richter 10|^hardcover^> with Mike McQuay

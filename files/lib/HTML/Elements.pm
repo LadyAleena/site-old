@@ -764,7 +764,7 @@ See the L<synopsis|/SYNOPSIS> for how B<C<html>> could be used.
 
 =head2 C<head>
 
-B<C<head>> is available in case you do not want to use the C<L<html|/html>> function. It has the required parameter C<title> and optional parameters C<base>, C<meta>, C<links>, C<scripts>, C<style>, and C<profile>.
+B<C<head>> is available in case you do not want to use the C<L<html|/html>> function. It has the required parameter C<title> and optional parameters C<base>, C<meta>, C<links>, C<scripts>, C<style>, C<noscript>, and C<profile>.
 
   head($tab, { 
     'title'   => 'My page title',
@@ -1392,7 +1392,7 @@ There are many other modules out there which can build and print HTML elements, 
 
 =head1 AUTHOR
 
-Written by Lady Aleena (Lady underscore Aleena at xecu dot net) with a lot of help from the L<PerlMonks|http://www.perlmonks.org>.
+Lady Aleena with a lot of help from the L<PerlMonks|http://www.perlmonks.org>.
 
 =cut
 

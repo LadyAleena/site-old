@@ -2,8 +2,8 @@ package HTML::Elements;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(html style body div section article nav header footer heading head pre
-                 paragraph anchor img span rparagraph blockquote list definition_list table
+our @EXPORT_OK = qw(html style body main div section article nav header footer heading head pre
+                 paragraph address anchor img span rparagraph blockquote list definition_list table
                  form fieldset selection input inputs textarea figure noscript);
 
 use Base::Line qw(rline line);
@@ -12,7 +12,7 @@ my @ics  = qw(id class style lang);
 my @java = qw(onclick ondblclick onkeypress onkeydown onkeyup onmouseover onmousedown onmouseup onmousemove onmouseout);
 my $gen  = [@ics, @java];
 
-sub get_attributes {
+sub html_attributes {
   my ($valid, $opt) = @_;
   my @attributes;
   for (@{$valid}) {
@@ -24,7 +24,7 @@ sub get_attributes {
 
 sub start_tag {
   my ($tag, $attributes, $opt) = @_;
-  my $tag_attributes = get_attributes($attributes, $opt);
+  my $tag_attributes = html_attributes($attributes, $opt);
   $tag .= " $tag_attributes" if $tag_attributes;
   return "<$tag>";
 }
@@ -44,40 +44,48 @@ sub break {
 }
 
 # plain_element is used in the following functions:
-# term, caption, label, option, legend, heading, figcaption
+# code_element, anchor, span, title, scripts, term, caption, label, option, legend, figcaption, heading
 sub plain_element {
   my ($tag, $attributes, $value, $opt) = @_;
   my $start = start_tag($tag, $attributes, $opt);
   my $end   = end_tag($tag);
-  return $start.$value.$end;
+  my $line  = join('', grep( defined, ($start, $value, $end)));
+  return $line;
 }
 
 # code_element is used in the following functions:
-# body, main, section, article, nav, aside, div, noscript, form, pre, header, footer
+# body, main, section, article, nav, aside, div, address, noscript, form, pre, header, footer
 sub code_element {
   my ($tag, $attributes, $tab, $value, $opt) = @_;
+  
+  if (!$value) {
+    line($tab, plain_element($tag, $attributes, $value, $opt));
+  }
+  else {
+    line($tab, start_tag($tag, $attributes, $opt));
 
-  line($tab, start_tag($tag, $attributes, $opt));
+    $tab++;
+    header ($tab, @{$opt->{'header'}})  if ($opt->{'header'}  && $tag !~ /(?:header|footer|address|pre)/);
+    heading($tab, @{$opt->{'heading'}}) if ($opt->{'heading'} && $tag !~ /(?:address|pre)/);
+    $tab++ if $opt->{'heading'};
+    ref($value) eq 'CODE' ? &$value : paragraph($tab + 1, $value, { 'separator' => $opt->{'separator'} });
+    $tab-- if $opt->{'heading'};
+    footer ($tab, @{$opt->{'footer'}})  if ($opt->{'footer'}  && $tag !~ /(?:header|footer|address|pre)/);
+    $tab--;
 
-  $tab++;
-  header ($tab, @{$opt->{'header'}})  if ($opt->{'header'}  && $tag !~ /(?:header|footer|pre)/);
-  heading($tab, @{$opt->{'heading'}}) if ($opt->{'heading'} && $tag !~ /pre/);
-  ref($value) eq 'CODE' ? &$value : paragraph($tab + 1, $value, { 'separator' => $opt->{'separator'} });
-  footer ($tab, @{$opt->{'footer'}})  if ($opt->{'footer'}  && $tag !~ /(?:header|footer|pre)/);
-  $tab--;
-
-  line($tab, end_tag($tag));
+    line($tab, end_tag($tag));
+  }
 }
 
 # Start elements
 
-sub anchor {
-  plain_element('a', ['href', 'target', 'title', @$gen, 'tabindex'], @_);
-}
-
 sub img {
   my ($opt) = @_;
   return start_tag('img', ['src', 'alt', @$gen, 'tabindex'], $opt);
+}
+
+sub anchor {
+  plain_element('a', ['href', 'target', 'title', @$gen, 'tabindex'], @_);
 }
 
 sub span {
@@ -106,7 +114,7 @@ sub base {
 sub links {
   my ($tab, $links) = @_;
   for (@$links) {
-    line($tab, start_tag('link', ['rel', 'rev', 'type', 'href'], $_));
+    line($tab, start_tag('link', ['rel', 'rev', 'type', 'href', 'title'], $_));
   }
 }
 
@@ -166,7 +174,7 @@ sub rparagraph {
   my $line;
   for (grep(length, split(/$sep/, $value))) {
     my $paragraph = $opt->{'break'} ? break($_, $opt->{'break'}) : $_;
-    
+       $paragraph =~ s/^\s+//;
     $line .= rline($tab, start_tag($tag, $gen, $opt));
     $line .= rline($tab + 1, $paragraph);
     $line .= rline($tab, end_tag($tag));
@@ -199,7 +207,7 @@ sub blockquote {
 sub item {
   my ($tab, $value, $opt) = @_;
   my $tag = 'li';
-
+  
   line($tab, start_tag($tag, ['value', @$gen], $opt));
   line($tab + 1, $value);
   if ($opt->{inlist}) {
@@ -249,14 +257,58 @@ sub definition_list {
 
   line($tab, start_tag($tag, $gen, $opt));
   for my $item (@$definition_list) {
-    term($tab + 1, $item->{'term'});
-    if (!$opt->{'headings'}) {
-      definition($tab + 2, $item->{'definition'});
+    if ($item->{'term'}) {
+      my $term = $item->{'term'};
+      if (ref($term) eq 'ARRAY') {
+        term($tab + 1, @$term);
+      }
+      else {
+        term($tab + 1, $term);
+      }
     }
-    else {
-      for my $heading (@{$opt->{'headings'}}) {
+
+    if ($item->{'terms'}) {
+      my $terms = $item->{'terms'};
+      for my $term (@{$terms}) {
+        if (ref($term) eq 'ARRAY') {
+          term($tab + 1, @$term);
+        }
+        else {
+          term($tab + 1, $term);
+        }
+      }
+    }
+
+    if ($opt->{'definition'}) {
+      my $definition = $item->{'definition'};
+      if (ref($definition) eq 'ARRAY') {
+        definition($tab + 2, @$definition);
+      }
+      else {
+        definition($tab + 2, $definition);
+      }
+    }
+
+    if ($item->{'definitions'}) {
+      my $definitions = $item->{'definitions'};
+      for my $definition (@{$definitions}) {
+        if (ref($definition) eq 'ARRAY') {
+          definition($tab + 1, @$definition);
+        }
+        else {
+          definition($tab + 1, $definition);
+        }
+      }
+    }
+
+    if ($opt->{'headings'}) {
+      my $headings = $opt->{'headings'};
+      for my $heading (@$headings) {
         my $upheading = ucfirst $heading;
-        definition($tab + 2, qq(<strong>$upheading:</strong> ).$item->{$heading});
+        my $span_class = $opt->{'span class'} ? $opt->{'span class'} : undef;
+        my $span = span("$upheading: ", { 'class' => $span_class });
+        
+        definition($tab + 2, $span.$item->{$heading});
       }
     }
   }
@@ -268,19 +320,32 @@ sub definition_list {
 # Begin elements for tables.
 # table elements to be added: tbody, thead, tfoot.
 
+sub caption {
+  my $tab = shift;
+  line($tab, plain_element('caption', ['align', @$gen], @_));
+}
+
+sub col {
+  my ($tab, $opt) = @_;
+  line($tab, start_tag('col', ['span', @$gen], $opt));
+}
+
 sub cell {
   my ($tab, $type, $value, $opt) = @_;
   $type = $opt->{'type_override'} ? $opt->{'type_override'} : $type;
   my $tag = 't'.$type;
-  
-  line($tab, start_tag($tag, ['colspan', 'rowspan', @$gen], $opt));
+  my $start_tag = start_tag($tag, ['colspan', 'rowspan', @$gen], $opt);
+  my $end_tag   = end_tag($tag);
+  $value = '&nbsp' if !$value;
+
   if ($value eq 'list') {
+    line($tab, $start_tag);
     list($tab + 1, @{$opt->{'list'}});
+    line($tab, $end_tag);
   }
   else {
-    line($tab + 1, $value);
+    line($tab + 1, $start_tag.$value.$end_tag);
   }
-  line($tab, end_tag($tag));
 }
 
 sub row {
@@ -329,16 +394,6 @@ sub rows {
       row($tab, $type , $_, $attributes) for @$row;
     }
   }
-}
-
-sub col {
-  my ($tab, $opt) = @_;
-  line($tab, start_tag('col', ['span', @$gen], $opt));
-}
-
-sub caption {
-  my $tab = shift;
-  line($tab, plain_element('caption', ['align', @$gen], @_));
 }
 
 sub thead {
@@ -510,10 +565,11 @@ sub pre     { code_element('pre',     $gen, @_) }
 sub div     { code_element('div',     $gen, @_) }
 sub header  { code_element('header',  $gen, @_) }
 sub footer  { code_element('footer',  $gen, @_) }
+sub address { code_element('address', $gen, @_) }
 sub aside   { code_element('aside',   $gen, @_) }
-sub article { code_element('article', $gen, @_) }
 sub nav     { code_element('nav',     $gen, @_) }
 sub section { code_element('section', $gen, @_) }
+sub article { code_element('article', $gen, @_) }
 sub main    { code_element('main',    $gen, @_) }
 sub body    { code_element('body',    $gen, @_) }
 
@@ -524,7 +580,7 @@ sub html {
   my $tag = 'html';
   
   print "content-type: text/html \n\n";
-  line(0, '<!DOCTYPE html>');
+  line(0, $opt->{'doctype'} ? $opt->{'doctype'} : '<!DOCTYPE html>');
   line($tab, start_tag($tag, $gen, $opt));
   head($tab + 1, $opt->{'head'})    if $opt->{'head'};
   body($tab + 1, @{$opt->{'body'}}) if $opt->{'body'};
@@ -735,9 +791,10 @@ Each meta hash would look mostly like the following. The optional parameters are
 Each link hash would look mostly like the following. Since there is a conflict between the perl funcion C<link>, this function takes a list of them.
 
   links => [{
+    href => 'css/css.css',
+    title => 'title',
     rel  => 'stylesheet,
-    type => 'text/css',
-    href => 'css/css.css'
+    type => 'text/css'
   }],
 
 =head3 Setting up C<scripts>

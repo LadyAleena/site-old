@@ -22,6 +22,12 @@ sub html_attributes {
   return join(' ', @attributes);
 }
 
+# start_tag is used in the following elements:
+# plain_element, code_element, img, 
+# meta, base, links, style, head, rparagraph, blockquote,
+# item, list, definition, definition_list,
+# col, cell, row, thead, tfoot, tbody, table, 
+# selection, input, fieldset, figure, html
 sub start_tag {
   my ($tag, $attributes, $opt) = @_;
   my $tag_attributes = html_attributes($attributes, $opt);
@@ -29,6 +35,11 @@ sub start_tag {
   return "<$tag>";
 }
 
+# end_tag is used in the following elements:
+# plain_element, code_element, style, head, rparagraph, blockquote,
+# item, list, definition, definition_list,
+# cell, row, thead, tfoot, tbody, table,
+# selection, fieldset, figure, html
 sub end_tag {
   my ($tag) = @_;
   return "</$tag>";
@@ -43,7 +54,7 @@ sub break {
   return $line;
 }
 
-# plain_element is used in the following functions:
+# plain_element is used in the following elements:
 # code_element, anchor, span, title, scripts, term, caption, label, option, legend, figcaption, heading
 sub plain_element {
   my ($tag, $attributes, $value, $opt) = @_;
@@ -53,7 +64,7 @@ sub plain_element {
   return $line;
 }
 
-# code_element is used in the following functions:
+# code_element is used in the following elements:
 # body, main, section, article, nav, aside, div, address, noscript, form, pre, header, footer
 sub code_element {
   my ($tag, $attributes, $tab, $value, $opt) = @_;

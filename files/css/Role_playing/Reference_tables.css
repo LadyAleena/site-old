@@ -1,5 +1,0 @@
-article#proficiency_descriptions > section > table { float: right; }
-
-form { position: absolute; right: 0; clear: both; }
-form select { clear: both; display: block; width: 100%; }
-form select.multiple { height: 5em; }

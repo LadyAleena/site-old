@@ -9,7 +9,7 @@ use HTML::Entities qw(encode_entities);
 use lib "../files/lib";
 use Base::Page qw(page);
 use Base::Menu qw(file_menu);
-use HTML::Elements qw(section list);
+use HTML::Elements qw(section paragraph list);
 use Util::Sort qw(article_sort);
 use Movie qw(display_simple_movie movie genre);
 
@@ -32,13 +32,15 @@ page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
         my $class = scalar(@movies) > 72 ? 'three' : scalar(@movies) > 36 ? 'two' : 'one';
         my $style = $class eq 'three' ? 'font-size:smaller' : undef;
         section(4, sub {
+          my $genre = $subgenre ne 'main' ? $subgenre : $select;
+          paragraph(6, "This is a list of $genre movies I have gathered.");
           list(6, 'u', \@movies, { 'class' => $class, 'style' => $style });
         }, { 'heading' => $subgenre ne 'main' ? [3, ucfirst $subgenre] : undef });
       }
     }
     else {
-      $heading = [2, 'Pick a genre'];
+      paragraph(6, "Click a genre to see a list of movies.");
       list(5, 'u', $file_menu, { 'class' => 'three' });
     }
-  }, { 'heading' => $heading });
+  });
 });

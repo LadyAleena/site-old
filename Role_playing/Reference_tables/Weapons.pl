@@ -27,13 +27,13 @@ my @rows;
 for my $weapon (sort { $a->{'Weapon'} cmp $b->{'Weapon'} } values %$weapons_list) {
   next if $broad && (!$weapon->{'broad group'} || $weapon->{'broad group'} ne $broad);
   next if $tight && (!$weapon->{'tight group'} || $weapon->{'tight group'} ne $tight);
-  push @rows, [map($weapon->{$_} ? $weapon->{$_} : '',@headings)];
+  push @rows, [map($weapon->{$_} ? $weapon->{$_} : '', @headings)];
 }
 
 my $head = $broad  ? $broad : $tight ? $tight : undef;
 page( 'heading' => $head, 'code' => sub {
   section(3, sub {
-    tiny_select(4, { 'location' => 'Weapons.pl', 'file' => ['Role_playing/Reference_tables','Weapons_select.txt'], });
+    tiny_select(4, { 'location' => 'Weapons.pl', 'file' => ['Role_playing/Reference_tables','Weapons_select.txt'], 'class' => 'proficiency' });
     table(4, { 'class' => 'proficiency', 'rows' => [['header',[\@headings]],['data',\@rows]] });
   });
 });

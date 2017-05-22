@@ -8,17 +8,17 @@ use lib '../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
-use People qw(get_people);
+use People qw(people_list);
 
 my $doc_magic = {
-  'producers and directors' => sub { list(3, 'u', get_people('Producers_and_directors.txt'), { 'class' => 'three' }) },
-  'film actors' => sub { list(3, 'u', get_people('Actors_in_films.txt'), { 'class' => 'three' }) },
+  'producers and directors' => sub { list(3, 'u', people_list('Producers_and_directors.txt'), { 'class' => 'three' }) },
+  'film actors'             => sub { list(3, 'u', people_list('Actors_in_films.txt'),         { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
-This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<VHSs|^vhs^>.
+This is my movie collection of SPAN<blu-rays|^bds^>, SPAN<DVDs|^dvds^>, and SPAN<VHSs|^vhss^>.
 2 Films
 *| two
 * I<50 First Dates|^dvd^> (2004)
@@ -98,6 +98,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<Good Advice|^dvd^> (2001)
 * I<The Goonies|^dvd^> (1985)
 * I<Hanging Up|^dvd^> (2000)
+* I<Hansel and Gretel: Witch Hunters|^bd^> (2013)
 * I<Heartbreak Ridge|^dvd^> (1986)
 * I<Heavy Metal|^dvd^> (1981)
 * I<High Spirits|^dvd^> (1988)
@@ -111,7 +112,6 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<I Love Trouble|^dvd^> (1994)
 * I<The Ice Pirates|^dvd^> (1984)
 * I<If Lucy Fell|^dvd^> (1996)
-* I<Independence Day|^dvd^> (1996)
 * I<Joe Versus the Volcano|^dvd^> (1990)
 * I<Jumanji|^dvd^> (1995)
 * I<Kull the Conqueror|^dvd^> (1997)
@@ -252,6 +252,7 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 3 Bridget Jones
 * I<Bridget Jones's Diary|^dvd^> (2001)
 * I<Bridget Jones: The Edge of Reason|^dvd^> (2004)
+* I<Bridget Jones's Bady|^bd^> (2016)
 3 Bring It On
 * I<Bring It On|^dvd^> (2000)
 * I<Bring It on Again|^dvd^> (2004)
@@ -267,19 +268,13 @@ This is my movie collection of SPAN<blu-rays|^bd^>, SPAN<DVDs|^dvd^>, and SPAN<V
 * I<Fantastic Four|^dvd^> (2005)
 * I<Fantastic Four: Rise of the Silver Surfer|^dvd^> (2007)
 3 Ghostbusters
-See also the A<tie-ins|href="Tie-ins.pl#Ghostbusters"> I own.
 * I<Ghostbusters|^dvd^> (1984)
 * I<Ghostbusters II|^dvd^> (1989)
 (boxed set)
+See the A<tie-ins|href="Tie-ins.pl#Ghostbusters"> I own.
 3 Grease
 * I<Grease|^dvd^> (1978)
 * I<Grease 2|^dvd^> (1982)
-3 Indiana Jones
-* I<Raiders of the Lost Ark|^bd^> (1981)
-* I<Indiana Jones and the Kingdom of the Crystal Skull|^bd^> (2008)
-* I<Indiana Jones and the Last Crusade|^bd^> (1989)
-* I<Indiana Jones and the Temple of Doom|^bd^> (1984)
-(blu-ray boxed set)
 3 Harry Potter +
 * I<Harry Potter and the Sorcerer's Stone|^bd^> (2001)
 * I<Harry Potter and the Chamber of Secrets|^bd^> (2002)
@@ -296,11 +291,22 @@ See also the A<tie-ins|href="Tie-ins.pl#Ghostbusters"> I own.
 3 Hot Shots!
 * I<Hot Shots!|^dvd^> (1991)
 * I<Hot Shots! Part Deux|^dvd^> (1993)
+3 Independence Day
+* I<Independence Day|^bd^> (1996)
+* I<Independence Day: Resurgence|^bd^> (2016)
+See the A<tie-ins|href="Tie-ins.pl#Independence_Day">
+3 Indiana Jones
+* I<Raiders of the Lost Ark|^bd^> (1981)
+* I<Indiana Jones and the Kingdom of the Crystal Skull|^bd^> (2008)
+* I<Indiana Jones and the Last Crusade|^bd^> (1989)
+* I<Indiana Jones and the Temple of Doom|^bd^> (1984)
+(blu-ray boxed set)
 3 Jurassic Park
 See also the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 * I<Jurassic Park|^dvd^> (1993)
 * I<The Lost World: Jurassic Park|^dvd^> (1997)
 * I<Jurassic Park III|^dvd^> (2001)
+See the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 (boxed set)
 3 Kill Bill +
 * I<Kill Bill: Vol. 1|^dvd^> (2003)
@@ -309,6 +315,7 @@ See also the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 * I<The Lawnmower Man|^dvd^> (1992)
 * I<Lawnmower Man 2: Beyond Cyberspace|^dvd^> (1996)
 3 Marvel Cinematic Universe +
+*| two
 * I<Iron Man|^bd^> (2008)
 * I<The Incredible Hulk|^bd^> (2008)
 * I<Iron Man 2|^bd^> (2010)
@@ -319,6 +326,10 @@ See also the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 * I<Thor: The Dark World|^bd^> (2013)
 * I<Captain America: The Winter Soldier|^bd^> (2014)
 * I<The Guardians of the Galaxy|^bd^> (2014)
+* I<Avengers: Age of Ultron|^bd^> (2015)
+* I<Ant-Man|^bd^> (2015)
+* I<Captain America: Civil War|^bd^> (2016)
+* I<Doctor Strange|^bd^> (2016)
 3 The Matrix
 * I<The Matrix|^bd^> (1999)
 * I<The Matrix Reloaded|^bd^> (2003)
@@ -360,16 +371,16 @@ See also the A<tie-ins|href="Tie-ins.pl#Jurassic_Park"> I own.
 * I<Sister Act|^dvd^> (1992)
 * I<Sister Act 2: Back in the Habit|^dvd^> (1993)
 3 Star Trek
-See also the A<tie-ins|href="Tie-ins.pl#Star_Trek"> I own.
 * I<Star Trek: First Contact|^vhs^> (1996)
 * I<Star Trek: Generations|^vhs^> (1994)
 * I<Star Trek: Insurrection|^vhs^> (1998)
+See the A<tie-ins|href="Tie-ins.pl#Star_Trek"> I own.
 3 Star Wars
-See also the A<tie-ins|href="Tie-ins.pl#Star_Wars"> I own.
 * I<Star Wars|^dvd^> (1977)
 * I<Star Wars: Episode V - The Empire Strikes Back|^dvd^> (1980)
 * I<Star Wars: Episode VI - Return of the Jedi|^dvd^> (1983)
 (boxed set)
+See the A<tie-ins|href="Tie-ins.pl#Star_Wars"> I own.
 3 Starship Troopers
 * I<Starship Troopers|^dvd^> (1997)
 * I<Starship Troopers 2: Hero of the Federation|^dvd^> (2004)
@@ -397,42 +408,43 @@ See also the A<tie-ins|href="Tie-ins.pl#Star_Wars"> I own.
 * I<The Mask of Zorro|^dvd^> (1998)
 * I<The Legend of Zorro|^dvd^> (2005)
 2 Television series and miniseries
+*| two
 * I<The 10th Kingdom|^dvd^> (2000)
-* I<Blood Ties|^bd^> (2006) (complete series boxed set)
-* I<Bones|^dvd^> (2005) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>)
-* I<Castle|^dvd^> (2009) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<5|^dvd^>, SPAN<6|^dvd^>)
+* I<Blood Ties|^bd^> (2006)
+* I<Bones|^dvd^> (2005) (Seasons: SPAN<1-4|^dvd^>)
+* I<Castle|^dvd^> (2009) (Seasons: SPAN<1-7|^dvd^>)
 * I<Chuck|^bd^> (2007) (complete series boxed set)
 * I<Crusade|^dvd^> (1999)
 * I<The Dresden Files|^dvd^> (2007)
 * I<Dinotopia|^dvd^> (2002)
 * I<IT|^dvd^> (1990)
-* I<Leverage|^dvd^> (2008) (complete series)
+* I<Leverage|^dvd^> (2008)
 * I<The Magical Legend of the Leprechauns|^dvd^> (1999)
-* I<Necessary Roughness|^dvd^> (2011) (complete series)
-* I<Numb3rs|^dvd^> (2005) (Season: SPAN<2|^dvd^>)
+* I<Necessary Roughness|^dvd^>
+* I<Numb3rs|^dvd^> (2005)
 * I<Pride and Prejudice|^dvd^> (1995)
-* I<Scarecrow and Mrs. King|^dvd^> (1983) (complete series)
-* I<Star Blazers|^vhs^> (1979) (complete series)
+* I<Scarecrow and Mrs. King|^dvd^> (1983)
+* I<Star Blazers|^vhs^> (1979)
 * I<Studio 60 on the Sunset Strip|^dvd^> (2006)
 3 Buffy the Vampire Slayer
-* I<Buffy the Vampire Slayer|^dvd^> (1997) (complete series)
-* I<Angel|^dvd^> (1999) (complete series)
+* I<Buffy the Vampire Slayer|^dvd^> (1997)
+* I<Angel|^dvd^> (1999)
 3 Burn Notice
-* I<Burn Notice|^dvd^> (2007) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>)
+* I<Burn Notice|^dvd^> (2007) (Seasons: SPAN<1-3|^dvd^>)
 * I<Burn Notice: The Fall of Sam Axe|^dvd^> (2011)
 3 Doctor Who
-See also the A<tie-ins|href="Tie-ins.pl#Doctor_Who"> I own.
 * I<Doctor Who|^dvd^> (1996)
-* I<Doctor Who|^dvd^> (2005) (Seasons: SPAN<1|^dvd^>, SPAN<2|^dvd^>, SPAN<3|^dvd^>, SPAN<4|^dvd^>, SPAN<David Tennant Specials|^bd^>)
-* I<Torchwood|^dvd^> (2006) (SPAN<Seasons 1-3 boxed set|^dvd^>)
+* I<Doctor Who|^dvd^> (2005) (Seasons: SPAN<1-4|^dvd^>, SPAN<David Tennant Specials|^bd^>)
+* I<Torchwood|^dvd^> (2006) (SPAN<Seasons 1-3 boxed set|^dvd^>, SPAN<4|^bd^>)
 * I<The Sarah Jane Adventures|^dvd^> (2007) (Season: SPAN<1|^dvd^>)
+See the A<tie-ins|href="Tie-ins.pl#Doctor_Who"> I own.
 3 Firefly
 * I<Firefly|^dvd^> (2002)
 * I<Serenity|^dvd^> (2005)
 3 Stargate
 * I<Stargate|^dvd^> (1994)
-* I<Stargate SG-1|^dvd^> (1997) (10 season boxed set)
-* I<Stargate: Atlantis|^dvd^> (2004) (complete series)
+* I<Stargate SG-1|^dvd^> (1997)
+* I<Stargate: Atlantis|^dvd^> (2004)
 * I<Stargate: Continuum|^dvd^> (2008)
 * I<Stargate: The Ark of Truth|^dvd^> (2008)
 3 V

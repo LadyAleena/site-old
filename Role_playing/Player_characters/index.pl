@@ -3,12 +3,15 @@
 use strict;
 use warnings;
 
+use CGI::Carp qw(fatalsToBrowser);
+
 use Lingua::EN::Inflect qw(PL_N);
 
-use lib "../../files/lib";
+use lib '../../files/lib';
 use Base::Data qw(get_hash);
 use Base::Page qw(page);
-use HTML::Elements qw(section paragraph list table);
+use HTML::Elements qw(section list table span);
+use Fancy::Join::Defined qw(join_defined);
 use Util::Convert qw(idify);
 use Util::Number qw(commify);
 use RolePlaying::CharacterBuilding::Alignment qw(expand_alignment);
@@ -21,7 +24,7 @@ my $player_characters = get_hash(
 my @general_information_headings = qw(experience alignment race gender);
 my @ability_scores_headings = qw(strength dexterity constitution intelligence wisdom charisma);
 
-sub get_classes {
+sub player_classes {
   my ($classes) = @_;
   
   my @print_classes;
@@ -36,12 +39,6 @@ sub get_classes {
   return join(' / ',@print_classes)
 }
 
-sub get_race {
-  my ($race, $special_race) = @_;
-  $race .= " ($special_race)" if $special_race;
-  return $race;
-}
-
 sub split_ability {
   my ($ability_name,$raw_ability) = @_;
   my ($base,$modified,$modifier) = split(/\//,$raw_ability);
@@ -54,42 +51,44 @@ sub split_ability {
   return @abilities;
 }
 
-sub list_loop {
-  my ($tab, $data_hash, $hash_headings) = @_;
+sub info_loop {
+  my ($data_hash, $hash_headings) = @_;
   my @items;
   for my $key (@$hash_headings) {
-    my $value = $data_hash->{$key};
-    push @items, qq(<strong class="caps">$key</strong>: $value);
+    my $value = span($data_hash->{$key});
+    push @items, qq(<strong class="caps">).ucfirst $key.qq(:</strong> $value);
   }
-  list($tab, 'u', \@items);
+  return \@items;
 }
 
 page( 'code' => sub {
-  section(3, sub {
-    paragraph(3,q(I have taken down all of the individual pages for my player characters for a while. I am revamping this whole section of my site and the current files are a mess. Please bear with me as I working on getting them back online.));
-  });
+  section(3, 
+    'I have taken down all of the individual pages for my player characters for a while. I am revamping this whole section of my site and the current files are a mess. Please bear with me as I working on getting them back online.'
+  );
   for my $character (sort {$a->{'last name'} cmp $b->{'last name'} || $a->{'first name'} cmp $b->{'first name'}} values %$player_characters) {
     my $name = $character->{'full name'};
-    
+
     my %general_information;
     %general_information = (
       experience => commify($character->{experience} + 0),
       alignment => expand_alignment($character->{alignment}),
-      gender => $character->{gender},
+      gender => $character->{gender}
     );
 
     my @classes = @{$character->{'class'}};
-    my $class_key = PL_N('class',scalar @classes);
+    my $class_key = PL_N('class', scalar @classes);
     unshift @general_information_headings, $class_key;
-    
-    $general_information{$class_key} = get_classes(\@classes);
-    $general_information{'race'} = get_race($character->{'race'}, $character->{'special_race'});
+
+    $general_information{$class_key} = player_classes(\@classes);
+
+    my $race = join_defined(' / ', ($character->{'race'}, $character->{'special_race'}));
+    $general_information{'race'} = $race;
     
     my @ability_scores = map { split_ability($_, $character->{$_}) } @ability_scores_headings;
 
     section(3, sub {
-      table(5, { rows => [['whead',\@ability_scores]], class => 'ab_box', caption => 'Ability scores' });
-      list_loop(5,\%general_information,\@general_information_headings);
+      table(5, { rows => [['whead', \@ability_scores]], class => 'ab_box', 'caption' => 'Ability scores' });
+      list(5, 'u', info_loop(\%general_information, \@general_information_headings), { 'class' => 'headed' });
     }, { 'heading' => [2, $name, { id => idify($name) }] });
     
     shift @general_information_headings;

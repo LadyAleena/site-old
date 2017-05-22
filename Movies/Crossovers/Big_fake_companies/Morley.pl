@@ -61,7 +61,7 @@ The red box Morley pack design first appeared on I<Beverly Hills 90210>. Since I
 ** Q<The Raw & the Cooked> (19 October 2008)
 ** Q<Waiting for the Miracle> (29 January 2012)
 * I<United States of Tara> pilot (18 January 2009)
-* I<24> Q<Day 8: 9:00 p.m. – 10:00 p.m.>  (25 January 2010)
+* I<24> Q<Day 8: 9:00 p.m.  10:00 p.m.>  (25 January 2010)
 * I<American Horror Story: Murder House> Q<Birth> (25 January 2010)
 * I<Lost> Q<LA X> (2 February 2010)
 * I<Walking Dead>

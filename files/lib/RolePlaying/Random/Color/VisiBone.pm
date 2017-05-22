@@ -1,4 +1,4 @@
-package Random::Color::VisiBone;
+package RolePlaying::Random::Color::VisiBone;
 use strict;
 use warnings;
 use Exporter qw(import);

@@ -4,9 +4,9 @@ use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw(thief_skills bard_skills rogue_skills rogue_skills_table_rows);
 
-# part of the Character Building table printing suite.
+use RolePlaying::CharacterBuilding::Class qw(class_level);
 
-use RolePlaying::CharacterBuilding::Class qw(get_level);
+# part of the Character Building table suite.
 
 my @rogue_skills = ('Pick Pockets','Open Locks','Find/Remove Traps','Move Silently','Hide in Shadows','Detect Noise','Climb Walls','Read Languages','Bribe','Detect Illusion','Detect Magic','Escape Bonds','Tunneling');
 
@@ -60,7 +60,7 @@ sub bard_skills {
 
 sub rogue_skills {
   my ($class, $opt) = @_;
-  my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
+  my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
 
   return thief_skills($level) if $class eq 'thief';
   return bard_skills($level)  if $class eq 'bard';

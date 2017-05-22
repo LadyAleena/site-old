@@ -1,13 +1,12 @@
 package RolePlaying::CharacterBuilding::AbilityScores;
 use strict;
-use warnings;
+use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(all_abilities ability_score_table get_game_effect random_ability random_game_effect);
+our @EXPORT_OK = qw(all_abilities ability_score_table game_effect random_ability random_game_effect);
 
 use List::Util qw(max);
 
 use Base::Data qw(get_hash);
-use HTML::Elements qw(heading table);
 
 my @abilities = qw(strength dexterity constitution intelligence wisdom charisma);
 
@@ -40,8 +39,8 @@ $col_widths{'strength'} = [("14") x 5, "15"];
 $col_widths{$_} = [qw(28 29 28)] for qw(dexterity wisdom charisma);
 $col_widths{$_} = [("18") x 5]   for qw(constitution intelligence);
 
-sub get_game_effect {
-  my ($game_effect,$score,$ability) = @_;
+sub game_effect {
+  my ($game_effect, $score, $ability) = @_;
   if ($score =~ /\//) {
     my @scores = split('/',$score);
     if (@scores == 3) {
@@ -52,10 +51,10 @@ sub get_game_effect {
   return $abilities{$ability}{$score}{$game_effect};
 }
 
-# These next two subroutines print the html around the ability scores.
+# These next two subroutines return the data around the ability scores to go into tables.
 
 sub ability_score_table {
-  my ($tab, $ability, $ability_score, $user_enhanced, $score_modifier) = @_;
+  my ($ability, $ability_score, $user_enhanced, $score_modifier) = @_;
   my $enhanced = $user_enhanced ? $user_enhanced : '0';
   my $print_enhanced = '' ;
      $print_enhanced = '<br><small>(normal)</small>' if ($enhanced == 1);
@@ -91,11 +90,12 @@ sub ability_score_table {
     push @rows, ['whead',[['Modifier',[$score_modifier, { class => 'info', colspan => $colspan }]]]];
   }
 
-  table($tab, { cols => \@cols, rows => \@rows, class => 'player_character ability_score' });
+  return { class => 'player_character ability_score', cols => \@cols, rows => \@rows };
 }
 
 sub all_abilities {
-  my ($tab, $opt) = @_;
+  my ($opt) = @_;
+  my @ability_data;
   for my $ability (@abilities) {
     my $score = $opt->{$ability};
     if ($score =~ /\//) {
@@ -103,14 +103,15 @@ sub all_abilities {
       my $score_modifier = scalar @score_array == 3 ? pop @score_array : undef;
       my $num = 1;
       for my $sub_score (@score_array) {
-        ability_score_table($tab, $ability, $sub_score, $num, $score_modifier);
+        push @ability_data, ability_score_table($ability, $sub_score, $num, $score_modifier);
         ++$num;
       }
     }
     else {
-      ability_score_table($tab + 2, $ability, $score);
+      push @ability_data, ability_score_table($ability, $score);
     }
   }
+  return \@ability_data;
 }
 
 # The last two subroutines return random ability scores and game effects.

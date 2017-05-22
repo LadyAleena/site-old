@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+
+body { background-color: #bcb; font-family: "Roboto", arial, sans-serif; font-size: 100%; }
+
+body > header { position: absolute; top: 0; bottom: 6%; left: 0; right: 0; width: 100%; height: 6%; vertical-align: middle; background-color: #507; }
+body > header a { color: #ded; }
+body > header a.home { padding-left: .1em; height: 100%; font-size: 250%; }
+body > header div#contacts  { float: right; }
+body > header div#contacts img.contact { width: auto; }
+body > header img.avatar { height: 100%; float: left; }
+
+nav#main, article { position: absolute; top: 6%; bottom: 0; height: 93.5%; padding: 0px; }
+
+nav#main { right: 81%; left: 0; width: 19%; overflow: auto; color: #000; font-size: smaller; }
+nav#main > section { background-color: #ded; }
+nav#main h2 { font-size: 115%; font-weight: bold; }
+
+article { right: 0; left: 19%; width: 81%; overflow-y: auto; color: #000; }
+
+article img { background: #ded; border-radius: 3px; page-break-inside: avoid; }
+article img.right { float: right; margin-bottom: 2px; }
+
+nav.contents, section, article > header, article > footer { overflow: auto; margin: 5px; padding: 3px; border-radius: 3px; background-color: #fff; }
+nav.contents > h2 { background-color: #507; color: #ded; font-size: 100%; font-weight: bold; }
+nav.contents > ul { font-size: 90%; }
+
+section section { margin: 5px -3px; }
+
+nav.alpha_menu { border-top:1px dotted #ded; text-align: center; font-size: smaller; }
+
+p, dl, table, form, pre, blockquote { margin: 2px 5px; padding: 3px; }
+
+h1,h2,h3,h4,h5,h6 { margin: 3px 2px; padding: 3px; font-weight: normal; clear: both; }
+h1,h2 { background-color: #507; color: #ded; border-radius: 2px; }
+h1    { font-size: 200%; }
+h2    { font-size: 150%; }
+h3,h4,h5,h6 { color: #507; }
+h3    { background-color: #ded; border-radius: 2px; font-size: 140%; }
+h4,h5,h6 { border-bottom: 1px solid #507; }
+h4    { font-size: 130%; }
+h5    { font-size: 120%; }
+h6    { font-size: 110%; }
+h3.wlinks { clear:left; }
+h4.wlinks { clear:left; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #ded }
+
+a { color: #507; text-decoration: none }
+a:hover { text-decoration: underline; }
+a img { width: 45%;}
+a.img { display: block; text-align: center; }
+a.inline img { width: auto; max-width: 100%; }
+
+p { text-indent: 1em; }
+p.no_indent { text-indent: 0; }
+p.subhead,
+p.author    { text-indent: 0; font-size: larger; }
+p.stanza    { text-indent:  0em; }
+p.indent_00 { text-indent:  0em; }
+p.indent_02 { text-indent:  2em; }
+p.indent_04 { text-indent:  4em; }
+p.indent_06 { text-indent:  6em; }
+p.indent_08 { text-indent:  8em; }
+p.indent_12 { text-indent: 12em; }
+p.indent_16 { text-indent: 16em; }
+p.address   { font-weight: bold; clear: both; }
+
+blockquote p::before { content: ""; font-size: 110%; }
+blockquote p::after  { content: ""; font-size: 110%; }
+blockquote p { display: inline-block; text-indent: 0; margin: 0; padding: 0; }
+blockquote + p.author { font-size: 100%; font-style: italic; text-indent: 2em; }
+
+div.center { text-align: center; }
+span.bigger { font-size:large; }
+
+code {font-family: "courier new"; font-size: 100%}
+
+q { quotes: '' '' '' '' '' '' '' ''; }
+
+strong      { font-size: 85%; font-weight: bold; }
+strong.caps { font-size: 85%; font-variant: small-caps; }
+
+sup { font-size: x-small; }
+
+/* The use of the em is safe since the font size should be the same for the list. */
+ul { margin: 0 0 0 1.25em; padding: 0 0 0 .1em; }
+ol { margin: 0 0 0 1.75em; padding: 0 0 0 .1em; }
+
+ul ul { margin-left: 1em; }
+
+li { padding: .1em 0; }
+/*
+li:only-child { list-style-type: none; }
+li:only-child::before { margin-left: -1.25em; content: "" }
+*/ 
+li.inactive { font-weight: normal; }
+li.active   { font-weight: bold; }
+
+/* keep order of next 2 rules*/
+li.open ol, li.open ul, li.closed dl     { display: block; }
+li.closed ol, li.closed ul, li.closed dl { display: none; }
+li.closed, li.open { list-style-type:none; }
+li.closed::before  { position: absolute; margin: -4px 0 0 -16px; content: "\21D2"; }
+li.open::before    { position: absolute; margin: -4px 0 0 -16px; content: "\21D3"; }
+li p { margin: 0px; text-indent: 0; }
+
+dt { font-weight: bold; }
+dd > span.definition_heading { font-size: 90%; font-weight: bold; };
+
+.last          { border-bottom: none; }
+table          { border: 1px solid #507; border-collapse: collapse; page-break-inside: avoid; }
+table.centered { margin-left: auto; margin-right: auto; float: none; }
+table.full     { float: left; margin-left: auto; margin-right: auto; width: 100%; }
+caption        { border-color: #507; border-width: 1px 1px 0 1px; border-style: solid; white-space: nowrap; background-color: #ded; color: #507; }
+colgroup       { border: 1px solid #507; }
+tbody          { border-bottom: 1px solid #507; }
+th, td         { border: 1px dotted #507; padding: .25em; font-size: smaller; }
+th             { background-color: #ded; color: #507; font-weight: bold; }
+th.row_header  { text-align: left; }
+td             { white-space: nowrap; }
+
+table.number tr td:last-child { text-align: right; }
+td.number      { text-align: right; }
+
+/*color*/
+table.color { }
+table.color td { border: 1px solid #999; color: #000; text-align: center; font: 400 10pt "courier new"; }
+table.color td.dark { color: #fff; }
+table.color td.prime { border: 2px solid #333; }
+
+fieldset, legend, select, input, textarea { border: 1px solid #507; border-radius: 3px; }
+legend, select, input, textarea { margin-bottom: 3px; background-color: #ffe; color: #507; }
+fieldset { background-color: #fff; color: #000; }
+input.search { margin-top: .5em; }
+input.block { display: block; }
+fieldset.hidden { display: none; }
+textarea { width:100%; height: 100px; }
+label { display: block; float: left; padding-right: 2px; width: 20%; font-weight: 700; text-align: right; color: #000;}
+label.specfic { display: inline; float: none; padding-right: 0; width: auto; text-align: left; font-weight: normal; }
+
+pre.wrap { white-space: pre-wrap }
+pre.word_find { font-size: 150%; }
+
+.links { font-size: smaller; }
+
+.two, .three, .four, .five, .six, .seven, .eight, .nine, .ten { clear:both; }
+.two   { -moz-column-count:2; -webkit-column-count:2; column-count:2; }
+.three { -moz-column-count:3; -webkit-column-count:3; column-count:3; }
+.four  { -moz-column-count:4; -webkit-column-count:4; column-count:4; }
+.five  { -moz-column-count:5; -webkit-column-count:5; column-count:5; }
+.six   { -moz-column-count:6; -webkit-column-count:6; column-count:6; }
+.seven { -moz-column-count:7; -webkit-column-count:7; column-count:7; }
+.eight { -moz-column-count:8; -webkit-column-count:8; column-count:8; }
+.nine  { -moz-column-count:9; -webkit-column-count:9; column-count:9; }
+.ten   { -moz-column-count:10; -webkit-column-count:10; column-count:10; }
+
+.using   { font-weight: bold; }
+.planned { font-style: italic; }
+
+::after { font-size: smaller; font-style: normal; vertical-align: middle; }
+
+.updated::after    { content: " updated"; vertical-align: unset; color: #702; }
+
+.hardcover::after  { content: " (H/C)";  color: #009; }
+.trade::after      { content: " (TPB)";  color: #090; }
+.massmarket::after { content: " (PB)";   color: #900; }
+
+.bd::after         { content: " (BD)";   color: #009; }
+.dvd::after        { content: " (DVD)";  color: #090; }
+.vhs::after        { content: " (VHS)";  color: #900; }
+.dg::after         { content: " (dig)";  color: #909; }
+
+.cd::after         { content: " (CD)";   color: #009; }
+.cassette::after   { content: " (CSTT)"; color: #090; }
+.lp::after         { content: " (LP)";   color: #900; }
+.ff::after         { content: " (45)";   color: #099; }
+
+.word_find { font-family: monospace; }
+
+.hide { display: none; }
+.hidden { display: none; }
+
+.right { float: right; }
+
+.mobile { display: none; }
+
+@media print{
+  body { background-color: transparent; }
+  header,
+  nav,
+  section.contents,
+  p.address,
+  .links,
+  form,
+  .disqus { display: none; }
+  h1, h2, h3, h4, h5, h6 { color: #000; }
+  h1, h2, h3 { border-bottom: 1px solid #000; }
+  h1, h2 { border-bottom-width: 3px; }
+  article { overflow: visible; top: 0; left: 0; width: 100%; height: 100%; }
+  span.hidden { display: inline }
+  div.hidden  { display: block  }
+  a { color: #000; }
+  th, td { border-color: #000; }
+  li.closed ol,li.closed ul,li.closed dl { display: list-item; }
+}
+
+/* written with the help of entuland in #web on freenode */
+@media screen and (min-width: 701px) {
+  body > header div#contacts  { display: block; }
+  nav#main > section > div#contacts_main { display: none; }
+}
+
+@media screen and (min-width: 701px) and (max-width: 900px) {
+  .four, .five, .six, .seven, .eight, .nine, .ten { -moz-column-count:3; -webkit-column-count:3; column-count:3; }
+}
+
+@media screen and (max-width: 700px) {
+  body > header { height: 51px; }
+  body > header a.home { font-size: 125%: }
+  body > header div#contacts { display: none; }
+  /*body > header div:last-child { margin-top: 20px; }*/
+  body > header img.avatar { height: 50px; }
+  
+  nav#main, article { position: static; width: 100%; }
+
+  nav#main { margin-top: 53px; }
+  nav#main > section > div#contacts_main { display: block; text-align: center; }
+  nav#main > section > div#contacts_main img.contact { width: auto; }
+
+  ul.sub_menu { display: none; }
+  
+  span.mobile { display: inline; }
+
+  h1    { font-size: 175%; }
+  h2    { font-size: 140%; }
+  h3    { font-size: 130%; }
+  h4    { font-size: 120%; }
+  h5    { font-size: 110%; }
+  h6    { font-size: 100%; }
+
+ .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten { -moz-column-count:1; -webkit-column-count:1; column-count:1; }
+}

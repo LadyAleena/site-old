@@ -2,42 +2,42 @@ package RolePlaying::CharacterBuilding::SavingThrows;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_saving_throws get_multiclass_saving_throws saving_throw_table_rows);
-
-# part of the Character Building table printing suite.
+our @EXPORT_OK = qw(saving_throws get_multiclass_saving_throws saving_throw_table_rows);
 
 use List::Util qw(min max);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
+use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
 
-#These are other items that confer a bonus to saving throws.
+# part of the Character Building table suite.
+
+#These are items that confer a bonus to saving throws.
 #start magic items
 
-my %st_modifiers;
+my %saving_throw_modifiers;
 for my $item (qw(amulet bell belt blanket bracelet buckle cape cloak earring gem mask necklace ring robe scarab shell)) {
-  map( $st_modifiers{"$item of protection +$_"} = $_, (1..5) );
+  map( $saving_throw_modifiers{"$item of protection +$_"} = $_, (1..5) );
 }
 
-$st_modifiers{$_} = 1 for ('robe of the archmagi', 'robe of stars');
-$st_modifiers{$_} = 2 for ('staff of power', 'staff of the magi', 'ring of protection +4/+2');
-$st_modifiers{'arm of valor'} = 3;
+$saving_throw_modifiers{$_} = 1 for ('robe of the archmagi', 'robe of stars');
+$saving_throw_modifiers{$_} = 2 for ('staff of power', 'staff of the magi', 'ring of protection +4/+2');
+$saving_throw_modifiers{'arm of valor'} = 3;
 
 #end magic items
 
-sub ST_modifier {
+sub saving_throw_modifier {
   my ($modifiers) = @_;
   
   my $st_mod = 0;
   for my $modifier (@{$modifiers}) {
-    $st_mod += $st_modifiers{lc $modifier} ? $st_modifiers{lc $modifier} : 0;
+    $st_mod += $saving_throw_modifiers{lc $modifier} ? $saving_throw_modifiers{lc $modifier} : 0;
   }
 
   return $st_mod;
 }
 
-sub get_saving_throws {
+sub saving_throws {
   my ($class, $opt) = @_;
-  $class = convert_class($class,'SavingThrows');
+  $class = convert_class($class, 'SavingThrows');
   
   my %saving_throws;
   if ($class eq 'warrior') {
@@ -102,19 +102,19 @@ sub get_saving_throws {
   }
   
   my $saves;
-  my $modifiers = $opt->{'modifiers'} ? ST_modifier($opt->{'modifiers'}) : 0;
+  my $modifiers = $opt->{'modifiers'} ? saving_throw_modifier($opt->{'modifiers'}) : 0;
   if (ref($class) eq 'ARRAY') {
     my $class_saving_throws;
-    $$class_saving_throws{$_} = get_saving_throws($_, { 'experience' => $opt->{'experience'} }) for (@{$class});
+    $$class_saving_throws{$_} = saving_throws($_, { 'experience' => $opt->{'experience'} }) for (@{$class});
     
-    for my $save ('ppd','rsw','pp','breath weapon','spell') {
+    for my $save ('ppd', 'rsw', 'pp', 'breath weapon', 'spell') {
       $$saves{$save} = min(map $_->{$save}, values %{ $class_saving_throws }) - $modifiers; # Thank you yitzchak!
     }
   }
   else {
     my $max_level = max(keys %saving_throws);
     my $level = $opt->{'level'} && $opt->{'level'} <= $max_level ? $opt->{'level'} :
-                get_level($class,$opt->{'experience'}) <= $max_level ? get_level($class, $opt->{'experience'}) : $max_level;
+                class_level($class,$opt->{'experience'}) <= $max_level ? class_level($class, $opt->{'experience'}) : $max_level;
     $saves = $saving_throws{$level};
   }
 
@@ -125,7 +125,7 @@ sub saving_throw_table_rows {
   my %opt = @_;
   my $modifiers = $opt{'modifiers'};
 
-  my $saving_throws = get_saving_throws($opt{'classes'}, { 'experience' => $opt{'experience'}, 'modifiers' => $modifiers });
+  my $saving_throws = saving_throws($opt{'classes'}, { 'experience' => $opt{'experience'}, 'modifiers' => $modifiers });
   my @data_rows;
   for my $throw ('ppd','rsw','pp','breath weapon','spell') {
     my $value = $saving_throws->{$throw};

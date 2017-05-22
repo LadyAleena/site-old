@@ -1,0 +1,15 @@
+table.expanded_alignment td { height: 55px; width: 55px; border-style: solid; text-align: center; }
+table.expanded_alignment td.core { border-width: 2px; background-color: #ffd; }
+table.expanded_alignment td.divider { background: #eed; }
+
+@media print {
+  table.expanded_alignment td.core { border-width: 3px; }
+
+  tr:nth-child(-n+3)                td:nth-child(4n),
+  tr:nth-child(n+5):nth-child(-n+7) td:nth-child(4n),
+  tr:nth-child(n+9)                 td:nth-child(4n) { border-width: 1px 3px; }
+  
+  tr:nth-child(4n) td:nth-child(-n+3),
+  tr:nth-child(4n) td:nth-child(n+5):nth-child(-n+7),
+  tr:nth-child(4n) td:nth-child(n+9) { border-width: 3px 1px; }
+}

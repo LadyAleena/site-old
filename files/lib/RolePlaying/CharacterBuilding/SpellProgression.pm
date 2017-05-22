@@ -2,32 +2,30 @@ package RolePlaying::CharacterBuilding::SpellProgression;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_spells spell_progression_table_rows);
-
-# part of the Character Building table printing suite.
+our @EXPORT_OK = qw(spell_progression spell_progression_table_rows);
 
 use List::Util qw(max);
 
 use Base::Data qw(data_file get_hash);
-use HTML::Elements qw(anchor);
-use Util::Convert qw(filify searchify);
-use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
+use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+
+# part of the Character Building table suite.
 
 my @classes = qw(wizard priest paladin ranger bard theopsyelementalist);
 my $choices = join(', ',@classes);
 
-sub get_spells {
+sub spell_progression {
   my ($class, $opt) = @_;
   
   my $spell_progression;
   if (ref($class) eq 'ARRAY') {
     for (@{$class}) {
-      $spell_progression->{$_} = get_spells($_, $opt);
+      $spell_progression->{$_} = spell_progression($_, $opt);
     }
   }
   else {
     $class = convert_class($class, 'SpellProgression');
-    my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
+    my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
 
     my $file = data_file('Role_playing/Classes/Spell_progression',"$class.txt");
 
@@ -56,7 +54,7 @@ sub spell_progression_table_rows {
   my $name    = $opt{'name'};
   my $classes = $opt{'classes'};
 
-  my $spell_progression = get_spells($classes, { 'experience' => $opt{'experience'} });
+  my $spell_progression = spell_progression($classes, { 'experience' => $opt{'experience'} });
   my @classes = grep( defined( $$spell_progression{$_} ), @$classes );
 
   my @headings = ('Level', map( ucfirst, @classes ));
@@ -71,9 +69,8 @@ sub spell_progression_table_rows {
     [ 'whead', \@data_rows ]
   );
   my $colspan = scalar(@classes) + 1;
-  if (-f data_file('Role_playing/Player_characters/spellbooks',filify($name).'.txt')) {
-    my $searchname   = searchify($name);
-    my $spellbook = anchor("$name\'s spellbook", { 'href' => "../../../Role_playing/Player_characters/Spellbooks.pl?spellbook=$searchname" });
+  if ($opt{'spellbook'}) {
+    my $spellbook = $opt{'spellbook'};
     push @rows, [ 'header', [[['Spellbook', { 'colspan' => $colspan }]]] ];
     push @rows, [ 'data', [[[$spellbook, { 'colspan' => $colspan }]]] ];
   }

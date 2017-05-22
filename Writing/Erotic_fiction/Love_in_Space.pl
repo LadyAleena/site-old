@@ -45,7 +45,7 @@ He put his arm around Alexandra and held her as they walked. She was comforted w
 "What do you fear?  We are the champions of this Valley and none shall defeat us?"
 He held her closer, respected the straight face she wore, and admired her courage. She looked up at Jacob and smiled gratefully at him.
 "Yes, we are champions, yet, we have not yet crossed the whole of it." He smiled at Alexandra and looked into her eyes. "We are in the heart now and it shall not be too long a time before we have crossed it all." He was amazed at her courage.
-"Thank you for being here with me. I could not do this alone,” she said in a tentative voice and a smile crossed her face.
+Q<Thank you for being here with me. I could not do this alone,> she said in a tentative voice and a smile crossed her face.
 "I would not ever leave you to do this alone, ever." He stopped and faced Alexandra, held her face in his hands, and said, "Come on, it'll be all right."
 She smiled at him with more confidence.
 "Shall we go on, then?" she said and put an arm around his waist.
@@ -122,4 +122,4 @@ His fingertip pushed deeper into her tight anus and he began to quicken his stro
 She returned his lust with her own. She thrust her hips up to meet his strokes and she rubbed his chest, pinched his nipples. Her moans of pleasure filled the tent, and she laid her head back on her pillow, her eyes rolling back into her head, as she has her very exquisite orgasm. Her whole body trembled as each orgasm rippled through her body.
 As she orgasms, his body tensed up, readying itself for its own release. As she has her tightest orgasm, he released all of his built up tension and blasts into her ever-tightening hole. He moaned loudly, as he fell onto her, the last of his energies released. He felt weakened and elated at the same time.
 Their breathing came back to them slowly. They breathed as one as they lay there, letting the afterglow bask them in its light.
-They slipped into sleep in each other’s arms. They had forgotten the danger of this place.
+They slipped into sleep in each other's arms. They had forgotten the danger of this place.

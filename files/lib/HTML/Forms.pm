@@ -70,7 +70,7 @@ sub tiny_select {
       input($tab + 2, { 'type' => 'submit', 'value' => 'Search', 'class' => 'search' });
       input($tab + 2, { 'type' => 'button', 'value' => 'Start over', 'onclick' => "location='$location'" });
     }, { 'legend' => 'Display only&#8230;' });
-  }, { 'action' => $location, 'method' => 'get' });
+  }, { 'action' => $location, 'method' => 'get', 'class' => $opt->{'class'} });
 }
 
 # something I am keeping though not using so not exporting
@@ -78,7 +78,7 @@ sub checkboxes {
   my ($title) = @_;
   my $id_title = idify("title $title");
   my $display_title = textify($title);
-  return { type => 'checkbox', value => '1', name => $title, id => $id_title, place_label => 'after',
+  return { type => 'checkbox', value => '1', name => $title, id => $id_title, 'place label' => 'after',
           label => ["<i>$display_title</i>", { for => $id_title, class => 'specfic' }] }
 }
 

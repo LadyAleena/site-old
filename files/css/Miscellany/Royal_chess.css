@@ -1,3 +1,7 @@
-table.royal_chess tr td { text-align:center; width:4em; height:4em; border-width:2px; border-style:solid; }
-table.royal_chess tr td.even { background-color:#eed; }
-table.royal_chess tr td.odd  { background-color:#ddc; }
+table.royal_chess tr td { text-align: center; width: 4em; height: 4em; border: none; }
+
+table.royal_chess tr:nth-child(odd)  td:nth-child(odd),
+table.royal_chess tr:nth-child(even) td:nth-child(even) { background-color: #ddc; }
+
+table.royal_chess tr:nth-child(odd)  td:nth-child(even),
+table.royal_chess tr:nth-child(even) td:nth-child(odd)  { background-color: #eed; }

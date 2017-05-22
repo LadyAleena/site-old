@@ -4,7 +4,7 @@ use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw();
 
-sub get_specialty_powers {
+sub wizard_specialty_powers {
   my ($specialty) = @_;
   my @powers = (
     "+2 to save vs. $specialty spells",
@@ -15,7 +15,7 @@ sub get_specialty_powers {
   return \@powers;
 }
 
-sub get_magic_item_creation {
+sub wizard_magic_item_creation {
   my ($class, $level) = @_;
   my @creations;
   push @creations, 'scrolls' if ( $class eq 'wizard' && $level >= 9 || $class eq 'priest' && $level >= 7 );

@@ -10,7 +10,7 @@ use Base::Page qw(page story);
 use HTML::Elements qw(definition_list);
 
 my @def_headings = ('cost', 'weight', 'items included');
-my $definition_list = get_array( 'headings' => ['term', @def_headings] );
+my $definition_list = get_array( 'file' => ['Role_playing/Reference_tables', 'Equipment_kits.txt'], 'headings' => ['term', @def_headings] );
 my $doc_magic = { 'equipment' => sub { definition_list(4, $definition_list, { 'headings' => \@def_headings }) }};
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });

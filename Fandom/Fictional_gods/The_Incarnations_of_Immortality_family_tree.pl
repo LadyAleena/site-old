@@ -7,27 +7,31 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 use HTML::Elements qw(pre);
+use Util::FamilyTree qw(make_tree);
 
-my $doc_magic = { 'tree' => sub { pre(3, sub { print q(
- Cedric---+---<span style="background:#999;">Niobe</span>-------+-------Pacian---+---Blanche
-          |               |                |
-          |    Leaga*<span style="background:#f99;">Mym</span>*<span style="background:#9f9;">Orb</span>+<span style="background:#9ff;">Perry</span>+Jolie   |
-          |   Lilith*   |         *Lilith  |
-          |  Rapture*   |                  |
-          |             |                  |
-          |    Gawain+<span style="background:#f9f;">Orlene</span>*<span style="background:#99f;">Norton</span>        |
-          |                 |              |
-          |              Gawain II         |
-          |                                |
- Magician Cedric Jr.------+--------------Blenda
-                          |
-                        Luna*<span style="background:#ff9;">Zane</span>
-) }) }};
+my $doc_magic = { 'tree' => sub {
+  pre(3, sub {
+    print make_tree(q(
+ Cedric --+-- Niobe ----------+---------- Pacian --+-- Blanche
+          |                   |                    |
+          |    Leaga * Mym * Orb + Perry + Jolie   |
+          |   Lilith *     |             *Lilith   |
+          |  Rapture *     |                       |
+          |                |                       |
+          |     Gawain + Orlene * Norton           |
+          |                     |                  |
+          |                  Gawain II             |
+          |                                        |
+ Magician Cedric Jr. ----------+---------------- Blenda
+                               |
+                              Luna * Zane), { special => 'Incarnations' })
+  }) 
+}};
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 
 __DATA__
-Created by Piers Anthony and compiled by me.
+I<The Incarnations of Immortality> created by Piers Anthony.
 2 The Family
 & tree
 2 The Incarnations

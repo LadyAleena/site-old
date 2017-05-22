@@ -32,7 +32,7 @@ for my $type ("a".."z") {
 
 my %material_modifiers = get_hash( 'file' => [$directory, 'armor_materials.txt'] );
 
-sub get_armor_value {
+sub armor_value {
   my (%opt) = @_;
   my $base_value = $opt{'base'};
   my $value;
@@ -42,7 +42,8 @@ sub get_armor_value {
   return $value;
 }
 
-open(my $armor_file, '<', data_file($directory,'armor.txt')) || die "Can't open armor.txt. Stopped $!";
+my $in_armor = data_file($directory, 'armor.txt');
+open(my $armor_file, '<', $in_armor) || die "Can't open $in_armor. Stopped $!";
 while (my $raw_armor = <$armor_file>) {
   chomp $raw_armor;
   my ($base_armor, $base_value) = split(/\|/, $raw_armor);
@@ -52,7 +53,7 @@ while (my $raw_armor = <$armor_file>) {
 
   if ($base_armor !~ /^(?:cord|leather|hide|padded) armor$/) {
     for my $material (keys %material_modifiers) {
-      my $material_value = get_armor_value('base' => $base_value, 'material' => $material);
+      my $material_value = armor_value('base' => $base_value, 'material' => $material);
       $assets->{"$base_armor ($material)"} = $material_value;
       $assets->{"$base_armor -1 ($material cursed)"} = 1000;
       $assets->{"$base_armor of blending ($material)"} = $material_value + 4000;
@@ -60,13 +61,13 @@ while (my $raw_armor = <$armor_file>) {
   }
   for my $plus (1..5) {
     my $magic_armor = "$base_armor +$plus";
-    my $magic_value = get_armor_value('base' => $base_value, 'plus' => $plus);
+    my $magic_value = armor_value('base' => $base_value, 'plus' => $plus);
     $assets->{$magic_armor} = $magic_value;
     $assets->{"$magic_armor of blending"} = $magic_value + 4000;
 
     if ($base_armor !~ /^(?:cord|leather|hide|padded) armor$/) {
       for my $material (keys %material_modifiers) {
-        my $mm_value = get_armor_value('base' => $base_value, 'plus' => $plus, 'material' => $material);
+        my $mm_value = armor_value('base' => $base_value, 'plus' => $plus, 'material' => $material);
         $assets->{"$magic_armor ($material)"} = $mm_value;
         $assets->{"$magic_armor of blending ($material)"} = $mm_value + 4000;
       }
@@ -94,7 +95,7 @@ sub add_vs {
 }
 
 my %weapons = get_hash(
-  'file' => [$directory,'Weapons.txt'],
+  'file' => [$directory, 'Weapons.txt'],
   'headings' => ['Weapon','#AT','Dmg(S/M)','Dmg(L)','Range','Weight','Size','Type','Speed','KO','broad group','tight group','value']
 );
 
@@ -190,7 +191,8 @@ sub add_ammo_of {
   $assets->{"$ammo of stunning"}    = $value + 750;
 }
 
-open(my $ammo_file, '<', data_file($directory,'ammunition.txt')) || die "Can't open ammunition.txt. Stopped $!";
+my $in_ammo = data_file($directory, 'ammunition.txt');
+open(my $ammo_file, '<', $in_ammo) || die "Can't open $in_ammo. Stopped $!";
 while (my $raw_ammo = <$ammo_file>) {
   chomp $raw_ammo;
   my ($base_ammo, $base_value) = split(/\|/, $raw_ammo);
@@ -240,7 +242,7 @@ for my $damage_type ('blunt', 'grappling', 'piercing') {
 # Start magic items
 
 for my $item (qw(amulet bell belt blanket bracelet buckle cape cloak earring gem mask necklace robe scarab shell stone)) {
-  map( $assets->{"$item of protection +$_"} = $_ * 10000, (1..5) );
+  map( $assets->{"$item of protection + $_"} = $_ * 10000, (1..5) );
 }
 
 for my $number (1..100) {

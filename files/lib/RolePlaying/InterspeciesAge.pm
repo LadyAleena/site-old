@@ -2,7 +2,7 @@ package RolePlaying::InterspeciesAge;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_age);
+our @EXPORT_OK = qw(interspecies_age);
 
 use Util::Number qw(round);
 
@@ -16,7 +16,7 @@ while (my $line = <DATA>) {
   $ages{$race}{'max age'}    = $max;
 };
 
-sub get_ages {
+sub interspecies_age {
   my ($opt) = @_;
 
   my ($start, $middle, $venerable, $max, $old);
@@ -43,6 +43,8 @@ sub get_ages {
   
   return \%new_ages;
 }
+
+1;
 
 __DATA__
 dwarf|40|250|450

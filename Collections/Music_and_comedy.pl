@@ -8,11 +8,11 @@ use lib '../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
-use People qw(get_people);
+use People qw(people_list);
 
 my $doc_magic = {
-  'musicians' => sub { list(3, 'u', get_people('Musicians.txt'), { 'class' => 'three' }) },
-  'comedians' => sub { list(3, 'u', get_people('Comedians.txt'), { 'class' => 'three' }) },
+  'musicians' => sub { list(3, 'u', people_list('Musicians.txt'), { 'class' => 'three' }) },
+  'comedians' => sub { list(3, 'u', people_list('Comedians.txt'), { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
@@ -47,6 +47,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Silent Flight: The New Age Christmas Experience|^cassette^> (1989) by John Hodian
 * I<Cracked Rear View|^cd^> (1994) by Hootie and the Blowfish
 * I<Rebel Yell|^cd^> (1983) by Billy Idol <!-- lp -->
+* I<Information Society|^cd^> (1988) by Information Society
 * I<Rhythm Nation 1814|^cd^> (1989) by Janet Jackson
 * I<pure and simple|^cassette^> (1994) by Joan Jett and the Blackhearts
 * I<The Hits|^cd^> (2010) by Billy Joel
@@ -57,14 +58,14 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Then and Now|^cd^> (1987) by Don McLean
 * I<FLM|^cassette^> (1987) by Mel &amp; Kim
 * I<Uh-Huh|^cassette^> (1983) by John Cougar Mellencamp
-* I<"Pop Goes the World"/"The End of the World"|^ff^> (1987) by Men Without Hats
+* I<Pop Goes the World|^cd^> (1987) by Men Without Hats <!-- "Pop Goes the World"/"The End of the World"|^ff^ -->
 * I<Business as Usual|^cd^> (1981) by Men at Work
 * I<Primitive Love|^cd^> (1985) by Miami Sound Machine
 * I<The Other Side of Life|^lp^> (1986) by The Moody Blues
 * I<Jagged Little Pill|^cd^> (1995) by Alanis Morissette
 * I<Decade of Decadence|^cd^> (1991) by Motley Crue
 * I<"True Faith"/"1963"|^ff^> (1987) by New Order
-* I<Aldo Nova|^cassette^> (1981) by Aldo Nova
+* I<Aldo Nova|^cd^> (1981) by Aldo Nova <!-- cassette -->
 * I<Cat Scratch Fever|^cassette^> (1977) by Ted Nugent
 * I<Woman Thing Music, Vol. 2|^cd^> (0000) by Pauley P
 * I<Here You Come Again|^cassette^> (1977) by Dolly Parton
@@ -168,9 +169,10 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<"Always on My Mind"/"Do I Have To?"|^ff^> (1987)
 * I<"It's a Sin"/"You Know Where You Went Wrong"|^ff^> (1987)
 * I<"What Have I Done To Deserve This?"/"A New Life"|^ff^> (1987) <!-- x2 -->
+* I<Pet Shop Boys Discography|^cd^> (1991)
 4 The Police and Sting
 * I<The Dream of the Blue Turtles|^cassette^> (1985)
-* I<…Nothing Like the Sun|^cassette^> (1987)
+* I<Nothing Like the Sun|^cassette^> (1987)
 * I<The Very Best of Sting &amp; The Police|^cd^> (1997)
 4 Prince & The Revolution
 * I<1999|^cd^> (1982)
@@ -212,7 +214,7 @@ These artists are musicians and bands I like including soundtrack composers.
 & musicians
 2 Comedy
 3 My comedy collection
-* I<You Might Be a Redneck If…|^cd^> (1993) by Jeff Foxworthy
+* I<You Might Be a Redneck If|^cd^> (1993) by Jeff Foxworthy
 4 Bill Cosby +
 * I<Bill Cosby is a Very Funny Fellow, RIGHT!|^cd^> (1963)
 * I<"I Started Out as a Child"|^cd^> (1964)

@@ -2,7 +2,7 @@ package RolePlaying::Random;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(random tinyrand);
+our @EXPORT_OK = qw(random tinyrand instant_rand);
 
 use List::Util qw(shuffle);
 
@@ -45,6 +45,11 @@ sub random {
 sub tinyrand { 
   my ($var1, $var2) = @_;
   return ($var1, $var2)[rand 2];
+}
+
+sub instant_rand {
+  my @rand_array = @_;
+  return $rand_array[rand @rand_array];
 }
 
 1;

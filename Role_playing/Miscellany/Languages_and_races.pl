@@ -16,7 +16,7 @@ Constructs and undead are not races. They nor lycanthropes have their own specif
 2 Dialects
 3 AD&D 2nd Edition
 >0 (1 Slot, Relevant Ability: Int., Check Modifier: 0)
-With this non-weapon proficiency, a character learns to speak up to three dialects of any language the character already knows. If there is a sub-dialect, the character needs to have the parent dialect. A character who knows the common language of elves could speak high elven, avariel, and gray elven with this proficiency. This proficiency also adds a +1 bonus to a person’s reading and writing proficiency when it comes to the dialect as long as the person is proficient reading and writing the parent language.
+With this non-weapon proficiency, a character learns to speak up to three dialects of any language the character already knows. If there is a sub-dialect, the character needs to have the parent dialect. A character who knows the common language of elves could speak high elven, avariel, and gray elven with this proficiency. This proficiency also adds a +1 bonus to a person's reading and writing proficiency when it comes to the dialect as long as the person is proficient reading and writing the parent language.
 3 D&D 3rd Edition
 The character can speak localized variants of a language.
 >0 STRONG<PREREQUISITES:> Chosen language, Int 13+.

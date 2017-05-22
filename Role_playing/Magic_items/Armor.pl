@@ -8,6 +8,8 @@ use lib '../../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
+$line_magic->{'Magic Resistance'} = 'A<MR|title="magic resistance">';
+
 page( 'heading' => 'Magical armor', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
@@ -18,7 +20,7 @@ This armor reduces the magic resistance of the wearer's foes and enemies by a pe
 Like all drow magical items these bracers do not radiate magic but are not destroyed by sunlight when above ground for too long. They function as both bracers of defense AC 0 and drow chain mail +5 whichever best suits the needs of the wearer.
 2 Cynabrill Armor
 by Rich Rayburn
-|* Armor|Magic Resistance
+|* Armor|^Magic Resistance^
 |+ Full Plate|70%
 |+ Field Plate|60%
 |+ Plate Mail|50%

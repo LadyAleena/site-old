@@ -8,7 +8,7 @@ our @EXPORT_OK = qw(inline);
 
 use Text::Balanced qw(extract_bracketed extract_multiple);
 
-use Util::FancySplice;
+use Fancy::Splice;
 
 my $allowed = join('|', qw(A ABBR ACRONYM B BIG CITE CODE DFN EM I KBD Q SAMP SMALL SPAN STRONG SUB SUP TT VAR));
 

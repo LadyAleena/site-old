@@ -1,6 +1,6 @@
 package RolePlaying::CharacterBuilding::Alignment;
 use strict;
-use warnings;
+use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_alignment expand_alignment);
 
@@ -99,8 +99,8 @@ To use this module to expand alignment abbreviations from their two character fo
 
 Samples...
 
-  expand_alignment('CG')                will return "chaotic good".
-  expand_alignment('LE')                will return "lawful evil".
+  expand_alignment('CG')                # returns "chaotic good".
+  expand_alignment('LE')                # returns "lawful evil".
 
 There is no default for expand_alignment.
 

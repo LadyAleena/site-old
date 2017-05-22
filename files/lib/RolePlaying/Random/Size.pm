@@ -9,14 +9,14 @@ use RolePlaying::Random qw(random);
 # POD written
 
 my %relative_sizes = (
-  'density' => ['thicker', 'thinner'],
-  'depth'   => ['deeper',  'shallower'],
-  'height'  => ['taller',  'shorter'],
-  'length'  => ['longer',  'shorter'],
-  'speed'   => ['faster',  'slower'],
-  'weight'  => ['heavier', 'lighter'],
-  'width'   => ['wider',   'narrower'],
-  'general' => ['bigger',  'smaller']
+  'density' => ['thicker',  'thinner'],
+  'depth'   => ['deeper',   'shallower'],
+  'height'  => ['taller',   'shorter'],
+  'length'  => ['longer',   'shorter'],
+  'speed'   => ['faster',   'slower'],
+  'weight'  => ['heavier',  'lighter'],
+  'width'   => ['wider',    'narrower'],
+  'general' => ['bigger',   'smaller']
 );
 $relative_sizes{'consistency'} = $relative_sizes{'density'};
 

@@ -17,10 +17,11 @@ my $iterations = $cgi->param('iterations') ? encode_entities($cgi->param('iterat
 
 my $file = "Character_mutations_generator.pl";
 page( 'code' => sub {
-  section(3, sub {
-    paragraph(4, q(The character mutations generator is a tool to use to make your PCs more interesting. The character could be the child of a powerful magic user who used spells too much, or the character may have been experimented on some time in life. This page is devoted to make your characters a little more unique. There are things on here that would make your character more powerful or much weaker.|All effects are cumulative, and one can be cancelled out by another. There is also the chance nothing could happen.), { separator => '\|' });
-    paragraph(4, 'I am not particularly happy with some of the sentence structures, but in some cases, it can not be helped.');
-  });
+  section(3, '
+      The character mutations generator is a tool to use to make your PCs more interesting. The character could be the child of a powerful magic user who used spells too much, or the character may have been experimented on some time in life. This page is devoted to make your characters a little more unique. There are things on here that would make your character more powerful or much weaker.
+      All effects are cumulative, and one can be cancelled out by another. There is also the chance nothing could happen.
+      I am not particularly happy with some of the sentence structures, but in some cases, it can not be helped.
+    ');
   form(3, sub {
     fieldset(4, sub {
       inputs(5, [

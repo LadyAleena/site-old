@@ -13,7 +13,7 @@ my $line_magic;
 for (qw(twarg throglin tralg trobold gobpry zarden), 'dark centaur') {
   my $search = searchify(ucfirst $_);
   my $text   = PL_N($_);
-  $line_magic->{$text} = qq(A<$text|href="Monsters/index.pl?monster=$search">);
+  $line_magic->{$text} = qq(A<$text|href="index.pl?monster=$search">);
 }
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });

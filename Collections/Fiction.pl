@@ -8,10 +8,10 @@ use lib '../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
-use People qw(get_people);
+use People qw(people_list);
 
 my $doc_magic = {
-  'authors' => sub { list(3, 'u', get_people('Authors.txt'), { 'class' => 'three' }) },
+  'authors' => sub { list(3, 'u', people_list('Authors.txt'), { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
@@ -101,7 +101,7 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 # I<Chaos Mode|^hardcover^>
 # I<DoOon Mode|^hardcover^>
 4 Xanth
-#| two
+#| three
 # I<A Spell for Chameleon|^massmarket^>
 # I<The Magic of Xanth|^massmarket^>
 # I<Castle Roogna|^massmarket^>
@@ -141,6 +141,8 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 # I<Esrever Doom|^hardcover^>
 # I<Board Stiff|^hardcover^>
 # I<Five Portraits|^hardcover^>
+# I<Iris Orb|^hardcover^>
+# I<Ghost Writer in the Sky|^hardcover^>
 3 Robert Asprin +
 4 Myth
 #2 I<Myth Conceptions|^massmarket^>

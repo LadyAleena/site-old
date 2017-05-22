@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_body_modification random_body_color_change random_aur
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use RolePlaying::Random::Misc  qw(emotion);
+use RolePlaying::Random::Misc  qw(random_emotion);
 use RolePlaying::Random::Color qw(random_color);
 use RolePlaying::Random::Event qw(random_event);
 use RolePlaying::Random::Range qw(random_radius);
@@ -291,7 +291,7 @@ sub random_body_color_change {
 }
 
 sub random_aura {
-  my @auras = (map($_.' aura',('visible '.random_color('pure'), emotion, random_alignment('parts'))));
+  my @auras = (map($_.' aura',('visible '.random_color('pure'), random_emotion, random_alignment('parts'))));
   return $auras[rand @auras];
 }
 

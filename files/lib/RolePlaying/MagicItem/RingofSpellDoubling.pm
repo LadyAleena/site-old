@@ -8,7 +8,7 @@ use Lingua::EN::Inflect qw(ORD);
 use List::Util qw(sum);
 
 use Util::Number qw(commify);
-use Util::GrammaticalJoin;
+use Fancy::Join::Grammatical;
 
 my %spell_levels = (
   "wizard" => [1..9],
@@ -28,7 +28,7 @@ my %stats = (
   }
 );
 
-sub value {
+sub ring_value {
   my($class,$stat,@array) = @_;
   return $stats{$class}{$stat}{'base'} + ( (scalar(@array) - 1) * $stats{$class}{$stat}{'inc'} );
 }
@@ -37,8 +37,8 @@ sub make_ring {
   my ($class,$levels) = @_;
   my @ring = sort @{$levels};
 
-  my $ring_xp_value = commify(value($class, 'xp', @ring));
-  my $ring_gp_value = commify(value($class, 'gp', @ring));
+  my $ring_xp_value = commify(ring_value($class, 'xp', @ring));
+  my $ring_gp_value = commify(ring_value($class, 'gp', @ring));
 
   my $ord_ring = grammatical_join( 'and', map( ORD($_), @ring ));
 

@@ -5,21 +5,28 @@ use warnings;
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib "../../../files/lib";
-use Base::Page qw(page story);
-use RolePlaying::SpellList qw(print_spell_list);
-use RolePlaying::CharacterBuilding::Story qw(print_participants);
+use Base::Page qw(page story passage);
+use Base::LineMagic qw($line_magic);
+use HTML::Elements qw(heading list);
+use RolePlaying::SpellList qw(spell_data);
 
 my $doc_magic = {
-  'spells'     => sub { print_spell_list(3, ['Find Beacon','Teleport Beacon','Secure Teleport']) },
-  'characters' => sub { print_participants },
+  'spells' => sub {
+    for my $spell_in ('Find Beacon','Teleport Beacon','Secure Teleport') {
+      my $spell = spell_data($spell_in);
+      heading(4, 3, $spell->{'heading'});
+      list(5, 'u', @{$spell->{'stats'}});
+      passage(5, $spell->{'description'});
+    }
+  }
 };
 
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
 The Society of Divided Light is dedicated to the gathering of magic and helping new adventurers get a good start on the road to glory.
 2 Background
-The Society was founded by A<Drianna StrongOak-Guard|href="../#Drianna_StrongOak-Guard"> after retiring from adventuring and marrying Grassguard and before becoming a goddess. Her friend A<Baroness Aegyn of Valachan|href="../#Aegyn_Valchae"> found the idea of such a society intriguing and joined with Drianna to expand on it by recruiting members. The Society's headquarters are on the grounds of Drianna's extensive estate. There is a subsidiary headquarters on the Isle of Valachan. As the group got larger, Drianna has faded from view; new Members not knowing who is really in charge.
+The Society was founded by ^Drianna StrongOak-Guard^ after retiring from adventuring and marrying Grassguard and before becoming a goddess. Her friend A<Baroness Aegyn of Valachan|href="../#Aegyn_Valchae"> found the idea of such a society intriguing and joined with Drianna to expand on it by recruiting members. The Society's headquarters are on the grounds of Drianna's extensive estate. There is a subsidiary headquarters on the Isle of Valachan. As the group got larger, Drianna has faded from view; new Members not knowing who is really in charge.
 The Society is loosely allied with the Churches of Mystra, Azuth, and Oghma. They will deny their involvement on the request of Drianna. Any unique items found by a Society member will be taken to an Azuthan church to be studied and then returned to the member. Society members are allowed to study within the Temples of Oghma, but only if they have something to add to their knowledge of the Realms.
 They have no connections with any other group.
 2 Entrance
@@ -39,26 +46,56 @@ Members must not...
 * call upon the Society for jailbreaks. Members must get out of their own messes. The only exception would be if the Member is incarcerated without known cause or is unjustly accused of a crime and is unable to clear their name without intercession.
 * interfere with other Member's works or activities, unless the work or activity is against the interest of the Society.
 2 Members
-& characters
+*| three
+* ^Awnday Ar'iemay^
+* ^Amelda Bacoulan^
+* ^Sarria Bagada^
+* ^Verago Brystar^
+* ^Ryceva Derman^
+* ^Myleara Disstar^
+* ^Oalirya Disstar^
+* ^Visilma Do'ranicy^
+* ^Faerinna Escar^
+* ^Matea Fi'nashari^
+* ^Nemidia Ge'mardian^
+* ^Niona Kilson^
+* ^Myra Kyllia^
+* ^Risa Kyllia^
+* ^Sorack Linsandin'viniar^
+* ^Desolenna Marder'bastiar^
+* ^Driastan Marder'bastiar^
+* ^Carri Notha^
+* ^Alexana Olara^
+* ^Eileen Olara^
+* ^Lamaria Peacyle^
+* ^Yenedra Peacyle^
+* ^Bryzarlyn Qi'lanari^
+* ^Hylene Serill^ (Co-founder)
+* ^Ducolin StoneGrip^
+* ^Drianna StrongOak-Guard^ (Founder)
+* ^Amori Tamdenar^
+* ^Aegyn Valchae^ (Co-founder)
+* ^Handira Warnir^
+* ^Kymaria Zendelic'tronyara^
 2 Notable Non-Members
-* Alvaris - lich, sometime acquaintance of Drianna StrongOak-Guard: be cautious with him.
-* Amatar - companion of Drianna StrongOak-Guard, then Alexana and Eileen Olara.
-* Solina Ca'vinia - mother of Sorack Linsandin
-* John Greenthumb - companion of Amori Tamdenar, then Bryzarlyn Qi'lanari.
+* Alvaris - lich, sometime acquaintance of ^Drianna StrongOak-Guard^: be cautious with him.
+* Amatar - companion of Drianna StrongOak-Guard, then ^Alexana^ and ^Eileen Olara^.
+* Solina Ca'vinia - mother of ^Sorack Linsandin'viniar^
+* John Greenthumb - companion of ^Amori Tamdenar^, then ^Bryzarlyn Qi'lanari^.
 * Ginger - companion of Bryzarlyn Qi'lanari.
 * Evelyn Glander - owner of the Swanmay's Song, known to Amori Tamdenar.
 * Grass Guard - husband of Drianna StrongOak-Guard, companion of Alexana and Eileen Olara.
-* Decori La'bastiar - mother of Desolenna and Driastan Marder.
-* Rechek Linsandin - father of Sorack Linsandin.
+* Decori La'bastiar - mother of ^Desolenna^ and ^Driastan Marder'bastiar^.
+* Rechek Linsandin - father of ^Sorack Linsandin'viniar^.
 * Irnian Marder - father of Desolenna and Driastan Marder.
-* Kyone Me'tronyara - mother of Kymaria Zendelic.
+* Kyone Me'tronyara - mother of ^Kymaria Zendelic'tronyara^.
 * Little Cricket - companion of Bryzarlyn Qi'lanari, but not friendly.
 * Raisa - companion of Amori Tamdenar, then Bryzarlyn Qi'lanari.
 * Reylah - companion of Bryzarlyn Qi'lanari.
 * Sasquach - companion of Amori Tamdenar, then Bryzarlyn Qi'lanari.
 * Balthazar SilverLeaf - Chief of the SilverLeaf Tribe, friend of Drianna StrongOak-Guard.
 * Brax StrongOak - husband of Drianna StrongOak-Guard.
-* Janx Swifthand - companion of Ryceva Derman.
+* Janx Swifthand - companion of ^Ryceva Derman^.
 * Torgin - one time companion to Drianna StrongOak-Guard, be cautious with him he is a god.
 * Laird Yanick - mayor of Luskwald, known to Amori Tamdenar.
 * Anri Zendelic - step-mother of Kymaria Zendelic.

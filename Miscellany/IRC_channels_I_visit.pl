@@ -6,13 +6,13 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page);
-use HTML::Elements qw(section heading paragraph list anchor);
+use HTML::Elements qw(section heading list anchor);
 use Util::Columns;
 
 my %irc = (
   freenode => {
     web        => [qw(apache css html httpd svg javascript web design)],
-    linux      => [qw(linux winehq alsa bash videolan rsync sed vim emacs awk)],
+    linux      => [qw(linux winehq alsa bash videolan rsync sed vim emacs awk geany)],
     perl       => [qw(perlcafe cbstream)],
     computing  => [qw(hardware programming windows sql yaml Openoffice.org notepad++)],
     mediawiki  => [qw(autowikibrowser mediawiki mediawiki-scripts wikimedia wikimedia-commons wikimedia-tech wikipedia wikipedia-en wikipedia-en-help wikipedia-plot wikipedia-social wp-doctor-who)],
@@ -42,24 +42,19 @@ sub irc_link {
 }
 
 sub irc_list {
-  my ($tab, $server, $list, $subject) = @_;
+  my ($server, $list, $subject) = @_;
   my @channel_list = map ( irc_link( $server, $_ ), sort { lc $a cmp lc $b } @$list);
-  if ($subject) {
-    heading( $tab, 3, $subject);
-    $tab++;
-  }
-  list( $tab, 'u', \@channel_list, { 'class' => get_columns(3, scalar @channel_list) } );
+  return (\@channel_list, { 'class' => number_of_columns(3, scalar @channel_list, 1) });
 }
 
 page( 'code' => sub {
-  section(3, sub {
-    paragraph(4,'These are the IRC channels in which I sometimes chat. My favorites are marked &#9829;.');
-  });
+  section(3, 'These are the IRC channels in which I sometimes chat. My favorites are marked &#9829;.');
   for my $server (sort {lc $a cmp lc $b} keys %irc) {
     section(3, sub {
-      irc_list( 4, $server, $irc{$server}{'general'} );
+      list(4, 'u', irc_list($server, $irc{$server}{'general'}));
       for my $subject (sort {lc $a cmp lc $b} grep(!/general/, keys %{$irc{$server}})) {
-        irc_list(4, $server, $irc{$server}{$subject}, $subject);
+        heading(4, 3, $subject);
+        list(5, 'u', irc_list($server, $irc{$server}{$subject}, $subject));
       }
     }, { 'heading' => [2, anchor($server, { 'href' => "irc://$server" })] });
   }  

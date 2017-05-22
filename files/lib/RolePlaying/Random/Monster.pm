@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_monster random_monster_list);
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use Util::MapinMap qw(map_in_map);
+use Fancy::Map qw(fancy_map);
 
 use Lingua::EN::Inflect qw(PL_N);
 use List::Util qw(shuffle);
@@ -140,10 +140,10 @@ $submonsters{'planar creature'} = {
   'time'     => [map( "$_ time dimensional", qw(common noble royal) )],
   'baatezu' => [
     'baatezu',
-    map_in_map({ 'after' => 'baatezu' }, [
+    fancy_map({ 'after' => 'baatezu' }, [
       [map( "$_ least",    qw(lemure nupperibo spinagon) )],
       [
-        map_in_map({ 'after' => 'lesser' },[
+        fancy_map({ 'after' => 'lesser' },[
           [map( "$_ abishai", qw(black green red) )],
           qw(barbazu erinyes hamatula osyuth)
         ])
@@ -171,7 +171,7 @@ $submonsters{'planar creature'} = {
   ],
   "tanar'ri" => [
     "tanar'ri", 'tiefling',
-    map_in_map({ 'after' => "tanar'ri" },[
+    fancy_map({ 'after' => "tanar'ri" },[
       [map( "$_ least",    qw(dretch jovoc mane rutterkin) )],
       [map( "$_ lesser",   qw(alu-fiend armanite bar-lgura bulezau cambian colchiln incubus maurezhi succubis uridezu yochlol) )],
       [map( "$_ greater", (qw(babau chasme goristro nabassu palrethee wastrilith),'arrow demons') )],
@@ -181,7 +181,7 @@ $submonsters{'planar creature'} = {
   ],
   'yugoloth' => [
     'yugoloth',
-      map_in_map({ 'after' => 'yugoloth' },[
+      fancy_map({ 'after' => 'yugoloth' },[
       [map( "$_ lesser",      qw(mezzoloth dergholoth piscoloth hydroloth yagnoloth marraenoloth) )],
       [map( "$_ greater",     qw(nycaloth arcanaloth ultroloth) )],
       [map( "$_ battleloth", (qw(arrow axe crossbow pick sword),'spiked chain') )],

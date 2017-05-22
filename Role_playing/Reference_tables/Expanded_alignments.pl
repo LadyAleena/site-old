@@ -37,7 +37,7 @@ for my $x_axis (@x_axis) {
   $y_num = 1;
 }
 
-my $doc_magic = { alignments => sub { table(3, { class => 'expanded_alignment', rows => [['data',\@rows]] }) }};
+my $doc_magic = { alignments => sub { table(3, { class => 'expanded_alignment centered', rows => [['data',\@rows]] }) }};
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 

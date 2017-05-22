@@ -29,9 +29,9 @@ my @game_rolls = (
 
 my @events;
 for my $event (@base_events) {
-  push @events, map("$_ $event",qw(successful failed));
+  push @events, map("$_ $event", qw(successful failed));
 }
-push @events, map("critical $_",qw(hit miss));
+push @events, map("critical $_", qw(hit miss));
 
 sub random_event {
   return $events[rand @events];

@@ -16,12 +16,12 @@ my $i = 1;
 my @rows;
 for (map($_."illion",@scale)) {
   my $number = commify(Math::BigInt->new(10**(3*$i++)));
-  push @rows, [$_, [$number, { 'class' => 'number' }]];
+  push @rows, [$_, $number];
 }
 
-my $doc_magic = { 'scale' => sub { table(4, { 'class' => 'numberation_scale', 'rows' => [['header', [['Name', 'Number']]], ['data', \@rows]] }) } };
+my $magic = { 'scale' => sub { table(4, { 'id' => 'numeration_scale_data', 'class' => 'number', 'rows' => [['header', [['Name', 'Number']]], ['data', \@rows]] }) } };
 
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA, { 'doc magic' => $magic }) });
 
 __DATA__
 I decided to come up with my own numeration scale based on the amount of commas in the number.

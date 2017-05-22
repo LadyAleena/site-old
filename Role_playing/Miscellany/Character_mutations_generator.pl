@@ -9,6 +9,7 @@ use Lingua::EN::Inflect qw(ORD NUMWORDS);
 
 use lib '../../files/lib';
 use Base::Page qw(page);
+use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(section paragraph list form fieldset inputs);
 use RolePlaying::CharacterMutation qw(random_mutations);
 

@@ -8,10 +8,6 @@ our @EXPORT_OK = qw(random_name);
 
 This module generates random names by a specified pattern, based on Random Name by Jason Seeley.
 
-=head2 Authors
-
-Lady Aleena with help of simcop2387 of #perlcafe and #buubot on freenode and from the PerlMonks and others in #perlcafe.
-
 =head2 Use
 
 To use this module, please enter the following.
@@ -68,6 +64,11 @@ If you want to repeat the next character in the pattern, put the amount of repea
 If you want to repeat a group in the pattern, put the amount of repeats directly in front of the character, however you must surround the repeat in parentheses.
 
   random_name('L2(vc)') #will return any letter first follow by two repeated syllables each comprised of a single vowel and a single consonent.
+
+=head1 AUTHOR
+
+Lady Aleena with help of simcop2387 of #perlcafe and #buubot on freenode and from the PerlMonks and others in #perlcafe.
+
 =cut
 
 my %alpha = (

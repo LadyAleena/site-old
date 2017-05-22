@@ -5,13 +5,14 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::Data qw(data_directory get_directory);
+use Base::Data qw(file_list data_directory);
 use Base::Page qw(page story);
-use HTML::Elements qw(anchor list);
+use HTML::Elements qw(list anchor);
 use Util::Sort qw(name_sort);
 use Util::Convert qw(textify searchify);
 
-my @spellbook_list = sort { name_sort(textify($a),textify($b)) } get_directory(data_directory('Role_playing/Player_characters/spellbooks'));
+my $directory = 'Role_playing/Player_characters/spellbooks';
+my @spellbook_list = sort { name_sort(textify($a),textify($b)) } file_list(data_directory($directory));
 my @spellbooks;
 for my $spellbook (@spellbook_list) {
   my $text = textify($spellbook);
@@ -19,7 +20,7 @@ for my $spellbook (@spellbook_list) {
   push @spellbooks, anchor($text, { href => qq(../Player_characters/Spellbooks.pl?spellbook=$search) });
 }
 
-my $doc_magic = { 'spellbooks' => sub { list(4, 'u', \@spellbooks, { 'class' => 'two' }) } };
+my $doc_magic = { 'spellbooks' => sub { list(4, 'u', \@spellbooks, { 'class' => 'three' }) } };
 
 page('heading' => 'Magical books', 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
 

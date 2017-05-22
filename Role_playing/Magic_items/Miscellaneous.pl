@@ -40,8 +40,8 @@ There are two buttons on the bottom right corner of the back of the card also to
 The quickness of the letter depends on the activity of the Ethereal plane at the time of sending, it is normally instant. There is a 30% chance that it might not get through and will have to be returned to sender.
 2 Leon's Card
 by Rich Rayburn
-Leon's Card was first penned by a Pimp Mage who was tired of being harassed by "The Man." It is a magical card (a very small scroll of hard stock) about three inches long and an inch and a half wide that has Leon's name, address, and profession penned on it in a mystical ink. Taking and reading this card acts as a powerful combination Charm Person and Suggestion spell leaving the reader open to "viable" alternatives to the original plan. An example of use:
-Leon is accosted by the city watch for pandering—he flashes his card; the Captain reads the card; and then gets irate that Leon handed it to him... "Just what is this thing?". Leon makes the observation that the City Watch just is not appreciated enough in this town; that they work long, hard hours, exposed to many countless dangers, as well as mundane, boring tasks... perhaps he should personally show his gratitude for the efforts of the Watch Captain with a generous (and regular) contribution...In exchange of course for some "consideration" for a reasonable man trying to earn a living in a non-violent way that does not threaten the peace.
+Leon's Card was first penned by a Pimp Mage who was tired of being harassed by Q<The Man.> It is a magical card (a very small scroll of hard stock) about three inches long and an inch and a half wide that has Leon's name, address, and profession penned on it in a mystical ink. Taking and reading this card acts as a powerful combination Charm Person and Suggestion spell leaving the reader open to Q<viable> alternatives to the original plan. An example of use:
+Leon is accosted by the city watch for pandering, he flashes his card; the Captain reads the card; and then gets irate that Leon handed it to him... Q<Just what is this thing?>. Leon makes the observation that the City Watch just is not appreciated enough in this town; that they work long, hard hours, exposed to many countless dangers, as well as mundane, boring tasks... perhaps he should personally show his gratitude for the efforts of the Watch Captain with a generous (and regular) contribution...In exchange of course for some "consideration" for a reasonable man trying to earn a living in a non-violent way that does not threaten the peace.
 The reader of the card must make a save versus magic at -2. If the suggestion is reasonable to the situation, failure results in perfect agreement. A failed save by more than 10 points means not just tacit agreement but active and sincere apologies with a humble refusal of bribery or whatever the Pimp Mage is offering while the victim departs the area ("this was OBVIOUSLY a mistake...").
 The ink for this card is a mixture of giant squid ink, blood from the Pimp Mage, and distilled water from a reversal of the "Water to Liquor" spell, all in equal measures, mixed with 200gp of crushed pearl per application.
 2 Lute of the Flea
@@ -49,13 +49,13 @@ by Nathan Brown
 This normal-appearing lute has four strings and, when strummed, gives off a lower sound than it should. If a successful musical instrument check is made, the player goes into a wild beat. This beat will not interfere with other music playing and will fit into the rhythm and tune.
 2 Mirror of Control
 |* Frame|# of People|Gem-studded|Duration|Saving Throw
-|- Wooden|1d4|×2|2d4 Hours|Normal
-|- Iron|1d6|×3|2d6 Days|-1
-|- Copper|1d8|×3|2d8 Days|-2
-|- Silver|1d10|×4|2d10 Days|-4
-|- Electrum|1d12|×4|1d12 Weeks|-6
-|- Gold|1d20|×4|1d20 Weeks|-8
-|- Platinum|1d100|×5|1d100 Months|None
+|+ Wooden|1d4|×2|2d4 Hours|Normal
+|+ Iron|1d6|×3|2d6 Days|-1
+|+ Copper|1d8|×3|2d8 Days|-2
+|+ Silver|1d10|×4|2d10 Days|-4
+|+ Electrum|1d12|×4|1d12 Weeks|-6
+|+ Gold|1d20|×4|1d20 Weeks|-8
+|+ Platinum|1d100|×5|1d100 Months|None
 There are only a few of these mirrors in existence. The mirror is a five foot wide oval. Some of them are freestanding and others are wall mountable. The mirror spawns smaller mirrors which are given to the people to be controlled. The amount of people that can be controlled and the length of time of the control depends on how the main mirror is framed (see chart). If a person is unwilling to be controlled, the victim may get a saving throw versus petrifacation.
 To use the mirror, the owner will have to have a smaller mirror spawned and give it to the intended target. Once the target touches the smaller mirror, that person is controlled after failing the saving throw. When control is established, all the owner has to do it focus on one of the people controlled and issue commands through the mirror. The victims can be forced to act against their own interests and alignments. The victims are also fully aware of the control and of what they are doing. The victims are barred from planear travel.
 If the smaller mirror is broken by accident, the holder gets a saving throw versus death. If the mirror is broken on purpose, the holder immediately dies. If the main mirror is destroyed, all those that are under control are freed, and the owner must make a save versus death or die.

@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_gem random_gem_variety random_gem_color random_gem_cu
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use Util::GrammaticalJoin;
+use Fancy::Join::Grammatical;
 
 use Lingua::EN::Inflect qw(A);
 

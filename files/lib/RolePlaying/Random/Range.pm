@@ -75,7 +75,7 @@ When you want to generate a random range with this module, you can choose from t
   
 You can substitute C<random_range> with C<random_radius> to get some extra text with the returned value.
 
-=head2 Author
+=head1 AUTHOR
 
 Lady Aleena
 

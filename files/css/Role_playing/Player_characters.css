@@ -1,50 +1,52 @@
-table.player_character { border-width: 1px; }
+table.player_character { margin: 2px; }
 table.player_character caption { font-size: smaller; font-weight: bold; font-style:oblique; }
 
-table.player_character th { padding:0 .5em; font-size: smaller; }
-table.player_character th.ability_name { font-size: smaller; }
-table.player_character th.sub_score { font-size:8pt; }
-table.player_character th.row_header { text-align:center; }
+table.player_character th { padding: 0 .5em; }
+table.player_character th.ability_name { }
+table.player_character th.sub_score { font-size: 8pt; }
+table.player_character th.row_header { text-align: center; }
 
-table.player_character td.info { text-align:left; white-space: normal; }
-table.player_character td.info ul { list-style-type:none; padding:0; }
-table.player_character td ul { margin:0; padding:0; }
-table.player_character td ul li { list-style:none; }
+table.player_character td.info { text-align: left; white-space: normal; }
+table.player_character td.info ul { list-style-type: none; padding: 0; }
+table.player_character td ul { margin: 0; padding: 0; }
+table.player_character td ul li { list-style: none; }
 
-table.ab_box { width: 30%; float: right; }
+table.ab_box { width: 25%; float: right; }
 table.ab_box th { width: 40%; }
 table.ab_box td { white-space: normal; }
 
-table.ability_score { width:99%; }
-
-table.info_box { width:30%; float:left; }
-table.info_box th { width:35%; }
+section.info_boxes { display: flex; justify-content: space-around; }
+table.info_box { width:32.75%; float:left; }
+table.info_box th { width:5em; }
 table.info_box td { text-align:left; }
 
-table.THAC0 { width: 99%; }
+table.ability_score { width: 99.5%; }
 
-table.psionics,
+table.THAC0 { width: 99.5%; margin: 2px; }
+
 table.armor_class, 
 table.rogue_skills,
 table.saving_throws, 
+table.spell_progression,
 table.turning_undead,
-table.spell_progression { float: left; width: 23.5%; }
+table.psionics { float: left; width: 24.6%; margin: 2px; }
 
-table.THAC0 th.row_header { width: 7em; }
-table.armor_class th.row_header { width: 3em; }
-table.rogue_skills th.row_header { width: 10em; }
-table.saving_throws th.row_header { width: 7.5em; }
-table.turning_undead th.row_header { width: 9em; }
-table.spell_progression th.row_header { width: 2.5em; }
+table.THAC0             th.row_header { width:  7em; }
+table.armor_class       th.row_header { width:  3em; }
+table.rogue_skills      th.row_header { width:  9em; }
+table.saving_throws     th.row_header { width:  7.5em; }
+table.spell_progression th.row_header { width:  2.5em; }
+table.turning_undead    th.row_header { width:  9em; }
+table.psionics          th.row_header { width:  9em; }
 
 table.bonus_spells tr th.row_header { text-align: center; }
 table.bonus_spells tr td:last-child { text-align: left; }
 
-.width_03 { width:3%; }
-.width_12 { width:12%; }
-.width_14 { width:14%; }
-.width_15 { width:15%; }
-.width_18 { width:18%; }
-.width_28 { width:28%; }
-.width_29 { width:29%; }
-.width_100 { width:100%; }
+.width_03  { width:   3%; }
+.width_12  { width:  12%; }
+.width_14  { width:  14%; }
+.width_15  { width:  15%; }
+.width_18  { width:  18%; }
+.width_28  { width:  28%; }
+.width_29  { width:  29%; }
+.width_100 { width: 100%; }

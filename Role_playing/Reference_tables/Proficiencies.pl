@@ -63,7 +63,7 @@ for my $proficiency (sort { $a->{'Proficiency'} cmp $b->{'Proficiency'} } values
 page( 'code' => sub {
   section(3, sub {
     paragraph(4,qq{These proficiencies are from Advanced Dungeons and Dragons, 2nd edition. You can select the proficiencies you wish to view. Please see the source books for the descriptions. If you know of more, please email me.});
-    tiny_select(4, { 'location' => 'Proficiencies.pl', 'file' => ['Role_playing/Reference_tables','Proficiences_select.txt'] });
+    tiny_select(4, { 'location' => 'Proficiencies.pl', 'file' => ['Role_playing/Reference_tables','Proficiences_select.txt'], 'class' => 'proficiency' });
     table(4, { 'class' => 'proficiency', 'rows' => [['header',[\@headings]],['data',\@rows]] });
   });
 });

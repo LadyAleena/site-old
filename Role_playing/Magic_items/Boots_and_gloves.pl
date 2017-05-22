@@ -8,6 +8,9 @@ use lib '../../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
+$line_magic->{'XP'} = 'A<XP|title="experience point value">';
+$line_magic->{'GP'} = 'A<GP|title="gold piece value">';
+
 page( 'heading' => 'Magical boots and gloves', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
@@ -26,15 +29,15 @@ If the effects of the bracers is dispelled for any reason, they cease to functio
 There are also rumors that a more powerful version of these bracers exist. The owner is sorceror who ruled states and countries. These bracers would instead bestow a +2 bonus and would have the powers of fire shield and I<fireball>.
 2 Gauntlets of Giant Power
 || rolls
-|* d100|Giant|XP value|GP value|Str.
-|+ 1-20|ogre|1000|10000|18(00)
-|+ 21-35|hill|1250|12500|19
-|+ 36-50|stone|1500|15000|20
-|+ 51-65|frost|1750|17500|21
-|+ 66-75|fire|2000|20000|22
-|+ 76-85|cloud|2250|22500|23
-|+ 86-95|storm|2500|25000|24
-|+ 95-100|titan|2750|27500|25
+|* d100|Giant|^XP^|^GP^|Str.
+|+ 1-20|ogre|1,000|10,000|18(00)
+|+ 21-35|hill|1,250|12,500|19
+|+ 36-50|stone|1,500|15,000|20
+|+ 51-65|frost|1,750|17,500|21
+|+ 66-75|fire|2,000|20,000|22
+|+ 76-85|cloud|2,250|22,500|23
+|+ 86-95|storm|2,500|25,000|24
+|+ 95-100|titan|2,750|27,500|25
 These gauntlets are like the Gauntlets of Ogre Power in the I<Dungeon Masters Guide> for Advanced Dungeons and Dragons 2nd edition. The giants from the Girdle of Giant Strength have been added plus titan.
 2 Drianna's Glove of Wands
 This Glove enables the wearer to wield four wands at one time, the wands are connected to the fingertips of the glove. It allows the wearer to use two of the wands simultaneously by telepathy negating the initiative modifier. The Glove is made of a fine leather with silk stitching. There are four fingers to the Glove but no thumb piece. On the palm of the Glove, there is the sigil of Drianna of Willowdale, a weeping willow with 14 weeping branches.
@@ -46,17 +49,22 @@ Once the wearer puts the gloves on, they do not come off. To try to control thes
 They also act as gloves of free action.
 2 Gloves of Metallic Touch
 by Nathan Brown
+|| rolls
+|* c2 Touches
+|* d100|Touch
+|+ 1-40|Iron
+|+ 41-70|Crystal
+|+ 71-90|Copper
+|+ 91-100|Gold
+|* c2 Charges
+|* d100|Charges
+|+ 1-40|10
+|+ 41-70|20
+|+ 71-90|50
+|+ 91-100|unlimited
 Much like the touch of the Midas legend, while wearing these gloves, anything the gloves touch becomes its respective metal. The gloves may have a limited number of charges. Only after these are expended may the gloves be removed. Should the gloves have unlimited power, they can only be removed by a Wish, or by a Remove Curse from a priest of at least 17th level.
-* 10% Gold touch
-* 20% Copper touch
-* 30% Crystal touch (I know it's not a metal)
-* 40% Iron touch
-br
-* 10% unlimited use
-* 20% 50 charges
-* 30% 20 charges
-* 40% 10 charges
 Living creatures touched save versus petrifaction at a -4 penalty. An alteration of Stone to Flesh may be used to return victims to their normal state. A special god-given quest may be necessary.
+STRONG<Note from author:> I know crystal is not a metal.
 2 Gloves of Savagery
 by Joshua Moore
-This pair of gloves can bestow on a warrior incredible power in combat—for five rounds the warrior's every hit is critical (by house rules). After the five rounds the warrior collapses helpless for five rounds. Five rounds is just the maximum—if they are removed after three rounds the collapse will be for three rounds.
+This pair of gloves can bestow on a warrior incredible power in combat. For five rounds the warrior's every hit is critical (by house rules). After the five rounds the warrior collapses helpless for five rounds. Five rounds is the maximum. If they are removed after three rounds the collapse will be for three rounds.

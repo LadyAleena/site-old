@@ -2,20 +2,20 @@ package RolePlaying::CharacterBuilding::Psionics;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_psionics psionics_table_rows);
-
-# part of the Character Building table printing suite.
+our @EXPORT_OK = qw(psionics_by_level psionics_table_rows);
 
 use Base::Data qw(get_hash);
-use RolePlaying::CharacterBuilding::Class qw(get_level);
+use RolePlaying::CharacterBuilding::Class qw(class_level);
 
-sub get_psionics {
+# part of the Character Building table suite.
+
+sub psionics_by_level {
   my ($class, $opt) = @_;
-  my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
+  my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
   
   my $psionics = get_hash( 
-    'file' => ['Role_playing/Classes/Psionics','progression.txt'],
-    'headings' => ['level','disciplines','sciences','devotions','defense modes'],
+    'file' => ['Role_playing/Classes/Psionics', 'progression.txt'],
+    'headings' => ['level', 'disciplines', 'sciences', 'devotions', 'defense modes'],
   );
 
   return $psionics->{$level} ? $psionics->{$level} : undef;
@@ -25,9 +25,9 @@ sub psionics_table_rows {
   my %opt = @_;
   my $xp  = $opt{'experience'};
 
-  my $psionics = get_psionics('psionisist', { 'experience' => $xp });
+  my $psionics = psionics_by_level('psionisist', { 'experience' => $xp });
   my @data_rows;
-  push @data_rows, [ucfirst $_, $psionics->{$_}] for ('disciplines','sciences','devotions','defense modes');
+  push @data_rows, [ucfirst $_, $psionics->{$_}] for ('disciplines', 'sciences', 'devotions', 'defense modes');
   
   my @rows = (
     ['header', [['&nbsp;','Amount']]],

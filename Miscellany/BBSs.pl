@@ -7,7 +7,8 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../files/lib';
 use Base::Data qw(get_hash);
 use Base::Page qw(page story);
-use HTML::Elements qw(anchor list);
+use HTML::Elements qw(list span anchor);
+use Fancy::Join::Defined;
 
 my $BBSs = get_hash( 'file' => ['Miscellany', 'BBSs.txt'], 'headings' => [qw(name domain ip site)] );
 
@@ -16,8 +17,9 @@ for my $BBS (sort { $a->{'name'} cmp $b->{'name'} } values %$BBSs) {
   my $name = $BBS->{'name'};
   my $link = $BBS->{'site'};
   my $BBS_head = $link ? anchor($name, { 'href' => "http://$link" }) : $name;
-  my @telnet_links = map { $BBS->{$_} ? anchor($BBS->{$_}, { 'href' => "telnet://$BBS->{$_}" }) : undef } ('domain','ip');
-  push @items, qq{$BBS_head <small>(}.join(', ', grep(defined, @telnet_links)).q{)</small>};
+  my @telnet_links = map { $BBS->{$_} ? anchor($BBS->{$_}, { 'href' => "telnet://$BBS->{$_}" }) : undef } ('domain', 'ip');
+  my $links = span('('.join_defined(', ', @telnet_links).')', { class => 'links' });
+  push @items, "$BBS_head $links";
 }
 
 my $doc_magic = { 'bbss' => sub { list(4, 'u', \@items, { class => 'two' }) } };

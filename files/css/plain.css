@@ -1,0 +1,9 @@
+body { font: normal 9pt arial }
+
+table { border-collapse: collapse; }
+
+.left   { text-align: left; }
+.right  { text-align: right; }
+.center { text-align: center; }
+
+.updated::after { content: " updated"; vertical-align: unset; color: #000; }

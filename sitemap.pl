@@ -7,30 +7,30 @@ use List::Util qw(sum min max);
 use URI::Encode qw(uri_encode);
 
 use lib 'files/lib';
-use Base::Data qw(get_directory);
-use Base::Menu qw(main_menu link_color);
-use Base::Root qw(get_root);
-use HTML::Elements qw(html head heading body table list anchor pre);
+use Base::Data qw(file_list);
+use Base::Menu qw(base_menu link_color);
+use Base::Path qw(base_path);
+use HTML::Elements qw(html head body heading paragraph list table anchor);
 use Util::Number qw(pretty_number);
 
-my $root_path = get_root('path');
-my $root_user = get_root('user');
-my $root_link = get_root('link');
+my $root_path = base_path('path');
+my $root_link = base_path('link');
 
-my @files;
+my @visible_files;
 my %extensions;
 my %file_sizes;
 my $file_sizes_sum;
-sub file_list {
+sub recurse {
   my ($directory, $visible) = @_;
-  my @temp = get_directory($directory);
-  for (@temp) {
-    my $new_visible = $visible == 1 && $_ =~ /^(\p{uppercase}|index)/ ? 1 : 0;
+  my @files = file_list($directory);
+
+  for (@files) {
+    my $new_visible = ($visible == 1 && $_ =~ /^(\p{uppercase}|index)/);
     my $full = "$directory/$_";
     if (-f $full) {
       if ($new_visible == 1) {
         (my $link = $full) =~ s/$root_path/$root_link/;
-        push @files, $link;
+        push @visible_files, $link;
       }
       my $extension = (split(/\./,$_))[-1];
       ++$extensions{$extension};
@@ -43,12 +43,12 @@ sub file_list {
       $file_sizes_sum += $file_size;
     }
     if (-d $full) {
-      file_list($full, $new_visible);
+      recurse($full, $new_visible);
     }
   }
 }
 
-file_list($root_path, 1);
+recurse($root_path, 1);
 my $extensions_sum   = sum(values %extensions);
 my $extensions_types = keys %extensions;
 my $file_sizes_total = keys %file_sizes;
@@ -82,40 +82,43 @@ my $sum_mbytes =  ($file_sizes_sum/1024)/1024;
 my $avg_bytes  =   $file_sizes_sum/$file_sizes_total;
 my $avg_kbytes =  ($file_sizes_sum/$file_sizes_total)/1024;
 my $avg_mbytes = (($file_sizes_sum/$file_sizes_total)/1024)/1024;
-push @size_rows, ['Totals',  map { [pretty_number(5,$_), { 'class' => 'right' }] } ($sum_bytes,$sum_kbytes,$sum_mbytes)];
-push @size_rows, ['Averages',map { [pretty_number(5,$_), { 'class' => 'right' }] } ($avg_bytes,$avg_kbytes,$avg_mbytes)];
+push @size_rows, ['Totals',   map { [pretty_number(5,$_), { 'class' => 'right' }] } ($sum_bytes,$sum_kbytes,$sum_mbytes)];
+push @size_rows, ['Averages', map { [pretty_number(5,$_), { 'class' => 'right' }] } ($avg_bytes,$avg_kbytes,$avg_mbytes)];
 
 html(0, {
   'head' => {
-    title => "$root_user\'s file list",
+    title => "Lady Aleena's file list",
+    meta  => [
+      {'http-equiv' => 'content-type', 'content' => 'text/html; charset=utf-8'}
+    ],
+    'links' => [
+      { 'rel' => 'stylesheet', 'type' => 'text/css', 'href' => '../files/css/plain.css' }
+    ],
     style => ['
-      body {font:normal 8pt arial}
       ul { padding-left:1em; }
       ul.main { -moz-column-count:4; -webkit-column-count:4; column-count:4; }
       ul.visi { -moz-column-count:3; -webkit-column-count:3; column-count:3; }
-      ul ul {-moz-column-count:1; -webkit-column-count:1; column-count:1;}
-      ul, ul ul ul ul, ul ul ul ul ul ul ul {list-style-type:disc;}
-      ul ul, ul ul ul ul ul, ul ul ul ul ul ul ul ul {list-style-type:circle;}
-      ul ul ul, ul ul ul ul ul ul, ul ul ul ul ul ul ul ul ul {list-style-type:square;}
-      table {border-collapse:collapse;}
-      .right {text-align:right;}
-      th.row_header,td.left {text-align:left;}
-      th,td {border:1px solid #ddd;}
-      th{background:#eee;}
+      ul ul { -moz-column-count:1; -webkit-column-count:1; column-count:1; }
+      ul, ul ul ul ul, ul ul ul ul ul ul ul { list-style-type:disc; }
+      ul ul, ul ul ul ul ul, ul ul ul ul ul ul ul ul { list-style-type:circle; }
+      ul ul ul, ul ul ul ul ul ul, ul ul ul ul ul ul ul ul ul { list-style-type:square; }
+      th.row_header { text-align:left; }
+      th, td { border:1px solid #ddd; }
+      th { background:#eee; }
       ', { type => 'text/css' }
     ]
   },
   'body' => [
     sub {
-      table(3, { 'style' => 'float:right', 'rows' => [['header',[['Ext','Count']]],['data',\@ext_rows],['whead',\@ext_end_rows]] });
-      list(3,'u', main_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 1, 'full' => 1, ), { 'class' => 'main' });
+      table(3, { 'rows' => [['header', [['Ext','Count']]], ['data', \@ext_rows], ['whead', \@ext_end_rows]], 'style' => 'float:right' });
+      list(3,'u', base_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 1, 'full' => 1, ), { 'class' => 'main' });
       heading(3, 2, 'Files by size');
-      table(3, { 'rows' => [['header',[[qw(File bytes kilobytes megabytes)]]],['whead',\@size_rows]] });
+      table(4, { 'rows' => [['header', [[qw(File bytes kilobytes megabytes)]]], ['whead', \@size_rows]] });
       heading(3, 2, 'Visible files');
-      list(4, 'u', [sort @files], { 'class' => 'visi' });
-    }, { 'heading' => [1, "$root_user\'s file list"] }
+      list(4, 'u', [sort @visible_files], { 'class' => 'visi' });
+    }, { 'heading' => [1, "Lady Aleena's file list"] }
   ]
 });
 
-open(my $file, '>', 'sitemap.txt') or die $!;
-print $file join("\n",sort @files);
+open(my $file, '>', 'sitemap.txt') || die "Can't open sitemap.txt $!";
+print $file join("\n",sort @visible_files);

@@ -2,15 +2,15 @@ package RolePlaying::CharacterBuilding::THAC0;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_base_THAC0 get_THAC0 THAC0_table_rows);
-
-# part of the Character Building table printing suite.
+our @EXPORT_OK = qw(THAC0_base THAC0 THAC0_table_rows);
 
 use List::Util qw(min sum);
 use POSIX qw(ceil);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
-use Util::Columns qw(get_columns);
+use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+use Util::Columns;
+
+# part of the Character Building table suite.
 
 my %THAC0_chart;
 while (my $line = <DATA>) {
@@ -22,20 +22,20 @@ while (my $line = <DATA>) {
 }
 
 # math help from buu in #buubot on freenode
-sub get_base_THAC0 {
+sub THAC0_base {
   my ($class, $opt) = @_;
   $class = convert_class($class,'THAC0');
-  my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
+  my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
 
   my $THAC0 = 20 - ( (ceil($level/$THAC0_chart{$class}{'by levels'})-1) * $THAC0_chart{$class}{'reduce'} );
   return $THAC0;
 }
 
-sub get_THAC0 {
+sub THAC0 {
   my %opt = @_;
-  my $class        = $opt{'class'};
-     $class        = convert_class($class,'THAC0');
-  my $level        = $opt{'level'};
+  my $class = $opt{'class'};
+     $class = convert_class($class,'THAC0');
+  my $level = $opt{'level'};
   my $weapon_type  = $opt{'weapon type'};
   my $hit_location = $opt{'hit location'} ? $opt{'hit location'} : 'front';
   my $proficiency  = $opt{'proficiency'};
@@ -61,13 +61,13 @@ sub get_THAC0 {
   my $weapon_type_mod  = $weapon_type eq 'melee'  ? $hit_probability : 
                          $weapon_type eq 'missle' ? $opt{'missile attack adjustment'} : 0;
   my $hit_location_mod = $to_hit_locations{$hit_location};
-  
+
   # to hit using the off hand is +2 unless the character is ambidextrous then it is 0.
   my $hand_mod         = !$opt{'hand'} ? 0 : $opt{'ambidexterity'} ? 0 : 2;
 
   my $modifier         = sum($proficiency_mod, $hit_location_mod, $hand_mod) - $weapon_type_mod;
 
-  my $base_THAC0 = get_base_THAC0($class, { 'level' => $level });
+  my $base_THAC0 = THAC0_base($class, { 'level' => $level });
   my $raw_THAC0  = $base_THAC0 + $modifier;
   
   # the highest THAC0 can be is 20.
@@ -76,14 +76,14 @@ sub get_THAC0 {
   return $THAC0;
 }
 
-sub get_THAC0s {
+sub THAC0_all {
   my %opt = @_;
   my $classes = $opt{'classes'};
   my $xp      = $opt{'experience'};
-   
+
   my %THAC0s;
   for my $class (@{$classes}) {
-    my $class_THAC0 = get_base_THAC0($class, { 'experience' => $xp });
+    my $class_THAC0 = THAC0_base($class, { 'experience' => $xp });
     $THAC0s{$class_THAC0} = $class;
   }
   my $base_THAC0 = min(keys %THAC0s);
@@ -96,12 +96,12 @@ sub get_THAC0s {
     for my $weapon_type ('melee', 'missle') {
       for my $hand ('', 'off-hand') {
         for my $direction ('front', 'flank', 'rear') {
-          my $table_heading = ucfirst "$weapon_type<br/><small>$direction<br/>$hand</small>";
+          my $table_heading = ucfirst "$weapon_type<br><small>$direction<br>$hand</small>";
           push @table_headings, $table_heading unless grep(/$table_heading/, @table_headings);
-          
-          my $THAC0 = get_THAC0(
+
+          my $THAC0 = THAC0(
             'class'           => $class,
-            'level'           => get_level($class,$xp),
+            'level'           => class_level($class,$xp),
             'hit probability' => $opt{'hit probability'},
             'missile attack adjustment' => $opt{'missile attack adjustment'},
             'ambidexterity'   => $opt{'ambidexterity'},
@@ -110,7 +110,7 @@ sub get_THAC0s {
             'proficiency'     => $proficiency,
             'hand'            => $hand,
           );
-          
+
           push @table_row, $THAC0;
         }
       }
@@ -121,15 +121,15 @@ sub get_THAC0s {
   my %THAC0_table;
   $THAC0_table{'headings'} = \@table_headings;
   $THAC0_table{'table'}    = \@table;
-  
+
   return \%THAC0_table;
 }
 
 sub THAC0_table_rows {
   my %opt = @_;
   my $weapons = $opt{'weapons'};
-  
-  my $THAC0_table = get_THAC0s(
+
+  my $THAC0_table = THAC0_all(
     'classes'         => $opt{'classes'},
     'experience'      => $opt{'experience'},
     'hit probability' => $opt{'hit probability'},
@@ -144,9 +144,9 @@ sub THAC0_table_rows {
   my $colspan = scalar @{$rows[0]->[1]->[0]};
   if ($weapons) {
     push @rows, [ 'header', [[['Weapons', { 'colspan' => $colspan }]]] ];
-    push @rows, [ 'data', [[['list', { 'class' => 'info', 'colspan' => $colspan, 'list' => ['u', $weapons, { 'class' => get_columns( 3, scalar @$weapons) }] }]]] ];
+    push @rows, [ 'data', [[['list', { 'class' => 'info', 'colspan' => $colspan, 'list' => ['u', $weapons, { 'class' => number_of_columns( 3, scalar @$weapons, 1) }] }]]] ];
   }
-  
+
   return \@rows;
 }
 

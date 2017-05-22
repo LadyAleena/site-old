@@ -6,9 +6,9 @@ our @EXPORT_OK = qw(random_attack random_special_attack);
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random tinyrand);
-use RolePlaying::Random::Misc qw(dice);
+use RolePlaying::Random::Misc qw(random_dice);
 use RolePlaying::Random::Time qw(random_frequency);
-use Util::JoinDefined;
+use Fancy::Join::Defined;
 
 my %special_attacks = (
   'gaze' => [qw(paralysis stone stun death)],
@@ -32,10 +32,10 @@ sub random_special_attack {
   my $attack = $rand_attack ne 'range' ? "$rand_attack attack" : 'breath weapon';
 
   my $effect = random_attack($rand_attack);
-  my $damage = $rand_attack =~ /(range|touch)/ ? 'for '.dice.' damage' : undef;
+  my $damage = $rand_attack =~ /(range|touch)/ ? 'for '.random_dice.' damage' : undef;
   my $freqency = random_frequency;
 
-  return "$attack - ".join_defined(' ',[$effect,$damage,$freqency]);
+  return "$attack - ".join_defined(' ', ($effect, $damage, $freqency));
 }
 
 1;

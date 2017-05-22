@@ -2,41 +2,34 @@ package RolePlaying::SpellList;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(print_spell_list);
+our @EXPORT_OK = qw(spell_data);
 
 use CGI::Carp qw(fatalsToBrowser);
-use File::Slurp; # read_file
+use IO::All;
 
-use Base::Data qw(data_file get_hash); # data_file used elsewhere
-use HTML::Elements qw(section rparagraph list);
-use Util::Convert qw(textify filify);
+use Base::Data qw(data_file get_hash);
+use Util::Convert qw(filify);
 
-my @headings = qw(name school level range duration area_of_effect components casting_time saving_throw description);
+my @headings = (qw(name school level range duration), 'area of effect', 'components', 'casting time', 'saving throw', 'description');
 my $spells = get_hash( 'file' => ['Role_playing','Spell_list.txt'], 'headings' => \@headings );
 
-sub print_spell {
-  my ($heading,$spell) = @_;
+sub spell_data {
+  my ($spell) = @_;
 
   my @items;
-  for my $stat (grep($_ !~ /(?:name|description)/,@headings)) {
-    my $stat_text = ucfirst textify($stat);
+  for my $stat (grep($_ !~ /(?:name|description)/, @headings)) {
+    next if !$spells->{$spell}{$stat};
+    my $stat_text = ucfirst $stat;
     push @items, qq(<strong>$stat_text:</strong> $spells->{$spell}{$stat});
   }
 
   my $spell_file = filify($spell);
-  my $spell_description = $spells->{$spell}{'description'} ?
-                          join("\n",map(rparagraph(5,$_),split(/\//,$spells->{$spell}{'description'}))) :
-                          read_file(data_file('Role_playing/Spell_descriptions',"$spell_file.txt"))."\n";
+  my @spell_description = $spells->{$spell}{'description'} ?
+                          split(/\//, $spells->{$spell}{'description'}) :
+                          io(data_file('Role_playing/Spell_descriptions',"$spell_file.txt"))->slurp;
 
-  section(3, sub {
-    list(5,'u',\@items, { class => 'spell_stats' });
-    print $spell_description;
-  }, { 'heading' => [$heading, $spells->{$spell}{'name'}] });
-}
-
-sub print_spell_list {
-  my ($heading, $ispells) = @_;
-  print_spell($heading, $_) for @$ispells;
+  my $spell_out = { 'heading' => $spells->{$spell}{'name'}, 'stats' => [\@items, { class => 'spell_stats' }], 'description' => \@spell_description };
+  return $spell_out;
 }
 
 1;

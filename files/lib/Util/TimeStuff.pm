@@ -2,11 +2,11 @@ package Util::TimeStuff;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_duration half_life_date);
+our @EXPORT_OK = qw(duration half_life_date);
 
 use Date::Calc qw(:all);
 
-sub get_duration {
+sub duration {
   my ($var) = @_;
   my $total_seconds;
   for my $duration (@{$var}) {
@@ -55,5 +55,15 @@ sub half_life_date {
 
   return \%half_life;
 }
+
+=head1 NAME
+
+B<Util::TimeStuff> returns durations and half life date.
+
+=head1 Author
+
+Lady Aleena
+
+=cut
 
 1;

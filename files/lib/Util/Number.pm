@@ -14,15 +14,25 @@ sub commify {
 
 # sprintf written by james2vegas on PerlMonks.
 sub round {
-  my ($precision,$number) = @_;
+  my ($precision, $number) = @_;
   my $rounded = $number =~ /\./ ? sprintf("%.${precision}f", $number) : $number;
   return $rounded;
 }
 
 sub pretty_number {
-  my ($precision,$raw_number) = @_;
-  my $pretty_number = commify(round($precision,$raw_number));
+  my ($precision, $raw_number) = @_;
+  my $pretty_number = commify(round($precision, $raw_number));
   return $pretty_number;  
 }
+
+=head1 NAME
+
+B<Util::Number> adds commas, rounds, and returns pretty numbers.
+
+=head1 Author
+
+Lady Aleena
+
+=cut
 
 1;

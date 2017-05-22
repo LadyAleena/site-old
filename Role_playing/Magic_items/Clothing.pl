@@ -25,7 +25,7 @@ This cloak gives the wearer the AC of a Yeti. It allows the wearer to attack wit
 by Joshua Moore
 This item is an I<artifact>.
 The Doublet of Divine Protection is a bright yellow velvet doublet with silver trim at the cuffs and collar and is heavier than most doublets.
-The wearer of the Doublet must be a true believer in a god—it doesn't matter which one, so long as the person believes and is loyal. When the Doublet is donned, it draws the attention of the god of the wearer, and the god judges the wearer—if the wearer is a loyal servant, then the god empowers the Doublet's sole power—all damage of any sort is halved: physical damage, magic damage, poison damage—all damage. The person ages at half the normal rate while it is on because his or her body is breaking down at half the rate. The Doublet will only bond once with each wearer—if the wearer changes faith, the Doublet is useless.
+The wearer of the Doublet must be a true believer in a god; it doesn't matter which one, so long as the person believes and is loyal. When the Doublet is donned, it draws the attention of the god of the wearer, and the god judges the wearer. If the wearer is a loyal servant, then the god empowers the Doublet's sole power, all damage of any sort is halved: physical damage, magic damage, poison damage; all damage. The person ages at half the normal rate while it is on because the wearer's body is breaking down at half the rate. The Doublet will only bond once with each wearer. If the wearer changes faith, the Doublet is useless.
 The Doublet can only be destroyed if the person wearing it changes their faith radically and has a god opposite in alignment of their previous one try to bond it.
 2 Garments of Versace
 by ^Gabriel Elias^

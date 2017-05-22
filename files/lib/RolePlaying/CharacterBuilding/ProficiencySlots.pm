@@ -2,9 +2,9 @@ package RolePlaying::CharacterBuilding::ProficiencySlots;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT = qw(get_slots);
+our @EXPORT = qw(proficiency_slots);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
+use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
 
 my %slots;
 while (my $line = <DATA>) {
@@ -15,10 +15,10 @@ while (my $line = <DATA>) {
   @{$slots{$class}{'non-weapon'}}{@slot_stats} = split(/;/, $nonweapon);
 }
 
-sub get_slots {
+sub proficiency_slots {
   my ($class, $opt) = @_;
   $class = convert_class($class,'ProficiencySlots');
-  my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
+  my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
 
   my $slots;
   for my $type ('weapon','non-weapon') {

@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_weapons random_magic_weapon random_weapon_damage);
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use RolePlaying::Random::Misc qw(non);
+use RolePlaying::Random::Misc qw(random_non);
 use Base::Data qw(get_hash);
 
 use Games::Dice qw(roll);
@@ -54,7 +54,7 @@ sub random_weapons {
 }
 
 sub random_magic {
-  my @magics = ('',non.'magical');
+  my @magics = ('',random_non.'magical');
   my $magic  = $magics[rand @magics];
   return $magic;
 }

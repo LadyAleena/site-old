@@ -72,6 +72,6 @@ This scroll is inscribed with the name of a thief skill and some symbols. When t
 ** STRONG<Scroll of the Magic Item:> Identify, Enchant an Item, Permanency
 ** STRONG<Scroll of Prismatics:> Magic Missile, Continual Light, Dispel Magic, Cone of Cold, Gust of Wind, Passwall, Disintegrate, Prismatic Spray, Prismatic Wall, Prismatic Sphere
 * Path Scrolls
-** STRONG<Counselor’s Path:> Hypnotism, Suggestion, Domination, Mass Suggestion
+** STRONG<Counselor's Path:> Hypnotism, Suggestion, Domination, Mass Suggestion
 ** STRONG<Misty Road:> Wall of Fog, Fog Cloud, Stinking Cloud, Hold Vapor, Solid Fog, Cloudkill, Mind Fog, Death Fog, Incendiary Cloud
 ** STRONG<Path of Terror:> Spook, Scare, Fear, Phantasmal Killer, Weird

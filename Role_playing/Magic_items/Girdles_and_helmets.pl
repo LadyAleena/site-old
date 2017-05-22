@@ -8,6 +8,9 @@ use lib '../../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 
+$line_magic->{'XP'} = 'A<XP|title="experience point value">';
+$line_magic->{'GP'} = 'A<GP|title="gold piece value">';
+
 page( 'heading' => 'Magical girdles and helmets', 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
@@ -22,20 +25,20 @@ by Nathan Brown
 This is a hat with a very wide brim which will cause anyone to sleep deeply and without chance of awakening. The effect occurs if the hat is on the head or draped over the face. It takes one round for the hat to take effect. While under the recipient receives a full night's rest in half that time and regains 1d6 HP per 'night'.
 2 Girdle of Giant Strength, revised
 || rolls
-|* d100|Giant|XP value|GP value|Str.
-|+ 1-20|ogre|1500|15000|18(00)
-|+ 21-35|hill|2000|20000|19
-|+ 36-50|stone|2500|25000|20
-|+ 51-65|frost|3000|30000|21
-|+ 66-75|fire|3500|35000|22
-|+ 76-85|cloud|4000|40000|23
-|+ 86-95|storm|4500|45000|24
-|+ 95-100|titan|5000|50000|25
+|* d100|Giant|^XP^|^GP^|Str.
+|+ 1-20|ogre|1,500|15,000|18(00)
+|+ 21-35|hill|2,000|20,000|19
+|+ 36-50|stone|2,500|25,000|20
+|+ 51-65|frost|3,000|30,000|21
+|+ 66-75|fire|3,500|35,000|22
+|+ 76-85|cloud|4,000|40,000|23
+|+ 86-95|storm|4,500|45,000|24
+|+ 95-100|titan|5,000|50,000|25
 These girdles are exactly the same as those in the I<Dungeon Masters Guide> for Advanced Dungeons and Dragons 2nd edition. Ogres and titans have been added with their respective experience point and gold piece values added. You can further limit their powers by reading the description for the Girdle of Titan Strength below.
 2 Girdle of Titan Strength
 by Johnny Brant
 XP Value: 4,750 GP Value: 47,500
-This massive belt covers the entire waist and upper abdominal area of the wearer and is imbued with very potent magic. When worn it gives the wearer the physical prowess of a titan. (It doesn’t cause growth to the size of a titan however!) It functions exactly as a Girdle of Giant Strength but imbues the wearer with a strength equivalent to that of a titan. Thus, the wearer’s strength is raised to 25! The strength bonuses are not cumulative with normal or magical strength bonuses, not even in combination with Gauntlets of Ogre Power, A<Gauntlets of Giant Power|href="Boots_and_gloves.pl#Gauntlets_of_Giant_Power">, and magical warhammers (unlike the Girdles of Giant Strength).
+This massive belt covers the entire waist and upper abdominal area of the wearer and is imbued with very potent magic. When worn it gives the wearer the physical prowess of a titan. (It doesn't cause growth to the size of a titan however!) It functions exactly as a Girdle of Giant Strength but imbues the wearer with a strength equivalent to that of a titan. Thus, the wearer's strength is raised to 25! The strength bonuses are not cumulative with normal or magical strength bonuses, not even in combination with Gauntlets of Ogre Power, A<Gauntlets of Giant Power|href="Boots_and_gloves.pl#Gauntlets_of_Giant_Power">, and magical warhammers (unlike the Girdles of Giant Strength).
 2 Girdle of Weapon Protection
 || rolls
 |* d6|Weapon

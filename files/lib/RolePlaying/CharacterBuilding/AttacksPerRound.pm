@@ -2,20 +2,20 @@ package RolePlaying::CharacterBuilding::AttacksPerRound;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT = qw(get_attacks);
+our @EXPORT = qw(attacks_per_round);
 
 use POSIX qw(floor);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
+use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
 
 my %classes;
 $classes{'warrior'}      = 6;
 $classes{'chaos warden'} = 8;
 
-sub get_attacks {
+sub attacks_per_round {
   my ($class, $opt) = @_;
   $class = convert_class($class,'AttacksPerRound');
-  my $level = $opt->{'level'} ? $opt->{'level'} : get_level($class, $opt->{'experience'});
+  my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
   
   $class = 'warrior' if $class =~ /(?:fighter|paladin|ranger)/;
 
@@ -39,7 +39,7 @@ B<AttacksPerRound> returns the amount of attacks characters can make in combat. 
 
 =head2 Use
 
-To use this module to return the slots needed, use the following. C<get_attacks> is exported by default.
+To use this module to return the slots needed, use the following. C<attacks_per_round> is exported by default.
 
   use RolePlaying::CharacterBuilding::AttacksPerRound;
 
@@ -47,16 +47,16 @@ To use this module to return the slots needed, use the following. C<get_attacks>
 
 To get the number of attacks per round a character has, you will need the character's class and level or experience.
 
-  my $attacks_per_round = get_attacks($class, { 'level' => $level });
-  my $attacks_per_round = get_attacks($class, { 'experience' => $xp });
+  my $attacks_per_round = attacks_per_round($class, { 'level' => $level });
+  my $attacks_per_round = attacks_per_round($class, { 'experience' => $xp });
   
-C<get_attacks> will return C<1> for any class other than C<warrior> or C<chaos warden> because that is all your character gets. If you see a fraction returned, it means you get the first number of attacks every two rounds.
+C<attacks_per_round> will return C<1> for any class other than C<warrior> or C<chaos warden> because that is all your character gets. If you see a fraction returned, it means you get the first number of attacks every two rounds.
 
 =head2 Note
 
 Rules used for C<AttacksPerRound> for B<warriors> levels 13 and below are standard, however the levels beyond it are house rules and not in any book.
 
-=head2 Author
+=head1 AUTHOR
 
 Lady Aleena
 

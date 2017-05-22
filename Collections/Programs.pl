@@ -5,10 +5,8 @@ use warnings;
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib/';
-use Base::Data qw(get_hash);
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
-use HTML::Elements qw(list anchor);
 use Util::Sort qw(article_sort);
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
@@ -38,10 +36,8 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 * ^grepWin^
 * Inc Alarm
 * ^Ipswitch^ - ^WS_FTP Pro^
-* ^JGSoft^ - ^EditPad Pro^
 * B<^KDE^>
 * B<^LibreOffice^>
-* B<^Notepad++^>
 * ^Oracle^ - ^Java^
 * ^Piriform^
 ** B<^CCleaner^>
@@ -59,17 +55,17 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 2 Browsers
 *| two
 * ^Apple^ - ^Safari^
-* B<^Mozilla^> - B<^Firefox^>
 * ^Google^ - ^Chrome^
+* B<^Mozilla^> - B<^Firefox^>
 * ^Opera^
 
 2 Chat
 *| two
 * ^Cerulean Studios TrillianAstra^
-* ^HexChat^
+* B<^HexChat^>
 * ^ICQ.com^
 * ^mIRC^
-* B<^XChat^>
+* ^XChat^
 * ^Yahoo!^ - ^Yahoo! Messenger^
 
 2 Games
@@ -135,6 +131,13 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 * ^PopUp Smasher^
 * ^Spyware Terminiator^
 
+2 Text editors
+*| two
+* B<^Geany^>
+* ^JGSoft^ - ^EditPad Pro^
+* B<^Nano^>
+* ^Notepad++^
+
 2 Microsoft
 *| two
 * Microsoft DOS
@@ -155,3 +158,4 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 *** ^Power Calculator^
 *** ^Tweak UI^
 ** Windows 7 (on 2 computers)
+** Windows 10 (on 1 computer)

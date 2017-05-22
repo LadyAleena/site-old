@@ -15,12 +15,12 @@ sub data_compare {
   my $new = $new_data;
   my $main_c = new Data::Compare($old, $new);
   if ($main_c->Cmp == 0) {
-    line($tab,$data);
-    
+    line($tab, $data);
+
     if (ref($old) eq 'HASH' && ref($new) eq 'HASH') {
-      line($tab+1,'old to new');
+      line($tab + 1, 'old to new');
       for (keys %$old) {
-        data_compare($tab+2,$_,$$old{$_},$$new{$_});
+        data_compare($tab + 2, $_, $$old{$_}, $$new{$_});
       }
     }
     elsif (ref($old) eq 'ARRAY' && ref($new) eq 'ARRAY') {

@@ -25,19 +25,19 @@ This ring allows the wearer to transport himself and up to 4 other creatures int
 2 Ring of Chaotic Magic *
 This ring appears to all tests to be a Ring of Wizardry or Ring of Holiness (DMs option) and will function as such. However, whenever the ring wearer casts a spell, there is a 50% chance that the spell generates a Wild Surge (see Tome of Magic). Once the ring shows its true power, it can only be removed by a Remove Curse spell cast by a spellcaster of at least 15th level. Once uncursed, there is a 50% chance that the ring will become a normal Ring of Wizardry or Holiness. Otherwise, the ring will shatter.
 2 Ring of Charisma *
-This ring raises the wearer’s charisma by 1 point for as long as it is worn. This ring can be used by any class.
+This ring raises the wearer's charisma by 1 point for as long as it is worn. This ring can be used by any class.
 2 Ring of Cold Protection *
 This ring protects the wearer from cold or ice attacks and spells while worn. When the ring wearer is subjected to an cold or ice attack or spell, the ring loses 1 charge per 10 (round up) hit points of damage the ring wearer would have sustained. Example: the ring wearer is hit by an Ice Storm that did 13 hit points of damage, the ring loses 2 charges and the wearer takes no damage. If the ring wearer saved against the spell, the ring would lose 1 charge. The ring typically contains 50 + 3d10 charges and can be recharged.
 2 Ring of Constitution *
-This ring raises the wearer’s constitution by 1 point for as long as it is worn. This ring can be used by any class.
+This ring raises the wearer's constitution by 1 point for as long as it is worn. This ring can be used by any class.
 2 Ring of Cowardice *
 This ring appears to all tests to be a Ring of Strength and functions as such. When involved in combat however, the wearer must save vs. spells each round or flee in terror for 1d4 +2 rounds at the wearer's maximum movement rate. The ring can only be removed by a Remove Curse cast at 15th level or above.
 2 Ring of Defending *
 This ring generates a field of force around the wearer that protects against I<all> attacks for 1 round per charge. While the ring is functioning, the wearer is immune to all magical, physical, and psionic attacks and forces (falling, drowning, etc.). Attacks on the ring wearer are randomly redirected at different targets while the ring is functioning. This ring contains 1d6 + 8 charges and cannot be recharged.
 2 Ring of Deflection *
-This ring, when worn, protects the wearer from all non-magical projectiles smaller than a boulder. Magical missile weapons cause half damage to the ring wearer (round down). The ring has no effect on missiles created by spells (Flame Arrow, Magic Missile, Melf’s Acid Arrow, etc.).
+This ring, when worn, protects the wearer from all non-magical projectiles smaller than a boulder. Magical missile weapons cause half damage to the ring wearer (round down). The ring has no effect on missiles created by spells (Flame Arrow, Magic Missile, Melf's Acid Arrow, etc.).
 2 Ring of Dexterity *
-This ring raises the wearer’s dexterity by 1 point for as long as it is worn. This ring can be used by any class.
+This ring raises the wearer's dexterity by 1 point for as long as it is worn. This ring can be used by any class.
 2 Ring of the Diva
 This ring is usable only by female bards. It gives the bard a permanent +1 to her influence rolls and one additional musical ability after one full day of meditation. It confers a +1 to Charisma while worn.
 2 Ring of Draining *
@@ -45,7 +45,7 @@ This ring allows the wearer to drain energy levels from a target with a touch. T
 2 Ring of Dual Invisibility
 This ring acts like a Ring of Invisibility, but while wearer is invisible so is every other intelligent creature, including friends, in the eyes of the wearer. This item can only be removed with a Remove Curse spell cast by at least a 7th level mage or a 5th level priest.
 2 Ring of Earthquakes *
-This ring allows the wearer to use some powerful abilities related to elemental earth. The powers and their usage are as follows: Strength of Stone (at will), Soften Earth and Stone (at will), Maxmilian’s Earthen Grasp (at will), Fool’s Gold (at will), Stoneskin (5 x day), Turn Pebble to Boulder (5 x day), Earthquake (1 x day), and Statue (1 x day). This ring contains no charges, but the wearer cannot use air-based spells or items. Earth Elementals will attempt to possess the ring attacking the wearer with preference.
+This ring allows the wearer to use some powerful abilities related to elemental earth. The powers and their usage are as follows: Strength of Stone (at will), Soften Earth and Stone (at will), Maxmilian's Earthen Grasp (at will), Fool's Gold (at will), Stoneskin (5 x day), Turn Pebble to Boulder (5 x day), Earthquake (1 x day), and Statue (1 x day). This ring contains no charges, but the wearer cannot use air-based spells or items. Earth Elementals will attempt to possess the ring attacking the wearer with preference.
 2 Ring of Electrical Protection *
 This ring protects the wearer from electrical attacks and spells while worn. When the ring wearer is subjected to an electrical attack or spell, the ring loses 1 charge per 10 (or fraction thereof) hit points of damage the ring wearer would have sustained. Example: the ring wearer is hit by a Lightning Bolt that did 43 hit points of damage, the ring loses 5 charges and the wearer takes no damage. If the ring wearer saved against the spell, the ring would lose 3 charges. The ring typically contains 50 + 3d10 charges and can be recharged.
 2 Ring of Energy Drain Protection *
@@ -69,11 +69,11 @@ by Johnny Brant
 XP Value: 2,300 GP Value: 11,500
 This ring allows the wearer to fly up to 8 hours a day. Unlike winged boots this flight need not be activated, the wearer simply jumps into the air and flies around. The wearer is only considered to be flying and using up his 8 hours a day if the character states he is flying, otherwise he is not. The movement rates of this magical flight vary from ring to ring; roll on the following chart below to find any particular rings speed and movement capabilities:
 2 Ring of Force *
-This ring allows the wearer to erect a sphere of force (as per the Wall of Force spell) that is 10’ in diameter and moves with the ring wearer. The sphere lasts for 1d6 +2 turns and costs 1 charge to create. The ring typically has 2d6 +2 charges, and can be recharged. The sphere has all of the immunities and vulnerabilities of a Wall of Force.
+This ring allows the wearer to erect a sphere of force (as per the Wall of Force spell) that is 10' in diameter and moves with the ring wearer. The sphere lasts for 1d6 +2 turns and costs 1 charge to create. The ring typically has 2d6 +2 charges, and can be recharged. The sphere has all of the immunities and vulnerabilities of a Wall of Force.
 2 Ring of the Forest Lady
 This ring is usable only by female druids. It gives the druid one additional spell per level and one non-weapon proficiency from the priest group, permanently, after one full day of meditation. It confers a +1 to Charisma while worn.
 2 Ring of Heaviness *
-This ring appears to all tests to be a Ring of Feather Falling. If worn for more than a day however, the curse activates. The curse causes the user to double in weight, suffer a -2 to attack and damage rolls, +3 penalty to AC, -3 penalty to dexterity, and slows the wearer’s movement by p. The ring wearer also takes double damage from falls. The ring can only be removed by a Remove Curse cast at 15th level or above.
+This ring appears to all tests to be a Ring of Feather Falling. If worn for more than a day however, the curse activates. The curse causes the user to double in weight, suffer a -2 to attack and damage rolls, +3 penalty to AC, -3 penalty to dexterity, and slows the wearer's movement by p. The ring wearer also takes double damage from falls. The ring can only be removed by a Remove Curse cast at 15th level or above.
 2 Ring of Holiness *
 || rolls
 |* d20|Spells doubled
@@ -88,7 +88,7 @@ The number of spells to be doubled is done before adjustments for wisdom are tak
 2 Ring of the Huntress
 This ring is usable only by female rangers. It gives the ranger one additional spell per level and one non-weapon proficiency from the fighter group, permanently, after one full day of meditation. It confers a +1 to Dexterity while worn.
 2 Ring of Illusion Immunity *
-This ring allows the wearer to see any illusion spell of 4th level or less for what it really is. The user still sees the spell’s effects, but knows it is an illusion and can see right through it with ease. The wearer can also see and attack anyone under an Invisibility or Improved Invisibility spell.
+This ring allows the wearer to see any illusion spell of 4th level or less for what it really is. The user still sees the spell's effects, but knows it is an illusion and can see right through it with ease. The wearer can also see and attack anyone under an Invisibility or Improved Invisibility spell.
 2 Ring of Illusions and Healing
 by Johnny Brant
 XP Value: 10,600 GP Value: 53,000 
@@ -96,11 +96,11 @@ The Ring Of Illusions and Healing functions as a Wand Of Illusions without the u
 2 Ring of Improved Invisibility *
 This ring allows the user to become invisible and still attack or cast spells without becoming visible again (as per the wizard spell Improved Invisibility.). The rings effect lasts for 5 turns per use and costs 1 charge. The ring typically has 3d6 +3 charges and can be recharged.
 2 Ring of Insect Control *
-This ring allows the wearer to control all normal insects within a 50’ radius up to 3 times per day. The ring wearer can also control up to 15 hit dice of giant insects per day (save vs. spells negates). Any normal insects controlled can be formed into either an Insect Plague or Creeping Doom, as the priest spells cast at 15th level. Giant insects can be used to attack foes, carry things, or do simple tasks. If the ring wearer commands the insects to do anything self-destructive, (besides combat) the ring wearer immediately loses control of the insects.
+This ring allows the wearer to control all normal insects within a 50' radius up to 3 times per day. The ring wearer can also control up to 15 hit dice of giant insects per day (save vs. spells negates). Any normal insects controlled can be formed into either an Insect Plague or Creeping Doom, as the priest spells cast at 15th level. Giant insects can be used to attack foes, carry things, or do simple tasks. If the ring wearer commands the insects to do anything self-destructive, (besides combat) the ring wearer immediately loses control of the insects.
 2 Ring of Insulation
 This ring provides its wearer with protection even in extremely electrical environments. No metal on the wearer will attract lightning. It also restores damage caused by electricity at the rate of one point per turn, provides a saving throw bonus of +2 versus electricty-based attacks, and reduces damage sustained by -1 per die.
 2 Ring of Intelligence *
-This ring raises the wearer’s intelligence by 1 point for as long as it is worn. This ring can be used by any class.
+This ring raises the wearer's intelligence by 1 point for as long as it is worn. This ring can be used by any class.
 2 Ring of Knocking *
 This ring allows the wearer to cast a Knock spell from the ring at the cost of 1 charge per spell. The ring contains 2d4 x 10 charges and can be recharged.
 2 Ring of Life
@@ -108,9 +108,9 @@ This ring allows the wearer to Detect Life at will. Five times a day it will cre
 2 Ring of the Magi *
 This ring gives the wearer a +3 bonus to saving throws and armor class, a +1 bonus to intelligence, and allows him / her to memorize double the number of spells for levels 1-3. This ring only works for single class mages or specialist wizards, and vanishes when removed.
 2 Ring of Might *
-This ring gives the wearer a +3 bonus to attack, damage, and saving throws. It also increases the wearer’s strength by 1 point. This ring only works for single class fighters, rangers, or paladins and vanishes when it is removed.
+This ring gives the wearer a +3 bonus to attack, damage, and saving throws. It also increases the wearer's strength by 1 point. This ring only works for single class fighters, rangers, or paladins and vanishes when it is removed.
 2 Ring of Missile Attraction *
-This ring appears to be a Ring of Deflection to all tests. When worn for more than a turn however, this ring attracts all missiles fired within 60’ to head towards the ring wearer. In effect, all missiles within 60’ strike the ring wearer (attack roll still required). All missiles that are boulder sized or less are attracted by the ring. Any missile attack directed specifically at the ring wearer gets a +4 to attack and damage rolls. This ring requires a Remove Curse spell cast at 15th level or higher to remove.
+This ring appears to be a Ring of Deflection to all tests. When worn for more than a turn however, this ring attracts all missiles fired within 60' to head towards the ring wearer. In effect, all missiles within 60' strike the ring wearer (attack roll still required). All missiles that are boulder sized or less are attracted by the ring. Any missile attack directed specifically at the ring wearer gets a +4 to attack and damage rolls. This ring requires a Remove Curse spell cast at 15th level or higher to remove.
 2 Ring of Monster Summoning *
 This ring allows the wearer to summon a 1d4 hit dice monster (chosen randomly by the DM) at the cost of 1 charge. Any monster summoned stays until slain and is under complete control of the ring wearer. The ring has 40 charges initially and cannot be recharged. There is a 60% chance that if the ring is found in a treasure hoard, 3d6 charges have already been used. Once all of the charges have been used, the ring crumbles to dust.
 2 Ring of the Negative Plane
@@ -120,13 +120,13 @@ Its first and most frightening ability is to drain two levels/HD from a creature
 The second power is negative plane protection. The ring works almost exactly like the spell except that the effect is always on, and if the wearer fails the save against the drain the wearer does not take double damage.
 No undead can never wear this ring. The ring will burn through its finger and fall off.
 2 Ring of Object Control *
-This ring allows the wearer to animate any objects whose combined size would fit into a 30’ cube (i.e. 4 tables, or 1 statue, or 10 chairs). This ring essentially functions as the 6th level priest spell Animate Object, at the cost of 1 charge per use. The duration of control / animation is 5 turns. The ring typically contains 4d6 charges, and can be recharged.
+This ring allows the wearer to animate any objects whose combined size would fit into a 30' cube (i.e. 4 tables, or 1 statue, or 10 chairs). This ring essentially functions as the 6th level priest spell Animate Object, at the cost of 1 charge per use. The duration of control / animation is 5 turns. The ring typically contains 4d6 charges, and can be recharged.
 2 Ring of Petrification Protection *
 This ring protects the wearer from all petrification attacks. While the ring is worn, 1 charge is drained from the ring every time the wearer is subjected to a petrification attack. The ring wearer cannot decide to make a saving throw against the attack, because the ring supercedes it. The ring has 10d6 charges and can be recharged.
 2 Ring of Piety *
 This ring gives the wearer a +3 bonus to saving throws, a +1 bonus to wisdom, and allows him / her to memorize double the number of spells for levels 1-4. This ring only works for single class clerics, druids, or other priest classes and vanishes when removed.
 2 Ring of Plant Control *
-This ring allows the wearer to control plants in a 100’ radius, up to 3 times per day. The ring wearer can cause any plants in the area to move about, entangle foes, cover things, etc, up to the limit for the plant’s size (i.e. grass could not stop anyone, but a tree could reek havoc on foes.). The control lasts for up to 1 hour per use. The user may also try to control plant-like monsters, but the monster(s) receive a save vs. spells if intelligent, to avoid control. Plants that are destroyed or damaged cannot be controlled (i.e. a chopped down tree cannot do anything, neither can a cut flower). This ring is prized by druids and rangers to help them protect woodlands.
+This ring allows the wearer to control plants in a 100' radius, up to 3 times per day. The ring wearer can cause any plants in the area to move about, entangle foes, cover things, etc, up to the limit for the plant's size (i.e. grass could not stop anyone, but a tree could reek havoc on foes.). The control lasts for up to 1 hour per use. The user may also try to control plant-like monsters, but the monster(s) receive a save vs. spells if intelligent, to avoid control. Plants that are destroyed or damaged cannot be controlled (i.e. a chopped down tree cannot do anything, neither can a cut flower). This ring is prized by druids and rangers to help them protect woodlands.
 2 Ring of the Priestess
 This ring is usable only by female priests. It gives the priest one additional spell per level and one non-weapon proficiency from the priest group, permanently, after one full day of meditation. It confers a +1 to Wisdom while worn.
 2 Ring of Protection From Animals and Plants
@@ -167,13 +167,13 @@ This ring is made of woven unicorn hairs and bears a small golden illusion of Pi
 If the wearer chooses to memorize spells normally, they are cast with a reduction in their casting times. Spells memorized in this manner have their casting times reduced by 3 to a minimum of a 1 casting time.
 In addition this was also subjected to Thiondar's permanent anti-magic field during its creation thus making it immune to all further magics. Protective items treated with Thiondar's permanent anti-magic field gives the wearer magic resistance equal to 20% per plus of saving throw bonuses, thus, the ring of spell might grants 80% magic resistance to its wearer.
 2 Ring of Spell Stealing *
-This ring appears to all tests to be a Ring of Wizardry or Ring of Holiness (DMs option). However, when the ring is put on and the extra spells memorized, the curse is activated. Whenever the ring wearer attempts to cast a spell, there is a 75% chance that the ring “eats” the spell, causing the spell to fizzle. There is also a 30% chance that the ring will dispel any active enchantments on the ring wearer (good or bad) checked once per turn. Once the ring shows its true power, it can only be removed by a Remove Curse spell cast by a spellcaster of at least 18th level.
+This ring appears to all tests to be a Ring of Wizardry or Ring of Holiness (DMs option). However, when the ring is put on and the extra spells memorized, the curse is activated. Whenever the ring wearer attempts to cast a spell, there is a 75% chance that the ring Q<eats> the spell, causing the spell to fizzle. There is also a 30% chance that the ring will dispel any active enchantments on the ring wearer (good or bad) checked once per turn. Once the ring shows its true power, it can only be removed by a Remove Curse spell cast by a spellcaster of at least 18th level.
 2 Ring of Strength *
-This ring raises the wearer’s strength by 1 point for as long as it is worn. This ring can be used by any class.
+This ring raises the wearer's strength by 1 point for as long as it is worn. This ring can be used by any class.
 2 Ring of Sweetness
 This ring provides its wearer with protection even in extremely acidic environments. It restores damage caused by acid at the rate of one point per turn, provides a saving throw bonus of +2 versus acid-based attacks, and reduces damage sustained by -1 per die.
 2 Ring of Teleportation *
-This ring allows the wearer and up to 1000lbs of living or non-living matter to Teleport (as the 5th level mage spell) once per day. The ring’s power has the same chances for error as a Teleport spell. The ring neither has nor uses charges.
+This ring allows the wearer and up to 1000lbs of living or non-living matter to Teleport (as the 5th level mage spell) once per day. The ring's power has the same chances for error as a Teleport spell. The ring neither has nor uses charges.
 2 Ring of Temporal Displacement
 by ^Randy Furuyama^
 When this ring is activated, the wearer is displaced back in time 1 combat round. This allows the wearer to try to correct a mistake made during combat including re-rolling an attack roll, re-wording a wish, or any other action that could change the resulting consequences. Once this function is used, the magic in the ring is expelled. The ring becomes a simple silver band worth about 10 gp. This ring cannot be recharged.
@@ -200,7 +200,7 @@ This ring allows the wearer to use some powerful abilities related to elemental 
 2 Ring of Undead Attraction *
 This ring appears to be a Ring of Draining when identified or tested, and it functions as such. When worn however, it attracts any and all intelligent undead within a 1 mile radius of the ring wearer. The undead attracted will seek to possess the ring and destroy the wearer, attacking him / her in preference to all others, unless attacked by a more powerful opponent. The ring can be removed when it runs out of charges, the user is killed, or by a Remove Curse cast at 17th level or higher.
 2 Ring of Undead Control *
-This ring allows the wearer to attempt to control any undead creature within a 50’ radius. The undead creature so targeted must save vs. spells become the ring wearer’s slave for up to 1 day, or until the undead creature is farther then 25’ from the ring wearer. Undead who save act as if they were turned, fleeing from the ring wearer at maximum speed for 1d6 turns. The ring wearer can command only 1 undead creature at a time, and the ring can only be used once per day. The undead creature commanded will follow the ring wearer’s directions, as long as the directions are not self-destructive (not including combat). The undead creature commanded will not divulge any information for the ring wearer, and does not have to use any spells or abilities it may possess for the ring wearer’s benefit. This ring can usurp control of undead from priests or other undead if the ring wearer is higher level than the other controlling factor.
+This ring allows the wearer to attempt to control any undead creature within a 50' radius. The undead creature so targeted must save vs. spells become the ring wearer's slave for up to 1 day, or until the undead creature is farther then 25' from the ring wearer. Undead who save act as if they were turned, fleeing from the ring wearer at maximum speed for 1d6 turns. The ring wearer can command only 1 undead creature at a time, and the ring can only be used once per day. The undead creature commanded will follow the ring wearer's directions, as long as the directions are not self-destructive (not including combat). The undead creature commanded will not divulge any information for the ring wearer, and does not have to use any spells or abilities it may possess for the ring wearer's benefit. This ring can usurp control of undead from priests or other undead if the ring wearer is higher level than the other controlling factor.
 2 Ring of Volcanoes *
 This ring allows the wearer to use some powerful abilities related to elemental fire. The powers and their usage are as follows: Burning Hands (at will), Fireburst (at will), Affect Normal Fires (at will),  Produce Flame (at will), Fireball (5 x day), Fire Shield (5 x day), Firestorm (1 x day), and Meteor Swarm (1 x day). This ring contains no charges, but the wearer cannot use water-based spells or items. Fire Elementals will attempt to possess the ring attacking the wearer with preference.
 2 Ring of the Warrioress
@@ -208,6 +208,6 @@ This ring is usable only by female warriors. It gives one additional weapon prof
 2 Ring of Wind *
 This ring allows the wearer to use some powerful abilities related to elemental air. The powers and their usage are as follows: Gust of Wind (at will), Wind Wall (at will), Dust Devil (at will), Fly (at will), Control Winds (5 x day), Lance of Disruption (5 x day), Wind Walk (1 x day), and Whirlwind (1 x day). This ring contains no charges, but the wearer cannot use earth-based spells or items. Air Elementals will attempt to possess the ring attacking the wearer with preference.
 2 Ring of Wisdom *
-This ring raises the wearer’s wisdom by 1 point for as long as it is worn. This ring can be used by any class.
+This ring raises the wearer's wisdom by 1 point for as long as it is worn. This ring can be used by any class.
 2 Ring of the Worm *
-This ring allows the wearer to transform the ring into a Purple Worm (see MM) with maximum hit points. The Purple Worm is under the ring wearer’s complete control and stays in worm form until slain, or until the ring wearer commands it back into ring form. Any damage done to the Purple Worm is permanent unless healed by a Wish spell. When the Purple Worm dies the ring turns to dust.
+This ring allows the wearer to transform the ring into a Purple Worm (see MM) with maximum hit points. The Purple Worm is under the ring wearer's complete control and stays in worm form until slain, or until the ring wearer commands it back into ring form. Any damage done to the Purple Worm is permanent unless healed by a Wish spell. When the Purple Worm dies the ring turns to dust.

@@ -1,10 +1,12 @@
 package RolePlaying::CharacterBuilding::TurningUndead;
 use strict;
-use warnings;
+use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw(turning_undead_table_rows);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class get_level);
+use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+
+# part of the Character Building table suite.
 
 my @turns = (qw(20 19 16 13 10 7 4 T T D D), 'D*');
 my @undead = (<DATA>);
@@ -15,7 +17,7 @@ sub turning_undead_table_rows {
   my (%opt) = @_;
   my $classes = [map( convert_class($_, 'TurningUndead'), @{$opt{'classes'}})];
   my $class   = ( grep( /(?:priest|paladin)/, @$classes ) )[0];
-  my $level   = $opt{'level'} ? $opt{'level'} : get_level($class, $opt{'experience'});
+  my $level   = $opt{'level'} ? $opt{'level'} : class_level($class, $opt{'experience'});
   
   die "Paladins can't turn undead before 3rd level, stopped" if ($class eq 'paladin' && $level < 3);
   

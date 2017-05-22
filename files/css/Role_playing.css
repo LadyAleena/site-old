@@ -1,22 +1,26 @@
-tr td { text-align: center;  border-style: dotted; }
+td { text-align: center; }
 
 table.proficiency { width: auto; }
 table.proficiency td:first-child { text-align: left; }
 
-table.rolls th { text-align: center; }
+table.court tr td:last-child { text-align: left; }
 
-table.knight { width:200px; margin-left:1em; border-width: 2px 1px; border-collapse:collapse; float:right; }
+form.proficiency { position: absolute; right: 0; clear: both; }
+form.proficiency select { clear: both; display: block; width: 100%; }
+form.proficiency select.multiple { height: 5em; }
 
-li.monster_attribute strong { font-size: smaller; font-variant: small-caps; }
-.monster_item { font-family: monospace; }
+table.rolls th.row_header { text-align: center; }
+
+table.knight { width:200px; margin-left: 1em; border-width: 2px 1px; float: right; }
+
+ul.charges { list-style-type: none; }
+ul.charges li strong { display: inline-block; width: 7.5em; text-align: right; }
+
 .multi { float: left; width: calc((100% - 6px) / 3.33); list-style-type: none; }
 .spell_stats { float: left; margin-right: 1em; width: 25%; }
 
-.rul1 { color:#c3c; }
-.rul2 { color:#3cc; }
-.rul3 { color:#33c; }
-.ruls { color:#3c3; }
-
-@media print{
-  table { width: 100%; }
-}
+/* Frilynd */
+.emperor { color:#609; }
+.king { color:#906; }
+.duke { color:#606; }
+.ex_ruler { color:#090; }

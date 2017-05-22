@@ -2,11 +2,11 @@ package RolePlaying::CharacterBuilding::ArmorClass;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(armor_class_table_rows AC AC_modifier return_armor_list);
-
-# part of the Character Building table printing suite.
+our @EXPORT_OK = qw(armor_class_table_rows armor_class armor_class_modifier armor_list);
 
 use List::Util qw(max);
+
+# part of the Character Building table suite.
 
 #start armor
 #This section builds the different types of armor that could be worn by a character. The order is extremely important as each builds upon the last.
@@ -58,11 +58,11 @@ $defense_modifiers{'robe of the archmagi'} = 5;
 
 #end magic items
 
-sub return_armor_list {
+sub armor_list {
   return %defense_modifiers;
 }
 
-sub AC_modifier {
+sub armor_class_modifier {
   my ($armor) = @_;
   
   my $armor_mod = 0;
@@ -74,7 +74,7 @@ sub AC_modifier {
   return $armor_mod;
 }
 
-sub mental_AC {
+sub mental_armor_class {
   my ($intelligence, $wisdom) = @_;
   
   my $MAC = 10;
@@ -94,12 +94,12 @@ sub mental_AC {
   return $MAC;
 }
 
-sub AC {
+sub armor_class {
   my ($defense_adjustment, $intelligence, $wisdom, $armor) = @_;
 
   my $base = 10 + $defense_adjustment;
-  my $armor_mod = $armor ? AC_modifier($armor) : 0;
-  my $MAC = mental_AC($intelligence, $wisdom);
+  my $armor_mod = $armor ? armor_class_modifier($armor) : 0;
+  my $MAC = mental_armor_class($intelligence, $wisdom);
 
   my %AC;
   $AC{'front'}  = { 'unarmored' => $base,     'armored' => $base - $armor_mod };
@@ -114,7 +114,7 @@ sub armor_class_table_rows {
   my %opt = @_;
   my $armor = $opt{'armor'};
 
-  my $AC = AC($opt{'defense adjustment'}, $opt{'intelligence'}, $opt{'wisdom'}, $armor);
+  my $AC = armor_class($opt{'defense adjustment'}, $opt{'intelligence'}, $opt{'wisdom'}, $armor);
   my @data_rows;
   for my $key (qw(front flank rear mental)) {
     my $value = $AC->{$key};

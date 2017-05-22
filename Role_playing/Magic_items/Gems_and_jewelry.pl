@@ -81,7 +81,7 @@ The necklace gives the character the following abilities from the four elemental
 * Ice
 ** Ice Storm (twice per day)
 ** Wall of Ice (twice per day)
-** Otiluke’s Freezing Sphere (once per week)
+** Otiluke's Freezing Sphere (once per week)
 ** Warmth
 * Magma
 ** Burning Hands (once per turn)
@@ -148,7 +148,7 @@ When any three items are worn, the effects of wearing two come into effect.  If 
 # Creatures, other than normal elementals, from the elemental planes in respect to the pieces worn attack with -3 penalties to their attack rolls. The wearer takes damage at -3 on each die of damage and makes applicable saving throws from the creature's attacks at +4. All attacks are made by the wearer of the amulet with a +6 bonus to the attack roll (or -6 on the elemental creature's saving throw), and the wearer inflicts +8 damage (total, not per die) adjusted by any other applicable bonuses and penalties. Any weapon used by the amulet wearer can hit elementals or elemental creatures even if it is not magical.
 # Three different powers of the items can be in used at any given time.
 4 All four
-When all four items are worn, the full power of the Harness of Elemental Command is revealed.  The effects of wearing three come into effect.  If a power is repeated, such as a burning hands (once per turn), it would be once every five rounds. Additionally, the Harness allows the wearer to planeshift at will without having to first travel through the Ethereal plane.  When in a plane, the Harness will create a 10’ sphere around the wearer that will allow any traveling with the wearer to benefit from its protection and will be able to travel normally through the planes.
+When all four items are worn, the full power of the Harness of Elemental Command is revealed.  The effects of wearing three come into effect.  If a power is repeated, such as a burning hands (once per turn), it would be once every five rounds. Additionally, the Harness allows the wearer to planeshift at will without having to first travel through the Ethereal plane.  When in a plane, the Harness will create a 10' sphere around the wearer that will allow any traveling with the wearer to benefit from its protection and will be able to travel normally through the planes.
 # Elementals can't attack or even approach within 20 feet of the wearer. If the wearer desires, he may forego this protection and instead attempt to charm the elemental (saving throw applicable with a -5 penalty to the die). If the charm fails, total protection is not lost and three more attempts at charming can be made, but after that total protection is lost.  The secondary properties given below will then function with respect to the elemental.
 # Creatures, other than normal elementals, attack with -4 penalties to their attack rolls. The wearer takes damage at -4 on each die of damage and makes applicable saving throws from the creature's attacks at +5. All attacks are made by the wearer of the amulet with a +7 bonus to the attack roll (or -7 on the elemental creature's saving throw), and the wearer inflicts +10 damage (total, not per die) adjusted by any other applicable bonuses and penalties. Any weapon used by the amulet wearer can hit elementals or elemental creatures even if it is not magical.
 # Four different powers of the items can be in used at any given time.
@@ -181,14 +181,14 @@ Only one power from each of the four elements of the Leg Band of The Elements ca
 * Water
 ** Create Water (once per day)
 ** Wall of Ice (once per day)
-** Water Breathing (5’ radius)
+** Water Breathing (5' radius)
 2 Neck Chain of Attractiveness
 by Johnny Brant
 XP Value: 4,000 GP Value: 20,000
-This magical neck chain raises the wearer’s Charisma to 25 at a rate of 1 point per week. After every full year of wearing the Neck Chain, 1 point gained becomes a permanent and lasting gain of Charisma!
+This magical neck chain raises the wearer's Charisma to 25 at a rate of 1 point per week. After every full year of wearing the Neck Chain, 1 point gained becomes a permanent and lasting gain of Charisma!
 2 Scarabs of Planar Travel
 A scarab allows the wearer to travel to a single outer plane through the Astral Plane and to take up to five other beings with them on this journey. There is no weight limit. A scarab brings the traveler (and companions) physically into the Astral Plane, and then moves them into the plane with which it is associated. It will also takes them back to the home plane. During either trip the wielder can command the scarab to stop the trip in the Astral Plane. A scarab gives the wearer the additional ability to be invisible to all of the denizens of the plane to which it is keyed at will. The only beings on those planes that can see the traveler are the powers, even demi-powers. The companions are not offered the same protection. A scarab attaches itself to the wearer's skin on the back of the neck. Each scarab is made from the purest platinum set with a flawless jewel. See the list for the descriptions.
-*| four
+*| three
 * Abyss (Rose Quartz)
 * Acheron (Fire Opal)
 * Arborea (Sapphire)

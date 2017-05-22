@@ -25,7 +25,7 @@ There are cafeterias for every four levels that the Citadel creates. The researc
 3 The roof
 The roof of the Citadel is a garden. At first the only plants growing up there are only herbalist supplies and rare plants that are used as spell components. As the Citadel grows, food gardens may be added. If the Citadel grows to cover a large enough area, whole fields of grains may be planted. In the future the roof may also become fields for the grazing of food animals. The roof may become tiered with many levels. When that happens the Citadel will look less like a building and more like a regularly shaped hill or mountain.
 2 Money in the Citadel
-Upon entering the Citadel, the supplicant will see a slot in the door opposite the enterance doors. The slotted door will not open until something, anything, is placed within it. Once an item is placed in the slot, the slot will disappear and a small shelf will appear. On the shelf will be tokens called I<towers>. The tokens are the coin of the Citadel. The supplicant can have thousands in gold, but only the tokens will purchase the use of the Citadel’s contents and services.
+Upon entering the Citadel, the supplicant will see a slot in the door opposite the enterance doors. The slotted door will not open until something, anything, is placed within it. Once an item is placed in the slot, the slot will disappear and a small shelf will appear. On the shelf will be tokens called I<towers>. The tokens are the coin of the Citadel. The supplicant can have thousands in gold, but only the tokens will purchase the use of the Citadel's contents and services.
 * STRONG<Microtower:> 1 millionth of a token
 * STRONG<Millitower:> 1 thousandth of a token
 * STRONG<Centitower:> 1 hundredth of a token

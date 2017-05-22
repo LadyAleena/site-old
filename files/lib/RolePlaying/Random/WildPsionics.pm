@@ -4,13 +4,13 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_wild_psionic_talent);
 
-# sub-part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(tinyrand);
-use Base::Data qw(get_hash);
-
 use Games::Dice qw(roll);
 use Lingua::EN::Inflect qw(PL_N);
 use List::MoreUtils qw(uniq);
+
+# sub-part of the 'random' suite from RolePlaying::Random
+use RolePlaying::Random qw(tinyrand);
+use Base::Data qw(get_hash);
 
 # When adding PSPS, it is the initial cost + (maintenance * 4) for each talent.
 my $psps = get_hash(
@@ -149,10 +149,10 @@ $sciences{$_} = 'teleport other'          for 77..78;
 $sciences{$_} = sub { my @array = (69..78);  my $num = $array[rand @array]; return $sciences{$num} } for 79..82;
 $sciences{$_} = sub { random_psionic_science(2) } for 83..85;
 $sciences{$_} = sub { random_psionic_science(3) } for 86..88;
-$sciences{$_} = sub { tinyrand(random_psionic_devotion(1),random_psionic_science(1)) }    for 89..92;
-$sciences{$_} = sub { join(', ',(random_psionic_science(1),random_psionic_devotion(2))) } for 93..96;
-$sciences{$_} = sub { join(', ',(random_psionic_science(1),random_psionic_devotion(3))) } for 97..99;
-$sciences{$_} = sub { join(', ',(random_psionic_science(1),random_psionic_devotion(4))) } for 100;
+$sciences{$_} = sub { tinyrand(random_psionic_devotion(1), random_psionic_science(1)) }    for 89..92;
+$sciences{$_} = sub { join(', ', (random_psionic_science(1), random_psionic_devotion(2))) } for 93..96;
+$sciences{$_} = sub { join(', ', (random_psionic_science(1), random_psionic_devotion(3))) } for 97..99;
+$sciences{$_} = sub { join(', ', (random_psionic_science(1), random_psionic_devotion(4))) } for 100;
 
 my %prereqs = (
   'detonate' => ['telekinesis','molecular agitation'],
@@ -180,14 +180,14 @@ $prereqs{$_} = ['mindlink'] for (
   'psychic crush', 'tower of iron will', 'ego whip', 'intellect fortress', 'mental barrier', 'mind blank',
   'mind thrust', 'synaptic static', 'thought shield', 'truthear'
 );
-$prereqs{$_} = ['mindlink','contact'] for (
+$prereqs{$_} = ['mindlink', 'contact'] for (
   'attraction', 'aversion', 'awe', 'daydream', 'domination', 'empathy', 'fate link', 'mindwipe', 'switch personality',
   'esp', 'false sensory input', 'id insinuation', 'identity penetration', 'incarnation awareness', 'inflict pain',
   'invincible foes', 'invisibility', 'phobia amplification', 'post-hypnotic suggestion', 'repugnance', 'send thoughts',
   'sight link', 'sound link', 'taste link', 'telempathic projection'
 );
 $prereqs{$_} = ['contact'] for ('mindlink', 'convergence');
-$prereqs{$_} = ['telepathy','contact'] for ('psychic surgery', 'psychic drain');
+$prereqs{$_} = ['telepathy', 'contact'] for ('psychic surgery', 'psychic drain');
 $prereqs{$_} = ['psychic surgery'] for ('aura alteration', 'split personality');
 
 sub random_psionic_devotion {
@@ -239,5 +239,4 @@ sub random_wild_psionic_talent {
   my @talents = @r_talents ? uniq(@r_talents) : undef;
   return @talents ? "$lead: (PSPs: $psp_total) ".join(', ',sort @talents) : undef;
 }
-
 1;

@@ -13,16 +13,16 @@ use RolePlaying::Random::Weapon qw(random_weapons);
 use Lingua::EN::Inflect qw(PL_N);
 
 my %things = (
-  'plants'            => ['plants',qw(ferns flowers mosses trees weeds)],
-  'animals'           => ['animals',qw(amphibians arthropods birds fish insects mammals reptiles)],
+  'plants'            => ['plants', qw(ferns flowers mosses trees weeds)],
+  'animals'           => ['animals', qw(amphibians arthropods birds fish insects mammals reptiles)],
   'inanimate objects' => [
-    'inanimate objects','musical instruments','religious symbols',
+    'inanimate objects', 'musical instruments', 'religious symbols',
     qw(armor bedding boats books clothing dishes drinks food furniture jewelry rocks rugs tools wagons),
     map("$_ utensils",qw(cooking eating writing))
   ],
-  'magic items'       => ['magic items','magical '.random_magic_item],
-  'monsters'          => ['monsters',PL_N(random_monster,2)],
-  'weapons'           => ['weapons',random_weapons]
+  'magic items'       => ['magic items', 'magical '.random_magic_item],
+  'monsters'          => ['monsters', PL_N(random_monster,2)],
+  'weapons'           => ['weapons', random_weapons]
 );
 
 sub random_thing {

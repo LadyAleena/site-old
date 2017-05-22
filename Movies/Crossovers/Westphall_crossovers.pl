@@ -27,7 +27,7 @@ Click the image for a better view. The series are placed closest to their strong
 from CBS, ABC, NBC, and Showtime
 After I<I Love Lucy> was renamed to I<The Lucy-Desi Comedy Hour>, Susie McNamera from I<Private Secretary> appeared on the first episode Q<Lucy Takes a Cruise to Havana>.
 Danny Williams from I<The Danny Thomas Show> and the rest of the Williams family appeared on I<The Lucy-Desi Comedy Hour> Q<Lucy Makes Room for Danny>. Lucy and Ricky Ricardo appeared on I<The Danny Thomas Show> Q<Lucy Upsets the Williams Household>.
-There was B<no> crossover when George Reeves from I<The Adventures of Superman> appeared on I<I Love Lucy> Q<Lucy and Superman> as himself. He stayed in character for the children in the audience. SMALL<(A<people not considered|href="index.pl#People_not_considered"> and A<I'm not home!|href="Westphall_non-crossovers.pl#Im_not_home">)>
+B<No> crossover occurred when George Reeves from I<The Adventures of Superman> appeared on I<I Love Lucy> Q<Lucy and Superman> as himself. He stayed in character for the children in the audience. SMALL<(A<people not considered|href="index.pl#People_not_considered"> and A<I'm not home!|href="Westphall_non-crossovers.pl#Im_not_home">)>
 I<Make Room for Daddy> was renamed to I<The Danny Thomas Show>, and it spun off I<Make Room For Granddaddy>.
 Lucy Carter from I<Here's Lucy> appeared on I<Make Room for Granddaddy> "Lucy and the Lecher". SMALL<(A<Lucy's Diagnosis|href="#Lucys_Diagnosis">)>
 Danny Williams from I<Make Room for Daddy> appeared on I<The Joey Bishop Show> Q<This Is Your Life>.
@@ -71,7 +71,7 @@ Several characters of I<The Practice> appeared on I<Ally McBeal> Q<The Inmates>,
 from NBC, CBS, HBO, and UPN
 Elliot Carlin from I<The Bob Newhart Show> appeared on I<A<St. Elsewhere|href="../Movies_by_series.pl?series=St.+Elsewhere">> Q<Close Encounters>. SMALL<(A<The Bob Newhart Show|href="The_Bob_Newhart_Show">)>
 Warren Coolidge from I<The White Shadow> appeared on over twenty episodes of I<St. Elsewhere>. He also appeared on I<Method & Red> Q<Da Shootout>.
-Dr. Mark Craig from I<St. Elsewehere> received the Cushing Left Anterior Descending Artery Award as did Dr. Kathryn Austin on I<Chicago Hope>. SMALL<(A<Chicago Hope|href="Chicago_Hope">)>
+Dr. Mark Craig from I<St. Elsewehere> received the Cushing Left Anterior Descending Artery Award as did Dr. Kathryn Austin on I<A<Chicago Hope|href="../Movies_by_series.pl?series=Chicago+Hope">>. SMALL<(A<Chicago Hope|href="Chicago_Hope">)>
 Dr. B. J. Hunnicut from I<A<M*A*S*H|href="../Movies_by_series.pl?series=MASH#MASH_1972">> was mentioned by Dr. Mark Craig on I<St. Elsewhere> Q<Santa Claus Is Dead>. I<M*A*S*H> has three spin-offs I<A<AfterMASH|href="../Movies_by_series.pl?series=MASH#AfterMASH">>, I<A<W*A*L*T*E*R|href="../Movies_by_series.pl?series=MASH#WALTER">>, and I<The Fighting Nightingales>. I<Trapper John, M.D.> is a spin off of I<MASH>, the film, not the television series.
 Dr. Elliot Axelrod from I<St. Elsewhere> is a cousin of Kenny Axelrod from I<Tattingers>. I<Tattingers> was renamed to I<Nick & Hillary>.
 Dr. Roxanne Turner from I<St. Elsewhere> appeared on I<A<Homicide: Life on the Street|href="../Movies_by_series.pl?series=Homicide">> "Mercy." SMALL<(A<Homicide and John Munch|href="Crossover_cosmologies.pl#Homicide_and_John_Munch">.)>
@@ -121,6 +121,7 @@ Michelle Tanner of I<Full House> appeared on I<Hangin' With Mr. Cooper> Q<Hangin
 I<Happy Days> spun offs I<Laverne & Shirley>, I<Blansky's Beauties>, I<Mork & Mindy>, I<Out of the Blue>, and I<Joanie Loves Chachi>. I<Happy Days> spun-off from an episode of the anthology series I<Love, American Style>. I<Love, American Style> had one spin-off I<The New Love, American Style>.
 2 Disney Channel Live-Action Universe
 This universe is not Q<officially> part of Westphall yet.
+I<Good Morning, Miss Bliss> was sold to NBC and retitled to I<Saved by the Bell>. I<Saved by the Bell> spun-off I<Saved by the Bell: The New Class> and I<Saved by the Bell: The College Years>. Years later, I<That's So Raven> was set in the same high school.
 Zack and Cody Martin and Marion Moseby from I<The Suite Life of Zack & Cody> appeared on I<That's So Raven> Q<Checkin' Out>. Raven Baxter from I<That's So Raven> and Hannah Montana from I<Hannah Montana> appeared on I<The Suite Life of Zack and Cody> Q<That's So Suite Life of Hannah Montana>.
 President Richard Martinez from I<Cory in the House> appeared on I<Hannah Montana> Q<Take This Job and Love It>.
 Zack and Cody Martin, London Tipton, Bailey Pickett, and Marion Moseby from I<The Suite Life on Deck> appeared on I<Wizards of Waverly Place> Q<Cast-Away (to Another Show)> and I<Hannah Montana> Q<Super(stitious) Girl>. Hannah Montana and Lola Luftnagle from I<Hannah Montana> appeared on I<The Suite Life on Deck> Q<Double-Crossed>.
@@ -148,9 +149,9 @@ Betty and Margaret Anderson from I<Father Knows Best>; June, Wally, and Beaver C
 Julie McCoy, Doctor Adam Bricker (Doc), Isaac Washington, and Vicki Stubing from I<The Love Boat> appeared on I<Martin> Q<Goin' Overboard>.
 3 Leave It to Beaver to cross over
 from CBS, ABC, Disney Channel, FOX, NBC, and The WB
-I<Leave It to Beaver> spun off I<Still the Beaver> which was renamed I<The New Leave It to Beaver>. SMALL<(A<I'm not home!|href="Westphall_non-crossovers.pl#Im_not_home">)> Eddie Haskell from I<Leave it to Beaver> appeared on I<Parker Lewis Can’t Lose> Q<Father Knows Less>. Andrew Keaton of I<Family Ties> appeared on I<Parker Lewis Can’t Lose> Q<Civil Wars>. Bud Bundy of I<Married with Children> appeared on I<Parker Lewis Can’t Lose> Q<Musso & Frank>.
+I<Leave It to Beaver> spun off I<Still the Beaver> which was renamed I<The New Leave It to Beaver>. SMALL<(A<I'm not home!|href="Westphall_non-crossovers.pl#Im_not_home">)> Eddie Haskell from I<Leave it to Beaver> appeared on I<Parker Lewis Can't Lose> Q<Father Knows Less>. Andrew Keaton of I<Family Ties> appeared on I<Parker Lewis Can't Lose> Q<Civil Wars>. Bud Bundy of I<Married with Children> appeared on I<Parker Lewis Can't Lose> Q<Musso & Frank>.
 I<Family Ties> spun off I<The Art of Being Nick>. Steven and Andrew Keaton of I<Family Ties> appeared on I<Day by Day> Q<Trading Places>. Alex P. Keaton of I<Family Ties> was mentioned on I<Spin City>. I<Spin City> Q<Internal Affairs> ended with a segue into I<Sports Night>. Paul Lassiter from I<Spin City> appeared on I<Something So Right> Q<Something About the 'Men' in Menstruation>.
-I<Married with Children> spun off I<Top of the Heap> which was renamed I<Vinnie & Bobby>. Marcy Rhoades D’Arcy from I<Married with Children> appeared on I<Nikki> Q<Technical Knockup>.
+I<Married with Children> spun off I<Top of the Heap> which was renamed I<Vinnie & Bobby>. Marcy Rhoades D'Arcy from I<Married with Children> appeared on I<Nikki> Q<Technical Knockup>.
 3 Hooterville
 from CBS and ABC
 I<The Beverly Hillbillies>, I<Petticoat Junction>, and I<Green Acres> shared a large number of characters crossing over, most notably the character Sam Drucker who was a regular on I<Petticoat Junction> and I<Green Acres>. Granny Daisy Moses from I<The Beverly Hillbillies> appeared on I<Mister Ed> Q<Love and the Single Horse>. SMALL<(A<I'm not home!|href="Westphall_non-crossovers.pl#Im_not_home">)> Colonel Hogan of I<Hogan's Heroes> was mentioned in I<Green Acres> Q<Wings Over Hooterville>. SMALL<(A<Holy defenestration, Batman!|href="Westphall_non-crossovers.pl#Holy_defenestration_Batman">)>
@@ -158,7 +159,7 @@ I<The Beverly Hillbillies> spun off I<The Return of the Beverly Hillbillies>. I<
 Hank Thackery, a minor character from I<Petticoat Junction>, may be the same Thackery on I<The Brady Bunch> Q<The Possible Dream>. I<The Brady Bunch> spun off I<The Brady Bunch Hour>, I<The Brady Girls Get Married>, I<The Brady Brides>, I<A Very Brady Christmas>, and I<The Bradys>.
 2 Chicago Hope
 from CBS and NBC
-Doctor Phillip Waters from I<Chicago Hope> appeared on I<Picket Fences> Q<Rebels with Causes>. Douglas Wambaugh from I<Picket Fences> appeared on I<Chicago Hope> Q<Small Sacrifices>.
+Doctor Phillip Waters from I<A<Chicago Hope|href="../Movies_by_series.pl?series=Chicago+Hope">> appeared on I<Picket Fences> Q<Rebels with Causes>. Douglas Wambaugh from I<Picket Fences> appeared on I<Chicago Hope> Q<Small Sacrifices>.
 I<Picket Fences> Q<Away In A Manger> referenced Delta Glen and events of I<A<The X-Files|href="../Movies_by_series.pl?series=The+X-Files#The_X-files_1993">> Q<Red Museum>, which took place in Delta Glen. SMALL<(A<The X-Files|href="The_X-Files">)>
 Doctor Jeffrey Geiger from I<Chicago Hope> accepted a heart from a victim on I<Homicide: Life on the Street> Q<A Doll's Eyes>. SMALL<(A<Homicide and John Munch|href="Homicide_and_John_Munch">)>
 Doctors Phillip Waters, Keith Wilkes, and Diane Grad from I<Chicago Hope> appeared on I<Early Edition> Q<Mum's the Word>. Sammo Law from I<Martial Law> appeared on I<Early Edition> Q<Play It Again, Sammo>. I<Martial Law> Q<Honor Among Strangers> continues in I<Walker, Texas Ranger> Q<The Day of Cleansing>. I<Walker, Texas Ranger> spun off I<Sons of Thunder>.
@@ -178,7 +179,7 @@ In I<Strange Luck> Q<Struck by Lightning>, the character of Chance Harper's brot
 The graves of Nicholas and Diane Salinger from I<Party of Five> are seen on I<The X-Files> Q<Milagro>. I<Party of Five> spun off I<Time of Your Life>.
 Frank and Jordan Black from I<A<Millennium|href="../Movies_by_series.pl?series=Millennium">> appeared on I<The X-Files> Q<Millennium>.
 I<The X-Files> spun off I<The Lone Gunmen> along with two films and a revival miniseries.
-The X Division from I<The X-Files> was mentioned on I<A<Fringe|href="../Movies_by_series.pl?series=Fringe">> Q<A New Day in the Old Town>. SMALL<(A<good reason|href="http://toobworld.blogspot.com/2009/09/taylor-made-link-for-fringe-x-files.html">)> The airline on I<Fringe> Q<The Dreamscape> is called A<Oceanic Air|href="Big_fake_companies/Oceanic_Airlines#Oceanic_Air">, the same airline flown by Richard and Alexis Castle on I<Castle> Q<In Plane Sight>. On I<Fringe> Q<Firefly>, Doctor Walter Bishop says he is friends with Doctor Lawrence Jacoby from I<Twin Peaks>, Bishop is wearing the same 3D glasses which Jacoby wears. SMALL<(A<good reason|href="http://toobworld.blogspot.com/2011/01/linkin-case-fringe-twin-peaks.html">)>
+The X Division from I<The X-Files> was mentioned on I<A<Fringe|href="../Movies_by_series.pl?series=Fringe">> Q<A New Day in the Old Town>. SMALL<(A<good reason|href="http://toobworld.blogspot.com/2009/09/taylor-made-link-for-fringe-x-files.html">)> The airline on I<Fringe> Q<The Dreamscape> is called A<Oceanic Air|href="Big_fake_companies/Oceanic_Airlines.pl#Oceanic_Air">, the same airline flown by Richard and Alexis Castle on I<Castle> Q<In Plane Sight>. On I<Fringe> Q<Firefly>, Doctor Walter Bishop says he is friends with Doctor Lawrence Jacoby from I<Twin Peaks>, Bishop is wearing the same 3D glasses which Jacoby wears. SMALL<(A<good reason|href="http://toobworld.blogspot.com/2011/01/linkin-case-fringe-twin-peaks.html">)>
 I<The X-Files> used the A<Morley|href="#Red_box_Morley"> cigarettes which first appeared in I<Beveryly Hills 90210> and look similar to Marlboro. 
 3 Special Victims Unit in Chicago
 from NBC
@@ -205,8 +206,8 @@ A<Red box Morley|href="Big_fake_companies/Morley.pl#Red_box_Morley"> cigarettes 
 * I<Everybody Hates Chris> Q<Everybody Hates Playboy> (UPN/The CW)
 * I<Huff> Q<Radio Silence> (Showtime)
 * I<CSI: Crime Scene Investigation> Warrick Brown smokes Morleys. (CBS) SMALL<(A<CSI|href="#CSI">)>
-* I<A<Criminal Minds|href="../Movies_by_series.pl?series=Criminal+Minds">> Q<North Mammon>. I<Criminal Minds> spun off I<Criminal Minds: Suspect Behavior> and I<Criminal Minds: Beyond Borders>. (CBS)
-* I<Prison Break> Q<Bolshoi Booze>. I<Prison Break> spun off I<Prison Break: Proof of Innocence> and I<Breakout Kings>. (FOX and A&E)
+* I<A<Criminal Minds|href="../Movies_by_series.pl?series=Criminal+Minds">> Q<North Mammon>. (CBS) SMALL<(A<Criminal Minds|href="#Criminal_Minds">)>
+* I<A<Prison Break|href="../Movies_by_series.pl?series=Prison+Break#Prison_Break">> Q<Bolshoi Booze>. (FOX) SMALL<(A<Prison Break|href="#Prison_Break">)>
 * I<Breaking Bad> pilot. (AMC) SMALL<(A<Breaking Dead|href="#Breaking_Dead">)>
 * I<A<Medium|href="../Movies_by_series.pl?series=Medium">> Q<To Have and to Hold> (NBC and CBS) SMALL<(A<The Montecito|href="#The_Montecito_Resort_and_Casino">)>
 * I<A<New Amsterdam|href="../Movies_by_series.pl?series=New+Amsterdam">> Q<Love Hurts> (FOX)
@@ -214,11 +215,11 @@ A<Red box Morley|href="Big_fake_companies/Morley.pl#Red_box_Morley"> cigarettes 
 * I<Saving Grace> Q<It's a Fierce, White-Hot, Mighty Love> (TNT)
 * I<Sordid Lives: The Series> Q<Pills, Poison and Penises>, which is a prequel series to I<Sordid Lives>. (Logo)
 * I<A<Burn Notice|href="../Movies_by_series.pl?series=Burn+Notice#Burn_Notice">> Q<Scatter Point>. I<Burn Notice> spun off I<Burn Notice: The Fall of Sam Axe>. (USA Network)
-* I<A<Pushing Daisies|href="../Movies_by_series.pl?series=Pushing+Daisies">> Q<Bad Habits> (ABC) SMALL<(A<Fullerverse|href="Fullerverse">)>
+* I<A<Pushing Daisies|href="../Movies_by_series.pl?series=Pushing+Daisies">> Q<Bad Habits> (ABC) SMALL<(A<Fullerverse|href="#Fullerverse">)>
 * I<A<Heroes|href="../Movies_by_series.pl?series=Heroes#Heroes">> Q<One of Us, One of Them> (NBC) SMALL<(A<The Montecito|href="#The_Montecito_Resort_and_Casino">)>
 * I<Californication> Q<The Raw & the Cooked> (Showtime)
 * I<United States of Tara> pilot (Showtime)
-* I<24> Q<Day 8: 9:00 p.m. – 10:00 p.m.>. I<24> spun off I<24: Live Another Day>. (FOX)
+* I<24> Q<Day 8: 9:00 p.m.  10:00 p.m.>. (FOX) SMALL<(A<24|href="#twenty-four">)>
 * I<American Horror Story: Murder House> Q<Birth> (FX)
 * I<A<Lost|href="../Movies_by_series.pl?series=Lost">> Q<LA X> (ABC) SMALL<(A<Lost in Alias|href="#Lost_in_Alias">)>
 * I<Justified> Q<Riverbrook>. I<Justified> crossed with I<Karen Sisco>. (FX and ABC)
@@ -236,11 +237,22 @@ A<Weyland-Yutani|href="Big_fake_companies#Weyland=Yutani"> is the greedy corpora
 A M41A Pulse Rifle and USCM Smart Gun from I<Aliens> appeared on I<Soldier>. The soldier's service record shows he fought in the battles of Tannhauser Gate and Shoulder of Orion from I<Blade Runner>, also the spinners from I<Blade Runner> appeared on I<Soldier>.
 I<A<Alien vs. Predator|href="../Movies_by_series.pl?series=Alien+vs.+Predator">> series serves as a prequel to the I<Alien> series and a sequel to the I<A<Predator|href="../Movies_by_series.pl?series=Predator">> series. (The film I<Predators> is not part of the I<Alien vs. Predator> series.)
 Buffy Summers worked at the Doublemeat Palace owned by Guy Halveston, whose murder was investigated by I<A<Andy Barker, P.I.|href="../Movies_by_series.pl?series=Andy+Barker,+P.I.">> in Q<Fairway, My Lovely>. The Doublemeat Palace was previously mentioned in I<Dexter> Q<Truth Be Told>.
+The TARDIS from I<A<Doctor Who|href="../Movies_by_series.pl?series=Doctor+Who#Doctor_Who_1963">> appeared on I<Red Dwarf> Q<Marooned> in the hanger of the ship, I<Chelmsford 123> Q<Arrivederci Roma>, I<Sherlock> Q<The Hounds of Baskerville>, and I<A<The Librarians|href="../Movies_by_series.pl?series=The+Librarian#The_Librarians">> Q<And the Final Curtain> where Doc Brown's DeLorean also appeared. A Narcissus escape shuttle built by Weyland-Yutani from I<A<Alien|href="../Movies_by_series.pl?series=Alien#Alien">>, a Klingon Bird of Prey from I<A<Star Trek|href="../Movies_by_series.pl?series=Star+Trek#Star_Trek_1966">>, and the Eagle from I<A<Space: 1999|href="../Movies_by_series.pl?series=Space:+1999">> appeared on I<Red Dwarf> Q<Psirens> in a shipyard of derelict ships. The Millennium Falcon from I<A<Star Wars|href="../Movies_by_series.pl?series=Star+Wars">> appeared on I<A<Star Trek: First Contact|href="Movies_by_series.pl?series=Star+Trek#Star_Trek:_First_Contact">>. A Firefly class ship appeared on the I<A<Battlestar Galactica|href="../Movies_by_series.pl?series=Battlestar+Galactica+(2003)#Battlestar_Galactica_2003">> miniseries. A Constitution class ship from I<Star Trek> appeared on I<A<Battlestar Galactica|href="../Movies_by_series.pl?series=Battlestar+Galactica+(2003)#Battlestar_Galactica_2003">> Q<Daybreak>. 
+Arthur Dent from I<The Hitchhiker's Guide to the Galaxy> was mentioned in I<A<Doctor Who|href="../Movies_by_series.pl?series=Doctor+Who#Doctor_Who_2005">> Q<The Christmas Invasion>. I<A<Doctor Who|href="../Movies_by_series.pl?series=Doctor+Who">> has five spin-offs.
 The alien species from I<E.T. The Extra-Terrestrial> appeared on I<A<Star Wars: The Phantom Menace|href="../Movies_by_series.pl?series=Star+Wars#Star_Wars:_Episode_I_-_The_Phantom_Menace">>.
-The TARDIS from I<A<Doctor Who|href="../Movies_by_series.pl?series=Doctor+Who#Doctor_Who_1963">> appeared on I<Red Dwarf> Q<Marooned> in the hanger of the ship, I<Chelmsford 123> Q<Arrivederci Roma>, I<Sherlock> Q<The Hounds of Baskerville>, and I<A<The Librarians|href="../Movies_by_series.pl?series=The+Librarian#The_Librarians">> Q<And the Final Curtain> and Doc Brown's DeLorean also appeared. A Narcissus escape shuttle built by Weyland-Yutani from I<A<Alien|href="../Movies_by_series.pl?series=Alien#Alien">>, a Klingon Bird of Prey from I<A<Star Trek|href="../Movies_by_series.pl?series=Star+Trek#Star_Trek_1966">>, and the Eagle from I<A<Space: 1999|href="../Movies_by_series.pl?series=Space:+1999">> appeared on I<Red Dwarf> Q<Psirens> in a shipyard of derelict ships. The Millennium Falcon from I<A<Star Wars|href="../Movies_by_series.pl?series=Star+Wars">> appeared on I<A<Star Trek: First Contact|href="Movies_by_series.pl?series=Star+Trek#Star_Trek:_First_Contact">>. A Firefly class ship appeared on the I<A<Battlestar Galactica|href="../Movies_by_series.pl?series=Battlestar+Galactica+(2003)#Battlestar_Galactica_2003">> miniseries. A Constitution class ship from I<Star Trek> appeared on I<A<Battlestar Galactica|href="../Movies_by_series.pl?series=Battlestar+Galactica+(2003)#Battlestar_Galactica_2003">> Q<Daybreak>. 
-Arthur Dent from I<The Hitchhiker's Guide to the Galaxy> was mentioned in I<A<Doctor Who|href="../Movies_by_series.pl?series=Doctor+Who#Doctor_Who_2005">> Q<The Christmas Invasion>. I<A<Doctor Who|href="../Movies_by_series.pl?series=Doctor+Who">> has four spin-offs.
-Dr. Jackson Roykirk introduced on I<Star Trek> Q<The Changeling> appeared on I<A<Team Knight Rider|href="../Movies_by_series.pl?series=Knight+Rider#Team_Knight_Rider">> Q<Apocalypse Maybe>. I<Team Knight Rider> spun off from I<A<Knight Rider|href="../Movies_by_series.pl?series=Knight+Rider#Knight_Rider_1982">>. SMALL<(A<The Montecito|href="#The_Montecito_Resort_and_Casino">)>
+Dr. Jackson Roykirk, introduced on I<Star Trek> Q<The Changeling>, appeared on I<A<Team Knight Rider|href="../Movies_by_series.pl?series=Knight+Rider#Team_Knight_Rider">> Q<Apocalypse Maybe>. I<Team Knight Rider> spun off from I<A<Knight Rider|href="../Movies_by_series.pl?series=Knight+Rider#Knight_Rider_1982">>. SMALL<(A<The Montecito|href="#The_Montecito_Resort_and_Casino">)>
+The shuttle craft A<Indiana Jones|href="../Movies_by_series.pl?series=The+Adventures+of+Indiana+Jones"> appeared on I<Star Trek: The Next Generation> Q<Evolution>.
 R2-D2 from I<Star Wars> appeared on I<Star Trek> (2009) and I<Star Trek Into Darkness>.
+The sarlacc from I<Star Wars: Return of the Jedi> was mentioned in I<Once Upon a Time in Wonderland> Q<Forget Me Not>. SMALL<(A<Lost in Alias|href="#Lost_in_Alias">)>
+3 Lost in Alias
+from ABC and NBC
+I<A<Lost|href="../Movies_by_series.pl?series=Lost">> had two minor crossovers with I<A<Alias|href="../Movies_by_series.pl?series=Alias">>. The first was the fictional band called Driveshaft who were introduced on I<Lost> and got a minor mention on I<Alias> Q<Authorized Personnel Only> part 2. On I<Alias> Q<A Clean Conscience>, the flight which got lost in I<Lost> was mentioned.
+Oceanic Airlines appeared on I<A<LAX|href="../Movies_by_series.pl?series=LAX">> Q<Senator's Daughter>, I<A<FlashForward|href="../Movies_by_series.pl?series=FlashForward">> Q<No More Good Days>, and I<A<Once Upon a Time|href="../Movies_by_series.pl?series=Once+Upon+a+Time">> Q<The Stranger>. I<Once Upon a Time> spun off I<Once Upon a Time in Wonderland>. Oceanic Airlines flight 815 from I<Lost> was mentioned on I<A<Chuck|href="../Movies_by_series.pl?series=Chuck">> Q<Chuck Versus the Helicopter>, however the details around its destruction were inaccurate. SMALL<(A<good reason|href="http://www.televisioncrossoveruniverse.com/2011/01/what-chuck-how-this-actioncomedy-fits.html">)>
+I<Lost> Q<Raised by Another> was the first appearance of A<Gannon Car Rentals|href="Big_fake_companies#Gannon_Car_Rentals">. It has since appeared on I<Nip/Tuck> Q<Conor McMamara, 2026>, I<A<Heroes|href="../Movies_by_series.pl?series=Heroes#Heroes">> Q<The Fix>, and I<Glee> Q<The New Rachel>.
+Credit Dauphine, a fictional bank, from I<Alias> appeared on I<Eli Stone> "The Path".
+A<Slusho!|href="Big_fake_companies#Slusho"> from I<Alias> Q<So It Begins> appeared on I<Heroes> Q<Cautionary Tales> and Q<Truth or Consequences> SMALL<(A<The Montecito|href="#The_Montecito_Resort_and_Casino">)>, I<Cloverfield>, I<A<Fringe|href="../Movies_by_series.pl?series=Fringe">> Q<The Road Not Taken> and Q<A Better Human Being>, I<A<Star Trek|href="../Movies_by_series.pl?series=Star+Trek#Star_Trek_2009">> (2009) SMALL<(A<Weyland-Yutani|href="#Weyland-Yutani">)>, and I<Super 8>.
+L.A.P.D. Police Sergeant Al Powell makes his first appearance in I<A<Die Hard|href="../Movies_by_series.pl?series=Die+Hard#Die_Hard">> and then again in I<Die Hard 2>. He reappears almost two decades later on I<Chuck> Q<Chuck Versus Santa Claus>. I<Die Hard> had three more sequels.
+You can read more about A<Oceanic Airlines|href="Big_fake_companies/Oceanic_Airlines.pl"> and find out why some do not cross over with I<Lost>.
 3 ETM
 from NBC
 I<A<ER|href="../Movies_by_series.pl?series=ER">> Q<Brothers and Sisters> and I<A<Third Watch|href="../Movies_by_series.pl?series=Third+Watch">> Q<Unleashed> crossed when Doctor Susan Lewis on I<ER> got a call from her sister which prompts her to go to New York where she meets Detective Faith Yokas of I<Third Watch>. Doctor Susan Lewis of I<ER> and  of I<Third Watch> are in both episodes.
@@ -251,7 +263,13 @@ from CBS and FOX
 I<CSI: Crime Scene Investigation> has three spin-offs I<CSI: Miami>, I<CSI: NY>, and I<CSI: Cyber>. The I<CSI: Crime Scene Investigation> episode Q<Who and What> concluded in the I<Without a Trace> episode Q<Where and Why>. Detective Scotty Valens from I<Cold Case> appeared on I<CSI:NY> Q<Cold Reveal>.
 I<CSI: Crime Scene Investigation> Q<The Lost Girls> and I<A<Bones|href="../Movies_by_series.pl?series=Bones+&+The+Finder#Bones">> Q<The Woman in the Sand> both mention the fictional Tangiers hotel. I<Bones> spun off I<A<The Finder|href="../Movies_by_series.pl?series=Bones+&+The+Finder#The_Finder">>.
 I<Bones> Q<The Resurrection in the Remains> will crossover with I<Sleepy Hollow> Q<Dead Men Tell No Tales>.
-There was B<no> crossover when Jon Cryer, Charlie Sheen, and Angus Jones from I<Two and a Half Men> appeared on I<CSI: Crime Scene Investigation> Q<Two and a Half Deaths> as themselves. SMALL<(A<people not considered|href="index.pl#People_not_considered">)>
+There was B<no> crossover when Jon Cryer, Charlie Sheen, and Angus Jones from I<Two and a Half Men> appeared as themselves on I<CSI: Crime Scene Investigation> Q<Two and a Half Deaths>. SMALL<(A<people not considered|href="index.pl#People_not_considered">, A<Two and a Half|href="Westphall_non-crossovers.pl#Two_and_a_Half">)>
+3 Criminal Minds
+from CBS
+I<Criminal Minds> spun off I<Criminal Minds: Suspect Behavior> and I<Criminal Minds: Beyond Borders>.
+3 Prison Break
+from FOX and A&E
+I<Prison Break> spun off I<Prison Break: Proof of Innocence> and I<Breakout Kings>.
 3 Breaking Dead
 from AMC
 The blue meth from I<Breaking Bad> appeared on I<A<The Walking Dead|href="../Movies_by_series.pl?series=The+Walking+Dead">>. I<Breaking Bad> spun off I<Better Call Saul>. I<The Walking Dead> spun off I<Fear the Walking Dead>, however it is not contiguous with I<The Walking Dead>.
@@ -260,19 +278,13 @@ from ABC, Showtime, FOX, and NBC
 Happy Time Temp Agency from I<A<Dead Like Me|href="../Movies_by_series.pl?series=Dead+Like+Me">> was mentioned on I<A<Pushing Daisies|href="../Movies_by_series.pl?series=Pushing+Daisies">> Q<Bzzzzzzzzz!>. I<Dead Like Me> spun off I<Dead Like Me: Life After Death>.
 Marianne Marie Beetle from I<A<Wonderfalls|href="../Movies_by_series.pl?series=Wonderfalls">> Q<Muffin Buffalo> appeared on I<Pushing Daisies> Q<Comfort Food>.
 Gretchen Speck-Horowitz from I<Wonderfalls> appeared on I<A<Hannibal|href="../Movies_by_series.pl?series=Hannibal+(2013)">> Q<Amuse-bouche> under her maiden name Gretchen Speck.
-3 Lost in Alias
-from ABC and NBC
-I<A<Lost|href="../Movies_by_series.pl?series=Lost">> had two minor crossovers with I<A<Alias|href="../Movies_by_series.pl?series=Alias">>. The first was the fictional band called Driveshaft who were introduced on I<Lost> and got a minor mention on I<Alias> Q<Authorized Personnel Only> part 2. On I<Alias> Q<A Clean Conscience>, the flight which got lost in I<Lost> was mentioned.
-Oceanic Airlines appeared on I<A<LAX|href="../Movies_by_series.pl?series=LAX">> Q<Senator's Daughter>, I<FlashForward> Q<No More Good Days>, and I<Once Upon a Time> Q<The Stranger>. I<Once Upon a Time> spun off I<Once Upon a Time in Wonderland>. Oceanic Airlines flight 815 from I<Lost> was mentioned on I<A<Chuck|href="../Movies_by_series.pl?series=Chuck">> Q<Chuck Versus the Helicopter>, however the details around its destruction were inaccurate. SMALL<(A<good reason|href="http://www.televisioncrossoveruniverse.com/2011/01/what-chuck-how-this-actioncomedy-fits.html">)>
-I<Lost> Q<Raised by Another> was the first appearance of A<Gannon Car Rentals|href="Big_fake_companies#Gannon_Car_Rentals">. It has since appeared on I<Nip/Tuck> Q<Conor McMamara, 2026>, I<A<Heroes|href="../Movies_by_series.pl?series=Heroes#Heroes">> Q<The Fix>, and I<Glee> Q<The New Rachel>.
-Credit Dauphine, a fictional bank, from I<Alias> appeared on I<Eli Stone> "The Path".
-A<Slusho!|href="Big_fake_companies#Slusho"> from I<Alias> Q<So It Begins> appeared on I<Heroes> Q<Cautionary Tales> and Q<Truth or Consequences> SMALL<(A<The Montecito|href="#The_Montecito_Resort_and_Casino">)>, I<Cloverfield>, I<A<Fringe|href="../Movies_by_series.pl?series=Fringe">> Q<The Road Not Taken> and Q<A Better Human Being>, I<A<Star Trek|href="../Movies_by_series.pl?series=Star+Trek#Star_Trek_2009">> (2009) SMALL<(A<Weyland-Yutani|href="#Weyland-Yutani">)>, and I<Super 8>.
-L.A.P.D. Police Sergeant Al Powell makes his first appearance in I<A<Die Hard|href="../Movies_by_series.pl?series=Die+Hard#Die_Hard">> and then again in I<Die Hard 2>. He reappears almost two decades later on I<Chuck> Q<Chuck Versus Santa Claus>. I<Die Hard> had three more sequels.
-You can read more about A<Oceanic Airlines|href="Big_fake_companies/Oceanic_Airlines.pl"> and find out why some do not cross over with I<Lost>.
+3 24
+from FOX, Showtime, and FX
+I<24> spun off I<24: Live Another Day> and I<24: Legacy>. I<24> uses a fake news company known as CNB. CNB has appeared on I<Homeland> "The Star" and in I<Tyrant> second season. Howard Gordon worked on I<24> and helmed the latter two series.
 3 Monday night on Syfy
 from SyFy
 I<A<EurSUP<e>ka|href="../Movies_by_series.pl?series=EUReKA">>, I<A<Warehouse 13|href="../Movies_by_series.pl?series=Warehouse+13">>, and I<A<Alphas|href="../Movies_by_series.pl?series=Alphas">> aired on SyFy on Monday nights together.
-I<EurSUP<e>ka> and I<Warehouse 13> had three crosses. Douglas Fargo from I<EurSUP<e>ka> appeared on I<Warehouse 13> Q<13.1>. Claudia Donovan from I<Warehouse 13> appeared on I<EurSUP<e>ka> Q<Crossing Over>. Douglas Fargo also appeared on I<Warehouse 13> Q<Don’t Hate the Player>.
+I<EurSUP<e>ka> and I<Warehouse 13> had three crosses. Douglas Fargo from I<EurSUP<e>ka> appeared on I<Warehouse 13> Q<13.1>. Claudia Donovan from I<Warehouse 13> appeared on I<EurSUP<e>ka> Q<Crossing Over>. Douglas Fargo also appeared on I<Warehouse 13> Q<Don't Hate the Player>.
 Dr. Vanessa Calder, who recurred on I<Warehouse 13>, appeared on I<Alphas> Q<Never Let Me Go>.
 2 The Montecito Resort and Casino
 from NBC, ABC, and BBC Two

@@ -8,10 +8,10 @@ use lib '../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
-use People qw(get_people);
+use People qw(people_list);
 
 my $doc_magic = {
-  'artists' => sub { list(3, 'u', get_people('Artists.txt'), { 'class' => 'three' }) },
+  'artists' => sub { list(3, 'u', people_list('Artists.txt'), { 'class' => 'three' }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
@@ -29,7 +29,7 @@ This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade p
 * I<The Art of Dragon Magazine|^trades^>
 * I<The Art of the Dungeons & Dragons Fantasy Game|^trades^>
 * I<The Worlds of TSR|^hardcovers^>
-3 Boris Vallejo +
+3 Boris Vallejo
 * I<The Fantastic Art of Boris Vallejo|^trades^> introduction by Lester Del Rey
 * I<Fantasy Art Techniques|^hardcovers^> forward by Isaac Asimov
 * I<Ladies: Retold Tales of Goddess and Heroines|^trades^> with Doris Vallejo

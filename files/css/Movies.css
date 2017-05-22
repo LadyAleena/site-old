@@ -1,22 +1,29 @@
 body.movie_series h1 { font-style: italic }
-ul.season_list  li, ul.actor_list li { list-style: none; }
-ul.program_list li { list-style: none; font-style: italic; }
-ol.episode_list, ul.actor_list { font-size: smaller; }
 
-.title { font-style: italic; font-weight: bold; }
+ol.episode_list,
+ul.actor_list { font-size: smaller; }
+
+ul.season_list  li,
+ul.actor_list   li,
+ul.program_list li { list-style: none; }
+
+ul.program_list li { font-style: italic; }
+
+.title { font-weight: bold; }
 .series, .program { font-style: italic; }
 
 /*Movie miscellany*/
-.dead  { background:#ccc; }
+.dead  { background-color: #ccc; }
+
 /*Doctor Who*/
-.The_Doctor { font-weight:bold; color:#009 }
-.torch { color:#900; }
-.sjs   { color:#909; }
-.companion  { font-weight:bold; }
-.reset { background:#fff; font-weight:normal; color:#000; }
+.The_Doctor { font-weight: bold; color: #009 }
+.torch      { color: #900; }
+.sjs        { color: #909; }
+.companion  { font-weight: bold; }
+.reset      { background: #fff; font-weight: normal; color: #000; }
 
 @media print{
   ul.program_list,
   ul.season_list,
-  .like,
+  .like { display: none; }
 }

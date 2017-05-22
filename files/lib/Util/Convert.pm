@@ -7,7 +7,7 @@ our @EXPORT_OK = qw(filify idify linkify textify searchify hashtagify);
 use Lingua::EN::Inflect qw(NUMWORDS);
 use URI::Encode qw(uri_encode);
 
-use Base::Root qw(get_root);
+use Base::Path qw(base_path);
 
 sub filify {
   my ($filename) = @_;
@@ -37,9 +37,6 @@ sub idify {
 
 sub linkify {
   my ($link) = @_;
-  my $root_path = get_root('path');
-  my $root_link = get_root('link');
-  $link =~ s/$root_path/$root_link/;
 #  $link =~ s/&/%26/g;
 #  return uri_encode($link);
    return $link;
@@ -47,7 +44,7 @@ sub linkify {
 
 sub textify {
   my ($text, $opt) = @_;
-  my $root_link = get_root('link');
+  my $root_link = base_path('link');
   $text =~ s/$root_link\///;
   $text =~ s/<.+?>//g;
   $text =~ s/_/ /g;
@@ -76,11 +73,11 @@ sub hashtagify {
 
 =head1 NAME
 
-Util::Convert - converts strings into various formats.
+B<Util::Convert> converts strings into various formats.
 
 =head1 SYNOPSIS
 
-  my $string = 'Mr and Mrs Smith';
+  my $string = 'Mr & Mrs Smith';
   
   my $file    = filify($string);     # returns Mr_&_Mrs_Smith
   my $id      = idify($string);      # returns Mr_and_Mrs_Smith
@@ -88,5 +85,9 @@ Util::Convert - converts strings into various formats.
   my $search  = searchify($string);  # returns Mr+%26+Mrs+Smith
   my $hashtag = hashtagify($string); # returns #MrandMrsSmith
   
+=head1 AUTHOR
+
+Lady Aleena
+
 =cut
 1;

@@ -10,13 +10,13 @@ my @roman_numerals = qw(I II III IV V VI VII VIII IX X);
 my $roman_numerals_string = join('|',@roman_numerals);
 
 sub name_transform {
-  my ($name,$opt) = @_;
+  my ($name, $opt) = @_;
   
   # If a suffix is so long it needs a comma, let's get it here.
-  my ($base_name,$pre_suffix) = split(/, /,$name);
+  my ($base_name, $pre_suffix) = split(/, /, $name);
   
   # Split the rest of the name by the spaces.
-  my @name = split(/ /,$base_name);
+  my @name = split(/ /, $base_name);
   
   # Now check the first array item to see if it is a common prefix.
   # Some are there for fun.
@@ -42,15 +42,25 @@ sub name_transform {
   }
   
   my $surname = $opt->{name_order} && $opt->{name_order} =~ /^[1tyrf]/i ? shift @name :
-                !$opt->{joined}    && $joined > -1   ? join(' ',splice(@name,$joined - 1,$#name)) :
-                !$opt->{particle}  && $particle > -1 ? join(' ',splice(@name,$particle,$#name)) : pop @name;
+                !$opt->{joined}    && $joined > -1   ? join(' ', splice(@name, $joined - 1, $#name)) :
+                !$opt->{particle}  && $particle > -1 ? join(' ', splice(@name, $particle, $#name)) : pop @name;
 
   my $first_name  = shift @name // '';
   
   # Every name left should be middle names.
-  my $other_names = @name ? join(' ',@name) : '';
+  my $other_names = @name ? join(' ', @name) : '';
   
   return [$surname,$first_name,$other_names,$prefix,$suffix];
 }
+
+=head1 NAME
+
+B<Util::TransformName> returns parts of names in an array.
+
+=head1 Author
+
+Lady Aleena
+
+=cut
 
 1;

@@ -10,7 +10,7 @@ use Base::Page qw(page story);
 page( 'code' => sub { story(*DATA) });
 
 __DATA__
-These are the gods and lands of the Belgariad and Mallorean created by David and Leigh Eddings.
+These are the gods and lands of the A<Belgariad and Mallorean|href="../Collections/Fiction.pl#Belgarion_saga"> created by David and Leigh Eddings.
 2 The gods
 * Overpower - UL
 * Greater powers

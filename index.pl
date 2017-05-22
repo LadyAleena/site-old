@@ -28,6 +28,3 @@ B<Miscellany> is random ideas, thoughts, and lists that I found or collated over
 2 Acknowledgements
 This website was built with the help of the ^PerlMonks^ and the users of ^#perl^ and ^#perlcafe^ channels on freenode.
 My site is hosted on ^Xecu.net^, but they are not affiliated with my personal website. Please point all links to this site at CODE<A<fantasy.xecu.net|href="http://fantasy.xecu.net">>. Thank you!
-2 Reciprocated links
-* ^Everchanging Book of Names^
-* ^The Paper Filter^

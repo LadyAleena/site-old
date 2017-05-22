@@ -2,7 +2,7 @@ package RolePlaying::CharacterBuilding::Class;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(convert_class get_level return_classes);
+our @EXPORT_OK = qw(convert_class class_level player_classes);
 
 use Lingua::EN::Inflect qw(ORD);
 
@@ -10,7 +10,7 @@ use Base::Data qw(get_hash);
 
 my @specialists = qw(enchanter illusionist invoker necromancer);
 my @elementalists = qw(pyromancer hydromancer geomancer aeromancer);
-my @other_wizards = ('arcanist',"sha'ira");
+my @other_wizards = ('arcanist',"sha'ira",'wild mage');
 my $wizards = join('|', (@specialists, @elementalists, @other_wizards));
 
 sub convert_class {
@@ -41,9 +41,9 @@ my $xpchart = get_hash(
   'headings' => [qw(level fighter warrior rogue priest druid),'specialty priest','wizard','psionisist','chaos warden','theopsyelementalist']
 );
 
-sub get_level {
+sub class_level {
   my ($class, $user_xp, $user_level) = @_;
-  $class = convert_class($class,'Level');
+  $class = convert_class($class, 'Level');
   my $xp = $user_xp ? $user_xp : 0;
   my $level = $user_level ? $user_level : 1;
   my $next_level = $level + 1;
@@ -55,16 +55,16 @@ sub get_level {
     return $level;
   }
   else {
-    get_level($class, $xp, $next_level);
+    class_level($class, $xp, $next_level);
   }
 }
 
-sub return_classes {
+sub player_classes {
   my ($class, $experience) = @_;
 
   my @classes;
   for (@{$class}) {
-    my $level = ORD(get_level($_,$experience));
+    my $level = ORD(class_level($_, $experience));
     push @classes, "$level level $_";
   }
 

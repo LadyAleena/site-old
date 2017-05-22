@@ -43,7 +43,7 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 * I<Twister|^cd^> (1996)
 * I<Two of a Kind|^cassette^> (1983)
 * I<The Witches of Eastwick|^cd^> (1987)
-* I<Xanadu|^lp^> (1980) by Olivia Newton-John and ELO
+* I<Xanadu|^cd^> (1980) by Olivia Newton-John and ELO <!-- lp -->
 2 Babylon 5 novels
 # I<Voices|^massmarket^> by John Vornholt
 #5 I<The Touch of Your Shadow, the Whisper of Your Name|^massmarket^> by Neal Barrett Jr.

@@ -8,8 +8,8 @@ use HTML::Entities qw(decode_entities);
 
 sub split_out_leading_number {
     my $s = shift;
-    if ( $s =~/^((\d|,|\.)+)(.*)$/) {
-        my ($leading_number, $rest) = ($1,$3);
+    if ( $s =~ /^(\d+[,\.\d]*|\.\d+[,\.\d]*)(.*)$/ ) {
+        my ($leading_number, $rest) = ($1,$2);
         # Take any commas out of the number.
         $leading_number =~ s/,//g;
         return ($leading_number, $rest);
@@ -59,7 +59,7 @@ sub article_sort {
     s/\((.+)\)/$1/g;
     decode_entities($_);
   }
-  if ( $c =~/^((\d|,|\.)+)(.*)$/ && $d =~ /^((\d|,|\.)+)(.*)$/) {
+  if ( $c =~ /^(\d+[,\.\d]*|\.\d+[,\.\d]*)(.*)$/ && $d =~ /^(\d+[,\.\d]*|\.\d+[,\.\d]*)(.*)$/) {
     my ($num1, $text1) = split_out_leading_number($c);
     my ($num2, $text2) = split_out_leading_number($d);
 
@@ -143,5 +143,15 @@ sub split_sort {
     $numa1 cmp $numb1 || $numa2 cmp $numb2
   }
 }
+
+=head1 NAME
+
+B<Util::Sort> performs various sorts on lists.
+
+=head1 Author
+
+Lady Aleena
+
+=cut
 
 1;

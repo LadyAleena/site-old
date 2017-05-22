@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_body_function random_body_functions);
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use Util::GrammaticalJoin;
+use Fancy::Join::Grammatical;
 
 my %body_functions = (
   'sleep' => [

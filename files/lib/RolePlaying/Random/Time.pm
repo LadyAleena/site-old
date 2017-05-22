@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_time_unit random_day_part random_time random_frequenc
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use RolePlaying::Random::Misc qw(dice);
+use RolePlaying::Random::Misc qw(random_dice);
 
 use Lingua::EN::Inflect qw(PL_N A);
 use Games::Dice qw(roll);
@@ -61,7 +61,7 @@ sub random_time {
 }
 
 sub random_frequency {
-  my $frequency = roll(dice);
+  my $frequency = roll(random_dice);
   my $plural = PL_N('time',$frequency);
   my $time_unit = A(random_time_unit('all'));
   return "$frequency $plural $time_unit";

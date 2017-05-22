@@ -2,34 +2,30 @@ package RolePlaying::Spellbook;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(print_spellbook);
+our @EXPORT_OK = qw(spellbook);
 
 use CGI::Carp qw(fatalsToBrowser);
 use Lingua::EN::Inflect qw(ORD);
 
 use Base::Data qw(get_hash);
-use HTML::Elements qw(section paragraph list);
 use Util::Columns;
 
-sub print_spellbook {
+sub spellbook {
   my ($directory, $file) = @_;
   
   my $spells = get_hash( 'file' => [$directory, $file], 'headings' => ['+'] );
 
+  my $spell_list;
   for my $level (sort keys %$spells) {
     next if $level eq 'Note';
     my @spells = @{$spells->{$level}};
-    my $columns = get_columns(3,scalar @spells);
-
-    section(3, sub {
-      list(5, 'u', [@spells], { class => $columns });
-    }, { 'heading' => [2, ORD($level).' level'] });
+    my $columns = number_of_columns(3, scalar @spells, 1);
+    push @$spell_list, { 'heading' => ORD($level).' level', 'list' => [\@spells, { class => $columns }] };
   }
   if ($spells->{'Note'}) {
-    section(3, sub {
-      paragraph(5, $spells->{'Note'}[0]);
-    }, { 'heading' => [2, 'Note about this spellbook'] });
+    push @$spell_list, { 'heading' => 'Note about this spellbook', 'paragraph' => $spells->{'Note'}[0] };
   }
+  return $spell_list;
 }
 
 1;

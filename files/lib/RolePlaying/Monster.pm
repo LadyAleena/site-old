@@ -6,19 +6,19 @@ our @EXPORT_OK = qw(print_monster);
 
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
-use File::Slurp; # read_file
+use IO::All;
 
 use Base::Page qw(passage);
-use Base::Data qw(get_directory data_directory get_hash get_array data_file);
-use HTML::Elements qw(section heading paragraph table list);
+use Base::Data qw(get_hash get_array data_file);
+use HTML::Elements qw(section list table);
 use Util::Convert qw(filify textify);
 
-my @long_values = ('Appearance','Combat','Habitat/Society','Ecology','Variants','Note');
 my @monster_headings = ('Monster','Climate/Terrain','Frequency','Organization','Activity cycle','Diet','Intelligence','Treasure','Alignment','No. Appearing','Armor Class','Movement','Hit Dice','THAC0','No. of Attacks','Damage/Attack','Special Attacks','Special Defenses','Magic Resistance','Size','Morale','XP Value');
 my $monsters = get_hash(
   'file' => ['Role_playing','Monsters.txt'],
   'headings' => \@monster_headings,
 );
+my @long_values = ('Appearance','Combat','Habitat/Society','Ecology','Variants','Note');
 
 my %multi_monsters = (
   'Throglin' => ['Throglin','Freshwater throglin','Saltwater throglin'],
@@ -46,7 +46,7 @@ sub dragonette_table {
   for my $row (@{$rainbow_dragonette{$var}}) {
     push @rows, [map($row->{$_}, @{$rainbow_dragonette_headings{$var}})];
   }
-  table(4, { class => 'rainbow_dragonette', rows => [['header', [$rainbow_dragonette_headings{$var}]], ['data', \@rows]] });
+  table(4, { class => 'rainbow_dragonette centered', rows => [['header', [$rainbow_dragonette_headings{$var}]], ['data', \@rows]] });
 }
 
 my $doc_magic = {
@@ -68,12 +68,12 @@ sub print_monster {
     
     my @items;
     for my $key (@monster_headings) {
-      push @items, $monsters->{$monster}{$key} ? [qq(<strong>$key:</strong> $monsters->{$monster}{$key}), { class => 'monster_attribute' }] : '';
+      push @items, $monsters->{$monster}{$key} ? [qq(<strong class="caps">$key:</strong> $monsters->{$monster}{$key}), { class => 'monster_attribute' }] : '';
     }
     push @lists, [\@items, $columns];
     
     my $file = filify($monster).'.txt';
-    my @file_lines = read_file(data_file('Role_playing/Monsters',$file));
+    my @file_lines = io(data_file('Role_playing/Monsters',$file))->slurp;
     chomp @file_lines;
 
     my %long_fields;

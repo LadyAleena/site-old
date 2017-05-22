@@ -33,7 +33,7 @@ Leatherneck put the rings in an envelope and noted on a form that ring set 1911 
 br
 Luckily Lee's next mission did not involve Amanda which gave him a little breather, and that is when he decided he needed to get away.
 2 Uninhibited
-This story happens sometime betweeen Q<Billy's Lost Weekend> and Q<Do You Take This Spy?>.
+This story happens sometime between Q<Billy's Lost Weekend> and Q<Do You Take This Spy?>.
 hr
 Lee and Amanda were undercover as husband and wife again. That they loved each other made their cover all the more believable. Lee checked their room at the hotel, and when he looked through the curtains he saw something suspicious. He appeared to look everwhere but at the room across from theirs, but out of the corner of his eye he saw the sun glint off the lense of a pair of binoculars. He looked over at Amanda and wondered just how far they would have to go to protect their cover. He went over to where she was hanging up their outfits for the long weekend.
 Q<Amanda, we are being watched.>
@@ -335,7 +335,7 @@ Lee looked at Amanda.
 Q<You don't have to worry about Galt anymore. This is from the Oz network. It looks like they got to him before the Agency did.> he said very quietly.
 Amanda only nodded as she read the note. She handed it back to Lee as Dorothy was asleep again. It was only when she turned away from Lee that her expression changed to sadness knowing that while her daughter was being born, a man named Rupert Galt who she never met was killed.
 2 Meet the X-Files
-Somewhere in North America…
+Somewhere in North America
 br
 The woods are very dense and overgrown. The smell of blooming foliage is everywhere. On this morning the dew lay on the grass in the open valleys glistening in the sunlight. The wild life scatters in what seems to be random directions. The only sounds are the trees and bushes rustling in the breeze and the quiet voices and steps of two people wending their way through this wonderland. She looks extremely competent in the woods, and he just slightly less so. They stop to take in the beauty of the scene in front of them, a lovely little pond with ducks swimming on it. He puts his arm over her shoulders; she lifts one hand to gasp his draped hand.
 After a few moments, he speaks quietly to her, and they move on. The contented smiles leave their faces to be replaced with tight lipped determination. The language of the body seems to be the only way they need to speak since they hardly use words. They are coming down a slight hill going towards something smoking in the near distance.
@@ -371,11 +371,11 @@ Q<Warn them about what?>
 Q<I didn't get that far with her, but I think we can trust them. Think for a minute, we have come across some weird stuff, and since Dogget and Reyes are X-Files agents, they would understand it more than we do.>
 Q<All right Amanda, we'll go with it for now.>  Lee said with a heavy sigh.
 While Amanda talked with Lee, Monica was talking fast with Dogget.
-Q<John, let them go. They aren't after us. Amanda is an agent of something. I don't think we’ll get an agency out of either of them, but I think they are on our side.>
+Q<John, let them go. They aren't after us. Amanda is an agent of something. I don't think we'll get an agency out of either of them, but I think they are on our side.>
 Q<Yeah, she didn't look all that comfortable with her gun either. Okay Monica, but let's stay with them for a while, just to make sure.>
 Q<Sounds good to me.>  Monica flashed a quick smile.
 They continued their trek slowly. None of them spoke, though both duos watched each other speculatively. Lee and Amanda looked less concerned about Dogget and Reyes than they were of Lee and Amanda.
-About two or three hours later shots rang out through the woods. All of them slithered to the ground. John and Lee worked out a rough system of hand signals. Monica and Amanda watched, and also understood the directions. They found cover in the woods, but it wasn’t enough. More than one bullet almost got too close.
+About two or three hours later shots rang out through the woods. All of them slithered to the ground. John and Lee worked out a rough system of hand signals. Monica and Amanda watched, and also understood the directions. They found cover in the woods, but it wasn't enough. More than one bullet almost got too close.
 It was Amanda who found the ditch, a hole covered by brush and other forest debris. She quickly examined it and found that it was big enough for the four of them to hide in with just a little elbow room. She signaled to Monica and laid down cover fire as Monica came over to her. Amanda pointed to the ditch, and Monica nodded. They squirreled over to the guys to get them to the cover of the ditch.
 They got to the ditch just in time. Men in black masks swarmed through the woods. The four of them had no where left to run. They were trapped. The sounds of the search for them came closer and closer. Lee, John, and Monica kept weapons ready, while Amanda got the extra ammunition close at hand. They were getting low on bullets. The only other weapons they had were two knives.
 Lee had his and one of Amanda's guns. He handed Amanda's to John since it had a silencer on it. Amanda took out her spare gun from its ankle holster. She looked concerned, though not nervous.
@@ -406,7 +406,7 @@ Q<No no, I want to know why the hell you wanted to find me.> She said while she 
 Q<Okay, about fifteen years ago you did a couple of autopsies. We just found them a few months ago and wanted to ask you a few more questions. We were hoping that you would remember them and be able to fill in some gaps.>
 Monica sank deeper in her chair and closed her eyes.
 Q<That was before I joined the X-Files. I don't know how much help I can be.> Scully said. Q<Why is it so important?>
-Q<They were agents that had disappeared. When we found these files so deeply buried; we got suspicious. There seem to be pages missing. I’ll just give you the files, and you can fill in the gaps later.>
+Q<They were agents that had disappeared. When we found these files so deeply buried; we got suspicious. There seem to be pages missing. I'll just give you the files, and you can fill in the gaps later.>
 Just then the door opened. The three women quickly raised their guns as Mulder and another man walked through the door.
 Q<Whoa!> Mulder said as he put his hands up. The man with him looked just as surprised.
 When the women lowered their guns, their breathing returned to normal. When they looked at the man behind Mulder, they all got really silly smiles on their faces. Mulder rolled his eyes and sat down next to Dana.
@@ -443,8 +443,8 @@ Before they left the small clearing, Mulder was talking quietly with John and Mo
 Q<I didn't remember much, but I notated then as best I could.> Dana said.
 Amanda thumbed through it. Q<Anything is better than nothing.>
 Mulder and Dana went off with Hartwell and a few of his people. A few stayed behind to make sure that both duos made it back to civilization safely. Before they got to their cars which were parked miles apart, Lee and Amanda turned and looked at John and Monica.
-Q<Well, it was great knowing you, but from here on out we’re strangers. I think it will be safer for all of us that way.> Lee said.
-Q<We know how to play the game Lee, if that’s your name.> John said with a smile.
+Q<Well, it was great knowing you, but from here on out we're strangers. I think it will be safer for all of us that way.> Lee said.
+Q<We know how to play the game Lee, if that's your name.> John said with a smile.
 Amanda and Monica exchanged a quick hug.
 Q<Take care.> They both said at the same time.
 They went their separate ways and never saw each other again.

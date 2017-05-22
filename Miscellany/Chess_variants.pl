@@ -22,16 +22,15 @@ my @rows;
 for my $chess_row (1..12) {
   my @row;
   for my $chess_column (1..12) {
-    my $class = ($chess_row + $chess_column) % 2 ? 'odd' : 'even';
     my $piece = $chess_rows{$chess_row}[$chess_column - 1] || '&nbsp;';
-    push @row, [$piece, { 'class' => "$class" }];
+    push @row, [$piece];
   }
   push @rows, \@row;
 }
 
 my $doc_magic = {
   'pieces' => sub { definition_list(5, $definition_list) },
-  'board'  => sub { table(4, { 'class' => 'royal_chess', 'rows' => [['data', \@rows]] }) },
+  'board'  => sub { table(4, { 'class' => 'royal_chess centered', 'rows' => [['data', \@rows]] }) },
 };
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });

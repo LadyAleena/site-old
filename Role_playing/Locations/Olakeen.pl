@@ -7,27 +7,28 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Data qw(get_array);
 use Base::Page qw(page story);
-use HTML::Elements qw(heading definition_list div);
+use HTML::Elements qw(definition_list);
 
 my $directory = 'Role_playing/Locations/Olakeen';
 my $headings  = ['term','definition'];
 
 my %definition_lists = (
-  'Holidays' => get_array( 'file' => [$directory,'Holidays.txt'], 'headings' => [qw(term date description)]),
+  'Holidays' => get_array( 'file' => [$directory, 'Holidays.txt'], 'headings' => [qw(term date celebrations)]),
 );
-$definition_lists{$_} = get_array( 'file' => [$directory,"$_.txt"], 'headings' => $headings) for qw(Assembly Inns Crime Arena);
+$definition_lists{$_} = get_array( 'file' => [$directory, "$_.txt"], 'headings' => $headings) for qw(Inns Crime Arena);
+
+for my $bare_term (@{$definition_lists{'Holidays'}}) {
+  my $term = $bare_term->{'term'};
+  $bare_term->{'term'} = [$term, { 'class' => 'holiday' }];
+}
 
 my $doc_magic = {
-  'Assembly' => sub {
-    div(5, sub {
-      heading(6,3,'Terms for Assembly Members');
-      definition_list(7, $definition_lists{'Assembly'});
-    }, { style => 'float:right' });
-  },
   'Inns'     => sub { definition_list(5, $definition_lists{'Inns'}) },
   'Crime'    => sub { definition_list(5, $definition_lists{'Crime'}) },
   'Arena'    => sub { definition_list(6, $definition_lists{'Arena'}) },
-  'Holidays' => sub { definition_list(5, $definition_lists{'Holidays'}, { 'headings' => [qw(date description)] }) },
+  'Holidays' => sub { definition_list(5, $definition_lists{'Holidays'},
+                      { 'headings' => [qw(date celebrations)], 'span class' => 'definition_heading' }
+                    )},
 };
 
 page( 'heading' => 'Olakeen - The City of Money and Magic', 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
@@ -41,7 +42,13 @@ The Temple of Waukeen is one of two massive structures in the city of Olakeen. I
 2 The School of Sorcery
 The School of Sorcery is the other massive structure in the city of Olakeen. It was built by Arch-Sorceress Alexana Olara after she helped her sister Eileen rescue Waukeen from the Abyss. The towers reach the same height as the towers of the Temple and are just as lovely to behold.
 2 The Assembly
-& Assembly
+|| right
+|! Assembly terms
+|+ Magistrate | 5 years
+|+ Prefect | 5 years
+|+ Guild Master | varies
+|+ Captain | retirement
+|+ Shrine Priest | retirement
 The Assembly is the voice of the city. Alexana and Eileen created the Assembly so that they could hear the complaints and suggestions of their residents. The Assembly votes on issues that affect the city, but Alexana and Eileen have the final say on any matter if they choose to intervene at all. The Assembly is also the voice to the city. They are the ones who have to inform their constituents of any changes in the law or new laws.
 The Assembly is made up of the Magistrates, the Guild Masters, Prefects, Captains in the Military, and the Priests of the Garden. The Assembly meets on the last day of every month alternatively at the Temple or the School. Alexana or Eileen presides over these meetings depending on where it is being held. These meetings can get heated and last all day. At the end of the day, they have to come to a consensus. If a consensus has not been reached, Alexana or Eileen will make a decision without their vote. Some of the Assembly members are amazed at how fast news travels between the sisters. Every once in a while one or the other has been seen acting as if some private internal battle is taking place. Though strange most ignore this since the Ladies are very powerful in magic lore.
 If the sisters are not in the city, the Assembly can pass temporary laws in their absence. These laws will have to be ratified by Alexana and Eileen upon their return, but most of the time they show full confidence in the Assembly.

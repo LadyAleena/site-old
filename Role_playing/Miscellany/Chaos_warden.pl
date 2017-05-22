@@ -20,7 +20,7 @@ A Chaos Warden can:
 * use any non-weapon proficiency table and weapons, gains Mastery as a Warrior.
 * sense varying degrees of chaos, 100% plus or minus 10% for the difference in level or hit dice.
 * turn chaotic creatures as a Cleric or Priest can turn undead
-* alter reality around him or her in a Reality Bubble. For levels one through six, the area of reality the chaos warden can manipulate is levelSUP<2> inches. Add six inches for levels seven through twelve. Add three inches for each level after. One Chaos Warden’s Reality Bubble cannot come into contact with another Chaos Warden’s Reality Bubble.
+* alter reality around him or her in a Reality Bubble. For levels one through six, the area of reality the chaos warden can manipulate is levelSUP<2> inches. Add six inches for levels seven through twelve. Add three inches for each level after. One Chaos Warden's Reality Bubble cannot come into contact with another Chaos Warden's Reality Bubble.
 * cast Compulsive Order, as many times a week as the Chaos Warden has levels.
 * polymorph into another form at 3rd level, and another form each additional three levels.
 * at 10th level, imposes a penalty to saving throws depending on how many levels above 9th he or she is.

@@ -1,12 +1,12 @@
 package RolePlaying::CharacterBuilding::WeaponSlots;
 use strict;
-use warnings;
+use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT = qw(slots_needed);
 
-# part of the Character Building table printing suite.
-
 use RolePlaying::CharacterBuilding::Class qw(convert_class);
+
+# part of the Character Building table suite.
 
 my @classes     = ('fighter','warrior','rogue','priest','wizard','psionisist','chaos warden','theopsyelementalist');
 my @sub_classes = ('rogue','priest','psionisist','chaos warden','theopsyelementalist');

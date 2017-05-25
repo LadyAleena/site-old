@@ -41,7 +41,7 @@ sub random_divinity           { random(\%misc, 'divinity'          ) }
 sub random_emotion            { random(\%misc, 'emotion'           ) }
 sub random_generation         { random(\%misc, 'generation'        ) }
 sub random_group              { random(\%misc, 'group'             ) }
-sub random_henchmen           { random(\%misc, 'heanchman'         ) }
+sub random_henchmen           { random(\%misc, 'henchmen'          ) }
 sub random_language_common    { random(\%misc, 'language common'   ) }
 sub random_non                { random(\%misc, 'non'               ) }
 sub random_parent             { random(\%misc, 'parent'            ) }

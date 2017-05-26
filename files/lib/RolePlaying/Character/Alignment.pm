@@ -1,4 +1,4 @@
-package RolePlaying::CharacterBuilding::Alignment;
+package RolePlaying::Character::Alignment;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -68,13 +68,13 @@ sub expand_alignment {
 
 =head1 NAME
 
-B<RolePlaying::CharacterBuilding::Alignment> expands and generates random alignments for AD&D 2nd Edition.
+B<RolePlaying::Character::Alignment> expands and generates random alignments for AD&D 2nd Edition.
 
 =head2 Use to get a random alignment
 
 To use this module to return a random alignment, use the following.
 
-	use RolePlaying::Random::Alignment qw(random_alignment);
+	use RolePlaying::Character::Alignment qw(random_alignment);
 
 When you want to generate a random alignment with this module, you can choose from any of the alignment axes.
 
@@ -95,7 +95,7 @@ The default random result is C<random_alignment('any')>.
 
 To use this module to expand alignment abbreviations from their two character forms.
 
-  use RolePlaying::Alignment qw(expand_alignment);
+  use RolePlaying::Character::Alignment qw(expand_alignment);
 
 Samples...
 

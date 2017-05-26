@@ -1,4 +1,4 @@
-package RolePlaying::CharacterBuilding::SpellProgression;
+package RolePlaying::Character::GameTable::SpellProgression;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -6,8 +6,8 @@ our @EXPORT_OK = qw(spell_progression spell_progression_table_rows);
 
 use List::Util qw(max);
 
-use Base::Data qw(data_file get_hash);
-use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+use Base::Data qw(data_file make_hash);
+use RolePlaying::Character::Class qw(convert_class class_level);
 
 # part of the Character Building table suite.
 
@@ -30,7 +30,7 @@ sub spell_progression {
     my $file = data_file('Role_playing/Classes/Spell_progression',"$class.txt");
 
     if (-f $file) {
-      my $spell_progression_table = get_hash(
+      my $spell_progression_table = make_hash(
         'file' => $file,
         'headings' => ['level',1..9],
       );

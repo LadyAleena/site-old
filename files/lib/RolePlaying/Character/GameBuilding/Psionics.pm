@@ -1,11 +1,11 @@
-package RolePlaying::CharacterBuilding::Psionics;
+package RolePlaying::Character::GameTable::Psionics;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw(psionics_by_level psionics_table_rows);
 
-use Base::Data qw(get_hash);
-use RolePlaying::CharacterBuilding::Class qw(class_level);
+use Base::Data qw(make_hash);
+use RolePlaying::Character::Class qw(class_level);
 
 # part of the Character Building table suite.
 
@@ -13,7 +13,7 @@ sub psionics_by_level {
   my ($class, $opt) = @_;
   my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
   
-  my $psionics = get_hash( 
+  my $psionics = make_hash( 
     'file' => ['Role_playing/Classes/Psionics', 'progression.txt'],
     'headings' => ['level', 'disciplines', 'sciences', 'devotions', 'defense modes'],
   );

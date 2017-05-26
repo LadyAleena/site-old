@@ -1,4 +1,4 @@
-package RolePlaying::CharacterBuilding::AbilityScores;
+package RolePlaying::Character::AbilityScores;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(all_abilities ability_score_table game_effect random_ability
 
 use List::Util qw(max);
 
-use Base::Data qw(get_hash);
+use Base::Data qw(make_hash);
 
 my @abilities = qw(strength dexterity constitution intelligence wisdom charisma);
 
@@ -21,9 +21,9 @@ my %game_effects = (
 
 my %abilities;
 for my $ability (@abilities) {
-  $abilities{$ability} = get_hash( 
-    'file' => ['Role_playing/Abilities',"$ability.txt"],
-    'headings' => ['score',@{$game_effects{$ability}}]
+  $abilities{$ability} = make_hash( 
+    'file' => ['Role_playing/Abilities', "$ability.txt"],
+    'headings' => ['score', @{$game_effects{$ability}}]
   );
 }
 

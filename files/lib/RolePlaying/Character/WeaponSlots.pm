@@ -1,10 +1,10 @@
-package RolePlaying::CharacterBuilding::WeaponSlots;
+package RolePlaying::Character::WeaponSlots;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT = qw(slots_needed);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class);
+use RolePlaying::Character::Class qw(convert_class);
 
 # part of the Character Building table suite.
 
@@ -76,15 +76,15 @@ sub slots_needed {
   return $slots;
 }
 
-=head1 WeaponSlots
+=head1 NAME
 
-B<WeaponSlots> returns the amount of slots for weapon proficiency, specialization, and mastery for your character's class or classes.
+B<RolePlaying::Character::WeaponSlots> returns the amount of slots for weapon proficiency, specialization, and mastery for your character's class or classes.
 
 =head2 Usage
 
 To use this module to return the slots needed, use the following. C<slots_needed> is exported by default.
 
-  use RolePlaying::CharacterBuilding::WeaponSlots;
+  use RolePlaying::Character::WeaponSlots;
 
 =head3 Determining class
 
@@ -119,11 +119,11 @@ The options for C<group> are:
     group => $weapon_group,
   );
 
-=head2 Note
+=head1 NOTES
 
 Most of the rules used for C<WeaponSlots> are house rules and not in any book.
 
-=head2 Author
+=head1 AUTHOR
 
 Lady Aleena
 

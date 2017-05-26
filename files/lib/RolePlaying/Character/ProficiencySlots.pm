@@ -1,10 +1,10 @@
-package RolePlaying::CharacterBuilding::ProficiencySlots;
+package RolePlaying::Character::ProficiencySlots;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
 our @EXPORT = qw(proficiency_slots);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+use RolePlaying::Character::Class qw(convert_class class_level);
 
 my %slots;
 while (my $line = <DATA>) {

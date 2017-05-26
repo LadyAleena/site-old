@@ -8,32 +8,30 @@ our @EXPORT_OK = qw(random_body_modification random_body_color_change random_aur
 use RolePlaying::Random qw(random);
 use RolePlaying::Random::Misc  qw(random_emotion);
 use RolePlaying::Random::Color qw(random_color);
-use RolePlaying::Random::Event qw(random_event);
-use RolePlaying::Random::Range qw(random_radius);
 use RolePlaying::Random::Size  qw(random_size);
 use RolePlaying::Random::GemMetalJewelry qw(random_gem random_metal);
-use RolePlaying::CharacterBuilding::Alignment qw(random_alignment);
+use RolePlaying::Character::Alignment qw(random_alignment);
 
 use Games::Dice qw(roll);
-use Lingua::EN::Inflect qw(PL_N PL_V ORD NUMWORDS NO A);
+use Lingua::EN::Inflect qw(PL_N PL_V NO A);
 
 my @body_part = (qw(eye ear lip nail nose hair skin),'entire body');
 
 my %adj_info = (
-  asinine => 'donkey', 
-  bovine => 'cattle',
-  canine => 'dog',
-  caprine => 'goat',
-  equine => 'horse',
-  feline => 'cat',
+  asinine  => 'donkey', 
+  bovine   => 'cattle',
+  canine   => 'dog',
+  caprine  => 'goat',
+  equine   => 'horse',
+  feline   => 'cat',
   leporine => 'rabbit',
-  lupine => 'wolf',
-  ovine  => 'sheep',
-  porcine => 'pig',
+  lupine   => 'wolf',
+  ovine    => 'sheep',
+  porcine  => 'pig',
   serpentine => 'snake',
-  simian	=> 'monkey',
-  ursine => 'bear',
-  vulpine => 'fox'
+  simian	 => 'monkey',
+  ursine   => 'bear',
+  vulpine  => 'fox'
 );
 
 my @animal = qw(amphibian avian insectoid mammalian reptilian);

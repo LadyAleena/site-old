@@ -1,4 +1,4 @@
-package RolePlaying::CharacterBuilding::THAC0;
+package RolePlaying::Character::GameTable::THAC0;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -7,7 +7,7 @@ our @EXPORT_OK = qw(THAC0_base THAC0 THAC0_table_rows);
 use List::Util qw(min sum);
 use POSIX qw(ceil);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+use RolePlaying::Character::Class qw(convert_class class_level);
 use Util::Columns;
 
 # part of the Character Building table suite.

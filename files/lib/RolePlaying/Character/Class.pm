@@ -1,65 +1,74 @@
-package RolePlaying::Character::AttacksPerRound;
+package RolePlaying::Character::Class;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT = qw(attacks_per_round);
+our @EXPORT_OK = qw(convert_class class_level player_classes);
 
-use POSIX qw(floor);
+use Lingua::EN::Inflect qw(ORD);
 
-use RolePlaying::Character::Class qw(convert_class class_level);
+use Base::Data qw(make_hash);
 
-my %classes;
-$classes{'warrior'}      = 6;
-$classes{'chaos warden'} = 8;
+my @specialists = qw(enchanter illusionist invoker necromancer);
+my @elementalists = qw(pyromancer hydromancer geomancer aeromancer);
+my @other_wizards = ('arcanist',"sha'ira",'wild mage');
+my $wizards = join('|', (@specialists, @elementalists, @other_wizards));
 
-sub attacks_per_round {
-  my ($class, $opt) = @_;
-  $class = convert_class($class,'AttacksPerRound');
-  my $level = $opt->{'level'} ? $opt->{'level'} : class_level($class, $opt->{'experience'});
-  
-  $class = 'warrior' if $class =~ /(?:fighter|paladin|ranger)/;
+sub convert_class {
+  my ($class, $module) = @_;
 
-  my $attacks = 1;
-  if ($classes{$class}) {
-    my $mod = .5 * floor($level / $classes{$class});
-    $attacks += $mod;
+  $class = 'warrior' if (
+    ($class eq 'fighter' && $module !~ /(?:Level|WeaponSlots)/) ||
+    ($class eq 'paladin' && $module ne 'TurningUndead') ||
+    ($class =~ /(?:paladin|ranger)/i && $module ne 'SpellProgression') ||
+    ($class eq 'askara')
+  );
+  $class = 'rogue'   if (
+    ($class eq 'thief' && $module ne 'RogueSkills') ||
+    ($class eq 'bard' && $module !~ /(?:SpellProgression|RogueSkills)/)
+  );
+  $class = 'priest'  if (
+    ($class =~ /(?:cleric|witch doctor)/i) ||
+    ($class eq 'druid' && $module !~ /(?:Level|TurningUndead)/) ||
+    ($class eq 'specialty priest' && $module ne 'Level')
+  );
+  $class = 'wizard'  if ($class =~ /(?:mage|$wizards)/i);
 
-    if ($attacks != int($attacks)) {
-      $attacks *= 2;
-      $attacks .= '/2';
-    }
-  }
-  
-  return $attacks;
+  return $class;
 }
 
-=head1 NAME
+my $xpchart = make_hash(
+  'file' => ['Role_playing/Classes','Levels.txt'],
+  'headings' => [qw(level fighter warrior rogue priest druid),'specialty priest','wizard','psionisist','chaos warden','theopsyelementalist']
+);
 
-B<RolePlaying::Character::AttacksPerRound> returns the amount of attacks characters can make in combat. Most classes receive only 1 attack per round with only B<warriors> and B<chaos wardens> (a new class of my creation) receiving more as they advance in level.
+sub class_level {
+  my ($class, $user_xp, $user_level) = @_;
+  $class = convert_class($class, 'Level');
+  my $xp = $user_xp ? $user_xp : 0;
+  my $level = $user_level ? $user_level : 1;
+  my $next_level = $level + 1;
 
-=head2 Use
+  if ($level == 100) {
+    return 100;
+  }
+  elsif ($xp >= $xpchart->{$level}{$class} && $xp < $xpchart->{$next_level}{$class}) {
+    return $level;
+  }
+  else {
+    class_level($class, $xp, $next_level);
+  }
+}
 
-To use this module to return the slots needed, use the following. C<attacks_per_round> is exported by default.
+sub player_classes {
+  my ($class, $experience) = @_;
 
-  use RolePlaying::Character::AttacksPerRound;
+  my @classes;
+  for (@{$class}) {
+    my $level = ORD(class_level($_, $experience));
+    push @classes, "$level level $_";
+  }
 
-=head2 Getting attacks per level
-
-To get the number of attacks per round a character has, you will need the character's class and level or experience.
-
-  my $attacks_per_round = attacks_per_round($class, { 'level' => $level });
-  my $attacks_per_round = attacks_per_round($class, { 'experience' => $xp });
-  
-C<attacks_per_round> will return C<1> for any class other than C<warrior> or C<chaos warden> because that is all your character gets. If you see a fraction returned, it means you get the first number of attacks every two rounds.
-
-=head2 Note
-
-Rules used for C<AttacksPerRound> for B<warriors> levels 13 and below are standard, however the levels beyond it are house rules and not in any book.
-
-=head1 AUTHOR
-
-Lady Aleena
-
-=cut
+  return \@classes;
+}
 
 1;

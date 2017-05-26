@@ -1,10 +1,10 @@
-package RolePlaying::CharacterBuilding::TurningUndead;
+package RolePlaying::Character::GameTable::TurningUndead;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw(turning_undead_table_rows);
 
-use RolePlaying::CharacterBuilding::Class qw(convert_class class_level);
+use RolePlaying::Character::Class qw(convert_class class_level);
 
 # part of the Character Building table suite.
 

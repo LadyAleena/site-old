@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# This is the site index.
+# This is the Role playing index.
 use strict;
 use warnings FATAL => qw( all );
 

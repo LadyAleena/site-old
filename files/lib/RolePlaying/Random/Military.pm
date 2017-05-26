@@ -5,7 +5,6 @@ use Exporter qw(import);
 our @EXPORT_OK = qw(random_military);
 
 use Games::Dice qw(roll);
-use List::MoreUtils qw(firstidx);
 
 sub squad {
   my $roll = roll('1d8');

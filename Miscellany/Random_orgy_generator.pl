@@ -7,9 +7,9 @@ use Lingua::EN::Inflect qw(A NUMWORDS);
 
 use lib "../files/lib";
 use Base::Page qw(page story);
+use Random::Color qw(random_color);
 use RolePlaying::Random::Misc qw(random_sexual_orientation random_relationship);
 use RolePlaying::Random::Body::Modification qw(random_body_modification);
-use RolePlaying::Random::Color qw(random_color);
 use RolePlaying::Random::Descriptor qw(random_descriptor);
 
 my $participants = (3..10)[rand 8];

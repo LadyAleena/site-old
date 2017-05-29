@@ -1,5 +1,10 @@
+! Appearance
 Zarden are a crossbreed between lizardmen and humans. Their appearance varies on how close to either parent species the zarden is.
+! Combat
 A zarden will fight with whatever is at hand. A zarden has more focus than lizardmen, and they do not eat their adversaries (unless they are very close to being a lizardman).
+! Habitat/Society
 Zarden identify with a tribe, however they live cities among humans. There are very few who have been allowed to live with a lizardman tribe.
+! Ecology
 Read A<The Creation of Monsters|href="The_Creation_of_Monsters.pl">.
+! Variants
 As Zarden are a crossbreed species, some of them are more human or lizardman.

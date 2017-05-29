@@ -1,9 +1,10 @@
-package RolePlaying::Random::SciFi;
+package Random::SciFi;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_HHGTTG_sector random_MIB_agent);
 
+# sub-part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random::Misc qw(random_alpha random_Greek_letter);
 
 sub random_letters {
@@ -26,5 +27,15 @@ sub random_MIB_agent {
   my $letter  = sub { random_alpha };
   return random_letters($letter);
 }
+
+=head1 NAME
+
+B<Random::SciFi> returns a random I<Hitckhikers Guide to the Galaxy> sector or a random I<Men in Black> agent id.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

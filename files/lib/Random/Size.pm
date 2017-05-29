@@ -1,4 +1,4 @@
-package RolePlaying::Random::Size;
+package Random::Size;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -28,7 +28,7 @@ sub random_size {
 
 =head1 NAME
 
-B<Rolplaying::Random::Size> - returns relative sizes.
+B<Random::Size> - returns relative sizes.
 
 =head1 SYNOPSIS
 

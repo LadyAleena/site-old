@@ -1,4 +1,4 @@
+! Appearance
 Throglins speak their own language, the dialects of the other two throglin races, hobgoblin, troll, and common.
-
-
+! Ecology
 Read A<The Creation of Monsters|href="The_Creation_of_Monsters.pl">.

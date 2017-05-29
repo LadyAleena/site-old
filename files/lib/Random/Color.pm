@@ -4,7 +4,6 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_color);
 
-# part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
 
 my %colors = (
@@ -36,5 +35,15 @@ sub random_color {
   my $color = random(\%colors, $user_color);
   return $color;
 }
+
+=head1 NAME
+
+B<Random::Color> returns random colors.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

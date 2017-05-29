@@ -1,6 +1,44 @@
-Rainbow dragonettes are very rare and virtually unknown. There are seven varieties of rainbow dragonettes each a different color. They are not automatically hostile and are very skittish. They will attack if they feel threatened, which is often, since they are so small. They are highly intelligent and love to hear nice things. If one is treated nicely, the dragonette would even sit on a person's shoulder and croon in his ear.\At birth they are a very bright in coloration. As they grow older, their scales will first take on a metallic sheen, then at Venerable, their scales twinkle in the light. They have the ability to talk to each other, and there is a 5% cumulative chance, per level above juvenile, that one can speak common. Their language is very close to the common language of all dragons.
-Dragonettes will not immediately attack. If there is more than one attacker, they will flee using their innate ability to teleport. If they are forced to attack, they first try to use their spell(s). If that does not dissuade an attacker, they will fly at high speeds and hit with their small breath weapon. They will also attack with their claws and try to bite from behind usually going for exposed necks. They will act in concert using telepathy if more than one is encountered. They can not use their telepathy with any other race.\STRONG<Breath Weapon/special abilities:> Dragonettes' breath weapons are listed below. Creatures struck by them must save verses Breath Weapon for half damage. A dragonette casts its spells and uses its magical abilities at 1st level plus combat modifier.\& odf_table\From birth, dragonettes are immune to prismatic spells and other effects (see chart). As they age they gain the following additional powers:\STRONG<Juvenile:> Color Spray once per day.\STRONG<Adult:> Continual Light/Darkness once per day.\STRONG<Very Old:> Hypnotic Pattern once per day.\STRONG<Great Wyrm:> Flash once per day.
-Dragonettes are very new to the world, so can be only found in the home of their creator. In time they may be found everywhere and will most likely take up residence in temperate climates. They are carnivorous and will only eat fresh kills.\They are very protective of their young. Since they are a new species, they will protect any of their species in trouble. When more than one are encountered, there will usually be a mature adult with a variety of younger dragonettes. Dragonettes mate with the first dragonette of its kind of the opposite gender. They do not mate for life.
-Dragonettes do not yet have a place in the ecology of the world. They were created by a wizard who had a passion for rainbows and dragons. They are not that different from each other because the wizard that created them did not have that much imagination.\If a nest of dragonette eggs are found and hatch, feed them immediately with pieces of meat. If a person does this, they become empathically linked with the dragonette. This bond is similar to a wizard's familiar. The only difference is when the person dies, the dragonette will follow the bondmate in death. If the dragonette dies, the bondmate will have to make a constitution check. If the check is failed, the person will be rendered unconscious for 1d4 days. Afterwards the person then makes a wisdom check. Failing the check means the person is rendered insane.\Bonded dragonettes are very loyal to their partner going so far as to guide their bondmates out of trouble. Charisma is not an issue, but an abused dragonette can leave his bond mate at any time. After five days of separation, the empathic link will start to fade and the dragonette will become wild.\Dragonettes make perfect messengers. With their innate teleportational ability, they can travel to and from places they have been to before. They can carry small objects like scrolls or potions.\& age_table
-
-This monster was inspired by the Dragonriders of Pern series by Anne McCaffery.
+! Appearance
+Rainbow dragonettes are very rare and virtually unknown. There are seven varieties of rainbow dragonettes each a different color. They are not automatically hostile and are very skittish. They will attack if they feel threatened, which is often, since they are so small. They are highly intelligent and love to hear nice things. If one is treated nicely, the dragonette would even sit on a person's shoulder and croon in his ear.
+At birth they are a very bright in coloration. As they grow older, their scales will first take on a metallic sheen, then at Venerable, their scales twinkle in the light. They have the ability to talk to each other, and there is a 5% cumulative chance, per level above juvenile, that one can speak common. Their language is very close to the common language of all dragons.
+! Combat
+Dragonettes will not immediately attack. If there is more than one attacker, they will flee using their innate ability to teleport. If they are forced to attack, they first try to use their spell(s). If that does not dissuade an attacker, they will fly at high speeds and hit with their small breath weapon. They will also attack with their claws and try to bite from behind usually going for exposed necks. They will act in concert using telepathy if more than one is encountered. They can not use their telepathy with any other race.
+STRONG<Breath Weapon/special abilities:> Dragonettes' breath weapons are listed below. Creatures struck by them must save verses Breath Weapon for half damage. A dragonette casts its spells and uses its magical abilities at 1st level plus combat modifier.
+|| rainbow_dragonette centered
+|* Color|Breath Weapon|Range|Immunities
+|- Red|Fire|2' long, 1" at the mouth, and 4' base|Fire, and fire based spells and effects
+|- Orange|Heat|2' long, 1" at the mouth, and 4' base|Heat, and heat based spells and effects
+|- Yellow|Acid|1" wide, 6' stream from the mouth|Acid, and acid based spells and effects
+|- Green|Gas|4' long, 1' wide, and 3' high|Gas, and gas based spells and effects.
+|- Blue|Lightning|1" wide, 6' long|Lightning, and electrical spells and effects.
+|- Indigo|Ice|2' long, 1" at the mouth, and 4' base|Ice, and cold based spells and effects.
+|- Violet|Poison|1" wide, and 6' long|Poison, and poison based spells and effects.
+From birth, dragonettes are immune to prismatic spells and other effects (see chart). As they age they gain the following additional powers:
+STRONG<Juvenile:> Color Spray once per day.
+STRONG<Adult:> Continual Light/Darkness once per day.
+STRONG<Very Old:> Hypnotic Pattern once per day.
+STRONG<Great Wyrm:> Flash once per day.
+! Habitat/Society
+Dragonettes are very new to the world, so can be only found in the home of their creator. In time they may be found everywhere and will most likely take up residence in temperate climates. They are carnivorous and will only eat fresh kills.
+They are very protective of their young. Since they are a new species, they will protect any of their species in trouble. When more than one are encountered, there will usually be a mature adult with a variety of younger dragonettes. Dragonettes mate with the first dragonette of its kind of the opposite gender. They do not mate for life.
+! Ecology
+Dragonettes do not yet have a place in the ecology of the world. They were created by a wizard who had a passion for rainbows and dragons. They are not that different from each other because the wizard that created them did not have that much imagination.
+If a nest of dragonette eggs are found and hatch, feed them immediately with pieces of meat. If a person does this, they become empathically linked with the dragonette. This bond is similar to a wizard's familiar. The only difference is when the person dies, the dragonette will follow the bondmate in death. If the dragonette dies, the bondmate will have to make a constitution check. If the check is failed, the person will be rendered unconscious for 1d4 days. Afterwards the person then makes a wisdom check. Failing the check means the person is rendered insane.
+Bonded dragonettes are very loyal to their partner going so far as to guide their bondmates out of trouble. Charisma is not an issue, but an abused dragonette can leave his bond mate at any time. After five days of separation, the empathic link will start to fade and the dragonette will become wild.
+Dragonettes make perfect messengers. With their innate teleportational ability, they can travel to and from places they have been to before. They can carry small objects like scrolls or potions.
+|| rainbow_dragonette centered
+|* Age|Body Lgt. (")|Tail Lgt. (")|AC|Breath Weapon|Spells Wizard|MR|Treas. Type|XP Value
+|- 1|2|1|10|1d4|Nil|Nil|Nil|1,400
+|- 2|2-4|1-2|9|2d4|Nil|Nil|Nil|2,000
+|- 3|3-5|2-3|8|3d4|1|Nil|W|3,000
+|- 4|4-6|3-4|7|4d4|2|5%|W|4,000
+|- 5|7-9|4-5|6|5d4|3|10%|W|5,000
+|- 6|8-10|5-6|5|6d4|4|15%|W|8,000
+|- 7|9-11|6-7|4|7d4|4 1|20%|W×2|9,000
+|- 8|10-12|7-8|3|8d4|4 2|25%|W×2|10,000
+|- 9|11-13|8-9|2|9d4|4 3|30%|W×2|11,000
+|- 10|12-14|9-10|1|10d4|4 4|35%|W×3|12,000
+|- 11|13-15|10-11|0|11d4|4 4 1|40%|W×3|14,000
+|- 12|14-16|11-12|-1|12d4|4 4 2|45%|W×3|15,000
+! Note
+This monster was inspired by the A<Dragonriders of Pern|href="../../Collections/Fiction.pl#Dragonriders_of_Pern"> series by Anne McCaffery.

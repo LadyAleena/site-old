@@ -1,6 +1,14 @@
+! Appearance
 The Daemar are tan skinned with aquamarine eyes with lavender coronas. They have black hair and appear to be about 25 years old. They dress to match the society in which they are living. In subterranean or swampy areas, they pose as hunters or adventurers. They speak their own language, that of the area they live, their neighbors, and common.
-They prefer to ambush their foes. If they are forced into combat, they are capable fighters. They usually attack with a weapon using their strength (19, +3 to attack, +7 to damage). If they lack a weapon, they will lash out with their sheathed claws inflicting grievous wounds. If they do not attack in melee, they use their gaze to charm an individual as per the Charm Person Spell at will. They can Teleport Without Error if faced with a superior force (5/day).\They can Shape Change into a creature up to 9 HD and approximately the same mass as they are. The can be hit with only magical weapons +2 or better.
-They are carnivores who prey upon sentient humans and humanoids. They reproduce amongst themselves, but they are fertile for only about half as long as a human. They can interbreed with other races, but they prefer humans over any other race.\They usually live alone. If more than one is encountered, it is usually a paring for reproduction only. They do not marry and are polygamous. Most of the time, they live amongst other races, usually in cities which are tolerant of the differences about them.
-They were created by the Goddess Miskel to spread her evil throughout the worlds of Triador, but they are now only found on Peldeta.
+! Combat
+Daemar prefer to ambush their foes. If they are forced into combat, they are capable fighters. They usually attack with a weapon using their strength (19, +3 to attack, +7 to damage). If they lack a weapon, they will lash out with their sheathed claws inflicting grievous wounds. If they do not attack in melee, they use their gaze to charm an individual as per the Charm Person spell at will. They can Teleport Without Error if faced with a superior force (5/day).
+They can Shape Change into a creature up to 9 HD and approximately the same mass as they are. The can be hit with only magical weapons +2 or better.
+! Habitat/Society
+Daemar are carnivores who prey upon sentient humans and humanoids. They reproduce amongst themselves, but they are fertile for only about half as long as a human. They can interbreed with other races, but they prefer humans over any other race.
+They usually live alone. If more than one is encountered, it is usually a paring for reproduction only. They do not marry and are polygamous. Most of the time, they live amongst other races, usually in cities which are tolerant of the differences about them.
+! Ecology
+Daemar were created by the Goddess Miskel to spread her evil throughout the worlds of Triador, but they are now only found on Peldeta.
+! Variants
 Half-Daemar can Teleport (4/Day). They can use their gaze (save vs. Wisdom) and can Shape Change, but it takes 2 rounds.
-This monster was inspired by the Xanth series by Piers Anthony.
+! Note
+This monster was inspired by the A<Xanth|href="../../Collections/Fiction.pl#Xanth"> series by Piers Anthony.

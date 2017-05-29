@@ -1,5 +1,11 @@
+! Appearance
 Demi-lycanthropes are lycanthropes that have only two normal animal forms. When they appear they will be in one of them. They briefly have a third form, but it is only when they are shifting from one form to another. Some have been known to stop their transformations and stay in this third form, but that is very rare.
-Demi-Lycanthropes will attack with the natural weapons of their forms and do damage like that of their natural counterparts. They wield no other weapons. There is a 1% chance per bite attack that they can cause a more terrifying form of lycanthropy. This lycanthropy does not make the victim turn into a demi-lycanthrope; it makes the victim take on aspects of the demi-lycanthrope's two forms.\Demi-lycanthropes can only be hit with weapons with a +1 enchantment or better.
+! Combat
+Demi-Lycanthropes will attack with the natural weapons of their forms and do damage like that of their natural counterparts. They wield no other weapons. There is a 1% chance per bite attack that they can cause a more terrifying form of lycanthropy. This lycanthropy does not make the victim turn into a demi-lycanthrope; it makes the victim take on aspects of the demi-lycanthrope's two forms.
+Demi-lycanthropes can only be hit with weapons with a +1 enchantment or better.
+! Habitat/Society
 Demi-lycanthropes live as their natural counterparts do. They are hunted by rangers, druids, and others who are concerned with the natural order of things.
+! Ecology
 No one knows where the demi-lycanthropes came from. There are many types of demi-lycanthrope. Some speculate that they were created when a natural animal was bitten by a true lycanthrope. Others think that they were some arcane experiment gone wrong. Since demi-lycanthropes have only animal intelligence, they certainly can not say where they originated.
+! Variants
 Roach-Rat, Termite-Mouse, Iguana-Cat, Goose-Bat, Boa-Wolf, Grizzly-Horse, Rattler-Ferret, Zebra-Tiger, and others...

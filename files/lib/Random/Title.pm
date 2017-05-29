@@ -1,4 +1,4 @@
-package RolePlaying::Random::Title;
+package Random::Title;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -20,5 +20,15 @@ sub random_title {
   my $title = random(\%titles, $user_title);
   return $title;
 }
+
+=head1 NAME
+
+B<Random::Title> generates random titles given to people.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

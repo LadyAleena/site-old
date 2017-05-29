@@ -1,4 +1,4 @@
-package RolePlaying::Random::Water;
+package Random::Water;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -18,5 +18,15 @@ sub random_water {
   my $water = random(\%waters, $user_water);
   return $water;
 }
+
+=head1 NAME
+
+B<Random::Water> returns random running or standing water and precipitation.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

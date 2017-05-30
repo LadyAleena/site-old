@@ -1,4 +1,4 @@
-package RolePlaying::Random::GemMetalJewelry;
+package Random::GemMetalJewelry;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(random_gem random_gem_variety random_gem_color random_gem_cu
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use Fancy::Join::Grammatical;
+use Fancy::Join::Grammatical qw(grammatical_join);
 
 use Lingua::EN::Inflect qw(A);
 
@@ -133,5 +133,15 @@ sub random_jewelry {
     }
   }
 }
+
+=head1 NAME
+
+B<Random::GemMetalJewelry> returns randoms gems, metals, and jewelry.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

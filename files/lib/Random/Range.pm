@@ -1,4 +1,4 @@
-package RolePlaying::Random::Range;
+package Random::Range;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -6,7 +6,6 @@ our @EXPORT_OK = qw(random_range random_radius);
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-# POD written
 
 my %units = (
   'imperial' => [qw(in ft yd mi)],
@@ -14,13 +13,12 @@ my %units = (
 );
 
 sub random_unit {
-  my ($user_unit) = @_;
-  my $unit = random(\%units, $user_unit);
+  my $unit = random(\%units, @_);
   return $unit;
 }
 
 sub random_range {
-  my ($list,$unit) = @_;
+  my ($list, $unit) = @_;
 
   my @ranges = (1,5,10,20,50,100);
   push @ranges, 'touch' if $list eq 'touch';
@@ -30,7 +28,7 @@ sub random_range {
   my $full_range;
   if ($range ne 'touch') {
     my $measure = $units{$unit} ? random_unit($unit) : $unit;
-    $full_range = join(' ',($range,$measure))
+    $full_range = join(' ',($range, $measure))
   }
   else {
     $full_range = $range;
@@ -40,29 +38,22 @@ sub random_range {
 }
 
 sub random_radius {
-  my ($list,$unit) = @_;
-  my $radius = random_range($list,$unit);
+  my ($list, $unit) = @_;
+  my $radius = random_range($list, $unit);
 
-  my $full_radius;
-  if ($radius eq 'touch') {
-    $full_radius = "by $radius";
-  }
-  else {
-    $full_radius = "in a $radius radius"
-  }
-  
+  my $full_radius = $radius eq 'touch' ? "by $radius" : "in a $radius radius";
   return $full_radius;
 }
 
-=head1 Range
+=head1 NAME
 
-This module generates random ranges or radiuses.
+B<Random::Range> generates random ranges or radiuses.
 
-=head2 Use
+=head1 SYNOPSIS
 
 To use this module, please enter the following.
 
-	use RolePlaying::Random::Range qw(random_range random_radius);
+	use Random::Range qw(random_range random_radius);
 
 When you want to generate a random range with this module, you can choose from the following.
 

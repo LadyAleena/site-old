@@ -14,8 +14,9 @@ my %alphabet = (
 );
 $alphabet{'upper vowels'} = [@{$alphabet{'upper case'}}[@vowels]];
 $alphabet{'lower vowels'} = [@{$alphabet{'lower case'}}[@vowels]];
-$alphabet{'below lines'}  = [@{$alphabet{'lower case'}}[9,15,16,24]];
-$alphabet{'crosses and dots'} = [@{$alphabet{'lower case'}}[5,8,9,19]];
+$alphabet{'ascenders'}    = ['b', 'd', 'f', 'h', 'k', 'l', 't'],
+$alphabet{'descenders'}   = ['g', 'j', 'p', 'q', 'y'];
+$alphabet{'crosses and dots'} = ['f', 'i', 'j', 't'];
 
 $alphabet{'Greek'} = [qw(Alpha Beta Gamma Delta Epsilon Digamma Zeta Eta Theta Iota Kappa Lambda Mu Nu Xi Omicron Pi San Qoppa Rho Sigma Tau Upsilon Phi Chi Psi Omega Sampi)];
 
@@ -37,7 +38,8 @@ B<Random::Alpha> returns random letters of the English alphabet.
   my $lower_case   = random_alpha('lower');            # returns a lower case letter
   my $upper_vowel  = random_alpha('upper vowels');     # returns an A, E, I, O, or U
   my $lower_vowel  = random_alpha('lower vowels');     # returns an a, e, i, o, or u
-  my $below_line   = random_alpha('below lines');      # returns a j, p, q, or y
+  my $ascender     = random_alpha('ascenders');        # returns a b, d, f, h, k, l, or t
+  my $descender    = random_alpha('descenders');       # returns a g, j, p, q, or y
   my $cross_or_dot = random_alpha('crosses and dots'); # returns an f, i, j, or t
 
   my $Greek        = random_alpha('Greek'); # returns a Greek letter spelled out

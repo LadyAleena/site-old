@@ -1,4 +1,4 @@
-package RolePlaying::Random::Time;
+package Random::Time;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -6,10 +6,9 @@ our @EXPORT_OK = qw(random_time_unit random_day_part random_time random_frequenc
 
 # part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use RolePlaying::Random::Misc qw(random_dice);
+use RolePlaying::Random::SpecialDice qw(random_die);
 
 use Lingua::EN::Inflect qw(PL_N A);
-use Games::Dice qw(roll);
 
 my %times = (
   'general' => [qw(second minute hour day week month year decade century millennium)],
@@ -32,8 +31,7 @@ $time_units{'segment'}    = $time_units{'round'} / 10;
 $time_units{'turn'}       = $time_units{'round'} * 10;
 
 sub random_time_unit {
-  my ($type) = @_;
-  my $time = random(\%times, $type);
+  my $time = random(\%times, @_);
   return $time;
 }
 
@@ -61,10 +59,36 @@ sub random_time {
 }
 
 sub random_frequency {
-  my $frequency = roll(random_dice);
-  my $plural = PL_N('time',$frequency);
   my $time_unit = A(random_time_unit('all'));
+  my $frequency = $time_unit =~ /(?:second|segment)/ ? 1 : random_die(1);
+  my $plural = PL_N('time', $frequency);
   return "$frequency $plural $time_unit";
 }
+
+=head1 NAME
+
+B<Random::Time> returns a random time unit, random day part, random time, or random frequency.
+
+=head1 SYNOPSIS
+
+  use Random::Time qw(random_time_unit random_day_part random_time random_frequency);
+  
+  my $time_unit          = random_time_unit;            # returns any time unit
+  my $standard_time_unit = random_time_unit('general'); # returns a general time unit from second to millennium
+  my $game_time_unit     = random_time_init('game');    # returns a game time unit from segment to turn
+  
+  my $day_part = random_day_part; # returns part of the day such as dawn, noon, or dusk and more.
+  
+  my $time          = random_time;            # returns a random time unit, if the time unit is greater than a day, then adds a day part to it.
+  my $standard_time = random_time('general'); # returns a general random time unit
+  my $game_time     = random_time('game');    # returns a game random time unit
+  
+  my $frequency = random_frequency; # returns a frequency by time unit
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

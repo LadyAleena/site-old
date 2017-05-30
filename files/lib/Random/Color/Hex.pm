@@ -1,4 +1,4 @@
-package RolePlaying::Random::Color::Hex;
+package Random::Color::Hex;
 use strict;
 use warnings;
 use Exporter qw(import);

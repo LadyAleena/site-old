@@ -1,4 +1,4 @@
-package RolePlaying::Random::Color;
+package Random::Color;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);

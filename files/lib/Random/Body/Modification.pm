@@ -1,21 +1,22 @@
-package RolePlaying::Random::Body::Modification;
+package Random::Body::Modification;
 use strict;
 use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_body_modification random_body_color_change random_aura);
 
-# part of the 'random' suite from RolePlaying::Random
+use Random::Color qw(random_color);
+use Random::GemMetalJewelry qw(random_gem random_metal);
+use Random::Size  qw(random_size);
+use Random::Misc  qw(random_emotion);
+
 use RolePlaying::Random qw(random);
-use RolePlaying::Random::Misc  qw(random_emotion);
-use RolePlaying::Random::Color qw(random_color);
-use RolePlaying::Random::Size  qw(random_size);
-use RolePlaying::Random::GemMetalJewelry qw(random_gem random_metal);
-use RolePlaying::Character::Alignment qw(random_alignment);
+use RolePlaying::Random::Alignment qw(random_alignment);
 
 use Games::Dice qw(roll);
 use Lingua::EN::Inflect qw(PL_N PL_V NO A);
 
-my @body_part = (qw(eye ear lip nail nose hair skin),'entire body');
+my %body_parts;
+   @body_parts{(1..8)} = (qw(eye ear lip nail nose hair skin),'entire body');
 
 my %adj_info = (
   asinine  => 'donkey', 
@@ -278,14 +279,14 @@ sub random_body_modification {
 }
 
 sub random_body_color_change {
-  my $roll = roll('1d7')-1;
+  my $roll = roll('1d7');
   my $verb = 'turns';
-  my $part = $body_part[$roll];
+  my $part = $body_parts{$roll};
   if ($roll < 4) {
-    $part = PL_N($body_part[$roll]);
+    $part = PL_N($body_parts{$roll});
     $verb = PL_V('turns');
   }
-  return join(' ',($part,$verb,random_color('pure')));
+  return join(' ',($part, $verb, random_color('pure')));
 }
 
 sub random_aura {

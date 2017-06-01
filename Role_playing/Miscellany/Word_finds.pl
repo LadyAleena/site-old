@@ -11,7 +11,7 @@ use lib '../../files/lib';
 use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list span pre);
-use RolePlaying::WordFind qw(print_word_find);
+use Util::WordFind qw(print_word_find);
 
 my %finds = (
   'Monsters Galore' => 'HUMAN',

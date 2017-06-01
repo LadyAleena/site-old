@@ -1,12 +1,11 @@
-package RolePlaying::Random::Body::Function;
+package Random::Body::Function;
 use strict;
 use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_body_function random_body_functions);
 
-# part of the 'random' suite from RolePlaying::Random
 use RolePlaying::Random qw(random);
-use Fancy::Join::Grammatical;
+use Fancy::Join::Grammatical qw(grammatical_join);
 
 my %body_functions = (
   'sleep' => [
@@ -47,6 +46,12 @@ my %body_functions = (
     'can not get drunk',
     'is intoxicated after injesting any liquid'
   ],
+  'other' => [
+    'can not stop sneezing',
+    'can not stop crying',
+    'breaks into song',
+    'runs in circles'
+  ]
 );
 
 sub random_body_function {
@@ -56,13 +61,13 @@ sub random_body_function {
   if (ref($user_function)) {
     my @functions;
     for my $function (@$user_function) {
-      push @functions, random(\%body_functions, $function);
+      push @functions, random(\%body_functions, $function, { additions => [map("is ${_}active after $user_function", qw(hypo hyper))] });
     }
     
     $body_function = grammatical_join('and',@functions);
   }
   else {
-    $body_function = random(\%body_functions, $user_function);
+    $body_function = random(\%body_functions, $user_function, { 'caller' => (caller(0))[3] });
   }
   
   return $body_function;

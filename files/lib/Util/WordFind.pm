@@ -1,4 +1,4 @@
-package RolePlaying::WordFind;
+package Util::WordFind;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);

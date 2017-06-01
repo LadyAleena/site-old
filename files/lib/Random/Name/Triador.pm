@@ -1,4 +1,4 @@
-package RolePlaying::Random::Name::Triador;
+package Random::Name::Triador;
 use strict;
 use warnings;
 use Exporter qw(import);
@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(Yrethi_place_name Zilarban_place_name additions);
 
 use Games::Dice qw(roll);
 
-use RolePlaying::Random::Name::Pattern qw(random_name);
+use Random::Name::Pattern qw(random_name);
 
 my %addition;
 $addition{'Vecile'}{'grand duchy'} = 'Vi';
@@ -114,5 +114,15 @@ sub Zilarban_place_name {
   my $name = join('',@syllable_parts);
   return $name;
 }
+
+=head1 NAME
+
+B<Random::Name::Triador> is a name generator for the world of Triador that I am slowly building.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

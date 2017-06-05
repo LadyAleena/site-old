@@ -1,35 +1,20 @@
-package RolePlaying::Random::Weapon;
+package Random::RPG::Weapon;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(random_weapons random_magic_weapon random_weapon_damage);
-
-# part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(random);
-use RolePlaying::Random::Misc qw(random_non);
-use Base::Data qw(get_hash);
+our @EXPORT_OK = qw(random_weapon random_weapons random_magic_weapon random_weapon_damage);
 
 use Games::Dice qw(roll);
 use Lingua::EN::Inflect qw(PL_N);
+use String::Util qw(collapse);
 
-sub display_weapon {
-  my ($text) = @_;
-     $text =~ s/(.+) \((.+)\)/$2 $1/;
+use Base::Data   qw(make_hash);
+use Fancy::Rand  qw(fancy_rand tiny_rand);
+use Random::Misc qw(random_non);
+use RolePlaying::WeaponName qw(display_weapon);
 
-  my ($r_weapon, $accessory) = split(/ w\//,$text);
-  
-  my $weapon = join(' ',reverse(split(/, /,$r_weapon)));
-     $weapon =~ s/\// or /;
-     $weapon =~ s/ Hammer// if $weapon =~ /(?:Maul|Warhammer) Hammer/;
-     $weapon =~ s/ Sword//  if $weapon !~ /(?:Bastard|Broad|Long|Short|Two-handed) Sword/;
-
-  my $full_weapon = $accessory ? PL_N($weapon)." with $accessory" : PL_N($weapon);
-
-  return lc $full_weapon;
-}
-
-my $weapons = get_hash(
-  file => ['Role_playing/Reference_tables','Weapons.txt'],
+my $weapons = make_hash(
+  file => ['Role_playing/Reference_tables', 'Weapons.txt'],
   headings => ['Weapon','#AT','Dmg(S/M)','Dmg(L)','Range','Weight','Size','Type','Speed','KO','broad group','tight group'],
 );
 
@@ -44,30 +29,31 @@ my %weapon_groups = (
                    ],
   'material'    => [map("$_ weapons", qw(bone metal stone wooden))],
   'damage type' => [map("$_ weapons", qw(bludgeoning piercing slashing missile))],
-  'weapons'     => [map(display_weapon($_),keys %$weapons)],
+  'weapon'      => [map(display_weapon($_, 'plural'), keys %$weapons)],
 );
 
+sub random_weapon {
+  my @weapon_list = (map(display_weapon($_, 'singular'), keys %$weapons));
+  my $weapon = tiny_rand(@weapon_list);
+}
+
 sub random_weapons {
-  my ($weapon_type) = @_;
-  my $weapon = random(\%weapon_groups, $weapon_type);
+  my ($user_weapons, $user_additions) = @_;
+  my $weapon = fancy_rand(\%weapon_groups, $user_weapons, { caller => 'random_weapons', additions => $user_additions ? $user_additions : undef });
   return $weapon;
 }
 
 sub random_magic {
-  my @magics = ('',random_non.'magical');
-  my $magic  = $magics[rand @magics];
+  my @magics = ('', random_non.'magical');
+  my $magic  = tiny_rand(@magics);
   return $magic;
 }
 
 sub random_magic_weapon {
-  my $magic   = random_magic;
-
-  my @weapons = ("$magic ".random_weapons('all'), "all $magic weapons");
-  my $weapon  = $weapons[rand @weapons];
-     $weapon  =~ s/\s\s/ /g;
-     $weapon  =~ s/^\s//;
-  
-  return $weapon;
+  my $magic   = random_magic();
+  my $weapons = "$magic ".random_weapons('all', ['weapons']);
+     $weapons = $weapons =~ /magic/ ? $weapons : "all $weapons";
+  return collapse($weapons);
 }
 
 sub random_weapon_damage {
@@ -79,11 +65,25 @@ sub random_weapon_damage {
       '-1 hp per die',
       'maximum',
       '×'.roll('1d4+1'),
-      'only '.random_magic
+      'only '.random_non.'magical'
       )
     )
   );
-  return $damage[rand @damage];
+  return tiny_rand(@damage);
 }
+
+=head1 NAME
+
+B<Random::RPG::Weapon> selects random weapons from I<Advanced Dungeons & Dragons, Second Edition>.
+
+=head1
+
+  use Random::RPG::Weapon qw(random_weapon random_weapons random_magic_weapon random_weapon_damage);
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

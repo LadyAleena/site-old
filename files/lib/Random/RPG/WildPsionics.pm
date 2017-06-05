@@ -1,4 +1,4 @@
-package RolePlaying::Random::WildPsionics;
+package Random::RPG::WildPsionics;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -8,12 +8,11 @@ use Games::Dice qw(roll);
 use Lingua::EN::Inflect qw(PL_N);
 use List::MoreUtils qw(uniq);
 
-# sub-part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(tinyrand);
-use Base::Data qw(get_hash);
+use Base::Data  qw(make_hash);
+use Fancy::Rand qw(tiny_rand);
 
 # When adding PSPS, it is the initial cost + (maintenance * 4) for each talent.
-my $psps = get_hash(
+my $psps = make_hash(
   'file' => ['Role_playing/Classes/Psionics','powers.txt'],
   'headings' => ['power', 'initial cost', 'maintenance cost']
 );
@@ -107,8 +106,8 @@ $devotions{$_} = sub { my @array = (79..84); my $num = $array[rand @array]; retu
 $devotions{$_} = sub { random_psionic_devotion(2) } for 86..87;
 $devotions{$_} = sub { random_psionic_devotion(3) } for 88..89;
 $devotions{$_} = sub { random_psionic_devotion(4) } for 90;
-$devotions{$_} = sub { random_psionic_science(1) } for 91..99;
-$devotions{$_} = sub { join(', ',(random_psionic_science(1),random_psionic_devotion(1))) } for 100;
+$devotions{$_} = sub { random_psionic_science(1)  } for 91..99;
+$devotions{$_} = sub { join(', ',(random_psionic_science(1), random_psionic_devotion(1))) } for 100;
 
 my %sciences;
 $sciences{$_} = 'aura sight'     for 1..2;
@@ -149,7 +148,7 @@ $sciences{$_} = 'teleport other'          for 77..78;
 $sciences{$_} = sub { my @array = (69..78);  my $num = $array[rand @array]; return $sciences{$num} } for 79..82;
 $sciences{$_} = sub { random_psionic_science(2) } for 83..85;
 $sciences{$_} = sub { random_psionic_science(3) } for 86..88;
-$sciences{$_} = sub { tinyrand(random_psionic_devotion(1), random_psionic_science(1)) }    for 89..92;
+$sciences{$_} = sub { tiny_rand(random_psionic_devotion(1), random_psionic_science(1)) }    for 89..92;
 $sciences{$_} = sub { join(', ', (random_psionic_science(1), random_psionic_devotion(2))) } for 93..96;
 $sciences{$_} = sub { join(', ', (random_psionic_science(1), random_psionic_devotion(3))) } for 97..99;
 $sciences{$_} = sub { join(', ', (random_psionic_science(1), random_psionic_devotion(4))) } for 100;
@@ -192,7 +191,7 @@ $prereqs{$_} = ['psychic surgery'] for ('aura alteration', 'split personality');
 
 sub random_psionic_devotion {
   my ($rolls) = @_;
-  
+
   my @talents;
   for (1..$rolls) {
     my $roll = roll('1d100');
@@ -203,13 +202,13 @@ sub random_psionic_devotion {
       push @talents, @{$prereqs{$talent}};
     }
   }
-  
+
   return join(', ',@talents);
 }
 
 sub random_psionic_science {
   my ($rolls) = @_;
-  
+
   my @talents;
   for (1..$rolls) {
     my $roll = roll('1d100');
@@ -220,7 +219,7 @@ sub random_psionic_science {
       push @talents, @{$prereqs{$talent}};
     }
   }
-  
+
   return join(', ',@talents);
 }
 
@@ -235,8 +234,23 @@ sub random_wild_psionic_talent {
     $psp_total += $psps->{$talent}{'initial cost'} ? $psps->{$talent}{'initial cost'} : 0;
     $psp_total += $psps->{$talent}{'maintenance cost'} ? $psps->{$talent}{'maintenance cost'} * 4 : 0;
   }
-  
+
   my @talents = @r_talents ? uniq(@r_talents) : undef;
   return @talents ? "$lead: (PSPs: $psp_total) ".join(', ',sort @talents) : undef;
 }
+
+=head1 NAME
+
+B<Random::RPG::WildPsionics> selects random wild psionic talents from I<Advanced Dungeons & Dragons, Second Edition>.
+
+=head1 SYNOPSIS
+
+  use Random::RPG::WildPsionics qw(random_wild_psionic_talent);
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
+
 1;

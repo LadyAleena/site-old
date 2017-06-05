@@ -2,7 +2,7 @@ package RolePlaying::Character::AbilityScores;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
-our @EXPORT_OK = qw(all_abilities ability_score_table game_effect random_ability random_game_effect);
+our @EXPORT_OK = qw(all_abilities ability_score_table game_effect);
 
 use List::Util qw(max);
 
@@ -56,9 +56,9 @@ sub game_effect {
 sub ability_score_table {
   my ($ability, $ability_score, $user_enhanced, $score_modifier) = @_;
   my $enhanced = $user_enhanced ? $user_enhanced : '0';
-  my $print_enhanced = '' ;
-     $print_enhanced = '<br><small>(normal)</small>' if ($enhanced == 1);
-     $print_enhanced = '<br><small>(enhanced)</small>' if ($enhanced == 2);
+  my $append_enhanced = '' ;
+     $append_enhanced = '<br><small>(normal)</small>'   if ($enhanced == 1);
+     $append_enhanced = '<br><small>(enhanced)</small>' if ($enhanced == 2);
   my $ability_score_text = $ability_score;
   if ($ability eq 'strength' and $ability_score =~ m/18\(/) {
     $ability_score_text =~ s/18\(/18<br>(/;
@@ -67,7 +67,7 @@ sub ability_score_table {
 
   my @rows;
   my @top_row;
-  push @top_row, [ucfirst $ability.$print_enhanced, { class=> 'ability_name', rowspan => '2' }];
+  push @top_row, [ucfirst $ability.$append_enhanced, { class=> 'ability_name', rowspan => '2' }];
   push @top_row, [$ability_score_text, { class => 'ability_score', rowspan => '2', type_override => 'd' }];
   for my $game_effect_heading (grep($_ ne 'Spell Immunity',@{$game_effects{$ability}})) {
     push @top_row, [$game_effect_heading, { class => 'sub_score' }];
@@ -112,19 +112,6 @@ sub all_abilities {
     }
   }
   return \@ability_data;
-}
-
-# The last two subroutines return random ability scores and game effects.
-
-sub random_ability {
-  return $abilities[rand @abilities];
-}
-
-sub random_game_effect {
-  my $random_ability = random_ability;
-  my @game_effects = @{$game_effects{$random_ability}}; 
-  my $random_game_effect = lc $game_effects[rand @game_effects];
-  return qq{$random_game_effect <small>($random_ability)</small>};
 }
 
 1;

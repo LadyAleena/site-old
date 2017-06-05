@@ -1,15 +1,14 @@
-package RolePlaying::Random::Monster;
+package Random::RPG::Monster;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_monster random_monster_list);
 
-# part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(random);
-use Fancy::Map qw(fancy_map);
-
 use Lingua::EN::Inflect qw(PL_N);
 use List::Util qw(shuffle);
+
+use Fancy::Rand qw(fancy_rand);
+use Fancy::Map qw(fancy_map);
 
 my @elements = qw(air earth fire water);
 my @paraelements = qw(ice magma ooze smoke);
@@ -67,7 +66,7 @@ $submonsters{'dragon'} = {
   'metallic dragon'  => [map( "$_ dragon", qw(brass bronze copper gold silver) )],
   'neutral dragon'   => [map( "$_ neutral dragon", qw(amber jacinth jade pearl moonstone) )],
   'ferrous dragon'   => [map( "$_ ferrous dragon", qw(iron nickel tungsten cobalt chromium) )],
-  'linnorm dragon'   => [map( "$_ linnorm dragon", qw(dread flame forest frost gray land midgard rain sea) ), 'corpse tearer'],
+  'Linnorm dragon'   => [map( "$_ linnorm dragon", qw(dread flame forest frost gray land midgard rain sea) ), 'corpse tearer'],
   'dragonet'         => ['faerie dragon','firedrake','pseudodragon','rainbow dragonette'],
   'dragon-kin'       => [qw(dracotaur dracolisk dragon-kin half-dragon weredragon sea-wyrm chimera dragonne gorynych salamander scalamagdrion wyvern),'albino wyrm'],
   'undead dragon'    => ['dracolich','ghost dragon'],
@@ -181,22 +180,23 @@ $submonsters{'planar creature'} = {
   ],
   'yugoloth' => [
     'yugoloth',
-      fancy_map({ 'after' => 'yugoloth' },[
-      [map( "$_ lesser",      qw(mezzoloth dergholoth piscoloth hydroloth yagnoloth marraenoloth) )],
-      [map( "$_ greater",     qw(nycaloth arcanaloth ultroloth) )],
-      [map( "$_ battleloth", (qw(arrow axe crossbow pick sword),'spiked chain') )],
-      [map( "$_ guardian",    qw(least lesser greater) )],
-      [qw(baernoloth canoloth echinoloth gacholoth skeroloth)]
-    ])
+      fancy_map({ 'after' => 'yugoloth' }, [
+        [map( "$_ lesser",      qw(mezzoloth dergholoth piscoloth hydroloth yagnoloth marraenoloth) )],
+        [map( "$_ greater",     qw(nycaloth arcanaloth ultroloth) )],
+        [map( "$_ battleloth", (qw(arrow axe crossbow pick sword),'spiked chain') )],
+        [map( "$_ guardian",    qw(least lesser greater) )],
+        [qw(baernoloth canoloth echinoloth gacholoth skeroloth)]
+      ]
+    )
   ],
   'planar creature' => ['imp','lillend']
 };
 
 $submonsters{'reptilian monster'} = {
-  'basilisk'   => ['lesser basilisk','greater basilisk','dracolisk'],
+  'basilisk'   => ['lesser basilisk', 'greater basilisk', 'dracolisk'],
   'cockatrice' => [qw(cockatrice pyrolisk)],
-  'lizard man' => ['lizard man', 'lizard king'],
-  'naga'       => ['naga',    map( "$_ naga",    qw(bone dark guardian spirit water) )],
+  'lizard man' => ['lizard man', 'lizard king', 'zardan'],
+  'naga'       => ['naga',    map( "$_ naga", qw(bone dark guardian spirit water) )],
   'snake'      => [map( "$_ snake", qw(messenger winged) )],
   'reptilian monster' => [qw(behir laerti muckdweller troglodyte yuan-ti)]
 };
@@ -258,23 +258,23 @@ $monsters{'harpy'}              = [qw(harpy gobpry)];
 $monsters{'illithid'}           = ['mind flayer', 'psionic illithid', 'alhoon'];
 $monsters{'medusa'}             = [qw(medusa maedar), 'greater medusa'];
 $monsters{'spacefaring'}        = [qw(grommish hadozee hurwaeti)];
-$monsters{'unsorted'}            = [
+$monsters{'unsorted'}           = [
   qw(arcane cloaker doppleganger giff gith grimlock mimic minotaur),
   'broken one', 'galeb dur', 'hook horror','living wall'
 ];
 
 sub random_monster {
-  my ($user_monster, $user_submonster) = @_;
-  
+  my ($user_monster, $user_submonster, $user_additions) = @_;
+
   my $monster;
+  my $options = { caller => 'random_monster', additions => $user_additions ? $user_additions : undef };
   if ($user_submonster && $submonsters{$user_monster}) {
     my $monsters = $submonsters{$user_monster};
-    $monster = random($monsters, $user_submonster);
+    $monster = fancy_rand($monsters, $user_submonster, $options);
   }
   else {
-    $monster = random(\%monsters, $user_monster);
+    $monster = fancy_rand(\%monsters, $user_monster, $options);
   }
-  
   return $monster;
 }
 
@@ -283,5 +283,19 @@ sub random_monster_list {
   my @monsters = ( '<strong>Random monster:</strong> '.random_monster, map( "<strong>Random $_:</strong> ".random_monster($_), sort @$monster_list ) );
   return \@monsters;
 }
+
+=head1 NAME
+
+B<Random::RPG::Monster> selects random monsters from the I<Monstrous Manual> and its compendiums from I<Advanced Dungeons & Dragons, Second Edition>.
+
+=head1 SYNOPSIS
+
+  use Random::RPG::Monster qw(random_moster);
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

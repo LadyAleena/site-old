@@ -13,7 +13,7 @@ use Base::Page qw(page passage);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list);
 use RolePlaying::Monster qw(monster_info);
-use RolePlaying::Random::Monster qw(random_monster random_monster_list);
+use Random::RPG::Monster qw(random_monster random_monster_list);
 
 my $multi_monsters = {
   'Throglin' => ['Throglin', 'Freshwater throglin', 'Saltwater throglin'],

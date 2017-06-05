@@ -1,6 +1,6 @@
 package RolePlaying::CharacterMutation;
 use strict;
-use warnings FATAL => qw( all );
+use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_mutations parent_knows);
 
@@ -8,38 +8,59 @@ use Games::Dice qw(roll);
 use Lingua::EN::Inflect qw(PL_N A ORD);
 use List::Util qw(sum max);
 
+use Fancy::Rand qw(tiny_rand);
+use Fancy::Join::Defined qw(join_defined);
 use Util::Convert qw(textify);
-use RolePlaying::Random qw(tinyrand instant_rand);
 
-use RolePlaying::Random::Misc           qw(random_dice random_divinity random_generation random_language_common random_parent random_proficiency_type random_sign);
-use RolePlaying::Random::Class          qw(random_class random_class_special);
-use RolePlaying::Random::Event          qw(random_event);
-use RolePlaying::Random::Insanity       qw(random_mental_condition);
-use RolePlaying::Random::MagicItem      qw(random_magic_item_special);
-use RolePlaying::Random::Monster        qw(random_monster);
-use RolePlaying::Random::Range          qw(random_range random_radius);
-use RolePlaying::Random::SavingThrow    qw(random_saving_throw);
-use RolePlaying::Random::SpecialAttack  qw(random_attack random_special_attack);
-use RolePlaying::Random::Spell          qw(random_spell_casting random_spell_group random_spell_resistance);
-use RolePlaying::Random::Thing          qw(random_thing);
-use RolePlaying::Random::Time           qw(random_time_unit random_frequency);
-use RolePlaying::Random::Weapon         qw(random_weapons random_magic_weapon random_weapon_damage);
-use RolePlaying::Random::WildPsionics   qw(random_wild_psionic_talent);
-use RolePlaying::Random::Body::Modification qw(random_body_modification random_body_color_change random_aura);
-use RolePlaying::Random::Body::Function     qw(random_body_functions);
+use Random::Body::Modification qw(random_body_modification random_body_color_change random_aura);
+use Random::Body::Function     qw(random_body_functions);
+use Random::Insanity       qw(random_mental_condition);
+use Random::Range          qw(random_range random_radius);
+use Random::SpecialDice    qw(random_die);
+use Random::Time           qw(random_time_unit random_frequency);
+use Random::Thing          qw(random_things random_animals);
+use Random::Misc           qw(random_divinity random_generation random_language_common random_parent random_proficiency_type random_sign);
 
-use RolePlaying::CharacterBuilding::AbilityScores qw(random_ability random_game_effect);
+use Random::RPG::AbilityScores  qw(random_ability random_game_effect_expanded);
+use Random::RPG::Class          qw(random_class random_class_special);
+use Random::RPG::Event          qw(random_event);
+use Random::RPG::MagicItem      qw(random_magic_item_action);
+use Random::RPG::Monster        qw(random_monster);
+use Random::RPG::SavingThrow    qw(random_saving_throw);
+use Random::RPG::SpecialAttack  qw(random_attack random_special_attack);
+use Random::RPG::Spell          qw(random_spell_casting random_spell_group random_spell_resistance);
+use Random::RPG::Weapon         qw(random_weapons random_magic_weapon random_weapon_damage);
+use Random::RPG::WildPsionics   qw(random_wild_psionic_talent);
+
+sub random_check {
+  my @base_checks = (
+    random_ability('by keys').' check',
+    tiny_rand('', random_ability('by keys').' based ').tiny_rand('', random_class.' ').'non-weapon proficiency check',
+    'saving throw'.tiny_rand('',' vs. '.random_saving_throw(tiny_rand('by keys', 'all'))),
+    'backstab',
+    'undead turning',
+    'spell memorization'
+  );
+
+  my @checks;
+  for my $check (@base_checks) {
+    push @checks, map("$_ $check", qw(successful failed));
+  }
+  push @checks, map("critical $_", qw(hit miss));
+
+  return $checks[rand @checks];
+}
 
 sub game_rolls {
   my @game_rolls = (
-    random_ability.' checks',
+    random_ability('by keys').' checks',
     'on non-weapon proficiency checks',
-    'to saving throws'.tinyrand('',' vs. '.random_saving_throw(tinyrand('by keys', 'all'))),
+    'to saving throws'.tiny_rand('',' vs. '.random_saving_throw(tiny_rand('by keys', 'all'))),
     'Armor Class',
     'THAC0 modifier',
     'to Surprise'
   );
-  return $game_rolls[rand @game_rolls];
+  return tiny_rand(@game_rolls);
 }
 
 sub parent_knows {
@@ -53,12 +74,12 @@ sub parent_knows {
 sub learning {
   my @learning = (
     PL_N(random_proficiency_type).parent_knows,
-    random_language_common.' or related languages',
-    tinyrand(random_ability.' based',random_class('by keys')).' non-weapon proficiencies',
+    random_language_common().' or related languages',
+    tiny_rand(random_ability('by keys').' based',random_class('by keys')).' non-weapon proficiencies',
     random_weapons('damage type'),
     'the '.random_spell_group('psionisist')
   );
-  return $learning[rand @learning];
+  return tiny_rand(@learning);
 }
 
 sub miscellaneous_magic {
@@ -66,36 +87,53 @@ sub miscellaneous_magic {
     'magic dead',
     'a magic attracter',
     'addicted to magic energies',
-    tinyrand(qw(blessed cursed)),
-    'a '.random_range('simple', 'imperial').' radius '.tinyrand('wild magic', 'magic dead').' zone',
+    tiny_rand(qw(blessed cursed)),
+    'a '.random_range('simple', 'imperial').' radius '.tiny_rand('wild magic', 'magic dead').' zone',
     A(random_monster('lycanthrope')),
-    'fated to become '.A(random_monster('undead', 'by keys')).' upon death',
-    'a '.tinyrand(qw(major minor)).' '.tinyrand(qw(hero villain)).' in a prophesy',
-    '<b>'.A(random_divinity).'</b> and should be retired'
   );
-  return $miscellaneous[rand @miscellaneous];
+  return tiny_rand(@miscellaneous);
 }
 
 sub events {
+  my ($game_time) = @_;
+
   my @events = (
     'magic is used '.random_radius('touch', 'imperial'),
-    'every '.random_event,
+    'every '.random_check,
     'seeing '.A(random_monster)
   );
-  my $event = $events[rand @events];
+
+  my $event = tiny_rand(undef, map("after $_", @events));
   return $event;
 }
 
 sub effects {
+  my $event     = events();
+  my $frequency = sub { tiny_rand(undef, 'at will', random_frequency()) };
+  my $duration  = sub { defined($event) ? tiny_rand(undef, 'for '.A(random_time_unit('general'))) : undef; };
+
   my @effects = (
-    'wild magic surge after '.events,
-    random_body_color_change.tinyrand(' after '.events, ' at will'),
-    random_body_functions.tinyrand(' after '.events, ''),
-    random_mental_condition.tinyrand(' after '.events, ''),
-    miscellaneous_magic.tinyrand(' after '.events, '')
+    sub { join_defined(' ', ('wild magic surge',         $event, &$frequency, &$duration))},
+    sub { join_defined(' ', (random_body_color_change(), $event, &$frequency, &$duration))},
+    sub { join_defined(' ', (random_body_functions   (), $event, &$duration))},
+    sub { join_defined(' ', (random_magic_item_action(), $event, &$frequency, &$duration))},
+    sub { join_defined(' ', (random_mental_condition (), $event, &$duration))},
+    sub { join_defined(' ', (miscellaneous_magic     (), $event, &$duration))}
   );
-  my $effect = $effects[rand @effects];
+
+  my $raw_effect = tiny_rand(@effects);
+  my $effect = &$raw_effect;
+
   return $effect;
+}
+
+sub fate {
+  my @fates = (
+    'fated to become '.A(random_monster('undead','by keys')).' upon death',
+    'is a '.tiny_rand(qw(major minor)).' '.tiny_rand(qw(hero villain)).' in a prophesy',
+    'will become '.A(random_divinity)
+  );
+  my $fate = tiny_rand(@fates);
 }
 
 sub random_mutation {
@@ -107,26 +145,26 @@ sub random_mutation {
     sub { return '<strong>Special Attack:</strong> '.random_special_attack },
     sub { return random_class_special },
     sub { return random_spell_casting(random_frequency) },
-    sub { return random_magic_item_special },
     'wild psionic talent',
     sub { return random_sign.roll('1d10').' '.game_rolls },
     sub { return random_spell_resistance },
-    sub { return random_weapon_damage.tinyrand('',' from '.random_magic_weapon) },
+    sub { return random_weapon_damage.' from '.random_magic_weapon },
     'birth level',
     'max level',
-    sub { return 'can '. tinyrand('only','not') . instant_rand(
+    sub { return 'can '. tiny_rand('only','not') . tiny_rand(
       ' learn '.learning,
-      ' use '.tinyrand(random_weapons('material'), random_weapons('damage type'))
+      ' use '.tiny_rand(random_weapons('material'), random_weapons('damage type'))
     )},
-    sub { return 'can '.tinyrand('only','not').' make '.PL_N(random_event) },
+    sub { return 'can '.tiny_rand('only','not').' make '.PL_N(random_event) },
     sub { return 'knows one '.random_proficiency_type.parent_knows },
     sub { return 'knows all '.PL_N(random_proficiency_type).parent_knows },
     sub { return 'attracts '.random_class.' followers' },
-    sub { return tinyrand(qw(attracts repels)).' all '.random_thing('animals').' '.random_radius('touch','imperial') },
-    sub { return tinyrand('communicates with','knows history of').' '.random_thing.' '.random_radius('touch','imperial') },
+    sub { return tiny_rand(qw(attracts repels)).' all '.random_animals.' '.random_radius('simple','imperial') },
+    sub { return tiny_rand('communicates with','knows history of').' '.random_things.' '.random_radius('touch','imperial') },
     sub { return 'has '.A(random_aura) },
     sub { return 'touch '.random_attack('touch special') },
-    sub { return effects.tinyrand('',tinyrand('',' for '.A(random_time_unit('all')))) },
+    sub { return effects() },
+    sub { return fate() },
     sub { return 'is '.miscellaneous_magic }
   );
 
@@ -136,7 +174,7 @@ sub random_mutation {
 
 sub random_mutations {
   my ($user_rolls) = @_;
-  my $rolls = $user_rolls ? $user_rolls : roll(random_dice);
+  my $rolls = $user_rolls ? $user_rolls : random_die(1);
 
   my @effects;
   for (1..$rolls) {
@@ -146,16 +184,16 @@ sub random_mutations {
   my %effects_count;
   ++$effects_count{$_} for @effects;
   delete $effects_count{'no unusual effect'};
-  
+
   my @mutations;
   for my $effect (keys %effects_count) {
     my $value = $effects_count{$effect};
     if ($effect eq 'ability modifier') {
       my %abilities;
-      $abilities{random_ability()}++ for (1..$value);
+      $abilities{random_ability('by keys')}++ for (1..$value);
       for my $ability (keys %abilities) {
         my $rolls = $abilities{$ability};
-        my $modifier = sum(map(random_sign.roll(random_dice),(1..$rolls)));
+        my $modifier = sum(map(random_sign.random_die(1),(1..$rolls)));
         $abilities{$ability} = $modifier > 0 ? "+$modifier" : $modifier;
       }
 
@@ -167,10 +205,10 @@ sub random_mutations {
     }
     elsif ($effect eq 'game effect modifier') {
       my %game_effects;
-      $game_effects{random_game_effect()}++ for (1..$value);
+      $game_effects{random_game_effect_expanded()}++ for (1..$value);
       for my $game_effect (keys %game_effects) {
         my $rolls = $game_effects{$game_effect};
-        my $modifier = sum(map(random_sign.roll(random_dice),(1..$rolls)));
+        my $modifier = sum(map(random_sign.random_die(1),(1..$rolls)));
         $game_effects{$game_effect} = $modifier > 0 ? "+$modifier" : $modifier;
       }
       
@@ -179,7 +217,7 @@ sub random_mutations {
       }
     }
     elsif ($effect eq 'birth level') {
-      my @levels = map(roll(random_dice),(1..$value));
+      my @levels = map(random_die(1),(1..$value));
       my $birth_level = ORD(max(@levels));
       push @mutations, "born already at $birth_level level";
     }
@@ -205,15 +243,15 @@ sub random_mutations {
 
 B<RolePlaying::CharacterMutation> allows a DM to mutate characters by generating enhancements, diminishments, and mutations.
 
-=head1 AUTHOR
-
-Lady Aleena
-
 =head1 ACKNOWLEDGEMENTS
 
 Perl Monks: Anno, bradenshep, Corion, ikegami, Limbic~Region, Petruchio, shmem, Sidhekin, wfsp, ysth and the rest of the community that has been so kind to me.
 
 This generator is why I began to learn perl seriously. All my other work in perl stems from this randomness.
+
+=head1 AUTHOR
+
+Lady Aleena
 
 =cut
 

@@ -4,16 +4,15 @@ use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_body_modification random_body_color_change random_aura);
 
+use Games::Dice qw(roll);
+use Lingua::EN::Inflect qw(PL_N PL_V NO A);
+
+use Fancy::Rand   qw(fancy_rand tiny_rand);
 use Random::Color qw(random_color);
 use Random::GemMetalJewelry qw(random_gem random_metal);
 use Random::Size  qw(random_size);
 use Random::Misc  qw(random_emotion);
-
-use RolePlaying::Random qw(random);
-use RolePlaying::Random::Alignment qw(random_alignment);
-
-use Games::Dice qw(roll);
-use Lingua::EN::Inflect qw(PL_N PL_V NO A);
+use Random::RPG::Alignment qw(random_alignment);
 
 my %body_parts;
    @body_parts{(1..8)} = (qw(eye ear lip nail nose hair skin),'entire body');
@@ -273,8 +272,8 @@ sub colorblind {
 }
 
 sub random_body_modification {
-  my ($user_body) = @_;
-  my $modification = random(\%body, $user_body);
+  my ($user_body, $user_additions) = @_;
+  my $modification = fancy_rand(\%body, $user_body, { caller => 'random_body_modification', additions => $user_additions ? $user_additions : undef });
   return $modification;
 }
 
@@ -282,16 +281,29 @@ sub random_body_color_change {
   my $roll = roll('1d7');
   my $verb = 'turns';
   my $part = $body_parts{$roll};
-  if ($roll < 4) {
-    $part = PL_N($body_parts{$roll});
-    $verb = PL_V('turns');
+  if ($roll <= 4) {
+    $part = PL_N($part);
+    $verb = PL_V($verb);
   }
   return join(' ',($part, $verb, random_color('pure')));
 }
 
 sub random_aura {
-  my @auras = (map($_.' aura',('visible '.random_color('pure'), random_emotion, random_alignment('parts'))));
-  return $auras[rand @auras];
+  my @auras = (
+    'visible '.random_color('pure')." aura",(),
+    map("aura of $_", (random_emotion(), random_alignment('parts')))
+  );
+  return tiny_rand(@auras);
 }
+
+=head1 NAME
+
+B<Random::Body::Modification> selects random body modifications.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

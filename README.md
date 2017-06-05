@@ -1,18 +1,19 @@
 <h1>Lady_Aleena</h1>
-<p>The files behind my website (http://fantasy.xecu.net).</p>
 
-[/Collections](/Collections): My collections of books, music, and movies.
+*The files behind [my website](http://fantasy.xecu.net).*
 
-[/Miscellany](/Miscellany): My random thoughts and other stuff.
+[Collections](/Collections): My collections of books, music, and movies.
 
-[/Movies](/Movies): Lists of movies by genre and series and an essay on crossover cosmologies.
+[Miscellany](/Miscellany): My random thoughts and other stuff.
 
-[/Role_playing](/Role_playing): Role playing information I made up or collated over the years. It is all based on AD&D 2nd Ed.
+[Movies](/Movies): Lists of movies by genre and series and an essay on crossover cosmologies.
 
-[/Writing](/Writing): Stories and poems I have written. Please don't take any of them and claim they are yours. I am trusting you.
+[Role_playing](/Role_playing): Role playing information I made up or collated over the years. It is all based on AD&D 2nd Ed.
 
-[/files/css](/files/css): All of the style sheets used on my site.
+[Writing](/Writing): Stories and poems I have written. Please don't take any of them and claim they are yours. I am trusting you.
 
-[/files/data](/files/data): All of the data which is used in more than one place on my site.
+[css](/files/css): All of the style sheets used on my site.
 
-[/files/lib](/files/lib): The modules I have written for my site.
+[data](/files/data): All of the data which is used in more than one place on my site. This will not always be up to date.
+
+[lib](/files/lib): The modules I have written for my site.

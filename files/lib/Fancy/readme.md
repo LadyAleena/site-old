@@ -22,6 +22,10 @@
 
 **Fancy::Map** is a fancy way to map on multiple levels.
 
+<h2>Fancy::Rand</h2>
+
+**Fancy::Rand** is a fancy way to randomize lists.
+
 <h2>Fancy::Splice</h2>
 
 **Fancy::Splice** is a fancy way to splice a list into groups.

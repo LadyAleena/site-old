@@ -41,14 +41,14 @@ XP Value: 4,750 GP Value: 47,500
 This massive belt covers the entire waist and upper abdominal area of the wearer and is imbued with very potent magic. When worn it gives the wearer the physical prowess of a titan. (It doesn't cause growth to the size of a titan however!) It functions exactly as a Girdle of Giant Strength but imbues the wearer with a strength equivalent to that of a titan. Thus, the wearer's strength is raised to 25! The strength bonuses are not cumulative with normal or magical strength bonuses, not even in combination with Gauntlets of Ogre Power, A<Gauntlets of Giant Power|href="Boots_and_gloves.pl#Gauntlets_of_Giant_Power">, and magical warhammers (unlike the Girdles of Giant Strength).
 2 Girdle of Weapon Protection
 || rolls
-|* d6|Weapon
-|+ 1|blunt weapons
-|+ 2|edged weapons
-|+ 3|missile weapons
-|+ 4|tight group of weapons
-|+ 5|broad group of weapons
-|+ 6|all weapons
-The Girdles give complete immunity from a type of weapon, roll weapons immunity from the chart. 5% of these girdles protect against magical weapons of the rolled type.
+|* d20|Weapon
+|+ 1-5|blunt weapons
+|+ 6-10|edged weapons
+|+ 11-15|missile weapons
+|+ 16-17|tight group of weapons
+|+ 18-19|broad group of weapons
+|+ 20|all weapons
+The Girdles give complete immunity from a type of non-magical weapon rolled from the chart. 5% of these girdles protect against magical weapons of the rolled type.
 2 Hat of Sound Sleeping
 by Dan Grieg
 This droopy looking hat will instantly put to sleep up to four people upon command and give them a full nights rest in one hour allowing healing, spell memorization, and other things that happen with rest. Everyone effected by the hat is asleep for exactly one hour, unless they die, then they are dead. Nothing will wake them up, except dispel magic. Remove curse will not work. The hat is activated by one person but everyone to be affected by it must be touching the brim of the hat. If the recipient is unwilling they get a save versus spell. The one activating it has to go to sleep also.

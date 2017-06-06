@@ -8,15 +8,15 @@ use CGI::Carp qw(fatalsToBrowser);
 use Lingua::EN::Inflect qw(PL_N);
 
 use lib '../../files/lib';
-use Base::Data qw(get_hash);
 use Base::Page qw(page);
 use HTML::Elements qw(section list table span);
 use Fancy::Join::Defined qw(join_defined);
 use Util::Convert qw(idify);
+use Util::Data qw(make_hash);
 use Util::Number qw(commify);
-use RolePlaying::CharacterBuilding::Alignment qw(expand_alignment);
+use RolePlaying::Character::Alignment qw(expand_alignment);
 
-my $player_characters = get_hash(
+my $player_characters = make_hash(
   'file' => ['Role_playing','Player_characters.txt'],
   'headings' => ['full name', 'id', 'last name', 'first name', qw(alignment class+ experience race special_race gender strength dexterity constitution intelligence wisdom charisma languages)],
 );

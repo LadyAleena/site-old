@@ -8,14 +8,14 @@ our @EXPORT_OK = qw(inline);
 
 use Text::Balanced qw(extract_bracketed extract_multiple);
 
-use Fancy::Splice;
+use Fancy::Splice qw(fancy_splice);
 
 my $allowed = join('|', qw(A ABBR ACRONYM B BIG CITE CODE DFN EM I KBD Q SAMP SMALL SPAN STRONG SUB SUP TT VAR));
 
 sub inline {
   my ($text) = @_;
   $text =~ s/\s\<!.+$//;
-  
+
   my $brackets = fancy_splice(2, extract_multiple( $text, [ sub { extract_bracketed($_[0],'<>', qr(.*?(?=<)) ) } ] ));
 
   my $end = undef;

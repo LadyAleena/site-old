@@ -6,12 +6,12 @@ our @EXPORT_OK = qw(tiny_select top_select);
 
 use Lingua::EN::Inflect qw(A PL_N);
 
-use Base::Data qw(get_hash);
 use HTML::Elements qw(form fieldset input selection);
 use Util::Convert qw(textify);
+use Util::Data qw(make_hash);
 
 sub top_select {
-  my ($tab,$opt) = @_;
+  my ($tab, $opt) = @_;
   my $location = $opt->{'location'};
   my $legend = A($opt->{'name'});
   my $select_name = $opt->{'name'};
@@ -33,10 +33,10 @@ sub top_select {
 }
 
 sub tiny_select {
-  my ($tab,$opt) = @_;
+  my ($tab, $opt) = @_;
   my $location = $opt->{'location'};
 
-  my $selections = get_hash( 'file' => $opt->{'file'}, 'headings' => [qw(value multiple_choice options+)] );
+  my $selections = make_hash( 'file' => $opt->{'file'}, 'headings' => [qw(value multiple_choice options+)] );
 
   my @selections;
   for my $selection (sort { $a->{'value'} cmp $b->{'value'} } values %$selections) {

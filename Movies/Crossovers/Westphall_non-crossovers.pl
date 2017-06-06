@@ -7,14 +7,17 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 use HTML::Elements qw(anchor img);
+use Util::Data qw(file_directory);
+use Util::Line qw(line);
 
 my @small_images = ('Mary Tyler Moore', 'Burkes Law', 'Columbo', 'Dragnet', 'legend');
 my @images = ('All in the Families', 'Hawaii Five', 'The Man from UNCLE', 'The Westerns', @small_images);
+my $directory = file_directory('Movies/Crossovers', 'images');
 my $doc_magic;
 for my $titie (@images) {
   (my $image = $titie ) =~ s/ /_/g;
-  my $link = "../../files/images/Movies/Crossovers/$image.png";
-  $doc_magic->{$titie} = sub { print anchor( img({ 'src' => $link, 'alt' => $titie, 'class' => grep(/$titie/, @small_images) ? 'right' : undef }), { 'href' => $link, 'target' => 'new', 'class' => 'inline' })."\n" };
+  my $link = "$directory/$image.png";
+  $doc_magic->{$titie} = sub { line(6, anchor( img({ 'src' => $link, 'alt' => $titie, 'class' => grep(/$titie/, @small_images) ? 'right' : undef }), { 'href' => $link, 'target' => 'new', 'class' => 'inline' }))};
 }
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });

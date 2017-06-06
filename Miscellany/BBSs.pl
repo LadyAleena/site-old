@@ -5,12 +5,12 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::Data qw(get_hash);
 use Base::Page qw(page story);
 use HTML::Elements qw(list span anchor);
-use Fancy::Join::Defined;
+use Util::Data qw(make_hash);
+use Fancy::Join::Defined qw(join_defined);
 
-my $BBSs = get_hash( 'file' => ['Miscellany', 'BBSs.txt'], 'headings' => [qw(name domain ip site)] );
+my $BBSs = make_hash( 'file' => ['Miscellany', 'BBSs.txt'], 'headings' => [qw(name domain ip site)] );
 
 my @items;
 for my $BBS (sort { $a->{'name'} cmp $b->{'name'} } values %$BBSs) {

@@ -7,11 +7,11 @@ use CGI::Carp qw(fatalsToBrowser);
 use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
-use Base::Data qw(get_hash);
 use Base::Page qw(page);
 use HTML::Elements qw(section paragraph table anchor);
 use HTML::Forms qw(tiny_select);
 use Util::Convert qw(idify);
+use Util::Data qw(make_hash);
 
 my $cgi = CGI::Minimal->new;
 my $alpha   = $cgi->param('alpha') ? encode_entities($cgi->param('alpha'),'<>"') : '';
@@ -21,13 +21,13 @@ my $ability = $cgi->param('rel_ability') ? encode_entities($cgi->param('rel_abil
 
 my @headings = ('Proficiency', 'Slots', 'RA', 'CM', 'Class(es)', 'Source(s)');
 
-my $proficiencies = get_hash(
-  'file' => ['Role_playing/Reference_tables','Proficiencies.txt'],
+my $proficiencies = make_hash(
+  'file' => ['Role_playing/Reference_tables', 'Proficiencies.txt'],
   'headings' => \@headings
 );
 
-my $books = get_hash( 
-  'file' => ['Role_playing/Reference_tables','References.txt'],
+my $books = make_hash( 
+  'file' => ['Role_playing/Reference_tables', 'References.txt'],
 );
 
 sub markupbooks { 

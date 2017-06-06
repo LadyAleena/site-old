@@ -5,14 +5,14 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::Data qw(file_list data_directory);
 use Base::Page qw(page story);
 use HTML::Elements qw(list anchor);
-use Util::Sort qw(name_sort);
 use Util::Convert qw(textify searchify);
+use Util::Data qw(file_list file_directory);
+use Util::Sort qw(name_sort);
 
 my $directory = 'Role_playing/Player_characters/spellbooks';
-my @spellbook_list = sort { name_sort(textify($a),textify($b)) } file_list(data_directory($directory));
+my @spellbook_list = sort { name_sort(textify($a),textify($b)) } file_list(file_directory($directory));
 my @spellbooks;
 for my $spellbook (@spellbook_list) {
   my $text = textify($spellbook);

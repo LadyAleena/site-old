@@ -5,13 +5,13 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
-use Base::Data qw(get_array);
 use Base::Page qw(page story);
 use HTML::Elements qw(table definition_list);
+use Util::Data qw(make_array);
 
 # I want to add character entity pieces.
 
-my $definition_list = get_array( 'file' => ['Miscellany', 'Royal_chess.txt'], 'headings' => ['term','definition'] );
+my $definition_list = make_array( 'file' => ['Miscellany', 'Royal_chess.txt'], 'headings' => ['term', 'definition'] );
 
 my %chess_rows;
 $chess_rows{$_} = [qw(rook knight marshal bishop cardinal queen king cardinal bishop marshal knight rook)] for (1,12);

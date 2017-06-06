@@ -1,4 +1,4 @@
-package Base::Line;
+package Util::Line;
 use strict;
 use warnings;
 use Exporter qw(import);

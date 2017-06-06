@@ -8,9 +8,9 @@ use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
 use Base::Page qw(page);
-use Base::Data qw(make_hash);
 use HTML::Elements qw(section table);
 use HTML::Forms qw(tiny_select);
+use Util::Data qw(make_hash);
 use RolePlaying::WeaponName qw(display_weapon);
 
 my $cgi = CGI::Minimal->new;

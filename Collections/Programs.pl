@@ -1,13 +1,12 @@
 #!/usr/bin/perl
 use strict;
-use warnings;
+use warnings FATAL => qw( all );
 
 use CGI::Carp qw(fatalsToBrowser);
 
-use lib '../files/lib/';
+use lib '../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
-use Util::Sort qw(article_sort);
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 

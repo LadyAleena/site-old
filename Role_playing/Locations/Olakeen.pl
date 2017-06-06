@@ -5,17 +5,17 @@ use warnings FATAL => qw( all );
 use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
-use Base::Data qw(get_array);
 use Base::Page qw(page story);
 use HTML::Elements qw(definition_list);
+use Util::Data qw(make_array);
 
 my $directory = 'Role_playing/Locations/Olakeen';
 my $headings  = ['term','definition'];
 
 my %definition_lists = (
-  'Holidays' => get_array( 'file' => [$directory, 'Holidays.txt'], 'headings' => [qw(term date celebrations)]),
+  'Holidays' => make_array( 'file' => [$directory, 'Holidays.txt'], 'headings' => [qw(term date celebrations)]),
 );
-$definition_lists{$_} = get_array( 'file' => [$directory, "$_.txt"], 'headings' => $headings) for qw(Inns Crime Arena);
+$definition_lists{$_} = make_array( 'file' => [$directory, "$_.txt"], 'headings' => $headings) for qw(Inns Crime Arena);
 
 for my $bare_term (@{$definition_lists{'Holidays'}}) {
   my $term = $bare_term->{'term'};

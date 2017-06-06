@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(html style body main div section article nav header footer h
                  paragraph address anchor img span rparagraph blockquote list definition_list table
                  form fieldset selection input inputs textarea figure noscript);
 
-use Base::Line qw(rline line);
+use Util::Line qw(rline line);
 
 my @ics  = qw(id class style lang);
 my @java = qw(onclick ondblclick onkeypress onkeydown onkeyup onmouseover onmousedown onmouseup onmousemove onmouseout);
@@ -290,7 +290,7 @@ sub definition_list {
       }
     }
 
-    if ($opt->{'definition'}) {
+    if ($item->{'definition'}) {
       my $definition = $item->{'definition'};
       if (ref($definition) eq 'ARRAY') {
         definition($tab + 2, @$definition);
@@ -1388,7 +1388,7 @@ L<HTML::Element> can also do all of the above with objects, but you have to buil
 
 L<HTML::HTML5::Builder> and L<Template::Declare::Tags> also build HTML elements.
 
-There are many other modules out there which can build and print HTML elements, but most are object oriented. I find it easier to deal with functions over objects when printing.
+There are many other modules out there which can build HTML elements, but most are object oriented. I find it easier to deal with functions over objects when printing.
 
 =head1 AUTHOR
 

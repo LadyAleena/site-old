@@ -7,13 +7,16 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 use HTML::Elements qw(anchor img);
+use Util::Data qw(file_directory);
+use Util::Line qw(line);
 
 my @images = ('I Love Lucy');
 my $doc_magic;
+my $directory = file_directory('Movies/Crossovers', 'images');
 for (@images) {
   (my $image = $_) =~ s/ /_/g;
-  my $link = "../../files/images/Movies/Crossovers/$image.png";
-  $doc_magic->{$_} = sub { print anchor( img({ 'src' => $link, 'alt' => $_ }), { 'href' => $link, 'target' => 'new', 'class' => 'inline' }) };
+  my $link = "$directory/$image.png";
+  $doc_magic->{$_} = sub { line(6, anchor( img({ 'src' => $link, 'alt' => $_ }), { 'href' => $link, 'target' => 'new', 'class' => 'inline' }))};
 }
 
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
@@ -233,7 +236,7 @@ from FOX and The CW
 I<Beverly Hills 90120> spun off I<Melrose Place> and I<90210>. I<Melrose Place> spun off I<Models, Inc.> and I<Melrose Place> (2009). 
 3 Weyland-Yutani
 from The WB; UPN; FOX; NBC; BBC One, Two, and Three; CBBC; ITV; and syndicated
-A<Weyland-Yutani|href="Big_fake_companies#Weyland=Yutani"> is the greedy corporation from the I<A<Alien|href="../Movies_by_series.pl?series=Alien">> series which appeared as a client of the evil law firm Wolfram & Hart on I<A<Angel|href="../Movies_by_series.pl?series=Buffy+the+Vampire+Slayer#Angel">> Q<Harm's Way>. Weyland-Yutani's logo and an Imperial shuttle from I<A<Star Wars|href="../Movies_by_series.pl?series=Star+Wars">> appeared on I<A<Firefly|href="../Movies_by_series.pl?series=Firefly">> Q<Serenity>. A Holnist patch from I<The Postman> can be seen on the shoulder of a dock worker on the I<Firefly> film I<Serenity>.
+A<Weyland-Yutani|href="Big_fake_companies#Weyland=Yutani"> is the greedy corporation from the I<A<Alien|href="../Movies_by_series.pl?series=Alien">> series that appeared as a client of the evil law firm Wolfram & Hart on I<A<Angel|href="../Movies_by_series.pl?series=Buffy+the+Vampire+Slayer#Angel">> Q<Harm's Way>. Weyland-Yutani's logo and an Imperial shuttle from I<A<Star Wars|href="../Movies_by_series.pl?series=Star+Wars">> appeared on I<A<Firefly|href="../Movies_by_series.pl?series=Firefly">> Q<Serenity>. A Holnist patch from I<The Postman> can be seen on the shoulder of a dock worker on the I<Firefly> film I<Serenity>.
 A M41A Pulse Rifle and USCM Smart Gun from I<Aliens> appeared on I<Soldier>. The soldier's service record shows he fought in the battles of Tannhauser Gate and Shoulder of Orion from I<Blade Runner>, also the spinners from I<Blade Runner> appeared on I<Soldier>.
 I<A<Alien vs. Predator|href="../Movies_by_series.pl?series=Alien+vs.+Predator">> series serves as a prequel to the I<Alien> series and a sequel to the I<A<Predator|href="../Movies_by_series.pl?series=Predator">> series. (The film I<Predators> is not part of the I<Alien vs. Predator> series.)
 Buffy Summers worked at the Doublemeat Palace owned by Guy Halveston, whose murder was investigated by I<A<Andy Barker, P.I.|href="../Movies_by_series.pl?series=Andy+Barker,+P.I.">> in Q<Fairway, My Lovely>. The Doublemeat Palace was previously mentioned in I<Dexter> Q<Truth Be Told>.

@@ -8,13 +8,13 @@ use File::Spec;
 use Lingua::EN::Inflect qw(NO);
 
 use Base::Path qw(base_path);
-use Base::Data qw(data_file get_hash);
 use Util::Convert qw(idify);
+use Util::Data qw(data_file make_hash);
 
 our $line_magic;
 
 # used in 9 places
-my $inline_links = get_hash( 'file' => ['Base','inline_links.txt'] );
+my $inline_links = make_hash( 'file' => ['Base','inline_links.txt'] );
 
 for my $link (keys %$inline_links) {
   my $anchor = $inline_links->{$link};
@@ -40,7 +40,7 @@ for my $count (0..9) {
 }
 
 # used in 2 places
-my $program_links = get_hash( 'file' => ['Miscellany','Programs.txt'] );
+my $program_links = make_hash( 'file' => ['Miscellany','Programs.txt'] );
 
 for my $link (keys %$program_links) {
   my $link_dest = $program_links->{$link};

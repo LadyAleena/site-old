@@ -9,7 +9,6 @@ use Lingua::EN::Inflect qw(ORD NUMWORDS);
 
 use lib '../../files/lib';
 use Base::Page qw(page);
-use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(section paragraph list form fieldset inputs);
 use RolePlaying::CharacterMutation qw(random_mutations);
 
@@ -22,7 +21,7 @@ page( 'code' => sub {
       The character mutations generator is a tool to use to make your PCs more interesting. The character could be the child of a powerful magic user who used spells too much, or the character may have been experimented on some time in life. This page is devoted to make your characters a little more unique. There are things on here that would make your character more powerful or much weaker.
       All effects are cumulative, and one can be cancelled out by another. There is also the chance nothing could happen.
       I am not particularly happy with some of the sentence structures, but in some cases, it can not be helped.
-      If you are looking for a random name generator, please look into the ^Everchanging Book of Names^.
+      If you are looking for a random name generator, please look into the <a href="http://ebon.pyorre.net">Everchanging Book of Names</a>.
     ');
   form(3, sub {
     fieldset(4, sub {

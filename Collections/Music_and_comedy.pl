@@ -8,7 +8,7 @@ use lib '../files/lib';
 use Base::Page qw(page story);
 use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
-use People qw(people_list);
+use Util::People qw(people_list);
 
 my $doc_magic = {
   'musicians' => sub { list(3, 'u', people_list('Musicians.txt'), { 'class' => 'three' }) },

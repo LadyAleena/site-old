@@ -7,13 +7,13 @@ use IO::All;
 
 use lib '../../files/lib';
 use Base::Page qw(page story);
-use Base::Data qw(file_list data_directory data_file);
 use HTML::Elements qw(pre);
 use Util::Convert qw(textify);
+use Util::Data qw(file_list file_directory data_file);
 use Util::FamilyTree qw(make_tree);
 
 my $directory = 'Fandom/Xanth/Family_trees';
-my @files = file_list(data_directory($directory));
+my @files = file_list(file_directory($directory));
 
 my $doc_magic;
 for my $file (@files) {

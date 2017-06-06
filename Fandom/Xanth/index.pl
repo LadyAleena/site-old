@@ -8,9 +8,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 
-my $doc_magic;
-
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 This is a collection of my notes about the I<Xanth> series I have gathered. There are many major A<families|href="Families.pl"> and A<places|href="Places.pl">. If some of this looks familiar, I started a lot of Xanth related articles on Wikipedia. This page is very incomplete as I am nine novels behind in the series and have not been able to kept up with it.

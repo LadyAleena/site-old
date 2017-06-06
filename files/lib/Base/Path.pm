@@ -10,15 +10,15 @@ my $http   = $ENV{HTTPS} && $ENV{HTTPS} eq 'on' ? 'https' : 'http';
 my %hosts = (
   'localhost' => {
     'path' => '/home/me/Documents/www',
-    'link' => "$http://localhost",
+    'link' => "//localhost",
   },
   'office.home' => {
     'path' => '/home/me/Documents/www',
-    'link' => "$http://office.home",
+    'link' => "//office.home",
   },
   'fantasy.xecu.net' => {
     'path' => '/www/fantasy/public_html',
-    'link' => "$http://fantasy.xecu.net",
+    'link' => "//fantasy.xecu.net",
   }
 );
 

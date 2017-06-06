@@ -14,13 +14,13 @@ use List::Util qw(max);
 use Base::Menu  qw(base_menu);
 use Base::Path  qw(base_path);
 use Base::Style qw(base_stylesheets);
-use Base::Data qw(get_hash);
 use Base::Inline qw(inline);
-use Base::Line qw(line);
 use HTML::Elements qw(html style noscript nav main article section heading paragraph blockquote list table div pre anchor img);
 use Util::Convert qw(idify textify filify searchify);
 use Util::Columns;
+use Util::Data qw(make_hash);
 use Util::ExternalLinks;
+use Util::Line qw(line);
 
 my $full_path = realpath($0);
 my $root_path = base_path('path');
@@ -33,7 +33,7 @@ my @relative_path_split = split(/\//,$relative_path);
 my $styles = base_stylesheets("$root_path/files/css", \@relative_path_split);
 
 sub contact_links {
-  my $contacts = get_hash( 'file' => ['Base', 'other_sites.txt'] );
+  my $contacts = make_hash( 'file' => ['Base', 'other_sites.txt'] );
 
   my @links = ( anchor('Email', { 'href' => 'mailto:fantasy@xecu.net' }) );
   for my $link (sort { lc $a cmp lc $b } keys %$contacts) {

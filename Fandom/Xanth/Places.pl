@@ -7,9 +7,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 
-my $doc_magic;
-
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic }) });
+page( 'code' => sub { story(*DATA) });
 
 __DATA__
 2 Castles

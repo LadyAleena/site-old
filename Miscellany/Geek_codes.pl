@@ -12,12 +12,14 @@ page( 'code' => sub { story(*DATA) });
 __DATA__
 Along with the Geek Code written by Robert Hayden, here are a few additions, use the standard pluses or minuses in each group.
 2 Babylon 5
+These are geek codes for the I<A<Babylon 5|href="../Movies_by_series.pl?series=Babylon+5">> series.
 :| wrap
 : 5   - The entire Babylon 5 franchise
 : 5:s - Babylon 5
 : 5:C - Crusade
 : 5:f - Babylon 5 film series
 2 Buffy the Vampire Slayer
+These are geek codes for the I<A<Buffy the Vampire Slayer|href="../Movies_by_series.pl?series=Buffy+the+Vampire+Slayer">> series.
 :| wrap
 : B   - The entire Buffy the Vampire Slayer franchise
 : B:f - Buffy the Vampire Slayer film
@@ -34,6 +36,7 @@ Along with the Geek Code written by Robert Hayden, here are a few additions, use
 : --    It's Dark Shadows meets Saved by the Bell.
 : ---   They will burn in Hell for meddling in the dark arts.
 2 Star Trek
+These are geek codes for the I<A<Star Trek|href="../Movies_by_series.pl?series=Star+Trek">> franchise.
 :| wrap
 : t   - The entire Star Trek franchise
 : t:o - Star Trek (the original series)
@@ -42,7 +45,9 @@ Along with the Geek Code written by Robert Hayden, here are a few additions, use
 : t:d - Star Trek: Deep Space Nine
 : t:v - Star Trek: Voyager
 : t:e - Enterprise
+: t:r - Star Trek reboot
 2 Stargate
+These are geek codes fore the I<A<Stargate|href="../Movies_by_series.pl?series=Stargate">> franchise.
 :| wrap
 : SG   - The entire Stargate franchise
 : SG:f - Stargate film
@@ -61,6 +66,7 @@ Along with the Geek Code written by Robert Hayden, here are a few additions, use
 : --    Do we really need another MacGyver?
 : ---   When will this show just die!
 2 The X-Files
+These are geek codes for I<A<The X-Files|href="../Movies_by_series.pl?series=The+X-Files">> series and related shows.
 :| wrap
 : X   - The entire The X-Files franchise
 : X:X - The X-files

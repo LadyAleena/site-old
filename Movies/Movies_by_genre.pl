@@ -10,8 +10,8 @@ use lib "../files/lib";
 use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list);
+use Util::Movie qw(display_simple_movie movie genre);
 use Util::Sort qw(article_sort);
-use Movie qw(display_simple_movie movie genre);
 
 my $genres = genre('data');
 

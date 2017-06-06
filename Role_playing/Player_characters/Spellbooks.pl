@@ -8,16 +8,16 @@ use File::Basename;
 use HTML::Entities qw(encode_entities);
 
 use lib '../../files/lib';
-use Base::Data qw(data_directory file_list);
 use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list);
-use Util::Sort qw(name_sort);
 use Util::Convert qw(textify filify);
+use Util::Data qw(file_directory file_list);
+use Util::Sort qw(name_sort);
 use RolePlaying::Spellbook qw(spellbook);
 
 my $directory = 'Role_playing/Player_characters/spellbooks';
-my @selects = sort { name_sort(lc $a,lc $b) } map { textify($_) } file_list(data_directory($directory));
+my @selects = sort { name_sort(lc $a,lc $b) } map { textify($_) } file_list(file_directory($directory));
 
 my $cgi = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('spellbook'),'<>"');

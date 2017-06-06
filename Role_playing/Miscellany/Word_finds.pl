@@ -11,7 +11,7 @@ use lib '../../files/lib';
 use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list span pre);
-use Util::WordFind qw(print_word_find);
+use Util::WordFind qw(word_find);
 
 my %finds = (
   'Monsters Galore' => 'HUMAN',
@@ -27,7 +27,7 @@ page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
   if ($select && $finds{$select}) {
     my $lonely = span($finds{$select}, { 'class' => 'word_find' });
     my $lone = "There is a lone $lonely in there too.";
-    my $word_find = print_word_find($select, $finds{$select});
+    my $word_find = word_find($select, $finds{$select});
 
     section(3, sub {
       pre(3, sub { print $word_find->{'board'} }, { 'class' => 'word_find'});

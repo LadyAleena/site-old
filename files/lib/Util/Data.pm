@@ -1,8 +1,13 @@
-package Base::Data;
+package Util::Data;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(file_list data_directory data_file get_data get_hash get_array alpha_hash alpha_array hash_from_arrays);
+our @EXPORT_OK = qw(
+  file_list file_directory data_file get_data
+  make_hash make_array
+  first_alpha alpha_hash alpha_array
+  hash_from_arrays
+);
 
 use File::Basename;
 use File::Spec;
@@ -17,21 +22,22 @@ sub file_list {
   my @contents = File::Spec->no_upwards(readdir($dir));
   closedir($dir);
   chomp @contents;
-  
+
   @contents = map("$directory/$_", @contents) if $opt->{'full path'} && $opt->{'full path'} =~ /^[yt1]/;
 
   return @contents
 }
 
-sub data_directory {
-  my ($dir) = @_;
+sub file_directory {
+  my ($dir, $type) = @_;
   $dir =~ s/ /_/g;
-  return base_path('data')."/$dir";
+  $type = $type ? $type : 'data';
+  return base_path($type)."/$dir";
 }
 
 sub data_file {
   my ($directory, $filename) = @_;
-  
+
   my $file_name = basename($0);
 
   my $root_path = base_path('path');
@@ -59,31 +65,35 @@ sub data_file {
 }
 
 sub get_data {
-  my ($list, $in, $caller) = @_;
+  my ($list, $in) = @_;
 
   my $out = undef;
   if ($in =~ /^(?:help|options)$/) {
     $out = "Your options are:
       'data' to get the hash
-      'keys' to get a list of keys
-      or a specific key name to get its data";
+      'keys' to get the list of hash keys
+      'key name' to get its data";
   }
-  elsif ($in eq 'data') {
-    $out = $list;
-  }
-  elsif ($in eq 'keys') {
+  elsif (ref($list) eq 'HASH' && $in eq 'keys') {
     $out = [keys %$list];
   }
-  elsif ($list->{$in}) {
+  elsif (ref($list) eq 'HASH' && $list->{$in}) {
     $out = $list->{$in};
   }
+  elsif (ref($list) eq 'ARRAY' && $list->[$in]) {
+    $out = $list->[$in];
+  }
+  elsif ($in eq 'data' || !$in) {
+    $out = $list;
+  }
+  
   return $out;
 }
 
 # Written with rindolf in #perlcafe on freenode; golfed with the help of [GrandFather] of PerlMonks.
 # Changed to accept named parameters to make it prettier to use.
-# The parameters are file and headings.
-sub get_hash {
+# The parameters are file and headings for make_hash and make_array.
+sub make_hash {
   my %opt = @_;
   my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) : $opt{'file'};
   open(my $fh, '<', $file) || die "Can not open $file $!";
@@ -91,7 +101,7 @@ sub get_hash {
   my %hash;
   while (my $line = <$fh>) {
     chomp $line;
-    die "This file is not for Base::Data! Stopped $!" if $line =~ /no Base::Data/i;
+    die "This file is not for Util::Data! Stopped $!" if $line =~ /no Util::Data/i;
     my @headings = $opt{'headings'} ? @{$opt{'headings'}} : ('heading');
     my @values   = split(/\|/,$line);
     my $key = scalar @headings > 1 ? $values[0] : shift @values;
@@ -114,16 +124,15 @@ sub get_hash {
   return \%hash;
 }
 
-sub get_array {
+sub make_array {
   my %opt = @_;
-  my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) :
-             $opt{'file'} ? $opt{'file'} : data_file;
+  my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) : $opt{'file'};
   open(my $fh, '<', $file) || die "Can not open $file $!";
 
   my @array;
   while (my $line = <$fh>) {
     chomp $line;
-    die "This file is not for Base::Data! Stopped $!" if $line =~ /no Base::Data/i;
+    die "This file is not for Util::Data! Stopped $!" if $line =~ /no Util::Data/i;
 
     my %hash;
     my @values = split(/\|/,$line);
@@ -143,7 +152,7 @@ sub first_alpha {
   if ($alpha =~ /^\d/) {
     $alpha = '#';
   }
-  elsif ($alpha =~ /^(\W)/ && $alpha !~ /^Æ/) {
+  elsif ($alpha !~ /^\p{uppercase}/) {
     $alpha = '!';
   }
   else {
@@ -159,7 +168,7 @@ sub alpha_hash {
     my $alpha = first_alpha($org_value);
     $alpha_hash{$alpha}{$org_value} = $org_list->{$org_value};
   }
-  return %alpha_hash;
+  return \%alpha_hash;
 }
 
 sub alpha_array {
@@ -169,7 +178,7 @@ sub alpha_array {
     my $alpha = first_alpha($org_value);
     push @{$alpha_hash{$alpha}}, $org_value;
   }
-  return %alpha_hash;
+  return \%alpha_hash;
 }
 
 # end alpha section

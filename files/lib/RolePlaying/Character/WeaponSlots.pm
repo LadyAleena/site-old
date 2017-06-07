@@ -1,10 +1,10 @@
-package RolePlaying::Character::WeaponSlots;
+package RPG::Character::WeaponSlots;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT = qw(slots_needed);
 
-use RolePlaying::Character::Class qw(convert_class);
+use RPG::Character::Class qw(convert_class);
 
 # part of the Character Building table suite.
 
@@ -78,21 +78,21 @@ sub slots_needed {
 
 =head1 NAME
 
-B<RolePlaying::Character::WeaponSlots> returns the amount of slots for weapon proficiency, specialization, and mastery for your character's class or classes.
+B<RPG::Character::WeaponSlots> returns the amount of slots for weapon proficiency, specialization, and mastery for your character's class or classes.
 
-=head2 Usage
+=head1 DESCRIPTION
 
 To use this module to return the slots needed, use the following. C<slots_needed> is exported by default.
 
-  use RolePlaying::Character::WeaponSlots;
+  use RPG::Character::WeaponSlots;
 
-=head3 Determining class
+=head2 Determining class
 
 For all classes other than B<fighters>, you will only need the base class for your character: B<warrior>, B<rogue>, B<priest>, B<wizard>, or B<psionisist>. If your multiclassed character's classes do not include B<fighter>, you need only two slots to specialize in your weapon but can not go beyond specialization. Only multiclassed B<fighters> can go beyond specialization and into mastery.
 
 C<0> will be returned if the C<skill_level> is not available to your character.
 
-=head3 C<skill_level>
+=head2 C<skill_level>
 
 The options for C<skill_level> are:
 
@@ -102,7 +102,7 @@ The options for C<skill_level> are:
   high mastery
   grand mastery
 
-=head3 C<group>
+=head2 C<group>
 
 The options for C<group> are:
 
@@ -110,7 +110,7 @@ The options for C<group> are:
   tight group
   broad group
     
-=head3 Putting it all together
+=head2 Putting it all together
 
   my $slots = slots_needed(
     class       => $yourclass,

@@ -10,7 +10,7 @@ use Lingua::EN::Inflect qw(ORD NUMWORDS);
 use lib '../../files/lib';
 use Base::Page qw(page);
 use HTML::Elements qw(section paragraph list form fieldset inputs);
-use RolePlaying::CharacterMutation qw(random_mutations);
+use RPG::CharacterMutation qw(random_mutations);
 
 my $cgi        = CGI::Minimal->new();
 my $iterations = $cgi->param('iterations') ? encode_entities($cgi->param('iterations'),'<>"') : 1;

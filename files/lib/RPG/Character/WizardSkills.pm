@@ -1,4 +1,4 @@
-package RolePlaying::Character::WizardSkills;
+package RPG::Character::WizardSkills;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);

@@ -4,8 +4,7 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_gem random_gem_variety random_gem_color random_gem_cut random_metal random_jewelry random_gem_expanded);
 
-# part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(random);
+use Fancy::Rand qw(fancy_rand);
 use Fancy::Join::Grammatical qw(grammatical_join);
 
 use Lingua::EN::Inflect qw(A);
@@ -48,20 +47,20 @@ for my $gems_key (grep(!/metal/,keys %gem_varieties)) {
 }
 
 sub random_gem_variety {
-  my ($user_variety) = @_;
-  my $gem_variety = random(\%gem_varieties, $user_variety);
+  my ($user_variety, $user_additions) = @_;
+  my $gem_variety = fancy_rand(\%gem_varieties, $user_variety, { caller => 'random_gem_variety', additions => $user_additions ? $user_additions : undef });
   return $gem_variety;
 }
 
 sub random_gem_color {
-  my ($user_color) = @_;
-  my $gem_color = random(\%gem_colors, $user_color);
+  my ($user_color, $user_additions) = @_;
+  my $gem_color = fancy_rand(\%gem_colors, $user_color, { caller => 'random_gem_color', additions => $user_additions ? $user_additions : undef });
   return $gem_color;
 }
 
 sub random_gem_cut {
-  my ($user_cut) = @_;
-  my $gem_cut = random(\%gem_cuts, $user_cut);
+  my ($user_cut, $user_additions) = @_;
+  my $gem_cut = fancy_rand(\%gem_cuts, $user_cut, { caller => 'random_gem_cut', additions => $user_additions ? $user_additions : undef });
   return $gem_cut;
 }
 
@@ -136,7 +135,7 @@ sub random_jewelry {
 
 =head1 NAME
 
-B<Random::GemMetalJewelry> returns randoms gems, metals, and jewelry.
+B<Random::GemMetalJewelry> selects random gems, metals, and jewelry.
 
 =head1 AUTHOR
 

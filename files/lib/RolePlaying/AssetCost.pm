@@ -6,11 +6,11 @@ our @EXPORT_OK = qw(assets asset_data);
 
 use Lingua::EN::Inflect qw(ORD);
 
-use Base::Data qw(get_hash);
+use Util::Data qw(make_hash);
 
 my $directory = 'Role_playing/Reference_tables';
 
-my $assets = get_hash( 'file' => [$directory, 'equipment_costs.txt'] );
+my $assets = make_hash( 'file' => [$directory, 'equipment_costs.txt'] );
 
 # Start additional items
 
@@ -30,7 +30,7 @@ for my $type ("a".."z") {
 
 # Start armor
 
-my %material_modifiers = get_hash( 'file' => [$directory, 'armor_materials.txt'] );
+my %material_modifiers = make_hash( 'file' => [$directory, 'armor_materials.txt'] );
 
 sub armor_value {
   my (%opt) = @_;
@@ -94,7 +94,7 @@ sub add_vs {
   }
 }
 
-my %weapons = get_hash(
+my %weapons = make_hash(
   'file' => [$directory, 'Weapons.txt'],
   'headings' => ['Weapon','#AT','Dmg(S/M)','Dmg(L)','Range','Weight','Size','Type','Speed','KO','broad group','tight group','value']
 );

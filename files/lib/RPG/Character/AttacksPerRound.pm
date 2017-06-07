@@ -1,4 +1,4 @@
-package RolePlaying::Character::AttacksPerRound;
+package RPG::Character::AttacksPerRound;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
@@ -6,7 +6,7 @@ our @EXPORT = qw(attacks_per_round);
 
 use POSIX qw(floor);
 
-use RolePlaying::Character::Class qw(convert_class class_level);
+use RPG::Character::Class qw(convert_class class_level);
 
 my %classes;
 $classes{'warrior'}      = 6;
@@ -35,13 +35,13 @@ sub attacks_per_round {
 
 =head1 NAME
 
-B<RolePlaying::Character::AttacksPerRound> returns the amount of attacks characters can make in combat. Most classes receive only 1 attack per round with only B<warriors> and B<chaos wardens> (a new class of my creation) receiving more as they advance in level.
+B<RPG::Character::AttacksPerRound> returns the amount of attacks characters can make in combat. Most classes receive only 1 attack per round with only B<warriors> and B<chaos wardens> (a new class of my creation) receiving more as they advance in level.
 
-=head2 Use
+=head1 DESCRIPTION
 
 To use this module to return the slots needed, use the following. C<attacks_per_round> is exported by default.
 
-  use RolePlaying::Character::AttacksPerRound;
+  use RPG::Character::AttacksPerRound;
 
 =head2 Getting attacks per level
 
@@ -52,7 +52,7 @@ To get the number of attacks per round a character has, you will need the charac
   
 C<attacks_per_round> will return C<1> for any class other than C<warrior> or C<chaos warden> because that is all your character gets. If you see a fraction returned, it means you get the first number of attacks every two rounds.
 
-=head2 Note
+=head1 NOTE
 
 Rules used for C<AttacksPerRound> for B<warriors> levels 13 and below are standard, however the levels beyond it are house rules and not in any book.
 

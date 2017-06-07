@@ -1,4 +1,4 @@
-package Movie;
+package Util::Movie;
 use strict;
 use warnings;
 use Exporter qw(import);
@@ -11,31 +11,31 @@ use List::Util qw(min max first);
 use Encode qw(encode);
 
 use Base::Path qw(base_path);
-use Base::Data qw(data_file get_hash get_data);
 use HTML::Elements qw(footer section heading paragraph list span anchor);
-use Fancy::Join::Defined;
-use Fancy::Join::Grammatical;
+use Fancy::Join::Defined qw(join_defined);
+use Fancy::Join::Grammatical qw(grammatical_join);
 use Util::Columns;
 use Util::Convert qw(filify textify idify searchify);
+use Util::Data qw(data_file make_hash get_data);
 use Util::ExternalLinks;
-use People qw(people_list);
+use Util::People qw(people_list);
 
-my $movies = get_hash(
+my $movies = make_hash(
   'file' => ['Movies','movies.txt'],
   'headings' => ['title','start year','end year',qw(media format+ Wikipedia allmovie IMDb TV.com Flixster genre+ source company)],
 );
 
-my $seriess = get_hash(
+my $seriess = make_hash(
   'file' => ['Movies','series.txt'],
   'headings' => [qw(title Wikipedia allmovie programs+), 'just like'],
 );
 
-my $franchises = get_hash(
+my $franchises = make_hash(
   'file' => ['Movies','franchises.txt'],
   'headings' => [qw(title Wikipedia allmovie programs+), 'just like'],
 );
 
-my $crossovers = get_hash(
+my $crossovers = make_hash(
   'file' => ['Movies','crossovers.txt'],
   'headings' => [qw(title crossovers+)],
 );
@@ -617,6 +617,112 @@ sub tv_season {
   };
 }
 
+sub print_movie {
+  my ($tab, $in_heading, $in_title, $in_series) = @_;
+  die "You put in just the movie name didn't you, so I stopped" if ($tab !~ /\d+/ || $in_heading !~ /\d+/);
+  my $heading = $in_heading ? $in_heading > 5 ? die('print_program heading level can not be above 5!') : $in_heading : 1;
+  my $program = $in_title;
+
+  my $movie       = movie($program, 'print_movie');
+  my $movie_id    = idify($movie->{'title'});
+  my $movie_text  = textify($movie->{'title'});
+  my $counts_text = counts($movie) ? '('.counts($movie).')'  : undef;
+  my $movie_links = movie_links($movie);
+
+  my $seasons  = $movie->{'seasons'} ? $movie->{'seasons'} : undef;
+  my $movie_is    = display_movie($movie, { 'crossover' => 1 });
+
+  my $actor_file  = 'Actors_in_'.filify($program).'.txt';
+  my $people      = people_list($actor_file) ? people_list($actor_file) : undef;
+
+  section($tab, sub {
+    $tab += 2;
+    paragraph($tab, $movie_links, { 'style' => 'float: right' }) if $movie_links;
+    paragraph($tab, join_defined(' ', (years_running($movie), $counts_text))) if $movie->{'media'} eq 'tv';
+    paragraph($tab, $movie_is);
+
+    if ($seasons) {
+      if (scalar keys %{$seasons} > 1) {
+        my @links = map(nav_link($in_series ? $program : undef, $_), sort keys %{$seasons});
+        unshift @links, anchor('Actors', { 'href' => "#actors_in_$movie_id" }) if ($people && !$in_series);
+        my $cols = number_of_columns(4, scalar @links, 1);
+        list($tab, 'u', \@links, { 'class' => "season_list $cols" });
+      }
+      if ($people && !$in_series) {
+        my $cols = number_of_columns(3, scalar @$people, 1);
+        heading($tab, $heading + 1, 'People', { 'id' => "actors_in_$movie_id" });
+        list   ($tab + 1, 'u', $people, { 'class' => "actor_list $cols" });
+      }
+      my $next_heading = $movie->{'counts'}{'season'} > 1 || $people ? $heading + 1 : undef;
+      for my $season (sort keys %{$seasons}) {
+        my $in_season = tv_season($next_heading, $season, $program, $in_series);
+        heading  ($tab, @{$in_season->{'heading'}})  if $in_season->{'heading'};
+        paragraph($tab + 1, $in_season->{'counts'})  if $in_season->{'counts'};
+        list     ($tab + 1, @{$in_season->{'list'}}) if $in_season->{'list'};
+      }
+    }
+    $tab -= 2;
+  }, { 
+    'heading' => $heading  > 1 ? [2, $movie_text, { 'id' => $movie_id, 'class' => 'program' }] : undef,
+    'footer'  => $heading == 1 ? [sub {
+      paragraph($tab + 1, like($movie_text), { 'class' => 'like' });
+      paragraph($tab + 1, "The episode lists would have been a pain to put together without $epgd.")
+    }] : undef,
+  });
+}
+
+sub print_series {
+  my ($tab, $in_heading, $in_title) = @_;
+  die "You put in just the series name didn't you, so I stopped" if ($tab !~ /\d+/ || $in_heading !~ /\d+/);
+  my $heading      = $in_heading ? $in_heading > 4 ? die('print_series heading level can not be above 4!') : $in_heading : 1;
+  my $series       = $in_title;
+
+  my $local_series = series($series, 'print_series');
+  my $series_id    = idify($series);
+  my $series_text  = textify($series);
+  my $counts_text  = counts($local_series);
+  my $movie_links  = movie_links($local_series);
+
+  my $counts       = $local_series->{'counts'};
+  my $programs     = $local_series->{'programs'};
+
+  my $actor_file   = 'Actors_in_'.filify($series).'.txt';
+  my $people       = people_list($actor_file) ? people_list($actor_file) : undef;
+  
+  section($tab, sub {
+    paragraph($tab + 1, $movie_links, { 'style' => 'float: right'}) if $movie_links;
+    paragraph($tab + 1, years_running($local_series)." ($counts_text)");
+    if (( $counts->{'tv'} && $counts->{'tv'} > 0) || (($counts->{'film'} || 0) + ($counts->{'miniseries'} || 0)) > 10) {
+      my @links = map(nav_link($_), @$programs);
+      unshift @links, anchor('Actors', { 'href' => "#actors_in_$series_id" }) if $people;
+      my $cols = number_of_columns(3, scalar @links, 1);
+      list($tab + 1, 'u', \@links, { 'class' => "program_list $cols" });
+    }
+  });
+  section($tab, sub {
+    my $cols = number_of_columns(3, scalar @$people, 1);
+    list($tab + 2, 'u', $people, { 'class' => "actor_list $cols" });
+  }, { 'heading' => [$heading + 1 , 'Actors', { 'id' => "actors_in_$series_id" }]}) if $people;
+
+  if ($counts->{'tv'}) {
+    print_movie($tab, $heading + 1, $_, $series) for @$programs;
+  }
+  else {
+    my $section_heading = $counts->{'film'} && $counts->{'miniseries'} ? 'Films and miniseries' :
+                          $counts->{'film'} ? 'Films' : $counts->{'miniseries'} ? 'Miniseries' : undef;
+    section($tab, sub {
+      paragraph($tab, display_movie(movie($_, 'print_series'), { 'crossover' => 1, 'links' => 1 })) for @$programs;
+    }, { 'heading' => $section_heading ? [$heading + 1, $section_heading] : undef });
+  }
+
+  if ( $heading == 1 ) {
+    footer($tab, sub {
+      paragraph($tab + 1, like($series_text, 1, $local_series->{'just like'}), { 'class' => 'like' });
+      paragraph($tab + 1, "The episode lists would have been a pain to put together without $epgd.") if $counts->{'tv'};
+    });
+  }
+}
+
 sub print_franchise {
   my ($tab, $in_heading, $in_title) = @_;
   die "You put in just the franchise name didn't you, so I stopped" if ($tab !~ /\d+/ || $in_heading !~ /\d+/);
@@ -653,108 +759,6 @@ sub print_franchise {
       paragraph($tab + 1, "The episode lists would have been a pain to put together without $epgd.") if $counts->{'tv'};
     });
   }
-}
-
-sub print_series {
-  my ($tab, $in_heading, $in_title) = @_;
-  die "You put in just the series name didn't you, so I stopped" if ($tab !~ /\d+/ || $in_heading !~ /\d+/);
-  my $heading      = $in_heading ? $in_heading > 4 ? die('print_series heading level can not be above 4!') : $in_heading : 1;
-  my $series       = $in_title;
-
-  my $local_series = series($series, 'print_series');
-  my $counts       = $local_series->{'counts'};
-  my $programs     = $local_series->{'programs'};
-
-  my $series_id    = idify($series);
-  my $series_text  = textify($series);
-  my $counts_text  = counts($local_series);
-  my $movie_links  = movie_links($local_series);
-
-  my $actor_file   = 'Actors_in_'.filify($series).'.txt';
-  my $people       = people_list($actor_file) ? people_list($actor_file) : undef;
-  
-  section($tab, sub {
-    paragraph($tab + 1, $movie_links, { 'style' => 'float: right'}) if $movie_links;
-    paragraph($tab + 1, years_running($local_series)." ($counts_text)");
-    if (( $counts->{'tv'} && $counts->{'tv'} > 0) || (($counts->{'film'} || 0) + ($counts->{'miniseries'} || 0)) > 10) {
-      my @links = map(nav_link($_), @$programs);
-      unshift @links, anchor('Actors', { 'href' => "#actors_in_$series_id" }) if $people;
-      my $cols = number_of_columns(3, scalar @links, 1);
-      list($tab + 1, 'u', \@links, { 'class' => "program_list $cols" });
-    }
-  });
-  section($tab, sub {
-    my $cols = number_of_columns(3, scalar @$people, 1);
-    list($tab + 2, 'u', $people, { 'class' => "actor_list $cols" });
-  }, { 'heading' => [$heading + 1 , 'Actors', { 'id' => "actors_in_$series_id" }]}) if $people;
-  if ($counts->{'tv'}) {
-    print_movie($tab, $heading + 1, $_, $series) for @$programs;
-  }
-  else {
-    my $section_heading = $counts->{'film'} && $counts->{'miniseries'} ? 'Films and miniseries' :
-                          $counts->{'film'} ? 'Films' : $counts->{'miniseries'} ? 'Miniseries' : undef;
-    section($tab, sub {
-      paragraph($tab, display_movie(movie($_, 'print_series'), { 'crossover' => 1, 'links' => 1 })) for @$programs;
-    }, { 'heading' => $section_heading ? [$heading + 1, $section_heading] : undef });
-  }
-  if ( $heading == 1 ) {
-    footer($tab, sub {
-      paragraph($tab + 1, like($series_text, 1, $local_series->{'just like'}), { 'class' => 'like' });
-      paragraph($tab + 1, "The episode lists would have been a pain to put together without $epgd.") if $counts->{'tv'};
-    });
-  }
-}
-
-sub print_movie {
-  my ($tab, $in_heading, $in_title, $in_series) = @_;
-  die "You put in just the movie name didn't you, so I stopped" if ($tab !~ /\d+/ || $in_heading !~ /\d+/);
-  my $heading = $in_heading ? $in_heading > 5 ? die('print_program heading level can not be above 5!') : $in_heading : 1;
-  my $program = $in_title;
-
-  my $movie   = movie($program, 'print_movie');
-  my $id      = idify($movie->{'title'});
-  my $display = textify($movie->{'title'});
-  my $seasons = $movie->{'seasons'} ? $movie->{'seasons'} : undef;
-
-  my $counts_text = counts($movie) ? '('.counts($movie).')'  : undef;
-  my $movie_is    = display_movie($movie, { 'crossover' => 1 });
-  my $movie_links = movie_links($movie);
-  my $actor_file  = 'Actors_in_'.filify($program).'.txt';
-  my $people      = people_list($actor_file) ? people_list($actor_file) : undef;
-
-  section($tab, sub {
-    $tab += $heading > 1 ? 2 : 3;
-    paragraph($tab, $movie_links, { 'style' => 'float: right' }) if $movie_links;
-    paragraph($tab, join_defined(' ', (years_running($movie), $counts_text))) if $movie->{'media'} eq 'tv';
-    paragraph($tab, $movie_is);
-
-    if ($seasons) {
-      if (scalar keys %{$seasons} > 1) {
-        my @links = map(nav_link($in_series ? $program : undef, $_), sort keys %{$seasons});
-        unshift @links, anchor('Actors', { 'href' => "#actors_in_$id" }) if ($people && !$in_series);
-        my $cols = number_of_columns(4, scalar @links, 1);
-        list($tab, 'u', \@links, { 'class' => "season_list $cols" });
-      }
-      if ($people && !$in_series) {
-        my $cols = number_of_columns(3, scalar @$people, 1);
-        heading($tab, $heading + 1, 'People', { 'id' => "actors_in_$id" });
-        list   ($tab + 1, 'u', $people, { 'class' => "actor_list $cols" });
-      }
-      my $next_heading = $movie->{'counts'}{'season'} > 1 || $people ? $heading + 1 : undef;
-      for my $season (sort keys %{$seasons}) {
-        my $in_season = tv_season($next_heading, $season, $program, $in_series);
-        heading  ($tab, @{$in_season->{'heading'}})  if $in_season->{'heading'};
-        paragraph($tab + 1, $in_season->{'counts'})  if $in_season->{'counts'};
-        list     ($tab + 1, @{$in_season->{'list'}}) if $in_season->{'list'};
-      }
-    }
-  }, { 
-    'heading' => $heading  > 1 ? [2, $display, { 'id' => $id, 'class' => 'program' }] : undef,
-    'footer'  => $heading == 1 ? [sub {
-      paragraph($tab + 1, like($display), { 'class' => 'like' });
-      paragraph($tab + 1, "The episode lists would have been a pain to put together without $epgd.")
-    }] : undef,
-  });
 }
 
 1;

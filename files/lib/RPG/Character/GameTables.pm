@@ -1,16 +1,16 @@
-package RolePlaying::Character::GameTables
+package RPG::Character::GameTables
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
 our @EXPORT_OK = qw(game_tables);
 
-use RolePlaying::Character::GameTable::THAC0 qw(THAC0_table_rows);
-use RolePlaying::Character::GameTable::ArmorClass qw(armor_class_table_rows);
-use RolePlaying::Character::GameTable::SavingThrows qw(saving_throw_table_rows);
-use RolePlaying::Character::GameTable::RogueSkills qw(rogue_skills_table_rows);
-use RolePlaying::Character::GameTable::SpellProgression qw(spell_progression_table_rows);
-use RolePlaying::Character::GameTable::Psionics qw(psionics_table_rows);
-use RolePlaying::Character::GameTable::TurningUndead qw(turning_undead_table_rows);
+use RPG::Character::GameTable::THAC0 qw(THAC0_table_rows);
+use RPG::Character::GameTable::ArmorClass qw(armor_class_table_rows);
+use RPG::Character::GameTable::SavingThrows qw(saving_throw_table_rows);
+use RPG::Character::GameTable::RogueSkills qw(rogue_skills_table_rows);
+use RPG::Character::GameTable::SpellProgression qw(spell_progression_table_rows);
+use RPG::Character::GameTable::Psionics qw(psionics_table_rows);
+use RPG::Character::GameTable::TurningUndead qw(turning_undead_table_rows);
 
 sub game_tables {
   my ($character) = @_;

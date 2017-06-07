@@ -1,4 +1,4 @@
-package RolePlaying::SpellList;
+package RPG::Spell::List;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);

@@ -4,7 +4,7 @@ use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_body_function random_body_functions);
 
-use RolePlaying::Random qw(random);
+use Fancy::Rand qw(fancy_rand tiny_rand);
 use Fancy::Join::Grammatical qw(grammatical_join);
 
 my %body_functions = (
@@ -20,7 +20,7 @@ my %body_functions = (
     'is unable to remember the past after sleeping'
   ],
   'bathe' => [
-    'hardly stops bathing',
+    'can not stop bathing',
     'needs to bathe twice as often',
     'needs to bathe half as often',
     'does not need to bathe',
@@ -55,21 +55,21 @@ my %body_functions = (
 );
 
 sub random_body_function {
-  my ($user_function) = @_;
-  
+  my ($user_function, $user_additions) = @_;
+
   my $body_function;
   if (ref($user_function)) {
     my @functions;
     for my $function (@$user_function) {
-      push @functions, random(\%body_functions, $function, { additions => [map("is ${_}active after $user_function", qw(hypo hyper))] });
+      my $functioning = $function eq 'bathe' ? 'bathing' : $function.'ing';
+      push @functions, fancy_rand(\%body_functions, $function, { caller => 'random_body_function', additions => [map("is ${_}active after $functioning", qw(hypo hyper))] });
     }
-    
-    $body_function = grammatical_join('and',@functions);
+    $body_function = grammatical_join('and', @functions);
   }
   else {
-    $body_function = random(\%body_functions, $user_function, { 'caller' => (caller(0))[3] });
+    $body_function = fancy_rand(\%body_functions, $user_function, { caller => 'random_body_function', additions => $user_additions ? $user_additions : undef });
   }
-  
+ 
   return $body_function;
 }
 
@@ -91,9 +91,19 @@ sub random_body_functions {
     ['bathe','eat','drink'],
     ['sleep','bathe','eat','drink']
   );
-  my $functions = random_body_function($body_functions[rand @body_functions]);
+  my $functions = random_body_function(tiny_rand(@body_functions));
   
   return $functions;
 }
+
+=head1 NAME
+
+B<Random::Body::Functions> selects random body functions.
+
+=head1 AUTHOR
+
+Lady Aleena
+
+=cut
 
 1;

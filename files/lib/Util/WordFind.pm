@@ -2,20 +2,20 @@ package Util::WordFind;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(print_word_find);
+our @EXPORT_OK = qw(word_find);
 
 use CGI::Carp qw(fatalsToBrowser);
 use File::Basename;
 use IO::All;
 
-use Base::Data qw(data_file);
 use Util::Convert qw(filify);
+use Util::Data qw(data_file);
 
 my $lone_gender = qw(He She)[rand 2];
 my $lone_adj = qw(him her)[rand 2];
 my $lone_sent = ("$lone_gender may need saving! :o","Try to find $lone_adj please! Have fun!")[rand 2];
 
-sub print_word_find {
+sub word_find {
   my ($word_find, $lone) = @_;
   my $word_find_file = filify($word_find).'.txt';
 

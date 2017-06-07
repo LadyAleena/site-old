@@ -1,4 +1,4 @@
-package RolePlaying::Character::GameTable::ArmorClass;
+package RPG::Character::GameTable::ArmorClass;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);

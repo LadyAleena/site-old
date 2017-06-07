@@ -4,8 +4,8 @@ use warnings; # FATAL => qw( all );
 use Exporter qw(import);
 our @EXPORT_OK = qw(monster_info);
 
-use Base::Data qw(data_file make_hash);
 use Util::Convert qw(filify);
+use Util::Data qw(data_file make_hash);
 
 my @selects = ('Chaos elemental-kin', 'Daemar', 'Dark centaur', 'Demi-lycanthrope', 'Dragod', 'Eldent', 'Gobpry', 'Phase elemental', 'Rainbow dragonette', 'Throglin', 'Tralg', 'Trobold', 'Twarg', 'Zarden');
 my @monster_headings = (

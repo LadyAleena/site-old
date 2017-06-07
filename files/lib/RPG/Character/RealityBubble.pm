@@ -1,4 +1,4 @@
-package RolePlaying::Character::RealityBubble;
+package RPG::Character::RealityBubble;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -6,7 +6,7 @@ our @EXPORT = qw(reality_bubble);
 
 use List::Util qw(sum);
 
-use RolePlaying::Character::Class qw(convert_class class_level);
+use RPG::Character::Class qw(convert_class class_level);
 
 sub reality_bubble {
   my ($class,$opt) = @_;

@@ -1,4 +1,4 @@
-package RolePlaying::RacialLanguages;
+package RPG::RacialLanguages;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
@@ -23,11 +23,11 @@ sub racial_languages {
 
 =head1 NAME
 
-B<RolePlaying::RacialLanguages> returns the racial languages for player characters.
+B<RPG::RacialLanguages> returns the racial languages for player characters.
 
 =head1 SYNOPSIS
 
-  use RolePlaying::RacialLanguages qw(get_racial_languages);
+  use RPG::RacialLanguages qw(get_racial_languages);
   
   my $racial_languages = racial_languages('gnome');
   

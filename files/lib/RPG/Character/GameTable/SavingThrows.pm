@@ -1,4 +1,4 @@
-package RolePlaying::Character::GameTable::SavingThrows;
+package RPG::Character::GameTable::SavingThrows;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(saving_throws get_multiclass_saving_throws saving_throw_tabl
 
 use List::Util qw(min max);
 
-use RolePlaying::Character::Class qw(convert_class class_level);
+use RPG::Character::Class qw(convert_class class_level);
 
 # part of the Character Building table suite.
 

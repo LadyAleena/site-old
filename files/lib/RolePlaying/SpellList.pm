@@ -7,11 +7,11 @@ our @EXPORT_OK = qw(spell_data);
 use CGI::Carp qw(fatalsToBrowser);
 use IO::All;
 
-use Base::Data qw(data_file get_hash);
 use Util::Convert qw(filify);
+use Util::Data qw(data_file make_hash);
 
 my @headings = (qw(name school level range duration), 'area of effect', 'components', 'casting time', 'saving throw', 'description');
-my $spells = get_hash( 'file' => ['Role_playing','Spell_list.txt'], 'headings' => \@headings );
+my $spells = make_hash( 'file' => ['Role_playing','Spell_list.txt'], 'headings' => \@headings );
 
 sub spell_data {
   my ($spell) = @_;

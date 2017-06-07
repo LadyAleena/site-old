@@ -5,10 +5,10 @@ use Exporter qw(import);
 our @EXPORT = qw(external_links);
 our @EXPORT_OK = qw(external_link);
 
-use Base::Data qw(get_hash);
 use HTML::Elements qw(span anchor);
+use Util::Data qw(make_hash);
 
-my $external_links = get_hash( 'file' => ['Util','external_links.txt'], 'headings' => ['site','base link','after link'] );
+my $external_links = make_hash( 'file' => ['Util','external_links.txt'], 'headings' => ['site','base link','after link'] );
 
 sub external_link {
   my ($site, $page_link, $link_title) = @_;

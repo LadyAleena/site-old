@@ -1,4 +1,4 @@
-package RolePlaying::AssetCost;
+package RPG::AssetCost;
 use strict;
 use warnings;
 use Exporter qw(import);

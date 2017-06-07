@@ -1,4 +1,4 @@
-package RolePlaying::WeaponName;
+package RPG::WeaponName;
 use strict;
 use warnings;
 use Exporter qw(import);

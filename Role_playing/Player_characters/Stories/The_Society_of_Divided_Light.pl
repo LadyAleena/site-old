@@ -8,7 +8,7 @@ use lib "../../../files/lib";
 use Base::Page qw(page story passage);
 use Base::LineMagic qw($line_magic);
 use HTML::Elements qw(heading list);
-use RolePlaying::SpellList qw(spell_data);
+use RPG::Spell::List qw(spell_data);
 
 my $doc_magic = {
   'spells' => sub {

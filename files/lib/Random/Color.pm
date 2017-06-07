@@ -4,8 +4,8 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_color);
 
-use Base::Data qw(data_file);
 use Fancy::Rand qw(fancy_rand);
+use Util::Data qw(data_file);
 
 open(my $Crayola_fh, '<', data_file('Colors', 'Crayola_crayon_colors.txt')) || die "Can not open Crayola_crayon_colors.txt, $!";
 my @Crayola_crayons = map { chomp($_); $_ } <$Crayola_fh>;

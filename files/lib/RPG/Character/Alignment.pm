@@ -1,4 +1,4 @@
-package RolePlaying::Character::Alignment;
+package RPG::Character::Alignment;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
@@ -23,13 +23,13 @@ sub expand_alignment {
 
 =head1 NAME
 
-B<RolePlaying::Character::Alignment> generates random and expands alignments for AD&D 2nd Edition.
+B<RPG::Character::Alignment> generates random and expands alignments for AD&D 2nd Edition.
 
 =head1 SYNOPSIS
 
 To use this module to expand alignment abbreviations from their two character forms.
 
-  use RolePlaying::Character::Alignment qw(expand_alignment);
+  use RPG::Character::Alignment qw(expand_alignment);
 
 Samples...
 

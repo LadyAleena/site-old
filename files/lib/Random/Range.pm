@@ -4,8 +4,7 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_range random_radius);
 
-# part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(random);
+use Fancy::Rand qw(fancy_rand);
 
 my %units = (
   'imperial' => [qw(in ft yd mi)],
@@ -13,7 +12,8 @@ my %units = (
 );
 
 sub random_unit {
-  my $unit = random(\%units, @_);
+  my ($user_unit, $user_additions) = @_;
+  my $unit = fancy_rand(\%units, $user_unit, { caller => 'random_unit', additions => $user_additions ? $user_additions : undef });
   return $unit;
 }
 
@@ -47,7 +47,7 @@ sub random_radius {
 
 =head1 NAME
 
-B<Random::Range> generates random ranges or radiuses.
+B<Random::Range> selects random ranges or radiuses.
 
 =head1 SYNOPSIS
 
@@ -57,13 +57,13 @@ To use this module, please enter the following.
 
 When you want to generate a random range with this module, you can choose from the following.
 
-	random_range('simple','imperial')    # generates 1, 5, 10, 20, 50, or 100 in, ft, yd, or mi.
-	random_range('simple','metric')      # generates 1, 5, 10, 20, 50, or 100 cm, dm, m, or km.
-	random_range('simple','your choice') # generates 1, 5, 10, 20, 50, or 100 and your measurement choice.
-	random_range('touch','imperial')     # generates 1, 5, 10, 20, 50, or 100 in, ft, yd, or mi or touch.
-	random_range('touch','metric')       # generates 1, 5, 10, 20, 50, or 100 cm, dm, m, or km or touch.
-	random_range('touch','your choice')  # generates 1, 5, 10, 20, 50, or 100 and your measurement choice or touch.
-  
+	random_range('simple','imperial')    # selects 1, 5, 10, 20, 50, or 100 in, ft, yd, or mi.
+	random_range('simple','metric')      # selects 1, 5, 10, 20, 50, or 100 cm, dm, m, or km.
+	random_range('simple','your choice') # selects 1, 5, 10, 20, 50, or 100 and your measurement choice.
+	random_range('touch','imperial')     # selects 1, 5, 10, 20, 50, or 100 in, ft, yd, or mi or touch.
+	random_range('touch','metric')       # selects 1, 5, 10, 20, 50, or 100 cm, dm, m, or km or touch.
+	random_range('touch','your choice')  # selects 1, 5, 10, 20, 50, or 100 and your measurement choice or touch.
+
 You can substitute C<random_range> with C<random_radius> to get some extra text with the returned value.
 
 =head1 AUTHOR

@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(all_abilities ability_score_table game_effect);
 
 use List::Util qw(max);
 
-use Base::Data qw(make_hash);
+use Util::Data qw(make_hash);
 
 my @abilities = qw(strength dexterity constitution intelligence wisdom charisma);
 

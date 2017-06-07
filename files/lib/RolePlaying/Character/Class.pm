@@ -6,7 +6,7 @@ our @EXPORT_OK = qw(convert_class class_level player_classes);
 
 use Lingua::EN::Inflect qw(ORD);
 
-use Base::Data qw(make_hash);
+use Util::Data qw(make_hash);
 
 my @specialists = qw(enchanter illusionist invoker necromancer);
 my @elementalists = qw(pyromancer hydromancer geomancer aeromancer);

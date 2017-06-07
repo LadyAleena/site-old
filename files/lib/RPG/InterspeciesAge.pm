@@ -1,4 +1,4 @@
-package RolePlaying::InterspeciesAge;
+package RPG::InterspeciesAge;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);

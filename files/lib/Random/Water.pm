@@ -4,8 +4,7 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_water);
 
-# part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(random);
+use Fancy::Rand qw(fancy_rand);
 
 my %waters = (
   'running'  => [qw(spring streamlet rivulet run brook creek stream estuary fjord river)],
@@ -14,14 +13,14 @@ my %waters = (
 );
 
 sub random_water {
-  my ($user_water) = @_;
-  my $water = random(\%waters, $user_water);
+  my ($user_water, $user_additions) = @_;
+  my $water = fancy_rand(\%waters, $user_water, { caller => 'random_water', additions => $user_additions ? $user_additions : undef });
   return $water;
 }
 
 =head1 NAME
 
-B<Random::Water> returns random running or standing water and precipitation.
+B<Random::Water> selects random running or standing waters and precipitation.
 
 =head1 AUTHOR
 

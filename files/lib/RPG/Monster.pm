@@ -1,4 +1,4 @@
-package RolePlaying::Monster;
+package RPG::Monster;
 use strict;
 use warnings; # FATAL => qw( all );
 use Exporter qw(import);

@@ -98,7 +98,7 @@ sub random_body_functions {
 
 =head1 NAME
 
-B<Random::Body::Functions> selects random body functions.
+B<Random::Body::Function> selects random body functions.
 
 =head1 AUTHOR
 

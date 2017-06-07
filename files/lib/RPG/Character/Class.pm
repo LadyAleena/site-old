@@ -1,4 +1,4 @@
-package RolePlaying::Character::Class;
+package RPG::Character::Class;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);

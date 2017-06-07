@@ -1,10 +1,10 @@
-package RolePlaying::Character::GameTable::RogueSkills;
+package RPG::Character::GameTable::RogueSkills;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);
 our @EXPORT_OK = qw(thief_skills bard_skills rogue_skills rogue_skills_table_rows);
 
-use RolePlaying::Character::Class qw(class_level);
+use RPG::Character::Class qw(class_level);
 
 # part of the Character Building table suite.
 

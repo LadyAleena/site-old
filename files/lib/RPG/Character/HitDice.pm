@@ -1,4 +1,4 @@
-package RolePlaying::Character::HitDice;
+package RPG::Character::HitDice;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
@@ -7,7 +7,7 @@ our @EXPORT_OK = qw(hit_dice roll_hit_points);
 use Games::Dice qw(roll);
 use POSIX qw(ceil);
 
-use RolePlaying::Character::Class qw(convert_class class_level);
+use RPG::Character::Class qw(convert_class class_level);
 
 my %classes;
 while (my $line = <DATA>) {
@@ -60,21 +60,19 @@ sub roll_hit_points {
   return $roll;
 }
 
-1;
-
 =head1 NAME
 
-B<RolePlaying::Character::HitDice> returns the die type and amount of dice needed to roll the hit points for your character with C<hit_dice> or just rolls your character's hit points with C<roll_hit_points>.
+B<RPG::Character::HitDice> returns the die type and amount of dice needed to roll the hit points for your character with C<hit_dice> or just rolls your character's hit points with C<roll_hit_points>.
 
-=head2 Usage
+=head1 DESCRIPTION
 
 For both C<hit_dice> and C<roll_hit_points>, you will need your chracter's class or classes and level or experience points. Neither of the two functions are exported by default, so you will have to call them.
 
-  use RolePlaying::Character::HitDice qw(hit_dice roll_hit_points);
+  use RPG::Character::HitDice qw(hit_dice roll_hit_points);
 
 The classes are C<warrior>, C<rogue>, C<priest>, C<wizard>, C<psionisist>, C<chaos warden>, or C<theopsyelementalist>. The latter two classes are my creations.
 
-=head3 C<hit_dice>
+=head2 C<hit_dice>
 
   hit_dice($class, { level => $level });
 
@@ -83,7 +81,7 @@ or
   hit_dice($class, { experience => $xp });
   hit_dice([$class1,$class2], { experience => $xp});
   
-=head3 C<roll_hit_points>
+=head2 C<roll_hit_points>
 
   roll_hit_points($class, { level => $level });
 
@@ -97,6 +95,8 @@ or
 Lady Aleena
 
 =cut
+
+1;
 
 __DATA__
 warrior|d10|9|3

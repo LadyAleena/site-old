@@ -11,10 +11,10 @@ use lib '../../files/lib';
 use Base::Page qw(page);
 use HTML::Elements qw(section list table span);
 use Fancy::Join::Defined qw(join_defined);
+use RPG::Character::Alignment qw(expand_alignment);
 use Util::Convert qw(idify);
 use Util::Data qw(make_hash);
 use Util::Number qw(commify);
-use RolePlaying::Character::Alignment qw(expand_alignment);
 
 my $player_characters = make_hash(
   'file' => ['Role_playing','Player_characters.txt'],

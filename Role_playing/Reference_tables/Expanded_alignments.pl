@@ -7,7 +7,7 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 use HTML::Elements qw(table);
-use RolePlaying::Character::Alignment qw(expand_alignment);
+use RPG::Character::Alignment qw(expand_alignment);
 
 my @y_axis = qw(L+ L L(N) -C N(L) N N(C) -L C(N) C C+);
 my @x_axis = qw(G+ G G(N) -E N(G) N N(E) -G E(N) E E+);

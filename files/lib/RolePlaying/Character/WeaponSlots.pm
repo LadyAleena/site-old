@@ -113,10 +113,10 @@ The options for C<group> are:
 =head3 Putting it all together
 
   my $slots = slots_needed(
-    class => $yourclass,
-    multiclass => $number_of_classes,
+    class       => $yourclass,
+    multiclass  => $number_of_classes,
     skill_level => $level_of_proficiency,
-    group => $weapon_group,
+    group       => $weapon_group,
   );
 
 =head1 NOTES

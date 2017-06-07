@@ -4,8 +4,7 @@ use warnings FATAL => qw(all);
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_title);
 
-# part of the 'random' suite from RolePlaying::Random
-use RolePlaying::Random qw(random);
+use Fancy::Rand qw(fancy_rand);
 
 my %titles = (
   'noble male'   => [qw(emperor king prince archduke duke count viscount baron squire master lord)],
@@ -16,14 +15,14 @@ my %titles = (
 );
 
 sub random_title {
-  my ($user_title) = @_;
-  my $title = random(\%titles, $user_title);
+  my ($user_title, $user_additions) = @_;
+  my $title = fancy_rand(\%titles, $user_title, { caller => 'random_title', additions => $user_additions ? $user_additions : undef });
   return $title;
 }
 
 =head1 NAME
 
-B<Random::Title> generates random titles given to people.
+B<Random::Title> selects random titles given to people.
 
 =head1 AUTHOR
 

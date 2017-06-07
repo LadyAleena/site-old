@@ -11,7 +11,7 @@ use Base::Page qw(page);
 use HTML::Elements qw(section table);
 use HTML::Forms qw(tiny_select);
 use Util::Data qw(make_hash);
-use RolePlaying::WeaponName qw(display_weapon);
+use RPG::WeaponName qw(display_weapon);
 
 my $cgi = CGI::Minimal->new;
 my $broad = $cgi->param('broad') ? encode_entities($cgi->param('broad'),'<>"') : '';

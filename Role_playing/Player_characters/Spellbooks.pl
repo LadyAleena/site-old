@@ -11,10 +11,10 @@ use lib '../../files/lib';
 use Base::Page qw(page);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list);
+use RPG::Spell::Book qw(spellbook);
 use Util::Convert qw(textify filify);
 use Util::Data qw(file_directory file_list);
 use Util::Sort qw(name_sort);
-use RolePlaying::Spellbook qw(spellbook);
 
 my $directory = 'Role_playing/Player_characters/spellbooks';
 my @selects = sort { name_sort(lc $a,lc $b) } map { textify($_) } file_list(file_directory($directory));

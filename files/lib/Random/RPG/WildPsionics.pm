@@ -8,7 +8,7 @@ use Games::Dice qw(roll);
 use Lingua::EN::Inflect qw(PL_N);
 use List::MoreUtils qw(uniq);
 
-use Base::Data  qw(make_hash);
+use Util::Data  qw(make_hash);
 use Fancy::Rand qw(tiny_rand);
 
 # When adding PSPS, it is the initial cost + (maintenance * 4) for each talent.

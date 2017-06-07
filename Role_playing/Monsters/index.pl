@@ -12,8 +12,8 @@ use lib '../../files/lib';
 use Base::Page qw(page passage);
 use Base::Menu qw(file_menu);
 use HTML::Elements qw(section paragraph list);
-use RolePlaying::Monster qw(monster_info);
 use Random::RPG::Monster qw(random_monster random_monster_list);
+use RPG::Monster qw(monster_info);
 
 my $multi_monsters = {
   'Throglin' => ['Throglin', 'Freshwater throglin', 'Saltwater throglin'],

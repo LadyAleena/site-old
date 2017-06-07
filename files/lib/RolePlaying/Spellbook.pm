@@ -7,13 +7,13 @@ our @EXPORT_OK = qw(spellbook);
 use CGI::Carp qw(fatalsToBrowser);
 use Lingua::EN::Inflect qw(ORD);
 
-use Base::Data qw(get_hash);
 use Util::Columns;
+use Util::Data qw(make_hash);
 
 sub spellbook {
   my ($directory, $file) = @_;
   
-  my $spells = get_hash( 'file' => [$directory, $file], 'headings' => ['+'] );
+  my $spells = make_hash( 'file' => [$directory, $file], 'headings' => ['+'] );
 
   my $spell_list;
   for my $level (sort keys %$spells) {

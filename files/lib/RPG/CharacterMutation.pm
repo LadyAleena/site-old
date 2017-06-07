@@ -1,4 +1,4 @@
-package RolePlaying::CharacterMutation;
+package RPG::CharacterMutation;
 use strict;
 use warnings;
 use Exporter qw(import);
@@ -241,7 +241,7 @@ sub random_mutations {
 
 =head1 NAME
 
-B<RolePlaying::CharacterMutation> allows a DM to mutate characters by generating enhancements, diminishments, and mutations.
+B<RPG::CharacterMutation> allows a DM to mutate characters by generating enhancements, diminishments, and mutations.
 
 =head1 ACKNOWLEDGEMENTS
 

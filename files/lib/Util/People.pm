@@ -1,13 +1,13 @@
-package People;
+package Util::People;
 use strict;
 use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(people_list);
 
-use Base::Data qw(data_file);
-use Util::Sort qw(name_sort);
 use Util::Convert qw(filify searchify);
+use Util::Data qw(data_file);
 use Util::ExternalLinks;
+use Util::Sort qw(name_sort);
 
 sub people_list {
   my ($file) = @_;

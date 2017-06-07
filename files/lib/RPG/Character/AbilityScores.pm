@@ -1,4 +1,4 @@
-package RolePlaying::Character::AbilityScores;
+package RPG::Character::AbilityScores;
 use strict;
 use warnings FATAL => ( 'all' );
 use Exporter qw(import);

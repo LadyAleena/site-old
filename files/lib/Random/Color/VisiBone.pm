@@ -4,7 +4,7 @@ use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(random_VisiBone_color);
 
-use RolePlaying::Random qw(random);
+use Fancy::Rand qw(fancy_rand);
 
 my %VisiBone_colors = (
   'brightness' => [qw(white pale light medium dark obscure black)],
@@ -13,8 +13,8 @@ my %VisiBone_colors = (
 );
 
 sub random_VisiBone_color_attribute {
-  my ($user_VB_color) = @_;
-  my $VB_color = random(\%VisiBone_colors, $user_VB_color);
+  my ($user_VB_color, $user_additions) = @_;
+  my $VB_color = fancy_rand(\%VisiBone_colors, $user_VB_color, { caller => 'random_VisiBone_color', additions => $user_additions ? $user_additions : undef });
   return $VB_color;
 }
 
@@ -36,7 +36,7 @@ sub random_VisiBone_color {
 
 =head1 NAME
 
-B<Random::Color::VisiBone> returns random colors based on the Web Designer's Color Reference Poster by L<VisiBone|http://www.visibone.com/color/poster4x.html>.
+B<Random::Color::VisiBone> selects random colors based on the Web Designer's Color Reference Poster by L<VisiBone|http://www.visibone.com/color/poster4x.html>.
 
 =head1 AUTHOR
 

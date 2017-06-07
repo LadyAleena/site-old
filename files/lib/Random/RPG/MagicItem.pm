@@ -2,9 +2,9 @@ package Random::RPG::MagicItem;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(random_magic_items random_magic_item_action);
+our @EXPORT_OK = qw(random_magic_items random_magic_item_action magic_item_enhancement magic_item_quirk);
 
-use Lingua::EN::Inflect qw(A);
+use Lingua::EN::Inflect qw(A PL_N);
 
 use Fancy::Rand   qw(fancy_rand tiny_rand);
 use Random::Range qw(random_radius);
@@ -89,13 +89,14 @@ sub random_magic_items {
 
 sub magic_item_enhancement {
   my ($magic_item) = @_;
+  $magic_item = $magic_item !~ /.+s$/ ? PL_N($magic_item) : $magic_item;
   my $group = $reverse_magic_items{$magic_item} ? $reverse_magic_items{$magic_item} : $magic_item;
   return $group && permille() <= $magic_item_enhancement{$group} ? 1 : 0;
 }
 
 sub magic_item_quirk {
   my ($magic_item) = @_;
-  $magic_item = $reverse_magic_items{$magic_item} eq 'weapons' ? 'weapons' : $magic_item;
+  $magic_item = $reverse_magic_items{$magic_item} && $reverse_magic_items{$magic_item} eq 'weapons' ? 'weapons' : $magic_item;
 
   my $quirked = 0;
   if ($magic_item_quirk{$magic_item}) {

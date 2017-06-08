@@ -7,10 +7,10 @@ use List::Util qw(sum min max);
 use URI::Encode qw(uri_encode);
 
 use lib 'files/lib';
-use Base::Data qw(file_list);
 use Base::Menu qw(base_menu link_color);
 use Base::Path qw(base_path);
 use HTML::Elements qw(html head body heading paragraph list table anchor);
+use Util::Data qw(file_list);
 use Util::Number qw(pretty_number);
 
 my $root_path = base_path('path');
@@ -73,7 +73,7 @@ for my $key (sort { $file_sizes{$b}{bytes} <=> $file_sizes{$a}{bytes} || $a cmp 
   my $link   = uri_encode($key);
      $key    =~ s!&!&amp;!g;
   push @size_rows, [anchor($key, { 'href' => $link, 'style' => $color }),
-               map { [pretty_number(5,$_), { 'class' => 'right' }] } ($bytes,$kbytes,$mbytes)
+               map { [pretty_number($_, 5), { 'class' => 'right' }] } ($bytes,$kbytes,$mbytes)
               ];
 }
 my $sum_bytes  =   $file_sizes_sum;
@@ -82,8 +82,8 @@ my $sum_mbytes =  ($file_sizes_sum/1024)/1024;
 my $avg_bytes  =   $file_sizes_sum/$file_sizes_total;
 my $avg_kbytes =  ($file_sizes_sum/$file_sizes_total)/1024;
 my $avg_mbytes = (($file_sizes_sum/$file_sizes_total)/1024)/1024;
-push @size_rows, ['Totals',   map { [pretty_number(5,$_), { 'class' => 'right' }] } ($sum_bytes,$sum_kbytes,$sum_mbytes)];
-push @size_rows, ['Averages', map { [pretty_number(5,$_), { 'class' => 'right' }] } ($avg_bytes,$avg_kbytes,$avg_mbytes)];
+push @size_rows, ['Totals',   map { [pretty_number($_, 5), { 'class' => 'right' }] } ($sum_bytes,$sum_kbytes,$sum_mbytes)];
+push @size_rows, ['Averages', map { [pretty_number($_, 5), { 'class' => 'right' }] } ($avg_bytes,$avg_kbytes,$avg_mbytes)];
 
 html(0, {
   'head' => {

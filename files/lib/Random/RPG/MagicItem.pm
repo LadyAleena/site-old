@@ -61,18 +61,18 @@ my %magic_item_enhancement = (
 );
 
 my %magic_item_quirk = (
-  armor    => { low => 407, high => 412 },
-  elixers  => { low =>  35, high =>  36 },
-  philters => { low => 442, high => 443 },
-  powders  => { low => 765, high => 767 },
-  potions  => { low => 843, high => 844 },
-  rings    => { low => 739, high => 741 },
-  rods     => { low => 728, high => 742 },
-  scrolls  => { low => 731, high => 740 },
-  shields  => { low => 922, high => 927 },
-  staves   => { low => 698, high => 704 },
-  weapons  => { low =>   2, high =>   2 },
-  enhancement => { low => 71, high => 80 },
+  'armor'    => { 'low' => 407, 'high' => 412 },
+  'elixers'  => { 'low' =>  35, 'high' =>  36 },
+  'philters' => { 'low' => 442, 'high' => 443 },
+  'powders'  => { 'low' => 765, 'high' => 767 },
+  'potions'  => { 'low' => 843, 'high' => 844 },
+  'rings'    => { 'low' => 739, 'high' => 741 },
+  'rods'     => { 'low' => 728, 'high' => 742 },
+  'scrolls'  => { 'low' => 731, 'high' => 740 },
+  'shields'  => { 'low' => 922, 'high' => 927 },
+  'staves'   => { 'low' => 698, 'high' => 704 },
+  'weapons'  => { 'low' =>   2, 'high' =>   2 },
+  'enhancement' => { 'low' => 71, 'high' => 80 },
 );
 
 my %quirks_roll;

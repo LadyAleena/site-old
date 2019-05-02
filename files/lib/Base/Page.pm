@@ -2,7 +2,7 @@ package Base::Page;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(page story passage);
+our @EXPORT_OK = qw(page story passage convert_string);
 
 use CGI::Carp qw(fatalsToBrowser);
 use Cwd qw(cwd realpath);

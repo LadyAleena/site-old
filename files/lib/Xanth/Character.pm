@@ -9,8 +9,7 @@ use Lingua::EN::Inflect qw(A NUMWORDS ORD);
 use Base::Page     qw(convert_string);
 use Fancy::Join    qw(join_defined);
 use Util::Convert  qw(textify idify searchify);
-use Xanth::Dates     qw(get_birth get_death get_dates);
-use Xanth::Family    qw(get_family);
+use Xanth::Dates     qw(get_dates_family);
 use Xanth::LineMagic qw(Xanth_line_magic);
 use Xanth::Location  qw(get_locations);
 use Xanth::Novel     qw(char_intro_novel get_novels);
@@ -69,39 +68,6 @@ sub get_open {
 }
 
 # End opening paragraph
-# Being dates and family paragraph
-
-sub get_dates_family {
-  my ($character, $gendering) = @_;
-  
-  my $name    = $character->{Name};
-  my $text    = textify($name);
-  my $dates   = $character->{dates};
-  my $family  = $character->{family};
-  my $species = $character->{species};
-  my $places  = $character->{places};
-  my $pronoun = $gendering->{pronoun};
-
-  my $dates_family = undef;
-  if ($dates || $family) {
-    my $dates_text  = $dates && !$family ? get_dates($dates, $species, $places) : undef;
-    my $birth_text  = $dates->{birth} && $family ? get_birth($dates->{birth}, $species, $places) : undef;
-    my $death_text  = $dates->{death} && $family ? get_death($dates) : undef;
-
-    my $family_text = undef;
-    if ($family) {
-      my $family_verb = $dates && $dates->{death} ? 'was' : 'is';
-         $family_text = "$family_verb ".get_family($family, $gendering);
-    }
-
-    $dates_family = join_defined('. '.ucfirst $pronoun.' ', ($dates_text, $birth_text, $family_text, $death_text));
-  }
-  my $full_text = $dates_family ? "$text $dates_family." : undef;
-  
-  return $full_text;
-}
-
-# End dates and family paragraph
 # Begin getting challenge
 
 sub get_challenge {
@@ -162,21 +128,22 @@ sub get_character {
   my $species   = $character->{species};
   my $gender    = $character->{gender};
   my $gendering = gendering($gender, $species->[-1]);
+  my $pronoun = $gendering->{pronoun};
 
   my @paragraphs;
   my $open_text    = get_open($character);
-  push @paragraphs, $open_text;
+  push @paragraphs, [$open_text];
   my $dates_family = get_dates_family($character, $gendering);
-  push @paragraphs, $dates_family if $dates_family;
-  my $description  = get_description($character, $gendering->{pronoun});
-  push @paragraphs, $description if $description;
+  push @paragraphs, [$dates_family] if $dates_family;
+  my $description  = get_description($character, $pronoun);
+  push @paragraphs, [$description, { separator => '::' }] if $description;
   if ( scalar @{$character->{book}} > 1 ) {
     my $novel_text = get_novels($character->{book});
-    push @paragraphs, $novel_text;
+    push @paragraphs, [$novel_text];
+    push @paragraphs, ["A <b><i>Bold Title</i></b> means $pronoun was a major character. A <small><i>Small Title</i></small> means $pronoun was only mentioned.", { class => 'noprint', style => 'font-size: smaller;' }];
   }
-  my $character_text = join_defined('::', @paragraphs);
 
-  return $character_text;
+  return \@paragraphs;
 }
 
 # End putting the character together

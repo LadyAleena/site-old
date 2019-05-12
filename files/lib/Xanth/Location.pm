@@ -21,7 +21,7 @@ my $world_list = join('|', @worlds_list);
 sub section_link {
   my ($main, $section) = @_;
 
-  my $text    = textify($section);
+  my $text    = textify(join(', ', reverse split(/, /,$section)));
   my $id      = idify($section);
   my $link    = anchor($text, { href => "Characters.pl?location=$main#$id" });
   my $article = $main ne 'Mundania' ? get_article($section) : undef;

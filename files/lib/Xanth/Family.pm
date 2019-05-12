@@ -90,7 +90,7 @@ sub get_children {
         $child_text = $num." unnamed $bare_child";
       }
       elsif ( $child =~ /^[a-z]/ ) {
-        my ($bare_child, $other) = split(/ /, $child);
+        my ($bare_child, $other) = split(/ of /, $child);
         $child_text = "unnamed $bare_child"
       }
       else {
@@ -147,18 +147,18 @@ sub get_family {
   my $lover_text    = $lover ? $gendering->{lover}." of $lover" : undef;
   push @family_list, $lover_text if $lover_text;
 
-  my $child_text    = $family->{children}  ? $gendering->{parent}." of ".get_children($family->{children}) : undef;
+  my $child_text    = $family->{children} ? $gendering->{parent}." of ".get_children($family->{children}) : undef;
   push @family_list, $child_text if $child_text;
 
-  my $pibling       = $family->{pibling} ? group_character_link($family->{pibling}) : undef;
+  my $pibling       = $family->{pibling}  ? group_character_link($family->{pibling}) : undef;
   my $pibling_text  = $pibling ? $gendering->{nibling}." of $pibling" : undef;
   push @family_list, $pibling_text if $pibling_text;
 
-  my $nibling       = $family->{nibling} ? group_character_link($family->{nibling}) : undef;
+  my $nibling       = $family->{nibling}  ? group_character_link($family->{nibling}) : undef;
   my $nibling_text  = $nibling ? $gendering->{pibling}." of $nibling" : undef;
   push @family_list, $nibling_text if $nibling_text;
 
-  my $cousin        = $family->{cousin} ? group_character_link($family->{cousin}) : undef;
+  my $cousin        = $family->{cousin}   ? group_character_link($family->{cousin}) : undef;
   my $cousin_art    = scalar(@family_list) > 0 ? A('cousin') : 'cousin';
   my $cousin_text   = $cousin ? "$cousin_art of $cousin" : undef;
   push @family_list, $cousin_text if $cousin_text;
@@ -168,7 +168,7 @@ sub get_family {
   my $descendant_text = $descendant ? "$descendant_art of $descendant" : undef;
   push @family_list, $descendant_text if $descendant_text;
 
-  my $ancestor      = $family->{ancestor} ? group_character_link($family->{ancestor}) : undef;
+  my $ancestor      = $family->{ancestor}     ? group_character_link($family->{ancestor}) : undef;
   my $ancestor_art  = scalar(@family_list) > 0 ? A('descendant') : 'descendant';
   my $ancestor_text = $ancestor ? "$ancestor_art of $ancestor" : undef;
   push @family_list, $ancestor_text if $ancestor_text;

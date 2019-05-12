@@ -15,7 +15,7 @@ sub locations_page_link {
   my ($main, $section) = @_;
 
   my $location = $section ? $section : $main;
-  my $text     = textify($location);
+  my $text     = textify(join(', ', reverse split(/, /,$location)));
   my $id       = $location =~ /^Xanth Reality/ ? idify("Xanth reality") : idify($location);
   my $link     = anchor($text, { href => "Locations.pl#$id"});
   my $article  = $main ne 'Mundania' ? get_article($location) : undef;
@@ -42,6 +42,7 @@ sub species_page_link {
 
 sub timeline_link {
   my $in = shift;
+     $in =~ s/\.\d+//;
   my $id = idify($in);
   my $link = $in ? anchor($in, { href => "Timeline.pl#$id" }) : undef;
   return $link;

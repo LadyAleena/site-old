@@ -2,7 +2,7 @@ package Xanth::Novel;
 use strict;
 use warnings;
 use Exporter qw(import);
-our @EXPORT_OK = qw(novel_link style_novel get_novels novel_nav novel_intro char_intro_novel);
+our @EXPORT_OK = qw(novel_link style_novel get_novels novel_nav novel_intro char_intro_novel current_year);
 
 use Lingua::EN::Inflect qw(NUMWORDS ORD);
 
@@ -124,5 +124,14 @@ sub char_intro_novel {
 }
 
 # End introduction type and novel for a character
+# Begin getting the current Xanthian year
+
+sub current_year {
+  my $last_novel   = $book_list[-1];
+  my $current_year = $novels->{$last_novel}->{year};
+  return $current_year;
+}
+
+# End getting the current Xanthian year
 
 1;

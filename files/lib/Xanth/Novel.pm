@@ -10,7 +10,7 @@ use Fancy::Join    qw(join_defined);
 use HTML::Elements qw(anchor);
 use Util::Convert  qw(textify idify searchify);
 use Util::Data     qw(data_file make_hash);
-use Xanth::Util     qw(character_link);
+use Xanth::Util      qw(character_link);
 use Xanth::PageLinks qw(timeline_link);
 
 open(my $book_file, '<', data_file('Fandom/Xanth', 'books.txt'));

@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
 use Base::Page qw(page story);
-use Util::Xanth::LineMagic qw(Xanth_line_magic);
+use Xanth::LineMagic qw(Xanth_line_magic);
 
 page( 'heading' => 'Timeline of Xanth', 'code' => sub { story(*DATA, { 'line magic' => Xanth_line_magic('page') }) });
 
@@ -49,16 +49,16 @@ In year ^id228^, Magician ^Roogna^ crowns himself king. He serves until 286.
 In year ^id233^, ^Electra^ goes to the Isle of View to help the Sorceress ^Tapis^ by making the Heaven Cent.
 2 Fifth Wave
 3 236
-The events from B<^Castle Roogna^>, ^Dor^'s trip through the tapestry to the past, happen.
+The events from B<^Castle Roogna^>, ^Dor^'s trip through the tapestry to the past, happened.
 The great Goblin-Harpy War begins. It ends when Prince ^Harold^ Harpy is released from ^Brain Coral^'s Pool, and the spell on goblin females is revoked.
 On NoRemember 30th, during his adventure in Fourth Wave Xanth, Dor detonates the Forget Spell in the Gap Chasm.
 Neo-Sorceress ^Vadne^ topologically transforms ^Millie^ the Maid into a book titled I<The Skeleton in the Closet>. She is exiled to Brain Coral's Pool.
 On Dismember 1st, Magician ^Jonathan^, the Zombie Master, converts himself into a zombie in his grief.
 Advance scouts of the Fifth Wave arrive in Xanth.
 From B<^Isle of View^>, Princess ^Taplin^ goes to ^Tapis^ to have a coverlet made for her sleep. However, there is an altercation between Magician ^Murphy^ and Sorceress Tapis at the Isle of View. Murphy's curse causes ^Electra^ to bite the apple and start the 1,000-year sleep originally intended for the Princess. Tapis and Taplin go to Castle Roogna where Taplin marries King ^Roogna^.
-From B<^Ghost Writer in the Sky^>, Taplin enters the enchanted sleep in an alternate reality. Electra is staying with Sorceress Tapis and ^Merara^, her youngest daughter.
+From B<^Ghost Writer in the Sky^>, Taplin enters the enchanted sleep in an alternate reality. Electra stays with Sorceress Tapis. ^Merara^, her youngest daughter, goes forward in time to marry ^Emerald^.
 3 237
-Fifth Wave proper begins. Magician ^Murphy^ retires to the ^Brain Coral^'s Pool.
+Fifth Wave proper begins. Magician ^Murphy^ retires to the ^Brain Coral^ Pool.
 From B<^Ghost Writer in the Sky^>; ^Tartan^ in ^Ted^'s body, ^Tara^ in ^DeMonica^'s body, ^Dolin^ in a host body, ^Emerald^, and future ^Merara^ in ^Tata^'s body travel back in time from ^1117^ to see Sorceress ^Tapis^ in an alternate reality.
 3 267
 ^Jonathan^ Zombie encounters a phantom at Specter Lake.
@@ -158,10 +158,11 @@ In year ^id997^, Magician ^Trent^ delivered to North Village.
 In year ^id1000^, Rose goes to Hell in a handbasket, and Humfrey takes 80 years' worth of Lethe elixir. Humfrey believes he needs a wife, so marries ^Sofia^, a Mundane and his fourth wife.
 In year ^id1001^, Sorceress ^Iris^ is delivered to an unwary family, and ^Jethro^ Giant is delivered.
 In year ^id1002^, ^Crombie^ is delivered to Magician Humfrey and Sofia Mundane.
+In year ^id1004^, ^Randi^ boards the Acquaintance Ship.
 In year ^id1005^, Magician Humfrey trains Magician Trent. ^Cynthia^ is delivered to the North Village.
 In year ^id1007^, Magician Humfrey trains Sorceress Iris.
 In year ^id1017^, on AwGhost 6th, ^Bink^ is delivered to ^Bianca^ and ^Roland^ in North Village.
-In year ^id1021^, Magician Trent transforms the fish in Fish River into lightning bugs and transforms Cynthia into a winged centaur filly who flees to the ^Brain Coral^'s Pool.
+In year ^id1021^, Magician Trent transforms the fish in Fish River into lightning bugs and transforms Cynthia into a winged centaur filly who flees to the ^Brain Coral^ Pool.
 In year ^id1022^, Magician Trent attempts a coup d'etat. On Apull 27th, he transforms ^Justin^ into a tree. Trent is betrayed and exiled to Mundania. ^Chameleon^ is delivered to the Gap Village.
 In year ^id1024^, Sorceress Iris betrays the ^Master Slaver^.
 In year ^id1025^, the twin sisters ^Gorgon^ and ^Siren^ are delivered.
@@ -186,6 +187,7 @@ B<The events of ^A Spell for Chameleon^>
 * Trent's former army settles peacefully as the Thirteenth Wave.
 * ^Chet^ Centaur foaled near North Village to Chester and Cherie Centaur.
 * ^Grundy^ Golem goes to Magician Humfrey and asks how he can become real.
+* ^Chilk^, ^Jama^, ^Numbo^, ^Potipher^, and ^Zink^ imprisoned in the ^Brain Coral^ pool.
 3 1043
 B<The events of ^The Source of Magic^>
 * ^Millie^ the Ghost is restored to life.
@@ -239,7 +241,7 @@ B<The events of ^Centaur Aisle^>
 * On Marsh 21st, Good Magician ^Humfrey^ marries the ^Gorgon^, his fifth wife.
 * Magician ^Dor^ becomes King Pro Tem when King ^Trent^ leaves for a trip to Mundania. He serves for a short time before traveling to Mundania with ^Irene^, ^Arnolde^, ^Smash^, and ^Grundy^ to search of King Trent and Queen ^Iris^. ^Jonathan^ assumes the throne. He serves for a short time until King Trent returns from Mundania. During the search in Mundania, the group finds ^Ichabod^, who learns of Xanth.
 3 1062
-* ^Griselda^ enters ^Brain Coral^'s pool.
+* ^Griselda^ enters ^Brain Coral^ pool.
 * ^Chet^ encounters a fat sea cow.
 3 1063
 B<The events of ^Ogre, Ogre^>
@@ -339,15 +341,15 @@ B<The events of ^Golem in the Gears^>
 * ^Lacky^, whose talent is writing things briefly true, alternate daughter, is delivered to ^Lacuna^ and ^Vernon^ on Ptero.
 * ^Sean Baldwin^ born in Mundania
 3 1080
-B<The events of ^Vale of the Vole^>
-* Good Magician ^Humfrey^'s dose of Lethe elixir wears off, and he remembers ^Rose^ of Roogna and goes to rescue her from Hell. The ^Gorgon^ and ^Hugo^ join him in the Dream Realm.
-* ^Latia^ Curse-Fiend leaves Gateway Castle in Lake Ogre-Chobee to help ^Eskil^ Ogre and the voles.
-* Esk finds ^Marrow Bones^ and ^Bria^ Brassie on the Lost Path in the Gourd.
+From  B<^Vale of the Vole^>
+* ^Latia^, a curse fiend, leaves Gateway Castle in Lake Ogre-Chobee to help ^Eskil^ and the voles.
+* Esk finds ^Marrow Bones^ and ^Bria^, a brassie, on the Lost Path in the Gourd.
 * Vale of the Voles and the Kiss-Mee River are restored. (Unfortunately the Kissimmee River in Florida, Mundania, remains hostage to the will of the Armed Corps of Engines, so is not affectionate.)
 * Esk Ogre marries Bria Brassie.
-* ^Ryver^ retroactively delivered to ^Lacuna^ and ^Vernon^.
-* ^Cricket^ delivered.
-* Gorgon begins her career as a gourd horror actress.
+From B<^Question Quest^>
+* Good Magician ^Humfrey's^ dose of Lethe elixir wears off, and he remembers ^Rose^ of Roogna and goes to rescue her from Hell. The ^Gorgon^ and ^Hugo^ join him in the Dream Realm. Hugo meets ^Wira^. Gorgon begins her career as a gourd horror actress.
+* ^Ryver^ is retroactively delivered to ^Lacuna^ and ^Vernon^.
+From B<^Currant Events^>, ^Cricket^ is delivered.
 3 1082
 * ^Tristan (HC)^ Troll betrays his tribe by sparing a little human girl from death.
 * ^Merwin^ Merman toasted by ^Draco^ Dragon over a slight misunderstanding.
@@ -372,34 +374,29 @@ B<The events of ^Heaven Cent^>
 * ^Anthony Liaw^ is born in Mundania.
 * ^Graeboe^ Giant gets ill.
 3 1084
-* ^Chena^ Centaur foaled on Centaur Isle.
-* ^Brusque^ Brassie delivered to ^Esk^ Ogre and ^Bria^ Brassie.
-* ^David Baldwin^ born in Mundania
 * The twins ^Anairam^ and ^Mariana^ are delivered.
+* ^Brusque^ Brassie delivered to ^Esk^ Ogre and ^Bria^ Brassie.
+* ^Chena^ foaled on Centaur Isle.
+* ^David Baldwin^ born in Mundania.
 * ^Modem^ is delivered.
+* ^Cricket^ boards the Acquaintance Ship.
 3 1085
-* ^Che^ Centaur foaled to ^Cheiron^ and ^Chex^ Centaur.
+* ^Che^ foaled to ^Cheiron^ and ^Chex^.
 * ^Com Pewter^ acquires a Castle Roogna magic mirror from a traveler.
 3 1086
 B<The events of ^Man from Mundania^>
 * On AwGhost 27th, ^Electra^ completes the Heaven Cent.
-* ^Dolph^ is grounded until he decides who he will marry, so he can't use the Heaven Cent to complete his Quest.
-* Princess ^Ivy^ decides to complete Dolph's Quest.
 * Princess Ivy, Princess ^Nada^, and Electra recover the magic mirror from the evil machine Com Pewter.
-* Ivy invokes the Heaven Cent and is transported to Mundania, where she meets ^Grey^ Murphy.
-* Grey and Ivy make their way to Xanth through the gourd. While in the gourd, Grey rescues a giant (no longer invisible) and confronts the ^Night Stallion^. Grey does not yet believe in magic.
-* Grey traces the river of blood and rescues ^Girard^ Giant, who settles down happily ever after with ^Gina^ Giantess.
-* The Goblinate of the Golden Horde, led by ^Grotesk^ Goblin, captures Grey and Ivy. They escape and rescue ^Donkey^ Centaur. Ivy affiances Grey.
-* Grey travels to Mount Parnassus to discover whether he has a magic talent (King Dor and Queen Irene said that Ivy could not marry him if he didn't have a talent). He discovers that he is the Magician of Nullification.
+* Prince ^Dolph^ is grounded by King ^Dor^ and Queen ^Irene^ until he decides who he will marry, so he can't use the Heaven Cent to complete his Quest. Princess ^Ivy^ decides to complete Dolph's Quest and invokes the Heaven Cent and is transported to Mundania, where she meets ^Grey^ Murphy. Grey and Ivy make their way to Xanth through the gourd. While in the gourd, Grey traces the river of blood and rescues ^Girard^, a giant who is no longer invisible. Girard settles down happily ever after with ^Gina^ Giantess. Grey confronts the ^Night Stallion^. Grey does not yet believe in magic.
+* The Goblinate of the Golden Horde, led by ^Grotesk^ Goblin, captured Grey and Ivy. They escaped and rescued ^Donkey^, a centaur. Ivy affiances Grey.
+* Dor and Irene declared that Ivy could not marry Grey if he didn't have a talent. Grey traveled to Mount Parnassus to discover whether he has a magic talent. He discovers that he is the Magician of Nullification.
 * Grey's true history and Com Pewter's plot to use him to take over Xanth are revealed.
-* Grey, Ivy, and Electra make a deal with Com Pewter's ^Sending^ for advice on how to defeat Com Pewter's plot.
+* Grey, Ivy, and Electra make a deal with Com Pewter's ^Sending^ for advice on how to defeat Com Pewter's plot. They return Sending to Xanth where it begins to establish itself in Xanth to challenge Com Pewter for dominance.
 * Magician ^Murphy^ and Sorceress ^Vadne^ return to Xanth, and Murphy lays his curse on the geis on Grey to serve Com Pewter. The geis is fowled up, and Grey begins his service to Good Magician ^Humfrey^, temporarily taking over in the capacity of Good Magician.
-* Sending begins to establish itself in Xanth to challenge Com Pewter for dominance.
 * The twins ^Adnama^ and ^Amanda (YIW)^ are delivered.
 3 1088
-* Stork sets out to deliver ^Surprise^ to ^Grundy^ Golem and ^Rapunzel^.
-* ^Marrow Bones^ marries ^Grace'l Ossein^.
-* Marrow and Grace'l construct ^Picka Bone^ and ^Joy'nt Bone^.
+* Stork sets out to deliver ^Surprise^ to ^Grundy^ and ^Rapunzel^.
+* ^Marrow Bones^ marries ^Grace'l Ossein^, and they construct ^Picka Bone^ and ^Joy'nt Bone^.
 * ^Anomy^ is delivered.
 3 1089
 B<The events of ^Isle of View^>
@@ -413,28 +410,24 @@ B<The events of ^Isle of View^>
 * ^Karen Baldwin^ born in Mundania.
 3 1090
 B<The events of ^Question Quest^>
-* ^Humfrey^, with ^Lacuna^'s help, rescues five and a half wives (Demoness ^Dara^, ^Maiden Taiwan^, ^Rose^ of Roogna, ^Sofia^ Mundane, ^Gorgon^, and ^MareAnn^) from Hell, in a fashion. He marries MareAnn, finally. Each wife spends one month with Humfrey, then returns to Hell and switches with the next wife.
+* ^Humfrey^, with ^Lacuna^'s help, rescues five and a half wives (Demoness ^Dara^, ^Maiden Taiwan^, ^Rose^ of Roogna, ^Sofia^, ^Gorgon^, and ^MareAnn^) from Hell, in a fashion. He marries MareAnn, finally. Each wife spends one month with Humfrey, then returns to Hell and switches with the next wife.
 * Lacuna tricks ^Com Pewter^ into becoming a nice machine and freeing ^Grey^ Murphy.
 * Lacuna's change of life.
 * ^Souffle^ Serpent comes to the Castle Roogna moat to be the moat monster.
-* Twins ^Abscissa^ and ^Ordinate^ delivered to orphanage instead of their parents, ^Ivy^ and ^Grey^.
 * ^Wira^ youthened to 16 years old and marries ^Hugo^.
+* Twins ^Abscissa^ and ^Ordinate^ delivered to orphanage instead of their parents, ^Ivy^ and ^Grey^.
 3 1091
-B<The events of ^The Color of Her Panties^>
-* ^Astrid (FAG)^ delivered to ^Eskil^ and ^Bria^ on Ptero.
-* ^Gwendolyn^ Goblin, ^Jenny (IOV)^ Elf, and ^Che^ Centaur are inducted into the Adult Conspiracy, and Gwenny gets a pair of contact lenses.
-* ^Melantha^ Merwoman goes ashore to find a husband and meets up with ^Okra^ Ogress. They travel together to visit Good Magician ^Humfrey^, discovering and rescuing Princess ^Ida^, who is unaware of her status, along the way.
+B<The events of ^The Color of Her Panties^> and more
+* ^Gwendolyn^, ^Jenny (IOV)^, and ^Che^ are inducted into the Adult Conspiracy, and Gwenny gets a pair of contact lenses.
+* ^Melantha^ goes ashore to find a husband and meets up with ^Okra^. They discovered and rescued Princess ^Ida^, who is unaware of her status, along the way. They travel together to visit Good Magician ^Humfrey^. Mela, Okra, and Ida ask Magician Humfrey their Questions, but he refuses to give them Answers, sending them instead to see Princess ^Nada^. This leads to an adventure in which they rescue Gwendolyn, Jenny, and Che from ^Roxanne^ and help Gwenny defeat her half-brother ^Gobble^. Gwendolyn becomes chief of Goblin Mountain.
 * Mela dons a pair of plaid panties.
-* Mela, Okra, and Ida ask Magician Humfrey their Questions, but he refuses to give them Answers, sending them instead to see Princess ^Nada^ Naga.
-* This leads to an adventure in which they rescue Gwenny, Jenny, and Che from ^Roxanne^ Roc and help Gwenny defeat her half-brother ^Gobble^.
-* Gwenny Goblin becomes chief of Goblin Mountain.
-* Mela Merwoman marries Prince ^Naldo^ Naga.
-* Okra Ogress marries ^Smithereen^ Ogre.
+* Mela Merwoman married Prince ^Naldo^ Naga.
+* Okra Ogress married ^Smithereen^ Ogre.
 * Princess Ida discovers her true identity and her talent.
-* On NoRemember 2, Princesses ^Dawn^ and ^Eve^ and delivered to ^Electra^ and Prince ^Dolph^.
-* Prince ^Dolin^ delivered to Princess ^Taplin^ and Prince ^Dolph^ in an alternate reality.
-* Prince ^Drew (GWITS)^ delivered to Princess Nada and Prince Dolph in an alternate reality.
-* ^Epoxy^ Ogre and ^Benzene^ Brassie (identical male/female twins) delivered to ^Eskil^ Ogre and ^Bria^ Brassie. ^Briskil^ delivered to Eskil and Bria on Ptero.
+* Stork delivered
+** Princesses ^Dawn^ and ^Eve^ and delivered to ^Electra^ and Prince ^Dolph^ on NoRemember 2.
+** Prince ^Donald^ and Prince ^Drew (GWITS)^ to Princess ^Nada^ and Prince Dolph in two alternate realities.
+** ^Epoxy^ Ogre and ^Benzene^ Brassie (identical male/female twins) to ^Bria^ and ^Eskil^. ^Astrid (FAG)^ and ^Briskil^ delivered to Bria and Eskil on Ptero.
 2 Fifteenth Wave
 3 1092
 B<The events of ^Demons Don't Dream^>
@@ -446,7 +439,8 @@ B<The events of ^Demons Don't Dream^>
 * ^Cyrus (NM)^ marries ^Merci^.
 * ^Cencow^ meets griffiness.
 * Stork delivers
-** ^Og^ and ^Not-Og^ delivered to ^Okra^ and ^Smithereen^.
+** Prince ^Dolin^ to Princess ^Taplin^ and Prince ^Dolph^ in an alternate reality.
+** ^Og^ and ^Not-Og^ to ^Okra^ and ^Smithereen^.
 ** ^Nadine^ to ^Melantha^ and ^Naldo^.
 ** ^Melinda^
 3 1093

@@ -11,7 +11,7 @@ use List::MoreUtils     qw(first_index);
 use lib '../../files/lib';
 use Base::Page     qw(page story);
 use Base::Menu     qw(alpha_menu);
-use Fancy::Join    qw(grammatical_join join_defined);
+use Fancy::Join    qw(grammatical_join);
 use HTML::Elements qw(section nav paragraph list anchor);
 use Util::Columns  qw(number_of_columns);
 use Util::Convert  qw(textify idify searchify);
@@ -19,17 +19,27 @@ use Util::Data     qw(data_file make_hash alpha_hash);
 use Util::Number   qw(commify);
 use Xanth::Character qw(get_open get_character);
 use Xanth::Location  qw(location_link get_locations);
-use Xanth::Novel     qw(novel_link novel_nav novel_intro);
-use Xanth::PageLinks qw(locations_page_link species_page_link);
+use Xanth::Novel     qw(novel_link novel_nav novel_intro current_year);
+use Xanth::PageLinks qw(locations_page_link species_page_link timeline_link);
 use Xanth::Species   qw(species_link get_species);
 use Xanth::Util      qw(character_link gendering get_article);
 
 # Begin importing data
 
-my $headings = [qw(Name species gender places talent other book chapter)];
+my $headings = [qw(Name species+ gender places+ talent other book chapter)];
 my $characters = make_hash(
   'file' => ['Fandom/Xanth','characters.csv'],
   'headings' => $headings,
+);
+
+my $see_char = make_hash(
+  'file' => ['Fandom/Xanth', 'see_character.txt'],
+);
+
+my $group_headings = [qw(Name group title)];
+my $groups = make_hash(
+  'file' => ['Fandom/Xanth', 'groups.txt'],
+  'headings' => $group_headings,
 );
 
 my $date_headings = [qw(Name birth death), 'cause of death', 'killer'];
@@ -38,7 +48,19 @@ my $dates = make_hash(
   'headings' => $date_headings,
 );
 
-my $family_headings = [qw(Name mother+ father+ spouse dating sibling+ multisibling+ pibling+ nibling+ cousin+ ancestor+ descendant+ other+)];
+my $suspension_headings = [qw(Name begin end), 'begin event', 'end event'];
+my $suspensions = make_hash(
+  'file' => ['Fandom/Xanth','dates-suspension.txt'],
+  'headings' => $suspension_headings,
+);
+
+my $reage_headings = [qw(Name age year event)];
+my $reages = make_hash(
+  'file' => ['Fandom/Xanth','dates-reage.txt'],
+  'headings' => $reage_headings,
+);
+
+my $family_headings = [qw(Name mother+ father+ sibling+ multisibling+ pibling+ nibling+ cousin+ ancestor+ descendant+ other+)];
 my $families  = make_hash(
   'file' => ['Fandom/Xanth', 'families.txt'],
   'headings' => $family_headings,
@@ -53,22 +75,12 @@ my $partners  = make_hash(
 open(my $unnamed_file, '<', data_file('Fandom/Xanth', 'unnamed.txt'));
 my @unnamed_list = map { chomp $_; $_ } <$unnamed_file>;
 
-my $group_headings = [qw(Name group title)];
-my $groups = make_hash(
-  'file' => ['Fandom/Xanth', 'groups.txt'],
-  'headings' => $group_headings,
-);
-
 my $challenge_headings = [qw(Name number querant)];
 my $challenges = make_hash(
   'file' => ['Fandom/Xanth', 'challenges.txt'],
   'headings' => $challenge_headings,
 );
   
-my $see_char = make_hash(
-  'file' => ['Fandom/Xanth', 'see_character.txt'],
-);
-
 open(my $book_file, '<', data_file('Fandom/Xanth', 'books.txt'));
 my @book_list = map { chomp $_; $_ } <$book_file>;
 
@@ -85,22 +97,62 @@ my $novel_lists;
 for my $key ( keys %$characters ) {
   my $character = $characters->{$key};
   my $name      = $character->{Name};
-  
+
+  # Begin munging the character.
+  # Begin further splitting of the character's location(s).
+
+  my $places = [map { [split(/, /, $_, 2)] } @{$character->{places}}];
+  $character->{places} = $places;
+
+  # End splitting the character's location(s).
+  # Begin getting character's introductory novel.
+
+  my @novels = split(/, /, $character->{book});
+  my $first_book = $novels[0];
+  my $first_type = $first_book =~ /^M/ ? 'major' : $first_book =~ /^m/ ? 'mentioned' : undef;
+     $first_book =~ s/\D//g;
+  $character->{intro}->{book} = $book_list[$first_book];
+  $character->{intro}->{type} = $first_type;
+  $character->{book} = \@novels;
+
+  # End getting character's introductory novel.
+  # Begin getting if character has a main entry.
+
+  $character->{see} = $see_char->{$name} if $see_char->{$name};
+
+  # End getting if character has a main entry.
+  # If this is not the character's main entry, go to next character.
+
+  next if $character->{see};
+
+  # Begin getting the character's title and group, if any.
+
   if ($groups->{$name}) {
     $character->{title} = $groups->{$name}->{title} if $groups->{$name}->{title};
     $character->{group} = $groups->{$name}->{group} if $groups->{$name}->{group};
   }
 
-  my $species = [split(/; /, $character->{species})];
-  $character->{species} = $species;
-  
-  my $places = [map { [split(/, /, $_, 2)] } split(/; /, $character->{places})];
-  $character->{places} = $places;
+  # End getting the character's title and group.
+  # Begin getting the character's dates.
 
-  $character->{dates} = $dates->{$name} if $dates->{$name};
-  
+  if ($dates->{$key}) {
+    $character->{dates}->{$_}               = $dates->{$key}->{$_}       for grep { !/Name/ } @$date_headings;
+  }
+  if ($suspensions->{$key}) {
+    push @{$character->{dates}->{suspension}}, $suspensions->{$key};
+  }
+  if ($suspensions->{"$key 1"}) {
+    push @{$character->{dates}->{suspension}}, $suspensions->{"$key 1"};
+  }
+  if ($reages->{$key}) {
+    $character->{dates}->{reage}->{$_}      = $reages->{$key}->{$_}      for grep { !/Name/ } @$reage_headings;
+  }
+
+  # End getting the character's dates.
+  # Begin getting the character's family.
+
   if ($families->{$name}) {
-    for my $relation ( map { $_ =~ s/\+//; $_ } grep { !/Name|spouse|dating/ } @$family_headings ) {
+    for my $relation ( map { $_ =~ s/\+//; $_ } grep { !/Name/ } @$family_headings ) {
       if ( $families->{$name}->{$relation} ) {
         $character->{family}->{$relation} = $families->{$name}->{$relation};
       }
@@ -116,7 +168,9 @@ for my $key ( keys %$characters ) {
       }
     }
   }
-  
+
+  # Begin getting character's partners
+
   if ($partners->{$name}) {
     for my $relation ( map { $_ =~ s/\+//; $_ } grep { !/Name/  } @$partner_headings ) {
       if ( $partners->{$name}->{$relation} ) {
@@ -124,25 +178,21 @@ for my $key ( keys %$characters ) {
       }
     }
   }
-  
+
+  # End getting character's partners
+  # End getting character's family
+  # Begin getting when character was a challenge
+
   if ($challenges->{$name}) {
     my $challenge = $challenges->{$name};
     $character->{challenge}->{number} = $challenge->{number};
     $character->{challenge}->{querant} = $challenge->{querant};
   }
 
-  $character->{see} = $see_char->{$name} ? $see_char->{$name} : undef;
+  # End getting when character was a challenge
+  # Begin populating the other lists of characters.
+  # Being populating the novel lists.
 
-  my @novels = split(/, /, $character->{book});
-  my $first_book = $novels[0];
-  my $first_type = $first_book =~ /^M/ ? 'major' : $first_book =~ /^m/ ? 'mentioned' : undef;
-     $first_book =~ s/\D//g;
-  $character->{intro}->{book} = $book_list[$first_book];
-  $character->{intro}->{type} = $first_type;
-  $character->{book} = \@novels;
-
-  next if $character->{see};
-  
   for my $book (@novels) {
     my $book_num = $book;
        $book_num =~ s/\D//g;
@@ -157,6 +207,9 @@ for my $key ( keys %$characters ) {
     }
   }
 
+  # End populating the novel lists.
+  # Begin populating the location lists.
+
   for my $place (@$places) {
     if ($place->[0] && $place->[1]) {
       push @{$location_lists->{$place->[0]}->{$place->[1]}}, $name;
@@ -166,10 +219,17 @@ for my $key ( keys %$characters ) {
     }
   }
 
-  for my $speci (@$species) {
+  # End populating the location lists.
+  # Begin populating the species lists.
+
+  for my $speci (@{$character->{species}}) {
     my ($base_species, $sub_species) = split(/, /, $speci);
     push @{$species_lists->{$base_species}}, $name;
   }
+  
+  # End populating the species lists.
+  # End populating the other lists of characters.
+  # End munging the character.
 }
 
 for my $unnamed (@unnamed_list) {
@@ -207,22 +267,20 @@ my $browse_alpha_menu = alpha_menu($browse_alpha, { 'param' => 'alpha', 'join' =
 
 my $head = $select_character && $characters->{$select_character} && $groups->{$select_character}->{title} ? "$groups->{$select_character}->{title} $select_character" :
            $select_character && $characters->{$select_character}  ? "$select_character" :
-           $select_alpha     && $browse_alpha->{uc $select_alpha} ? "Xanth characters: ". uc $select_alpha :
+           $select_alpha     && $browse_alpha->{uc $select_alpha} ? "Characters: ". uc $select_alpha :
            $select_novel     ? "$select_novel characters" : 
            $select_location  ? "Characters from ".get_article($select_location, { full => 1}) :
            $select_species   ? ucfirst "$select_species characters" : undef;
+           
+my $pretitle = $select_alpha || $select_novel || $select_species || $select_location  ? 'Xanth' :
+               $select_character && $characters->{$select_character} ? 'Xanth/Character' : undef;
 
-page( 'heading' => $head, 'code' => sub {
+page( 'heading' => $head, 'pretitle' => $pretitle, 'code' => sub {
   section(3, sub {
     if ($select_character && $characters->{$select_character}) {
       my $character = $characters->{$select_character};
-      my $pronoun   = gendering($character->{gender}, $character->{species}->[-1], 'pronoun');
       my $character_text = get_character($character);
-
-      paragraph(5, $character_text, { separator => '::' });
-      if ( scalar @{$character->{book}} > 1 ) {
-        paragraph(5, "A <b><i>Bold Title</i></b> means $pronoun was a major character. A <small><i>Small Title</i></small> means $pronoun was only mentioned.", { class => 'noprint', style => 'font-size: smaller;' });
-      }
+      paragraph(5, @$_) for @$character_text;
     }
     elsif ($select_alpha && $browse_alpha->{uc $select_alpha}) {
       nav(4, "Xanth characters: ".alpha_with_rand_character, { 'class' => 'alpha_menu' });
@@ -312,7 +370,8 @@ page( 'heading' => $head, 'code' => sub {
     }
     else {
       my $character_count = commify(scalar(keys %$characters) - scalar(keys %$see_char));
-      paragraph(5, qq(Welcome to Lady Aleena\'s <b>List of <i>Xanth</i> Characters</b>. It covers all $character_count characters from <a href="http://www.hipiers.com/chartcnac.html"><i>Xanth</i> Character Database</a> by Douglas Harter.));
+      my $current_year = timeline_link(current_year);
+      paragraph(5, qq(Welcome to Lady Aleena\'s <b>List of <i>Xanth</i> Characters</b>. It covers all $character_count characters from <a href="http://www.hipiers.com/chartcnac.html"><i>Xanth</i> Character Database</a> by Douglas Harter. The year is $current_year in Xanth.));
       nav(5, "Xanth characters: ".alpha_with_rand_character, { 'class' => 'alpha_menu' });
       section(4, sub {
         paragraph(5, 'You can browse character lists by novel.');
@@ -334,7 +393,6 @@ page( 'heading' => $head, 'code' => sub {
       }, { heading => [2, 'Notes'] });
     }
     nav(4, "Xanth characters: ".alpha_with_rand_character, { 'class' => 'alpha_menu' });
-    paragraph(4, "<small>Please forgive the mess&hellip;</small>", { class => 'noprint' });
   });
 });
 

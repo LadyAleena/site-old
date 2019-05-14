@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
 use Base::Page qw(page story);
-use Util::Xanth::LineMagic qw(Xanth_line_magic);
+use Xanth::LineMagic qw(Xanth_line_magic);
 
 page( 'code' => sub { story(*DATA, { 'line magic' => Xanth_line_magic('page') }) });
 
@@ -71,7 +71,6 @@ Ivy is the current King of Xanth. There are no ruling queens; so no matter gende
 * B<^Dragon King (FP)^> is the King of the dragons in A<Storage|href="Places.pl#Playground_Storage"> in ^Five Portraits^.
 * B<Prince ^Komodo Li Zard^> is from Isles of Indon Esia in ^Heaven Cent^.
 * B<Duke ^Dragontail^> is from Dimwit in I<Heaven Cent>.
-* B<Baron ^Haulass^> is from Shetland in I<Heaven Cent>.
 * B<^Firestorm^> is a leader of the flying dragons.
 3 Elves
 * B<^Sword^> is King of the Warrior Elves.

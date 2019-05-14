@@ -2,7 +2,7 @@ package Xanth::Dates;
 use strict;
 use warnings;
 use Exporter qw(import);
-our @EXPORT_OK = qw(get_age get_age_suspension get_dates_family);
+our @EXPORT_OK = qw(get_dates_family);
 
 use Util::Convert  qw(textify idify searchify);
 use Fancy::Join qw(join_defined grammatical_join);
@@ -98,7 +98,7 @@ sub get_age_suspension {
   my $begin_age;
   for (my $supend_no = 0; $supend_no < @suspensions; $supend_no++) {
     my $suspension   = $suspensions[$supend_no];
-    my $prev_suspend = $supend_no - 1 >= 0 ? $suspensions[$supend_no - 1] : undef; 
+    my $prev_suspend = $supend_no - 1 >= 0 ? $suspensions[$supend_no - 1] : undef;
 
     my $begin_year  = $suspension->{begin};
     my $begin_event = $suspension->{'begin event'};
@@ -163,15 +163,20 @@ sub get_reage {
   my $year_link   = timeline_link($reage_year);
 
   my $age_reage;
-  if ($dates->{suspension} && $dates->{suspension}->[-1]->{end}) {
-    $age_reage = ($reage_year - $dates->{suspension}->[-1]->{end}) + ($dates->{suspension}->[-1]->{begin} - $birth_year);
+  if ($dates->{suspension}) {
+    my @suspensions = @{$dates->{suspension}};
+    $age_reage = ($suspensions[0]->{begin} - $birth_year) + ($reage_year - $suspensions[-1]->{end});
+
+    for my $iteration (0..$#suspensions-1) {
+      $age_reage += $suspensions[$iteration + 1]->{begin} - $suspensions[$iteration]->{end};
+    }
   }
   else {
     $age_reage = $reage_year - $birth_year;
   }
 
   my $start_verb = $reage_event && $reage_event =~ /compressed/ ? 'would have been' : 'was';
-  my $start_text = "$start_verb $age_reage in $year_link" if $age_reage > 0;
+  my $start_text = "$start_verb $age_reage years old in $year_link" if $age_reage > 0;
   
   my $pre_event;
   if (($reage_event && $reage_event =~ /takes/) && $age_reage > 0) {

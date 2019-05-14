@@ -53,7 +53,7 @@ David Baldwin|1084|
 Dawn|1091|
 DeMonica|1096|
 Dell|1093|
-Devin McClane Kowalick|1103|
+Devin McClane Kowalick|1102.5|
 DoMinica|1096
 Dolin|1092|
 Dolph|1074|
@@ -117,7 +117,7 @@ Joshua||900
 Jot|1083|
 Joy'nt Bone|1088|
 Justin (ASFC)|1000
-Kadence|1108|
+Kadence|1108|1108|returned to the Stork Works to be delivered when her mother grows up
 Karen Baldwin|1089|
 Kim (DDD)|1076
 Knut|1100
@@ -171,6 +171,7 @@ Piton Bone|1112|
 Plato|1110|
 Polyhymnia|915|
 Prize|1106|
+Quan||797
 Rana||325
 Randi|988
 Rapunzel|1057|
@@ -206,12 +207,14 @@ Tracy Berry McLian|1066|
 Trenris|1095|
 Trent|997|
 Urania|916|
+Vadne|215
 Versa|1096
 Vice|1096
+Vortex (RAAHP)||548
 Warren||719|assassinated by|Muerte A. Fid
 Willow (YIW)|1078|
 Win|1159|
-Wira|1052|
+Wira|1054|
 Xander|1074|
 Xavier|1051|
 Xeth|1073|
@@ -223,3 +226,5 @@ child of Pia Putz and Edsel|1100
 foal of Surprise and Che|1106
 son of Surprise and Umlaut|1106
 son of Trent|1024|1040
+elven child of Bluebell and Jordan|677
+human child of Threnody and Jordan|677

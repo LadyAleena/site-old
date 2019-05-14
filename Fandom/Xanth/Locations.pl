@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../../files/lib';
 use Base::Page qw(page story);
-use Util::Xanth::LineMagic qw(Xanth_line_magic);
+use Xanth::LineMagic qw(Xanth_line_magic);
 
 page( 'heading' => 'Locations in Xanth', 'code' => sub { story(*DATA, { 'line magic' => Xanth_line_magic('page') }) });
 

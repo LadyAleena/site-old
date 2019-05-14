@@ -11,7 +11,7 @@ use HTML::Elements qw(pre);
 use Util::Convert qw(textify);
 use Util::Data qw(file_list file_directory data_file);
 use Util::FamilyTree qw(make_tree);
-use Util::Xanth::LineMagic qw(Xanth_line_magic);
+use Xanth::LineMagic qw(Xanth_line_magic);
 
 my $directory = 'Fandom/Xanth/Family_trees';
 my @files = file_list(file_directory($directory));

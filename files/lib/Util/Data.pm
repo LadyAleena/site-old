@@ -1,6 +1,6 @@
 package Util::Data;
 use strict;
-use warnings FATAL => qw( all );
+use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(
   file_list file_directory data_file get_data
@@ -83,7 +83,7 @@ sub get_data {
   elsif (ref($list) eq 'ARRAY' && $list->[$in]) {
     $out = $list->[$in];
   }
-  elsif ($in eq 'data' || !$in) {
+  elsif (!$in || $in eq 'data') {
     $out = $list;
   }
   
@@ -98,27 +98,32 @@ sub make_hash {
   my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) : $opt{'file'};
   open(my $fh, '<', $file) || die "Can not open $file $!";
 
+  my @headings = $opt{'headings'} ? @{$opt{'headings'}} : ('heading');
+
   my %hash;
   while (my $line = <$fh>) {
     chomp $line;
     die "This file is not for Util::Data! Stopped $!" if $line =~ /no Util::Data/i;
-    my @headings = $opt{'headings'} ? @{$opt{'headings'}} : ('heading');
-    my @values   = split(/\|/,$line);
+
+    my @values = split(/\|/,$line);
     my $key = scalar @headings > 1 ? $values[0] : shift @values;
 
     my $n = 0;
     for my $r_heading (@headings) {
-      goto INC if (!defined($values[$n]) || length($values[$n]) == 0);
-      my $split = $r_heading =~ /\+$/ ? 1 : 0;
-      (my $heading = $r_heading) =~ s/\+$//;
-      my $value = defined($values[$n]) ? $split == 1 ? [map { $_ =~ s/^ //; $_ } split(/;/,$values[$n])] : $values[$n] : undef;
-      if (scalar @headings > 1) {
-        $hash{$key}{$heading} = $value;
+      if (defined($values[$n]) && length($values[$n]) > 0) {
+        my $split = $r_heading =~ /\+$/ ? 1 : 0;
+        (my $heading = $r_heading) =~ s/\+$//;
+
+        my $value = $split == 1 ? [map { $_ =~ s/^ //; $_ } split(/;/,$values[$n])] : $values[$n];
+
+        if (scalar @headings > 1) {
+          $hash{$key}{$heading} = $value;
+        }
+        else {
+          $hash{$key} = $value;
+        }
       }
-      else {
-        $hash{$key} = $value;
-      }
-      INC: ++$n;
+      $n++;
     }
   }
   return \%hash;
@@ -162,20 +167,20 @@ sub first_alpha {
 }
 
 sub alpha_hash {
-  my ($org_list) = @_;
+  my ($org_list, $opt) = @_;
   my %alpha_hash;
   for my $org_value (keys %{$org_list}) {
-    my $alpha = first_alpha($org_value);
+    my $alpha = !$opt->{article} ? first_alpha($org_value) : substr($org_value, 0, 1);
     $alpha_hash{$alpha}{$org_value} = $org_list->{$org_value};
   }
   return \%alpha_hash;
 }
 
 sub alpha_array {
-  my ($org_list) = @_;
+  my ($org_list, $opt) = @_;
   my %alpha_hash;
   for my $org_value (@{$org_list}) {
-    my $alpha = first_alpha($org_value);
+    my $alpha = !$opt->{article} ? first_alpha($org_value) : substr($org_value, 0, 1);
     push @{$alpha_hash{$alpha}}, $org_value;
   }
   return \%alpha_hash;

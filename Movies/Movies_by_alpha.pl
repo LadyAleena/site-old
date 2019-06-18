@@ -80,8 +80,8 @@ for my $movies (keys %$alpha_movies) {
   @{$alpha_movies->{$movies}} = @movies;
 }
 my $alpha_menu = scalar(@movies) > 10 ? 
-                  alpha_menu($alpha_movies, { 'addition' => anchor('Search the list', { href => '#Search' }), 'join' => ' | ' } ) :
-                  undef;
+                 alpha_menu($alpha_movies, { 'addition' => anchor('Search the list', { href => '#Search' }), 'join' => ' | ' } ) :
+                 undef;
 
 my $browse_alpha = alpha_hash($movies_data);
 my $browse_alpha_menu = alpha_menu($browse_alpha, { 'param' => 'alpha', 'join' => ' | '  });

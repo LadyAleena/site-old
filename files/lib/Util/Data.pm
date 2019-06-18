@@ -166,11 +166,27 @@ sub first_alpha {
   return $alpha;
 }
 
+# alpha_hash and alpha_array return a hash with single character keys.
+
+# The list for alpha_hash is a hash.
+# The list for alpha_array is an array.
+
+# Both have the 'article' option.
+# Without the article option:
+## articles 'a', 'an', and 'the' will be stripped from the beginning of the strings
+## first characters will be converted to uppercase
+## place all strings starting with a digit under the '#' key
+## place all strings starting with a non-word characters under the '!' key
+# With the article option, the following will be preserved:
+## articles 'a', 'an', and 'the'
+## the case of the first characters
+## all the other first characters such as digits and initial punctuation
+
 sub alpha_hash {
   my ($org_list, $opt) = @_;
   my %alpha_hash;
   for my $org_value (keys %{$org_list}) {
-    my $alpha = !$opt->{article} ? first_alpha($org_value) : substr($org_value, 0, 1);
+    my $alpha = $opt->{article} && $opt->{article} =~ /^[yt1]/i ? substr($org_value, 0, 1) : first_alpha($org_value);
     $alpha_hash{$alpha}{$org_value} = $org_list->{$org_value};
   }
   return \%alpha_hash;
@@ -180,7 +196,7 @@ sub alpha_array {
   my ($org_list, $opt) = @_;
   my %alpha_hash;
   for my $org_value (@{$org_list}) {
-    my $alpha = !$opt->{article} ? first_alpha($org_value) : substr($org_value, 0, 1);
+    my $alpha = $opt->{article} && $opt->{article} =~ /^[yt1]/i ? substr($org_value, 0, 1) : first_alpha($org_value);
     push @{$alpha_hash{$alpha}}, $org_value;
   }
   return \%alpha_hash;

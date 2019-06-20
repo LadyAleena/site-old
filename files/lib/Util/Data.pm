@@ -68,7 +68,7 @@ sub get_data {
   my ($list, $in) = @_;
 
   my $out = undef;
-  if ($in =~ /^(?:help|options)$/) {
+  if ($in =~ /^(help|options)$/) {
     $out = "Your options are:
       'data' to get the hash
       'keys' to get the list of hash keys
@@ -151,17 +151,15 @@ sub make_array {
 # start alpha section
 
 sub first_alpha {
-  my $alpha = shift;
-  $alpha = ucfirst($alpha) if $alpha =~ /^\l./;
-  $alpha =~ s/\s*\b(A|a|An|an|The|the)(_|\s)//xi;
+  my $string = shift;
+  $string =~ s/\s*\b(A|a|An|an|The|the)(_|\s)//xi;
+
+  my $alpha = uc substr($string, 0, 1);
   if ($alpha =~ /^\d/) {
     $alpha = '#';
   }
   elsif ($alpha !~ /^\p{uppercase}/) {
     $alpha = '!';
-  }
-  else {
-    $alpha =~ s/^(.)(\w|\W)+/$1/;
   }
   return $alpha;
 }

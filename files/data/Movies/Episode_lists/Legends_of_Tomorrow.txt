@@ -1,5 +1,5 @@
 .
-Pilot, Part 1|//Arrow/Arrowverse
+Pilot, Part 1|//Arrow/Arrowverse;//The Flash/Arrowverse
 Pilot, Part 2
 Blood Ties
 White Knights
@@ -22,7 +22,7 @@ Shogun
 Abominations
 Compromised
 Outlaw Country
-Invasion!|Medusa/02/Supergirl (2015);Invasion!/03/The Flash/Arrowverse;Invasion!/05/Arrow/Arrowverse
+Invasion!|Medusa/02/Supergirl (2015)/Arrowverse;Invasion!/03/The Flash/Arrowverse;Invasion!/05/Arrow/Arrowverse
 The Chicago Way
 Raiders of the Lost Art
 The Legion of Doom
@@ -33,3 +33,39 @@ Moonshot
 Fellowship of the Spear
 Doomworld
 Aruba
+.
+Aruba-Con
+Freakshow
+Zari
+Phone Home
+Return of the Mack
+Helen Hunt
+Welcome to the Jungle
+Crisis on Earth-X, Part 4|Crisis on Earth-X, Part 1/03/Supergirl (2015)/Arrowverse;Crisis on Earth-X, Part 2/06/Arrow/Arrowverse;Crisis on Earth-X, Part 3/04/The Flash/Arrowverse
+Beebo the God of War
+Daddy Darhkest
+Here I Go Again
+The Curse of the Earth Totem
+No Country for Old Dads
+Amazing Grace
+Necromancing the Stone
+I, Ava
+Guest Starring John Noble
+The Good, the Bad and the Cuddly
+.
+The Virgin Gary
+Witch Hunt
+Dancing Queen
+Wet Hot American Bummer
+Tagumo Attacks!!!
+Tender Is the Nate
+Hell No, Dolly!
+Legends of To-Meow-Meow
+Lucha de Apuestas
+The Getaway
+Séance and Sensibility
+The Eggplant, the Witch & the Wardrobe
+Egg MacGuffin
+Nip/Stuck
+Terms of Service
+Hey, World!

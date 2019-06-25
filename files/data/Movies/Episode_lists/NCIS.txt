@@ -14,7 +14,7 @@ My Other Left Foot
 One Shot, One Kill
 The Good Samaritan
 Enigma
-Bête Noire
+BÃªte Noire
 The Truth is Out There
 UnSEALed
 Dead Man Talking
@@ -34,7 +34,7 @@ Heart Break
 Forced Entry
 Chained
 Black Water
-Doppelgänger
+DoppelgÃ¤nger
 The Meat Puzzle
 Witness
 Caught on Tape
@@ -181,11 +181,11 @@ False Witness
 Ships in the Night
 Recruited
 Freedom
-A Man Walks Into A Bar…
+A Man Walks Into A Barâ€¦
 Defiance
 Kill Screen
 One Last Score
-Out of the Frying Pan…
+Out of the Frying Panâ€¦
 Tell-All
 Two-Faced
 Dead Reflection 
@@ -217,7 +217,6 @@ Rekindled
 Playing with Fire
 Up in Smoke
 Till Death Do Us Part
-
 .
 Extreme Prejudice
 Recovery
@@ -343,3 +342,7 @@ One Book, Two Covers
 Beastmaster
 Something Blue
 Rendezvous
+.
+House Divided
+Twofer
+Exit Strategy

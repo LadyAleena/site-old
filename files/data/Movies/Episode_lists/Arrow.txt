@@ -19,7 +19,7 @@ The Huntress Returns
 Salvation
 Unfinished Business
 Home Invasion
-The Undertaking|Ho'oilina/05/Hawaii Five-0
+The Undertaking
 Darkness on the Edge of Town
 Sacrifice
 .
@@ -101,7 +101,7 @@ Penance
 Human Target
 So It Begins
 Vigilante
-Invasion!|Medusa/02/Supergirl (2015);Invasion!/03/The Flash/Arrowverse;Invasion!/02/Legends of Tomorrow/Arrowverse
+Invasion!|Medusa/02/Supergirl (2015)/Arrowverse;Invasion!/03/The Flash/Arrowverse;Invasion!/02/Legends of Tomorrow/Arrowverse
 What We Leave Behind
 Who Are You?
 Second Chances
@@ -117,3 +117,50 @@ Underneath
 Honor Thy Fathers
 Missing
 Lian Yu
+.
+Fallout
+Tribute
+Next of Kin
+Reversal
+Deathstroke Returns
+Promises Kept
+Thanksgiving
+Crisis on Earth-X, Part 2|Crisis on Earth-X, Part 1/03/Supergirl (2015)/Arrowverse;Crisis on Earth-X, Part 3/04/The Flash/Arrowverse;Crisis on Earth-X, Part 4/03/Legends of Tomorrow/Arrowverse
+Irreconcilable Differences
+Divided
+We Fall
+All for Nothing
+The Devil's Greatest Trick
+Collision Course
+Doppelganger
+The Thanatos Guild
+Brothers in Arms
+Fundamentals
+The Dragon
+Shifting Allegiances
+Docket No. 11-19-41-73
+The Ties That Bind
+Life Sentence
+.
+Inmate 4587
+The Longbow Hunters
+Crossing Lines
+Level Two
+The Demon
+Due Process
+The Slabside Redemption
+Unmasked
+Elseworlds, Part 2|Elseworlds, Part 1/05/The Flash/Arrowverse;Elseworlds, Part 3/04/Supergirl (2015)/Arrowverse
+My Name Is Emiko Queen
+Past Sins
+Emerald Archer
+Star City Slayer
+Brothers & Sisters
+Training Day
+Star City 2040
+Inheritance
+Lost Canary
+Spartan
+Confessions
+Living Proof
+You Have Saved This City

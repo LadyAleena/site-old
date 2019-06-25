@@ -2473,26 +2473,26 @@ Iron Man 2|2010||film|bd|Iron_Man_2|451107|1228705||iron-man-2|superhero fiction
 Thor|2011||film|bd|Thor_(film)|411473|0800369||thor|superhero fiction|comics|Marvel Comics
 Captain America: The First Avenger|2011||film||The_First_Avenger:_Captain_America|451108|0458339||captain-america|superhero fiction|comics|Marvel Comics
 The Avengers (2012)|2012||film|bd|The_Avengers_(2012_film)|451151|0848228||marvels-the-avengers|superhero fiction|comics|Marvel Comics
-Agents of S.H.I.E.L.D.|2013|tbd|tv||Agents_of_Shield||2364582|183210||superhero fiction|comics|Marvel Comics
+Agents of S.H.I.E.L.D.|2013|tbd|tv||Agents_of_Shield|613566|2364582|183210||superhero fiction|comics|Marvel Comics
 Iron Man 3|2013||film|bd|Iron_Man_3|527818|1300854||iron-man-3|superhero fiction|comics|Marvel Comics
 Thor: The Dark World|2013||film|bd|Thor:_The_Dark_World|546686|1981115||thor-the-dark-world|superhero fiction|comics|Marvel Comics
 Captain America: The Winter Soldier|2014||film|bd|Captain_America:_The_Winter_Soldier|562324|1843866||captain-america-the-winter-soldier-2014|superhero fiction|comics|Marvel Comics
 Guardians of the Galaxy|2014||film|bd|Guardians_of_the_Galaxy_(film)|568178|2015381||guardians-of-the-galaxy|superhero fiction|comics|Marvel Comics
-Agent Carter|2015|2016|tv||Agent_Carter_(TV_series)||3475734|193972||superhero fiction|comics|Marvel Comics
-Daredevil (2015)|2015|tbd|tv||Daredevil_(TV_series)||3322312|195188||superhero fiction|comics|Marvel Comics
+Agent Carter|2015|2016|tv||Agent_Carter_(TV_series)|696062|3475734|193972||superhero fiction|comics|Marvel Comics
+Daredevil (2015)|2015|tbd|tv||Daredevil_(TV_series)|673276|3322312|195188||superhero fiction|comics|Marvel Comics
 Avengers: Age of Ultron|2015||film||Avengers:_Age_of_Ultron|570172|2395427||the-avengers-age-of-ultron|superhero fiction|comics|Marvel Comics
-Jessica Jones|2015|tbd|tv||||2357547|195337||superhero fiction|comics|Marvel Comics
+Jessica Jones|2015|tbd|tv||Jessica_Jones_(TV_series)|674445|2357547|195337||superhero fiction|comics|Marvel Comics
 Ant-Man|2015||film|bd|Ant-Man_(film)|453126|0478970||antman|superhero fiction|comics|Marvel Comics
 Captain America: Civil War|2016||film|bd|Captain_America:_Civil_War|596036|3498820||captain-america-civil-war|superhero fiction|comics|Marvel Comics
-Luke Cage|2016|tbd|tv||||3322314|||superhero fiction|comics|Marvel Comics
-Doctor Strange|2016||film|bd||601168|1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
+Luke Cage|2016|tbd|tv||Luke_Cage_(TV_series)|670976|3322314|197264||superhero fiction|comics|Marvel Comics
+Doctor Strange|2016||film|bd|Doctor_Strange_(2016_film)|601168|1211837||doctor-strange-2009|superhero fiction|comics|Marvel Comics
 Guardians of the Galaxy Vol. 2|2017||film|bd|Guardians_of_the_Galaxy_Vol._2|609066|3896198||guardians-of-the-galaxy-2|superhero fiction|comics|Marvel Comics
-Thor: Ragnarok|2017||film||||3501632||thor-ragnarok-2017|superhero fiction|comics|Marvel Comics
-Avengers: Infinity War – Part I|2018||film||||4154756||avengers-infinity-war-part-i|superhero fiction|comics|Marvel Comics
-Black Panther|2018||film||||1825683|||superhero fiction|comics|Marvel Comics
-Captain Marvel|2018||film||||4154664||captain-marvel-2018|superhero fiction|comics|Marvel Comics
-Avengers: Infinity War – Part II|2019||film||||4154796||avengers-infinity-war-part-ii|superhero fiction|comics|Marvel Comics
-Inhumans|2019||film||||4154858|||superhero fiction|comics|Marvel Comics
+Thor: Ragnarok|2017||film|bd|Thor:_Ragnarok|619009|3501632||thor-ragnarok-2017|superhero fiction|comics|Marvel Comics
+Avengers: Infinity War|2018||film|bd|Avengers:_Infinity_War|619012|4154756||avengers-infinity-war-part-i|superhero fiction|comics|Marvel Comics
+Black Panther|2018||film|bd|Black_Panther_(film)|619010|1825683||black-panther-2018|superhero fiction|comics|Marvel Comics
+Captain Marvel|2018||film|bd|Captain_Marvel_(film)|596220|4154664||captain-marvel-2018|superhero fiction|comics|Marvel Comics
+Avengers: Endgame|2019||film||Avengers:_Endgame|619017|4154796||avengers-infinity-war-part-ii|superhero fiction|comics|Marvel Comics
+Inhumans|2019||tv||Inhumans_(TV_series)|619016|4154858|203693||superhero fiction|comics|Marvel Comics
 Night of the Living Dead (1968)|1968||film||Night_of_the_Living_Dead|35311|0063350||night-of-the-living-dead|horror;monster:zombies||
 Dawn of the Dead (1978)|1978||film||Dawn_of_the_Dead|12579|0077402||dawn-of-the-dead1978|horror;monster:zombies||
 Day of the Dead (1985)|1985||film||Day_of_the_Dead_(1985_film)|12621|0088993||day-of-the-dead|horror;monster:zombies||

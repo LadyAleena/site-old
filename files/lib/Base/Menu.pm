@@ -2,14 +2,14 @@ package Base::Menu;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
-our @EXPORT_OK = qw(base_menu alpha_menu file_menu link_color);
+our @EXPORT_OK = qw(base_menu alpha_menu file_menu link_color index_menu);
 
 use Cwd qw(cwd realpath);
 
 use HTML::Elements qw(anchor);
-use Util::Convert qw(textify searchify);
-use Util::Data qw(file_list);
-use Util::Sort qw(article_sort name_sort);
+use Util::Convert  qw(textify searchify);
+use Util::Data     qw(file_list);
+use Util::Sort     qw(article_sort name_sort);
 
 sub link_color {
   my ($file,$style) = @_;
@@ -108,10 +108,11 @@ sub alpha_menu {
   my ($hash, $opt) = @_;
 
   my @line;
-  for my $letter (sort { article_sort($a,$b) } keys %{$hash}) {
+  for my $letter (sort { $a cmp $b } keys %{$hash}) {
+    my $parameter    = $opt->{'param'} ? $opt->{'param'} : undef;
     my $section_name = $letter eq uc($letter) ? $letter : "l$letter";
-    my $href = $opt->{'param'} ? '?'.$opt->{'param'}."=$section_name" : "#section_$section_name";
-    push @line, anchor($letter, { 'href' => $href });
+    my $href         = $parameter ? "?$parameter=".searchify($section_name) : "#section_$section_name";
+    push @line, anchor("&nbsp;$letter&nbsp;", { 'href' => $href });
   }
 
   if ($opt->{addition}) {
@@ -122,6 +123,18 @@ sub alpha_menu {
   my $line = $opt->{'join'} ? join($join, @line) : \@line;
 
   return $line;
+}
+
+sub index_menu {
+  my $dir = shift;
+  my @file_list = file_list('.');
+  my $files = [
+    map  { anchor( textify($_), { href => $_ } ) }
+    grep { /^[A-Z].+/ &&  -f $_ }
+    sort { article_sort($a, $b) }
+    @file_list
+  ];
+  return $files;
 }
 
 1;

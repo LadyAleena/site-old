@@ -28,7 +28,7 @@ use Xanth::Util      qw(character_link gendering get_article);
 
 my $headings = [qw(Name species+ gender places+ talent other book chapter)];
 my $characters = make_hash(
-  'file' => ['Fandom/Xanth','characters.csv'],
+  'file' => ['Fandom/Xanth','characters.txt'],
   'headings' => $headings,
 );
 
@@ -80,7 +80,7 @@ my $challenges = make_hash(
   'file' => ['Fandom/Xanth', 'challenges.txt'],
   'headings' => $challenge_headings,
 );
-  
+
 open(my $book_file, '<', data_file('Fandom/Xanth', 'books.txt'));
 my @book_list = map { chomp $_; $_ } <$book_file>;
 
@@ -172,7 +172,7 @@ for my $key ( keys %$characters ) {
   # Begin getting character's partners
 
   if ($partners->{$name}) {
-    for my $relation ( map { $_ =~ s/\+//; $_ } grep { !/Name/  } @$partner_headings ) {
+    for my $relation ( map { $_ =~ s/\+//; $_ } grep { !/Name/ } @$partner_headings ) {
       if ( $partners->{$name}->{$relation} ) {
         $character->{family}->{$relation} = $partners->{$name}->{$relation};
       }
@@ -226,7 +226,7 @@ for my $key ( keys %$characters ) {
     my ($base_species, $sub_species) = split(/, /, $speci);
     push @{$species_lists->{$base_species}}, $name;
   }
-  
+
   # End populating the species lists.
   # End populating the other lists of characters.
   # End munging the character.
@@ -260,18 +260,17 @@ sub alpha_with_rand_character {
   my @character_list = keys %$characters;
   my $rand_character = $character_list[rand @character_list];
   my $character_link = character_link($rand_character, 'Random character');
-  my $alpha_menu = alpha_menu($browse_alpha, { 'param' => 'alpha', 'join' => '|', addition => "&nbsp;".$character_link });
+  my $alpha_menu = alpha_menu($browse_alpha, { 'param' => 'alpha', 'join' => ' | ', addition => "&nbsp;".$character_link });
   return $alpha_menu;
 }
-my $browse_alpha_menu = alpha_menu($browse_alpha, { 'param' => 'alpha', 'join' => '|' });
 
 my $head = $select_character && $characters->{$select_character} && $groups->{$select_character}->{title} ? "$groups->{$select_character}->{title} $select_character" :
            $select_character && $characters->{$select_character}  ? "$select_character" :
            $select_alpha     && $browse_alpha->{uc $select_alpha} ? "Characters: ". uc $select_alpha :
-           $select_novel     ? "$select_novel characters" : 
+           $select_novel     ? "$select_novel characters" :
            $select_location  ? "Characters from ".get_article($select_location, { full => 1}) :
            $select_species   ? ucfirst "$select_species characters" : undef;
-           
+
 my $pretitle = $select_alpha || $select_novel || $select_species || $select_location  ? 'Xanth' :
                $select_character && $characters->{$select_character} ? 'Xanth/Character' : undef;
 
@@ -311,7 +310,7 @@ page( 'heading' => $head, 'pretitle' => $pretitle, 'code' => sub {
           }, { heading => $select_novel ne 'Other source' ? [2, "$type characters"] : undef });
         }
       }
-      
+
       nav(4, $novel_nav, { class => 'alpha_menu', style => 'text-align:center' });
     }
     elsif ($select_location) {
@@ -322,7 +321,7 @@ page( 'heading' => $head, 'pretitle' => $pretitle, 'code' => sub {
         my $location = $locations->{$key};
         $total_count += scalar(@{$location});
 
-        my $list = [ map { 
+        my $list = [ map {
           my $species = get_species($characters->{$_}->{species}, $characters->{$_}->{gender});
           my $link    = character_link($_);
           "$link is $species."
@@ -371,7 +370,7 @@ page( 'heading' => $head, 'pretitle' => $pretitle, 'code' => sub {
     else {
       my $character_count = commify(scalar(keys %$characters) - scalar(keys %$see_char));
       my $current_year = timeline_link(current_year);
-      paragraph(5, qq(Welcome to Lady Aleena\'s <b>List of <i>Xanth</i> Characters</b>. It covers all $character_count characters from <a href="http://www.hipiers.com/chartcnac.html"><i>Xanth</i> Character Database</a> by Douglas Harter. The year is $current_year in Xanth.));
+      paragraph(5, qq(Welcome to Lady Aleena\'s <b>List of <i>Xanth</i> Characters</b>. It covers all $character_count characters from <a href="http://www.hipiers.com/chartcnac.html"><i>Xanth</i> Character Database</a> by Douglas Harter. The year is $current_year in Xanth.::See the notes below.), { separator => '::' });
       nav(5, "Xanth characters: ".alpha_with_rand_character, { 'class' => 'alpha_menu' });
       section(4, sub {
         paragraph(5, 'You can browse character lists by novel.');
@@ -389,8 +388,8 @@ page( 'heading' => $head, 'pretitle' => $pretitle, 'code' => sub {
         list(5, 'u', $species_list, { class => 'five' });
       }, { heading => [2, 'Species', { id => 'Species' }] });
       section(4, sub {
-        paragraph(5, 'Human men and women will not have a species in their entries.::If the character is a child, it will be in the description. The child will more than likely be an adult by this time in the <i>Xanth</i> series.::Many species are single gender, so their entries will not mention it. The species are '.grammatical_join('and', sort @gendered_species_list).'. Harpies and nymphs are usually female, and fauns are usually male; but there have been a few exceptions that are noted.::In some instances, I have made educated guesses on gender, species, and some birth years.', { separator => '::' });
-      }, { heading => [2, 'Notes'] });
+        paragraph(5, qq(Human men and women will not have a species in their entries. Also, if the surname of the character is the character's species, it was dropped.::If the character is a child, it will be in the description. The child will more than likely be an adult by this time in the <i>Xanth</i> series.::Many species are single gender, so their entries will not mention it. The species are '.grammatical_join('and', sort @gendered_species_list).'. Harpies and nymphs are usually female, and fauns are usually male; but there have been a few exceptions that are noted.::In some instances, I have made educated guesses on gender, species, and some birth years.), { separator => '::' });
+      }, { heading => [2, 'Notes', { id => 'Notes' }] });
     }
     nav(4, "Xanth characters: ".alpha_with_rand_character, { 'class' => 'alpha_menu' });
   });

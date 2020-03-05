@@ -13,7 +13,7 @@ use Xanth::PageLinks qw(timeline_link);
 
 my $headings = [qw(Name species origin location gender talent description book chapter)];
 my $characters = make_hash(
-  'file' => ['Fandom/Xanth','characters.csv'],
+  'file' => ['Fandom/Xanth','characters.txt'],
   'headings' => $headings,
 );
 
@@ -67,4 +67,5 @@ sub Xanth_line_magic {
   return $Xanth_line_magic;
 
 }
+
 1;

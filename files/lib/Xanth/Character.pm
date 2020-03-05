@@ -128,7 +128,7 @@ sub get_character {
   my $species   = $character->{species};
   my $gender    = $character->{gender};
   my $gendering = gendering($gender, $species->[-1]);
-  my $pronoun = $gendering->{pronoun};
+  my $pronoun   = $gendering->{pronoun};
 
   my @paragraphs;
   my $open_text    = get_open($character);

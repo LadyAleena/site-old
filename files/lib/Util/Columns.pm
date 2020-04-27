@@ -27,8 +27,15 @@ B<Util::Columns> generates a number for getting columns based on exponential num
 =head1 SYNOPSIS
 
   use Util::Colums;
+  my @colors = ('red', 'orange', 'yellow', 'spring', 'green', 'teal', 'cyan', 'azure',
+                'blue', 'violet', 'magenta', 'pink', 'white', 'black', 'gray');
   
-  print number_of_columns($maximum_amount_of_colums, $amount_of_items_on_list, $do_you_want_a_number_word_returned);
+  my $maximum_amount_of_colums = 4;
+  my $amount_of_items_on_list  = @colors;
+  my $number_word_returned     = 'no';
+  
+  my $columns = number_of_columns($maximum_amount_of_colums, $amount_of_items_on_list, $number_word_returned);
+  # 3
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,7 @@
 package Util::Data;
 use strict;
 use warnings;
+use utf8;
 use Exporter qw(import);
 our @EXPORT_OK = qw(
   file_list file_directory data_file get_data
@@ -8,6 +9,8 @@ our @EXPORT_OK = qw(
   first_alpha alpha_hash alpha_array
   hash_from_arrays
 );
+
+use Encode qw(encode);
 
 use File::Basename;
 use File::Spec;
@@ -60,12 +63,12 @@ sub data_file {
   else {
     $data = "$root_data/$relative_path.txt";
   }
-  
+
   return $data;
 }
 
 sub get_data {
-  my ($list, $in) = @_;
+  my ($list, $in, $caller) = @_;
 
   my $out = undef;
   if ($in =~ /^(help|options)$/) {
@@ -86,7 +89,7 @@ sub get_data {
   elsif (!$in || $in eq 'data') {
     $out = $list;
   }
-  
+
   return $out;
 }
 
@@ -96,7 +99,7 @@ sub get_data {
 sub make_hash {
   my %opt = @_;
   my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) : $opt{'file'};
-  open(my $fh, '<', $file) || die "Can not open $file $!";
+  open(my $fh, '<', $file) || die "Can not open $file$!";
 
   my @headings = $opt{'headings'} ? @{$opt{'headings'}} : ('heading');
 
@@ -114,7 +117,7 @@ sub make_hash {
         my $split = $r_heading =~ /\+$/ ? 1 : 0;
         (my $heading = $r_heading) =~ s/\+$//;
 
-        my $value = $split == 1 ? [map { $_ =~ s/^ //; $_ } split(/;/,$values[$n])] : $values[$n];
+        my $value = $split == 1 ? [map { $_ =~ s/^ //; $_ } split(/; ?/,$values[$n])] : $values[$n];
 
         if (scalar @headings > 1) {
           $hash{$key}{$heading} = $value;
@@ -171,7 +174,7 @@ sub first_alpha {
   else {
     $string =~ s/\s*\b(A|a|An|an|The|the)(_|\s)//xi;
 
-    $alpha = uc substr($string, 0, 1);
+    $alpha = uc encode('UTF-8', substr($string, 0, 1));
     if ($alpha =~ /^\d/) {
       $alpha = '#';
     }

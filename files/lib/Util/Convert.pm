@@ -31,6 +31,7 @@ sub idify {
     $_ =~ s/<.+?>//g;
     $_ =~ s/^(\d+([stnrdh]{2}|))/NUMWORDS($1)/e;
     $_ =~ s/\.\w{2,5}?$//;
+    $_ =~ s/&amp/and/g;
     $_ =~ s/&/and/g;
     $_ =~ s/Æ/Ae/g;
     $_ =~ s/Ç/C/g;
@@ -68,6 +69,7 @@ sub textify {
   $text =~ s/_/ /g;
   $text =~ s/ (Mr|Mrs|Ms|Dr) / $1. /g;
   $text =~ s/\s&\s/ &amp; /g;
+  $text =~ s/\.{3}/&#8230;/g;
   $text =~ s/(\w|\b|\s|^)'(\w|\b|\s|$)/$1&#700;$2/g;
   $text =~ s/<.+?>//g      unless ($opt->{'html'}   && $opt->{'html'}   =~ /^[ytk1]/);
   $text =~ s/\s\(.*?\)$//  unless ($opt->{'parens'} && $opt->{'parens'} =~ /^[ytk1]/);

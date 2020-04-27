@@ -4,9 +4,11 @@
 
 [Collections](/Collections): My collections of books, music, and movies.
 
+[Fandom](/Fandom): Pages about things I am a fan of such as crossovers, Xanth, and more.
+
 [Miscellany](/Miscellany): My random thoughts and other stuff.
 
-[Movies](/Movies): Lists of movies by genre and series and an essay on crossover cosmologies.
+[Movies](/Movies): Lists of movies by genre and series.
 
 [Role_playing](/Role_playing): Role playing information I made up or collated over the years. It is all based on AD&D 2nd Ed.
 

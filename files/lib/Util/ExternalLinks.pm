@@ -5,7 +5,7 @@ use Exporter qw(import);
 our @EXPORT = qw(external_links);
 our @EXPORT_OK = qw(external_link);
 
-use HTML::Elements qw(span anchor);
+use HTML::Elements qw(anchor);
 use Util::Data qw(make_hash);
 
 my $external_links = make_hash( 'file' => ['Util','external_links.txt'], 'headings' => ['site','base link','after link'] );

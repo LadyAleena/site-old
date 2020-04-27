@@ -25,8 +25,9 @@ my %hosts = (
 my $root_path = $hosts{$server}{'path'};
 
 for my $host (values %hosts) {
-  $host->{'data'} = "$root_path/files/data";
-  $host->{$_}     = $host->{'link'}."/files/$_" for qw(audio css images);
+  $host->{'data'}    = "$root_path/files/data";
+  $host->{'imagesd'} = "$root_path/files/images";
+  $host->{$_}        = $host->{'link'}."/files/$_" for qw(audio css images);
 }
 
 sub base_path {

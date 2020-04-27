@@ -8,18 +8,18 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../files/lib';
 use Base::Page qw(page story);
 
-page( 'code' => sub { story(*DATA) });
+page( 'heading' => 'TV and film crossovers', 'code' => sub { story(*DATA) });
 
 __DATA__
-I hope you enjoy these crossovers. I included official, unofficial, and disputed crossovers. There are several sites which helped me in putting this together: Thomas Holbrook's site A<Crossovers and Spin Offs|href="http://www.poobala.com/crossoverlistb.html" target="new"> and Keith Gow's and Ash Crowe's site A<The Tommy Westphall Universe|href="https://thetommywestphall.wordpress.com" target="new">. Recently I came across Robert E. Wronski Jr.'s A<Television Crossover Universe|href="http://www.televisioncrossoveruniverse.com" target="new"> which has given me a few insights. Without those resources, I would not be as far along as I am now. I am very thankful for their work even thought there are a few places where I disagree with Holbrook, Gow, Crowe, or Wronski.
+I hope you enjoy these television and film crossovers. I included official, unofficial, and disputed crossovers. There are several sites that helped me in putting this together: Thomas Holbrook's site A<Crossovers and Spin Offs|href="http://www.poobala.com/crossoverlistb.html" target="new"> and Keith Gow's and Ash Crowe's site A<The Tommy Westphall Universe|href="https://thetommywestphall.wordpress.com" target="new">. Recently I came across Robert E. Wronski Jr.'s A<Television Crossover Universe|href="http://www.televisioncrossoveruniverse.com" target="new"> that has given me a few insights. Without those resources, I would not be as far along as I am now. I am very thankful for their work even thought there are a few places where I disagree with Holbrook, Gow, Crowe, or Wronski.
 I have been working on A<verifying and adding to|href="Westphall_crossovers.pl"> or A<severing|href="Westphall_non-crossovers.pl"> Westphall crossovers.
-There are some crossover continuities which are not covered here because they are well covered elsewhere such as Stephen King's and Quentin Tarantino's separate universes and the Pixar Theory. If my research connects a continuity with the ones currently here, they will be included then.
+There are some crossover continuities that are not covered here because they are well covered elsewhere such as Stephen King's and Quentin Tarantino's separate universes and the Pixar Theory. If my research connects a continuity with the ones currently here, they will be included then.
 I will not mention all of the character crossovers between series in a franchise. So, I will not break down all of the characters who crossed between the various I<Stak Trek>, I<Law & Order>, or I<Doctor Who> franchises. I may mention characters who crossed over between the franchises within the Wolf universe.
 The crossovers are mostly in chronological order by the episodes' air dates.
 I have many personal rules I use to determine if two series crossed over or not. I am pretty strict with them, however I have made a few exceptions.
-2 TV series not considered
+2 TV series and films not considered
 I do not consider crossovers with the following types of films, TV series, and episodes...
-* Animated series do not form crossovers with live action series unless the animated series is considered canon with a live action series which already crossed over.
+* Animated series do not form crossovers with live action series unless the animated series is considered canon with a live action series that already crossed over.
 * Television series without a continuing story throughout the entire run of the series
 ** Anthology series such as I<The Twilight Zone>, I<The Outer Limits>, and I<Love, American Style>
 ** Sketch comedy series such as I<Saturday Night Live>
@@ -39,6 +39,6 @@ A<Big (and little) fake companies|href="Big_fake_companies"> fall under this rul
 2 Stock footage
 If two series only share stock footage, it does not mean they crossed over. However, if the events in the stock footage are mentioned, it just might create a crossover.
 2 Good reason
-After all of my other rules are applied, there are some crossovers which would be considered too vague to count. Sometimes I come across a good reason to allow the crossover. So if the argument for the crossover is good enough, I will include it.
+After all of my other rules are applied, there are some crossovers that would be considered too vague to count. Sometimes I come across a good reason to allow the crossover. So if the argument for the crossover is good enough, I will include it.
 2 I feel like it
 And after having a good reason, sometimes I just feel like saying two series crossed over with each other. The proof may be scant, but sometimes I just decide to add it.

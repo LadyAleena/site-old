@@ -7,7 +7,10 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../../files/lib';
 use Base::Page qw(page story);
 
-page( 'code' => sub { story(*DATA) });
+my $magic;
+$magic->{'series base'} = '../../../Movies/Movies_by_series.pl';
+
+page( 'code' => sub { story(*DATA, { 'line magic' => $magic }) });
 
 __DATA__
 B<Oceanic Airlines> became popular when I<Lost> premiered, though the airline existed for at least a decade prior to I<Lost>. Not all series which mention Oceanic Airlines cross over with each other. One note of caution, the list of series was compiled on A<Wikipedia|href="https://en.wikipedia.org/wiki/Oceanic_Airlines">, so some of these may not even contain Oceanic Airlines (or similarly named airlines). You can also read A<Poobala's article|href="http://www.poobala.com/bfc.html" target="new">.

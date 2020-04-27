@@ -3,40 +3,50 @@ use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
 our @EXPORT_OK = qw(html style body main div section article nav header footer heading head pre
-                 paragraph address anchor img span rparagraph blockquote list definition_list table
-                 form fieldset selection input inputs textarea figure noscript);
+                 paragraph address anchor img object span blockquote list definition_list table
+                 form fieldset selection datalist input inputs textarea figure noscript);
 
-use Util::Line qw(rline line);
+use Util::Line qw(line);
 
-my @ics  = qw(id class style lang);
+my @ics  = qw(id class style lang title);
 my @java = qw(onclick ondblclick onkeypress onkeydown onkeyup onmouseover onmousedown onmouseup onmousemove onmouseout);
 my $gen  = [@ics, @java];
+
+my @boolean_attribute_list = qw(autofocus checked disabled multiple readonly required);
+my %boolean_attributes;
+$boolean_attributes{$_} = 1 for @boolean_attribute_list;
 
 sub html_attributes {
   my ($valid, $opt) = @_;
   my @attributes;
   for (@{$valid}) {
     my $value = $opt->{$_};
-    push @attributes, qq($_="$value") if defined($opt->{$_});
+    if ($boolean_attributes{$_}) {
+      push @attributes, $_ if defined($opt->{$_});
+    }
+    else {
+      push @attributes, qq($_="$value") if defined($opt->{$_});
+    }
   }
   return join(' ', @attributes);
 }
 
 # start_tag is used in the following elements:
-# plain_element, code_element, img, 
-# meta, base, links, style, head, rparagraph, blockquote,
+# plain_element, code_element, img,
+# meta, base, links, style, head, paragraph, blockquote,
 # item, list, definition, definition_list,
-# col, cell, row, thead, tfoot, tbody, table, 
+# col, cell, row, thead, tfoot, tbody, table,
 # selection, input, fieldset, figure, html
 sub start_tag {
   my ($tag, $attributes, $opt) = @_;
   my $tag_attributes = html_attributes($attributes, $opt);
   $tag .= " $tag_attributes" if $tag_attributes;
+  $tag .= ' /' if ($opt->{'close'} && $opt->{'close'} =~ /^[yt1]/);
   return "<$tag>";
 }
 
 # end_tag is used in the following elements:
-# plain_element, code_element, style, head, rparagraph, blockquote,
+# plain_element, code_element, style, head, paragraph, blockquote,
 # item, list, definition, definition_list,
 # cell, row, thead, tfoot, tbody, table,
 # selection, fieldset, figure, html
@@ -47,7 +57,7 @@ sub end_tag {
 
 sub break {
   my ($value, $break) = @_;
-  
+
   my $line = $value;
      $line =~ s/$break/<br>/g;
 
@@ -65,10 +75,10 @@ sub plain_element {
 }
 
 # code_element is used in the following elements:
-# body, main, section, article, nav, aside, div, address, noscript, form, pre, header, footer
+# body, main, article, section, nav, aside, address, header, footer, div, noscript, form, pre
 sub code_element {
   my ($tag, $attributes, $tab, $value, $opt) = @_;
-  
+
   if (!$value) {
     line($tab, plain_element($tag, $attributes, $value, $opt));
   }
@@ -96,11 +106,15 @@ sub img {
 }
 
 sub anchor {
-  plain_element('a', ['href', 'target', 'title', @$gen, 'tabindex'], @_);
+  plain_element('a', ['href', 'target', @$gen, 'tabindex'], @_);
 }
 
 sub span {
   plain_element('span', $gen, @_);
+}
+
+sub object {
+  plain_element('object', ['type', 'data', 'width', 'height', @$gen], @_);
 }
 
 # Start elements for head.
@@ -177,25 +191,18 @@ sub head {
 
 # Begin paragraphs
 
-sub rparagraph {
+sub paragraph {
   my ($tab, $value, $opt) = @_;
   my $tag = 'p';
   my $sep = $opt->{'separator'} ? $opt->{'separator'} : "\n";
 
-  my $line;
   for (grep(length, split(/$sep/, $value))) {
     my $paragraph = $opt->{'break'} ? break($_, $opt->{'break'}) : $_;
        $paragraph =~ s/^\s+//;
-    $line .= rline($tab, start_tag($tag, $gen, $opt));
-    $line .= rline($tab + 1, $paragraph);
-    $line .= rline($tab, end_tag($tag));
+    line($tab, start_tag($tag, $gen, $opt));
+    line($tab + 1, $paragraph);
+    line($tab, end_tag($tag));
   }
-  
-  return $line;
-}
-
-sub paragraph {
-  print rparagraph(@_);
 }
 
 # End paragraphs
@@ -218,7 +225,7 @@ sub blockquote {
 sub item {
   my ($tab, $value, $opt) = @_;
   my $tag = 'li';
-  
+
   line($tab, start_tag($tag, ['value', @$gen], $opt));
   line($tab + 1, $value);
   if ($opt->{inlist}) {
@@ -231,8 +238,7 @@ sub list {
   my ($tab, $type, $list, $opt) = @_;
   my $tag = $type.'l';
 
-
-  line($tab, start_tag($tag, $gen, $opt));
+  line($tab, start_tag($tag, [@$gen, 'start'], $opt));
   for my $item (@$list) {
     if (ref($item) eq 'ARRAY') {
       item($tab + 1, $item->[0], $item->[1]);
@@ -318,7 +324,7 @@ sub definition_list {
         my $upheading = ucfirst $heading;
         my $span_class = $opt->{'span class'} ? $opt->{'span class'} : undef;
         my $span = span("$upheading: ", { 'class' => $span_class });
-        
+
         definition($tab + 2, $span.$item->{$heading});
       }
     }
@@ -400,7 +406,7 @@ sub rows {
     my $type = $rowgroup->[0];
     my @rows = $rowgroup->[1];
     my $attributes = $rowgroup->[2];
-    
+
     for my $row (@rows) {
       row($tab, $type , $_, $attributes) for @$row;
     }
@@ -432,7 +438,7 @@ sub tfoot {
 sub tbody {
   my ($tab, $opt) = @_;
   my $tag = 'tbody';
-  
+
   return if !$opt->{'rows'};
 
   line($tab, start_tag($tag, $gen, $opt));
@@ -469,7 +475,7 @@ sub table {
     tbody($tab, { 'rows' => $opt->{'rows'} });
   }
   $tab--;
-  
+
   line($tab, end_tag($tag));
 }
 
@@ -500,9 +506,22 @@ sub selection {
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
 }
 
+sub datalist {
+  my ($tab, $options, $opt) = @_;
+  my $tag = 'datalist';
+
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
+  line($tab, start_tag($tag, ['name', 'multiple', @$gen, 'tabindex'], $opt));
+  for (@$options) {
+    option($tab + 1, @$_);
+  }
+  line($tab, end_tag($tag));
+  label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
+}
+
 sub textarea {
   my ($tab, $value, $opt) = @_;
-  
+
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
   line($tab, plain_element('textarea', ['name', 'rows', 'cols', @$gen, 'tabindex'], ($value, $opt)));
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
@@ -511,9 +530,18 @@ sub textarea {
 sub input {
   my ($tab, $opt) = @_;
   my $tag = 'input';
-  my $start = start_tag($tag, ['type', 'value', 'name', 'placeholder', @$gen, 'tabindex'], $opt);
+  my @input_attributes = qw(type name value placeholder list form accept alt capture files
+                            min max minlength maxlength size width height
+                            multiple namepattern pattern
+                            spellcheck src step inputmode
+                            formaction formenctype formmethod formnovalidate formtarget
+                            selectionDirection selectionStart selectionEnd
+                            valueAsDate valueAsNumber
+                            autocomplete autofocus accesskey
+                            disabled readonly required checked);
+  my $start = start_tag($tag, [@input_attributes, @$gen, 'tabindex'], $opt);
   my $text = $opt->{text} ? "$opt->{text} " : '';
-  
+
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
   line($tab, $text.$start);
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
@@ -555,7 +583,7 @@ sub figcaption {
 sub figure {
   my ($tab, $code, $opt) = @_;
   my $tag = 'figure';
-  
+
   line($tab, start_tag($tag, $gen, $opt));
   figcaption($tab + 1, @{$opt->{'figcaption'}}) if ($opt->{'figcaption'} && $opt->{'place caption'} eq 'before');
   &$code;
@@ -589,7 +617,7 @@ sub body    { code_element('body',    $gen, @_) }
 sub html {
   my ($tab, $opt) = @_;
   my $tag = 'html';
-  
+
   print "content-type: text/html \n\n";
   line(0, $opt->{'doctype'} ? $opt->{'doctype'} : '<!DOCTYPE html>');
   line($tab, start_tag($tag, $gen, $opt));
@@ -609,10 +637,10 @@ B<HTML::Element> generates HTML tags for most of the HTML elements.
 To use B<HTML::Element> to print HTML tags, use the following. All functions are exported only upon request.
 
   use Base::HTML::Element qw(
-    title heading script anchor paragraph rparagraph list definition_list table
+    title heading script anchor paragraph list definition_list table
     form fieldset selection input textarea div pre html
   );
-  
+
   my @list = (
     'white',
     ['red,    { style => 'color:#ff0000' }],
@@ -620,7 +648,7 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
     ['blue',  { style => 'color:#0000ff' }],
     'black'
   );
-  
+
   $tab = 0;
   html($tab, {
     'head' => {
@@ -631,22 +659,22 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
     'body' => [
       sub {
         $tab++;
-        
+
         nav($tab,
           sub {
             list($tab + 2, 'u', \@nav_array);
-          }, { 
+          }, {
             'heading' => [1, 'Nav heading'],
             'id' => 'nav_id',
             'class' => 'nav_class',
             'style' => 'nav_style'
           }
         );
-        
+
         article($tab,
           sub {
             $tab++;
-            section($tab, 
+            section($tab,
               sub {
                 paragraph($tab + 2, 'I did not give this section a header or footer for my sanity.');
                 aside($tab + 2,
@@ -661,8 +689,8 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
                 'style' => 'section_1_style'
               }
             );
-              
-            section($tab, 
+
+            section($tab,
               sub {
                 paragraph($tab + 2, 'I did not give this section a header or footer either for my sanity.');
                 list($tab + 2, 'u', \@list);
@@ -679,9 +707,9 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
             'class' => 'article_class',
             'style' => 'article_class',
             'header' => [sub {
-              paragraph($tab + 2, 'Opening remarks in article.', { 
-                'id' => 'article_open_remarks', 
-                'class' => 'remarks', 
+              paragraph($tab + 2, 'Opening remarks in article.', {
+                'id' => 'article_open_remarks',
+                'class' => 'remarks',
                 'style' => 'article_open_style'
               });
             }, {
@@ -708,8 +736,8 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
         );
         $tab--;
       }, {
-        'id' => 'body_id', 
-        'class' => 'body_class', 
+        'id' => 'body_id',
+        'class' => 'body_class',
         'style' => 'body_style'
         'header' => [sub {
           $tab++;
@@ -735,7 +763,7 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
           address($tab, anchor('My email', { href => 'mailto:my@email.com' }));
           $tab--;
         }, {
-          'id' => 'body_footer_id', 
+          'id' => 'body_footer_id',
           'class' => 'body_footer_class',
           'style' => 'body_footer_style'
         }]
@@ -745,7 +773,7 @@ To use B<HTML::Element> to print HTML tags, use the following. All functions are
 
 =head1 ELEMENTS
 
-All of the functions C<print> the elements with the exception of C<anchor> which returns the anchor and C<rparagraph> which returns a paragraph for use in other functions.
+All of the functions C<print> the elements with the exception of C<anchor> and C<img>, which return an anchor or img.
 
 As with the Perl community, the HTML community expects some indentation so tabs, the first parameter of every function, are included with each element except where noted.
 
@@ -766,14 +794,14 @@ See the L<synopsis|/SYNOPSIS> for how B<C<html>> could be used.
 
 B<C<head>> is available in case you do not want to use the C<L<html|/html>> function. It has the required parameter C<title> and optional parameters C<base>, C<meta>, C<links>, C<scripts>, C<style>, and C<noscript>.
 
-  head($tab, { 
+  head($tab, {
     'title'   => 'My page title',
     'base'    => { href => 'www.mysite.com', target => '_self' },
     'meta'    => \@array_of_meta_hashes,
     'links'   => \@array_of_link_hashes,
     'scripts' => \@array_of_script_hashes,
     'style'   => \@array_of_style_data,
-  }); 
+  });
 
 =head3 Setting up C<base>
 
@@ -847,7 +875,7 @@ B<C<body>> is available in case you do not want to use the C<L<html|/html>> func
     'class' => 'body_classes',
     'style' => 'body_styles'
     'heading' => [$heading_level, 'My body heading'],
-    'header'  => [sub { 
+    'header'  => [sub {
       paragraph($tab + 2, 'A paragraph in the body header.');
     }, {
       'id'    => 'body_header_id',
@@ -876,12 +904,12 @@ B<C<main>>, B<C<section>>, B<C<article>>, B<C<nav>>, and B<C<aside>> have code a
 
   main($tab, sub {
     paragraph($tab, 1, 'This is an main I wrote.')
-  }, { 
+  }, {
     'id'    => 'main_id',
     'class' => 'main_classes',
     'style' => 'main_styles'
     'heading' => [$heading_level, 'My aticle heading'],
-    'header'  => [sub { 
+    'header'  => [sub {
       paragraph($tab + 2, 'A paragraph in the main header.');
     }, {
       'id'    => 'main_header_id',
@@ -898,17 +926,17 @@ B<C<main>>, B<C<section>>, B<C<article>>, B<C<nav>>, and B<C<aside>> have code a
       'heading' => [$heading_level + 1, 'My main footer heading.'],
     }],
   });
-  
+
 =head4 C<section> example
 
   section($tab, sub {
     paragraph($tab, 'My section contents.')
-  }, { 
+  }, {
     'id'    => 'section_id',
     'class' => 'section_classes',
     'style' => 'section_styles'
     'heading' => [$heading_level, 'My section heading'],
-    'header'  => [sub { 
+    'header'  => [sub {
       paragraph($tab + 2, 'A paragraph in the section header.');
     }, {
       'id'    => 'section_header_id',
@@ -930,12 +958,12 @@ B<C<main>>, B<C<section>>, B<C<article>>, B<C<nav>>, and B<C<aside>> have code a
 
   article($tab, sub {
     paragraph($tab, 1, 'This is an article I wrote.')
-  }, { 
+  }, {
     'id'    => 'article_id',
     'class' => 'article_classes',
     'style' => 'article_styles'
     'heading' => [$heading_level, 'My aticle heading'],
-    'header'  => [sub { 
+    'header'  => [sub {
       paragraph($tab + 2, 'A paragraph in the article header.');
     }, {
       'id'    => 'article_header_id',
@@ -960,12 +988,12 @@ B<C<main>>, B<C<section>>, B<C<article>>, B<C<nav>>, and B<C<aside>> have code a
     list($tab, 'o', \@my_page_sections);
     heading($tab, 1, 'My site navigation'); # a subheading
     list($tab, 'u', \@my_site_pages);
-  }, { 
+  }, {
     'id'    => 'nav_id',
     'class' => 'nav_classes',
     'style' => 'nav_styles'
     'heading' => [$heading_level, 'My navigation heading'],
-    'header'  => [sub { 
+    'header'  => [sub {
       paragraph($tab + 2, 'A paragraph in the nav header.');
     }, {
       'id'    => 'nav_header_id',
@@ -987,12 +1015,12 @@ B<C<main>>, B<C<section>>, B<C<article>>, B<C<nav>>, and B<C<aside>> have code a
 
   aside($tab, sub {
     paragraph($tab, 'Here are my tangential thoughts about the subject of the article or section.')
-  }, { 
+  }, {
     'id'    => 'aside_id',
     'class' => 'aside_classes',
     'style' => 'aside_styles'
     'heading' => [$heading_level, 'My aside heading'],
-    'header'  => [sub { 
+    'header'  => [sub {
       paragraph($tab + 2, 'A paragraph in the aside header.');
     }, {
       'id'    => 'aside_header_id',
@@ -1018,7 +1046,7 @@ B<C<header>> and B<C<footer>> are available if you do not want to position the C
 
   header($tab, sub {
     paragraph($tab, 'This is the header.');
-  }, { 
+  }, {
     'id'    => 'header_id',
     'class' => 'header_classes',
     'style' => 'header_styles'
@@ -1029,7 +1057,7 @@ B<C<header>> and B<C<footer>> are available if you do not want to position the C
 
   footer($tab, sub {
     paragraph($tab, 'This is the footer.');
-  }, { 
+  }, {
     'id'    => 'footer_id',
     'class' => 'footer_classes',
     'style' => 'footer_styles'
@@ -1063,7 +1091,7 @@ B<C<pre>> has code but no optional parameters. The C<tab> will be ignored.
 
 B<C<heading>> has the heading level, value, and optional parameters. This has been built into the C<body>, C<article>, C<section>, C<nav>, C<aside>, C<header>, and C<footer> functions but can be used independently of them.
 
-  heading($tab, 2, 'My second level heading', { 
+  heading($tab, 2, 'My second level heading', {
     'id'    => 'heading_id',
     'class' => 'heading_classes',
     'style' => 'heading_styles'
@@ -1071,30 +1099,18 @@ B<C<heading>> has the heading level, value, and optional parameters. This has be
 
 =head2 paragraphs
 
-B<C<paragraph>> and B<C<rparagraph>> have a value and the optional parameter C<separator>.
+B<C<paragraph>> has a value and the optional parameter C<separator>.
 
 =head3 C<paragraph>
 
 B<C<paragraph>> prints the paragraph(s). The C<separator> option allows you to input more than one paragraph per use of this function.
 
-  paragraph($tab, 'My paragraph(s)', { 
+  paragraph($tab, 'My paragraph(s)', {
     id    => 'paragraph_id',
     class => 'paragraph_classes',
     style => 'paragraph_styles'
     separator => 'paragraph_separator'
   });
-
-=head3 C<rparagraph>
-
-B<C<rparagraph>> returns paragraph(s). See L<paragraph|/paragraph>.
-
-  my $favorite = rpragraph($tab,'My favorite color.');
-  
-  my @list = (
-    ['red,    { style => 'color:#ff0000' }],
-    ['green', { style => 'color:#00ff00' }],
-    ["blue\n$favorite",  { style => 'color:#0000ff' }] # My favorite color.
-  );
 
 =head2 C<list>
 
@@ -1113,7 +1129,7 @@ C<type> is C<u> for an unordered list or C<o> for an ordered list. The C<list> p
 If you do not want your list items formatted, you can pass your array as is. If you want your list items formatted, the formatted items are also array references with the optional parameter C<inlist>.
 
   'unformatted value',
-  ['formatted value', { 
+  ['formatted value', {
     id    => 'item_id',
     class => 'item_class',
     style => 'item_style',
@@ -1149,7 +1165,7 @@ B<C<table>> has the optional parameters of C<caption>, C<cols>, and C<rows>.
 
 C<cols> and C<rows> are array references.
 
-  table($tab, { 
+  table($tab, {
     id      => 'table_id',
     class   => 'table_class',
     style   => 'table_style',
@@ -1219,18 +1235,18 @@ C<whead> is a group of rows with a heading then data.
 If you do not want your cells formatted, you can pass your array as is. If you want your cells formatted, the formatted cells are also array references with optional parameters C<list> and C<type_override>. The C<list> option is the same as the C<inlist> option for L<list items|/Setting up the list items>. If you need to override the row type, use C<type_override>.
 
   'unformatted value',
-  ['formatted value', { 
+  ['formatted value', {
     id    => 'cell_id',
     class => 'cell_class',
     style => 'cell_style',
   }],
-  ['list', { 
+  ['list', {
     id    => 'cell_with_list_id',
     class => 'cell_class',
     style => 'cell_style',
     list => ['u', \@list_in_cell, { list options }]
   }],
-  ['formatted value', { 
+  ['formatted value', {
     id    => 'cell_id',
     class => 'cell_class',
     style => 'cell_style',
@@ -1246,7 +1262,7 @@ B<C<form>> has code and the optional paramters C<action> and C<method>.
 
   form($tab, sub {
     ... form elements ...
-  }, { 
+  }, {
     action => 'form_action',
     method => 'form_method',
     id     => 'form_id',
@@ -1260,13 +1276,13 @@ B<C<fieldset>> has code and the optional paramter C<legend>.
 
   fieldset($tab, sub {
     ... fieldset elements ...
-  }, { 
+  }, {
     legend => 'legend_text',
     id     => 'fieldset_id',
     class  => 'fieldset_class',
     style  => 'fieldset_style'
   });
-  
+
 =head4 Setting up the legend
 
 The legend can be unformatted as above or formatted as below in an array reference with the optional parameter C<align>.
@@ -1285,7 +1301,7 @@ B<C<selection>> has options and the optional parameters C<name>, C<multiple>, C<
   selection($tab, \@options, {
     name     => 'select_name',
     multiple => 'multiple',
-    label    => ['label text', { 
+    label    => ['label text', {
       for   => 'select_name',
       id    => 'label_id',
       class => 'label_class',
@@ -1326,7 +1342,7 @@ B<C<textarea>> has a value and the optional parameters C<name>, C<rows>, C<cols>
     name     => 'textarea_name',
     rows     => 100,
     cols     => 100,
-    label    => ['label text', { 
+    label    => ['label text', {
       for   => 'textarea_name',
       id    => 'label_id',
       class => 'label_class',
@@ -1362,7 +1378,7 @@ B<C<figure>> has a value and the optional parameters C<figcaption> and C<place c
 
 B<C<script>> has optional parameters C<type> and C<src>.
 
-  script($tab, { 
+  script($tab, {
     type => 'text/javascript', # or other type
     src => 'script.ext'
   });

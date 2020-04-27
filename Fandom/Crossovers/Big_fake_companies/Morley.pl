@@ -7,7 +7,10 @@ use CGI::Carp qw(fatalsToBrowser);
 use lib '../../../files/lib';
 use Base::Page qw(page story);
 
-page( 'code' => sub { story(*DATA) });
+my $magic;
+$magic->{'series base'} = '../../../Movies/Movies_by_series.pl';
+
+page( 'code' => sub { story(*DATA, { 'line magic' => $magic }) });
 
 __DATA__
 B<Morley> became popular with its use in I<The X-Files> however the earliest known use of the brand name is in I<Psycho>. Not all series which mention Morley cross over with each other. One note of caution, the list of series was compiled on A<Wikipedia|href="https://en.wikipedia.org/wiki/Morley_(cigarette)">, so some of these may not even contain Morley cigarettes (or similarly designed cigarette pack).
@@ -22,7 +25,7 @@ The Etruscan horse Morley was the first package design introduced, possibly on I
 * I<Friends> Q<The One Where Rachel Smokes>  (8 April 1999)
 
 2 Red box Morley
-The red box Morley pack design first appeared on I<Beverly Hills 90210>. Since I<The X-Files> became part of popular culture, Morley is used to create crossovers by enthusiasts. 
+The red box Morley pack design first appeared on I<Beverly Hills 90210>. Since I<The X-Files> became part of popular culture, Morley is used to create crossovers by enthusiasts.
 3 Television
 * I<Beverly Hills 90210> Q<The Back Story> (16 September 1992)
 * I<Space: Above and Beyond> Q<Ray Butts> (22 October 1995)
@@ -33,6 +36,7 @@ The red box Morley pack design first appeared on I<Beverly Hills 90210>. Since I
 * I<Malcolm in the Middle> Q<Stock Car Races> (2 April 2000)
 * I<Special Unit 2> Q<The Grain> (3 October 2001)
 * I<ER> Q<Beyond Repair> (10 January 2002)
+* I<Touched by an Angel> Q<Song for My Father> (22 February 2003)
 * I<Jake 2.0> Q<Arms and the Girl> (1 October 2003)
 * I<Cold Case>
 ** Q<The Plan> (2 May 2004)
@@ -61,26 +65,31 @@ The red box Morley pack design first appeared on I<Beverly Hills 90210>. Since I
 ** Q<The Raw & the Cooked> (19 October 2008)
 ** Q<Waiting for the Miracle> (29 January 2012)
 * I<United States of Tara> pilot (18 January 2009)
-* I<24> Q<Day 8: 9:00 p.m.  10:00 p.m.>  (25 January 2010)
+* I<24> Q<Day 8: 9:00 p.m. – 10:00 p.m.>  (25 January 2010)
 * I<American Horror Story: Murder House> Q<Birth> (25 January 2010)
 * I<Lost> Q<LA X> (2 February 2010)
+* I<Justified> Q<Riverbrook>  (23 March 2010)
+* I<NCIS>
+** Q<Freedom> (1 February 2011)
+** Q<Bulletproof> (25 February 2014)
 * I<Walking Dead>
 ** Q<Save the Last One> (30 October 2011)
 ** Q<Consumed> (16 November 2014)
 ** Q<JSS> (18 October 2015)
 * I<The Middle> Q<The Map> (11 January 2012)
 * I<Shameless> Q<I'll Light a Candle for You Every Day> (22 January 2012)
-* I<Justified> Q<Riverbrook>  (23 March 2010)
 * I<Warehouse 13> Q<The Ones You Love> (24 September 2012)
 * I<Kingdom> Q<Please Refrain from Crying> (12 November 2014)
+* I<Twin Peaks> (2017) Q<Part 5> (4 June 2017)
+* I<Wisdom of the Crowd> Q<Root Directory> (7 January 2017)
 3 Film
 * I<The World's End> (10 July 2013)
 
 2 Other pack designs
 The Etruscan horse and Marlboro look-alike designs are not the only ones out there.
-* I<Killer Instinct> Q<Game Over> (11 November 2005) has a pack which is red with a horizontal white stripe.
-* I<The L-Word> Q<Lap Dance> (27 February 2005) and Q<Lunar Cycle> (16 March 2008) has packs which look a lot like the red box Morley, but Morley is spelled in all capital letters where the red box is in title case.
-* I<The Strain> Q<The Third Rail> (21 September 2014) has a pack which is white with vertical gold stripes.
+* I<Killer Instinct> Q<Game Over> (11 November 2005) has a pack that is red with a horizontal white stripe.
+* I<The L-Word> Q<Lap Dance> (27 February 2005) and Q<Lunar Cycle> (16 March 2008) has packs that look a lot like the red box Morley, but Morley is spelled in all capital letters where the red box is in title case.
+* I<The Strain> Q<The Third Rail> (21 September 2014) has a pack that is white with vertical gold stripes.
 
 2 Not Morley
 It could be there are those creatives who know about the popularity of the Morley brand and want to distance themselves from it, so use another name on the packaging. On I<Frasier> Q<Morning Becomes Entertainment> (6 Apirl 2000) the pack looks like Morley, but the company name is Adler.

@@ -3,8 +3,8 @@ use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
 
-our $VERSION = '1.0';
-our @EXPORT = qw(join_defined);
+our $VERSION   = '1.0';
+our @EXPORT_OK = qw(join_defined);
 
 sub join_defined {
   my $joiner = shift @_;
@@ -23,7 +23,7 @@ B<Fancy::Join::Defined> joins only defined values in a list.
 
 =head1 DESCRIPTION
 
-C<join_defined> is exported by default and returns a string of only defined values from a list. It takes two parameters: the character which will join the list and a reference to the list.
+C<join_defined> can be exported and returns a string of only defined values from a list. It takes two parameters: the character which will join the list and a reference to the list.
  
 =head1 AUTHOR
 

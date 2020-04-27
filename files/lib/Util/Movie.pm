@@ -21,7 +21,7 @@ use Util::People qw(people_list);
 
 my $movies     = make_hash( 'file' => ['Movies','movies.txt'],     'headings' => ['title','start year','end year',qw(media Wikipedia allmovie IMDb TV.com genre+ source company)] );
 my $seriess    = make_hash( 'file' => ['Movies','series.txt'],     'headings' => [qw(title Wikipedia allmovie programs+), 'just like'] );
-my $franchises = make_hash( 'file' => ['Movies','franchises.txt'], 'headings' => [qw(title Wikipedia allmovie programs+), 'just like'] );
+# my $franchises = make_hash( 'file' => ['Movies','franchises.txt'], 'headings' => [qw(title Wikipedia allmovie programs+), 'just like'] );
 my $crossovers = make_hash( 'file' => ['Movies','crossovers.txt'], 'headings' => [qw(title crossovers+)] );
 my @crossover_headings = qw(episode season movie series);
 my @episode_headings   = qw(title crossovers);
@@ -34,6 +34,7 @@ my $series_select;
 
 my $current_year = (localtime())[5] + 1900;
 # my ($first,$last);
+
 for my $movie (values %$movies) {
   my $title = $movie->{'title'};
 
@@ -135,6 +136,7 @@ for my $movie (values %$movies) {
       @episode{@episode_headings} = @episode_values;
 
       if ($episode{'crossovers'}) {
+        # splitting into array here b/c make_hash was not used
         my @r_crosses = split(/; ?/, $episode{'crossovers'});
         $episode{'crossovers'} = undef;
         for my $cross (@r_crosses) {
@@ -194,6 +196,7 @@ for my $sseries (values %$seriess) {
   $series_select->{$title} = 'series';
 }
 
+=not in use
 for my $franchise (values %$franchises) {
   my $title = $franchise->{'title'};
 
@@ -234,12 +237,13 @@ for my $franchise (values %$franchises) {
   $franchise->{'start year'} = min(@start_years);
   $franchise->{'end year'} = max(@end_years);
 }
+=cut
 
 my $options = {
   'media'  => [qw(film miniseries tv)],
   'genre'  => [sort keys %$genres],
   'source' => ['novel', 'short story', 'fairy tale', qw(play musical radio comics cartoon game toy)],
-  'series' => $series_select, # is now separate from the main list
+  'series' => $series_select,       # is now separate from the main list
 #  'year'   => [$first..$last],     # users now enter a year string
 #  'format' => [qw(vhs dvd bd dg)], # users probably don't care if I own it and no longer stored
 };
@@ -256,11 +260,13 @@ sub series {
   get_data($seriess, $in, $caller);
 }
 
+=not in use
 # returns a single franchise, the franchises 'list', or all franchises 'data'
 sub franchise {
   my ($in, $caller) = @_;
   get_data($franchises, $in, $caller);
 }
+=cut
 
 # returns a single genre, the genres 'list', or all genres 'data'
 sub genre {

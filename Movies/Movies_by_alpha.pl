@@ -8,15 +8,16 @@ use HTML::Entities qw(encode_entities);
 
 use lib '../files/lib';
 use Base::Page qw(page);
-use Base::Menu qw(alpha_menu);
 use Fancy::Join::Grammatical qw(grammatical_join);
 use HTML::Elements qw(section nav paragraph list form fieldset selection input anchor);
 use Util::Movie qw(movie movie_option display_movie display_option start_year end_year);
 use Util::Convert qw(idify);
 use Util::Data qw(alpha_hash alpha_array first_alpha);
+use Util::Menu qw(alpha_menu);
 use Util::Sort qw(article_sort);
 
 my $cgi = CGI::Minimal->new;
+my $browse = $cgi->param('browse') ? encode_entities($cgi->param('browse'), '<>"') : '';
 my $title  = $cgi->param('title')  ? encode_entities($cgi->param('title'),  '<>"') : '';
 my $year   = $cgi->param('year')   ? encode_entities($cgi->param('year'),   '<>"') : '';
 my $media  = $cgi->param('media')  ? encode_entities($cgi->param('media'),  '<>"') : '';
@@ -37,13 +38,13 @@ if ( $title || $year || $media || $genre || $source || $alpha ) {
   push @selections, $media  if $media;
   push @selections, $genre  if $genre;
   push @selections, $source if $source;
-  
+
   my $selection = @selections ? grammatical_join('and', map("<b>$_</b>", @selections)) : '';
   my $selection_text = $selection;
-  
+
   for my $movie (values %$movies_data) {
     my $item = $movie->{'title'};
-  
+
     if ($year) {
       my $start_year = start_year($movie);
       my $end_year   = end_year($movie);
@@ -61,7 +62,7 @@ if ( $title || $year || $media || $genre || $source || $alpha ) {
     }
     next if $media  &&    $movie->{'media'} ne $media;
     next if $genre  &&   !$movie->{'genre'}{$genre};
-    next if $source &&  (!$movie->{'source'} || $movie->{'source'} !~ /$source/i);
+    next if $source &&  (!$movie->{'source'} || $movie->{'source'} !~ /\b$source(?!ing)/i);
     next if $title  && lc($movie->{'title'}) !~ /\L$title\E/i;
     next if $alpha  && first_alpha($movie->{'title'}) ne $alpha;
 
@@ -79,7 +80,7 @@ for my $movies (keys %$alpha_movies) {
   my @movies = map(display_movie($movies_data->{$_}, { 'series' => 1, 'links' => 1, 'crossover' => 1 }), sort { article_sort(lc $a, lc $b) } @{$alpha_movies->{$movies}});
   @{$alpha_movies->{$movies}} = @movies;
 }
-my $alpha_menu = scalar(@movies) > 10 ? 
+my $alpha_menu = scalar(@movies) > 10 ?
                  alpha_menu($alpha_movies, { 'addition' => anchor('Search the list', { href => '#Search' }), 'join' => ' | ' } ) :
                  undef;
 
@@ -89,8 +90,8 @@ my $browse_alpha_menu = alpha_menu($browse_alpha, { 'param' => 'alpha', 'join' =
 page( 'code' => sub {
   form(3, sub {
     fieldset(4, sub {
-      input(5, { 'type' => 'text', 'name' => 'title',  'placeholder' => 'Title', 'style' => 'width: 14em' });
-      input(5, { 'type' => 'text', 'name' => 'year',   'placeholder' => 'Year',  'style' => 'width: 10em' });
+      input(5, { 'type' => 'text',   'name' => 'title', 'placeholder' => 'Title', 'style' => 'width: 19em' });
+      input(5, { 'type' => 'number', 'name' => 'year',  'placeholder' => 'Year',  'style' => 'width: 5em', 'min' => "1911", 'max' => '2020' });
       for my $select (@selects) {
         my @options = ([ucfirst($select), { 'value' => '' }], map(display_option($select, $_), @{$select_options{$select}}));
         selection(5, \@options, { 'name' => $select, 'style' => 'width: 10em' });
@@ -99,7 +100,7 @@ page( 'code' => sub {
       input(5, { 'type' => 'button', 'value' => 'Start over', 'onclick' => "location='Movies_by_alpha.pl'" });
       nav(5, "Browse: $browse_alpha_menu", { 'class' => 'alpha_menu' });
     }, { 'legend' => 'Search...' });
-  }, { 'action' => 'Movies_by_alpha.pl', 'method' => 'get', 'id' => 'Search' });
+  }, { 'action' => 'Movies_by_alpha.pl', 'method' => 'get', 'id' => 'movie_search' });
   section(3, sub {
     if ( $title || $year || $media || $genre || $source ) {
       paragraph(4, $search) if $search;

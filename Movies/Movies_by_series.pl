@@ -9,7 +9,7 @@ use HTML::Entities qw(encode_entities);
 use lib '../files/lib';
 use Base::Page qw(page);
 use HTML::Elements qw(section nav list);
-use Util::Movie qw(movie_option print_franchise print_series print_movie textify_movie);
+use Util::Movie qw(movie_option print_series print_movie textify_movie);
 use Util::Columns;
 use Util::Data qw(alpha_array);
 use Util::Menu qw(file_menu alpha_menu);
@@ -39,7 +39,7 @@ page( 'heading' => $body_head, 'class' => $body_class, 'code' => sub {
     for my $alpha (sort keys %$alpha_movies) {
       my $class = number_of_columns(3, scalar @{$alpha_movies->{$alpha}}, 1);
       section(3, sub {
-        list(5, 'u', file_menu('series', [sort @{$alpha_movies->{$alpha}}]), { 'class' => $class, 'style' => 'font-size:smaller' });
+        list(5, 'u', file_menu('series', [sort { article_sort($a, $b) } @{$alpha_movies->{$alpha}}]), { 'class' => $class, 'style' => 'font-size:smaller' });
         nav(5, $alpha_menu, { 'class' => 'alpha_menu' });
       }, { 'heading' => [2, $alpha, { 'id' => "section_$alpha" }] });
     }

@@ -8,22 +8,19 @@ use HTML::Entities qw(encode_entities);
 
 use lib "../files/lib";
 use Base::Page qw(page);
-use Base::Menu qw(file_menu);
-use HTML::Elements qw(section paragraph list);
+use HTML::Elements qw(section paragraph list anchor);
 use Util::Movie qw(display_simple_movie movie genre);
 use Util::Sort qw(article_sort);
 
 my $genres = genre('data');
 
-my $cgi = CGI::Minimal->new;
+my $cgi    = CGI::Minimal->new;
 my $select = encode_entities($cgi->param('genre'),'<>"');
-my $head = $select && $genres->{$select} ? ucfirst "$select movies" : undef;
-my $file_menu = file_menu('genre', [sort keys %$genres] , $select);
+my $head   = $select && $genres->{$select} ? ucfirst "$select movies" : undef;
 
-page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
-  my $heading;
-  section(3, sub {
-    if ($select && $genres->{$select}) {
+page( 'heading' => $head, 'code' => sub {
+  if ($select && $genres->{$select}) {
+    section(3, sub {
       my @subgenres = (sort grep(!/main/, keys %{$genres->{$select}}));
       unshift @subgenres, 'main' if $genres->{$select}{'main'};
 
@@ -37,10 +34,23 @@ page( 'heading' => $head, 'file menu' => $file_menu, 'code' => sub {
           list(6, 'u', \@movies, { 'class' => $class, 'style' => $style });
         }, { 'heading' => $subgenre ne 'main' ? [3, ucfirst $subgenre] : undef });
       }
-    }
-    else {
+    });
+    section(3, sub {
+      my $list = [
+        map  { anchor(ucfirst $_, { 'href' => "?genre=$_" }) }
+        sort
+        grep { !/$select/ } keys %$genres
+      ];
+      list(5, 'u', $list, { 'class' => 'four' });
+    }, { 'heading' => [2, 'Other genres'] });
+  }
+  else {
+    section(3, sub {
+      my $list = [
+        map  { anchor(ucfirst $_, { 'href' => "?genre=$_" }); } (sort keys %$genres)
+      ];
       paragraph(6, "Click a genre to see a list of movies.");
-      list(5, 'u', $file_menu, { 'class' => 'three' });
-    }
-  });
+      list(5, 'u', $list, { 'class' => 'four' });
+    });
+  }
 });

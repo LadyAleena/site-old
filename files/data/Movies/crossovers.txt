@@ -1,7 +1,7 @@
-Alien|//Alien vs. Predator/Alien vs. Predator;Serenity/01/Firefly/Firefly;Harm's Way/05/Angel/Buffy the Vampire Slayer
-Aliens|//Soldier
+Alien|//Alien vs. Predator/Alien vs. Predator
+Aliens|//Soldier; Serenity/01/Firefly/Firefly; Harm's Way/05/Angel/Buffy the Vampire Slayer
 Predator|//Alien vs. Predator/Alien vs. Predator
-Alien vs. Predator|//Alien/Alien;//Predator/Predator
+Alien vs. Predator|//Alien/Alien; //Predator/Predator
 Andy Barker, P.I.|Doublemeat Palace/06/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer
 Armageddon|//The Rock
 The Rock|//Armageddon
@@ -22,10 +22,10 @@ ER|//The X-Files (1993)/The X-Files
 Firefly|//Battlestar Galactica (2003)/Battlestar Galactica (2003)
 Serenity|//The Postman
 First Monday|//JAG/
-The Flash|World's Finest/01/Supergirl (2015)
 Get Smart, Again!|//The Man from U.N.C.L.E. (1964)/U.N.C.L.E.
 The Green Hornet (1966)|A Piece of the Action/02/Batman (1966 tv)/Batman (1966);Batman's Satisfaction/02/Batman (1966 tv)/Batman (1966)
 Hart to Hart|//Moonlighting
+Hawaii Five-0|Flashlight/01/MacGyver (2016);I Saw the Sun Rise/01/Magnum P.I. (2018);From the Head Down/01/Magnum P.I. (2018)
 Hawaii Five-O|Skin Deep/01/Magnum P.I.
 Homicide: Life on the Street|Unusual Suspects/05/The X-Files (1993)/The X-Files;//Oz
 The Hitchhiker's Guide to the Galaxy (1981)|The Christmas Invasion/02/Doctor Who (2005)/Doctor Who
@@ -33,7 +33,7 @@ In Plain Sight|Contract/07/Law & Order: Criminal Intent/Law & Order
 JAG|//First Monday/;//NCIS/NCIS
 Knight Rider (2008 film)|//Las Vegas
 L.A. Law|Potts Don't Fail Me Now/01/Cop Rocks;//Civil Wars
-Las Vegas|1.1489//Passions;1.1490//Passions;Method to His Madness/02/Medium;Collision/01/Heroes;//Knight Rider (2008 film)/Knight Rider
+Las Vegas|Mr. Monk Goes to Vegas/03/Monk;1.1489//Passions;1.1490//Passions;Method to His Madness/02/Medium;Collision/01/Heroes;//Knight Rider (2008 film)/Knight Rider
 Law & Order|//Deadline;Smack Is Back/03/New York Undercover;Mob Street/04/New York Undercover
 Law & Order: Special Victims Unit|//Deadline;They Say It's Your Birthday/01/The Beat;Exit Strategy/03/Arrested Development;Took/05/The Wire;/01/Luther
 Law & Order: Criminal Intent|//Deadline;The Catacombes/01/Jo
@@ -45,9 +45,13 @@ Millennium|Millennium/07/The X-Files/The X-Files
 NCIS: Los Angeles|Ka Hakaka Maika'i/02/Hawaii Five-0;True Colors/01/Scorpion/
 Soldier|//Aliens/Alien;//Blade Runner
 St. Elsewhere|//White Shadow;//Tattingers;//M*A*S*H (1972)/MASH;//Chicago Hope;Mercy/06/Homicide: Life on the Street/Homicide;//Oz
+Spaceballs|//Star Wars/Star Wars
 Star Trek (1966)|Daybreak/04/Battlestar Galactica (2004)/Battlestar Galactica (2003)
-Star Trek (2009)|It Begins/01/Alias
-Star Wars|Serenity/01/Firefly/Firefly
+Star Trek: First Contact|//Star Wars/Star Wars
+Star Trek (2009)|//Star Wars/Star Wars; It Begins/01/Alias
+Star Trek Beyond|//Star Wars/Star Wars
+Star Wars|//Spaceballs; //Star Trek: First Contact/Star Trek; Serenity/01/Firefly/Firefly; //Star Trek (2009)/Star Trek; //Star Trek Beyond/Star Trek
+Star Wars: Episode VI - Return of the Jedi|Forget Me Not/01/Once Upon a Time in Wonderland/Once Upon a Time
 Star Wars: Episode I - The Phantom Menace|//E.T.: The Extra-Terrestrial
 E.T.: The Extra-Terrestrial|//Star Wars: Episode I - The Phantom Menace
 The Terminator|//The Abyss
@@ -56,8 +60,41 @@ The Abyss|//The Terminator/Terminator;//Terminator 2: Judgment Day/Terminator
 Warehouse 13|Never Let Me Go/01/Alphas
 Wonderfalls|Amuse-bouche/01/Hannibal (2013)
 The X-Files (1993)|Struck by Lightning//Strange Luck;A New Day in the Old Town/02/Fringe
-Lost|Authorized Personnel Only, Part 2/02/Alias;A Clean Conscience/02/Alias;Senator's Daughter/01/LAX;No More Good Days/01/FlashForward;The Stranger/01/Once Upon a Time;Chuck Versus the Helicopter/01/Chuck
+Lost|Authorized Personnel Only, Part 2/02/Alias; A Clean Conscience/02/Alias; Senator's Daughter/01/LAX; No More Good Days/01/FlashForward; The Stranger/01/Once Upon a Time; Chuck Versus the Helicopter/01/Chuck
 Cloverfield|So It Begins/01/Alias
 Super 8|So It Begins/01/Alias
 Alias|The Path//Eli Stone
-Beveryly Hills, 90210|//The X-Files/The X-Files;Eric Gets Suspended//That '70s Show;Stock Car Races//Malcolm in the Middle;Beyond Repair/08/ER;The Grain/02/Special Unit 2;Arms and the Girl//Jake 2.0;North Mammon/02/Criminal Minds;Bolshoi Booze//Prison Break;School Hard/02/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer;Scatter Point/02/Burn Notice;The Ones You Love/04/Warehouse 13;Consumed/05/The Walking Dead;//CSI: Crime Scene Investigation
+Chicago Hope|A Doll's Eyes/04/Homicide: Life on the Street/Homicide
+Beveryly Hills, 90210|//The X-Files/The X-Files; Eric Gets Suspended//That '70s Show; Stock Car Races//Malcolm in the Middle; Beyond Repair/08/ER; The Grain/02/Special Unit 2; Arms and the Girl//Jake 2.0; North Mammon/02/Criminal Minds; Bolshoi Booze//Prison Break; School Hard/02/Buffy the Vampire Slayer (1997)/Buffy the Vampire Slayer; Scatter Point/02/Burn Notice; The Ones You Love/04/Warehouse 13; Consumed/05/The Walking Dead; //CSI: Crime Scene Investigation
+Casper|//Ghostbusters (1984)/Ghostbusters
+Ghostbusters (1984)|//Casper/Casper
+Scream 3|///View Askewniverse
+View Askewniverse|//Scream 3/Scream
+Coming to America|//Trading Places
+Trading Places|//Coming to America
+Jackie Brown|//Out of Sight
+Out of Sight|//Jackie Brown
+Spy Kids|//Machete/Machete
+Machete|//Spy Kids/Spy Kids
+The Howling|//Gremlins/Gremlins
+Gremlins|//The Howling/Howling
+The Fast and the Furious: Tokyo Drift|//Better Luck Tomorrow
+Better Luck Tomorrow|//The Fast and the Furious: Tokyo Drift/The Fast and the Furious
+Batman (1966 tv)|Crisis on Infinite Earths: Part One/05/Supergirl (2015)/Arrowverse
+Batman (1989)|Crisis on Infinite Earths: Part One/05/Supergirl (2015)/Arrowverse
+Smallville|Crisis on Infinite Earths: Part Two/01/Batwoman/Arrowverse
+Birds of Prey|Crisis on Infinite Earths: Part Three/06/The Flash (2014)/Arrowverse
+Batman v Superman: Dawn of Justice|Crisis on Infinite Earths: Part Four/08/Arrow/Arrowverse
+Lucifer|Crisis on Infinite Earths: Part Three/06/The Flash (2014)/Arrowverse
+Titans|Crisis on Infinite Earths: Part One/05/Supergirl (2015)/Arrowverse; Crisis on Infinite Earths: Part Five/05/Legends of Tomorrow/Arrowverse
+Stargirl|Crisis on Infinite Earths: Part Five/05/Legends of Tomorrow/Arrowverse
+Green Lantern|Crisis on Infinite Earths: Part Five/05/Legends of Tomorrow/Arrowverse
+Superman Returns|Crisis on Infinite Earths: Part Two/01/Batwoman/Arrowverse; Crisis on Infinite Earths: Part Five/05/Legends of Tomorrow/Arrowverse
+Evil Dead (1981)|//Jason Goes to Hell: The Final Friday/Friday the 13th (1980);//Pumpkinhead II: Blood Wings/Pumpkinhead
+Jason Goes to Hell: The Final Friday|//Evil Dead (1981)/The Evil Dead
+Pumpkinhead II: Blood Wings|//Evil Dead (1981)/The Evil Dead
+Bride of Chucky|//Halloween (1978)/Halloween (1978); //Friday the 13th (1980)/Friday the 13th (1980); //A Nightmare on Elm Street (1984)/A Nightmare on Elm Street
+Halloween (1978)|//Bride of Chucky/Child's Play
+Friday the 13th (1980)|//Bride of Chucky/Child's Play
+A Nightmare on Elm Street (1984)|//Bride of Chucky/Child's Play
+Cold Case|Cold Reveal/03/CSI: NY/CSI

@@ -9,7 +9,7 @@ Airport|Airport_(film_series)||Airport;Airport 1975;Airport '77;Concorde ... Air
 Aladdin|Aladdin_(Disney_franchise)||Aladdin;The Return of Jafar;Aladdin and the King of Thieves|1
 Alaric de Marnac|||Horror Rises from the Tomb;Panic Beats|n
 Alien Nation|||Alien Nation (1988);Alien Nation (1989);Alien Nation: Dark Horizon;Alien Nation: Body and Soul;Alien Nation: Millennium;Alien Nation: The Enemy Within;Alien Nation: The Udara Legacy
-Alien|Alien_(franchise)|179440|Alien;Aliens;Alien³;Alien: Resurrection;Prometheus;The Alien Saga
+Alien|Alien_(franchise)|179440|Alien;Aliens;Alien3;Alien: Resurrection;Prometheus;The Alien Saga
 Predator|Predator_(franchise)|313257|Predator;Predator 2;Predators
 Alien vs. Predator|Alien_vs._Predator||Alien vs. Predator;Aliens vs. Predator: Requiem
 Almighty|||Bruce Almighty;Evan Almighty
@@ -18,7 +18,7 @@ American Psycho|||American Psycho;American Psycho 2
 Animal Cops|Animal_Cops||Animal Precinct;Animal Cops: Detroit;Animal Cops: Houston;Miami Animal Police;Animal Cops: San Francisco;Animal Cops: Phoenix
 Anne of Green Gables|||Anne of Green Gables;Anne of Avonlea;Anne of Green Gables: The Continuing Story;Anne of Green Gables: A New Beginning
 The Arrival|||The Arrival;The Second Arrival
-Arrowverse|Arrowverse||Arrow;The Flash;Legends of Tomorrow;Supergirl (2015)
+Arrowverse|Arrowverse||Arrow;The Flash (2014);Supergirl (2015);Legends of Tomorrow;Black Lightning;Batwoman
 Arthur|||Arthur;Arthur 2: On the Rocks
 Assume the Position|||Assume the Position with Mr. Wuhl;Assume the Position 201 with Mr. Wuhl
 Atlantis|||Atlantis: The Lost Empire;Atlantis: Milo's Return|1
@@ -57,7 +57,6 @@ Carrie|||Carrie (1976);The Rage: Carrie 2|n
 Casper|||Casper;Casper: A Spirited Beginning;Casper Meets Wendy;Casper's Haunted Christmas;Casper's Scare School|1
 Category 6|||Category 6: Day of Destruction;Category 7: The End of the World
 Charlie's Angels|||Charlie's Angels (1976);Charlie's Angels (2000);Charlie's Angels: Full Throttle
-Chicago|Chicago_(franchise)||Chicago Fire;Chicago P.D.;Chicago Med;Chicago Justice
 Child's Play|Child's_Play_(franchise)|281486|Child's Play;Child's Play 2;Child's Play 2;Bride of Chucky;Seed of Chucky|n
 Children of the Corn|Children_of_the_Corn_(film_series)|281485|Disciples of the Crow;Children of the Corn;Children of the Corn II: The Final Sacrifice;Children of the Corn III;Children of the Corn IV: The Gathering;Children of the Corn V: Fields of Terror;Children of the Corn 666: Isaac's Return;Children of the Corn: Revelation;Slash|n
 CHiPs|||CHiPs;CHiPs '99
@@ -66,8 +65,7 @@ The Chronicles of Riddick|The_Chronicles_of_Riddick_(franchise)|307745|Pitch Bla
 Cinderella|||Cinderella;Cinderella II: Dreams Come True;Cinderella III: A Twist in Time|1
 Cocoon|||Cocoon;Cocoon: The Return
 Conan the Barbarian|||Conan the Barbarian (1982);Conan the Destroyer
-Connections|||Connections;Connections²;Connections³
-Constantine|||Constantine (2005);Constantine 2
+Connections|||Connections;Connections2;Connections3
 Criminal Minds|Criminal_Minds_(franchise)||Criminal Minds;Criminal Minds: Suspect Behavior;Criminal Minds: Beyond Borders
 Critters|Critters_(film_series)||Critters;Critters 2: The Main Course;Critters 3;Critters 4|n
 Ctrl|||Ctrl Z;Ctrl
@@ -102,7 +100,7 @@ The Evil Dead|Evil_Dead_(franchise)|282677|Within the Woods;Evil Dead (1981);Evi
 The Exorcist|The_Exorcist_(film_series)||The Exorcist;Exorcist II: The Heretic;The Exorcist III;Exorcist: The Beginning;Dominion: Prequel to the Exorcist|1
 The Expendables|The_Expendables_(film_series)||The Expendables;The Expendables 2;The Expendables 3
 Fantasia|Fantasia_(franchise)||Fantasia;Fantasia/2000
-Fantastic Beasts and Where to Find Them|||Fantastic Beasts and Where to Find Them;Fantastic Beasts and Where to Find Them 2;Fantastic Beasts and Where to Find Them 3;Fantastic Beasts and Where to Find Them 4;Fantastic Beasts and Where to Find Them 5
+Fantastic Beasts and Where to Find Them|||Fantastic Beasts and Where to Find Them;Fantastic Beasts: The Crimes of Grindelwald;Fantastic Beasts and Where to Find Them 3;Fantastic Beasts and Where to Find Them 4;Fantastic Beasts and Where to Find Them 5
 Fantastic Four|Fantastic_Four_(film_series)||Fantastic Four;Fantastic Four: Rise of the Silver Surfer;Silver Surfer
 Fantasy Island|||Fantasy Island (1977);Fantasy Island (1998)
 Farscape|||Farscape;Farscape: The Peacekeeper Wars
@@ -110,7 +108,7 @@ The Fast and the Furious|The_Fast_and_the_Furious|329126|The Fast and the Furiou
 Final Destination|Final_Destination|338041|Final Destination;Final Destination 2;Final Destination 3;The Final Destination;Final Destination 5|n
 Firefly|Firefly_(franchise)||Firefly;Serenity;Done the Impossible
 Firestarter|||Firestarter;Firestarter: Rekindled
-Fletch|||Fletch;Fletch Lives;Fletch Won
+Fletch|||Fletch;Fletch Lives
 The Fly (1958)|||The Fly (1958);Return of the Fly;Curse of the Fly
 The Fly (1986)|||The Fly (1986);The Fly II
 The Food of the Gods|||The Food of the Gods;The Food of the Gods II|n
@@ -132,12 +130,11 @@ Gremlins|||Gremlins;Gremlins 2: The New Batch|1
 Halloween (1978)|||Halloween (1978);Halloween II (1981);Halloween III: Season of the Witch;Halloween 4: The Return of Michael Myers;Halloween 5;Halloween: The Curse of Michael Myers;Halloween H20: 20 Years Later;Halloween: Resurrection;Halloween: 25 Years of Terror
 Halloween (2007)|||Halloween (2007);Halloween II (2009)
 Hannibal|Hannibal_Lecter_(franchise)||The Silence of the Lambs;Hannibal (2001);Red Dragon;Hannibal Rising|n
-Hansel & Gretel: Witch Hunters|||Hansel & Gretel: Witch Hunters;Hansel & Gretel: Witch Hunters 2
 Harry Potter|Harry_Potter_(film_series)|286867|Harry Potter and the Sorcerer's Stone;Harry Potter and the Chamber of Secrets;Harry Potter and the Prisoner of Azkaban;Harry Potter and the Goblet of Fire;Harry Potter and the Order of the Phoenix;Harry Potter and the Half-Blood Prince;Harry Potter and the Deathly Hallows: Part 1;Harry Potter and the Deathly Hallows: Part 2
 Hart to Hart|||Hart to Hart;Hart to Hart Returns;Home is Where the Hart Is;Crimes of the Hart;Old Friends Never Die;Secrets of the Hart;Two Harts in 3/4 Time;Harts in High Season;Till Death Do Us Hart
 Heavy Metal|||Heavy Metal;Heavy Metal 2000
 Hellboy|||Hellboy;Hellboy II: The Golden Army
-Hellraiser|Hellraiser_(franchise)|283163|Hellraiser (1987);Hellbound: Hellraiser II;Hellraiser III: Hell on Earth;Hellraiser: Bloodline;Hellraiser: Inferno;Hellraiser: Hellseeker;Hellraiser: Deader;Hellraiser: Hellworld
+Hellraiser|Hellraiser_(franchise)|283163|Hellraiser (1987);Hellbound: Hellraiser II;Hellraiser III: Hell on Earth;Hellraiser: Bloodline;Hellraiser: Inferno;Hellraiser: Hellseeker;Hellraiser: Deader;Hellraiser: Hellworld;Hellraiser: Revelations;Hellraiser: Judgement
 Hercules and Xena|||Hercules and the Amazon Women;Hercules and the Lost Kingdom;Hercules and the Circle of Fire;Hercules in the Underworld;Hercules in the Maze of the Minotaur;Hercules: The Legendary Journeys;Xena: Warrior Princess;Hercules and Xena: The Battle for Mount Olympus;Young Hercules (1998 film);Young Hercules (1998 tv)
 Hercules|Hercules_(Disney_franchise)||Hercules;Hercules (1998);Hercules: Zero to Hero|1
 Heroes|||Heroes;Heroes Reborn
@@ -145,7 +142,6 @@ Highlander|Highlander_(franchise)|281484|Highlander (1986);Highlander II: The Qu
 The Hills Have Eyes (1977)|||The Hills Have Eyes (1977);The Hills Have Eyes Part II|n
 The Hills Have Eyes (2006)|||The Hills Have Eyes (2006);The Hills Have Eyes 2|n
 Hobgoblins|||Hobgoblins;Hobgoblins 2|n
-Homicide|||Homicide: Life on the Street;Homicide: The Movie
 Hostel|||Hostel;Hostel: Part II;Hostel: Part III|n
 Hot Shots!|||Hot Shots!;Hot Shots! Part Deux
 House of the Dead|||House of the Dead;House of the Dead 2|n
@@ -170,10 +166,9 @@ Jeff Dunham|Jeff_Dunham||Jeff Dunham: Arguing with Myself;Jeff Dunham: Spark of 
 Journey|||Journey to the Center of the Earth;Journey 2: The Mysterious Island
 Ju-on|Ju-on_(franchise)|309709|Ju-on: The Curse;Ju-on: The Curse 2;Ju-on: The Grudge;Ju-on: The Grudge 2;Ju-on: White Ghost;Ju-on: Black Ghost;Ju-on: Beginning of the End|n
 The Grudge|The_Grudge_(franchise)||The Grudge;The Grudge 2;The Grudge 3|n
-Jumper|||Jumper;Jumper 2
 The Jungle Book|||The Jungle Book;The Jungle Book 2|1
 Jurassic Park|Jurassic_Park||Jurassic Park;The Lost World: Jurassic Park;Jurassic Park III;Jurassic World
-The Karate Kid|The_Karate_Kid_(franchise)|280983|The Karate Kid;The Karate Kid, Part II;The Karate Kid, Part III;The Next Karate Kid
+The Karate Kid|The_Karate_Kid_(franchise)|280983|The Karate Kid;The Karate Kid, Part II;The Karate Kid, Part III;The Next Karate Kid;Cobra Kai
 The Karnstein Trilogy|The_Karnstein_Trilogy||The Vampire Lovers;Lust for a Vampire;Twins of Evil
 Kill Bill|Kill_Bill||Kill Bill: Vol. 1;Kill Bill: Vol. 2
 Kingsman|||Kingsman: The Secret Service;Kingsman: The Golden Circle
@@ -183,7 +178,6 @@ Kolchak The Night Stalker|||The Night Stalker;The Night Strangler;Kolchak: The N
 L.A. Law|||L.A. Law;L.A. Law: The Movie
 La Casa|La_Casa_(film_series)||La Casa 3;La Casa 4; La Casa 5|n
 Lady and the Tramp|||Lady and the Tramp;Lady and the Tramp II: Scamp's Adventure|1
-Law & Order|Law_&_Order_(franchise)||Law & Order;Exiled;Law & Order: Special Victims Unit;Law & Order: Criminal Intent;Law & Order: Trial by Jury;Conviction;Paris enquêtes criminelles;Law & Order: Division of Field Investigation (Russia);Law & Order: Criminal Intent (Russia);Law & Order: UK;Law & Order: Los Angeles
 The Lawnmower Man|||The Lawnmower Man;Lawnmower Man 2: Beyond Cyberspace
 Leprechaun|Leprechaun_(film_series)|281906|Leprechaun;Leprechaun 2;Leprechaun 3;Leprechaun 4: In Space;Leprechaun: In the Hood;Leprechaun: Back 2 tha Hood;Leprechaun: Origins|n
 Lethal Weapon|Lethal_Weapon_(film_series)|289855|Lethal Weapon;Lethal Weapon 2;Lethal Weapon 3;Lethal Weapon 4
@@ -200,7 +194,7 @@ Mad Max|Mad_Max_(franchise)||Mad Max;Mad Max 2;Mad Max Beyond Thunderdome
 The Magnificent Seven|||The Magnificent Seven;Return of the Seven;Guns of the Magnificent Seven;The Magnificent Seven Ride!
 Major League||288069|Major League;Major League II;Major League: Back to the Minors
 The Mangler|||The Mangler;The Mangler 2;The Mangler Reborn
-Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;Jessica Jones;Ant-Man;Captain America: Civil War;Luke Cage;Doctor Strange;Guardians of the Galaxy Vol. 2;Thor: Ragnarok;Avengers: Infinity War;Black Panther;Captain Marvel;Avengers: Endgame;Inhumans
+Marvel Cinematic Universe|Marvel_Cinematic_Universe||Iron Man;The Incredible Hulk (2008);Iron Man 2;Thor;Captain America: The First Avenger;The Avengers (2012);Iron Man 3;Agents of S.H.I.E.L.D.;Thor: The Dark World;Captain America: The Winter Soldier;Guardians of the Galaxy;Agent Carter;Daredevil (2015);Avengers: Age of Ultron;Jessica Jones;Ant-Man;Captain America: Civil War;Spider-Man: Homecoming;Luke Cage;Doctor Strange;Guardians of the Galaxy Vol. 2;Thor: Ragnarok;Avengers: Infinity War;Black Panther;Captain Marvel;Avengers: Endgame;Spider-Man: Far from Home;Inhumans
 MASH|||MASH (1970);M*A*S*H (1972);AfterMASH;W*A*L*T*E*R;The Fighting Nightingales
 Slumber Party Massacre|||The Slumber Party Massacre;Slumber Party Massacre II;Slumber Party Massacre III|n
 Sorority House Massacre|||Sorority House Massacre;Sorority House Massacre II|n
@@ -239,7 +233,6 @@ Antropophagus|||Antropophagus;Zombie 6: Monster Hunter
 Nim's Island|||Nim's Island;Return to Nim's Island|1
 The Omen|The_Omen_(film_series)|306954|The Omen (1976);Damien: Omen II;Omen III: The Final Conflict;Omen IV: The Awakening
 Once Upon a Time|||Once Upon a Time;Once Upon a Time in Wonderland
-Oz: The Great and Powerful|||Oz: The Great and Powerful;Oz: The Great and Powerful 2
 Pacific Rim|||Pacific Rim;Pacific Rim 2
 Painkiller Jane|||Painkiller Jane (2005);Painkiller Jane (2007)
 Percy Jackson & the Olympians|||Percy Jackson & the Olympians: The Lightning Thief;Percy Jackson & the Olympians: The Sea of Monsters
@@ -274,7 +267,7 @@ Resident Evil|Resident_Evil_(film_series)|347795|Biohazard 4D-Executer;Resident 
 Ringu|Ring_Trilogy||Ringu;Ringu 2;Ringu 0: Bâsudei|n
 The Ring|Ring_Trilogy||The Ring;Rings;The Ring Two|n
 Sadako 3D|||Rasen;Sadako 3D;Sadako 3D 2|n
-Ripley's Believe It or Not!|Ripley%27s_Believe_It_or_Not!||Ripley's Believe It or Not! (1949);Ripley's Believe It or Not! (1982);Ripley's Believe It or Not! (1999)
+Ripley's Believe It or Not!|Ripley%27s_Believe_It_or_Not!_TV_series||Ripley's Believe It or Not! (1949);Ripley's Believe It or Not! (1982);Ripley's Believe It or Not! (1999);Ripley's Believe It or Not! (2019)
 Robert Langdon|||The Da Vinci Code;Angels & Demons;Inferno (2016);The Lost Symbol
 RoboCop|RoboCop_(franchise)||RoboCop (1987);RoboCop: The Series;RoboCop 2;RoboCop 3;RoboCop: Prime Directives|1
 Rocky|Rocky_(film_series)|280989|Rocky;Rocky II;Rocky III;Rocky IV;Rocky V;Rocky Balboa;Creed
@@ -315,8 +308,8 @@ Stargate|Stargate_(franchise)||Stargate;Stargate SG-1;Stargate: Atlantis;Stargat
 Starman|||Starman (1984);Starman (1986)
 Starship Troopers|||Starship Troopers;Starship Troopers 2: Hero of the Federation;Starship Troopers 3: Marauder;Starship Troopers: Invasion
 The Stepfather|||The Stepfather (1987);Stepfather II;Stepfather III|n
-Superman (1978)||281438|Superman;Superman II;Superman III;Supergirl (1984);Superman IV: The Quest for Peace|2
-Man of Steel|||Man of Steel;Batman v Superman: Dawn of Justice|n
+Superman (1978)||281438|Superman;Superman II;Superman III;Supergirl (1984);Superman IV: The Quest for Peace;Superman Returns|2
+DC Extended Universe|DC_Extended_Universe||Man of Steel;Batman v Superman: Dawn of Justice;Suicide Squad;Wonder Woman (2017);Justice League;Aquaman;Shazam!;Birds of Prey (2020)
 Tales of the City|||Tales of the City;More Tales of the City;Further Tales of the City
 Teen Wolf|||Teen Wolf;Teen Wolf Too|1
 Terminator|Terminator_(franchise)||The Terminator;Terminator 2: Judgment Day;Terminator 3: Rise of the Machines;Terminator: The Sarah Connor Chronicles;Terminator: Salvation;Terminator Genisys
@@ -351,7 +344,6 @@ V|V_(franchise)||V (1983);V: The Final Battle;V (1984)
 Vampires||333937|Vampires;Vampires: Los Muertos;Vampires: The Turning|1
 View Askewniverse|||Clerks;Mallrats;Chasing Amy;Dogma;Jay and Silent Bob Strike Back;Clerks II
 Waldemar Daninsky|||La Marca del Hombre-lobo;Las Noches del Hombre Lobo;Los Monstruos del terror;La Furia del Hombre Lobo;La Noche de Walpurgis;Dr. Jekyll y el Hombre Lobo;El Retorno de Walpurgis;La Maldición de la bestia;El Retorno del Hombre-Lobo;La Bestia y la espada mágica;Licántropo;Tomb of the Werewolf|n
-Wanted|||Wanted;Wanted 2
 The War of the Worlds|||The War of the Worlds;War of the Worlds (1988)
 Warlock|||Warlock;Warlock: The Armageddon;Warlock III: The End of Innocence|n
 WarGames|||WarGames;Wargames: The Dead Code|1
@@ -364,3 +356,9 @@ The X-Files|The_X-Files_(franchise)||The X-Files (1993);The X-Files (1998);The L
 X-Men|X-Men_(film_series)|291113|X-Men;X2;X-Men: The Last Stand;X-Men Origins: Wolverine;X-Men: First Class;The Wolverine;X-Men: Days of Future Past;X-Men: Apocalypse;Deadpool
 xXx|XXX_(franchise)||xXx;xXx: State of the Union;xXx: Return of Xander Cage
 Zorro (1998)|||The Mask of Zorro;The Legend of Zorro
+Gilmore Girls|||Gilmore Girls; Gilmore Girls: A Year in the Life
+Homicide|||Homicide: Life on the Street; Homicide: The Movie
+Law & Order|Law_&_Order_(franchise)||Law & Order; Exiled; Law & Order: Special Victims Unit; Law & Order: Criminal Intent; Law & Order: Trial by Jury; Conviction;Paris enquêtes criminelles;Law & Order: Division of Field Investigation (Russia);Law & Order: Criminal Intent (Russia);Law & Order: UK;Law & Order: Los Angeles
+Chicago|Chicago_(franchise)||Chicago Fire; Chicago P.D.; Chicago Med; Chicago Justice
+FBI|||FBI; FBI: Most Wanted
+CSI|CSI_(franchise)||CSI: Crime Scene Investigation; CSI: Miami; CSI: NY; CSI: Cyber

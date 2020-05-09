@@ -1,7 +1,6 @@
 package Base::Page;
 use strict;
 use warnings;
-use utf8;
 use Exporter qw(import);
 our @EXPORT_OK = qw(page story passage convert_string);
 
@@ -11,16 +10,17 @@ use File::Basename;
 use File::Spec;
 use List::Util qw(max);
 
-use Base::Menu  qw(base_menu);
-use Base::Path  qw(base_path);
-use Base::Style qw(base_stylesheets);
-use Base::Inline qw(inline);
+use Base::Path     qw(base_path);
+use Base::Style    qw(base_stylesheets);
+use Base::Inline   qw(inline);
 use HTML::Elements qw(html style noscript nav main article section heading paragraph blockquote list table div pre anchor img input span);
-use Util::Convert qw(idify textify filify searchify);
+use Fancy::Join    qw(grammatical_join);
+use Util::Convert  qw(idify textify filify searchify);
 use Util::Columns;
-use Util::Data qw(make_hash);
+use Util::Data     qw(make_hash);
 use Util::ExternalLinks;
-use Util::Line qw(line);
+use Util::Line     qw(line);
+use Util::Menu     qw(base_menu);
 
 my $full_path = realpath($0);
 my $root_path = base_path('path');
@@ -48,8 +48,8 @@ sub page {
   my $relative_path = $opt{'uri'} ? $opt{'uri'} : $full_path;
      $relative_path =~ s/^(?:$root_path\/|\/)//;
 
-  my $page_heading = $opt{'heading'} && ref($opt{'heading'}) eq 'ARRAY' ? textify(@{$opt{'heading'}}) :
-                     $opt{'heading'} ? textify($opt{'heading'}) :
+  my $page_heading = $opt{'heading'} && ref($opt{'heading'}) eq 'ARRAY' ? textify(@{$opt{'heading'}}, { html => 'yes' }) :
+                     $opt{'heading'} ? textify($opt{'heading'}, { html => 'yes' }) :
                      $basename =~ /index/ ? textify((split(/\//, cwd))[-1]) : ucfirst textify($basename);;
 
   if ( $opt{'heading'} ) {
@@ -65,7 +65,14 @@ sub page {
 
   my $main_id = idify($page_heading);
 
-  my $menu = base_menu( 'directory' => $root_path, 'tab' => 2, 'color' => 0, 'full' => 0, 'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef );
+  my $menu = base_menu(
+    'directory' => $root_path,
+    'tab'   => 2,
+    'color' => 0,
+    'full'  => 0,
+    'misc'  => 1,
+    'file menu' => $opt{'file menu'} ? $opt{'file menu'} : undef
+  );
 
   my $js = File::Spec->abs2rel("$root_path/files/lib/myjs.js");
   my $charset = $opt{'charset'} ? $opt{'charset'} : 'utf-8';
@@ -79,7 +86,7 @@ sub page {
         { 'src' => $js }
       ],
       'meta'     => [
-        {'http-equiv' => 'Content-Type', 'content' => "text/html; charset=$charset"},
+        {'charset' => $charset},
         {'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1'}
       ],
       'noscript' => sub { style(3, 'li.closed ol, li.closed ul, li.closed dl {display:block;}') },
@@ -87,7 +94,7 @@ sub page {
     'body' => [
       sub {
         nav(2, sub {
-          input(4, {
+          input(3, {
             'type' => 'checkbox',
             'id' => 'menu_collapse',
             'place label' => 'after',
@@ -201,6 +208,7 @@ sub dissect_source {
       $toc[$inc-1][1]->{inlist}[0] = 'u';
       push @{$toc[$inc-1][1]->{inlist}[1]}, anchor(textify($text), { 'href' => '#'.idify($text) });
     }
+
     $inc++  if $line =~ /^2 /;
     $cols++ if $line =~ /^(?:2|3) /;
 
@@ -410,10 +418,10 @@ sub heading_w_links {
   my ($heading, $wikipedia) = split(/\|/,$text);
   my $article = $wikipedia ? $wikipedia : $heading;
   my $links = external_links([['Wikipedia', $article, $article], ['Google', searchify($article), $article]]);
-  my $links_text = join('', @$links);
+  my $links_text = grammatical_join('or', @$links);
 
   heading($tab, $level, textify($heading), { 'id' => idify($heading), 'class' => 'wlinks' });
-  paragraph($tab + 1, $links_text, { 'class' => 'heading_links' } );
+  paragraph($tab + 1, "See more about $article on $links_text.", { 'class' => 'heading_links' } );
 }
 
 # End headings with links

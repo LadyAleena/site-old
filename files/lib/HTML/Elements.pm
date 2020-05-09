@@ -4,7 +4,7 @@ use warnings FATAL => qw( all );
 use Exporter qw(import);
 our @EXPORT_OK = qw(html style body main div section article nav header footer heading head pre
                  paragraph address anchor img object span blockquote list definition_list table
-                 form fieldset selection datalist input inputs textarea figure noscript);
+                 form fieldset selection datalist input inputs textarea figure details noscript);
 
 use Util::Line qw(line);
 
@@ -127,7 +127,7 @@ sub title {
 sub meta {
   my ($tab, $metas) = @_;
   for (@$metas) {
-    line($tab, start_tag('meta', ['name', 'http-equiv', 'lang', 'content'], $_));
+    line($tab, start_tag('meta', ['name', 'http-equiv', 'lang', 'content', 'charset'], $_));
   }
 }
 
@@ -186,7 +186,6 @@ sub head {
 }
 
 # End elements for head.
-
 # Begin elements for body.
 
 # Begin paragraphs
@@ -206,7 +205,6 @@ sub paragraph {
 }
 
 # End paragraphs
-
 # Begin blockquotes
 
 sub blockquote {
@@ -219,7 +217,6 @@ sub blockquote {
 }
 
 # End blockquotes
-
 # Begin elements for ordered and unordered lists.
 
 sub item {
@@ -251,7 +248,6 @@ sub list {
 }
 
 # End elements for ordered and unordered lists.
-
 # Begin elements for definition lists.
 
 sub term {
@@ -333,9 +329,7 @@ sub definition_list {
 }
 
 # End elements for definition lists.
-
 # Begin elements for tables.
-# table elements to be added: tbody, thead, tfoot.
 
 sub caption {
   my $tab = shift;
@@ -480,7 +474,6 @@ sub table {
 }
 
 # End elements for tables.
-
 # Begin elements for forms.
 
 sub label {
@@ -539,11 +532,11 @@ sub input {
                             valueAsDate valueAsNumber
                             autocomplete autofocus accesskey
                             disabled readonly required checked);
+  $opt->{close} = 'yes';
   my $start = start_tag($tag, [@input_attributes, @$gen, 'tabindex'], $opt);
-  my $text = $opt->{text} ? "$opt->{text} " : '';
 
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'before');
-  line($tab, $text.$start);
+  line($tab, $start);
   label($tab, @{$opt->{'label'}}) if ($opt->{'label'} && $opt->{'place label'} eq 'after');
 }
 
@@ -572,7 +565,6 @@ sub form {
 }
 
 # End elements for forms.
-
 # Start figure elements.
 
 sub figcaption {
@@ -593,6 +585,25 @@ sub figure {
 
 
 # End figure elements.
+# Start details element.
+
+sub summary {
+  my $tab = shift;
+  line($tab, plain_element('summary', $gen, @_));
+}
+
+sub details {
+  my ($tab, $code, $opt) = @_;
+  my $tag = 'details';
+
+  line($tab, start_tag($tag, ['open', @$gen], $opt));
+  summary($tab + 1, $opt->{'summary'}) if $opt->{'summary'};
+  &$code;
+  line($tab, end_tag($tag));
+}
+
+# End details element.
+# Start general elements.
 
 sub heading {
   my ($tab, $level, $value, $opt) = @_;
@@ -612,13 +623,14 @@ sub article { code_element('article', $gen, @_) }
 sub main    { code_element('main',    $gen, @_) }
 sub body    { code_element('body',    $gen, @_) }
 
+# End general elements.
 # End elements for body.
 
 sub html {
   my ($tab, $opt) = @_;
   my $tag = 'html';
 
-  print "content-type: text/html \n\n";
+  print "Content-Type: text/html; charset=utf-8 \n\n";
   line(0, $opt->{'doctype'} ? $opt->{'doctype'} : '<!DOCTYPE html>');
   line($tab, start_tag($tag, $gen, $opt));
   head($tab + 1, $opt->{'head'})    if $opt->{'head'};

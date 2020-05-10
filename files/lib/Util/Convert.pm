@@ -4,8 +4,10 @@ use warnings;
 use Exporter qw(import);
 our @EXPORT_OK = qw(filify hashtagify idify linkify searchify textify);
 
-use Lingua::EN::Inflect qw(NUMWORDS);
+use Encode;
+use HTML::Entities qw(encode_entities);
 use URI::Encode qw(uri_encode);
+use Lingua::EN::Inflect qw(NUMWORDS);
 
 use Base::Path qw(base_path);
 
@@ -42,13 +44,12 @@ sub idify {
     $_ =~ s/[^\w:.\-]//g;
     $_;
   } grep {defined($_)} @base;
-  return join('_',@ids);
+  return encode('UTF-8',join('_',@ids));
 }
 
 sub linkify {
   my ($link) = @_;
 #  $link =~ s/&/%26/g;
-#  return uri_encode($link);
    return $link;
 }
 
@@ -67,7 +68,7 @@ sub textify {
   my $root_link = base_path('link');
   $text =~ s/$root_link\///;
   $text =~ s/_/ /g;
-  $text =~ s/ (Mr|Mrs|Ms|Dr) / $1. /g;
+  $text =~ s/(?<!Rev\s)\b([DMSJ][rsx]|Mrs|Rev)\b(?!\.)/$1./g;
   $text =~ s/\s&\s/ &amp; /g;
   $text =~ s/\.{3}/&#8230;/g;
   $text =~ s/(\w|\b|\s|^)'(\w|\b|\s|$)/$1&#700;$2/g;
@@ -75,7 +76,7 @@ sub textify {
   $text =~ s/\s\(.*?\)$//  unless ($opt->{'parens'} && $opt->{'parens'} =~ /^[ytk1]/);
   $text =~ s/\.\w{2,5}?$// unless $text =~ /\.(?:com|net|org)$/;
 #  $text =~ s/(?<!\A)((?<! )\p{uppercase})/ $1/g; # from Kenosis, kcott, and tye on PerlMonks
-  return $text;
+  return encode('UTF-8',$text);
 }
 
 =head1 NAME
@@ -87,7 +88,7 @@ B<Util::Convert> converts strings into various formats.
   my $string = 'Mr & Mrs Smith';
 
   my $text    = textify($string);    # returns Mr. &amp; Mrs. Smith
-  my $id      = idify($string);      # returns Mr_and_Mrs_Smith
+  my $id      = idify($array);       # returns Mr_and_Mrs_Smith
   my $search  = searchify($string);  # returns Mr+%26+Mrs+Smith
   my $file    = filify($string);     # returns Mr_&_Mrs_Smith
   my $hashtag = hashtagify($string); # returns #MrandMrsSmith
@@ -104,11 +105,11 @@ The second paramter is a hash with two options.
 
 If C<html> is specified, then HTML is not stripped out of the text string.
 
-  textify('<i>This & That</i> (2020)', { html => 'yes' }) # returns <i>This &amp; That</i>
+  textify('<i>This & That</i> (2020)', { html => 'yes' }) # returns "<i>This &amp; That</i>"
 
 If C<parens> is specified, parenteses are not stripped out of the text string.
 
-  textify('<i>This & That</i> (2020)',  { parens => 'yes' }) # returns This &amp; That (2020)
+  textify('<i>This & That</i> (2020)',  { parens => 'yes' }) # returns "This &amp; That (2020)"
 
 =head1 idify
 

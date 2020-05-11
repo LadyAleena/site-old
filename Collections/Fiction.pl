@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::LineMagic qw($line_magic);
+use Util::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
 use Util::People qw(people_list);
 
@@ -17,7 +17,7 @@ my $doc_magic = {
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
-This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
+This is my B<fiction collection> of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
 2 General fiction
 * I<Big Trouble|^hardcover^> by Dave Barry
 * I<The House of Ulloa|^hardcover^> by Emilia Pardo Bazan (Trans. by Roser Caminals-Heath)
@@ -43,7 +43,7 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 * I<Erotica|^trade^> by Margaret Reynolds, ed.
 * I<Slow Hand: Women Writing Erotica|^massmarket^> by Michele Slune, ed.
 * I<Confession d'Amour|^massmarket^> by Anne-Marie Villfranche
-3 Charlotte Hill & William Wallace
+3 Charlotte Hill and William Wallace
 # I<Erotica|^trade^>
 # I<Erotica II|^trade^>
 # I<Erotica III|^trade^>
@@ -143,6 +143,7 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 # I<Five Portraits|^hardcover^>
 # I<Iris Orb|^hardcover^>
 # I<Ghost Writer in the Sky|^hardcover^>
+# I<Fire Sail|^hardcover^>
 3 Robert Asprin +
 4 Myth
 #2 I<Myth Conceptions|^massmarket^>
@@ -188,7 +189,7 @@ This is my fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paper
 # I<Magician's Gambit|^massmarket^>
 # I<Castle of Wizardry|^massmarket^>
 # I<Enchanter's End Game|^massmarket^>
-5 The Mallorean
+5 The Malloreon
 # I<Guardians of the West|^hardcover^>
 # I<King of the Murgos|^hardcover^>
 # I<Demon Lord of Karanda|^hardcover^>
@@ -277,7 +278,7 @@ with Janny Wurts
 4 Histories of King Kelson
 #3 I<The Quest for Saint Camber|^massmarket^>
 3 C. S. Lewis +
-4 Chronicles of Narnia
+4 The Chronicles of Narnia
 # I<The Lion, the Witch, and the Wardrobe|^massmarket^>
 # I<Prince Caspian|^massmarket^>
 # I<The Voyage of the Dawn Treader|^massmarket^>
@@ -285,6 +286,7 @@ with Janny Wurts
 # I<The Horse and His Boy|^massmarket^>
 # I<The Magician's Nephew|^massmarket^>
 # I<The Last Battle|^massmarket^>
+I also own A<I<The Chronicles of Narnia> film trilogy|href="Movies.pl#The_Chronicles_of_Narnia">.
 4 Space Trilogy
 # I<Out of the Silent Planet|^massmarket^>
 # I<Perelandria|^massmarket^>
@@ -485,7 +487,7 @@ with Gentry Lee
 # I<The Garden of Rama|^massmarket^>
 # I<Rama Revealed|^hardcover^>
 * I<Bright Messengers|^hardcover^> Lee alone
-3 Allen Dean Foster +
+3 Alan Dean Foster +
 4 Flinx
 # I<The Tar-Aiym Krang|^massmarket^>
 # I<Orphan Star|^massmarket^>
@@ -585,4 +587,5 @@ by Brian Herbert & Kevin J. Anderson
 # I<The Pigman|^massmarket^>
 # I<The Pigman Legacy|^massmarket^>
 2 Authors I like
+These are B<authors I like> who co-wrote with a author in my collection or whose novels are not in my collection.
 & authors

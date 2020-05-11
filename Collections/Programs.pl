@@ -6,41 +6,58 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::LineMagic qw($line_magic);
+use Util::LineMagic qw($line_magic);
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
-This is a list of programs that I B<am using> or have used. I can not account for I<all> the software we have had and used over the years. Some of it was so bad, we blanked it out of our heads. This list does not include a full list of hardware drivers either. So much software, so little time or in this case patience.
-2 General
+This is a list of B<programs> that I am using or have used. I can not account for I<all> the software we have had and used over the years. Some of it was so bad, we blanked it out of our heads. This list does not include a full list of hardware drivers either. So much software, so little time or in this case patience.
+
+2 In use
+*| two
+* ^Debian^ (my computer)
+* ^GNU Operating System^
+* ^The Apache Software Foundation^ - ^HTTP Server^
+* ^FileZilla^
+* ^Geany^
+* ^Gramps^
+* ^GraphViz^
+* ^HexChat^
+* ^Inkscape^
+* ^LibreOffice^
+* ^Mozilla^ - ^Firefox^
+* ^Nano^
+* ^VideoLAN^ - ^VLC media player^
+3 Desktop environments
+*| two
+* ^KDE^
+* ^XFCE^
+
+2 Previously used
+Most of the software below was Windows based, so I do not use them anymore since I installed ^Debian^, a Linux distribution.
 *| two
 * ^Adobe^
-** B<^Flash Player^>
+** ^Flash Player^
 ** ^Reader^
-* B<^The Apache Software Foundation^>
-** B<^HTTP Server^>
-** ^OpenOffice^
+* The Apache Software Foundation - ^OpenOffice^
 * ^Avanquest software^ - System Commander
 * Berkeley Systems
 ** After Dark
+** More After Dark
 ** The Disney Collection Screen Saver
 ** Looney Tunes Animated Screen Saver
-** More After Dark
 ** Star Trek The Screen Saver
-* B<^Debian^> (on 1 computer)
-* ^Desktop Architect^
-* ^eyeClaxon - Find Junk Files^
-* B<^FileZilla^>
+* Desktop Architect
+* eyeClaxon - Find Junk Files
 * ^Gene6^ - ^G6 Utilities^
 * ^grepWin^
 * Inc Alarm
 * ^Ipswitch^ - ^WS_FTP Pro^
-* B<^KDE^>
-* B<^LibreOffice^>
+* ^mIRC^
 * ^Oracle^ - ^Java^
 * ^Piriform^
-** B<^CCleaner^>
-** B<^Defraggler^>
+** ^CCleaner^
+** ^Defraggler^
 * ^PuTTY^
 * ^RarLab^
 * Spinner Plus
@@ -49,44 +66,41 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 * ^Wedge Software^ - ^WinHacker^
 * ^WinZip^
 * ^Xenu's Link Sleuth^
-* B<^xuMouse^>
-
-2 Browsers
-*| two
+* ^XChat^
+* ^xuMouse^
+3 Browsers
+*| three
 * ^Apple^ - ^Safari^
 * ^Google^ - ^Chrome^
-* B<^Mozilla^> - B<^Firefox^>
 * ^Opera^
-
-2 Chat
-*| two
+3 Instant messengers
+*| three
 * ^Cerulean Studios TrillianAstra^
-* B<^HexChat^>
 * ^ICQ.com^
-* ^mIRC^
-* ^XChat^
 * ^Yahoo!^ - ^Yahoo! Messenger^
-
-2 Games
+3 Text editors
+*| two
+* ^JGSoft^ - ^EditPad Pro^
+* ^Notepad++^
+3 Games
 *| two
 * ^Maxis^
 ** SimCity 2000
 ** Simcity 3000
 ** SimCity 3000 Unlimited
 * ^PopCap Games^
-** ^Alchemy^
-** ^Atomica^
-** ^Bejeweled^
-** ^Big Money^
-** ^Bookworm^
-** ^Dynomite^
-** ^Mummy Maze^
-** ^Noah's Ark^
-** ^Rocket Mania^
-** ^Seven Seas^
+** Alchemy
+** Atomica
+** Bejeweled
+** Big Money
+** Bookworm
+** Dynomite
+** Mummy Maze
+** Noah's Ark
+** Rocket Mania
+** Seven Seas
 * ^Pyrogon^ - ^NingPo MahJong^
-
-2 Gaming extensions
+3 Gaming extensions
 *| two
 * Alan's Dungeon Master Tools -  disappeared, and I can't find them.
 ** Character Designer
@@ -111,8 +125,7 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 ** ^Inn Mage^
 ** ^Name Mage^
 * ^Mythosa^ - ^TableSmith^
-
-2 Media
+3 Media
 *| two
 * ^Apple^
 ** ^iTunes^
@@ -121,40 +134,32 @@ This is a list of programs that I B<am using> or have used. I can not account fo
 * ^interActual^ - ^interActual Player^
 * ^Photodex^ - ^CompuPic^
 * ^real^ - ^realPlayer^
-* ^VideoLAN^ - B<^VLC media player^>
-
-2 Security
+3 Security
 *| two
 * B<^avast! Anitvirus^>
 * ^Comodo^ - ^Internet Security (free)^
 * ^PopUp Smasher^
 * ^Spyware Terminiator^
-
-2 Text editors
+3 Microsoft
+* ^Microsoft Silverlight^
+4 Microsoft DOS
 *| two
-* B<^Geany^>
-* ^JGSoft^ - ^EditPad Pro^
-* B<^Nano^>
-* ^Notepad++^
-
-2 Microsoft
+* MSDOS 6.0
+* MSDOS 6.2
+4 Microsoft Office
 *| two
-* Microsoft DOS
-** MSDOS 6.0
-** MSDOS 6.2
-* ^Microsoft Office^
-** Office 2000
-** Office 2003
-** Works
-** Works Suite 2004
-* B<^Microsoft Silverlight^>
-* B<^Microsoft Windows^>
-** Windows 3.0
-** Windows 3.1
-** Windows 95
-** Windows 98
-** B<Windows XP> (on 7 computers) with ^Microsoft PowerToys for Windows XP^
-*** ^Power Calculator^
-*** ^Tweak UI^
-** Windows 7 (on 2 computers)
-** Windows 10 (on 1 computer)
+* Office 2000
+* Office 2003
+* Works
+* Works Suite 2004
+4 Microsoft Windows
+*| two
+* Windows 3.0
+* Windows 3.1
+* Windows 95
+* Windows 98
+* Windows XP (on 4 computers) with ^Microsoft PowerToys for Windows XP^
+** ^Power Calculator^
+** ^Tweak UI^
+* Windows 7 (on 2 computers)
+* Windows 10 (on 1 computer)

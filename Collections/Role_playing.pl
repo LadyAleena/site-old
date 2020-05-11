@@ -6,12 +6,12 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::LineMagic qw($line_magic);
+use Util::LineMagic qw($line_magic);
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
-This is my role playing novel collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
+This is my B<role playing novel collection> of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
 2 TSR
 * I<The Earth Remembers|^massmarket^> by Susan Torian Olan
 * I<F.R.E.E. Lancers|^massmarket^> by Mel Odom

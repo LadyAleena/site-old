@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::LineMagic qw($line_magic);
+use Util::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
 use Util::People qw(people_list);
 
@@ -18,13 +18,13 @@ my $doc_magic = {
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
-This is my music and comedy collection of SPAN<LPs|^lps^>, SPAN<45s|^ffs^>, SPAN<cassettes|^cassettes^>, and SPAN<CDs|^cds^>. If it is not on a CD, I have not heard it in a long long time. SPAN<&#9785;|class="bigger">
+This is my B<music and comedy collection> of SPAN<LPs|^lps^>, SPAN<45s|^ffs^>, SPAN<cassettes|^cassettes^>, and SPAN<CDs|^cds^>. If it is not on a CD, I have not heard it in a long long time. SPAN<&#9785;|class="bigger">
 2 Music
 My entire music collection is here with the exception of soundtracks. They can be found on my A<tie-ins|href="Tie-ins.pl"> page.
-3 My music collection
 * I<Voices Carry|^lp^> (1985) by 'til Tuesday
 * I<ABBA Gold: Greatest Hits|^cd^> (1992) by ABBA
 * I<The Sign|^cd^> (1994) by Ace of Base
+* I<Icon|^cd^> (2010) by Bryan Adams
 * I<Pandora's Box|^cd^> (1991) by Aerosmith
 * I<"Never Gonna Give You Up"/"Never Gonna Give You Up"|^ff^> (1987) by Rick Astley
 * I<Different Light|^lp^> (1986) by The Bangles
@@ -32,7 +32,6 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Best Shots|^cd^> (1989) by Pat Benatar
 * I<Branigan 2|^lp^> (1983) by Laura Branigan
 * I<No Fences|^cd^> (1990) by Garth Brooks
-* I<Now &amp; Then|^cassette^> (1973) by The Carpenters
 * I<"Glory of Love"/"On the Line"|^ff^> (1986) by Peter Cetera
 * I<Heyday|^lp^> (1986) by The Church
 * I<Too Much Monkey Business|^cassette^> (1984) by Eric Clapton
@@ -43,10 +42,11 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Wild, Wild West|^lp^> extended mix (1988) by Escape Club
 * I<"Vienna Calling"/"Tango the Night"|^ff^> (1985) by Falco
 * I<Greatest Hits|^cd^> (1988) by Fleetwood Mac
+* I<Jukebox Heroes|^cd^> (2000) by Foreigner
 * I<Purple Haze|^cassette^> (1987) by Jimi Hendrix
 * I<Silent Flight: The New Age Christmas Experience|^cassette^> (1989) by John Hodian
 * I<Cracked Rear View|^cd^> (1994) by Hootie and the Blowfish
-* I<Rebel Yell|^cd^> (1983) by Billy Idol <!-- lp -->
+* I<Rebel Yell|^cd^> (1983) by Billy Idol <!-- & lp -->
 * I<Information Society|^cd^> (1988) by Information Society
 * I<Rhythm Nation 1814|^cd^> (1989) by Janet Jackson
 * I<pure and simple|^cassette^> (1994) by Joan Jett and the Blackhearts
@@ -65,7 +65,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Jagged Little Pill|^cd^> (1995) by Alanis Morissette
 * I<Decade of Decadence|^cd^> (1991) by Motley Crue
 * I<"True Faith"/"1963"|^ff^> (1987) by New Order
-* I<Aldo Nova|^cd^> (1981) by Aldo Nova <!-- cassette -->
+* I<Aldo Nova|^cd^> (1981) by Aldo Nova <!-- & cassette -->
 * I<Cat Scratch Fever|^cassette^> (1977) by Ted Nugent
 * I<Woman Thing Music, Vol. 2|^cd^> (0000) by Pauley P
 * I<Here You Come Again|^cassette^> (1977) by Dolly Parton
@@ -78,7 +78,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Fly Like an Eagle|^cassette^> (1976) by Steve Miller Band
 * I<Christmas Strait to You|^cassette^> (1986) by George Strait
 * I<Kilroy Was Here|^cd^> (1983) by Styx
-* I<Eye of the Tiger|^lp^> (1982) by Survivor
+* I<Eye of the Tiger|^cd^> (1982) by Survivor <! -- & lp -->
 * I<Toto IV|^lp^> (1982) by Toto
 * I<Come Out and Play|^cassette^> (1985) by Twisted Sister
 * I<Rattle and Hum|^cd^> (1988) by U2
@@ -88,26 +88,30 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Wilson Phillips|^cd^> (1990) by Wilson Phillips
 * I<Ten|^cd^> (1990) by Y &amp; T
 * I<Greatest Hits|^cd^> (1992) by ZZ Top
-4 The Beatles and solo
+3 The Beatles and solo
 * I<Meet the Beatles|^lp^> (1964)
 * I<Cloud Nine|^lp^> (1987) by George Harrison
-4 Bon Jovi +
+3 Bon Jovi
 * I<Slippery When Wet|^cd^> (1986)
 * I<Keep the Faith|^cd^> (1992)
-4 Chicago|Chicago (band) +
+3 The Carpenters
+* I<Now &amp; Then|^cassette^> (1973)
+* I<Icon|^cd^> (2014)
+3 Chicago
 * I<Chicago 16|^lp^> (1982)
 * I<Live in Toronto|^cassette^> (1984)
-4 Culture Club +
+3 Culture Club
 * I<Kissing to be Clever|^cd^> (1982)
 * I<"The War Song"/"La Cancion De Guerra"|^ff^> (1984)
 * I<Best of Culture Club|^cd^> (1994)
-4 Def Leppard +
+3 Def Leppard
 * I<High N' Dry|^cassette^> (1981)
 * I<Hysteria|^cd^> (1987)
-4 Depeche Mode +
+3 Depeche Mode
 * I<101|^cd^> (1989)
+* I<Violator> (1990)
 * I<Songs of Faith and Devotion|^cd^> (1993)
-4 Duran Duran, Arcadia, and The Power Station
+3 Duran Duran, Arcadia, and The Power Station
 * I<Duran Duran|^cd^> (1981) <!-- & cassette -->
 * I<Rio|^cd^> (1982) <!-- & cassette -->
 * I<Seven and the Ragged Tiger|^cd^> (1983) <!-- & lp -->
@@ -115,7 +119,7 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Wild Boys|^lp^> extended mix (1984)
 * I<Rio|^lp^> extended mix (1985)
 * I<The Power Station|^lp^> (1985) by The Power Station
-* I<So Red the Rose|^lp^> (1985) by Arcadia
+* I<So Red the Rose|^cd^> (1985) by Arcadia <!-- & lp -->
 * I<Notorious|^cd^> (1986) <!-- & lp -->
 * I<Notorious|^lp^> extended mix (1986)
 * I<Skin Trade|^lp^> extended mix (1987)
@@ -125,63 +129,63 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<Duran Duran|^cd^> (1993)
 * I<Greatest|^cd^> (1998)
 * I<Astronaut|^cd^> (2004)
-4 Enya +
+3 Enya
 * I<Watermark|^cd^> (1988)
 * I<Shepherd Moons|^cd^> (1991)
 * I<The Celts|^cd^> (1992)
 * I<The Memory of Trees|^cd^> (1995)
-4 Genesis and Phil Collins
+3 Genesis and Phil Collins
 * I<We Can't Dance|^cd^> (1991)
 * I<The Way We Walk, Volume One: The Shorts|^cd^> (1992)
-* I<...Hits|^cd^> (1998) by Phil Collins 
-4 Hall & Oates +
+* I<...Hits|^cd^> (1998) by Phil Collins
+3 Hall & Oates
 * I<Private Eyes|^lp^> (1981)
 * I<H2O|^lp^> (1982)
 * I<Rock &amp; Soul|^lp^> (1983)
 * I<Big Bam Boom|^lp^> (1984)
 * I<The Very Best of Daryl Hall &amp; John Oates|^cd^> (2001)
-4 Heart|Heart (band) +
+3 Heart
 * I<Heart|^cd^> (1985)
 * I<Bad Animals|^cd^> (1987)
-4 INXS +
+3 INXS
 * I<"Devil Inside"/"On the Rocks"|^ff^> (1987)
 * I<Kick|^cd^> (1987)
 * I<"Need You Tonight"/"I'm Coming"|^ff^> (1987)
 * I<"New Sensation"/"Guns in the Sky"|^ff^> (1987)
-4 Loverboy +
+3 Loverboy
 * I<Loverboy|^cassette^> (1980)
 * I<Keep It Up|^lp^> (1983)
-4 Madonna|Madonna (entertainer) +
+3 Madonna
 * I<True Blue|^cd^> (1986)
 * I<"Causing a Commotion"/"Jimmy, Jimmy"|^ff^> (1987)
 * I<Like a Prayer|^cd^> (1989)
-4 Reba McEntire +
+3 Reba McEntire
 * I<Merry Christmas to You|^cassette^> (1987)
 * I<Read My Mind|^cd^> (1994)
-4 Meat Loaf +
+3 Meat Loaf
 * I<Bat Out of Hell|^cd^> (1977)
 * I<Bat out of Hell II|^cd^> (1993)
-4 Olivia Newton-John +
+3 Olivia Newton-John
 * I<Physical|^cd^> (1981) <!-- lp -->
 * I<Soul Kiss|^cassette^> (1985)
 * I<Gold|^cd^> (2005)
-4 Pet Shop Boys +
+3 Pet Shop Boys
 * I<"Always on My Mind"/"Do I Have To?"|^ff^> (1987)
 * I<"It's a Sin"/"You Know Where You Went Wrong"|^ff^> (1987)
 * I<"What Have I Done To Deserve This?"/"A New Life"|^ff^> (1987) <!-- x2 -->
 * I<Pet Shop Boys Discography|^cd^> (1991)
-4 The Police and Sting
-* I<The Dream of the Blue Turtles|^cassette^> (1985)
-* I<Nothing Like the Sun|^cassette^> (1987)
+3 The Police and Sting
+* I<The Dream of the Blue Turtles|^cd^> (1985) <!-- cassette -->
+* I<&#8230;Nothing Like the Sun|^cd^> (1987) <!-- cassette -->
 * I<The Very Best of Sting &amp; The Police|^cd^> (1997)
-4 Prince & The Revolution
+3 Prince & The Revolution
 * I<1999|^cd^> (1982)
 * I<Purple Rain|^cd^> (1984)
 * I<"Purple Rain"/"God"|^ff^> (1984)
 * I<Around the World in a Day|^cd^> (1985)
 * I<"Mountains"/"Alexa De Paris"|^ff^> (1986)
 * I<Batman|^cd^> (1989)
-4 Queen|Queen (band) +
+3 Queen
 * I<Live Killers|^cd^> (1979)
 * I<Flash Gordon|^cd^> (1980)
 * I<Greatest Hits|^cd^> (1981)
@@ -189,10 +193,10 @@ My entire music collection is here with the exception of soundtracks. They can b
 * I<A Kind of Magic|^cd^> (1986)
 * I<Classic Queen|^cd^> (1992)
 * I<Highlander: The Immortal Edition|^cd^> (2002)
-4 Simply Red +
+3 Simply Red
 * I<a new flame|^cd^> (1989)
 * I<Blue|^cd^> (1998)
-4 various
+3 various
 * I<The 80s Greatest Hits*Arena Rock|^cd^> (1992)
 * I<Blast Off|^lp^> (0000)
 * I<A Christmas Music Festival|^cassette^> (1970)
@@ -213,12 +217,12 @@ My entire music collection is here with the exception of soundtracks. They can b
 These artists are musicians and bands I like including soundtrack composers.
 & musicians
 2 Comedy
-3 My comedy collection
-* I<You Might Be a Redneck If|^cd^> (1993) by Jeff Foxworthy
-4 Bill Cosby +
+* I<You Might Be a Redneck If&#8230;|^cd^> (1993) by Jeff Foxworthy
+3 Bill Cosby
 * I<Bill Cosby is a Very Funny Fellow, RIGHT!|^cd^> (1963)
 * I<"I Started Out as a Child"|^cd^> (1964)
 * I<Wonderfulness|^cd^> (1966)
+* I<to russel, my brother, whom i slept with|^cd^> (1968)
 * I<It's True, It's True!|^cd^> (1969)
 3 Comedians I like
 & comedians

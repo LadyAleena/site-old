@@ -6,7 +6,7 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::LineMagic qw($line_magic);
+use Util::LineMagic qw($line_magic);
 use HTML::Elements qw(list);
 use Util::People qw(people_list);
 
@@ -17,7 +17,7 @@ my $doc_magic = {
 page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
 
 __DATA__
-This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
+This is my B<non-fiction collection> of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
 2 Animals
 * I<"Is This The Place?"|^massmarket^> by D.E.L.T.A. Rescue Outreach Program
 2 Art
@@ -51,11 +51,11 @@ This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade p
 3 Economics and finance
 * Economics Fourth Edition by William P. Albrecht Jr.
 * Cut Your Spending in Half: Without Settling for Less by Editors of Rodale Press
-* Master Your Money Power	
+* Master Your Money Power
 2 Games
 * The Exeter Book of Riddles by Kevin Crossley-Holland
 * The Perma Quiz Book by Nathan Joseph Kane
-* The Premiere Book of Crossword Puzzles No. 1	
+* The Premiere Book of Crossword Puzzles No. 1
 2 Health
 * The Doctors Book of Home Remedies by Prevention Magazine, ed.
 * The Rescue 911 Family First Aid & Emergency Care Book by Julie Motz
@@ -138,7 +138,7 @@ This is my non-fiction collection of SPAN<hardcovers|^hardcovers^>, SPAN<trade p
 3 Evolution
 * The Dragons of Eden by Carl Sagan
 3 Gemology
-* Gemstones	
+* Gemstones
 2 Sex
 * I<The Illustrated Kama Sutra|^trades^> by Sir Richard Burton
 * Pocket Sex Guide by Anne Hooper

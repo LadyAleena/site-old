@@ -6,12 +6,12 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Base::LineMagic qw($line_magic);
+use Util::LineMagic qw($line_magic);
 
 page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
 
 __DATA__
-This is my film and television tie-in collection.
+This is my film and television B<tie-in collection>.
 For books: SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
 For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SPAN<LPs|^lps^>.
 2 Novels (general)
@@ -27,7 +27,6 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 * I<The Breakfast Club|^cassette^> (1985)
 * I<Fith Element|^cd^> (1997)
 * I<Footloose|^cd^> (1984)
-* I<The Guardians of the Galaxy - Awesome Mix Vol. 1|^cd^> (2014)
 * I<Heavy Metal|^lp^> (1995)
 * I<Labyrinth|^cd^> (1986) by David Bowie and Trevor Jones
 * I<The Lost Boys|^cd^> (1987) <!-- cassette -->
@@ -58,8 +57,11 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 # I<Earth 2|^massmarket^> by Melissa Crandell
 # I<Puzzle|^massmarket^> by Sean Dalton
 2 Ghostbusters soundtracks
-* I<Ghostbusters|^cassette^> (1984) by various artists
+* I<Ghostbusters|^cd^> (1984) by various artists # and cassette
 * I<Ghostbusters II|^cassette^> (1989) by Danny Elfman and others
+2 Guardians of the Galaxy
+* I<Guardians of the Galaxy - Awesome Mix Vol. 1|^cd^> (2014)
+* I<Guardians of the Galaxy - Awesome Mix Vol. 2|^cd^> (2017)
 2 Independence Day
 * I<Independence Day|^massmarket^> (1996 novel) by Dean Devlin, Roland Emmerich, and Stephen Molstad
 * I<Independence Day|^cd^> (1996 soundtrack) by David Arnold

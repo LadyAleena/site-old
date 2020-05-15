@@ -7,7 +7,7 @@ Power Hungry
 The Cure
 In Which We Meet Mr. Jones
 The Equation
-The Dreamscape
+The Dreamscape|In Plane Sight/07/Castle
 Safe
 Bound
 The No-Brainer
@@ -17,10 +17,10 @@ Inner Child
 Unleashed
 Bad Dreams
 Midnight
-The Road Not Taken
+The Road Not Taken|It Begins/01/Alias
 There's More Than One of Everything
 .
-A New Day in the Old Town
+A New Day in the Old Town|//The X-Files/The X-Files
 Night of Desirable Objects
 Fracture
 Momentum Deferred
@@ -53,7 +53,7 @@ Amber 31422
 The Abducted
 Entrada
 Marionette
-The Firefly
+The Firefly|//Twin Peaks
 Reciprocity
 Concentrate and Ask Again
 Immortality
@@ -79,7 +79,7 @@ Enemy of My Enemy
 Forced Perspective
 Making Angels
 Welcome to Westfield
-A Better Human Being
+A Better Human Being|It Begins/01/Alias
 The End of All Things
 A Short Story About Love
 Nothing as It Seems

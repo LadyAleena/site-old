@@ -1,6 +1,6 @@
 .
 Pilot
-Chuck Versus the Helicopter
+Chuck Versus the Helicopter|//Lost
 Chuck Versus the Tango
 Chuck Versus the Wookie
 Chuck Versus the Sizzling Shrimp
@@ -23,7 +23,7 @@ Chuck Versus the Fat Lady
 Chuck Versus the Gravitron
 Chuck Versus the Sensei
 Chuck Versus the DeLorean
-Chuck Versus Santa Claus
+Chuck Versus Santa Claus|//Die Hard/Die Hard
 Chuck Versus the Third Dimension
 Chuck Versus the Suburbs
 Chuck Versus the Best Friend
@@ -81,7 +81,7 @@ Chuck Versus Agent X
 Chuck Versus the Last Details
 Chuck Versus the Cliffhanger
 .
-Chuck Versus the Zoom 
+Chuck Versus the Zoom
 Chuck Versus the Bearded Bandit
 Chuck Versus The Frosted Tips
 Chuck Versus the Business Trip

@@ -21,18 +21,18 @@ The Weigh Station
 Chicken, Dynamite, Chainsaw
 An Honest Woman
 Prison Ball
-They'll Have To Go Through Me|Nobody Touches Anything/03/Chicago Fire/Chicago;Chicago Crossover/16/Law & Order: Special Victims Unit/Law & Order
+They'll Have To Go Through Me|Nobody Touches Anything/03/Chicago Fire/Chicago; Chicago Crossover/16/Law & Order: Special Victims Unit/Law & Order
 Assignment of the Year
 Called In Dead
 Shouldn't Have Been Alone
-A Little Devil Complex
+A Little Devil Complex|Three Bells/03/Chicago Fire/Chicago
 Erin's Mom
 What Do You Do
 What Puts You On That Ledge
 Say Her Real Name
 Get Back to Even
 The Three G's
-The Number of Rats|We Called Her Jellybean/03/Chicago Fire/Chicago;Daydream Believer/16/Law & Order: Special Victims Unit/Law & Order
+The Number of Rats|We Called Her Jellybean/03/Chicago Fire/Chicago; Daydream Believer/16/Law & Order: Special Victims Unit/Law & Order
 There's My Girl
 Push the Pain Away
 Born Into Bad News
@@ -46,7 +46,7 @@ You Never Know Who's Who
 A Dead Kid, a Notebook and a Lot of Maybes
 Forget My Name
 Never Forget I Love You
-Now I'm God|The Beating Heart/04/Chicago Fire/Chicago;Malignant/01/Chicago Med/Chicago
+Now I'm God|The Beating Heart/04/Chicago Fire/Chicago; Malignant/01/Chicago Med/Chicago
 Knocked the Family Right Out
 Looking Out for Stateville
 Hit Me
@@ -55,3 +55,99 @@ A Night Owl
 The Cases That Need to Be Solved
 Forty-Caliber Bread Crumb
 Kasual With a K
+If We Were Normal
+In A Duffel Bag
+Justice|//Chicago Justice/Chicago
+She's Got Us
+Start Digging
+.
+The Silos
+Made a Wrong Turn
+All Cylinders Firing
+Big Friends, Big Enemies
+A War Zone
+Some Friend
+300,000 Likes
+A Shot Heard Around the World
+Don't Bury This Case|Some Make It, Some Don't/05/Chicago Fire/Chicago
+Don't Read the News
+You Wish
+Sanctuary
+I Remember Her Now
+Seven Indictments
+Favor, Affection, Malice or Ill-Will
+Emotional Proximity|Deathtrap/05/Chicago Fire/Chicago; Fake/01/Chicago Justice/Chicago
+Remember the Devil
+Little Bit of Light
+Last Minute Resistance
+Grasping for Salvation
+Fagin
+Army of One
+Fork in the Road
+.
+Reform
+The Thing About Heroes
+Promise
+Snitch
+Home
+Fallen
+Care Under Fire
+Politics
+Monster
+Rabbit Hole
+Confidential
+Captive
+Chasing Monsters
+Anthem
+Sisterhood
+Profiles
+Breaking Point
+Ghosts
+Payback
+Saved
+Allegiance
+Homecoming
+.
+New Normal
+Endings
+Bad Boys
+Ride Along
+Fathers and Sons
+True or False
+Trigger
+Black and Blue
+Descent
+Brotherhood
+Trust
+Outrage
+Night in Chicago
+Ties That Bind
+Good Men
+The Forgotten
+Pain Killer
+This City
+What Could Have Been
+Sacrifice
+Confession
+Reckoning
+.
+Doubt
+Assets
+Familia
+Infection, Part 3|Infection, Part 1/08/Chicago Fire/Chicago; Infection, Part 2/05/Chicago Med/Chicago
+Brother's Keeper
+False Positive
+Informant
+No Regrets
+Absolution
+Mercy
+43rd and Normal
+The Devil You Know
+I Was Here
+Center Mass
+Burden of Truth
+Intimate Violence
+Before the Fall
+Lines|Emotional Rescue/02/FBI/FBI
+Buried Secrets
+Silence of the Night

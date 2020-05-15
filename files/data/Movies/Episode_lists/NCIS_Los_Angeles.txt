@@ -58,7 +58,7 @@ Lone Wolf
 Honor
 Greed
 Betrayal
-The Debt 
+The Debt
 Higher Power
 The Watchers
 Exit Strategy
@@ -139,15 +139,15 @@ Spiral
 In the Line of Duty
 Black Wind
 Forest For The Trees
-Expiration Date 
+Expiration Date
 Savoir Faire
 Fighting Shadows
-Blaze of Glory 
+Blaze of Glory
 Rage
 Beacon
 Field of Fire
 Kolcheck, A.
-Chernoff, K. 
+Chernoff, K.
 .
 Active Measures
 Citadel
@@ -197,3 +197,75 @@ Battle Scars
 Golden Days
 Uncaged
 Unleashed
+.
+Party Crashers
+Se Murio el Payaso
+Assets
+Plain Sight
+Mountebank
+Can I Get a Witness?
+The Silo
+This Is What We Do
+Fool Me Twice
+Forasteira
+All Is Bright
+Under Pressure
+Các Tù Nhân
+Goodbye, Vietnam
+Liabilities
+Warrior of Peace
+The Monster
+Vendetta
+Outside the Lines
+Reentry
+Where Everybody Knows Your Name
+Venganza
+A Line in the Sand
+Ninguna Salida
+.
+To Live and Die in Mexico
+Superhuman
+The Prince
+Hit List
+Pro Se
+Asesinos
+One of Us
+The Patton Project
+A Diamond in the Rough
+Heist
+Joyride
+The Sound of Silence
+Better Angels
+Smokescreen
+Smokescreen, Part 2
+Into the Breach
+Till Death Do Us Part
+Born To Run
+Searching
+Choke Point
+The One That Got Away
+No More Secrets
+The Guardian
+False Flag
+.
+Let Fate Decide
+Decoy
+Hail Mary
+Yellow Jack
+Provenance
+A Bloody Brilliant Plan
+Concours D'Elegance
+Human Resources
+Kill Beale: Vol. 1
+Mother
+Answers
+Groundwork
+High Society
+Commitment Issues
+The Circle
+Alsiyadun
+Watch Over Me
+Missing Time
+Fortune Favors the Brave
+Knock Down
+Murder of Crows

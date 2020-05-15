@@ -16,7 +16,7 @@ Time Will Tell
 Mild Mannered
 Beyond Our Control
 Age Before Beauty
-13.1|/04/EUReKA
+13.1|//EUReKA
 Around the Bend
 For the Team
 Merge With Caution
@@ -30,9 +30,9 @@ The New Guy
 Trials
 Love Sick
 Queen For a Day
-3 â€¦ 2 â€¦ 1
+3 … 2 … 1
 Past Imperfect
-Don't Hate the Player
+Don't Hate the Player|//EUReKA
 The 40th Floor
 Shadows
 Insatiable
@@ -48,7 +48,7 @@ No Pain, No Gain
 Fractures
 Endless Wonder
 Second Chance
-The Ones You Love|//The X-Files (1993)/The X-Files
+The Ones You Love
 We All Fall Down
 The Living and the Dead
 Parks and Rehabilitation

@@ -6,13 +6,13 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
+use Util::StoryMagic qw(program_magic);
 
-page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+my $magic = program_magic;
+page( 'code' => sub { story(*DATA, { 'line magic' => $magic }) });
 
 __DATA__
 This is a list of B<programs> that I am using or have used. I can not account for I<all> the software we have had and used over the years. Some of it was so bad, we blanked it out of our heads. This list does not include a full list of hardware drivers either. So much software, so little time or in this case patience.
-
 2 In use
 *| two
 * ^Debian^ (my computer)
@@ -32,7 +32,6 @@ This is a list of B<programs> that I am using or have used. I can not account fo
 *| two
 * ^KDE^
 * ^XFCE^
-
 2 Previously used
 Most of the software below was Windows based, so I do not use them anymore since I installed ^Debian^, a Linux distribution.
 *| two
@@ -136,7 +135,7 @@ Most of the software below was Windows based, so I do not use them anymore since
 * ^real^ - ^realPlayer^
 3 Security
 *| two
-* B<^avast! Anitvirus^>
+* ^avast! Anitvirus^
 * ^Comodo^ - ^Internet Security (free)^
 * ^PopUp Smasher^
 * ^Spyware Terminiator^

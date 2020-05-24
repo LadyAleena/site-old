@@ -6,9 +6,10 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
+use Util::StoryMagic::Collection qw(collection_magic);
 
-page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+my $magic = collection_magic;
+page( 'code' => sub { story(*DATA, { 'line magic' => $magic }) });
 
 __DATA__
 This is my B<role playing novel collection> of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.

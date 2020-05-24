@@ -6,16 +6,10 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
-use HTML::Elements qw(list);
-use Util::People qw(people_list);
+use Util::StoryMagic::Collection qw(collection_magic);
 
-my $doc_magic = {
-  'musicians' => sub { list(3, 'u', people_list('Musicians.txt'), { 'class' => 'three' }) },
-  'comedians' => sub { list(3, 'u', people_list('Comedians.txt'), { 'class' => 'three' }) },
-};
-
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+my $magic = collection_magic;
+page( 'code' => sub { story(*DATA, { 'doc magic' => $magic, 'line magic' => $magic }) });
 
 __DATA__
 This is my B<music and comedy collection> of SPAN<LPs|^lps^>, SPAN<45s|^ffs^>, SPAN<cassettes|^cassettes^>, and SPAN<CDs|^cds^>. If it is not on a CD, I have not heard it in a long long time. SPAN<&#9785;|class="bigger">

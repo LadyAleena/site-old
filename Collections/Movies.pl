@@ -6,16 +6,10 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
-use HTML::Elements qw(list);
-use Util::People qw(people_list);
+use Util::StoryMagic::Collection qw(collection_magic);
 
-my $doc_magic = {
-  'producers and directors' => sub { list(3, 'u', people_list('Producers_and_directors.txt'), { 'class' => 'three' }) },
-  'film actors'             => sub { list(3, 'u', people_list('Actors_in_films.txt'),         { 'class' => 'three' }) },
-};
-
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+my $magic = collection_magic;
+page( 'code' => sub { story(*DATA, { 'doc magic' => $magic, 'line magic' => $magic }) });
 
 __DATA__
 This is my B<movie collection> of SPAN<blu-rays|^brds^>, SPAN<DVDs|^dvds^>, and SPAN<VHSs|^vhss^>.
@@ -46,7 +40,7 @@ This is my B<movie collection> of SPAN<blu-rays|^brds^>, SPAN<DVDs|^dvds^>, and 
 2 B
 *| two
 * I<Baby Boom|^dvd^> (1987)
-* I<Battleship|^bds^> (2012)
+* I<Battleship|^brds^> (2012)
 * I<The Beastmaster|^dvd^> (1982)
 * I<The Big Chill|^dvd^> (1983)
 * I<Big Fish|^dvd^> (2003)
@@ -54,7 +48,7 @@ This is my B<movie collection> of SPAN<blu-rays|^brds^>, SPAN<DVDs|^dvds^>, and 
 * I<Big Trouble in Little China|^dvd^> (1986)
 * I<Bill Cosby: Himself|^vhs^> (1983)
 * I<The Black Hole|^dvd^> (1979)
-* I<Blade Runner|^bds^> (1982)
+* I<Blade Runner|^brds^> (1982)
 * I<Blast from the Past|^dvd^> (1999)
 * I<Blazing Saddles|^dvd^> (1974)
 * I<Blended|^bds^> (2014)
@@ -89,8 +83,8 @@ See the A<tie-ins|href="Tie-ins.pl#Babylon_5"> I own.
 * I<Batman &amp; Robin|^dvd^> (1997)
 3 The Best Exotic Marigold Hotel
 (blu-ray boxed set)
-* I<The Best Exotic Marigold Hotel|^bds^> (2011)
-* I<The Second Best Exotic Marigold Hotel|^bds^> (2015)
+* I<The Best Exotic Marigold Hotel|^brds^> (2011)
+* I<The Second Best Exotic Marigold Hotel|^brds^> (2015)
 3 Bridget Jones
 * I<Bridget Jones's Diary|^dvd^> (2001)
 * I<Bridget Jones: The Edge of Reason|^dvd^> (2004)
@@ -206,7 +200,7 @@ See the A<tie-ins|href="Tie-ins.pl#Doctor_Who"> I own.
 (DVD boxed set)
 * I<Ghostbusters|^dvd^> (1984)
 * I<Ghostbusters II|^dvd^> (1989)
-See the A<tie-ins|href="Tie-ins.pl#Ghostbusters"> I own.
+See the A<tie-ins|href="Tie-ins.pl> I own.
 3 Grease
 * I<Grease|^dvd^> (1978)
 * I<Grease 2|^dvd^> (1982)
@@ -573,11 +567,11 @@ See the A<tie-ins|href="Tie-ins.pl#Star_Wars"> I own.
 3 Zorro
 * I<The Mask of Zorro|^dvd^> (1998)
 * I<The Legend of Zorro|^dvd^> (2005)
-2 Æ
+2 Other
 * I<Æon Flux|^dvd^> (2005)
 2 People in movies I like
 These are some of the people I follow when selecting films and television to watch. More actors can be found in the A<film or television series|href="../Movies/index.pl?series=list"> where they appear.
 3 Producers and directors
 & producers and directors
 3 Actors in films
-& film actors
+& actors in films

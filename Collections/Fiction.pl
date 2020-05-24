@@ -6,20 +6,15 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
-use HTML::Elements qw(list);
-use Util::People qw(people_list);
+use Util::StoryMagic::Collection qw(collection_magic);
 
-my $doc_magic = {
-  'authors' => sub { list(3, 'u', people_list('Authors.txt'), { 'class' => 'three' }) },
-};
-
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+my $magic = collection_magic;
+page( 'code' => sub { story(*DATA, { 'doc magic' => $magic, 'line magic' => $magic }) });
 
 __DATA__
 This is my B<fiction collection> of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.
 2 General fiction
-* I<Big Trouble|^hardcover^> by Dave Barry
+* I<Big Trouble|^hardcover^> by Dave Barry and the SPAN<2002 film|^dvds^>
 * I<The House of Ulloa|^hardcover^> by Emilia Pardo Bazan (Trans. by Roser Caminals-Heath)
 * I<The Da Vinci Code|^trade^> by Dan Brown
 * I<Through the Looking Glass|^trade^> and I<Alice's Adventures in Wonderland|^trade^> by Lewis Carroll
@@ -253,7 +248,7 @@ with Janny Wurts
 # I<Waiting for the Galactic Bus|^hardcover^>
 # I<The Snake Oil Wars|^hardcover^>
 3 Mike Jefferies +
-4 Loremasters or Elundium
+4 Loremasters of Elundium
 # I<The Road to Underfall|^massmarket^>
 # I<Palace of Kings|^massmarket^>
 # I<Shadowflight|^massmarket^>
@@ -286,7 +281,7 @@ with Janny Wurts
 # I<The Horse and His Boy|^massmarket^>
 # I<The Magician's Nephew|^massmarket^>
 # I<The Last Battle|^massmarket^>
-I also own A<I<The Chronicles of Narnia> film trilogy|href="Movies.pl#The_Chronicles_of_Narnia">.
+I also own A<I<The Chronicles of Narnia> film trilogy|href="Movies.pl#The_Chronicles_of_Narnia" ^brds^>.
 4 Space Trilogy
 # I<Out of the Silent Planet|^massmarket^>
 # I<Perelandria|^massmarket^>
@@ -389,7 +384,8 @@ Richard Pini, Ed.
 * I<Virgins and Martyrs|^massmarket^> by Simon Maginn
 * I<Borderland|^massmarket^> by Thomas F. Monteleone, Ed.
 3 Stephen King +
-* I<It|^massmarket^>
+* I<It|^massmarket^> and the SPAN<TV miniseries|^dvds^>
+* I<The Stand|^hardcover^>
 4 The Green Mile
 * I<The Two Dead Girls|^massmarket^>
 # I<The Mouse on the Mile|^massmarket^>
@@ -443,7 +439,7 @@ as A. N. Roquelaure
 # I<Dirk Gently's Holistic Detective Agency|^massmarket^>
 # I<The Long, Dark Teatime of the Soul|^massmarket^>
 4 The Hitchhiker's Guide to the Galaxy
-# I<The Hitchhiker's Guide to the Galaxy|^massmarket^>
+# I<The Hitchhiker's Guide to the Galaxy|^massmarket^> and SPAN<2005 film|^dvds^>
 # I<The Resteraunt at the End of the Galaxy|^massmarket^>
 # I<Life, the Unuverse, and Everything|^massmarket^>
 # I<So Long, and Thanks for all the Fish|^massmarket^>
@@ -498,7 +494,7 @@ with Gentry Lee
 3 Frank Herbert +
 * I<The Eyes of Heisenberg|^massmarket^>
 4 Dune
-# I<Dune|^massmarket^>
+# I<Dune|^massmarket^> and SPAN<1984 film|^brds^>
 # I<Dune Messiah|^massmarket^>
 # I<Children of Dune|^massmarket^>
 # I<God Emperor of Dune|^massmarket^>

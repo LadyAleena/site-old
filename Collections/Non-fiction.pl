@@ -6,15 +6,10 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
-use HTML::Elements qw(list);
-use Util::People qw(people_list);
+use Util::StoryMagic::Collection qw(collection_magic);
 
-my $doc_magic = {
-  'artists' => sub { list(3, 'u', people_list('Artists.txt'), { 'class' => 'three' }) },
-};
-
-page( 'code' => sub { story(*DATA, { 'doc magic' => $doc_magic, 'line magic' => $line_magic }) });
+my $magic = collection_magic;
+page( 'code' => sub { story(*DATA, { 'doc magic' => $magic, 'line magic' => $magic }) });
 
 __DATA__
 This is my B<non-fiction collection> of SPAN<hardcovers|^hardcovers^>, SPAN<trade paperbacks|^trades^>, and SPAN<mass market paperbacks|^massmarkets^>.

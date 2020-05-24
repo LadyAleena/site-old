@@ -6,9 +6,10 @@ use CGI::Carp qw(fatalsToBrowser);
 
 use lib '../files/lib';
 use Base::Page qw(page story);
-use Util::LineMagic qw($line_magic);
+use Util::StoryMagic::Collection qw(collection_magic);
 
-page( 'code' => sub { story(*DATA, { 'line magic' => $line_magic }) });
+my $magic = collection_magic;
+page( 'code' => sub { story(*DATA, { 'line magic' => $magic }) });
 
 __DATA__
 This is my film and television B<tie-in collection>.
@@ -22,11 +23,21 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 * I<Quantum Leap|^massmarket^> (Book 1) by Ashley McConnell
 * I<TekWar|^massmarket^> (Book 1) by William Shatner
 2 Soundtracks (general)
+*| two
 * I<Batman|^cd^> (1989)
 * I<The Big Chill|^cd^> (1983)
 * I<The Breakfast Club|^cassette^> (1985)
+* I<Dirty Dancing>
+** I<(I've Had) The Time of My Life/Love Is Strange|^ff^> (1987)
+** I<Dirty Dancing|^cd^> (1987)
 * I<Fith Element|^cd^> (1997)
 * I<Footloose|^cd^> (1984)
+* I<Ghostbusters>
+** I<Ghostbusters|^cd^> (1984) by various artists <!-- cassette -->
+** I<Ghostbusters II|^cassette^> (1989) by Danny Elfman and others
+* I<Guardians of the Galaxy>
+** I<Guardians of the Galaxy - Awesome Mix Vol. 1|^cd^> (2014)
+** I<Guardians of the Galaxy - Awesome Mix Vol. 2|^cd^> (2017)
 * I<Heavy Metal|^lp^> (1995)
 * I<Labyrinth|^cd^> (1986) by David Bowie and Trevor Jones
 * I<The Lost Boys|^cd^> (1987) <!-- cassette -->
@@ -34,6 +45,9 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 * I<Pretty in Pink|^cassette^> (1986)
 * I<Pretty Woman|^cd^> (1990)
 * I<Rocky IV|^lp^> (1992)
+* I<Romy and Michele's High School Reunion>
+** I<Romy and Michele's High School Reunion|^cd^> (1997)
+** I<More Romy and Michele's High School Reunion|^cd^> (1997)
 * I<Sahara|^cd^> (2005)
 * I<Sound of Music|^cd^> (1965)
 * I<St. Elmo's Fire|^cassette^> (1985)
@@ -47,21 +61,12 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 # I<Voices|^massmarket^> by John Vornholt
 #5 I<The Touch of Your Shadow, the Whisper of Your Name|^massmarket^> by Neal Barrett Jr.
 #6 I<Betrayals|^massmarket^> by S. M. Stirling
-2 Dirty Dancing soundtracks
-* I<(I've Had) The Time of My Life/Love Is Strange|^ff^> (1987)
-* I<Dirty Dancing|^cd^> (1987) (Original Soundtrack from the Vestron Motion Picture)
 2 Doctor Who books
 * I<The Doctor Who File|^trade^> by Peter Haining
 * I<The Time Traveler's Guide|^trade^>
 2 Earth 2 novels
 # I<Earth 2|^massmarket^> by Melissa Crandell
 # I<Puzzle|^massmarket^> by Sean Dalton
-2 Ghostbusters soundtracks
-* I<Ghostbusters|^cd^> (1984) by various artists # and cassette
-* I<Ghostbusters II|^cassette^> (1989) by Danny Elfman and others
-2 Guardians of the Galaxy
-* I<Guardians of the Galaxy - Awesome Mix Vol. 1|^cd^> (2014)
-* I<Guardians of the Galaxy - Awesome Mix Vol. 2|^cd^> (2017)
 2 Independence Day
 * I<Independence Day|^massmarket^> (1996 novel) by Dean Devlin, Roland Emmerich, and Stephen Molstad
 * I<Independence Day|^cd^> (1996 soundtrack) by David Arnold
@@ -71,10 +76,6 @@ For music: SPAN<CDs|^cds^>, SPAN<cassettes|^cassettes^>, SPAN<45s|^ffs^>, and SP
 by John Williams
 * I<Jurassic Park|^cd^> (1993)
 * I<Jurassic Park:The Lost World|^cd^> (1997)
-2 Romy and Michele's High School Reunion soundtracks
-by various artists
-* I<Romy and Michele's High School Reunion|^cd^> (1997)
-* I<More Romy and Michele's High School Reunion|^cd^> (1997)
 2 seaQuest DSV
 3 Novels (seaQuest)
 # I<seaQuest DSV|^massmarket^> by Diane Duane & Peter Morwood

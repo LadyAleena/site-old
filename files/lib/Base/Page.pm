@@ -27,7 +27,7 @@ my $root_path = base_path('path');
 my $root_link = base_path('link');
 
 sub contact_links {
-  my $contacts = make_hash( 'file' => ['Base', 'other_sites.txt'] );
+  my $contacts = make_hash( 'file' => ['Util', 'other_sites.txt'] );
 
   my @links = ( anchor('Email', { 'href' => 'mailto:fantasy@xecu.net', 'title' => 'E-mail Lady Aleena' }) );
   for my $link (sort { lc $a cmp lc $b } keys %$contacts) {
@@ -130,7 +130,7 @@ sub page {
           div(3, sub {
             line(4, anchor('&#9650; to top', { 'href' => "#${main_id}_title", 'class' => 'to_top', 'title' => 'Back to top' }));
           }, { 'class' => 'to_top' });
-        }, { 'id' => $main_id, 'heading' => [1, $page_heading, { 'id' => "${main_id}_title", 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
+        }, { 'id' => $main_id, 'heading' => [1, $page_heading, { 'id' => "${main_id}_heading", 'style' => $page_heading =~ /Lady Aleena$/ ? 'display: none' : undef }] });
         div(2, sub {
           line(3, anchor('&#9650; to top', { 'href' => "#title", 'class' => 'to_top', 'title' => 'Back to top' }));
         }, { 'class' => 'to_top' });
@@ -324,18 +324,18 @@ sub table_opts {
       $lineno = $thead_end;
     }
     elsif ($match eq '=') {
-      my $thead_start = $lineno;
-      my $thead_end   = $lineno;
-      $thead_end++ while ($thead_end < $#$lines and $lines->[$thead_end + 1] eq '*');
+      my $tfoot_start = $lineno;
+      my $tfoot_end   = $lineno;
+      $tfoot_end++ while ($tfoot_end < $#$lines and $lines->[$tfoot_end + 1] eq '*');
 
       my @table_rows = map {
         $_ =~ s/^[\*\+-] (.+)/$1/;
         row_line($_, $opt);
-      } @{$lines}[$thead_start..$thead_end];
+      } @{$lines}[$tfoot_start..$tfoot_end];
 
-      push @{$table_opts->{'thead'}->{'rows'}}, ['whead', \@table_rows];
+      push @{$table_opts->{'tfoot'}->{'rows'}}, ['whead', \@table_rows];
 
-      $lineno = $thead_end;
+      $lineno = $tfoot_end;
     }
     elsif ($match =~ /[\+-]/) {
       my $row_start = $lineno;
@@ -365,8 +365,8 @@ sub row_line {
   my @row = split(/\|/, $line);
   my $row_data;
   for my $cell (@row) {
-    push @{$row_data}, $cell =~ /^r(\d)\s(.+)$/ ? [inline(convert_string($2, $opt->{'line magic'})), { 'rowspan' => $1 }] :
-                       $cell =~ /^c(\d)\s(.+)$/ ? [inline(convert_string($2, $opt->{'line magic'})), { 'colspan' => $1 }] :
+    push @{$row_data}, $cell =~ /^r(\d+)\s(.+)$/ ? [inline(convert_string($2, $opt->{'line magic'})), { 'rowspan' => $1 }] :
+                       $cell =~ /^c(\d+)\s(.+)$/ ? [inline(convert_string($2, $opt->{'line magic'})), { 'colspan' => $1 }] :
                        $cell && length $cell    ? inline(convert_string($cell, $opt->{'line magic'})) : '&nbsp';
   }
   return $row_data;

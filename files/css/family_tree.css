@@ -1,0 +1,66 @@
+path    { fill:none; stroke: #000000; stroke-width: 1px; stroke-linejoin: round; }
+g.marriage   path { stroke: #cc3333; }
+g.dating     path { stroke: #cc33cc; }
+g.affair     path { stroke: #3333cc; }
+g.lspring    path { stroke: #33cccc; }
+g.child      path { stroke: #003300; }
+g.possible   path { stroke: #668866; }
+g.descendant path { stroke-dasharray: 2, 4; }
+g.adopted    path { stroke-dasharray: 3, 1; }
+g.alter      path { stroke-dasharray: 4, 2; }
+
+circle  { stroke:none; }
+g.marriage circle { fill: #cc3333; }
+g.dating   circle { fill: #cc33cc; }
+g.affair   circle { fill: #3333cc; }
+g.lspring  circle { fill: #33cccc; }
+g.child    circle { fill: #33cc33; }
+
+polygon { fill: none; stroke: #000000; stroke-width: 1px; stroke-linejoin: round;  }
+g.male            polygon { fill: #ccccff; }
+g.female          polygon { fill: #ffcccc; }
+g.neuter          polygon { fill: #ccffcc; }
+
+g.possible        polygon { stroke: #666666; }
+g.possible.male   polygon { fill: #ddddff; }
+g.possible.female polygon { fill: #ffdddd; }
+g.possible.neuter polygon { fill: #ddffdd; }
+
+g.king            polygon { stroke: #660066; stroke-width: 2; }
+g.royal           polygon { stroke: #000066; }
+g.royal.possible  polygon { stroke: #9999cc; }
+
+g.main            polygon { stroke: #999900; stroke-width: 2; }
+
+rect    { fill: none; stroke: #000000; stroke-width: 1px; stroke-linejoin: round; }
+g.male            rect { fill: #ccccff; }
+g.female          rect { fill: #ffcccc; }
+g.neuter          rect { fill: #ccffcc; }
+
+g.possible        rect { stroke: #666666; }
+g.possible.male   rect { fill: #ddddff; }
+g.possible.female rect { fill: #ffdddd; }
+g.possible.neuter rect { fill: #ddffdd; }
+
+g.king            rect { stroke: #660066; stroke-width: 2; }
+g.royal           rect { stroke: #000066; }
+g.royal.possible  rect { stroke: #9999cc; }
+
+g.main            rect { stroke: #330033; stroke-width: 2; }
+
+text    { font-family: arial, sans-serif; font-size: 12px; fill: #000000; text-anchor: middle; dominant-baseline: middle; text-align: center; }
+g.unnamed text { font-size: 10px; }
+g text.chart_title { font-size: 16px; font-family: serif; }
+g text.chart_subtitle,
+g text.group_title { font-size: 14px; font-family: serif; }
+g text.nickname,
+g text.ruler,
+g text.job,
+g text.Muse,
+g text.incname   { font-size: 10px; }
+g text.incof     { font-size:  9px; }
+g text.species,
+g text.dead,
+g text.other     { font-size:  8px; }
+a text       { fill: #203; }
+a tspan      { fill: #203; }

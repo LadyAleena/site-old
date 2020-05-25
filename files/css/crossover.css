@@ -1,0 +1,82 @@
+path { fill:none; stroke-width: 2; stroke-opacity: 1; stroke-linejoin: round; stroke-linecap: round; }
+g.soft          path, g path.soft          { stroke: #ffcc00; }
+g.slusho2       path, g path.slusho2       { stroke: #00ffff; stroke-dasharray: 8; }
+g.slusho1       path, g path.slusho1       { stroke: #ff0000; }
+g.morley_other  path, g path.morley_other  { stroke: #990000; }
+g.morley_red    path, g path.morley_red    { stroke: #ff0000; }
+g.gannon        path, g path.gannon        { stroke: #cc0000; stroke-dasharray: 8 4; }
+g.oceanic_lost  path, g path.oceanic_lost  { stroke: #009999; }
+g.oceanic       path, g path.oceanic       { stroke: #009999; stroke-dasharray: 4; }
+g.space         path, g path.space         { stroke: #6699cc; }
+g.event_nocross path, g path.event_nocross { stroke: #990099; }
+g.event_cross   path, g path.event_cross   { stroke: #ff00ff; }
+g.q_one_cross   path, g path.q_one_cross   { stroke: #009900; stroke-dasharray: 1 5 }
+g.p_one_cross   path, g path.p_one_cross   { stroke: #009900; stroke-dasharray: 3 4; }
+g.one_cross     path, g path.one_cross     { stroke: #009900; }
+g.two_cross     path, g path.two_cross     { stroke: #00ff00; }
+g.spinoff       path, g path.spinoff       { stroke: #0000ff; }
+g.semi_spinoff  path, g path.semi_spinoff  { stroke: #0000cc; stroke-dasharray: 6 3; }
+g.non_spinoff   path, g path.non_spinoff   { stroke: #000099; stroke-dasharray: 3; }
+
+g:target rect   { stroke: #027; stroke-width: 10; }
+g:target rect.inner   { stroke: none; }
+
+rect { paint-order: stroke; stroke: #666666; stroke-width: 4; stroke-opacity: 1; fill-opacity: 1; fill: #ffffff; }
+rect.inner { stroke: none; }
+g.nbc      rect, g rect.nbc      { fill: #ffcccc; }
+g.cbs      rect, g rect.cbs      { fill: #ffffcc; }
+g.abc      rect, g rect.abc      { fill: #ccccff; }
+g.amazon   rect, g rect.amazon   { fill: #333300; }
+g.amc      rect, g rect.amc      { fill: #ffccff; }
+g.disney   rect, g rect.disney   { fill: #99ccff; }
+g.disney_plus rect, g rect.disney_plus { fill: #330000; }
+g.netflix  rect, g rect.netflix  { fill: #cc0000; }
+g.fox      rect, g rect.fox      { fill: #ccffff; }
+g.fx       rect, g rect.fx       { fill: #99ffff; }
+g.bet      rect, g rect.bet      { fill: #ffff66; }
+g.showtime rect, g rect.showtime { fill: #ffff00; }
+g.syfy     rect, g rect.syfy     { fill: #ff99ff; }
+g.pten     rect, g rect.pten     { fill: #bbccff; }
+g.tnt      rect, g rect.tnt      { fill: #ff9900; }
+g.tbs      rect, g rect.tbs      { fill: #ffcc99; }
+g.hbo      rect, g rect.hbo      { fill: #ffbb44; }
+g.cinemax  rect, g rect.cinemax  { fill: #ffaa55; }
+g.usa      rect, g rect.usa      { fill: #ff99cc; }
+/*
+The wb and upn folded into the cw.
+The cw may lose shows to dc.
+*/
+g.wb  rect, g rect.wb  { fill: #99ff99; }
+g.upn rect, g rect.upn { fill: #ccff99; }
+g.cw  rect, g rect.cw  { fill: #99ff33; }
+g.dc  rect, g rect.dc  { fill: #66ccff; }
+
+g rect.ae,  g rect.audi, g rect.chan4, g rect.itv,  g rect.logo, g rect.mobile,
+g rect.bbc, g rect.bbc1, g rect.bbc2,  g rect.bbc3, g rect.bbc4, g rect.cbbc, g rect.bbca,
+g rect.ntv, g rect.syn,  g rect.tf1,   g rect.tv { fill: #efefef; }
+g.ae  rect, g.audi rect, g.chan4 rect, g.itv  rect, g.logo rect, g.mobile rect,
+g.bbc rect, g.bbc1 rect, g.bbc2  rect, g.bbc3 rect, g.bbc4 rect, g.cbbc rect, g.bbca rect,
+g.ntv rect, g.syn  rect, g.tf1   rect, g.tv   rect { fill: #efefef; }
+
+g.film    rect, g rect.film     { fill: #ffffff; }
+
+text { fill: #000000; text-anchor: start; dominant-baseline: middle; font-family: arial, roboto, sans-serif; font-size: 16px; font-style: italic; }
+text.path { font-size: 12px; font-style: normal; font-weight: bold; }
+text.chart_title { font-size: 150%; font-style: normal; }
+g.amazon      text { fill: #00ccff; }
+g.disney_plus text { fill: #33ccff; }
+g.netflix     text { fill: #ffffff; }
+g rect.amazon      + text { fill: #00ccff; }
+g rect.disney_plus + text { fill: #99ccff; }
+g rect.netflix     + text { fill: #ffffff; }
+tspan { font-size: 90%; font-style: normal; }
+tspan.sup { font-size: 66%; font-style: italic; baseline-shift: super; dominant-baseline: hanging; }
+.key_path text { font-style: normal; }
+.key_path tspan { font-size: 12px; }
+.key_path tspan.title { font-style: italic; }
+
+/*
+g.marvel rect  { fill: #ff1111; }
+rect.marvel   { fill: #bb2222; }
+g.marvel text      { fill: #ffffff; }
+*/

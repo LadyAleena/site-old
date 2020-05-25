@@ -1,4 +1,4 @@
-package Base::Menu;
+package Util::Menu;
 use strict;
 use warnings FATAL => qw( all );
 use Exporter qw(import);
@@ -32,6 +32,8 @@ sub link_color {
   $colors{'doc'}   = '669';
   $colors{'pub'}   = '699';
   $colors{'opx'}   = '036';
+  $colors{'ods'}   = '3c3';
+  $colors{'dot'}   = '3ca';
   $colors{$_}      = 'c0c' for (qw(gif ico jpg png bmp));
 
   my ($extension,$name) = reverse split(/\./,$file);
@@ -45,12 +47,12 @@ sub base_menu {
   my $directory = $opt{'directory'};
   my $curr_cwd = cwd;
 
-  my @contents = file_list($directory); 
+  my @contents = file_list($directory);
   @contents = grep {/^\p{uppercase}/} @contents if (!$opt{'full'} || $opt{'full'} !~ /^[yt1]/); # Thank you [tye]!
 
   # Thank you [davido]!
   my $sub = $directory =~ /(Other_poets|Player_characters|Spellbooks)$/ ? \&name_sort : \&article_sort;
-  @contents = sort { $sub->($a,$b) } @contents;
+  @contents = sort { $sub->($a, $b, { 'misc' => $opt{'misc'} }) } @contents;
 
   my (@files, @directories);
   for my $content (@contents) {
@@ -75,13 +77,19 @@ sub base_menu {
       my $index = "$long_content/index.pl";
 
       if (-e $index) {
-#        $link .= "/index.pl";
+        $link .= "/index.pl";
         my $color = $opt{'color'} == 1 ? link_color($link,1) : undef;
         $text = anchor($text, { 'href' => $link, 'title' => $text, 'style' => $color });
         $file_list = "$curr_cwd/$0" =~ /$index/ && $active =~ / active$/ && $opt{'file menu'} ? $opt{'file menu'} : undef;
       }
 
-      my $next_list = base_menu( 'directory' => $long_content, 'color' => $opt{'color'}, 'full' => $opt{'full'}, 'file menu' => $opt{'file menu'} );
+      my $next_list = base_menu(
+        'directory' => $long_content,
+        'color' => $opt{'color'},
+        'full'  => $opt{'full'},
+        'misc'  => $opt{'misc'},
+        'file menu' => $opt{'file menu'}
+      );
       unshift @$next_list, @$file_list if $file_list;
       my $inlist = $next_list ? ['u', $next_list] : undef;
       $active =~ s/^(?:open|closed) // if !$inlist;
@@ -97,7 +105,7 @@ sub base_menu {
 sub file_menu {
   my($param, $list, $select) = @_;
   my @params = map {[
-    anchor(ucfirst textify($_, { 'parens' => 'yes' }), { 'href' => '?'.searchify($param).'='.searchify($_), 'title' => textify($_) }),
+    anchor(textify($_, { 'parens' => 'yes' }), { 'href' => '?'.searchify($param).'='.searchify($_), 'title' => textify($_) }),
     { 'class' => $select && $select eq $_ ? 'active' : 'inactive' } ]
   } @$list;
   return \@params;
@@ -127,11 +135,11 @@ sub alpha_menu {
 
 sub index_menu {
   my $dir = shift;
-  my @file_list = file_list('.');
+  my @file_list = file_list($dir);
   my $files = [
     map  { anchor( textify($_), { href => $_ } ) }
-    grep { /^[A-Z].+/ &&  -f $_ }
     sort { article_sort($a, $b) }
+    grep { /^[A-Z]/ &&  -f $_ }
     @file_list
   ];
   return $files;

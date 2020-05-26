@@ -2,7 +2,7 @@ package Random::RPG::Monster;
 use strict;
 use warnings FATAL => qw(all);
 use Exporter qw(import);
-our @EXPORT_OK = qw(random_monster random_monster_list);
+our @EXPORT_OK = qw(random_monster random_monster_list random_RPG_dragon);
 
 use Lingua::EN::Inflect qw(PL_N);
 use List::Util qw(shuffle);
@@ -142,7 +142,7 @@ $submonsters{'planar creature'} = {
     fancy_map({ 'after' => 'baatezu' }, [
       [map( "$_ least",    qw(lemure nupperibo spinagon) )],
       [
-        fancy_map({ 'after' => 'lesser' },[
+        fancy_map({ 'after' => 'lesser' }, [
           [map( "$_ abishai", qw(black green red) )],
           qw(barbazu erinyes hamatula osyuth)
         ])
@@ -282,6 +282,10 @@ sub random_monster_list {
   my $monster_list = random_monster('keys');
   my @monsters = ( '<strong>Random monster:</strong> '.random_monster, map( "<strong>Random $_:</strong> ".random_monster($_), sort @$monster_list ) );
   return \@monsters;
+}
+
+sub random_RPG_dragon {
+  return random_monster('dragon');
 }
 
 =head1 NAME

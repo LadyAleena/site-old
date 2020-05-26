@@ -7,10 +7,12 @@ our @EXPORT_OK = qw(random_color);
 use Fancy::Rand qw(fancy_rand);
 use Util::Data qw(data_file);
 
-open(my $Crayola_fh, '<', data_file('Colors', 'Crayola_crayon_colors.txt')) || die "Can not open Crayola_crayon_colors.txt, $!";
+open(my $Crayola_fh, '<', data_file('Random/Colors', 'Crayola_crayon_colors.txt')) ||
+  die "Can not open Crayola_crayon_colors.txt, died$!";
 my @Crayola_crayons = map { chomp($_); $_ } <$Crayola_fh>;
 
-open(my $MandMs_fh,  '<', data_file('Colors', 'MandMs_colors.txt')) || die "Can not open MandMs_colors.txt, $!";
+open(my $MandMs_fh,  '<', data_file('Random/Colors', 'MandMs_colors.txt')) ||
+  die "Can not open MandMs_colors.txt, died$!";
 my @MandMs = map { chomp($_); $_ } <$MandMs_fh>;
 
 my %colors = (
@@ -67,7 +69,7 @@ B<Random::Color> selects random colors.
   my $pure_color            = random_color('pure');
     # selects from white, black, red, yellow, green, and blue.
 
-  my $rainbow_color         = random_color('rainbow');         
+  my $rainbow_color         = random_color('rainbow');
     # selects from red, orange, yellow, green, blue, indigo, and violet.
 
   my $spectral_color        = random_color('spectral');

@@ -17,14 +17,14 @@ my @energy = map( "$_ energy", qw(positive negative));
 my @all_elements = (@elements,@paraelements,@quasielements);
 
 my %submonsters;
-$submonsters{'amorphous monster'} = {
+$submonsters{'amorphous creature'} = {
   'jelly monster'        => [map( "$_ jelly", qw(mustard stun ochre) )],
   'ooze monster'         => [map( "$_ ooze",  ('gray','crystal') )],
   'deadly pudding'       => [map( "$_ deadly pudding", qw(black white brown dun) )],
   'subterranean pudding' => [map( "$_ subterranean pudding", qw(dence gray stone) )],
   'slime monster'        => [map( "$_ slime", ('olive','green') ),'olive slime creature'],
   'mist monster'         => [map( "$_ mist",  ('crimson death','scarlet dancer','vampiric') )],
-  'amorphous monster'    => ['gelatinous cube','slithering tracker','will o\'wisp']
+  'amorphous creature'    => ['gelatinous cube','slithering tracker','will o\'wisp']
 };
 
 $submonsters{'beholder'} = {
@@ -123,10 +123,10 @@ $submonsters{'humanoid'} = {
   'halfling' => ['halfling', map( "$_ halfling", qw(furchin hairfoot stout tallfellow) )]
 };
 
-$submonsters{'insectoid monster'}  = {
+$submonsters{'insectoid creature'}  = {
   'giant beetle' => [map("$_ beetle", qw(bombardier boring fire rhinoceros stag water deathwatch slicer stink))],
   'neogi'        => ['neogi', 'great old master neogi'],
-  'insectoid monster' => [qw(ankheg manscorpion neogi rastipede thri-kreen xixchil)]
+  'insectoid creature' => [qw(ankheg manscorpion neogi rastipede thri-kreen xixchil)]
 };
 
 $submonsters{'planar creature'} = {
@@ -192,13 +192,13 @@ $submonsters{'planar creature'} = {
   'planar creature' => ['imp','lillend']
 };
 
-$submonsters{'reptilian monster'} = {
+$submonsters{'reptilian creature'} = {
   'basilisk'   => ['lesser basilisk', 'greater basilisk', 'dracolisk'],
   'cockatrice' => [qw(cockatrice pyrolisk)],
   'lizard man' => ['lizard man', 'lizard king', 'zardan'],
   'naga'       => ['naga',    map( "$_ naga", qw(bone dark guardian spirit water) )],
   'snake'      => [map( "$_ snake", qw(messenger winged) )],
-  'reptilian monster' => [qw(behir laerti muckdweller troglodyte yuan-ti)]
+  'reptilian creature' => [qw(behir laerti muckdweller troglodyte yuan-ti)]
 };
 
 $submonsters{'undead'} = {
@@ -232,10 +232,10 @@ $submonsters{'undead'} = {
   ],
 };
 
-$submonsters{'underwater monster'} = {
+$submonsters{'underwater creature'} = {
   'aboleth'     => ['aboleth', map( "aboleth $_", qw(savant skum) )],
   'ixitxachitl' => [qw(ixitxachitl ixzan)],
-  'underwater monster' => [qw(crabman hippocampus kuo-toa locathah sehaugin merman triton), 'dragon turtle']
+  'underwater creature' => [qw(crabman hippocampus kuo-toa locathah sehaugin merman triton), 'dragon turtle']
 };
 
 my %monsters;
@@ -249,10 +249,10 @@ $monsters{'saurial'}            = ['saurial',     map( "$_ saurial", qw(bladebac
 $monsters{'sphinx'}             = ['sphinx',      map( "${_}sphinx", ('andro','crio','gyno','hieraco','draco') )];
 $monsters{'gargantua'}          = [map( "$_ gargantua", qw(humanoid insectoid reptilian) )];
 $monsters{'gith (special)'}     = [map( "$_  githyanki", ("'g'lathk","mlar","hr'a'cknir") ), 'githzerai'];
-$monsters{'amphibian monster'}  = [qw(bullywug grippli)];
+$monsters{'amphibian creature'}  = [qw(bullywug grippli)];
 $monsters{'antherion'}          = [qw(jackalwere wolfwere)];
-$monsters{'avian moster'}       = [qw(aarakocra couatl kenku)];
-$monsters{'equine monster'}     = [qw(hippogriff nightmare pegasus unicorn), 'black unicorn'];
+$monsters{'avian creature'}      = [qw(aarakocra couatl kenku)];
+$monsters{'equine creature'}     = [qw(hippogriff nightmare pegasus unicorn), 'black unicorn'];
 $monsters{'gremlin'}            = [qw(fremlin galltrit gremlin jermlaine mite snyad)];
 $monsters{'harpy'}              = [qw(harpy gobpry)];
 $monsters{'illithid'}           = ['mind flayer', 'psionic illithid', 'alhoon'];
@@ -295,6 +295,84 @@ B<Random::RPG::Monster> selects random monsters from the I<Monstrous Manual> and
 =head1 SYNOPSIS
 
   use Random::RPG::Monster qw(random_moster);
+
+  my $random_monster = random_monster;
+    # returns a random moster from the flattened list of monsters.
+
+  my $general_random_monster = random_monster('by keys');
+    # returns a random monster from just the keys of the data.
+
+  my $random_monster_list = random_monster('keys');
+    # returns a list of the keys you can choose from
+    # should you want to be more specific about what monster
+    # you want
+
+  my $random_monster_data = random_monster('data');
+    # returns a hash listing of all monsters data
+
+  # The following will return a monster from a specific group
+
+  my $random_amorphous_creature = random_monster('amorphous creature');
+
+  my $random_amphibian_creature = random_monster('amphibian creature');
+
+  my $random_antherion = random_monster('antherion');
+
+  my $random_avian_creature = random_monster('avian creature');
+
+  my $random_beholder = random_monster('beholder');
+
+  my $random_centaur = random_monster('centaur');
+
+  my $random_construct = random_monster('construct');
+
+  my $random_dragon = random_monster('dragon');
+  # or
+  my $random_dragon = random_RPG_dragon;
+
+  my $random_equine_creature = random_monster('equine creature');
+
+  my $random_faerie = random_monster('faerie');
+
+  my $random_gargantua = random_monster('gargantua');
+
+  my $random_giant = random_monster('giant');
+
+  my $random_specil_gith = random_monster('gith (special)');
+
+  my $random_goblinoid = random_monster('goblinoid');
+
+  my $random_grell = random_monster('grell');
+
+  my $random_gremlin = random_monster('gremlin');
+
+  my $random_hag = random_monster('hag');
+
+  my $random_harpy = random_monster('harpy');
+
+  my $random_humanoid = random_monster('humanoid');
+
+  my $random_illithid = random_monster('illithid');
+
+  my $random_insectoid_creature = random_monster('insectoid creature');
+
+  my $random_lycanthrope = random_monster('lycanthrope');
+
+  my $random_medusa = random_monster('medusa');
+
+  my $random_planar_creature = random_monster('planar creature');
+
+  my $random_reptilian_creature = random_monster('reptilian creature');
+
+  my $random_saurial = random_monster('saurial');
+
+  my $random_spacefaring_creature = random_monster('spacefaring');
+
+  my $random_sphinx = random_monster('sphinx');
+
+  my $random_undead = random_monster('undead');
+
+  my $random_underwater_creature = random_monster('underwater creature');
 
 =head1 AUTHOR
 

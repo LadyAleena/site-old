@@ -75,26 +75,26 @@ B<Random::Dragon> generates random dragons from the DreamWorks Dragons, Harry Po
   );
 
   my $DreamWorks_dragon = random_DreamWorks_dragon;
-    # generates a random dragon from the DreamWorks dragon franchise
+    # returns a random dragon from the DreamWorks dragon franchise
     # based on the novels by Cressida Cowell
 
   my $Harry_Potter_dragon = random_Harry_Potter_dragon;
-    # generates a random dragon from the Harry Potter series by J.K. Rowling
+    # returns a random dragon from the Harry Potter series by J.K. Rowling
 
   my $Pern_dragon = random_Pern_dragon;
-    # generates a random dragon or fire lizard from the Pern series by Anne McCaffrey
+    # returns a random dragon or fire lizard from the Pern series by Anne McCaffrey
 
   my $Xanth_dragon = random_Xanth_dragon;
-    # generates a random new dragon from the Xanth series by Piers Anthony
+    # returns a random new dragon from the Xanth series by Piers Anthony
 
   my $old_Xanth_dragon = random_old_Xanth_dragon;
-    # generates a random old dragon from the Xanth series by Piers Anthony
+    # returns a random old dragon from the Xanth series by Piers Anthony
 
   my $RPG_dragon = random_RPG_dragon;
-    # generates a random dragon from AD&D, 2nd ed.
+    # returns a random dragon from AD&D, 2nd ed.
 
   my $dragon = random_dragon;
-    # generates a random dragon from all of the above
+    # returns a random dragon from all of the above
 
 =head1 SEE ALSO
 

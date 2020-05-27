@@ -60,10 +60,10 @@ B<Random::Dragon::Xanth> generates random dragons from the I<Xanth> series by Pi
   use Random::Dragon::Xanth qw(random_Xanth_dragon random_old_Xanth_dragon);
 
   my $Xanth_dragon = random_Xanth_dragon;
-    # generates a random Xanthian dragon from after the events of Currant Events.
+    # returns a random Xanthian dragon from after the events of Currant Events.
 
   my $old_Xanth_dragon = random_old_Xanth_dragon;
-    # generates a soulless Xanthian dragon from prior to the events of Current Events.
+    # returns a soulless Xanthian dragon from prior to the events of Current Events.
 
 =head1 HISTORY
 

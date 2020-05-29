@@ -62,7 +62,7 @@ sub base_menu {
 
     if (-f $long_content) {
       my $active = realpath($0) eq $long_content ? 'active' : 'inactive';
-      my $color = $opt{'color'} == 1 ? link_color($content,1) : undef;
+      my $color  = $opt{'color'} == 1 ? link_color($content,1) : undef;
       my $inlist = $active eq 'active' && $opt{'file menu'} ? ['u', $opt{'file menu'}, { 'class' => 'sub_menu' }] : undef;
         $active .= $active eq 'active' && $opt{'file menu'} ? ' open' : '';
       if (-M $long_content < 3) {
@@ -90,7 +90,7 @@ sub base_menu {
         'misc'  => $opt{'misc'},
         'file menu' => $opt{'file menu'}
       );
-      unshift @$next_list, @$file_list if $file_list;
+      push @$next_list, @$file_list if $file_list;
       my $inlist = $next_list ? ['u', $next_list] : undef;
       $active =~ s/^(?:open|closed) // if !$inlist;
       push @directories, [$text, { 'class' => $active, 'inlist' => $inlist}];

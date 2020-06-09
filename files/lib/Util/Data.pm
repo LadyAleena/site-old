@@ -1,35 +1,28 @@
 package Util::Data;
 use strict;
 use warnings;
-use utf8;
 use Exporter qw(import);
 our @EXPORT_OK = qw(
-  file_list file_directory data_file get_data
+  file_directory file_list data_file
+  get_data
   make_hash make_array
   first_alpha alpha_hash alpha_array
   hash_from_arrays
 );
 
 use Encode qw(encode);
-
 use File::Basename;
 use File::Spec;
 use List::Util qw(first);
 
 use Base::Path qw(base_path);
 
-sub file_list {
-  my ($directory, $opt) = @_;
-
-  opendir(my $dir, $directory) || die "Can't open $directory $!";
-  my @contents = File::Spec->no_upwards(readdir($dir));
-  closedir($dir);
-  chomp @contents;
-
-  @contents = map("$directory/$_", @contents) if $opt->{'full path'} && $opt->{'full path'} =~ /^[yt1]/;
-
-  return @contents
-}
+# file_directory returns the directory by type of data wanted.
+## The default data directory is 'data'.
+## Other options for type are:
+### text returns the text file for various pages.
+### audio, images, and css return urls.
+### imagesd returns the images directory, but not in url format.
 
 sub file_directory {
   my ($dir, $type) = @_;
@@ -38,13 +31,35 @@ sub file_directory {
   return base_path($type)."/$dir";
 }
 
+# file_list returns a list of the contents in a directory.
+## There are two options:
+### 'uppercase' returns only files that begin with an initial uppercase letter.
+### 'full path' returns the list with the files' full paths.
+
+sub file_list {
+  my ($directory, $opt) = @_;
+
+  opendir(my $dir, $directory) || die "Can't open $directory. $!";
+  my @files = File::Spec->no_upwards(readdir($dir));
+  closedir($dir);
+  chomp @files;
+
+  @files = grep { /^\p{uppercase}/ } @files if $opt->{'uppercase'} && $opt->{'uppercase'} =~ /^[yt1]/;
+  @files = map  { "$directory/$_" }  @files if $opt->{'full path'} && $opt->{'full path'} =~ /^[yt1]/;
+
+  return @files
+}
+
 sub data_file {
-  my ($directory, $filename) = @_;
+  my ($directory, $filename, $opt) = @_;
+
+  my $base = $opt->{'base'} ? $opt->{'base'} : 'data';
+  my $ext  = $opt->{'ext'}  ? $opt->{'ext'}  : 'txt';
 
   my $file_name = basename($0);
 
   my $root_path = base_path('path');
-  my $root_data = base_path('data');
+  my $root_data = base_path($base);
 
   my $relative_path = File::Spec->abs2rel($file_name, $root_path);
      $relative_path =~ s/\.\w+$//;
@@ -55,13 +70,13 @@ sub data_file {
     $data = "$root_data/$directory/$filename";
   }
   elsif ($directory && !$filename) {
-    $data = "$root_data/$directory.txt";
+    $data = "$root_data/$directory.$ext";
   }
   elsif (!$directory && $filename) {
     $data = "$root_data/$relative_path/$filename";
   }
   else {
-    $data = "$root_data/$relative_path.txt";
+    $data = "$root_data/$relative_path.$ext";
   }
 
   return $data;
@@ -99,7 +114,7 @@ sub get_data {
 sub make_hash {
   my %opt = @_;
   my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) : $opt{'file'};
-  open(my $fh, '<', $file) || die "Can not open $file$!";
+  open(my $fh, '<:encoding(utf-8)', $file) || die "Can not open $file$!";
 
   my @headings = $opt{'headings'} ? @{$opt{'headings'}} : ('heading');
 
@@ -135,7 +150,7 @@ sub make_hash {
 sub make_array {
   my %opt = @_;
   my $file = $opt{'file'} && ref($opt{'file'}) eq 'ARRAY' ? data_file(@{$opt{'file'}}) : $opt{'file'};
-  open(my $fh, '<', $file) || die "Can not open $file $!";
+  open(my $fh, '<:encoding(utf-8)', $file) || die "Can not open $file $!";
 
   my @array;
   while (my $line = <$fh>) {
@@ -219,6 +234,17 @@ sub hash_from_arrays {
   my %hash;
   @hash{@$keys} = @$values;
   return \%hash;
+}
+
+sub array_from_file {
+  my $path = shift;
+  open my $fh, '<:encoding(utf-8)', $path;
+  my @array;
+  while ( my $line = <$fh> ) {
+    chomp $line;
+    push @array, $line;
+  }
+  return @array
 }
 
 1;

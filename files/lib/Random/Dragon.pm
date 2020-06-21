@@ -98,7 +98,7 @@ B<Random::Dragon> generates random dragons from the DreamWorks Dragons, Harry Po
 
 =head1 SEE ALSO
 
-This module uses L<Random::Color> and L<Random::Xanth::Dragon> for generating those dragons.
+This module uses L<Random::Color>, L<Random::RPG::Monster>, and L<Random::Xanth::Dragon> for generating those dragons.
 
 =head1 AUTHOR
 
